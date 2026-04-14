@@ -32,7 +32,7 @@ from typing import Optional
 
 import pandas as pd
 
-from backend.config.course_categories import get_category
+from backend.engine.course_categories import get_category
 
 # =============================================================================
 # 取得カラム定義
