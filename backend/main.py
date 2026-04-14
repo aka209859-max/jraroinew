@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.api.routes import health
+from backend.api.routes import health, analysis
 
 app = FastAPI(
     title="Enable Edge Engine",
@@ -17,6 +17,7 @@ app.add_middleware(
 )
 
 app.include_router(health.router, prefix="/api", tags=["health"])
+app.include_router(analysis.router, prefix="/api/analysis", tags=["analysis"])
 
 @app.get("/")
 def root():
