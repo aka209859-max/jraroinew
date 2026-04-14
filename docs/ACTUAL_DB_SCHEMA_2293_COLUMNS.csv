@@ -1,0 +1,2294 @@
+table_name,column_name,ordinal_position,data_type,character_maximum_length,is_nullable,column_comment
+jrd_bac,keibajo_code,1,character varying,2,NO,
+jrd_bac,race_shikonen,2,character varying,6,NO,
+jrd_bac,kaisai_kai,3,character varying,1,NO,
+jrd_bac,kaisai_nichime,4,character varying,1,NO,
+jrd_bac,race_bango,5,character varying,2,NO,
+jrd_bac,kaisai_nen,6,character varying,4,YES,
+jrd_bac,kaisai_tsukihi,7,character varying,4,YES,
+jrd_bac,hasso_jikoku,8,character varying,4,YES,
+jrd_bac,kyori,9,character varying,4,YES,
+jrd_bac,track_code,10,character varying,3,YES,
+jrd_bac,kyoso_shubetsu_code,11,character varying,2,YES,
+jrd_bac,kyoso_joken_code,12,character varying,2,YES,
+jrd_bac,kyoso_kigo_code,13,character varying,3,YES,
+jrd_bac,juryo_shubetsu_code,14,character varying,1,YES,
+jrd_bac,grade_code,15,character varying,1,YES,
+jrd_bac,kyosomei,16,character varying,50,YES,
+jrd_bac,jusho_kaiji,17,character varying,8,YES,
+jrd_bac,toroku_tosu,18,character varying,2,YES,
+jrd_bac,course_kubun,19,character varying,1,YES,
+jrd_bac,kaisai_kubun,20,character varying,1,YES,
+jrd_bac,kyosomei_ryakusho_4,21,character varying,8,YES,
+jrd_bac,kyosomei_ryakusho_9,22,character varying,18,YES,
+jrd_bac,data_kubun,23,character varying,1,YES,
+jrd_bac,honshokin,24,character varying,25,YES,
+jrd_bac,fukashokin,25,character varying,10,YES,
+jrd_bac,baken_hatsubai_flag,26,character varying,16,YES,
+jrd_bac,win5_flag,27,character varying,1,YES,
+jrd_bac,yobi_1,28,character varying,5,YES,
+jrd_bac_fixed,jrdb_race_key8,1,character varying,255,NO,
+jrd_bac_fixed,race_shikonen,2,character varying,255,YES,
+jrd_bac_fixed,keibajo_code,3,character varying,255,YES,
+jrd_bac_fixed,kaisai_kai,4,character varying,255,YES,
+jrd_bac_fixed,kaisai_nichime,5,character varying,255,YES,
+jrd_bac_fixed,kaisai_nen_2,6,character varying,255,YES,
+jrd_bac_fixed,race_bango,7,character varying,255,YES,
+jrd_bac_fixed,basho_code,8,character varying,255,YES,
+jrd_bac_fixed,year,9,character varying,255,YES,
+jrd_bac_fixed,kai,10,character varying,255,YES,
+jrd_bac_fixed,nichi,11,character varying,255,YES,
+jrd_bac_fixed,race_num,12,character varying,255,YES,
+jrd_bac_fixed,nengappi,13,character varying,255,YES,
+jrd_bac_fixed,kyori,14,character varying,255,YES,
+jrd_bac_fixed,shiba_da_shogai_code,15,character varying,255,YES,
+jrd_bac_fixed,migi_hidari,16,character varying,255,YES,
+jrd_bac_fixed,uchi_soto,17,character varying,255,YES,
+jrd_bac_fixed,shubetsu,18,character varying,255,YES,
+jrd_bac_fixed,jouken,19,character varying,255,YES,
+jrd_bac_fixed,juryo_shubetsu_code,20,character varying,255,YES,
+jrd_bac_fixed,grade,21,character varying,255,YES,
+jrd_bac_fixed,tosu,22,character varying,255,YES,
+jrd_bac_fixed,course,23,character varying,255,YES,
+jrd_bac_fixed,kaisai_kubun,24,character varying,255,YES,
+jrd_cha,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_cha,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_cha,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_cha,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_cha,race_bango,5,character varying,2,NO,レース番号
+jrd_cha,umaban,6,character varying,2,NO,馬番
+jrd_cha,yobi_1,7,character varying,2,YES,曜日
+jrd_cha,chokyo_nengappi,8,character varying,8,YES,調教年月日
+jrd_cha,kaisu,9,character varying,1,YES,回数
+jrd_cha,chokyo_corse_code,10,character varying,2,YES,調教コースコード
+jrd_cha,oikiri_shurui,11,character varying,1,YES,追切種類
+jrd_cha,oi_jotai,12,character varying,2,YES,追い状態
+jrd_cha,noriyaku,13,character varying,1,YES,乗り役
+jrd_cha,chokyo_f,14,character varying,1,YES,調教F
+jrd_cha,ten_f,15,character varying,3,YES,テンF
+jrd_cha,chukan_f,16,character varying,3,YES,中間F
+jrd_cha,shimai_f,17,character varying,3,YES,終いF
+jrd_cha,ten_f_shisu,18,character varying,3,YES,テンF指数
+jrd_cha,chukan_f_shisu,19,character varying,3,YES,中間F指数
+jrd_cha,shimai_f_shisu,20,character varying,3,YES,終いF指数
+jrd_cha,oikiri_shisu,21,character varying,3,YES,追切指数
+jrd_cha,awase_kekka,22,character varying,1,YES,併せ結果
+jrd_cha,oikiri_shurui_aiteuma,23,character varying,1,YES,追切種類(相手馬)
+jrd_cha,barei,24,character varying,2,YES,馬齢
+jrd_cha,class_code,25,character varying,2,YES,クラスコード
+jrd_cha,yobi_2,26,character varying,7,YES,予備
+jrd_cyb,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_cyb,race_shikonen,2,character varying,10,NO,レース施行年
+jrd_cyb,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_cyb,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_cyb,race_bango,5,character varying,2,NO,レース番号
+jrd_cyb,umaban,6,character varying,2,NO,馬番
+jrd_cyb,chokyo_type,7,character varying,2,YES,調教タイプコード
+jrd_cyb,chokyo_corse_shubetsu,8,character varying,1,YES,調教コース種別コード
+jrd_cyb,chokyo_corse_hanro,9,character varying,2,YES,坂路
+jrd_cyb,chokyo_corse_wood,10,character varying,2,YES,ウッドコース
+jrd_cyb,chokyo_corse_dirt,11,character varying,2,YES,ダートコース
+jrd_cyb,chokyo_corse_shiba,12,character varying,2,YES,芝コース
+jrd_cyb,chokyo_corse_pool,13,character varying,2,YES,プール調教
+jrd_cyb,chokyo_corse_shogai,14,character varying,2,YES,障害練習
+jrd_cyb,chokyo_corse_polytrack,15,character varying,2,YES,ポリトラック
+jrd_cyb,chokyo_kyori,16,character varying,1,YES,調教距離
+jrd_cyb,chokyo_juten,17,character varying,1,YES,調教重点
+jrd_cyb,oikiri_shisu,18,character varying,3,YES,追切指数
+jrd_cyb,shiage_shisu,19,character varying,3,YES,仕上指数
+jrd_cyb,chokyo_ryo_hyoka,20,character varying,1,YES,調教量評価
+jrd_cyb,shiage_shisu_henka,21,character varying,1,YES,仕上指数変化
+jrd_cyb,chokyo_comment,22,character varying,40,YES,調教コメント
+jrd_cyb,comment_nengappi,23,character varying,8,YES,コメント年月日
+jrd_cyb,chokyo_hyoka,24,character varying,1,YES,調教評価
+jrd_cyb,oikiri_shisu_isshumae,25,character varying,3,YES,追切指数(一週前)
+jrd_cyb,oikiri_corse_isshumae,26,character varying,2,YES,追切コース(一週前)
+jrd_cyb,yobi_1,27,character varying,3,YES,予備
+jrd_cyb_fixed,jrdb_race_key8,1,character varying,255,NO,
+jrd_cyb_fixed,race_shikonen,2,character varying,255,YES,
+jrd_cyb_fixed,keibajo_code,3,character varying,255,YES,
+jrd_cyb_fixed,kaisai_kai,4,character varying,255,YES,
+jrd_cyb_fixed,kaisai_nichime,5,character varying,255,YES,
+jrd_cyb_fixed,kaisai_nen_2,6,character varying,255,YES,
+jrd_cyb_fixed,race_bango,7,character varying,255,YES,
+jrd_cyb_fixed,umaban,8,character varying,255,NO,
+jrd_cyb_fixed,basho_code,9,character varying,255,YES,
+jrd_cyb_fixed,year,10,character varying,255,YES,
+jrd_cyb_fixed,kai,11,character varying,255,YES,
+jrd_cyb_fixed,nichi,12,character varying,255,YES,
+jrd_cyb_fixed,race_num,13,character varying,255,YES,
+jrd_cyb_fixed,chokyo_type,14,character varying,255,YES,
+jrd_cyb_fixed,oikiri_shisu,15,character varying,255,YES,
+jrd_cyb_fixed,shiage_shisu,16,character varying,255,YES,
+jrd_cyb_fixed,chokyo_ryo_hyoka,17,character varying,255,YES,
+jrd_cyb_fixed,shiage_shisu_henka,18,character varying,255,YES,
+jrd_cyb_fixed,chokyo_hyoka,19,character varying,255,YES,
+jrd_cza,chokyoshi_code,1,character varying,5,NO,調教師コード
+jrd_cza,massho_kubun,2,character varying,1,YES,抹消区分
+jrd_cza,massho_nengappi,3,character varying,8,YES,抹消年月日
+jrd_cza,chokyoshimei,4,character varying,12,YES,調教師名
+jrd_cza,chokyoshi_kana,5,character varying,30,YES,調教師カナ
+jrd_cza,chokyoshimei_ryakusho,6,character varying,6,YES,調教師名略称
+jrd_cza,shozoku_code,7,character varying,1,YES,所属コード
+jrd_cza,shozoku_chiikimei,8,character varying,4,YES,所属地域名
+jrd_cza,seinengappi,9,character varying,8,YES,生年月日
+jrd_cza,menkyo_kofu_nen,10,character varying,4,YES,免許交付年
+jrd_cza,chokyoshi_comment,11,character varying,40,YES,調教師コメント
+jrd_cza,comment_nyuryoku_nengappi,12,character varying,8,YES,コメント入力年月日
+jrd_cza,seiseki_joho_1,13,character varying,33,YES,本年･前年成績情報
+jrd_cza,seiseki_joho_2,14,character varying,33,YES,本年･前年成績情報
+jrd_cza,tsusan_heichi,15,character varying,20,YES,通算平地･着回数
+jrd_cza,tsusan_shogai,16,character varying,20,YES,通算障害･着回数
+jrd_cza,data_sakusei_nengappi,17,character varying,8,YES,データ作成年月日
+jrd_cza,yobi_1,18,character varying,29,YES,予備
+jrd_joa,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_joa,race_shikonen,2,character varying,10,NO,レース施行年
+jrd_joa,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_joa,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_joa,race_bango,5,character varying,2,NO,レース番号
+jrd_joa,umaban,6,character varying,2,NO,馬番
+jrd_joa,ketto_toroku_bango,7,character varying,8,YES,血統登録番号
+jrd_joa,bamei,8,character varying,36,YES,馬名
+jrd_joa,kijun_odds_tansho,9,character varying,5,YES,基準オッズ単勝
+jrd_joa,kijun_odds_fukusho,10,character varying,5,YES,基準オッズ複勝
+jrd_joa,cid_chokyo_soten,11,character varying,5,YES,CID調教素点
+jrd_joa,cid_kyusha_soten,12,character varying,5,YES,CID厩舎素点
+jrd_joa,cid_soten,13,character varying,5,YES,CID素点
+jrd_joa,cid,14,character varying,3,YES,CID
+jrd_joa,ls_shisu,15,character varying,5,YES,LS指数
+jrd_joa,ls_hyoka,16,character varying,1,YES,LS評価
+jrd_joa,em,17,character varying,1,YES,EM
+jrd_joa,kyusha_bb_shirushi,18,character varying,1,YES,厩舎BB印
+jrd_joa,kyusha_bb_nijumaru_tansho_kaishuritsu,19,character varying,5,YES,厩舎BB◎単勝回収率
+jrd_joa,kyusha_bb_nijumaru_rentai_ritsu,20,character varying,5,YES,厩舎BB◎連対率
+jrd_joa,kishu_bb_shirushi,21,character varying,1,YES,騎手BB印
+jrd_joa,kishu_bb_nijumaru_tansho_kaishuritsu,22,character varying,5,YES,騎手BB◎単勝回収率
+jrd_joa,kishu_bb_nijumaru_rentai_ritsu,23,character varying,5,YES,騎手BB◎連対率
+jrd_joa,yobi_1,24,character varying,3,YES,予備
+jrd_joa_fixed,jrdb_race_key8,1,character varying,255,NO,
+jrd_joa_fixed,race_shikonen,2,character varying,255,YES,
+jrd_joa_fixed,keibajo_code,3,character varying,255,YES,
+jrd_joa_fixed,kaisai_kai,4,character varying,255,YES,
+jrd_joa_fixed,kaisai_nichime,5,character varying,255,YES,
+jrd_joa_fixed,kaisai_nen_2,6,character varying,255,YES,
+jrd_joa_fixed,race_bango,7,character varying,255,YES,
+jrd_joa_fixed,umaban,8,character varying,255,NO,
+jrd_joa_fixed,basho_code,9,character varying,255,YES,
+jrd_joa_fixed,year,10,character varying,255,YES,
+jrd_joa_fixed,kai,11,character varying,255,YES,
+jrd_joa_fixed,nichi,12,character varying,255,YES,
+jrd_joa_fixed,race_num,13,character varying,255,YES,
+jrd_joa_fixed,ls_shisu,14,character varying,255,YES,
+jrd_joa_fixed,ls_hyoka,15,character varying,255,YES,
+jrd_joa_fixed,odds_shisu,16,character varying,255,YES,
+jrd_kab,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_kab,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_kab,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_kab,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_kab,kaisai_nen,5,character varying,4,YES,開催年
+jrd_kab,kaisai_tsukihi,6,character varying,4,YES,開催月日
+jrd_kab,kaisai_kubun,7,character varying,1,YES,開催区分
+jrd_kab,yobi_1,8,character varying,2,YES,曜日
+jrd_kab,keibajomei,9,character varying,4,YES,競馬場名
+jrd_kab,tenko_code,10,character varying,1,YES,天候コード
+jrd_kab,babajotai_code_shiba,11,character varying,2,YES,芝馬場状態コード
+jrd_kab,babajotai_shiba_uchi,12,character varying,1,YES,芝馬場状態(内)
+jrd_kab,babajotai_shiba_naka,13,character varying,1,YES,芝馬場状態(中)
+jrd_kab,babajotai_shiba_soto,14,character varying,1,YES,芝馬場状態(外)
+jrd_kab,babasa_shiba,15,character varying,3,YES,馬場差(芝)
+jrd_kab,babasa_chokusen_saiuchi,16,character varying,2,YES,馬場差(直線･最内)
+jrd_kab,babasa_chokusen_uchi,17,character varying,2,YES,馬場差(直線･内)
+jrd_kab,babasa_chokusen_naka,18,character varying,2,YES,馬場差(直線･中)
+jrd_kab,babasa_chokusen_soto,19,character varying,2,YES,馬場差(直線･外)
+jrd_kab,babasa_chokusen_osoto,20,character varying,2,YES,馬場差(直線･大外)
+jrd_kab,babajotai_code_dirt,21,character varying,2,YES,ダート馬場状態コード
+jrd_kab,babajotai_dirt_uchi,22,character varying,1,YES,ダート馬場状態(内)
+jrd_kab,babajotai_dirt_naka,23,character varying,1,YES,ダート馬場状態(中)
+jrd_kab,babajotai_dirt_soto,24,character varying,1,YES,ダート馬場状態(外)
+jrd_kab,babasa_dirt,25,character varying,3,YES,馬場差(ダート)
+jrd_kab,data_kubun,26,character varying,1,YES,データ区分
+jrd_kab,renzoku_nannichime,27,character varying,2,YES,連続何日目
+jrd_kab,shiba_shurui,28,character varying,1,YES,芝種類
+jrd_kab,sojo,29,character varying,4,YES,草丈
+jrd_kab,tenatsu,30,character varying,1,YES,転圧
+jrd_kab,toketsu_boshizai,31,character varying,1,YES,凍結防止剤
+jrd_kab,chukan_kosuiryo,32,character varying,5,YES,中間降水量
+jrd_kab,yobi_2,33,character varying,7,YES,予備
+jrd_kka,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_kka,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_kka,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_kka,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_kka,race_bango,5,character varying,2,NO,レース番号
+jrd_kka,umaban,6,character varying,2,NO,馬番
+jrd_kka,jra,7,character varying,12,YES,JRA･着回数
+jrd_kka,koryu,8,character varying,12,YES,交流･着回数
+jrd_kka,hoka,9,character varying,12,YES,他･着回数
+jrd_kka,shiba_dirt,10,character varying,12,YES,芝ダ障害別･着回数
+jrd_kka,shiba_dirt_kyori,11,character varying,12,YES,芝ダ障害別距離･着回数
+jrd_kka,torakku_kyori,12,character varying,12,YES,トラック距離･着回数
+jrd_kka,rotation,13,character varying,12,YES,ローテ･着回数
+jrd_kka,mawari,14,character varying,12,YES,回り･着回数
+jrd_kka,kishu,15,character varying,12,YES,騎手･着回数
+jrd_kka,ryo,16,character varying,12,YES,良･着回数
+jrd_kka,yayaomo,17,character varying,12,YES,稍･着回数
+jrd_kka,omo,18,character varying,12,YES,重･着回数
+jrd_kka,pace_s,19,character varying,12,YES,Sペース･着回数
+jrd_kka,pace_m,20,character varying,12,YES,Mペース･着回数
+jrd_kka,pace_h,21,character varying,12,YES,Hペース･着回数
+jrd_kka,kisetsu,22,character varying,12,YES,季節･着回数
+jrd_kka,waku,23,character varying,12,YES,枠･着回数
+jrd_kka,kishu_kyori,24,character varying,12,YES,騎手距離･着回数
+jrd_kka,kishu_track,25,character varying,12,YES,騎手トラック距離･着回数
+jrd_kka,kishu_chokyoshi,26,character varying,12,YES,騎手調教師別･着回数
+jrd_kka,kishu_banushi,27,character varying,12,YES,騎手馬主別･着回数
+jrd_kka,kishu_blinker,28,character varying,12,YES,騎手ブリンカー･着回数
+jrd_kka,chokyoshi_banushi,29,character varying,12,YES,調教師馬主別･着回数
+jrd_kka,seiseki_chichi_1,30,character varying,3,YES,父馬産駒芝･連対率
+jrd_kka,seiseki_chichi_2,31,character varying,3,YES,父馬産駒ダ･連対率
+jrd_kka,seiseki_chichi_3,32,character varying,4,YES,父馬産駒･連対平均距離
+jrd_kka,seiseki_hahachichi_1,33,character varying,3,YES,母父馬産駒芝･連対率
+jrd_kka,seiseki_hahachichi_2,34,character varying,3,YES,母父馬産駒ダ･連対率
+jrd_kka,seiseki_hahachichi_3,35,character varying,4,YES,母父馬産駒･連対平均距離
+jrd_kka,yobi_1,36,character varying,16,YES,予備
+jrd_kyi,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_kyi,race_shikonen,2,character varying,10,NO,レース施行年
+jrd_kyi,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_kyi,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_kyi,race_bango,5,character varying,2,NO,レース番号
+jrd_kyi,umaban,6,character varying,2,NO,馬番
+jrd_kyi,ketto_toroku_bango,7,character varying,8,YES,血統登録番号
+jrd_kyi,bamei,8,character varying,36,YES,馬名
+jrd_kyi,idm,9,character varying,5,YES,IDM
+jrd_kyi,kishu_shisu,10,character varying,5,YES,騎手指数
+jrd_kyi,joho_shisu,11,character varying,5,YES,情報指数
+jrd_kyi,yobi_1,12,character varying,15,YES,予備
+jrd_kyi,sogo_shisu,13,character varying,5,YES,総合指数
+jrd_kyi,kyakushitsu_code,14,character varying,1,YES,脚質コード
+jrd_kyi,kyori_tekisei_code,15,character varying,1,YES,距離適性コード
+jrd_kyi,joshodo_code,16,character varying,1,YES,上昇度コード
+jrd_kyi,rotation,17,character varying,3,YES,ローテーション
+jrd_kyi,kijun_odds_tansho,18,character varying,5,YES,基準オッズ単勝
+jrd_kyi,kijun_ninkijun_tansho,19,character varying,2,YES,基準人気順位単勝
+jrd_kyi,kijun_odds_fukusho,20,character varying,5,YES,基準オッズ複勝
+jrd_kyi,kijun_ninkijun_fukusho,21,character varying,2,YES,基準人気順位複勝
+jrd_kyi,tokutei_joho_1,22,character varying,3,YES,特定情報◎
+jrd_kyi,tokutei_joho_2,23,character varying,3,YES,特定情報○
+jrd_kyi,tokutei_joho_3,24,character varying,3,YES,特定情報▲
+jrd_kyi,tokutei_joho_4,25,character varying,3,YES,特定情報△
+jrd_kyi,tokutei_joho_5,26,character varying,3,YES,特定情報×
+jrd_kyi,sogo_joho_1,27,character varying,3,YES,総合情報◎
+jrd_kyi,sogo_joho_2,28,character varying,3,YES,総合情報○
+jrd_kyi,sogo_joho_3,29,character varying,3,YES,総合情報▲
+jrd_kyi,sogo_joho_4,30,character varying,3,YES,総合情報△
+jrd_kyi,sogo_joho_5,31,character varying,3,YES,総合情報×
+jrd_kyi,ninki_shisu,32,character varying,5,YES,人気指数
+jrd_kyi,chokyo_shisu,33,character varying,5,YES,調教指数
+jrd_kyi,kyusha_shisu,34,character varying,5,YES,厩舎指数
+jrd_kyi,chokyo_yajirushi_code,35,character varying,1,YES,調教矢印コード
+jrd_kyi,kyusha_hyoka_code,36,character varying,1,YES,厩舎評価コード
+jrd_kyi,kishu_kitai_rentai_ritsu,37,character varying,4,YES,騎手期待連対率
+jrd_kyi,gekiso_shisu,38,character varying,3,YES,激走指数
+jrd_kyi,hizume_code,39,character varying,2,YES,蹄コード
+jrd_kyi,tekisei_code_omo,40,character varying,1,YES,適性コード(重)
+jrd_kyi,class_code,41,character varying,2,YES,クラスコード
+jrd_kyi,yobi_2,42,character varying,2,YES,予備
+jrd_kyi,blinker_shiyo_kubun,43,character varying,1,YES,ブリンカー使用区分
+jrd_kyi,kishumei,44,character varying,12,YES,騎手名
+jrd_kyi,futan_juryo,45,character varying,3,YES,負担重量
+jrd_kyi,kishu_minarai_code,46,character varying,1,YES,騎手見習コード
+jrd_kyi,chokyoshimei,47,character varying,12,YES,調教師名
+jrd_kyi,chokyoshi_shozoku,48,character varying,4,YES,調教師所属
+jrd_kyi,kako1_kyoso_seiseki_key,49,character varying,16,YES,過去1 競走成績キー
+jrd_kyi,kako2_kyoso_seiseki_key,50,character varying,16,YES,過去2 競走成績キー
+jrd_kyi,kako3_kyoso_seiseki_key,51,character varying,16,YES,過去3 競走成績キー
+jrd_kyi,kako4_kyoso_seiseki_key,52,character varying,16,YES,過去4 競走成績キー
+jrd_kyi,kako5_kyoso_seiseki_key,53,character varying,16,YES,過去5 競走成績キー
+jrd_kyi,kako1_race_key,54,character varying,8,YES,過去1 レースキー
+jrd_kyi,kako2_race_key,55,character varying,8,YES,過去2 レースキー
+jrd_kyi,kako3_race_key,56,character varying,8,YES,過去3 レースキー
+jrd_kyi,kako4_race_key,57,character varying,8,YES,過去4 レースキー
+jrd_kyi,kako5_race_key,58,character varying,8,YES,過去5 レースキー
+jrd_kyi,wakuban,59,character varying,1,YES,枠番
+jrd_kyi,yobi_3,60,character varying,2,YES,予備
+jrd_kyi,shirushi_code_1,61,character varying,1,YES,総合印
+jrd_kyi,shirushi_code_2,62,character varying,1,YES,IDM印
+jrd_kyi,shirushi_code_3,63,character varying,1,YES,情報印
+jrd_kyi,shirushi_code_4,64,character varying,1,YES,騎手印
+jrd_kyi,shirushi_code_5,65,character varying,1,YES,厩舎印
+jrd_kyi,shirushi_code_6,66,character varying,1,YES,調教印
+jrd_kyi,shirushi_code_7,67,character varying,1,YES,激走印
+jrd_kyi,tekisei_code_shiba,68,character varying,1,YES,適性コード(芝)
+jrd_kyi,tekisei_code_dirt,69,character varying,1,YES,適性コード(ダ)
+jrd_kyi,kishu_code,70,character varying,5,YES,騎手コード
+jrd_kyi,chokyoshi_code,71,character varying,5,YES,調教師コード
+jrd_kyi,yobi_4,72,character varying,1,YES,予備
+jrd_kyi,kakutoku_shokin_ruikei,73,character varying,6,YES,獲得賞金累計
+jrd_kyi,shutoku_shokin_ruikei,74,character varying,5,YES,収得賞金累計
+jrd_kyi,joken_class_code,75,character varying,1,YES,条件クラスコード
+jrd_kyi,ten_shisu,76,character varying,5,YES,テン指数
+jrd_kyi,pace_shisu,77,character varying,5,YES,ペース指数
+jrd_kyi,agari_shisu,78,character varying,5,YES,上がり指数
+jrd_kyi,ichi_shisu,79,character varying,5,YES,位置指数
+jrd_kyi,pace_yoso,80,character varying,1,YES,ペース予想
+jrd_kyi,dochu_juni,81,character varying,2,YES,道中順位
+jrd_kyi,dochu_sa,82,character varying,2,YES,道中差
+jrd_kyi,dochu_uchisoto,83,character varying,1,YES,道中内外
+jrd_kyi,kohan_3f_juni,84,character varying,2,YES,後3ハロン順位
+jrd_kyi,kohan_3f_sa,85,character varying,2,YES,後3ハロン差
+jrd_kyi,kohan_3f_uchisoto,86,character varying,1,YES,後3ハロン内外
+jrd_kyi,goal_juni,87,character varying,2,YES,ゴール順位
+jrd_kyi,goal_sa,88,character varying,2,YES,ゴール差
+jrd_kyi,goal_uchisoto,89,character varying,1,YES,ゴール内外
+jrd_kyi,tenkai_kigo_code,90,character varying,1,YES,展開記号コード
+jrd_kyi,kyori_tekisei_code_2,91,character varying,1,YES,距離適性コード2
+jrd_kyi,bataiju,92,character varying,3,YES,(枠確定)馬体重
+jrd_kyi,bataiju_zogen,93,character varying,3,YES,(枠確定)馬体重増減
+jrd_kyi,torikeshi_flag,94,character varying,1,YES,取消フラグ
+jrd_kyi,seibetsu_code,95,character varying,1,YES,性別コード
+jrd_kyi,banushimei,96,character varying,40,YES,馬主名
+jrd_kyi,banushikai_code,97,character varying,2,YES,馬主会コード
+jrd_kyi,umakigo_code,98,character varying,2,YES,馬記号コード
+jrd_kyi,gekiso_juni,99,character varying,2,YES,激走順位
+jrd_kyi,ls_shisu_juni,100,character varying,2,YES,LS指数順位
+jrd_kyi,ten_shisu_juni,101,character varying,2,YES,テン指数順位
+jrd_kyi,pace_shisu_juni,102,character varying,2,YES,ペース指数順位
+jrd_kyi,agari_shisu_juni,103,character varying,2,YES,上がり指数順位
+jrd_kyi,ichi_shisu_juni,104,character varying,2,YES,位置指数順位
+jrd_kyi,kishu_kitai_tansho_ritsu,105,character varying,4,YES,騎手期待単勝率
+jrd_kyi,kishu_kitai_sanchakunai_ritsu,106,character varying,4,YES,騎手期待3着内率
+jrd_kyi,yuso_kubun,107,character varying,1,YES,輸送区分
+jrd_kyi,soho,108,character varying,8,YES,走法
+jrd_kyi,taikei,109,character varying,24,YES,体型
+jrd_kyi,taikei_sogo_1,110,character varying,3,YES,体型総合1
+jrd_kyi,taikei_sogo_2,111,character varying,3,YES,体型総合2
+jrd_kyi,taikei_sogo_3,112,character varying,3,YES,体型総合3
+jrd_kyi,uma_tokki_1,113,character varying,3,YES,馬特記1
+jrd_kyi,uma_tokki_2,114,character varying,3,YES,馬特記2
+jrd_kyi,uma_tokki_3,115,character varying,3,YES,馬特記3
+jrd_kyi,uma_start_shisu,116,character varying,4,YES,馬スタート指数
+jrd_kyi,uma_deokure_ritsu,117,character varying,4,YES,馬出遅れ率
+jrd_kyi,sanko_zenso,118,character varying,2,YES,参考前走
+jrd_kyi,sanko_zenso_kishu_code,119,character varying,5,YES,参考前走騎手コード
+jrd_kyi,manken_shisu,120,character varying,3,YES,万券指数
+jrd_kyi,manken_shirushi,121,character varying,1,YES,万券印
+jrd_kyi,kokyu_flag,122,character varying,1,YES,降級フラグ
+jrd_kyi,gekiso_type,123,character varying,2,YES,激走タイプ
+jrd_kyi,kyuyo_riyu_bunrui_code,124,character varying,2,YES,休養理由分類コード
+jrd_kyi,flag,125,character varying,16,YES,フラグ
+jrd_kyi,nyukyu_nansome,126,character varying,2,YES,入厩何走目
+jrd_kyi,nyukyu_nengappi,127,character varying,8,YES,入厩年月日
+jrd_kyi,nyukyu_nannichimae,128,character varying,3,YES,入厩何日前
+jrd_kyi,hobokusaki,129,character varying,50,YES,放牧先
+jrd_kyi,hobokusaki_rank,130,character varying,1,YES,放牧先ランク
+jrd_kyi,kyusha_rank,131,character varying,1,YES,厩舎ランク
+jrd_kyi,yobi_5,132,character varying,398,YES,予備
+jrd_kyi_fixed,jrdb_race_key8,1,character varying,255,NO,
+jrd_kyi_fixed,race_shikonen,2,character varying,255,YES,
+jrd_kyi_fixed,keibajo_code,3,character varying,255,YES,
+jrd_kyi_fixed,kaisai_kai,4,character varying,255,YES,
+jrd_kyi_fixed,kaisai_nichime,5,character varying,255,YES,
+jrd_kyi_fixed,kaisai_nen_2,6,character varying,255,YES,
+jrd_kyi_fixed,race_bango,7,character varying,255,YES,
+jrd_kyi_fixed,umaban,8,character varying,255,NO,
+jrd_kyi_fixed,basho_code,9,character varying,255,YES,
+jrd_kyi_fixed,year,10,character varying,255,YES,
+jrd_kyi_fixed,kai,11,character varying,255,YES,
+jrd_kyi_fixed,nichi,12,character varying,255,YES,
+jrd_kyi_fixed,race_num,13,character varying,255,YES,
+jrd_kyi_fixed,kettou_toroku_bango,14,character varying,255,YES,
+jrd_kyi_fixed,bamei,15,character varying,255,YES,
+jrd_kyi_fixed,idm,16,character varying,255,YES,
+jrd_kyi_fixed,kishu_shisu,17,character varying,255,YES,
+jrd_kyi_fixed,sogo_shisu,18,character varying,255,YES,
+jrd_kyi_fixed,kyakushitsu,19,character varying,255,YES,
+jrd_kyi_fixed,kyori_tekisei,20,character varying,255,YES,
+jrd_kyi_fixed,chokyo_shisu,21,character varying,255,YES,
+jrd_kyi_fixed,kyusha_shisu,22,character varying,255,YES,
+jrd_kyi_fixed,chokyo_yajirushi_code,23,character varying,255,YES,
+jrd_kyi_fixed,omo_tekisei_code,24,character varying,255,YES,
+jrd_kyi_fixed,shiba_tekisei_code,25,character varying,255,YES,
+jrd_kyi_fixed,da_tekisei_code,26,character varying,255,YES,
+jrd_kyi_fixed,soho,27,character varying,255,YES,
+jrd_kyi_fixed,blinker,28,character varying,255,YES,
+jrd_kyi_fixed,futan_juryo,29,character varying,255,YES,
+jrd_kyi_fixed,ten_shisu,30,character varying,255,YES,
+jrd_kyi_fixed,pace_shisu,31,character varying,255,YES,
+jrd_kyi_fixed,agari_shisu,32,character varying,255,YES,
+jrd_kyi_fixed,ichi_shisu,33,character varying,255,YES,
+jrd_kyi_fixed,kyori_tekisei_2,34,character varying,255,YES,
+jrd_kyi_fixed,seibetsu_code,35,character varying,255,YES,
+jrd_kyi_fixed,kishu_code,36,character varying,255,YES,
+jrd_kyi_fixed,chokyoshi_code,37,character varying,255,YES,
+jrd_kyi_fixed,kyusha_rank,38,character varying,255,YES,
+jrd_kza,kishu_code,1,character varying,5,NO,騎手コード
+jrd_kza,massho_kubun,2,character varying,1,YES,抹消区分
+jrd_kza,massho_nengappi,3,character varying,8,YES,抹消年月日
+jrd_kza,kishumei,4,character varying,12,YES,騎手名
+jrd_kza,kishu_kana,5,character varying,30,YES,騎手カナ
+jrd_kza,kishumei_ryakusho,6,character varying,6,YES,騎手名略称
+jrd_kza,shozoku_code,7,character varying,1,YES,所属コード
+jrd_kza,shozoku_chiikimei,8,character varying,4,YES,所属地域名
+jrd_kza,seinengappi,9,character varying,8,YES,生年月日
+jrd_kza,menkyo_kofu_nen,10,character varying,4,YES,免許交付年
+jrd_kza,kishu_minarai_code,11,character varying,1,YES,騎手見習コード
+jrd_kza,chokyoshi_code,12,character varying,5,YES,所属調教師コード
+jrd_kza,kishu_comment,13,character varying,40,YES,騎手コメント
+jrd_kza,comment_nyuryoku_nengappi,14,character varying,8,YES,コメント入力年月日
+jrd_kza,seiseki_joho_1,15,character varying,33,YES,本年･前年成績情報
+jrd_kza,seiseki_joho_2,16,character varying,33,YES,本年･前年成績情報
+jrd_kza,tsusan_heichi,17,character varying,20,YES,通算平地･着回数
+jrd_kza,tsusan_shogai,18,character varying,20,YES,通算障害･着回数
+jrd_kza,data_sakusei_nengappi,19,character varying,8,YES,データ作成年月日
+jrd_kza,yobi_1,20,character varying,23,YES,予備
+jrd_ot,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_ot,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_ot,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_ot,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_ot,race_bango,5,character varying,2,NO,レース番号
+jrd_ot,toroku_tosu,6,character varying,2,YES,登録頭数
+jrd_ot,odds_sanrempuku,7,character varying,4896,YES,3連複オッズ
+jrd_ot,yobi_1,8,character varying,4,YES,予備
+jrd_ou,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_ou,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_ou,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_ou,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_ou,race_bango,5,character varying,2,NO,レース番号
+jrd_ou,toroku_tosu,6,character varying,2,YES,登録頭数
+jrd_ou,odds_umatan,7,character varying,1836,YES,馬単オッズ
+jrd_ou,yobi_1,8,character varying,8,YES,予備
+jrd_ov,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_ov,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_ov,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_ov,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_ov,race_bango,5,character varying,2,NO,レース番号
+jrd_ov,toroku_tosu,6,character varying,2,YES,登録頭数
+jrd_ov,odds_sanrentan,7,character varying,34272,YES,3連単オッズ
+jrd_ov,yobi_1,8,character varying,4,YES,予備
+jrd_ow,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_ow,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_ow,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_ow,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_ow,race_bango,5,character varying,2,NO,レース番号
+jrd_ow,toroku_tosu,6,character varying,2,YES,登録頭数
+jrd_ow,odds_wide,7,character varying,765,YES,ワイドオッズ
+jrd_ow,yobi_1,8,character varying,3,YES,予備
+jrd_oz,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_oz,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_oz,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_oz,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_oz,race_bango,5,character varying,2,NO,レース番号
+jrd_oz,toroku_tosu,6,character varying,2,YES,登録頭数
+jrd_oz,tansho_odds,7,character varying,90,YES,単勝オッズ
+jrd_oz,odds_fukusho,8,character varying,90,YES,複勝オッズ
+jrd_oz,odds_rensho,9,character varying,765,YES,連勝オッズ
+jrd_sed,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_sed,race_shikonen,2,character varying,10,NO,レース施行年
+jrd_sed,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_sed,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_sed,race_bango,5,character varying,2,NO,レース番号
+jrd_sed,umaban,6,character varying,2,NO,馬番
+jrd_sed,ketto_toroku_bango,7,character varying,8,YES,血統登録番号
+jrd_sed,kaisai_nen,8,character varying,4,YES,開催年
+jrd_sed,kaisai_tsukihi,9,character varying,4,YES,開催月日
+jrd_sed,bamei,10,character varying,36,YES,馬名
+jrd_sed,kyori,11,character varying,4,YES,距離
+jrd_sed,track_code,12,character varying,3,YES,トラックコード
+jrd_sed,babajotai_code,13,character varying,2,YES,馬場状態コード
+jrd_sed,kyoso_shubetsu_code,14,character varying,2,YES,競走種別コード
+jrd_sed,kyoso_joken_code,15,character varying,2,YES,競走条件コード
+jrd_sed,kyoso_kigo_code,16,character varying,3,YES,競走記号コード
+jrd_sed,juryo_shubetsu_code,17,character varying,1,YES,重量種別コード
+jrd_sed,grade_code,18,character varying,1,YES,グレードコード
+jrd_sed,kyosomei,19,character varying,50,YES,競走名
+jrd_sed,toroku_tosu,20,character varying,2,YES,登録頭数
+jrd_sed,kyosomei_ryakusho_4,21,character varying,8,YES,競走名略称4文字
+jrd_sed,kakutei_chakujun,22,character varying,2,YES,確定着順
+jrd_sed,ijo_kubun_code,23,character varying,1,YES,異常区分コード
+jrd_sed,soha_time,24,character varying,4,YES,走破タイム
+jrd_sed,futan_juryo,25,character varying,3,YES,負担重量
+jrd_sed,kishumei,26,character varying,12,YES,騎手名
+jrd_sed,chokyoshimei,27,character varying,12,YES,調教師名
+jrd_sed,tansho_odds,28,character varying,6,YES,単勝オッズ
+jrd_sed,tansho_ninkijun,29,character varying,2,YES,単勝人気順
+jrd_sed,idm,30,character varying,3,YES,IDM
+jrd_sed,soten,31,character varying,3,YES,素点
+jrd_sed,babasa,32,character varying,3,YES,馬場差
+jrd_sed,pace,33,character varying,3,YES,ペース
+jrd_sed,deokure,34,character varying,3,YES,出遅れ
+jrd_sed,ichidori,35,character varying,3,YES,位置取り
+jrd_sed,furi,36,character varying,3,YES,不利
+jrd_sed,furi_1,37,character varying,3,YES,前不利
+jrd_sed,furi_2,38,character varying,3,YES,中不利
+jrd_sed,furi_3,39,character varying,3,YES,後不利
+jrd_sed,race,40,character varying,3,YES,レース
+jrd_sed,course_dori_code,41,character varying,1,YES,コース取りコード
+jrd_sed,joshodo_code,42,character varying,1,YES,上昇度コード
+jrd_sed,class_code,43,character varying,2,YES,クラスコード
+jrd_sed,batai_code,44,character varying,1,YES,馬体コード
+jrd_sed,kehai_code,45,character varying,1,YES,気配コード
+jrd_sed,race_pace,46,character varying,1,YES,レースペース
+jrd_sed,uma_pace,47,character varying,1,YES,馬ペース
+jrd_sed,ten_shisu,48,character varying,5,YES,テン指数
+jrd_sed,agari_shisu,49,character varying,5,YES,上がり指数
+jrd_sed,pace_shisu,50,character varying,5,YES,ペース指数
+jrd_sed,race_p_shisu,51,character varying,5,YES,レースP指数
+jrd_sed,aiteuma_joho_1,52,character varying,15,YES,1着馬(相手馬)情報
+jrd_sed,zenhan_3f_taimu,53,character varying,3,YES,前3ハロンタイム
+jrd_sed,kohan_3f,54,character varying,3,YES,後3ハロンタイム
+jrd_sed,biko,55,character varying,24,YES,備考
+jrd_sed,yobi_1,56,character varying,2,YES,予備
+jrd_sed,odds_fukusho,57,character varying,6,YES,複勝オッズ
+jrd_sed,odds_tansho_10am,58,character varying,6,YES,単勝オッズ(10時)
+jrd_sed,odds_fukusho_10am,59,character varying,6,YES,複勝オッズ(10時)
+jrd_sed,corner_1,60,character varying,2,YES,1コーナーでの順位
+jrd_sed,corner_2,61,character varying,2,YES,2コーナーでの順位
+jrd_sed,corner_3,62,character varying,2,YES,3コーナーでの順位
+jrd_sed,corner_4,63,character varying,2,YES,4コーナーでの順位
+jrd_sed,zenhan_3f_sento_sa,64,character varying,3,YES,前3ハロン先頭差
+jrd_sed,kohan_3f_sento_sa,65,character varying,3,YES,後3ハロン先頭差
+jrd_sed,kishu_code,66,character varying,5,YES,騎手コード
+jrd_sed,chokyoshi_code,67,character varying,5,YES,調教師コード
+jrd_sed,bataiju,68,character varying,3,YES,馬体重
+jrd_sed,bataiju_zogen,69,character varying,3,YES,馬体重増減
+jrd_sed,tenko_code,70,character varying,1,YES,天候コード
+jrd_sed,course_kubun,71,character varying,1,YES,コース区分
+jrd_sed,kyakushitsu_code,72,character varying,1,YES,脚質コード
+jrd_sed,haraimodoshi_tansho,73,character varying,7,YES,単勝払戻
+jrd_sed,haraimodoshi_fukusho,74,character varying,7,YES,複勝払戻
+jrd_sed,honshokin,75,character varying,5,YES,本賞金
+jrd_sed,shutoku_shokin,76,character varying,5,YES,収得賞金
+jrd_sed,race_pace_nagare,77,character varying,2,YES,レースペース流れ
+jrd_sed,uma_pace_nagare,78,character varying,2,YES,馬ペース流れ
+jrd_sed,corse_dori_code_corner_4,79,character varying,1,YES,コース取りコード(4コーナー)
+jrd_sed,hasso_jikoku,80,character varying,4,YES,発走時刻
+jrd_skb,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_skb,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_skb,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_skb,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_skb,race_bango,5,character varying,2,NO,レース番号
+jrd_skb,umaban,6,character varying,2,NO,馬番
+jrd_skb,ketto_toroku_bango,7,character varying,8,YES,血統登録番号
+jrd_skb,kaisai_nen,8,character varying,4,YES,開催年
+jrd_skb,kaisai_tsukihi,9,character varying,4,YES,開催月日
+jrd_skb,tokki_code,10,character varying,18,YES,特記コード
+jrd_skb,bagu_code,11,character varying,24,YES,馬具コード
+jrd_skb,sogo,12,character varying,9,YES,総合
+jrd_skb,hidarimae,13,character varying,9,YES,左前
+jrd_skb,migimae,14,character varying,9,YES,右前
+jrd_skb,hidariushiro,15,character varying,9,YES,左後
+jrd_skb,migiushiro,16,character varying,9,YES,右後
+jrd_skb,comment_paddock,17,character varying,40,YES,パドックコメント
+jrd_skb,comment_ashimoto,18,character varying,40,YES,脚元コメント
+jrd_skb,comment_bagu_sonota,19,character varying,40,YES,馬具(その他)コメント
+jrd_skb,comment_race,20,character varying,40,YES,レースコメント
+jrd_skb,hami,21,character varying,3,YES,ハミ
+jrd_skb,bandage,22,character varying,3,YES,バンテージ
+jrd_skb,teitetsu,23,character varying,3,YES,蹄鉄
+jrd_skb,hizume_jotai,24,character varying,3,YES,蹄状態
+jrd_skb,soe,25,character varying,3,YES,ソエ
+jrd_skb,kotsuryu,26,character varying,3,YES,骨瘤
+jrd_skb,yobi_1,27,character varying,11,YES,予備
+jrd_tyb,keibajo_code,1,character varying,2,NO,競馬場コード
+jrd_tyb,race_shikonen,2,character varying,6,NO,レース施行年
+jrd_tyb,kaisai_kai,3,character varying,1,NO,開催回[第N回]
+jrd_tyb,kaisai_nichime,4,character varying,1,NO,開催日目[N日目]
+jrd_tyb,race_bango,5,character varying,2,NO,レース番号
+jrd_tyb,umaban,6,character varying,2,NO,馬番
+jrd_tyb,idm,7,character varying,5,YES,IDM
+jrd_tyb,kishu_shisu,8,character varying,5,YES,騎手指数
+jrd_tyb,joho_shisu,9,character varying,5,YES,情報指数
+jrd_tyb,odds_shisu,10,character varying,5,YES,オッズ指数
+jrd_tyb,paddock_shisu,11,character varying,5,YES,パドック指数
+jrd_tyb,yobi_1,12,character varying,5,YES,予備
+jrd_tyb,sogo_shisu,13,character varying,5,YES,総合指数
+jrd_tyb,bagu_henko_joho,14,character varying,1,YES,馬具変更情報
+jrd_tyb,ashimoto_joho,15,character varying,1,YES,脚元情報
+jrd_tyb,torikeshi_flag,16,character varying,1,YES,取消フラグ
+jrd_tyb,kishu_code,17,character varying,5,YES,騎手コード
+jrd_tyb,kishumei,18,character varying,12,YES,騎手名
+jrd_tyb,futan_juryo,19,character varying,3,YES,負担重量
+jrd_tyb,kishu_minarai_code,20,character varying,1,YES,騎手見習コード
+jrd_tyb,babajotai_code,21,character varying,2,YES,馬場状態コード
+jrd_tyb,tenko_code,22,character varying,1,YES,天候コード
+jrd_tyb,tansho_odds,23,character varying,6,YES,単勝オッズ
+jrd_tyb,odds_fukusho,24,character varying,6,YES,複勝オッズ
+jrd_tyb,odds_happyo_jifun,25,character varying,4,YES,オッズ発表時分
+jrd_tyb,bataiju,26,character varying,3,YES,馬体重
+jrd_tyb,bataiju_zogen,27,character varying,3,YES,馬体重増減
+jrd_tyb,odds_shirushi,28,character varying,1,YES,オッズ印
+jrd_tyb,paddock_shirushi,29,character varying,1,YES,パドック印
+jrd_tyb,chokuzen_sogo_shirushi,30,character varying,1,YES,直前総合印
+jrd_tyb,batai_code,31,character varying,1,YES,馬体コード
+jrd_tyb,kehai_code,32,character varying,1,YES,気配コード
+jrd_tyb,hasso_jikoku,33,character varying,4,YES,発走時刻
+jrd_tyb,yobi_2,34,character varying,23,YES,予備
+jrd_ukc,ketto_toroku_bango,1,character varying,8,NO,血統登録番号
+jrd_ukc,bamei,2,character varying,36,YES,馬名
+jrd_ukc,seibetsu_code,3,character varying,1,YES,性別コード
+jrd_ukc,moshoku_code,4,character varying,2,YES,毛色コード
+jrd_ukc,umakigo_code,5,character varying,2,YES,馬記号コード
+jrd_ukc,bamei_chichi,6,character varying,36,YES,父馬名
+jrd_ukc,bamei_haha,7,character varying,36,YES,母馬名
+jrd_ukc,bamei_hahachichi,8,character varying,36,YES,母父馬名
+jrd_ukc,seinengappi,9,character varying,8,YES,生年月日
+jrd_ukc,seinen_chichi,10,character varying,4,YES,父馬生年
+jrd_ukc,seinen_haha,11,character varying,4,YES,母馬生年
+jrd_ukc,seinen_hahachichi,12,character varying,4,YES,母父馬生年
+jrd_ukc,banushimei,13,character varying,40,YES,馬主名
+jrd_ukc,banushikai_code,14,character varying,2,YES,馬主会コード
+jrd_ukc,seisanshamei,15,character varying,40,YES,生産者名
+jrd_ukc,sanchimei,16,character varying,8,YES,産地名
+jrd_ukc,massho_kubun,17,character varying,1,YES,抹消区分
+jrd_ukc,data_sakusei_nengappi,18,character varying,8,YES,データ作成年月日
+jrd_ukc,keito_code_chichi,19,character varying,4,YES,父系統コード
+jrd_ukc,keito_code_hahachichi,20,character varying,4,YES,母父系統コード
+jrd_ukc,yobi_1,21,character varying,6,YES,予備
+jvd_av,record_id,1,character varying,2,YES,"レコード種別ID: ""AV"" をセットレコードフォーマットを特定する"
+jvd_av,data_kubun,2,character varying,1,YES,データ区分: 1:出走取消　2:競走除外
+jvd_av,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_av,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_av,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_av,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_av,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_av,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_av,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_av,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁
+jvd_av,umaban,11,character varying,2,NO,馬番: 該当馬番01〜18
+jvd_av,bamei,12,character varying,36,YES,馬名: 全角18文字　ただし当面は全角9文字のみ設定(9文字を超える馬名は9文字までとする)
+jvd_av,jiyu_kubun,13,character varying,3,YES,事由区分: 000:初期値　001:疾病　002:事故　003:その他
+jvd_bn,record_id,1,character varying,2,YES,"レコード種別ID: ""BN"" をセットレコードフォーマットを特定する"
+jvd_bn,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_bn,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_bn,banushi_code,4,character varying,6,NO,馬主コード: nan
+jvd_bn,banushimei_hojinkaku,5,character varying,64,YES,馬主名(法人格有): 全角32文字 〜 半角64文字 （全角と半角が混在） 外国馬主の場合は、8.馬主名欧字の頭64バイトを設定。
+jvd_bn,banushimei,6,character varying,64,YES,馬主名(法人格無): 全角32文字 〜 半角64文字 （全角と半角が混在） 株式会社、有限会社などの法人格を示す文字列が頭もしくは末尾にある場合にそれを削除したものを設定。また、外国馬主の場合は、8.馬主名欧字の頭64バイトを設定。
+jvd_bn,banushimei_hankaku_kana,7,character varying,50,YES,馬主名半角ｶﾅ: 半角50文字 日本語半角ｶﾅを設定(半角ｶﾅ以外の文字は設定しない)　外国馬主については設定しない。
+jvd_bn,banushimei_eur,8,character varying,100,YES,馬主名欧字: 全角50文字 〜 半角100文字 (全角と半角が混在) アルファベット等以外の特殊文字については、全角で設定。
+jvd_bn,fukushoku_hyoji,9,character varying,60,YES,"服色標示: 全角30文字　馬主毎に指定される騎手の勝負服の色・模様を示す (レーシングプログラムに記載されているもの） (例)""水色，赤山形一本輪，水色袖　　　"""
+jvd_bn,seiseki_joho_1,10,character varying,60,YES,<本年･累計成績情報>: 本年・累計の順に設定
+jvd_bn,seiseki_joho_2,11,character varying,60,YES,設定年: 成績情報に設定されている年度(西暦)
+jvd_br,record_id,1,character varying,2,YES,"レコード種別ID: ""BR"" をセットレコードフォーマットを特定する"
+jvd_br,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_br,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_br,seisansha_code,4,character varying,8,NO,生産者コード: nan
+jvd_br,seisanshamei_hojinkaku,5,character varying,72,YES,生産者名(法人格有): 全角36文字 〜 半角72文字 （全角と半角が混在） 外国生産者の場合は、8.生産者名欧字の頭70バイトを設定。
+jvd_br,seisanshamei,6,character varying,72,YES,生産者名(法人格無): 全角36文字 〜 半角72文字 （全角と半角が混在） 株式会社、有限会社などの法人格を示す文字列が頭もしくは末尾にある場合にそれを削除したものを設定。また、外国生産者の場合は、8.生産者名欧字の頭70バイトを設定。
+jvd_br,seisanshamei_hankaku_kana,7,character varying,72,YES,生産者名半角ｶﾅ: 半角72文字 日本語半角ｶﾅを設定(半角ｶﾅ以外の文字は設定しない)　外国生産者については設定しない。
+jvd_br,seisanshamei_eur,8,character varying,168,YES,生産者名欧字: 全角84文字 〜 半角168文字 (全角と半角が混在) アルファベット等以外の特殊文字については、全角で設定。
+jvd_br,seisansha_jusho_jichishomei,9,character varying,20,YES,生産者住所自治省名: 全角10文字　生産者の所在地を示す
+jvd_br,seiseki_joho_1,10,character varying,60,YES,<本年･累計成績情報>: 本年・累計の順に設定
+jvd_br,seiseki_joho_2,11,character varying,60,YES,設定年: 成績情報に設定されている年度(西暦)
+jvd_bt,record_id,1,character varying,2,YES,"レコード種別ID: ""BT""をセットレコードフォーマットを特定する"
+jvd_bt,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_bt,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_bt,hanshoku_toroku_bango,4,character varying,10,NO,繁殖登録番号: nan
+jvd_bt,keito_id,5,character varying,30,YES,系統ID: 2桁ごとに系譜を表現するID。詳しくは特記事項を参照
+jvd_bt,keito_mei,6,character varying,36,YES,"系統名: ""サンデーサイレンス""系など、その系統の名称"
+jvd_bt,keito_setsumei,7,character varying,6800,YES,系統説明: テキスト文
+jvd_cc,record_id,1,character varying,2,YES,"レコード種別ID: ""CC"" をセットレコードフォーマットを特定する"
+jvd_cc,data_kubun,2,character varying,1,YES,データ区分: 1:初期値
+jvd_cc,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_cc,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_cc,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_cc,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_cc,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_cc,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_cc,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_cc,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁
+jvd_cc,kyori,11,character varying,4,YES,<変更後情報>: nan
+jvd_cc,track_code,12,character varying,2,YES,変更後 距離: 単位：メートル
+jvd_cc,kyori_henkomae,13,character varying,4,YES,変更後 トラックコード: <コード表 2009.トラックコード>参照
+jvd_cc,track_code_henkomae,14,character varying,2,YES,<変更前情報>: nan
+jvd_cc,jiyu_kubun,15,character varying,1,YES,変更前 距離: 単位：メートル
+jvd_ch,record_id,1,character varying,2,YES,"レコード種別ID: ""CH"" をセットレコードフォーマットを特定する"
+jvd_ch,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_ch,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_ch,chokyoshi_code,4,character varying,5,NO,調教師コード: nan
+jvd_ch,massho_kubun,5,character varying,1,YES,調教師抹消区分: 0:現役 1:抹消
+jvd_ch,menkyo_kofu_nengappi,6,character varying,8,YES,調教師免許交付年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_ch,menkyo_massho_nengappi,7,character varying,8,YES,調教師免許抹消年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_ch,seinengappi,8,character varying,8,YES,生年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_ch,chokyoshimei,9,character varying,34,YES,調教師名: 全角17文字　姓＋全角空白1文字＋名　外国人の場合は連続17文字
+jvd_ch,chokyoshimei_hankaku_kana,10,character varying,30,YES,調教師名半角ｶﾅ: 半角30文字　姓15文字＋名15文字　外国人の場合は連続30文字
+jvd_ch,chokyoshimei_ryakusho,11,character varying,8,YES,調教師名略称: 全角4文字
+jvd_ch,chokyoshimei_eur,12,character varying,80,YES,調教師名欧字: 半角80文字　姓＋半角空白1文字＋名　フルネームで記載
+jvd_ch,seibetsu_kubun,13,character varying,1,YES,性別区分: 1:男性　2:女性
+jvd_ch,tozai_shozoku_code,14,character varying,1,YES,調教師東西所属コード: <コード表 2301.東西所属コード>参照
+jvd_ch,shotai_chiikimei,15,character varying,20,YES,招待地域名: 全角10文字
+jvd_ch,jushoshori_joho_1,16,character varying,163,YES,<最近重賞勝利情報>: 直近の重賞勝利から順に設定
+jvd_ch,jushoshori_joho_2,17,character varying,163,YES,年月日場回日R: レース詳細のキー情報
+jvd_ch,jushoshori_joho_3,18,character varying,163,YES,競走名本題: 全角30文字
+jvd_ch,seiseki_joho_1,19,character varying,1052,YES,競走名略称10文字: 全角10文字
+jvd_ch,seiseki_joho_2,20,character varying,1052,YES,競走名略称6文字: 全角6文字
+jvd_ch,seiseki_joho_3,21,character varying,1052,YES,競走名略称3文字: 全角3文字
+jvd_ck,record_id,1,character varying,2,YES,"レコード種別ID: ""CK"" をセットレコードフォーマットを特定する"
+jvd_ck,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_ck,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_ck,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_ck,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_ck,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_ck,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_ck,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_ck,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_ck,ketto_toroku_bango,10,character varying,10,NO,血統登録番号: 生年(西暦)4桁＋1＋数字5桁
+jvd_ck,bamei,11,character varying,36,YES,馬名: 通常全角18文字。
+jvd_ck,heichi_honshokin_ruikei,12,character varying,9,YES,平地本賞金累計: 単位：百円　（中央の平地本賞金の合計）
+jvd_ck,shogai_honshokin_ruikei,13,character varying,9,YES,障害本賞金累計: 単位：百円　（中央の障害本賞金の合計）
+jvd_ck,heichi_fukashokin_ruikei,14,character varying,9,YES,平地付加賞金累計: 単位：百円　（中央の平地付加賞金の合計）
+jvd_ck,shogai_fukashokin_ruikei,15,character varying,9,YES,障害付加賞金累計: 単位：百円　（中央の障害付加賞金の合計）
+jvd_ck,heichi_shutokushokin_ruikei,16,character varying,9,YES,平地収得賞金累計: 単位：百円　（中央＋中央以外の平地累積収得賞金）
+jvd_ck,shogai_shutokushokin_ruikei,17,character varying,9,YES,障害収得賞金累計: 単位：百円　（中央＋中央以外の障害累積収得賞金）
+jvd_ck,sogo,18,character varying,18,YES,総合着回数: 1着〜5着及び着外(6着以下)の回数（中央＋地方＋海外)
+jvd_ck,chuo_gokei,19,character varying,18,YES,中央合計着回数: 1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_choku,20,character varying,18,YES,<馬場別着回数>: nan
+jvd_ck,shiba_migi,21,character varying,18,YES,芝直・着回数: 芝・直線コースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_hidari,22,character varying,18,YES,芝右・着回数: 芝・右回りコースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_choku,23,character varying,18,YES,芝左・着回数: 芝・左回りコースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_migi,24,character varying,18,YES,ダ直・着回数: ダート・直線コースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_hidari,25,character varying,18,YES,ダ右・着回数: ダート・右回りコースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shogai,26,character varying,18,YES,ダ左・着回数: ダート・左回りコースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_ryo,27,character varying,18,YES,障害・着回数: 障害レースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_yayaomo,28,character varying,18,YES,<馬場状態別着回数>: nan
+jvd_ck,shiba_omo,29,character varying,18,YES,芝良・着回数: 芝・良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_furyo,30,character varying,18,YES,芝稍・着回数: 芝・稍重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_ryo,31,character varying,18,YES,芝重・着回数: 芝・重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_yayaomo,32,character varying,18,YES,芝不・着回数: 芝・不良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_omo,33,character varying,18,YES,ダ良・着回数: ダート・良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_furyo,34,character varying,18,YES,ダ稍・着回数: ダート・稍重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shogai_ryo,35,character varying,18,YES,ダ重・着回数: ダート・重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shogai_yayaomo,36,character varying,18,YES,ダ不・着回数: ダート・不良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shogai_omo,37,character varying,18,YES,障良・着回数: 障害レース・良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shogai_furyo,38,character varying,18,YES,障稍・着回数: 障害レース・稍重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_1200_ika,39,character varying,18,YES,障重・着回数: 障害レース・重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_1201_1400,40,character varying,18,YES,障不・着回数: 障害レース・不良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_1401_1600,41,character varying,18,YES,<距離別着回数>: nan
+jvd_ck,shiba_1601_1800,42,character varying,18,YES,芝1200以下・着回数: 芝･1200M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_1801_2000,43,character varying,18,YES,芝1201-1400・着回数: 芝･1201Ｍ以上1400M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_2001_2200,44,character varying,18,YES,芝1401-1600・着回数: 芝･1401Ｍ以上1600M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_2201_2400,45,character varying,18,YES,芝1601-1800・着回数: 芝･1601Ｍ以上1800M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_2401_2800,46,character varying,18,YES,芝1801-2000・着回数: 芝･1801Ｍ以上2000M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_2801_ijo,47,character varying,18,YES,芝2001-2200・着回数: 芝･2001Ｍ以上2200M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_1200_ika,48,character varying,18,YES,芝2201-2400・着回数: 芝･2201Ｍ以上2400M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_1201_1400,49,character varying,18,YES,芝2401-2800・着回数: 芝･2401Ｍ以上2800M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_1401_1600,50,character varying,18,YES,芝2801以上・着回数: 芝･2801Ｍ以上での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_1601_1800,51,character varying,18,YES,ダ1200以下・着回数: ダート･1200M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_1801_2000,52,character varying,18,YES,ダ1201-1400・着回数: ダート･1201Ｍ以上1400M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_2001_2200,53,character varying,18,YES,ダ1401-1600・着回数: ダート･1401Ｍ以上1600M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_2201_2400,54,character varying,18,YES,ダ1601-1800・着回数: ダート･1601Ｍ以上1800M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_2401_2800,55,character varying,18,YES,ダ1801-2000・着回数: ダート･1801Ｍ以上2000M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,dirt_2801_ijo,56,character varying,18,YES,ダ2001-2200・着回数: ダート･2001Ｍ以上2200M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_sapporo,57,character varying,18,YES,ダ2201-2400・着回数: ダート･2201Ｍ以上2400M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_hakodate,58,character varying,18,YES,ダ2401-2800・着回数: ダート･2401Ｍ以上2800M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_fukushima,59,character varying,18,YES,ダ2801以上・着回数: ダート･2801Ｍ以上での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,shiba_niigata,60,character varying,18,YES,<競馬場別着回数>: nan
+jvd_ck,shiba_tokyo,61,character varying,18,YES,札幌芝・着回数: 札幌・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shiba_nakayama,62,character varying,18,YES,函館芝・着回数: 函館・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shiba_chukyo,63,character varying,18,YES,福島芝・着回数: 福島・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shiba_kyoto,64,character varying,18,YES,新潟芝・着回数: 新潟・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shiba_hanshin,65,character varying,18,YES,東京芝・着回数: 東京・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shiba_kokura,66,character varying,18,YES,中山芝・着回数: 中山・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_sapporo,67,character varying,18,YES,中京芝・着回数: 中京・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_hakodate,68,character varying,18,YES,京都芝・着回数: 京都・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_fukushima,69,character varying,18,YES,阪神芝・着回数: 阪神・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_niigata,70,character varying,18,YES,小倉芝・着回数: 小倉・芝での1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_tokyo,71,character varying,18,YES,札幌ダ・着回数: 札幌・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_nakayama,72,character varying,18,YES,函館ダ・着回数: 函館・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_chukyo,73,character varying,18,YES,福島ダ・着回数: 福島・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_kyoto,74,character varying,18,YES,新潟ダ・着回数: 新潟・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_hanshin,75,character varying,18,YES,東京ダ・着回数: 東京・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,dirt_kokura,76,character varying,18,YES,中山ダ・着回数: 中山・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_sapporo,77,character varying,18,YES,中京ダ・着回数: 中京・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_hakodate,78,character varying,18,YES,京都ダ・着回数: 京都・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_fukushima,79,character varying,18,YES,阪神ダ・着回数: 阪神・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_niigata,80,character varying,18,YES,小倉ダ・着回数: 小倉・ダートでの1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_tokyo,81,character varying,18,YES,札幌障・着回数: 札幌・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_nakayama,82,character varying,18,YES,函館障・着回数: 函館・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_chukyo,83,character varying,18,YES,福島障・着回数: 福島・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_kyoto,84,character varying,18,YES,新潟障・着回数: 新潟・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_hanshin,85,character varying,18,YES,東京障・着回数: 東京・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,shogai_kokura,86,character varying,18,YES,中山障・着回数: 中山・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,kyakushitsu_keiko,87,character varying,12,YES,中京障・着回数: 中京・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,toroku_race_su,88,character varying,3,YES,京都障・着回数: 京都・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,kishu_code,89,character varying,5,YES,阪神障・着回数: 阪神・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,kishumei,90,character varying,34,YES,小倉障・着回数: 小倉・障害での1着〜5着及び着外(6着以下)の回数
+jvd_ck,seiseki_joho_kishu_1,91,character varying,1220,YES,脚質傾向: 逃げ回数、先行回数、差し回数、追込回数を設定 過去出走レースの脚質を判定しカウントしたもの(中央レースのみ)
+jvd_ck,seiseki_joho_kishu_2,92,character varying,1220,YES,登録レース数: JRA-VANに登録されている成績レース数
+jvd_ck,chokyoshi_code,93,character varying,5,YES,<騎手情報>: nan
+jvd_ck,chokyoshimei,94,character varying,34,YES,騎手コード: nan
+jvd_ck,seiseki_joho_chokyoshi_1,95,character varying,1220,YES,騎手名: 全角17文字　姓＋全角空白1文字＋名　外国人の場合は連続17文字
+jvd_ck,seiseki_joho_chokyoshi_2,96,character varying,1220,YES,<騎手本年･累計成績情報>: 本年・累計の順に設定
+jvd_ck,banushi_code,97,character varying,6,YES,設定年: 成績情報に設定されている年度(西暦)
+jvd_ck,banushimei_hojinkaku,98,character varying,64,YES,平地本賞金合計: 単位：百円　（中央の平地本賞金の合計）
+jvd_ck,banushimei,99,character varying,64,YES,障害本賞金合計: 単位：百円　（中央の障害本賞金の合計）
+jvd_ck,seiseki_joho_banushi_1,100,character varying,60,YES,平地付加賞金合計: 単位：百円　（中央の平地付加賞金の合計）
+jvd_ck,seiseki_joho_banushi_2,101,character varying,60,YES,障害付加賞金合計: 単位：百円　（中央の障害付加賞金の合計）
+jvd_ck,seisansha_code,102,character varying,8,YES,芝着回数: 1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,seisanshamei_hojinkaku,103,character varying,72,YES,ダート着回数: 1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,seisanshamei,104,character varying,72,YES,障害着回数: 1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,seiseki_joho_seisansha_1,105,character varying,60,YES,芝1200以下・着回数: 芝･1200M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_ck,seiseki_joho_seisansha_2,106,character varying,60,YES,芝1201-1400・着回数: 芝･1201Ｍ以上1400M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_cs,record_id,1,character varying,2,YES,"レコード種別ID: ""CS""をセットレコードフォーマットを特定する"
+jvd_cs,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_cs,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_cs,keibajo_code,4,character varying,2,NO,競馬場コード: <コード表 2001.競馬場コード>参照
+jvd_cs,kyori,5,character varying,4,NO,距離: 単位：メートル
+jvd_cs,track_code,6,character varying,2,NO,トラックコード: <コード表 2009.トラックコード>参照
+jvd_cs,course_kaishu_nengappi,7,character varying,8,NO,コース改修年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式　(コース改修後、最初に行われた開催日）
+jvd_cs,course_setsumei,8,character varying,6800,YES,コース説明: テキスト文
+jvd_dm,record_id,1,character varying,2,YES,"レコード種別ID: ""DM""をセットレコードフォーマットを特定する"
+jvd_dm,data_kubun,2,character varying,1,YES,データ区分: 1:前日予想(出馬発表後)　2:当日予想(天候馬場発表後) 3:直前予想(馬体重発表後) 7:成績(月曜)　0:該当レコード削除(提供ミスなどの理由による) ※1 7:成績(月曜)は蓄積系データのみ設定されます。     蓄積系データにて7:成績(月曜)提供後も速報系データには3:直前予想(馬体重発...
+jvd_dm,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_dm,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_dm,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_dm,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_dm,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_dm,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_dm,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_dm,data_sakusei_jifun,10,character varying,4,YES,データ作成時分: 時分各2桁
+jvd_dm,mining_yoso_01,11,character varying,15,YES,<マイニング予想>: nan
+jvd_dm,mining_yoso_02,12,character varying,15,YES,馬番: 該当馬番01〜18
+jvd_dm,mining_yoso_03,13,character varying,15,YES,予想走破タイム: 9分99秒99で設定
+jvd_dm,mining_yoso_04,14,character varying,15,YES,予想誤差(信頼度)＋: 99秒99で設定 予想タイムの＋誤差を設定(＋方向の誤差。予想走破タイムに対して早くなる方向。予想走破タイムからマイナスする。)
+jvd_dm,mining_yoso_05,15,character varying,15,YES,予想誤差(信頼度)−: 99秒99で設定 予想タイムの−誤差を設定(−方向の誤差。予想走破タイムに対して遅くなる方向。予想走破タイムにプラスする。)
+jvd_dm,mining_yoso_06,16,character varying,15,YES,レコード区切: CR/LF
+jvd_dm,mining_yoso_07,17,character varying,15,YES,項目名: 説明
+jvd_dm,mining_yoso_08,18,character varying,15,YES,マイニング予想8
+jvd_dm,mining_yoso_09,19,character varying,15,YES,マイニング予想9
+jvd_dm,mining_yoso_10,20,character varying,15,YES,マイニング予想10
+jvd_dm,mining_yoso_11,21,character varying,15,YES,マイニング予想11
+jvd_dm,mining_yoso_12,22,character varying,15,YES,マイニング予想12
+jvd_dm,mining_yoso_13,23,character varying,15,YES,マイニング予想13
+jvd_dm,mining_yoso_14,24,character varying,15,YES,マイニング予想14
+jvd_dm,mining_yoso_15,25,character varying,15,YES,マイニング予想15
+jvd_dm,mining_yoso_16,26,character varying,15,YES,マイニング予想16
+jvd_dm,mining_yoso_17,27,character varying,15,YES,マイニング予想17
+jvd_dm,mining_yoso_18,28,character varying,15,YES,マイニング予想18
+jvd_h1,record_id,1,character varying,2,YES,"レコード種別ID: ""H1"" をセットレコードフォーマットを特定する"
+jvd_h1,data_kubun,2,character varying,1,YES,データ区分: 2:前日売最終　4:確定　5:確定(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_h1,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_h1,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_h1,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_h1,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_h1,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_h1,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_h1,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_h1,toroku_tosu,10,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_h1,shusso_tosu,11,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_h1,hatsubai_flag_tansho,12,character varying,1,YES,発売フラグ　単勝: 単勝発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_h1,hatsubai_flag_fukusho,13,character varying,1,YES,発売フラグ　複勝: 複勝発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_h1,hatsubai_flag_wakuren,14,character varying,1,YES,発売フラグ　枠連: 枠連発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_h1,hatsubai_flag_umaren,15,character varying,1,YES,発売フラグ　馬連: 馬連発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_h1,hatsubai_flag_wide,16,character varying,1,YES,発売フラグ　ワイド: ワイド発売の有無（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_h1,hatsubai_flag_umatan,17,character varying,1,YES,発売フラグ　馬単: 馬単発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_h1,hatsubai_flag_sanrenpuku,18,character varying,1,YES,発売フラグ　3連複: 3連複発売の有無 （0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_h1,fukusho_chakubarai_key,19,character varying,1,YES,複勝着払キー: 複勝の着払キー　（0:複勝発売なし 2:2着まで払い 3:3着まで払い）
+jvd_h1,henkan_umaban_joho,20,character varying,28,YES,"返還馬番情報(馬番01〜28): （0:返還なし 1:返還あり）　発売後取消しとなり返還対象となった馬番のエリアに ""1"" を設定 （例）5番取消しの場合 0000100000000000000000000000"
+jvd_h1,henkan_wakuban_joho,21,character varying,8,YES,"返還枠番情報(枠番1〜8): （0:返還なし 1:返還あり）　発売後取消しとなり返還対象となった枠番のエリアに ""1"" を設定 （例）10頭だての5番取消しの場合、5枠は5番のみのため5枠はなくなる 00001000"
+jvd_h1,henkan_dowaku_joho,22,character varying,8,YES,"返還同枠情報(枠番1〜8): （0:返還なし 1:返還あり）　発売後取消しとなり返還対象となった枠番のエリアに ""1"" を設定 （例）10頭だての8番取消しの場合、7枠は7番、8番の登録があるため7枠は取消しにならない 　　　ただし7-7は取消しになるので同枠のみ取り消しとなる 00000010"
+jvd_h1,hyosu_tansho,23,character varying,420,YES,<単勝票数>: 28頭立てまで考慮し繰返し28回　馬番昇順01〜28
+jvd_h1,hyosu_fukusho,24,character varying,420,YES,馬番: 該当馬番
+jvd_h1,hyosu_wakuren,25,character varying,540,YES,票数: 単位百円 ALL0:発売前取消し、発売票数なし　スペース:登録なし
+jvd_h1,hyosu_umaren,26,character varying,2754,YES,人気順: スペース:登録なし ''--'':発売前取消 ''**'':発売後取消
+jvd_h1,hyosu_wide,27,character varying,2754,YES,<複勝票数>: 28頭立てまで考慮し繰返し28回　馬番昇順01〜28
+jvd_h1,hyosu_umatan,28,character varying,5508,YES,馬番: 該当馬番
+jvd_h1,hyosu_sanrenpuku,29,character varying,16320,YES,票数: 単位百円 ALL0:発売前取消し、発売票数なし　スペース:登録なし
+jvd_h1,hyosu_gokei_tansho,30,character varying,11,YES,人気順: スペース:登録なし ''--'':発売前取消 ''**'':発売後取消
+jvd_h1,hyosu_gokei_fukusho,31,character varying,11,YES,<枠連票数>: 組番昇順　1-1〜8-8
+jvd_h1,hyosu_gokei_wakuren,32,character varying,11,YES,組番: 該当枠番
+jvd_h1,hyosu_gokei_umaren,33,character varying,11,YES,票数: 単位百円 ALL0:発売前取消し、発売票数なし　スペース:登録なし
+jvd_h1,hyosu_gokei_wide,34,character varying,11,YES,人気順: スペース:登録なし ''--'':発売前取消 ''**'':発売後取消
+jvd_h1,hyosu_gokei_umatan,35,character varying,11,YES,<馬連票数>: 組番昇順　01-02〜17-18
+jvd_h1,hyosu_gokei_sanrenpuku,36,character varying,11,YES,組番: 該当組番
+jvd_h1,henkan_hyosu_gokei_tansho,37,character varying,11,YES,票数: 単位百円 ALL0:発売前取消し、発売票数なし　スペース:登録なし
+jvd_h1,henkan_hyosu_gokei_fukusho,38,character varying,11,YES,人気順: スペース:登録なし ''---'':発売前取消 ''***'':発売後取消
+jvd_h1,henkan_hyosu_gokei_wakuren,39,character varying,11,YES,<ワイド票数>: 組番昇順　01-02〜17-18
+jvd_h1,henkan_hyosu_gokei_umaren,40,character varying,11,YES,組番: 該当組番
+jvd_h1,henkan_hyosu_gokei_wide,41,character varying,11,YES,票数: 単位百円 ALL0:発売前取消し、発売票数なし　スペース:登録なし
+jvd_h1,henkan_hyosu_gokei_umatan,42,character varying,11,YES,人気順: スペース:登録なし ''---'':発売前取消 ''***'':発売後取消
+jvd_h1,henkan_hyosu_gokei_sanrenpuku,43,character varying,11,YES,<馬単票数>: 組番昇順　01-02〜18-17
+jvd_h6,record_id,1,character varying,2,YES,"レコード種別ID: ""H6"" をセットレコードフォーマットを特定する"
+jvd_h6,data_kubun,2,character varying,1,YES,データ区分: 2:前日売最終　4:確定　5:確定(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_h6,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_h6,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_h6,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_h6,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_h6,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_h6,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_h6,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_h6,toroku_tosu,10,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_h6,shusso_tosu,11,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_h6,hatsubai_flag_sanrentan,12,character varying,1,YES,発売フラグ　3連単: 3連複発売の有無 （0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_h6,henkan_umaban_joho,13,character varying,18,YES,"返還馬番情報(馬番01〜18): （0:返還なし 1:返還あり）　発売後取消しとなり返還対象となった馬番のエリアに ""1"" を設定 （例）5番取消しの場合 000010000000000000"
+jvd_h6,hyosu_sanrentan,14,character varying,102816,YES,<3連単票数>: 組番昇順　01-02-03〜18-17-16
+jvd_h6,hyosu_gokei_sanrentan,15,character varying,11,YES,組番: 該当組番
+jvd_h6,henkan_hyosu_gokei_sanrentan,16,character varying,11,YES,票数: 単位百円 ALL0:発売前取消し、発売票数なし　スペース:登録なし
+jvd_hc,record_id,1,character varying,2,YES,"レコード種別ID: ""HC"" をセットレコードフォーマットを特定する"
+jvd_hc,data_kubun,2,character varying,1,YES,データ区分: 1:初期値　0:該当レコード削除(提供ミスなどの理由による)
+jvd_hc,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_hc,tracen_kubun,4,character varying,1,NO,トレセン区分: 0:美浦　1:栗東
+jvd_hc,chokyo_nengappi,5,character varying,8,NO,調教年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_hc,chokyo_jikoku,6,character varying,4,NO,調教時刻: 時分各2桁
+jvd_hc,ketto_toroku_bango,7,character varying,10,NO,血統登録番号: 生年(西暦)4桁＋品種1桁＋数字5桁
+jvd_hc,time_gokei_4f,8,character varying,4,YES,<4ハロン800M>: nan
+jvd_hc,lap_time_4f,9,character varying,3,YES,4ハロンタイム合計(800M〜0M): 単位:999.9秒　測定不良時は　0000　をセット
+jvd_hc,time_gokei_3f,10,character varying,4,YES,ラップタイム(800M〜600M): 単位:99.9秒　測定不良時は　000　をセット
+jvd_hc,lap_time_3f,11,character varying,3,YES,<3ハロン600M>: nan
+jvd_hc,time_gokei_2f,12,character varying,4,YES,3ハロンタイム合計(600M〜0M): 単位:999.9秒　測定不良時は　0000　をセット
+jvd_hc,lap_time_2f,13,character varying,3,YES,ラップタイム(600M〜400M): 単位:99.9秒　測定不良時は　000　をセット
+jvd_hc,lap_time_1f,14,character varying,3,YES,<2ハロン400M>: nan
+jvd_hn,record_id,1,character varying,2,YES,"レコード種別ID: ""HN"" をセットレコードフォーマットを特定する"
+jvd_hn,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_hn,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_hn,hanshoku_toroku_bango,4,character varying,10,NO,繁殖登録番号: 同一馬で、繁殖登録番号が複数ある場合がある
+jvd_hn,yobi_1,5,character varying,8,YES,予備: nan
+jvd_hn,ketto_toroku_bango,6,character varying,10,YES,血統登録番号: 外国の繁殖馬等の理由で血統登録番号が初期値の場合がある
+jvd_hn,yobi_2,7,character varying,1,YES,"予備: ""0""を設定"
+jvd_hn,bamei,8,character varying,36,YES,馬名: 全角18文字 〜 半角36文字 （全角と半角が混在） 外国の繁殖馬の場合は、10.馬名欧字の頭36バイトを設定。
+jvd_hn,bamei_hankaku_kana,9,character varying,40,YES,馬名半角ｶﾅ: 半角40文字 日本語半角ｶﾅを設定(半角ｶﾅ以外の文字は設定しない)　外国繁殖馬については設定しない。
+jvd_hn,bamei_eur,10,character varying,80,YES,馬名欧字: 全角40文字 〜 半角80文字 (全角と半角が混在) アルファベット等以外の特殊文字については、全角で設定。
+jvd_hn,seinen,11,character varying,4,YES,生年: 西暦4桁
+jvd_hn,seibetsu_code,12,character varying,1,YES,性別コード: <コード表 2202.性別コード>参照
+jvd_hn,hinshu_code,13,character varying,1,YES,品種コード: <コード表 2201.品種コード>参照
+jvd_hn,moshoku_code,14,character varying,2,YES,毛色コード: <コード表 2203.毛色コード>参照
+jvd_hn,mochikomi_kubun,15,character varying,1,YES,繁殖馬持込区分: 0:内国産 1:持込 2:輸入内国産扱い 3:輸入　9:その他
+jvd_hn,yunyu_nen,16,character varying,4,YES,輸入年: 西暦4桁
+jvd_hn,sanchimei,17,character varying,20,YES,産地名: 全角10文字
+jvd_hn,ketto_joho_01a,18,character varying,10,YES,父馬繁殖登録番号: nan
+jvd_hn,ketto_joho_02a,19,character varying,10,YES,母馬繁殖登録番号: nan
+jvd_hr,record_id,1,character varying,2,YES,"レコード種別ID: ""HR"" をセットレコードフォーマットを特定する"
+jvd_hr,data_kubun,2,character varying,1,YES,データ区分: 1:速報成績(払戻金確定)　2:成績(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_hr,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_hr,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_hr,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_hr,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_hr,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_hr,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_hr,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_hr,toroku_tosu,10,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_hr,shusso_tosu,11,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_hr,fuseiritsu_flag_tansho,12,character varying,1,YES,不成立フラグ　単勝: 単勝不成立の有無　（0:不成立なし 1:不成立あり）
+jvd_hr,fuseiritsu_flag_fukusho,13,character varying,1,YES,不成立フラグ　複勝: 複勝不成立の有無　（0:不成立なし 1:不成立あり）
+jvd_hr,fuseiritsu_flag_wakuren,14,character varying,1,YES,不成立フラグ　枠連: 枠連不成立の有無　（0:不成立なし 1:不成立あり）
+jvd_hr,fuseiritsu_flag_umaren,15,character varying,1,YES,不成立フラグ　馬連: 馬連不成立の有無　（0:不成立なし 1:不成立あり）
+jvd_hr,fuseiritsu_flag_wide,16,character varying,1,YES,不成立フラグ　ワイド: ワイド不成立の有無（0:不成立なし 1:不成立あり）
+jvd_hr,yobi_1,17,character varying,1,YES,予備: nan
+jvd_hr,fuseiritsu_flag_umatan,18,character varying,1,YES,不成立フラグ　馬単: 馬単不成立の有無　（0:不成立なし 1:不成立あり）
+jvd_hr,fuseiritsu_flag_sanrenpuku,19,character varying,1,YES,不成立フラグ　3連複: 3連複不成立の有無 （0:不成立なし 1:不成立あり）
+jvd_hr,fuseiritsu_flag_sanrentan,20,character varying,1,YES,不成立フラグ　3連単: 3連単不成立の有無 （0:不成立なし 1:不成立あり）
+jvd_hr,tokubarai_flag_tansho,21,character varying,1,YES,特払フラグ　単勝: 単勝特払の有無　（0:特払なし 1:特払あり）
+jvd_hr,tokubarai_flag_fukusho,22,character varying,1,YES,特払フラグ　複勝: 複勝特払の有無　（0:特払なし 1:特払あり）
+jvd_hr,tokubarai_flag_wakuren,23,character varying,1,YES,特払フラグ　枠連: 枠連特払の有無　（0:特払なし 1:特払あり）
+jvd_hr,tokubarai_flag_umaren,24,character varying,1,YES,特払フラグ　馬連: 馬連特払の有無　（0:特払なし 1:特払あり）
+jvd_hr,tokubarai_flag_wide,25,character varying,1,YES,特払フラグ　ワイド: ワイド特払の有無（0:特払なし 1:特払あり）
+jvd_hr,yobi_2,26,character varying,1,YES,予備: nan
+jvd_hr,tokubarai_flag_umatan,27,character varying,1,YES,特払フラグ　馬単: 馬単特払の有無　（0:特払なし 1:特払あり）
+jvd_hr,tokubarai_flag_sanrenpuku,28,character varying,1,YES,特払フラグ　3連複: 3連複特払の有無 （0:特払なし 1:特払あり）
+jvd_hr,tokubarai_flag_sanrentan,29,character varying,1,YES,特払フラグ　3連単: 3連単特払の有無 （0:特払なし 1:特払あり）
+jvd_hr,henkan_flag_tansho,30,character varying,1,YES,返還フラグ　単勝: 単勝返還の有無　（0:返還なし 1:返還あり）
+jvd_hr,henkan_flag_fukusho,31,character varying,1,YES,返還フラグ　複勝: 複勝返還の有無　（0:返還なし 1:返還あり）
+jvd_hr,henkan_flag_wakuren,32,character varying,1,YES,返還フラグ　枠連: 枠連返還の有無　（0:返還なし 1:返還あり）
+jvd_hr,henkan_flag_umaren,33,character varying,1,YES,返還フラグ　馬連: 馬連返還の有無　（0:返還なし 1:返還あり）
+jvd_hr,henkan_flag_wide,34,character varying,1,YES,返還フラグ　ワイド: ワイド返還の有無（0:返還なし 1:返還あり）
+jvd_hr,yobi_3,35,character varying,1,YES,予備: nan
+jvd_hr,henkan_flag_umatan,36,character varying,1,YES,返還フラグ　馬単: 馬単返還の有無　（0:返還なし 1:返還あり）
+jvd_hr,henkan_flag_sanrenpuku,37,character varying,1,YES,返還フラグ　3連複: 3連複返還の有無 （0:返還なし 1:返還あり）
+jvd_hr,henkan_flag_sanrentan,38,character varying,1,YES,返還フラグ　3連単: 3連単返還の有無 （0:返還なし 1:返還あり）
+jvd_hr,henkan_umaban_joho,39,character varying,28,YES,"返還馬番情報(馬番01〜28): （0:返還なし 1:返還あり）　発売後取消しとなり返還対象となった馬番のエリアに ""1"" を設定 （例）5番取消しの場合 0000100000000000000000000000"
+jvd_hr,henkan_wakuban_joho,40,character varying,8,YES,"返還枠番情報(枠番1〜8): （0:返還なし 1:返還あり）　発売後取消しとなり返還対象となった枠番のエリアに ""1"" を設定 （例）10頭だての5番取消しの場合、5枠は5番のみのため5枠はなくなる 00001000"
+jvd_hr,henkan_dowaku_joho,41,character varying,8,YES,"返還同枠情報(枠番1〜8): （0:返還なし 1:返還あり）　発売後取消しとなり返還対象となった枠番のエリアに ""1"" を設定 （例）10頭だての8番取消しの場合、7枠は7番、8番の登録があるため7枠は取消しにならない 　　　ただし7-7は取消しになるので同枠のみ取り消しとなる 00000010"
+jvd_hr,haraimodoshi_tansho_1a,42,character varying,2,YES,<単勝払戻>: 3同着まで考慮し繰返し3回
+jvd_hr,haraimodoshi_tansho_1b,43,character varying,9,YES,馬番: 単勝的中馬番　（00:発売なし、特払、不成立）
+jvd_hr,haraimodoshi_tansho_1c,44,character varying,2,YES,払戻金: 単勝払戻金　（特払、不成立の金額が入る）
+jvd_hr,haraimodoshi_tansho_2a,45,character varying,2,YES,人気順: 単勝人気順
+jvd_hr,haraimodoshi_tansho_2b,46,character varying,9,YES,<複勝払戻>: 3同着まで考慮し繰返し5回
+jvd_hr,haraimodoshi_tansho_2c,47,character varying,2,YES,馬番: 複勝的中馬番　（00:発売なし、特払、不成立）
+jvd_hr,haraimodoshi_tansho_3a,48,character varying,2,YES,払戻金: 複勝払戻金　（特払、不成立の金額が入る）
+jvd_hr,haraimodoshi_tansho_3b,49,character varying,9,YES,人気順: 複勝人気順
+jvd_hr,haraimodoshi_tansho_3c,50,character varying,2,YES,<枠連払戻>: 3同着まで考慮し繰返し3回
+jvd_hr,haraimodoshi_fukusho_1a,51,character varying,2,YES,組番: 枠連的中馬番　（00:発売なし、特払、不成立）
+jvd_hr,haraimodoshi_fukusho_1b,52,character varying,9,YES,払戻金: 枠連払戻金　（特払、不成立の金額が入る）
+jvd_hr,haraimodoshi_fukusho_1c,53,character varying,2,YES,人気順: 枠連人気順
+jvd_hr,haraimodoshi_fukusho_2a,54,character varying,2,YES,<馬連払戻>: 3同着まで考慮し繰返し3回
+jvd_hr,haraimodoshi_fukusho_2b,55,character varying,9,YES,組番: 馬連的中馬番組合　（0000:発売なし、特払、不成立）
+jvd_hr,haraimodoshi_fukusho_2c,56,character varying,2,YES,払戻金: 馬連払戻金　（特払、不成立の金額が入る）
+jvd_hr,haraimodoshi_fukusho_3a,57,character varying,2,YES,人気順: 馬連人気順
+jvd_hr,haraimodoshi_fukusho_3b,58,character varying,9,YES,<ワイド払戻>: 3同着まで考慮し繰返し7回
+jvd_hr,haraimodoshi_fukusho_3c,59,character varying,2,YES,組番: ワイド的中馬番組合　（0000:発売なし、特払、不成立）
+jvd_hr,haraimodoshi_fukusho_4a,60,character varying,2,YES,払戻金: ワイド払戻金　（特払、不成立の金額が入る）
+jvd_hr,haraimodoshi_fukusho_4b,61,character varying,9,YES,人気順: ワイド人気順
+jvd_hr,haraimodoshi_fukusho_4c,62,character varying,2,YES,<予備>: nan
+jvd_hr,haraimodoshi_fukusho_5a,63,character varying,2,YES,予備: nan
+jvd_hr,haraimodoshi_fukusho_5b,64,character varying,9,YES,予備: nan
+jvd_hr,haraimodoshi_fukusho_5c,65,character varying,2,YES,予備: nan
+jvd_hr,haraimodoshi_wakuren_1a,66,character varying,2,YES,<馬単払戻>: 3同着まで考慮し繰返し6回
+jvd_hr,haraimodoshi_wakuren_1b,67,character varying,9,YES,組番: 馬単的中馬番組合　（0000:発売なし、特払、不成立）
+jvd_hr,haraimodoshi_wakuren_1c,68,character varying,2,YES,払戻金: 馬単払戻金　（特払、不成立の金額が入る）
+jvd_hr,haraimodoshi_wakuren_2a,69,character varying,2,YES,人気順: 馬単人気順
+jvd_hr,haraimodoshi_wakuren_2b,70,character varying,9,YES,<3連複払戻>: 3同着まで考慮し繰返し3回
+jvd_hr,haraimodoshi_wakuren_2c,71,character varying,2,YES,組番: 3連複的中馬番組合　（000000:発売なし、特払、不成立）
+jvd_hr,haraimodoshi_wakuren_3a,72,character varying,2,YES,払戻金: 3連複払戻金　（特払、不成立の金額が入る）
+jvd_hr,haraimodoshi_wakuren_3b,73,character varying,9,YES,人気順: 3連複人気順
+jvd_hr,haraimodoshi_wakuren_3c,74,character varying,2,YES,<3連単払戻>: 3同着まで考慮し繰返し6回
+jvd_hr,haraimodoshi_umaren_1a,75,character varying,4,YES,組番: 3連単的中馬番組合　（000000:発売なし、特払、不成立）
+jvd_hr,haraimodoshi_umaren_1b,76,character varying,9,YES,払戻金: 3連単払戻金　（特払、不成立の金額が入る）
+jvd_hr,haraimodoshi_umaren_1c,77,character varying,3,YES,人気順: 3連単人気順
+jvd_hr,haraimodoshi_umaren_2a,78,character varying,4,YES,レコード区切: CR/LF
+jvd_hr,haraimodoshi_umaren_2b,79,character varying,9,YES,項目名: 説明
+jvd_hr,haraimodoshi_umaren_2c,80,character varying,3,YES,馬連払戻2
+jvd_hr,haraimodoshi_umaren_3a,81,character varying,4,YES,馬連払戻3
+jvd_hr,haraimodoshi_umaren_3b,82,character varying,9,YES,馬連払戻3
+jvd_hr,haraimodoshi_umaren_3c,83,character varying,3,YES,馬連払戻3
+jvd_hr,haraimodoshi_wide_1a,84,character varying,4,YES,ワイド払戻1
+jvd_hr,haraimodoshi_wide_1b,85,character varying,9,YES,ワイド払戻1
+jvd_hr,haraimodoshi_wide_1c,86,character varying,3,YES,ワイド払戻1
+jvd_hr,haraimodoshi_wide_2a,87,character varying,4,YES,ワイド払戻2
+jvd_hr,haraimodoshi_wide_2b,88,character varying,9,YES,ワイド払戻2
+jvd_hr,haraimodoshi_wide_2c,89,character varying,3,YES,ワイド払戻2
+jvd_hr,haraimodoshi_wide_3a,90,character varying,4,YES,ワイド払戻3
+jvd_hr,haraimodoshi_wide_3b,91,character varying,9,YES,ワイド払戻3
+jvd_hr,haraimodoshi_wide_3c,92,character varying,3,YES,ワイド払戻3
+jvd_hr,haraimodoshi_wide_4a,93,character varying,4,YES,ワイド払戻4
+jvd_hr,haraimodoshi_wide_4b,94,character varying,9,YES,ワイド払戻4
+jvd_hr,haraimodoshi_wide_4c,95,character varying,3,YES,ワイド払戻4
+jvd_hr,haraimodoshi_wide_5a,96,character varying,4,YES,ワイド払戻5
+jvd_hr,haraimodoshi_wide_5b,97,character varying,9,YES,ワイド払戻5
+jvd_hr,haraimodoshi_wide_5c,98,character varying,3,YES,ワイド払戻5
+jvd_hr,haraimodoshi_wide_6a,99,character varying,4,YES,ワイド払戻6
+jvd_hr,haraimodoshi_wide_6b,100,character varying,9,YES,ワイド払戻6
+jvd_hr,haraimodoshi_wide_6c,101,character varying,3,YES,ワイド払戻6
+jvd_hr,haraimodoshi_wide_7a,102,character varying,4,YES,ワイド払戻7
+jvd_hr,haraimodoshi_wide_7b,103,character varying,9,YES,ワイド払戻7
+jvd_hr,haraimodoshi_wide_7c,104,character varying,3,YES,ワイド払戻7
+jvd_hr,yobi_4_1a,105,character varying,4,YES,予備1
+jvd_hr,yobi_4_1b,106,character varying,9,YES,予備1
+jvd_hr,yobi_4_1c,107,character varying,3,YES,予備1
+jvd_hr,yobi_4_2a,108,character varying,4,YES,予備2
+jvd_hr,yobi_4_2b,109,character varying,9,YES,予備2
+jvd_hr,yobi_4_2c,110,character varying,3,YES,予備2
+jvd_hr,yobi_4_3a,111,character varying,4,YES,予備3
+jvd_hr,yobi_4_3b,112,character varying,9,YES,予備3
+jvd_hr,yobi_4_3c,113,character varying,3,YES,予備3
+jvd_hr,haraimodoshi_umatan_1a,114,character varying,4,YES,馬単払戻1
+jvd_hr,haraimodoshi_umatan_1b,115,character varying,9,YES,馬単払戻1
+jvd_hr,haraimodoshi_umatan_1c,116,character varying,3,YES,馬単払戻1
+jvd_hr,haraimodoshi_umatan_2a,117,character varying,4,YES,馬単払戻2
+jvd_hr,haraimodoshi_umatan_2b,118,character varying,9,YES,馬単払戻2
+jvd_hr,haraimodoshi_umatan_2c,119,character varying,3,YES,馬単払戻2
+jvd_hr,haraimodoshi_umatan_3a,120,character varying,4,YES,馬単払戻3
+jvd_hr,haraimodoshi_umatan_3b,121,character varying,9,YES,馬単払戻3
+jvd_hr,haraimodoshi_umatan_3c,122,character varying,3,YES,馬単払戻3
+jvd_hr,haraimodoshi_umatan_4a,123,character varying,4,YES,馬単払戻4
+jvd_hr,haraimodoshi_umatan_4b,124,character varying,9,YES,馬単払戻4
+jvd_hr,haraimodoshi_umatan_4c,125,character varying,3,YES,馬単払戻4
+jvd_hr,haraimodoshi_umatan_5a,126,character varying,4,YES,馬単払戻5
+jvd_hr,haraimodoshi_umatan_5b,127,character varying,9,YES,馬単払戻5
+jvd_hr,haraimodoshi_umatan_5c,128,character varying,3,YES,馬単払戻5
+jvd_hr,haraimodoshi_umatan_6a,129,character varying,4,YES,馬単払戻6
+jvd_hr,haraimodoshi_umatan_6b,130,character varying,9,YES,馬単払戻6
+jvd_hr,haraimodoshi_umatan_6c,131,character varying,3,YES,馬単払戻6
+jvd_hr,haraimodoshi_sanrenpuku_1a,132,character varying,6,YES,3連複払戻1
+jvd_hr,haraimodoshi_sanrenpuku_1b,133,character varying,9,YES,3連複払戻1
+jvd_hr,haraimodoshi_sanrenpuku_1c,134,character varying,3,YES,3連複払戻1
+jvd_hr,haraimodoshi_sanrenpuku_2a,135,character varying,6,YES,3連複払戻2
+jvd_hr,haraimodoshi_sanrenpuku_2b,136,character varying,9,YES,3連複払戻2
+jvd_hr,haraimodoshi_sanrenpuku_2c,137,character varying,3,YES,3連複払戻2
+jvd_hr,haraimodoshi_sanrenpuku_3a,138,character varying,6,YES,3連複払戻3
+jvd_hr,haraimodoshi_sanrenpuku_3b,139,character varying,9,YES,3連複払戻3
+jvd_hr,haraimodoshi_sanrenpuku_3c,140,character varying,3,YES,3連複払戻3
+jvd_hr,haraimodoshi_sanrentan_1a,141,character varying,6,YES,3連単払戻1
+jvd_hr,haraimodoshi_sanrentan_1b,142,character varying,9,YES,3連単払戻1
+jvd_hr,haraimodoshi_sanrentan_1c,143,character varying,4,YES,3連単払戻1
+jvd_hr,haraimodoshi_sanrentan_2a,144,character varying,6,YES,3連単払戻2
+jvd_hr,haraimodoshi_sanrentan_2b,145,character varying,9,YES,3連単払戻2
+jvd_hr,haraimodoshi_sanrentan_2c,146,character varying,4,YES,3連単払戻2
+jvd_hr,haraimodoshi_sanrentan_3a,147,character varying,6,YES,3連単払戻3
+jvd_hr,haraimodoshi_sanrentan_3b,148,character varying,9,YES,3連単払戻3
+jvd_hr,haraimodoshi_sanrentan_3c,149,character varying,4,YES,3連単払戻3
+jvd_hr,haraimodoshi_sanrentan_4a,150,character varying,6,YES,3連単払戻4
+jvd_hr,haraimodoshi_sanrentan_4b,151,character varying,9,YES,3連単払戻4
+jvd_hr,haraimodoshi_sanrentan_4c,152,character varying,4,YES,3連単払戻4
+jvd_hr,haraimodoshi_sanrentan_5a,153,character varying,6,YES,3連単払戻5
+jvd_hr,haraimodoshi_sanrentan_5b,154,character varying,9,YES,3連単払戻5
+jvd_hr,haraimodoshi_sanrentan_5c,155,character varying,4,YES,3連単払戻5
+jvd_hr,haraimodoshi_sanrentan_6a,156,character varying,6,YES,3連単払戻6
+jvd_hr,haraimodoshi_sanrentan_6b,157,character varying,9,YES,3連単払戻6
+jvd_hr,haraimodoshi_sanrentan_6c,158,character varying,4,YES,3連単払戻6
+jvd_hs,record_id,1,character varying,2,YES,レコード種別ID
+jvd_hs,data_kubun,2,character varying,1,YES,データ区分
+jvd_hs,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日
+jvd_hs,ketto_toroku_bango,4,character varying,10,NO,血統登録番号
+jvd_hs,ketto_joho_01a,5,character varying,10,YES,父馬 繁殖登録番号
+jvd_hs,ketto_joho_02a,6,character varying,10,YES,母馬 繁殖登録番号
+jvd_hs,seinen,7,character varying,4,YES,生年
+jvd_hs,shusaisha_shijo_code,8,character varying,6,NO,主催者・市場コード
+jvd_hs,shusaisha_meisho,9,character varying,40,YES,主催者名称
+jvd_hs,shijo_meisho,10,character varying,80,YES,市場の名称
+jvd_hs,kaisai_kikan_min,11,character varying,8,NO,市場の開催期間(開始日)
+jvd_hs,kaisai_kikan_max,12,character varying,8,YES,市場の開催期間(終了日)
+jvd_hs,torihikiji_nenrei,13,character varying,1,YES,取引時の競走馬の年齢
+jvd_hs,torihiki_kakaku,14,character varying,10,YES,取引価格
+jvd_hy,record_id,1,character varying,2,YES,レコード種別ID
+jvd_hy,data_kubun,2,character varying,1,YES,データ区分
+jvd_hy,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日
+jvd_hy,ketto_toroku_bango,4,character varying,10,NO,血統登録番号
+jvd_hy,bamei,5,character varying,36,YES,馬名
+jvd_hy,bamei_imi_yurai,6,character varying,64,YES,馬名の意味由来
+jvd_jc,record_id,1,character varying,2,YES,"レコード種別ID: ""JC""をセットレコードフォーマットを特定する"
+jvd_jc,data_kubun,2,character varying,1,YES,データ区分: 1:初期値
+jvd_jc,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_jc,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_jc,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_jc,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_jc,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_jc,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_jc,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_jc,happyo_tsukihi_jifun,10,character varying,8,NO,発表月日時分: 月日時分各2桁
+jvd_jc,umaban,11,character varying,2,NO,馬番: 該当馬番01〜18
+jvd_jc,bamei,12,character varying,36,YES,馬名: 全角18文字　ただし当面は全角9文字のみ設定(9文字を超える馬名は9文字までとする)
+jvd_jc,futan_juryo,13,character varying,3,YES,<変更後情報>: nan
+jvd_jc,kishu_code,14,character varying,5,YES,負担重量: 単位0.1kg
+jvd_jc,kishumei,15,character varying,34,YES,騎手コード: 騎手マスタへリンク　変更後の騎手が未定の場合はALL0を設定
+jvd_jc,kishu_minarai_code,16,character varying,1,YES,"騎手名: 全角17文字ただし当面は全角8文字のみ設定(8文字を超える騎手名は8文字までとする) 変更後の騎手が未定の場合は ""未定"" を設定"
+jvd_jc,futan_juryo_henkomae,17,character varying,3,YES,騎手見習コード: <コード表 2303.騎手見習コード>参照
+jvd_jc,kishu_code_henkomae,18,character varying,5,YES,<変更前情報>: nan
+jvd_jc,kishumei_henkomae,19,character varying,34,YES,負担重量: 単位0.1kg
+jvd_jc,kishu_minarai_code_henkomae,20,character varying,1,YES,騎手コード: 騎手マスタへリンク
+jvd_jg,record_id,1,character varying,2,YES,"レコード種別ID: ""JG""をセットレコードフォーマットを特定する"
+jvd_jg,data_kubun,2,character varying,1,YES,データ区分: 1:初期値　0:該当レコード削除(提供ミスなどの理由による)
+jvd_jg,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_jg,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_jg,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_jg,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_jg,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_jg,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_jg,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_jg,ketto_toroku_bango,10,character varying,10,NO,血統登録番号: 生年(西暦)4桁＋品種1桁<コード表2201.品種コード>参照＋数字5桁
+jvd_jg,bamei,11,character varying,36,YES,馬名: 全角18字
+jvd_jg,shutsuba_tohyo_uketsuke,12,character varying,3,NO,出馬投票受付順番: 同一業務日付で、同一馬を受付（出馬投票の追加、再投票）した順番
+jvd_jg,shusso_kubun,13,character varying,1,YES,出走区分: 1:投票馬 2:締切での除外馬 4:再投票馬 5:再投票除外馬  6:馬番を付さない出走取消馬 9:取消馬
+jvd_jg,jogai_jotai_kubun,14,character varying,1,YES,除外状態区分: 1:非抽選馬  2:非当選馬
+jvd_ks,record_id,1,character varying,2,YES,"レコード種別ID: ""KS"" をセットレコードフォーマットを特定する"
+jvd_ks,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_ks,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_ks,kishu_code,4,character varying,5,NO,騎手コード: nan
+jvd_ks,massho_kubun,5,character varying,1,YES,騎手抹消区分: 0:現役 1:抹消
+jvd_ks,menkyo_kofu_nengappi,6,character varying,8,YES,騎手免許交付年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_ks,menkyo_massho_nengappi,7,character varying,8,YES,騎手免許抹消年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_ks,seinengappi,8,character varying,8,YES,生年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_ks,kishumei,9,character varying,34,YES,騎手名: 全角17文字　姓＋全角空白1文字＋名　外国人の場合は連続17文字
+jvd_ks,yobi_1,10,character varying,34,YES,予備: nan
+jvd_ks,kishumei_hankaku_kana,11,character varying,30,YES,騎手名半角ｶﾅ: 半角30文字　姓15文字＋名15文字　外国人の場合は連続30文字
+jvd_ks,kishumei_ryakusho,12,character varying,8,YES,騎手名略称: 全角4文字
+jvd_ks,kishumei_eur,13,character varying,80,YES,騎手名欧字: 半角80文字　姓＋半角空白1文字＋名　フルネームで記載
+jvd_ks,seibetsu_kubun,14,character varying,1,YES,性別区分: 1:男性　2:女性
+jvd_ks,kijo_shikaku_code,15,character varying,1,YES,騎乗資格コード: <コード表 2302.騎乗資格コード>参照
+jvd_ks,kishu_minarai_code,16,character varying,1,YES,騎手見習コード: <コード表 2303.騎手見習コード>参照
+jvd_ks,tozai_shozoku_code,17,character varying,1,YES,騎手東西所属コード: <コード表 2301.東西所属コード>参照
+jvd_ks,shotai_chiikimei,18,character varying,20,YES,招待地域名: 全角10文字
+jvd_ks,chokyoshi_code,19,character varying,5,YES,所属調教師コード: 騎手の所属厩舎の調教師コード、フリー騎手の場合はALL0を設定
+jvd_ks,chokyoshimei_ryakusho,20,character varying,8,YES,所属調教師名略称: 全角4文字
+jvd_ks,hatsukijo_joho_1,21,character varying,67,YES,<初騎乗情報>: 平地初騎乗・障害初騎乗の順に設定
+jvd_ks,hatsukijo_joho_2,22,character varying,67,YES,年月日場回日R: レース詳細のキー情報
+jvd_ks,hatsushori_joho_1,23,character varying,64,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_ks,hatsushori_joho_2,24,character varying,64,YES,血統登録番号: 生年(西暦)4桁＋品種1桁<コード表2201.品種コード>参照＋数字5桁
+jvd_ks,jushoshori_joho_1,25,character varying,163,YES,馬名: 全角18文字
+jvd_ks,jushoshori_joho_2,26,character varying,163,YES,確定着順: nan
+jvd_ks,jushoshori_joho_3,27,character varying,163,YES,異常区分コード: <コード表 2101.異常区分コード>参照
+jvd_ks,seiseki_joho_1,28,character varying,1052,YES,<初勝利情報>: 平地初騎乗・障害初騎乗の順に設定
+jvd_ks,seiseki_joho_2,29,character varying,1052,YES,年月日場回日R: レース詳細のキー情報
+jvd_ks,seiseki_joho_3,30,character varying,1052,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_o1,record_id,1,character varying,2,YES,"レコード種別ID: ""O1""(オー･イチ) をセットレコードフォーマットを特定する"
+jvd_o1,data_kubun,2,character varying,1,YES,データ区分: 1:中間　2:前日売最終　3:最終　4:確定　5:確定(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_o1,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_o1,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_o1,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_o1,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_o1,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_o1,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_o1,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_o1,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁 中間オッズのみ設定 時系列オッズを使用する場合のみキーとして設定
+jvd_o1,toroku_tosu,11,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_o1,shusso_tosu,12,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_o1,hatsubai_flag_tansho,13,character varying,1,YES,発売フラグ　単勝: 単勝発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_o1,hatsubai_flag_fukusho,14,character varying,1,YES,発売フラグ　複勝: 複勝発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_o1,hatsubai_flag_wakuren,15,character varying,1,YES,発売フラグ　枠連: 枠連発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_o1,fukusho_chakubarai_key,16,character varying,1,YES,複勝着払キー: 複勝の着払キー　（0:複勝発売なし 2:2着まで払い 3:3着まで払い）
+jvd_o1,odds_tansho,17,character varying,224,YES,<単勝オッズ>: 28頭立てまで考慮し繰返し28回　馬番昇順01〜28
+jvd_o1,odds_fukusho,18,character varying,336,YES,馬番: 該当馬番
+jvd_o1,odds_wakuren,19,character varying,324,YES,"オッズ: 999.9倍で設定 ""9999"":999.9倍以上　""0000"":無投票　""----"":発売前取消　""****"":発売後取消　""    "":登録なし(sp)"
+jvd_o1,hyosu_gokei_tansho,20,character varying,11,YES,人気順: スペース:登録なし ''--'':発売前取消 ''**'':発売後取消  無投票の時は発売されている組合せの最大値を設定
+jvd_o1,hyosu_gokei_fukusho,21,character varying,11,YES,<複勝オッズ>: 28頭立てまで考慮し繰返し28回　馬番昇順01〜28
+jvd_o1,hyosu_gokei_wakuren,22,character varying,11,YES,馬番: 該当馬番
+jvd_o2,record_id,1,character varying,2,YES,"レコード種別ID: ""O2""(オー･ニ) をセットレコードフォーマットを特定する"
+jvd_o2,data_kubun,2,character varying,1,YES,データ区分: 1:中間　2:前日売最終　3:最終　4:確定　5:確定(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_o2,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_o2,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_o2,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_o2,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_o2,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_o2,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_o2,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_o2,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁 中間オッズのみ設定 時系列オッズを使用する場合のみキーとして設定
+jvd_o2,toroku_tosu,11,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_o2,shusso_tosu,12,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_o2,hatsubai_flag_umaren,13,character varying,1,YES,発売フラグ　馬連: 馬連発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_o2,odds_umaren,14,character varying,1989,YES,<馬連オッズ>: 組番昇順　01-02〜17-18
+jvd_o2,hyosu_gokei_umaren,15,character varying,11,YES,組番: 該当組番
+jvd_o3,record_id,1,character varying,2,YES,"レコード種別ID: ""O3""(オー･サン) をセットレコードフォーマットを特定する"
+jvd_o3,data_kubun,2,character varying,1,YES,データ区分: 1:中間　2:前日売最終　3:最終　4:確定　5:確定(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_o3,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_o3,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_o3,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_o3,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_o3,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_o3,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_o3,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_o3,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁 中間オッズのみ設定
+jvd_o3,toroku_tosu,11,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_o3,shusso_tosu,12,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_o3,hatsubai_flag_wide,13,character varying,1,YES,発売フラグ　ワイド: ワイド発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_o3,odds_wide,14,character varying,2601,YES,<ワイドオッズ>: 組番昇順　01-02〜17-18
+jvd_o3,hyosu_gokei_wide,15,character varying,11,YES,組番: 該当組番
+jvd_o4,record_id,1,character varying,2,YES,"レコード種別ID: ""O4""(オー･ヨン) をセットレコードフォーマットを特定する"
+jvd_o4,data_kubun,2,character varying,1,YES,データ区分: 1:中間　2:前日売最終　3:最終　4:確定　5:確定(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_o4,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_o4,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_o4,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_o4,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_o4,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_o4,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_o4,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_o4,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁 中間オッズのみ設定
+jvd_o4,toroku_tosu,11,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_o4,shusso_tosu,12,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_o4,hatsubai_flag_umatan,13,character varying,1,YES,発売フラグ　馬単: 馬単発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_o4,odds_umatan,14,character varying,3978,YES,<馬単オッズ>: 組番昇順　01-02〜18-17
+jvd_o4,hyosu_gokei_umatan,15,character varying,11,YES,組番: 該当組番
+jvd_o5,record_id,1,character varying,2,YES,"レコード種別ID: ""O5""(オー･ゴ) をセットレコードフォーマットを特定する"
+jvd_o5,data_kubun,2,character varying,1,YES,データ区分: 1:中間　2:前日売最終　3:最終　4:確定　5:確定(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_o5,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_o5,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_o5,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_o5,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_o5,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_o5,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_o5,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_o5,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁 中間オッズのみ設定
+jvd_o5,toroku_tosu,11,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_o5,shusso_tosu,12,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_o5,hatsubai_flag_sanrenpuku,13,character varying,1,YES,発売フラグ　3連複: 3連複発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_o5,odds_sanrenpuku,14,character varying,12240,YES,<3連複オッズ>: 組番昇順　01-02-03〜16-17-18
+jvd_o5,hyosu_gokei_sanrenpuku,15,character varying,11,YES,組番: 該当組番
+jvd_o6,record_id,1,character varying,2,YES,"レコード種別ID: ""O6""(オー･ロク) をセットレコードフォーマットを特定する"
+jvd_o6,data_kubun,2,character varying,1,YES,データ区分: 1:中間　2:前日売最終　3:最終　4:確定　5:確定(月曜) 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_o6,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_o6,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_o6,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_o6,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_o6,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_o6,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_o6,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_o6,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁 中間オッズのみ設定
+jvd_o6,toroku_tosu,11,character varying,2,YES,登録頭数: 出馬表発表時の登録頭数
+jvd_o6,shusso_tosu,12,character varying,2,YES,出走頭数: 登録頭数から出走取消と競走除外･発走除外を除いた頭数
+jvd_o6,hatsubai_flag_sanrentan,13,character varying,1,YES,発売フラグ　3連単: 3連単発売の有無　（0:発売なし 1:発売前取消 3:発売後取消 7:発売あり）
+jvd_o6,odds_sanrentan,14,character varying,83232,YES,<3連単オッズ>: 組番昇順　01-02-03〜18-17-16
+jvd_o6,hyosu_gokei_sanrentan,15,character varying,11,YES,組番: 該当組番
+jvd_ra,record_id,1,character varying,2,YES,"レコード種別ID: ""RA"" をセットレコードフォーマットを特定する"
+jvd_ra,data_kubun,2,character varying,1,YES,データ区分: 1:出走馬名表(木曜)　2:出馬表(金･土曜)　3:速報成績(3着まで確定) 4:速報成績(5着まで確定) 5:速報成績(全馬着順確定) 6:速報成績(全馬着順+コーナ通過順)　7:成績(月曜) A:地方競馬　B：海外国際レース 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_ra,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_ra,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_ra,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_ra,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_ra,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_ra,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_ra,race_bango,9,character varying,2,NO,レース番号: 該当レース番号 また、海外国際レースなどでレース番号情報がない場合は任意に連番を設定
+jvd_ra,yobi_code,10,character varying,1,YES,曜日コード: 該当レース施行曜日 <コード表 2002.曜日コード>参照
+jvd_ra,tokubetsu_kyoso_bango,11,character varying,4,YES,特別競走番号: 重賞レースのみ設定 原則的には過去の同一レースと一致する番号(多数例外有り)
+jvd_ra,kyosomei_hondai,12,character varying,60,YES,競走名本題: 全角30文字　レース名の本題
+jvd_ra,kyosomei_fukudai,13,character varying,60,YES,競走名副題: 全角30文字　レース名の副題（スポンサー名や記念名など）
+jvd_ra,kyosomei_kakkonai,14,character varying,60,YES,競走名カッコ内: 全角30文字　レースの条件やトライアル対象レース名、レース名通称など
+jvd_ra,kyosomei_hondai_eur,15,character varying,120,YES,競走名本題欧字: 半角120文字
+jvd_ra,kyosomei_fukudai_eur,16,character varying,120,YES,競走名副題欧字: 半角120文字
+jvd_ra,kyosomei_kakkonai_eur,17,character varying,120,YES,競走名カッコ内欧字: 半角120文字
+jvd_ra,kyosomei_ryakusho_10,18,character varying,20,YES,競走名略称10文字: 全角10文字
+jvd_ra,kyosomei_ryakusho_6,19,character varying,12,YES,競走名略称6文字: 全角6文字
+jvd_ra,kyosomei_ryakusho_3,20,character varying,6,YES,競走名略称3文字: 全角3文字
+jvd_ra,kyosomei_kubun,21,character varying,1,YES,競走名区分: 重賞回次[第N回]を本題･副題･カッコ内のうちどれに設定すべきかを示す （0:初期値 1:本題 2:副題 3:カッコ内）重賞のみ設定
+jvd_ra,jusho_kaiji,22,character varying,3,YES,重賞回次[第N回]: そのレースの重賞としての通算回数を示す
+jvd_ra,grade_code,23,character varying,1,YES,グレードコード: <コード表 2003.グレードコード>参照 ※国際グレード表記(G) または その他の重賞表記（Jpn）の判別方法については、特記事項を参照
+jvd_ra,grade_code_henkomae,24,character varying,1,YES,変更前グレードコード: なんらかの理由により変更された場合のみ変更前の値を設定
+jvd_ra,kyoso_shubetsu_code,25,character varying,2,YES,競走種別コード: <コード表 2005.競走種別コード>参照
+jvd_ra,kyoso_kigo_code,26,character varying,3,YES,競走記号コード: <コード表 2006.競走記号コード>参照
+jvd_ra,juryo_shubetsu_code,27,character varying,1,YES,重量種別コード: <コード表 2008.重量種別コード>参照
+jvd_ra,kyoso_joken_code_2sai,28,character varying,3,YES,競走条件コード 2歳条件: 2歳馬の競走条件 　　<コード表 2007.競走条件コード>参照　　特記事項を参照
+jvd_ra,kyoso_joken_code_3sai,29,character varying,3,YES,競走条件コード 3歳条件: 3歳馬の競走条件 　　<コード表 2007.競走条件コード>参照　　特記事項を参照
+jvd_ra,kyoso_joken_code_4sai,30,character varying,3,YES,競走条件コード 4歳条件: 4歳馬の競走条件 　　<コード表 2007.競走条件コード>参照　　特記事項を参照
+jvd_ra,kyoso_joken_code_5sai_ijo,31,character varying,3,YES,競走条件コード 5歳以上条件: 5歳以上馬の競走条件 <コード表 2007.競走条件コード>参照　　特記事項を参照
+jvd_ra,kyoso_joken_code,32,character varying,3,YES,競走条件コード 最若年条件: 出走可能な最も馬齢が若い馬に対する条件 <コード表 2007.競走条件コード>参照　特記事項を参照
+jvd_ra,kyoso_joken_meisho,33,character varying,60,YES,競走条件名称: 全角30文字　地方競馬の場合のみ設定
+jvd_ra,kyori,34,character varying,4,YES,距離: 単位：メートル
+jvd_ra,kyori_henkomae,35,character varying,4,YES,変更前距離: なんらかの理由により変更された場合のみ変更前の値を設定
+jvd_ra,track_code,36,character varying,2,YES,トラックコード: <コード表 2009.トラックコード>参照
+jvd_ra,track_code_henkomae,37,character varying,2,YES,変更前トラックコード: なんらかの理由により変更された場合のみ変更前の値を設定
+jvd_ra,course_kubun,38,character varying,2,YES,コース区分
+jvd_ra,course_kubun_henkomae,39,character varying,2,YES,変更前コース区分
+jvd_ra,honshokin,40,character varying,56,YES,本賞金
+jvd_ra,honshokin_henkomae,41,character varying,40,YES,変更前本賞金
+jvd_ra,fukashokin,42,character varying,40,YES,付加賞金
+jvd_ra,fukashokin_henkomae,43,character varying,24,YES,変更前付加賞金
+jvd_ra,hasso_jikoku,44,character varying,4,YES,発走時刻
+jvd_ra,hasso_jikoku_henkomae,45,character varying,4,YES,変更前発走時刻
+jvd_ra,toroku_tosu,46,character varying,2,YES,登録頭数
+jvd_ra,shusso_tosu,47,character varying,2,YES,出走頭数
+jvd_ra,nyusen_tosu,48,character varying,2,YES,入線頭数
+jvd_ra,tenko_code,49,character varying,1,YES,天候コード
+jvd_ra,babajotai_code_shiba,50,character varying,1,YES,芝馬場状態コード
+jvd_ra,babajotai_code_dirt,51,character varying,1,YES,ダート馬場状態コード
+jvd_ra,lap_time,52,character varying,75,YES,ラップタイム
+jvd_ra,shogai_mile_time,53,character varying,4,YES,障害マイルタイム
+jvd_ra,zenhan_3f,54,character varying,3,YES,前3ハロン
+jvd_ra,zenhan_4f,55,character varying,3,YES,前4ハロン
+jvd_ra,kohan_3f,56,character varying,3,YES,後3ハロン
+jvd_ra,kohan_4f,57,character varying,3,YES,後4ハロン
+jvd_ra,corner_tsuka_juni_1,58,character varying,72,YES,コーナー通過順位1
+jvd_ra,corner_tsuka_juni_2,59,character varying,72,YES,コーナー通過順位2
+jvd_ra,corner_tsuka_juni_3,60,character varying,72,YES,コーナー通過順位3
+jvd_ra,corner_tsuka_juni_4,61,character varying,72,YES,コーナー通過順位4
+jvd_ra,record_koshin_kubun,62,character varying,1,YES,レコード更新区分
+jvd_rc,record_id,1,character varying,2,YES,"レコード種別ID: ""RC"" をセットレコードフォーマットを特定する"
+jvd_rc,data_kubun,2,character varying,1,YES,データ区分: 1:初期値　0:該当レコード削除(提供ミスなどの理由による)
+jvd_rc,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_rc,record_shikibetsu_kubun,4,character varying,1,NO,レコード識別区分: 1:コースレコード 2:Ｇ�Jレコード
+jvd_rc,kaisai_nen,5,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_rc,kaisai_tsukihi,6,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_rc,keibajo_code,7,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_rc,kaisai_kai,8,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_rc,kaisai_nichime,9,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_rc,race_bango,10,character varying,2,NO,レース番号: 該当レース番号
+jvd_rc,tokubetsu_kyoso_bango,11,character varying,4,NO,特別競走番号: Ｇ�Jレコードのみのキー
+jvd_rc,kyosomei_hondai,12,character varying,60,YES,競走名本題: 全角30文字
+jvd_rc,grade_code,13,character varying,1,YES,グレードコード: <コード表 2003.グレードコード>参照
+jvd_rc,kyoso_shubetsu_code,14,character varying,2,NO,競走種別コード: <コード表 2005.競走種別コード>参照
+jvd_rc,kyori,15,character varying,4,NO,距離: 単位:メートル
+jvd_rc,track_code,16,character varying,2,NO,トラックコード: <コード表 2009.トラックコード>参照
+jvd_rc,record_kubun,17,character varying,1,YES,レコード区分: 1:基準タイム　2:レコードタイム　3:参考タイム　4:備考タイム
+jvd_rc,record_time,18,character varying,4,YES,レコードタイム: 9分99秒9
+jvd_rc,tenko_code,19,character varying,1,YES,天候コード: <コード表 2011.天候コード>参照
+jvd_rc,babajotai_code_shiba,20,character varying,1,YES,芝馬場状態コード: <コード表 2010.馬場状態コード>参照
+jvd_rc,babajotai_code_dirt,21,character varying,1,YES,ダート馬場状態コード: <コード表 2010.馬場状態コード>参照
+jvd_rc,record_hojiuma_joho_1,22,character varying,130,YES,<レコード保持馬情報>: 同着を考慮し繰返し3回
+jvd_rc,record_hojiuma_joho_2,23,character varying,130,YES,血統登録番号: 生年(西暦)4桁＋品種1桁＋数字5桁
+jvd_rc,record_hojiuma_joho_3,24,character varying,130,YES,馬名: 全角18文字
+jvd_se,record_id,1,character varying,2,YES,"レコード種別ID: ""SE"" をセットレコードフォーマットを特定する"
+jvd_se,data_kubun,2,character varying,1,YES,データ区分: 1:出走馬名表(木曜)　2:出馬表(金･土曜)　3:速報成績(3着まで確定) 4:速報成績(5着まで確定) 5:速報成績(全馬着順確定) 6:速報成績(全馬着順+コーナ通過順)　7:成績(月曜) A:地方競馬　B：海外国際レース 9:レース中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_se,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_se,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_se,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_se,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_se,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_se,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_se,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_se,wakuban,10,character varying,1,YES,枠番: nan
+jvd_se,umaban,11,character varying,2,NO,馬番: 特定のレース及び海外レースについては、特記事項を参照
+jvd_se,ketto_toroku_bango,12,character varying,10,NO,血統登録番号: 生年(西暦)4桁＋品種1桁<コード表2201.品種コード>参照＋数字5桁
+jvd_se,bamei,13,character varying,36,YES,馬名: 通常全角18文字。海外レースにおける外国馬の場合のみ全角と半角が混在
+jvd_se,umakigo_code,14,character varying,2,YES,馬記号コード: <コード表 2204.馬記号コード>参照
+jvd_se,seibetsu_code,15,character varying,1,YES,性別コード: <コード表 2202.性別コード>参照
+jvd_se,hinshu_code,16,character varying,1,YES,品種コード: <コード表 2201.品種コード>参照
+jvd_se,moshoku_code,17,character varying,2,YES,毛色コード: <コード表 2203.毛色コード>参照
+jvd_se,barei,18,character varying,2,YES,馬齢: 出走当時の馬齢 （注）2000年以前は数え年表記 2001年以降は満年齢表記
+jvd_se,tozai_shozoku_code,19,character varying,1,YES,東西所属コード: <コード表 2301.東西所属コード>参照
+jvd_se,chokyoshi_code,20,character varying,5,YES,調教師コード: 調教師マスタへリンク
+jvd_se,chokyoshimei_ryakusho,21,character varying,8,YES,調教師名略称: 全角4文字
+jvd_se,banushi_code,22,character varying,6,YES,馬主コード: 馬主マスタへリンク
+jvd_se,banushimei,23,character varying,64,YES,馬主名(法人格無): 全角32文字 〜 半角64文字 （全角と半角が混在） 株式会社、有限会社などの法人格を示す文字列が頭もしくは末尾にある場合にそれを削除したものを 設定。また、外国馬主の場合は、馬主マスタの8.馬主名欧字の頭64バイトを設定
+jvd_se,fukushoku_hyoji,24,character varying,60,YES,"服色標示: 全角30文字　馬主毎に指定される騎手の勝負服の色・模様を示す (レーシングプログラムに記載されているもの） (例)""水色，赤山形一本輪，水色袖　　　"""
+jvd_se,yobi_1,25,character varying,60,YES,予備: nan
+jvd_se,futan_juryo,26,character varying,3,YES,負担重量: 単位0.1kg
+jvd_se,futan_juryo_henkomae,27,character varying,3,YES,変更前負担重量: なんらかの理由により変更された場合のみ変更前の値を設定
+jvd_se,blinker_shiyo_kubun,28,character varying,1,YES,ブリンカー使用区分: 0:未使用 1:使用
+jvd_se,yobi_2,29,character varying,1,YES,予備: nan
+jvd_se,kishu_code,30,character varying,5,YES,騎手コード: 騎手マスタへリンク
+jvd_se,kishu_code_henkomae,31,character varying,5,YES,変更前騎手コード: なんらかの理由により変更された場合のみ変更前の値を設定
+jvd_se,kishumei_ryakusho,32,character varying,8,YES,騎手名略称: 全角4文字
+jvd_se,kishumei_ryakusho_henkomae,33,character varying,8,YES,変更前騎手名略称: なんらかの理由により変更された場合のみ変更前の値を設定
+jvd_se,kishu_minarai_code,34,character varying,1,YES,騎手見習コード: <コード表 2303.騎手見習コード>参照
+jvd_se,kishu_minarai_code_henkomae,35,character varying,1,YES,変更前騎手見習コード: なんらかの理由により変更された場合のみ変更前の値を設定
+jvd_se,bataiju,36,character varying,3,YES,馬体重: 単位:kg　002Kg〜998Kgまでが有効値 999:今走計量不能　000:出走取消
+jvd_se,zogen_fugo,37,character varying,1,YES,増減符号: +:増加 -:減少 スペース:その他
+jvd_se,zogen_sa,38,character varying,3,YES,"増減差: 単位:kg　001Kg〜998Kgまでが有効値 999:計量不能　000:前差なし　スペース:初出走、ただし出走取消の場合もスペースを設定。 地方馬については初出走かつ計量不能の場合でも""999""を設定。"
+jvd_se,ijo_kubun_code,39,character varying,1,YES,異常区分コード: <コード表 2101.異常区分コード>参照
+jvd_se,nyusen_juni,40,character varying,2,YES,入線順位: 失格、降着確定前の順位
+jvd_se,kakutei_chakujun,41,character varying,2,YES,確定着順: 失格、降着時は入線順位と異なる
+jvd_se,dochaku_kubun,42,character varying,1,YES,同着区分: 0:同着馬なし　1:同着馬あり
+jvd_se,dochaku_tosu,43,character varying,1,YES,同着頭数: 0:初期値　1:自身以外に同着1頭　2:自身以外に同着2頭
+jvd_se,soha_time,44,character varying,4,YES,走破タイム: 9分99秒9で設定
+jvd_se,chakusa_code_1,45,character varying,3,YES,着差コード: 前馬との着差　<コード表 2102.着差コード>参照
+jvd_se,chakusa_code_2,46,character varying,3,YES,#NAME?
+jvd_se,chakusa_code_3,47,character varying,3,YES,#NAME?
+jvd_se,corner_1,48,character varying,2,YES,1コーナーでの順位: nan
+jvd_se,corner_2,49,character varying,2,YES,2コーナーでの順位: nan
+jvd_se,corner_3,50,character varying,2,YES,3コーナーでの順位: nan
+jvd_se,corner_4,51,character varying,2,YES,4コーナーでの順位: nan
+jvd_se,tansho_odds,52,character varying,4,YES,単勝オッズ: 999.9倍で設定　出走取消し等は初期値を設定
+jvd_se,tansho_ninkijun,53,character varying,2,YES,単勝人気順: 出走取消し等は初期値を設定
+jvd_se,kakutoku_honshokin,54,character varying,8,YES,獲得本賞金: 単位:百円　該当レースで獲得した本賞金
+jvd_se,kakutoku_fukashokin,55,character varying,8,YES,獲得付加賞金: 単位:百円　該当レースで獲得した付加賞金
+jvd_se,yobi_3,56,character varying,3,YES,予備: nan
+jvd_se,yobi_4,57,character varying,3,YES,予備: nan
+jvd_se,kohan_4f,58,character varying,3,YES,"後4ハロンタイム: 単位:99.9秒 出走取消･競走除外･発走除外･競走中止･タイムオーバーの場合は ""999"" を設定 基本的には後3ハロンのみ設定(後4ハロンは初期値) ただし、過去分のデータは後4ハロンが設定されているものもある(その場合は後3ハロンが初期値) 障害レースの場合は後3ハロンに該当馬の当該レースでの..."
+jvd_se,kohan_3f,59,character varying,3,YES,後3ハロンタイム: nan
+jvd_se,aiteuma_joho_1,60,character varying,46,YES,<1着馬(相手馬)情報>: 同着を考慮して繰返し3回 自身が1着の場合は2着馬を設定
+jvd_se,aiteuma_joho_2,61,character varying,46,YES,血統登録番号: 生年(西暦)4桁＋品種1桁<コード表2201.品種コード>参照＋数字5桁
+jvd_se,aiteuma_joho_3,62,character varying,46,YES,馬名: 通常全角18文字。海外レースにおける外国馬の場合のみ全角と半角が混在。
+jvd_se,time_sa,63,character varying,4,YES,"タイム差: 1着馬とのタイム差を設定（自身が1着の場合は2着馬を設定) 符号(+または-)+99秒9　符号は1着:-、2着以下:+ 出走取消･競走除外･発走除外･競走中止の場合は ""9999"" を設定"
+jvd_se,record_koshin_kubun,64,character varying,1,YES,レコード更新区分: 0:初期値　1:基準タイムとなったレース　2:コースレコードを更新したレース
+jvd_se,mining_kubun,65,character varying,1,YES,マイニング区分: 1:前日 2:当日 3:直前　ただし、確定成績登録時に3:直前のみ設定
+jvd_se,yoso_soha_time,66,character varying,5,YES,マイニング予想走破タイム: 9分99秒99で設定
+jvd_se,yoso_gosa_plus,67,character varying,4,YES,マイニング予想誤差(信頼度)＋: 99秒99で設定 予想タイムの＋誤差を設定(＋方向の誤差。予想走破タイムに対して早くなる方向。予想走破タイムからマイナスする。)
+jvd_se,yoso_gosa_minus,68,character varying,4,YES,マイニング予想誤差(信頼度)−: 99秒99で設定 予想タイムの−誤差を設定(−方向の誤差。予想走破タイムに対して遅くなる方向。予想走破タイムにプラスする。)
+jvd_se,yoso_juni,69,character varying,2,YES,マイニング予想順位: 01〜18位を設定
+jvd_se,kyakushitsu_hantei,70,character varying,1,YES,今回レース脚質判定: 1:逃　2:先　3:差　4:追　0:初期値
+jvd_sk,record_id,1,character varying,2,YES,"レコード種別ID: ""SK"" をセットレコードフォーマットを特定する"
+jvd_sk,data_kubun,2,character varying,1,YES,データ区分: 1:新規登録 2:更新 0:該当レコード削除(提供ミスなどの理由による)
+jvd_sk,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_sk,ketto_toroku_bango,4,character varying,10,NO,血統登録番号: 生年(西暦)4桁＋品種1桁＋数字5桁
+jvd_sk,seinengappi,5,character varying,8,YES,生年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_sk,seibetsu_code,6,character varying,1,YES,性別コード: <コード表 2202.性別コード>参照
+jvd_sk,hinshu_code,7,character varying,1,YES,品種コード: <コード表 2201.品種コード>参照
+jvd_sk,moshoku_code,8,character varying,2,YES,毛色コード: <コード表 2203.毛色コード>参照
+jvd_sk,mochikomi_kubun,9,character varying,1,YES,産駒持込区分: 0:内国産 1:持込 2:輸入内国産扱い 3:輸入
+jvd_sk,yunyu_nen,10,character varying,4,YES,輸入年: 西暦4桁
+jvd_sk,seisansha_code,11,character varying,8,YES,生産者コード: 生産者マスタにリンク
+jvd_sk,sanchimei,12,character varying,20,YES,産地名: 全角10文字
+jvd_sk,ketto_joho_01a,13,character varying,10,YES,3代血統 繁殖登録番号: 父･母･父父･父母･母父･母母･父父父･父父母･父母父･父母母･母父父･母父母･母母父･母母母の順に設定
+jvd_sk,ketto_joho_02a,14,character varying,10,YES,レコード区切: CR/LF
+jvd_sk,ketto_joho_03a,15,character varying,10,YES,項目名: 説明
+jvd_sk,ketto_joho_04a,16,character varying,10,YES,3代血統情報4
+jvd_sk,ketto_joho_05a,17,character varying,10,YES,3代血統情報5
+jvd_sk,ketto_joho_06a,18,character varying,10,YES,3代血統情報6
+jvd_sk,ketto_joho_07a,19,character varying,10,YES,3代血統情報7
+jvd_sk,ketto_joho_08a,20,character varying,10,YES,3代血統情報8
+jvd_sk,ketto_joho_09a,21,character varying,10,YES,3代血統情報9
+jvd_sk,ketto_joho_10a,22,character varying,10,YES,3代血統情報10
+jvd_sk,ketto_joho_11a,23,character varying,10,YES,3代血統情報11
+jvd_sk,ketto_joho_12a,24,character varying,10,YES,3代血統情報12
+jvd_sk,ketto_joho_13a,25,character varying,10,YES,3代血統情報13
+jvd_sk,ketto_joho_14a,26,character varying,10,YES,3代血統情報14
+jvd_tc,record_id,1,character varying,2,YES,"レコード種別ID: ""TC"" をセットレコードフォーマットを特定する"
+jvd_tc,data_kubun,2,character varying,1,YES,データ区分: 1:初期値
+jvd_tc,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_tc,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_tc,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_tc,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_tc,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_tc,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_tc,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_tc,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁
+jvd_tc,hasso_jikoku,11,character varying,4,YES,<変更後情報>: nan
+jvd_tc,hasso_jikoku_henkomae,12,character varying,4,YES,変更後 発走時刻: 時分各2桁 hhmm形式
+jvd_tk,record_id,1,character varying,2,YES,"レコード種別ID: ""TK"" をセットレコードフォーマットを特定する"
+jvd_tk,data_kubun,2,character varying,1,YES,データ区分: 1:ハンデ発表前(通常日曜) 2:ハンデ発表後(通常月曜)  0:該当レコード削除(提供ミスなどの理由による)
+jvd_tk,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_tk,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_tk,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_tk,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_tk,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_tk,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_tk,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_tk,yobi_code,10,character varying,1,YES,曜日コード: 該当レース施行曜日 <コード表 2002.曜日コード>参照
+jvd_tk,tokubetsu_kyoso_bango,11,character varying,4,YES,特別競走番号: 重賞レースのみ設定 原則的には過去の同一レースと一致する番号(多数例外有り)
+jvd_tk,kyosomei_hondai,12,character varying,60,YES,競走名本題: 全角30文字　レース名の本題
+jvd_tk,kyosomei_fukudai,13,character varying,60,YES,競走名副題: 全角30文字　レース名の副題（スポンサー名や記念名など）
+jvd_tk,kyosomei_kakkonai,14,character varying,60,YES,競走名カッコ内: 全角30文字　レースの条件やトライアル対象レース名、レース名通称など
+jvd_tk,kyosomei_hondai_eur,15,character varying,120,YES,競走名本題欧字: 半角120文字
+jvd_tk,kyosomei_fukudai_eur,16,character varying,120,YES,競走名副題欧字: 半角120文字
+jvd_tk,kyosomei_kakkonai_eur,17,character varying,120,YES,競走名カッコ内欧字: 半角120文字
+jvd_tk,kyosomei_ryakusho_10,18,character varying,20,YES,競走名略称10文字: 全角10文字
+jvd_tk,kyosomei_ryakusho_6,19,character varying,12,YES,競走名略称6文字: 全角6文字
+jvd_tk,kyosomei_ryakusho_3,20,character varying,6,YES,競走名略称3文字: 全角3文字
+jvd_tk,kyosomei_kubun,21,character varying,1,YES,競走名区分: 重賞回次[第N回]を本題･副題･カッコ内のうちどれに設定すべきかを示す （0:初期値 1:本題 2:副題 3:カッコ内）重賞のみ設定
+jvd_tk,jusho_kaiji,22,character varying,3,YES,重賞回次[第N回]: そのレースの重賞としての通算回数を示す
+jvd_tk,grade_code,23,character varying,1,YES,グレードコード: <コード表 2003.グレードコード>参照 ※国際グレード表記(G) または その他の重賞表記（Jpn）の判別方法については、特記事項を参照
+jvd_tk,kyoso_shubetsu_code,24,character varying,2,YES,競走種別コード: <コード表 2005.競走種別コード>参照
+jvd_tk,kyoso_kigo_code,25,character varying,3,YES,競走記号コード: <コード表 2006.競走記号コード>参照
+jvd_tk,juryo_shubetsu_code,26,character varying,1,YES,重量種別コード: <コード表 2008.重量種別コード>参照
+jvd_tk,kyoso_joken_code_2sai,27,character varying,3,YES,競走条件コード 2歳条件: 2歳馬の競走条件 　　<コード表 2007.競走条件コード>参照　　特記事項を参照
+jvd_tk,kyoso_joken_code_3sai,28,character varying,3,YES,競走条件コード 3歳条件: 3歳馬の競走条件 　　<コード表 2007.競走条件コード>参照　　特記事項を参照
+jvd_tk,kyoso_joken_code_4sai,29,character varying,3,YES,競走条件コード 4歳条件: 4歳馬の競走条件 　　<コード表 2007.競走条件コード>参照　　特記事項を参照
+jvd_tk,kyoso_joken_code_5sai_ijo,30,character varying,3,YES,競走条件コード 5歳以上条件: 5歳以上馬の競走条件 <コード表 2007.競走条件コード>参照　　呼称は特記事項を参照
+jvd_tk,kyoso_joken_code,31,character varying,3,YES,競走条件コード 最若年条件: 出走可能な最も馬齢が若い馬に対する条件 <コード表 2007.競走条件コード>参照　特記事項を参照
+jvd_tk,kyori,32,character varying,4,YES,距離: 単位:メートル
+jvd_tk,track_code,33,character varying,2,YES,トラックコード: <コード表 2009.トラックコード>参照
+jvd_tk,course_kubun,34,character varying,2,YES,コース区分
+jvd_tk,handicap_happyobi,35,character varying,8,YES,ハンデ発表日
+jvd_tk,toroku_tosu,36,character varying,3,YES,登録頭数
+jvd_tk,torokuba_joho_001,37,character varying,70,YES,登録馬毎情報1
+jvd_tk,torokuba_joho_002,38,character varying,70,YES,登録馬毎情報2
+jvd_tk,torokuba_joho_003,39,character varying,70,YES,登録馬毎情報3
+jvd_tk,torokuba_joho_004,40,character varying,70,YES,登録馬毎情報4
+jvd_tk,torokuba_joho_005,41,character varying,70,YES,登録馬毎情報5
+jvd_tk,torokuba_joho_006,42,character varying,70,YES,登録馬毎情報6
+jvd_tk,torokuba_joho_007,43,character varying,70,YES,登録馬毎情報7
+jvd_tk,torokuba_joho_008,44,character varying,70,YES,登録馬毎情報8
+jvd_tk,torokuba_joho_009,45,character varying,70,YES,登録馬毎情報9
+jvd_tk,torokuba_joho_010,46,character varying,70,YES,登録馬毎情報10
+jvd_tk,torokuba_joho_011,47,character varying,70,YES,登録馬毎情報11
+jvd_tk,torokuba_joho_012,48,character varying,70,YES,登録馬毎情報12
+jvd_tk,torokuba_joho_013,49,character varying,70,YES,登録馬毎情報13
+jvd_tk,torokuba_joho_014,50,character varying,70,YES,登録馬毎情報14
+jvd_tk,torokuba_joho_015,51,character varying,70,YES,登録馬毎情報15
+jvd_tk,torokuba_joho_016,52,character varying,70,YES,登録馬毎情報16
+jvd_tk,torokuba_joho_017,53,character varying,70,YES,登録馬毎情報17
+jvd_tk,torokuba_joho_018,54,character varying,70,YES,登録馬毎情報18
+jvd_tk,torokuba_joho_019,55,character varying,70,YES,登録馬毎情報19
+jvd_tk,torokuba_joho_020,56,character varying,70,YES,登録馬毎情報20
+jvd_tk,torokuba_joho_021,57,character varying,70,YES,登録馬毎情報21
+jvd_tk,torokuba_joho_022,58,character varying,70,YES,登録馬毎情報22
+jvd_tk,torokuba_joho_023,59,character varying,70,YES,登録馬毎情報23
+jvd_tk,torokuba_joho_024,60,character varying,70,YES,登録馬毎情報24
+jvd_tk,torokuba_joho_025,61,character varying,70,YES,登録馬毎情報25
+jvd_tk,torokuba_joho_026,62,character varying,70,YES,登録馬毎情報26
+jvd_tk,torokuba_joho_027,63,character varying,70,YES,登録馬毎情報27
+jvd_tk,torokuba_joho_028,64,character varying,70,YES,登録馬毎情報28
+jvd_tk,torokuba_joho_029,65,character varying,70,YES,登録馬毎情報29
+jvd_tk,torokuba_joho_030,66,character varying,70,YES,登録馬毎情報30
+jvd_tk,torokuba_joho_031,67,character varying,70,YES,登録馬毎情報31
+jvd_tk,torokuba_joho_032,68,character varying,70,YES,登録馬毎情報32
+jvd_tk,torokuba_joho_033,69,character varying,70,YES,登録馬毎情報33
+jvd_tk,torokuba_joho_034,70,character varying,70,YES,登録馬毎情報34
+jvd_tk,torokuba_joho_035,71,character varying,70,YES,登録馬毎情報35
+jvd_tk,torokuba_joho_036,72,character varying,70,YES,登録馬毎情報36
+jvd_tk,torokuba_joho_037,73,character varying,70,YES,登録馬毎情報37
+jvd_tk,torokuba_joho_038,74,character varying,70,YES,登録馬毎情報38
+jvd_tk,torokuba_joho_039,75,character varying,70,YES,登録馬毎情報39
+jvd_tk,torokuba_joho_040,76,character varying,70,YES,登録馬毎情報40
+jvd_tk,torokuba_joho_041,77,character varying,70,YES,登録馬毎情報41
+jvd_tk,torokuba_joho_042,78,character varying,70,YES,登録馬毎情報42
+jvd_tk,torokuba_joho_043,79,character varying,70,YES,登録馬毎情報43
+jvd_tk,torokuba_joho_044,80,character varying,70,YES,登録馬毎情報44
+jvd_tk,torokuba_joho_045,81,character varying,70,YES,登録馬毎情報45
+jvd_tk,torokuba_joho_046,82,character varying,70,YES,登録馬毎情報46
+jvd_tk,torokuba_joho_047,83,character varying,70,YES,登録馬毎情報47
+jvd_tk,torokuba_joho_048,84,character varying,70,YES,登録馬毎情報48
+jvd_tk,torokuba_joho_049,85,character varying,70,YES,登録馬毎情報49
+jvd_tk,torokuba_joho_050,86,character varying,70,YES,登録馬毎情報50
+jvd_tk,torokuba_joho_051,87,character varying,70,YES,登録馬毎情報51
+jvd_tk,torokuba_joho_052,88,character varying,70,YES,登録馬毎情報52
+jvd_tk,torokuba_joho_053,89,character varying,70,YES,登録馬毎情報53
+jvd_tk,torokuba_joho_054,90,character varying,70,YES,登録馬毎情報54
+jvd_tk,torokuba_joho_055,91,character varying,70,YES,登録馬毎情報55
+jvd_tk,torokuba_joho_056,92,character varying,70,YES,登録馬毎情報56
+jvd_tk,torokuba_joho_057,93,character varying,70,YES,登録馬毎情報57
+jvd_tk,torokuba_joho_058,94,character varying,70,YES,登録馬毎情報58
+jvd_tk,torokuba_joho_059,95,character varying,70,YES,登録馬毎情報59
+jvd_tk,torokuba_joho_060,96,character varying,70,YES,登録馬毎情報60
+jvd_tk,torokuba_joho_061,97,character varying,70,YES,登録馬毎情報61
+jvd_tk,torokuba_joho_062,98,character varying,70,YES,登録馬毎情報62
+jvd_tk,torokuba_joho_063,99,character varying,70,YES,登録馬毎情報63
+jvd_tk,torokuba_joho_064,100,character varying,70,YES,登録馬毎情報64
+jvd_tk,torokuba_joho_065,101,character varying,70,YES,登録馬毎情報65
+jvd_tk,torokuba_joho_066,102,character varying,70,YES,登録馬毎情報66
+jvd_tk,torokuba_joho_067,103,character varying,70,YES,登録馬毎情報67
+jvd_tk,torokuba_joho_068,104,character varying,70,YES,登録馬毎情報68
+jvd_tk,torokuba_joho_069,105,character varying,70,YES,登録馬毎情報69
+jvd_tk,torokuba_joho_070,106,character varying,70,YES,登録馬毎情報70
+jvd_tk,torokuba_joho_071,107,character varying,70,YES,登録馬毎情報71
+jvd_tk,torokuba_joho_072,108,character varying,70,YES,登録馬毎情報72
+jvd_tk,torokuba_joho_073,109,character varying,70,YES,登録馬毎情報73
+jvd_tk,torokuba_joho_074,110,character varying,70,YES,登録馬毎情報74
+jvd_tk,torokuba_joho_075,111,character varying,70,YES,登録馬毎情報75
+jvd_tk,torokuba_joho_076,112,character varying,70,YES,登録馬毎情報76
+jvd_tk,torokuba_joho_077,113,character varying,70,YES,登録馬毎情報77
+jvd_tk,torokuba_joho_078,114,character varying,70,YES,登録馬毎情報78
+jvd_tk,torokuba_joho_079,115,character varying,70,YES,登録馬毎情報79
+jvd_tk,torokuba_joho_080,116,character varying,70,YES,登録馬毎情報80
+jvd_tk,torokuba_joho_081,117,character varying,70,YES,登録馬毎情報81
+jvd_tk,torokuba_joho_082,118,character varying,70,YES,登録馬毎情報82
+jvd_tk,torokuba_joho_083,119,character varying,70,YES,登録馬毎情報83
+jvd_tk,torokuba_joho_084,120,character varying,70,YES,登録馬毎情報84
+jvd_tk,torokuba_joho_085,121,character varying,70,YES,登録馬毎情報85
+jvd_tk,torokuba_joho_086,122,character varying,70,YES,登録馬毎情報86
+jvd_tk,torokuba_joho_087,123,character varying,70,YES,登録馬毎情報87
+jvd_tk,torokuba_joho_088,124,character varying,70,YES,登録馬毎情報88
+jvd_tk,torokuba_joho_089,125,character varying,70,YES,登録馬毎情報89
+jvd_tk,torokuba_joho_090,126,character varying,70,YES,登録馬毎情報90
+jvd_tk,torokuba_joho_091,127,character varying,70,YES,登録馬毎情報91
+jvd_tk,torokuba_joho_092,128,character varying,70,YES,登録馬毎情報92
+jvd_tk,torokuba_joho_093,129,character varying,70,YES,登録馬毎情報93
+jvd_tk,torokuba_joho_094,130,character varying,70,YES,登録馬毎情報94
+jvd_tk,torokuba_joho_095,131,character varying,70,YES,登録馬毎情報95
+jvd_tk,torokuba_joho_096,132,character varying,70,YES,登録馬毎情報96
+jvd_tk,torokuba_joho_097,133,character varying,70,YES,登録馬毎情報97
+jvd_tk,torokuba_joho_098,134,character varying,70,YES,登録馬毎情報98
+jvd_tk,torokuba_joho_099,135,character varying,70,YES,登録馬毎情報99
+jvd_tk,torokuba_joho_100,136,character varying,70,YES,登録馬毎情報100
+jvd_tk,torokuba_joho_101,137,character varying,70,YES,登録馬毎情報101
+jvd_tk,torokuba_joho_102,138,character varying,70,YES,登録馬毎情報102
+jvd_tk,torokuba_joho_103,139,character varying,70,YES,登録馬毎情報103
+jvd_tk,torokuba_joho_104,140,character varying,70,YES,登録馬毎情報104
+jvd_tk,torokuba_joho_105,141,character varying,70,YES,登録馬毎情報105
+jvd_tk,torokuba_joho_106,142,character varying,70,YES,登録馬毎情報106
+jvd_tk,torokuba_joho_107,143,character varying,70,YES,登録馬毎情報107
+jvd_tk,torokuba_joho_108,144,character varying,70,YES,登録馬毎情報108
+jvd_tk,torokuba_joho_109,145,character varying,70,YES,登録馬毎情報109
+jvd_tk,torokuba_joho_110,146,character varying,70,YES,登録馬毎情報110
+jvd_tk,torokuba_joho_111,147,character varying,70,YES,登録馬毎情報111
+jvd_tk,torokuba_joho_112,148,character varying,70,YES,登録馬毎情報112
+jvd_tk,torokuba_joho_113,149,character varying,70,YES,登録馬毎情報113
+jvd_tk,torokuba_joho_114,150,character varying,70,YES,登録馬毎情報114
+jvd_tk,torokuba_joho_115,151,character varying,70,YES,登録馬毎情報115
+jvd_tk,torokuba_joho_116,152,character varying,70,YES,登録馬毎情報116
+jvd_tk,torokuba_joho_117,153,character varying,70,YES,登録馬毎情報117
+jvd_tk,torokuba_joho_118,154,character varying,70,YES,登録馬毎情報118
+jvd_tk,torokuba_joho_119,155,character varying,70,YES,登録馬毎情報119
+jvd_tk,torokuba_joho_120,156,character varying,70,YES,登録馬毎情報120
+jvd_tk,torokuba_joho_121,157,character varying,70,YES,登録馬毎情報121
+jvd_tk,torokuba_joho_122,158,character varying,70,YES,登録馬毎情報122
+jvd_tk,torokuba_joho_123,159,character varying,70,YES,登録馬毎情報123
+jvd_tk,torokuba_joho_124,160,character varying,70,YES,登録馬毎情報124
+jvd_tk,torokuba_joho_125,161,character varying,70,YES,登録馬毎情報125
+jvd_tk,torokuba_joho_126,162,character varying,70,YES,登録馬毎情報126
+jvd_tk,torokuba_joho_127,163,character varying,70,YES,登録馬毎情報127
+jvd_tk,torokuba_joho_128,164,character varying,70,YES,登録馬毎情報128
+jvd_tk,torokuba_joho_129,165,character varying,70,YES,登録馬毎情報129
+jvd_tk,torokuba_joho_130,166,character varying,70,YES,登録馬毎情報130
+jvd_tk,torokuba_joho_131,167,character varying,70,YES,登録馬毎情報131
+jvd_tk,torokuba_joho_132,168,character varying,70,YES,登録馬毎情報132
+jvd_tk,torokuba_joho_133,169,character varying,70,YES,登録馬毎情報133
+jvd_tk,torokuba_joho_134,170,character varying,70,YES,登録馬毎情報134
+jvd_tk,torokuba_joho_135,171,character varying,70,YES,登録馬毎情報135
+jvd_tk,torokuba_joho_136,172,character varying,70,YES,登録馬毎情報136
+jvd_tk,torokuba_joho_137,173,character varying,70,YES,登録馬毎情報137
+jvd_tk,torokuba_joho_138,174,character varying,70,YES,登録馬毎情報138
+jvd_tk,torokuba_joho_139,175,character varying,70,YES,登録馬毎情報139
+jvd_tk,torokuba_joho_140,176,character varying,70,YES,登録馬毎情報140
+jvd_tk,torokuba_joho_141,177,character varying,70,YES,登録馬毎情報141
+jvd_tk,torokuba_joho_142,178,character varying,70,YES,登録馬毎情報142
+jvd_tk,torokuba_joho_143,179,character varying,70,YES,登録馬毎情報143
+jvd_tk,torokuba_joho_144,180,character varying,70,YES,登録馬毎情報144
+jvd_tk,torokuba_joho_145,181,character varying,70,YES,登録馬毎情報145
+jvd_tk,torokuba_joho_146,182,character varying,70,YES,登録馬毎情報146
+jvd_tk,torokuba_joho_147,183,character varying,70,YES,登録馬毎情報147
+jvd_tk,torokuba_joho_148,184,character varying,70,YES,登録馬毎情報148
+jvd_tk,torokuba_joho_149,185,character varying,70,YES,登録馬毎情報149
+jvd_tk,torokuba_joho_150,186,character varying,70,YES,登録馬毎情報150
+jvd_tk,torokuba_joho_151,187,character varying,70,YES,登録馬毎情報151
+jvd_tk,torokuba_joho_152,188,character varying,70,YES,登録馬毎情報152
+jvd_tk,torokuba_joho_153,189,character varying,70,YES,登録馬毎情報153
+jvd_tk,torokuba_joho_154,190,character varying,70,YES,登録馬毎情報154
+jvd_tk,torokuba_joho_155,191,character varying,70,YES,登録馬毎情報155
+jvd_tk,torokuba_joho_156,192,character varying,70,YES,登録馬毎情報156
+jvd_tk,torokuba_joho_157,193,character varying,70,YES,登録馬毎情報157
+jvd_tk,torokuba_joho_158,194,character varying,70,YES,登録馬毎情報158
+jvd_tk,torokuba_joho_159,195,character varying,70,YES,登録馬毎情報159
+jvd_tk,torokuba_joho_160,196,character varying,70,YES,登録馬毎情報160
+jvd_tk,torokuba_joho_161,197,character varying,70,YES,登録馬毎情報161
+jvd_tk,torokuba_joho_162,198,character varying,70,YES,登録馬毎情報162
+jvd_tk,torokuba_joho_163,199,character varying,70,YES,登録馬毎情報163
+jvd_tk,torokuba_joho_164,200,character varying,70,YES,登録馬毎情報164
+jvd_tk,torokuba_joho_165,201,character varying,70,YES,登録馬毎情報165
+jvd_tk,torokuba_joho_166,202,character varying,70,YES,登録馬毎情報166
+jvd_tk,torokuba_joho_167,203,character varying,70,YES,登録馬毎情報167
+jvd_tk,torokuba_joho_168,204,character varying,70,YES,登録馬毎情報168
+jvd_tk,torokuba_joho_169,205,character varying,70,YES,登録馬毎情報169
+jvd_tk,torokuba_joho_170,206,character varying,70,YES,登録馬毎情報170
+jvd_tk,torokuba_joho_171,207,character varying,70,YES,登録馬毎情報171
+jvd_tk,torokuba_joho_172,208,character varying,70,YES,登録馬毎情報172
+jvd_tk,torokuba_joho_173,209,character varying,70,YES,登録馬毎情報173
+jvd_tk,torokuba_joho_174,210,character varying,70,YES,登録馬毎情報174
+jvd_tk,torokuba_joho_175,211,character varying,70,YES,登録馬毎情報175
+jvd_tk,torokuba_joho_176,212,character varying,70,YES,登録馬毎情報176
+jvd_tk,torokuba_joho_177,213,character varying,70,YES,登録馬毎情報177
+jvd_tk,torokuba_joho_178,214,character varying,70,YES,登録馬毎情報178
+jvd_tk,torokuba_joho_179,215,character varying,70,YES,登録馬毎情報179
+jvd_tk,torokuba_joho_180,216,character varying,70,YES,登録馬毎情報180
+jvd_tk,torokuba_joho_181,217,character varying,70,YES,登録馬毎情報181
+jvd_tk,torokuba_joho_182,218,character varying,70,YES,登録馬毎情報182
+jvd_tk,torokuba_joho_183,219,character varying,70,YES,登録馬毎情報183
+jvd_tk,torokuba_joho_184,220,character varying,70,YES,登録馬毎情報184
+jvd_tk,torokuba_joho_185,221,character varying,70,YES,登録馬毎情報185
+jvd_tk,torokuba_joho_186,222,character varying,70,YES,登録馬毎情報186
+jvd_tk,torokuba_joho_187,223,character varying,70,YES,登録馬毎情報187
+jvd_tk,torokuba_joho_188,224,character varying,70,YES,登録馬毎情報188
+jvd_tk,torokuba_joho_189,225,character varying,70,YES,登録馬毎情報189
+jvd_tk,torokuba_joho_190,226,character varying,70,YES,登録馬毎情報190
+jvd_tk,torokuba_joho_191,227,character varying,70,YES,登録馬毎情報191
+jvd_tk,torokuba_joho_192,228,character varying,70,YES,登録馬毎情報192
+jvd_tk,torokuba_joho_193,229,character varying,70,YES,登録馬毎情報193
+jvd_tk,torokuba_joho_194,230,character varying,70,YES,登録馬毎情報194
+jvd_tk,torokuba_joho_195,231,character varying,70,YES,登録馬毎情報195
+jvd_tk,torokuba_joho_196,232,character varying,70,YES,登録馬毎情報196
+jvd_tk,torokuba_joho_197,233,character varying,70,YES,登録馬毎情報197
+jvd_tk,torokuba_joho_198,234,character varying,70,YES,登録馬毎情報198
+jvd_tk,torokuba_joho_199,235,character varying,70,YES,登録馬毎情報199
+jvd_tk,torokuba_joho_200,236,character varying,70,YES,登録馬毎情報200
+jvd_tk,torokuba_joho_201,237,character varying,70,YES,登録馬毎情報201
+jvd_tk,torokuba_joho_202,238,character varying,70,YES,登録馬毎情報202
+jvd_tk,torokuba_joho_203,239,character varying,70,YES,登録馬毎情報203
+jvd_tk,torokuba_joho_204,240,character varying,70,YES,登録馬毎情報204
+jvd_tk,torokuba_joho_205,241,character varying,70,YES,登録馬毎情報205
+jvd_tk,torokuba_joho_206,242,character varying,70,YES,登録馬毎情報206
+jvd_tk,torokuba_joho_207,243,character varying,70,YES,登録馬毎情報207
+jvd_tk,torokuba_joho_208,244,character varying,70,YES,登録馬毎情報208
+jvd_tk,torokuba_joho_209,245,character varying,70,YES,登録馬毎情報209
+jvd_tk,torokuba_joho_210,246,character varying,70,YES,登録馬毎情報210
+jvd_tk,torokuba_joho_211,247,character varying,70,YES,登録馬毎情報211
+jvd_tk,torokuba_joho_212,248,character varying,70,YES,登録馬毎情報212
+jvd_tk,torokuba_joho_213,249,character varying,70,YES,登録馬毎情報213
+jvd_tk,torokuba_joho_214,250,character varying,70,YES,登録馬毎情報214
+jvd_tk,torokuba_joho_215,251,character varying,70,YES,登録馬毎情報215
+jvd_tk,torokuba_joho_216,252,character varying,70,YES,登録馬毎情報216
+jvd_tk,torokuba_joho_217,253,character varying,70,YES,登録馬毎情報217
+jvd_tk,torokuba_joho_218,254,character varying,70,YES,登録馬毎情報218
+jvd_tk,torokuba_joho_219,255,character varying,70,YES,登録馬毎情報219
+jvd_tk,torokuba_joho_220,256,character varying,70,YES,登録馬毎情報220
+jvd_tk,torokuba_joho_221,257,character varying,70,YES,登録馬毎情報221
+jvd_tk,torokuba_joho_222,258,character varying,70,YES,登録馬毎情報222
+jvd_tk,torokuba_joho_223,259,character varying,70,YES,登録馬毎情報223
+jvd_tk,torokuba_joho_224,260,character varying,70,YES,登録馬毎情報224
+jvd_tk,torokuba_joho_225,261,character varying,70,YES,登録馬毎情報225
+jvd_tk,torokuba_joho_226,262,character varying,70,YES,登録馬毎情報226
+jvd_tk,torokuba_joho_227,263,character varying,70,YES,登録馬毎情報227
+jvd_tk,torokuba_joho_228,264,character varying,70,YES,登録馬毎情報228
+jvd_tk,torokuba_joho_229,265,character varying,70,YES,登録馬毎情報229
+jvd_tk,torokuba_joho_230,266,character varying,70,YES,登録馬毎情報230
+jvd_tk,torokuba_joho_231,267,character varying,70,YES,登録馬毎情報231
+jvd_tk,torokuba_joho_232,268,character varying,70,YES,登録馬毎情報232
+jvd_tk,torokuba_joho_233,269,character varying,70,YES,登録馬毎情報233
+jvd_tk,torokuba_joho_234,270,character varying,70,YES,登録馬毎情報234
+jvd_tk,torokuba_joho_235,271,character varying,70,YES,登録馬毎情報235
+jvd_tk,torokuba_joho_236,272,character varying,70,YES,登録馬毎情報236
+jvd_tk,torokuba_joho_237,273,character varying,70,YES,登録馬毎情報237
+jvd_tk,torokuba_joho_238,274,character varying,70,YES,登録馬毎情報238
+jvd_tk,torokuba_joho_239,275,character varying,70,YES,登録馬毎情報239
+jvd_tk,torokuba_joho_240,276,character varying,70,YES,登録馬毎情報240
+jvd_tk,torokuba_joho_241,277,character varying,70,YES,登録馬毎情報241
+jvd_tk,torokuba_joho_242,278,character varying,70,YES,登録馬毎情報242
+jvd_tk,torokuba_joho_243,279,character varying,70,YES,登録馬毎情報243
+jvd_tk,torokuba_joho_244,280,character varying,70,YES,登録馬毎情報244
+jvd_tk,torokuba_joho_245,281,character varying,70,YES,登録馬毎情報245
+jvd_tk,torokuba_joho_246,282,character varying,70,YES,登録馬毎情報246
+jvd_tk,torokuba_joho_247,283,character varying,70,YES,登録馬毎情報247
+jvd_tk,torokuba_joho_248,284,character varying,70,YES,登録馬毎情報248
+jvd_tk,torokuba_joho_249,285,character varying,70,YES,登録馬毎情報249
+jvd_tk,torokuba_joho_250,286,character varying,70,YES,登録馬毎情報250
+jvd_tk,torokuba_joho_251,287,character varying,70,YES,登録馬毎情報251
+jvd_tk,torokuba_joho_252,288,character varying,70,YES,登録馬毎情報252
+jvd_tk,torokuba_joho_253,289,character varying,70,YES,登録馬毎情報253
+jvd_tk,torokuba_joho_254,290,character varying,70,YES,登録馬毎情報254
+jvd_tk,torokuba_joho_255,291,character varying,70,YES,登録馬毎情報255
+jvd_tk,torokuba_joho_256,292,character varying,70,YES,登録馬毎情報256
+jvd_tk,torokuba_joho_257,293,character varying,70,YES,登録馬毎情報257
+jvd_tk,torokuba_joho_258,294,character varying,70,YES,登録馬毎情報258
+jvd_tk,torokuba_joho_259,295,character varying,70,YES,登録馬毎情報259
+jvd_tk,torokuba_joho_260,296,character varying,70,YES,登録馬毎情報260
+jvd_tk,torokuba_joho_261,297,character varying,70,YES,登録馬毎情報261
+jvd_tk,torokuba_joho_262,298,character varying,70,YES,登録馬毎情報262
+jvd_tk,torokuba_joho_263,299,character varying,70,YES,登録馬毎情報263
+jvd_tk,torokuba_joho_264,300,character varying,70,YES,登録馬毎情報264
+jvd_tk,torokuba_joho_265,301,character varying,70,YES,登録馬毎情報265
+jvd_tk,torokuba_joho_266,302,character varying,70,YES,登録馬毎情報266
+jvd_tk,torokuba_joho_267,303,character varying,70,YES,登録馬毎情報267
+jvd_tk,torokuba_joho_268,304,character varying,70,YES,登録馬毎情報268
+jvd_tk,torokuba_joho_269,305,character varying,70,YES,登録馬毎情報269
+jvd_tk,torokuba_joho_270,306,character varying,70,YES,登録馬毎情報270
+jvd_tk,torokuba_joho_271,307,character varying,70,YES,登録馬毎情報271
+jvd_tk,torokuba_joho_272,308,character varying,70,YES,登録馬毎情報272
+jvd_tk,torokuba_joho_273,309,character varying,70,YES,登録馬毎情報273
+jvd_tk,torokuba_joho_274,310,character varying,70,YES,登録馬毎情報274
+jvd_tk,torokuba_joho_275,311,character varying,70,YES,登録馬毎情報275
+jvd_tk,torokuba_joho_276,312,character varying,70,YES,登録馬毎情報276
+jvd_tk,torokuba_joho_277,313,character varying,70,YES,登録馬毎情報277
+jvd_tk,torokuba_joho_278,314,character varying,70,YES,登録馬毎情報278
+jvd_tk,torokuba_joho_279,315,character varying,70,YES,登録馬毎情報279
+jvd_tk,torokuba_joho_280,316,character varying,70,YES,登録馬毎情報280
+jvd_tk,torokuba_joho_281,317,character varying,70,YES,登録馬毎情報281
+jvd_tk,torokuba_joho_282,318,character varying,70,YES,登録馬毎情報282
+jvd_tk,torokuba_joho_283,319,character varying,70,YES,登録馬毎情報283
+jvd_tk,torokuba_joho_284,320,character varying,70,YES,登録馬毎情報284
+jvd_tk,torokuba_joho_285,321,character varying,70,YES,登録馬毎情報285
+jvd_tk,torokuba_joho_286,322,character varying,70,YES,登録馬毎情報286
+jvd_tk,torokuba_joho_287,323,character varying,70,YES,登録馬毎情報287
+jvd_tk,torokuba_joho_288,324,character varying,70,YES,登録馬毎情報288
+jvd_tk,torokuba_joho_289,325,character varying,70,YES,登録馬毎情報289
+jvd_tk,torokuba_joho_290,326,character varying,70,YES,登録馬毎情報290
+jvd_tk,torokuba_joho_291,327,character varying,70,YES,登録馬毎情報291
+jvd_tk,torokuba_joho_292,328,character varying,70,YES,登録馬毎情報292
+jvd_tk,torokuba_joho_293,329,character varying,70,YES,登録馬毎情報293
+jvd_tk,torokuba_joho_294,330,character varying,70,YES,登録馬毎情報294
+jvd_tk,torokuba_joho_295,331,character varying,70,YES,登録馬毎情報295
+jvd_tk,torokuba_joho_296,332,character varying,70,YES,登録馬毎情報296
+jvd_tk,torokuba_joho_297,333,character varying,70,YES,登録馬毎情報297
+jvd_tk,torokuba_joho_298,334,character varying,70,YES,登録馬毎情報298
+jvd_tk,torokuba_joho_299,335,character varying,70,YES,登録馬毎情報299
+jvd_tk,torokuba_joho_300,336,character varying,70,YES,登録馬毎情報300
+jvd_tm,record_id,1,character varying,2,YES,"レコード種別ID: ""TM""をセットレコードフォーマットを特定する"
+jvd_tm,data_kubun,2,character varying,1,YES,データ区分: 1:前日予想(出馬発表後)　2:当日予想(天候馬場発表後)　3:直前予想(馬体重発表後) 7:成績(月曜)　0:該当レコード削除(提供ミスなどの理由による) ※1 7:成績(月曜)は蓄積系データのみ設定されます。     蓄積系データにて7:成績(月曜)提供後も速報系データには3:直前予想(馬体重発...
+jvd_tm,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_tm,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_tm,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_tm,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_tm,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_tm,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_tm,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_tm,data_sakusei_jifun,10,character varying,4,YES,データ作成時分: 時分各2桁
+jvd_tm,mining_yoso_01,11,character varying,6,YES,<マイニング予想>: nan
+jvd_tm,mining_yoso_02,12,character varying,6,YES,馬番: 該当馬番01〜18
+jvd_tm,mining_yoso_03,13,character varying,6,YES,予測スコア: 000.0〜100.0で設定 右から1バイト目を小数点第一位とする
+jvd_tm,mining_yoso_04,14,character varying,6,YES,レコード区切: CR/LF
+jvd_tm,mining_yoso_05,15,character varying,6,YES,項目名: 説明
+jvd_tm,mining_yoso_06,16,character varying,6,YES,マイニング予想6
+jvd_tm,mining_yoso_07,17,character varying,6,YES,マイニング予想7
+jvd_tm,mining_yoso_08,18,character varying,6,YES,マイニング予想8
+jvd_tm,mining_yoso_09,19,character varying,6,YES,マイニング予想9
+jvd_tm,mining_yoso_10,20,character varying,6,YES,マイニング予想10
+jvd_tm,mining_yoso_11,21,character varying,6,YES,マイニング予想11
+jvd_tm,mining_yoso_12,22,character varying,6,YES,マイニング予想12
+jvd_tm,mining_yoso_13,23,character varying,6,YES,マイニング予想13
+jvd_tm,mining_yoso_14,24,character varying,6,YES,マイニング予想14
+jvd_tm,mining_yoso_15,25,character varying,6,YES,マイニング予想15
+jvd_tm,mining_yoso_16,26,character varying,6,YES,マイニング予想16
+jvd_tm,mining_yoso_17,27,character varying,6,YES,マイニング予想17
+jvd_tm,mining_yoso_18,28,character varying,6,YES,マイニング予想18
+jvd_um,record_id,1,character varying,2,YES,"レコード種別ID: ""UM"" をセットレコードフォーマットを特定する"
+jvd_um,data_kubun,2,character varying,1,YES,データ区分: 1:新規馬名登録 2:馬名変更 3:再登録(抹消後の再登録) 4:その他更新 9:抹消 0:該当レコード削除(提供ミスなどの理由による)
+jvd_um,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_um,ketto_toroku_bango,4,character varying,10,NO,血統登録番号: 生年(西暦)4桁＋品種1桁<コード表2201.品種コード>参照＋数字5桁
+jvd_um,massho_kubun,5,character varying,1,YES,競走馬抹消区分: 0:現役 1:抹消
+jvd_um,toroku_nengappi,6,character varying,8,YES,競走馬登録年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_um,massho_nengappi,7,character varying,8,YES,競走馬抹消年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_um,seinengappi,8,character varying,8,YES,生年月日: 年4桁(西暦)＋月日各2桁 yyyymmdd 形式
+jvd_um,bamei,9,character varying,36,YES,馬名: 全角18文字
+jvd_um,bamei_hankaku_kana,10,character varying,36,YES,馬名半角ｶﾅ: 半角36文字
+jvd_um,bamei_eur,11,character varying,60,YES,馬名欧字: 半角60文字
+jvd_um,zaikyu_flag,12,character varying,1,YES,JRA施設在きゅうフラグ: 0:JRA施設に在きゅうしていない。 1:JRA施設の在きゅうしている。 JRA施設とは競馬場およびトレセンなどを指す。　(平成18年6月6日以降設定)
+jvd_um,yobi_1,13,character varying,19,YES,予備: 予備
+jvd_um,umakigo_code,14,character varying,2,YES,馬記号コード: <コード表 2204.馬記号コード>参照
+jvd_um,seibetsu_code,15,character varying,1,YES,性別コード: <コード表 2202.性別コード>参照
+jvd_um,hinshu_code,16,character varying,1,YES,品種コード: <コード表 2201.品種コード>参照
+jvd_um,moshoku_code,17,character varying,2,YES,毛色コード: <コード表 2203.毛色コード>参照
+jvd_um,ketto_joho_01a,18,character varying,10,YES,<3代血統情報>: 父･母･父父･父母･母父･母母･父父父･父父母･父母父･父母母･母父父･母父母･母母父･母母母の順に設定
+jvd_um,ketto_joho_01b,19,character varying,36,YES,繁殖登録番号: 繁殖馬マスタにリンク
+jvd_um,ketto_joho_02a,20,character varying,10,YES,馬名: 全角18文字 〜 半角36文字 （全角と半角が混在） 外国の繁殖馬の場合は、16.繁殖馬マスタの10.馬名欧字の頭36バイトを設定。
+jvd_um,ketto_joho_02b,21,character varying,36,YES,東西所属コード: <コード表 2301.東西所属コード>参照
+jvd_um,ketto_joho_03a,22,character varying,10,YES,調教師コード: 調教師マスタへリンク
+jvd_um,ketto_joho_03b,23,character varying,36,YES,調教師名略称: 全角4文字
+jvd_um,ketto_joho_04a,24,character varying,10,YES,招待地域名: 全角10文字
+jvd_um,ketto_joho_04b,25,character varying,36,YES,生産者コード: 生産者マスタへリンク
+jvd_um,ketto_joho_05a,26,character varying,10,YES,生産者名(法人格無): 全角36文字 〜 半角72文字 （全角と半角が混在） 株式会社、有限会社などの法人格を示す文字列が頭もしくは末尾にある場合にそれを削除したものを設定。また、外国生産者の場合は、生産者マスタの8.生産者名欧字の頭70バイトを設定。
+jvd_um,ketto_joho_05b,27,character varying,36,YES,産地名: 全角10文字　または　半角20文字　(設定値が英数の場合は半角で設定）
+jvd_um,ketto_joho_06a,28,character varying,10,YES,馬主コード: 馬主マスタへリンク
+jvd_um,ketto_joho_06b,29,character varying,36,YES,馬主名(法人格無): 全角32文字 〜 半角64文字 （全角と半角が混在） 株式会社、有限会社などの法人格を示す文字列が頭もしくは末尾にある場合にそれを削除したものを設定。また、外国馬主の場合は、馬主マスタの8.馬主名欧字の頭64バイトを設定。
+jvd_um,ketto_joho_07a,30,character varying,10,YES,平地本賞金累計: 単位：百円　（中央の平地本賞金の合計）
+jvd_um,ketto_joho_07b,31,character varying,36,YES,障害本賞金累計: 単位：百円　（中央の障害本賞金の合計）
+jvd_um,ketto_joho_08a,32,character varying,10,YES,平地付加賞金累計: 単位：百円　（中央の平地付加賞金の合計）
+jvd_um,ketto_joho_08b,33,character varying,36,YES,障害付加賞金累計: 単位：百円　（中央の障害付加賞金の合計）
+jvd_um,ketto_joho_09a,34,character varying,10,YES,平地収得賞金累計: 単位：百円　（中央＋中央以外の平地累積収得賞金）
+jvd_um,ketto_joho_09b,35,character varying,36,YES,障害収得賞金累計: 単位：百円　（中央＋中央以外の障害累積収得賞金）
+jvd_um,ketto_joho_10a,36,character varying,10,YES,総合着回数: 1着〜5着及び着外(6着以下)の回数（中央＋地方＋海外)
+jvd_um,ketto_joho_10b,37,character varying,36,YES,中央合計着回数: 1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,ketto_joho_11a,38,character varying,10,YES,<馬場別着回数>: nan
+jvd_um,ketto_joho_11b,39,character varying,36,YES,芝直・着回数: 芝・直線コースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,ketto_joho_12a,40,character varying,10,YES,芝右・着回数: 芝・右回りコースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,ketto_joho_12b,41,character varying,36,YES,芝左・着回数: 芝・左回りコースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,ketto_joho_13a,42,character varying,10,YES,ダ直・着回数: ダート・直線コースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,ketto_joho_13b,43,character varying,36,YES,ダ右・着回数: ダート・右回りコースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,ketto_joho_14a,44,character varying,10,YES,ダ左・着回数: ダート・左回りコースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,ketto_joho_14b,45,character varying,36,YES,障害・着回数: 障害レースでの1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,tozai_shozoku_code,46,character varying,1,YES,<馬場状態別着回数>: nan
+jvd_um,chokyoshi_code,47,character varying,5,YES,芝良・着回数: 芝・良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,chokyoshimei_ryakusho,48,character varying,8,YES,芝稍・着回数: 芝・稍重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,shotai_chiikimei,49,character varying,20,YES,芝重・着回数: 芝・重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,seisansha_code,50,character varying,8,YES,芝不・着回数: 芝・不良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,seisanshamei,51,character varying,72,YES,ダ良・着回数: ダート・良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,sanchimei,52,character varying,20,YES,ダ稍・着回数: ダート・稍重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,banushi_code,53,character varying,6,YES,ダ重・着回数: ダート・重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,banushimei,54,character varying,64,YES,ダ不・着回数: ダート・不良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,heichi_honshokin_ruikei,55,character varying,9,YES,障良・着回数: 障害レース・良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,shogai_honshokin_ruikei,56,character varying,9,YES,障稍・着回数: 障害レース・稍重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,heichi_fukashokin_ruikei,57,character varying,9,YES,障重・着回数: 障害レース・重馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,shogai_fukashokin_ruikei,58,character varying,9,YES,障不・着回数: 障害レース・不良馬場での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,heichi_shutokushokin_ruikei,59,character varying,9,YES,<距離別着回数>: nan
+jvd_um,shogai_shutokushokin_ruikei,60,character varying,9,YES,芝16下・着回数: 芝･1600M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,sogo,61,character varying,18,YES,芝22下・着回数: 芝･1601Ｍ以上2200M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,chuo_gokei,62,character varying,18,YES,芝22超・着回数: 芝･2201M以上での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,shiba_choku,63,character varying,18,YES,ダ16下・着回数: ダート･1600M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,shiba_migi,64,character varying,18,YES,ダ22下・着回数: ダート･1601Ｍ以上2200M以下での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,shiba_hidari,65,character varying,18,YES,ダ22超・着回数: ダート･2201M以上での1着〜5着及び着外(6着以下)の回数（中央のみ)
+jvd_um,dirt_choku,66,character varying,18,YES,脚質傾向: 逃げ回数、先行回数、差し回数、追込回数を設定 過去出走レースの脚質を判定しカウントしたもの(中央レースのみ)
+jvd_um,dirt_migi,67,character varying,18,YES,登録レース数: JRA-VANに登録されている成績レース数
+jvd_um,dirt_hidari,68,character varying,18,YES,レコード区切: CR/LF
+jvd_um,shogai,69,character varying,18,YES,項目名: 説明
+jvd_um,shiba_ryo,70,character varying,18,YES,芝良・着回数
+jvd_um,shiba_yayaomo,71,character varying,18,YES,芝稍・着回数
+jvd_um,shiba_omo,72,character varying,18,YES,芝重・着回数
+jvd_um,shiba_furyo,73,character varying,18,YES,芝不・着回数
+jvd_um,dirt_ryo,74,character varying,18,YES,ダ良・着回数
+jvd_um,dirt_yayaomo,75,character varying,18,YES,ダ稍・着回数
+jvd_um,dirt_omo,76,character varying,18,YES,ダ重・着回数
+jvd_um,dirt_furyo,77,character varying,18,YES,ダ不・着回数
+jvd_um,shogai_ryo,78,character varying,18,YES,障良・着回数
+jvd_um,shogai_yayaomo,79,character varying,18,YES,障稍・着回数
+jvd_um,shogai_omo,80,character varying,18,YES,障重・着回数
+jvd_um,shogai_furyo,81,character varying,18,YES,障不・着回数
+jvd_um,shiba_short,82,character varying,18,YES,芝16下・着回数
+jvd_um,shiba_middle,83,character varying,18,YES,芝22下・着回数
+jvd_um,shiba_long,84,character varying,18,YES,芝22超・着回数
+jvd_um,dirt_short,85,character varying,18,YES,ダ16下・着回数
+jvd_um,dirt_middle,86,character varying,18,YES,ダ22下・着回数
+jvd_um,dirt_long,87,character varying,18,YES,ダ22超・着回数
+jvd_um,kyakushitsu_keiko,88,character varying,12,YES,脚質傾向
+jvd_um,toroku_race_su,89,character varying,3,YES,登録レース数
+jvd_wc,record_id,1,character varying,2,YES,レコード種別ID
+jvd_wc,data_kubun,2,character varying,1,YES,データ区分
+jvd_wc,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日
+jvd_wc,tracen_kubun,4,character varying,1,NO,トレセン区分
+jvd_wc,chokyo_nengappi,5,character varying,8,NO,調教年月日
+jvd_wc,chokyo_jikoku,6,character varying,4,NO,調教時刻
+jvd_wc,ketto_toroku_bango,7,character varying,10,NO,血統登録番号
+jvd_wc,course,8,character varying,1,YES,コース
+jvd_wc,babamawari,9,character varying,1,YES,馬場周り
+jvd_wc,yobi_1,10,character varying,1,YES,予備
+jvd_wc,time_gokei_10f,11,character varying,4,YES,10ハロンタイム合計(2000M〜0M)
+jvd_wc,lap_time_10f,12,character varying,3,YES,ラップタイム(2000M〜1800M)
+jvd_wc,time_gokei_9f,13,character varying,4,YES,9ハロンタイム合計(1800M〜0M)
+jvd_wc,lap_time_9f,14,character varying,3,YES,ラップタイム(1800M〜1600M)
+jvd_wc,time_gokei_8f,15,character varying,4,YES,8ロンタイム合計(1600M〜0M)
+jvd_wc,lap_time_8f,16,character varying,3,YES,ラップタイム(1600M〜1400M)
+jvd_wc,time_gokei_7f,17,character varying,4,YES,7ハロンタイム合計(1400M〜0M)
+jvd_wc,lap_time_7f,18,character varying,3,YES,ラップタイム(1400M〜1200M)
+jvd_wc,time_gokei_6f,19,character varying,4,YES,6ハロンタイム合計(1200M〜0M)
+jvd_wc,lap_time_6f,20,character varying,3,YES,ラップタイム(1200M〜1000M)
+jvd_wc,time_gokei_5f,21,character varying,4,YES,5ハロンタイム合計(1000M〜0M)
+jvd_wc,lap_time_5f,22,character varying,3,YES,ラップタイム(1000M〜800M)
+jvd_wc,time_gokei_4f,23,character varying,4,YES,4ハロンタイム合計(800M〜0M)
+jvd_wc,lap_time_4f,24,character varying,3,YES,ラップタイム(800M〜600M)
+jvd_wc,time_gokei_3f,25,character varying,4,YES,3ハロンタイム合計(600M〜0M)
+jvd_wc,lap_time_3f,26,character varying,3,YES,ラップタイム(600M〜400M)
+jvd_wc,time_gokei_2f,27,character varying,4,YES,2ハロンタイム合計(400M〜0M)
+jvd_wc,lap_time_2f,28,character varying,3,YES,ラップタイム(400M〜200M)
+jvd_wc,lap_time_1f,29,character varying,3,YES,ラップタイム(200M〜0M)
+jvd_we,record_id,1,character varying,2,YES,"レコード種別ID: ""WE"" をセットレコードフォーマットを特定する"
+jvd_we,data_kubun,2,character varying,1,YES,データ区分: 1:初期値
+jvd_we,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_we,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_we,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_we,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_we,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_we,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_we,happyo_tsukihi_jifun,9,character varying,8,NO,発表月日時分: 月日時分各2桁
+jvd_we,henko_shikibetsu,10,character varying,1,NO,変更識別: 1:天候馬場初期状態　2:天候変更　3:馬場状態変更 1:初期状態の時は天候・馬場ともに有効値を設定。 2:天候変更の時は天候(変更後・変更前)のみ有効値を設定。(馬場は初期値) 3:馬場状態変更の時は馬場(変更後・変更前)のみ有効値を設定。(天候は初期値)
+jvd_we,tenko_code,11,character varying,1,YES,<現在状態情報>: 現在の天候馬場の状態を設定
+jvd_we,babajotai_code_shiba,12,character varying,1,YES,天候状態: <コード表 2011.天候コード>参照
+jvd_we,babajotai_code_dirt,13,character varying,1,YES,馬場状態・芝: <コード表 2010.馬場状態コード>参照
+jvd_we,tenko_code_henkomae,14,character varying,1,YES,馬場状態・ダート: <コード表 2010.馬場状態コード>参照
+jvd_we,babajotai_code_shiba_henkomae,15,character varying,1,YES,<変更前状態情報>: 変更前直前の天候馬場状態を設定
+jvd_we,babajotai_code_dirt_henkomae,16,character varying,1,YES,天候状態: <コード表 2011.天候コード>参照
+jvd_wf,record_id,1,character varying,2,YES,"レコード種別ID: ""WF"" をセットレコードフォーマットを特定する"
+jvd_wf,data_kubun,2,character varying,1,YES,データ区分: 1:重勝式詳細発表時　2:重勝式対象1レース目確定時 3:重勝式払戻発表時　7:成績(月曜)　9:重勝式中止時 0:該当レコード削除(提供ミスなどの理由による) ※1 7:成績(月曜)は蓄積系データのみ設定されます。     蓄積系データにて7:成績(月曜)提供後も速報系データには3:重勝式払戻発表...
+jvd_wf,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_wf,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_wf,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_wf,yobi_1,6,character varying,2,YES,予備: nan
+jvd_wf,race_joho_1,7,character varying,8,YES,<重勝式対象レース情報>: 重勝式対象レースを設定
+jvd_wf,race_joho_2,8,character varying,8,YES,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_wf,race_joho_3,9,character varying,8,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_wf,race_joho_4,10,character varying,8,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_wf,race_joho_5,11,character varying,8,YES,レース番号: 該当レース番号
+jvd_wf,yobi_2,12,character varying,6,YES,予備: nan
+jvd_wf,win5_hyosu_gokei,13,character varying,11,YES,重勝式発売票数: 重勝式の発売票数
+jvd_wf,yuko_hyosu_1,14,character varying,11,YES,<有効票数情報>: nan
+jvd_wf,yuko_hyosu_2,15,character varying,11,YES,有効票数: 重勝式対象レース確定時、的中可能性のある残りの票数の数を示す 7.<重勝式対象レース情報>と同じ順で設定 (7.<重勝式対象レース情報>の3番目(繰返3回目)のレースが確定した場合、 10.<有効票数情報>の3番目(繰返3回目)の箇所に値を設定)
+jvd_wf,yuko_hyosu_3,16,character varying,11,YES,返還フラグ: 0：返還無　1：返還有
+jvd_wf,yuko_hyosu_4,17,character varying,11,YES,不成立フラグ: 0：不成立無　1：不成立有
+jvd_wf,yuko_hyosu_5,18,character varying,11,YES,的中無フラグ: 0：的中有　1：的中無
+jvd_wf,henkan_flag,19,character varying,1,YES,キャリーオーバー金額初期: 単位 円 開催日当日開始時の、重勝式のキャリーオーバー金額を示す
+jvd_wf,fuseiritsu_flag,20,character varying,1,YES,キャリーオーバー金額残高: 単位 円 重勝式の次回へのキャリーオーバー金額を示す
+jvd_wf,tekichu_nashi_flag,21,character varying,1,YES,<重勝式払戻情報>: nan
+jvd_wf,carry_over,22,character varying,15,YES,組番: 重勝式的中馬番組合　（的中無の場合も重勝式的中馬番組合を設定）
+jvd_wf,carry_over_zandaka,23,character varying,15,YES,重勝式払戻金: 重勝式払戻金　（的中無の場合000000000を設定）
+jvd_wf,haraimodoshi_win5_001,24,character varying,29,YES,的中票数: 重勝式的中票数　（的中無の場合0000000000を設定）
+jvd_wf,haraimodoshi_win5_002,25,character varying,29,YES,レコード区切: CR/LF
+jvd_wf,haraimodoshi_win5_003,26,character varying,29,YES,項目名: 説明
+jvd_wf,haraimodoshi_win5_004,27,character varying,29,YES,重勝式払戻情報4
+jvd_wf,haraimodoshi_win5_005,28,character varying,29,YES,重勝式払戻情報5
+jvd_wf,haraimodoshi_win5_006,29,character varying,29,YES,重勝式払戻情報6
+jvd_wf,haraimodoshi_win5_007,30,character varying,29,YES,重勝式払戻情報7
+jvd_wf,haraimodoshi_win5_008,31,character varying,29,YES,重勝式払戻情報8
+jvd_wf,haraimodoshi_win5_009,32,character varying,29,YES,重勝式払戻情報9
+jvd_wf,haraimodoshi_win5_010,33,character varying,29,YES,重勝式払戻情報10
+jvd_wf,haraimodoshi_win5_011,34,character varying,29,YES,重勝式払戻情報11
+jvd_wf,haraimodoshi_win5_012,35,character varying,29,YES,重勝式払戻情報12
+jvd_wf,haraimodoshi_win5_013,36,character varying,29,YES,重勝式払戻情報13
+jvd_wf,haraimodoshi_win5_014,37,character varying,29,YES,重勝式払戻情報14
+jvd_wf,haraimodoshi_win5_015,38,character varying,29,YES,重勝式払戻情報15
+jvd_wf,haraimodoshi_win5_016,39,character varying,29,YES,重勝式払戻情報16
+jvd_wf,haraimodoshi_win5_017,40,character varying,29,YES,重勝式払戻情報17
+jvd_wf,haraimodoshi_win5_018,41,character varying,29,YES,重勝式払戻情報18
+jvd_wf,haraimodoshi_win5_019,42,character varying,29,YES,重勝式払戻情報19
+jvd_wf,haraimodoshi_win5_020,43,character varying,29,YES,重勝式払戻情報20
+jvd_wf,haraimodoshi_win5_021,44,character varying,29,YES,重勝式払戻情報21
+jvd_wf,haraimodoshi_win5_022,45,character varying,29,YES,重勝式払戻情報22
+jvd_wf,haraimodoshi_win5_023,46,character varying,29,YES,重勝式払戻情報23
+jvd_wf,haraimodoshi_win5_024,47,character varying,29,YES,重勝式払戻情報24
+jvd_wf,haraimodoshi_win5_025,48,character varying,29,YES,重勝式払戻情報25
+jvd_wf,haraimodoshi_win5_026,49,character varying,29,YES,重勝式払戻情報26
+jvd_wf,haraimodoshi_win5_027,50,character varying,29,YES,重勝式払戻情報27
+jvd_wf,haraimodoshi_win5_028,51,character varying,29,YES,重勝式払戻情報28
+jvd_wf,haraimodoshi_win5_029,52,character varying,29,YES,重勝式払戻情報29
+jvd_wf,haraimodoshi_win5_030,53,character varying,29,YES,重勝式払戻情報30
+jvd_wf,haraimodoshi_win5_031,54,character varying,29,YES,重勝式払戻情報31
+jvd_wf,haraimodoshi_win5_032,55,character varying,29,YES,重勝式払戻情報32
+jvd_wf,haraimodoshi_win5_033,56,character varying,29,YES,重勝式払戻情報33
+jvd_wf,haraimodoshi_win5_034,57,character varying,29,YES,重勝式払戻情報34
+jvd_wf,haraimodoshi_win5_035,58,character varying,29,YES,重勝式払戻情報35
+jvd_wf,haraimodoshi_win5_036,59,character varying,29,YES,重勝式払戻情報36
+jvd_wf,haraimodoshi_win5_037,60,character varying,29,YES,重勝式払戻情報37
+jvd_wf,haraimodoshi_win5_038,61,character varying,29,YES,重勝式払戻情報38
+jvd_wf,haraimodoshi_win5_039,62,character varying,29,YES,重勝式払戻情報39
+jvd_wf,haraimodoshi_win5_040,63,character varying,29,YES,重勝式払戻情報40
+jvd_wf,haraimodoshi_win5_041,64,character varying,29,YES,重勝式払戻情報41
+jvd_wf,haraimodoshi_win5_042,65,character varying,29,YES,重勝式払戻情報42
+jvd_wf,haraimodoshi_win5_043,66,character varying,29,YES,重勝式払戻情報43
+jvd_wf,haraimodoshi_win5_044,67,character varying,29,YES,重勝式払戻情報44
+jvd_wf,haraimodoshi_win5_045,68,character varying,29,YES,重勝式払戻情報45
+jvd_wf,haraimodoshi_win5_046,69,character varying,29,YES,重勝式払戻情報46
+jvd_wf,haraimodoshi_win5_047,70,character varying,29,YES,重勝式払戻情報47
+jvd_wf,haraimodoshi_win5_048,71,character varying,29,YES,重勝式払戻情報48
+jvd_wf,haraimodoshi_win5_049,72,character varying,29,YES,重勝式払戻情報49
+jvd_wf,haraimodoshi_win5_050,73,character varying,29,YES,重勝式払戻情報50
+jvd_wf,haraimodoshi_win5_051,74,character varying,29,YES,重勝式払戻情報51
+jvd_wf,haraimodoshi_win5_052,75,character varying,29,YES,重勝式払戻情報52
+jvd_wf,haraimodoshi_win5_053,76,character varying,29,YES,重勝式払戻情報53
+jvd_wf,haraimodoshi_win5_054,77,character varying,29,YES,重勝式払戻情報54
+jvd_wf,haraimodoshi_win5_055,78,character varying,29,YES,重勝式払戻情報55
+jvd_wf,haraimodoshi_win5_056,79,character varying,29,YES,重勝式払戻情報56
+jvd_wf,haraimodoshi_win5_057,80,character varying,29,YES,重勝式払戻情報57
+jvd_wf,haraimodoshi_win5_058,81,character varying,29,YES,重勝式払戻情報58
+jvd_wf,haraimodoshi_win5_059,82,character varying,29,YES,重勝式払戻情報59
+jvd_wf,haraimodoshi_win5_060,83,character varying,29,YES,重勝式払戻情報60
+jvd_wf,haraimodoshi_win5_061,84,character varying,29,YES,重勝式払戻情報61
+jvd_wf,haraimodoshi_win5_062,85,character varying,29,YES,重勝式払戻情報62
+jvd_wf,haraimodoshi_win5_063,86,character varying,29,YES,重勝式払戻情報63
+jvd_wf,haraimodoshi_win5_064,87,character varying,29,YES,重勝式払戻情報64
+jvd_wf,haraimodoshi_win5_065,88,character varying,29,YES,重勝式払戻情報65
+jvd_wf,haraimodoshi_win5_066,89,character varying,29,YES,重勝式払戻情報66
+jvd_wf,haraimodoshi_win5_067,90,character varying,29,YES,重勝式払戻情報67
+jvd_wf,haraimodoshi_win5_068,91,character varying,29,YES,重勝式払戻情報68
+jvd_wf,haraimodoshi_win5_069,92,character varying,29,YES,重勝式払戻情報69
+jvd_wf,haraimodoshi_win5_070,93,character varying,29,YES,重勝式払戻情報70
+jvd_wf,haraimodoshi_win5_071,94,character varying,29,YES,重勝式払戻情報71
+jvd_wf,haraimodoshi_win5_072,95,character varying,29,YES,重勝式払戻情報72
+jvd_wf,haraimodoshi_win5_073,96,character varying,29,YES,重勝式払戻情報73
+jvd_wf,haraimodoshi_win5_074,97,character varying,29,YES,重勝式払戻情報74
+jvd_wf,haraimodoshi_win5_075,98,character varying,29,YES,重勝式払戻情報75
+jvd_wf,haraimodoshi_win5_076,99,character varying,29,YES,重勝式払戻情報76
+jvd_wf,haraimodoshi_win5_077,100,character varying,29,YES,重勝式払戻情報77
+jvd_wf,haraimodoshi_win5_078,101,character varying,29,YES,重勝式払戻情報78
+jvd_wf,haraimodoshi_win5_079,102,character varying,29,YES,重勝式払戻情報79
+jvd_wf,haraimodoshi_win5_080,103,character varying,29,YES,重勝式払戻情報80
+jvd_wf,haraimodoshi_win5_081,104,character varying,29,YES,重勝式払戻情報81
+jvd_wf,haraimodoshi_win5_082,105,character varying,29,YES,重勝式払戻情報82
+jvd_wf,haraimodoshi_win5_083,106,character varying,29,YES,重勝式払戻情報83
+jvd_wf,haraimodoshi_win5_084,107,character varying,29,YES,重勝式払戻情報84
+jvd_wf,haraimodoshi_win5_085,108,character varying,29,YES,重勝式払戻情報85
+jvd_wf,haraimodoshi_win5_086,109,character varying,29,YES,重勝式払戻情報86
+jvd_wf,haraimodoshi_win5_087,110,character varying,29,YES,重勝式払戻情報87
+jvd_wf,haraimodoshi_win5_088,111,character varying,29,YES,重勝式払戻情報88
+jvd_wf,haraimodoshi_win5_089,112,character varying,29,YES,重勝式払戻情報89
+jvd_wf,haraimodoshi_win5_090,113,character varying,29,YES,重勝式払戻情報90
+jvd_wf,haraimodoshi_win5_091,114,character varying,29,YES,重勝式払戻情報91
+jvd_wf,haraimodoshi_win5_092,115,character varying,29,YES,重勝式払戻情報92
+jvd_wf,haraimodoshi_win5_093,116,character varying,29,YES,重勝式払戻情報93
+jvd_wf,haraimodoshi_win5_094,117,character varying,29,YES,重勝式払戻情報94
+jvd_wf,haraimodoshi_win5_095,118,character varying,29,YES,重勝式払戻情報95
+jvd_wf,haraimodoshi_win5_096,119,character varying,29,YES,重勝式払戻情報96
+jvd_wf,haraimodoshi_win5_097,120,character varying,29,YES,重勝式払戻情報97
+jvd_wf,haraimodoshi_win5_098,121,character varying,29,YES,重勝式払戻情報98
+jvd_wf,haraimodoshi_win5_099,122,character varying,29,YES,重勝式払戻情報99
+jvd_wf,haraimodoshi_win5_100,123,character varying,29,YES,重勝式払戻情報100
+jvd_wf,haraimodoshi_win5_101,124,character varying,29,YES,重勝式払戻情報101
+jvd_wf,haraimodoshi_win5_102,125,character varying,29,YES,重勝式払戻情報102
+jvd_wf,haraimodoshi_win5_103,126,character varying,29,YES,重勝式払戻情報103
+jvd_wf,haraimodoshi_win5_104,127,character varying,29,YES,重勝式払戻情報104
+jvd_wf,haraimodoshi_win5_105,128,character varying,29,YES,重勝式払戻情報105
+jvd_wf,haraimodoshi_win5_106,129,character varying,29,YES,重勝式払戻情報106
+jvd_wf,haraimodoshi_win5_107,130,character varying,29,YES,重勝式払戻情報107
+jvd_wf,haraimodoshi_win5_108,131,character varying,29,YES,重勝式払戻情報108
+jvd_wf,haraimodoshi_win5_109,132,character varying,29,YES,重勝式払戻情報109
+jvd_wf,haraimodoshi_win5_110,133,character varying,29,YES,重勝式払戻情報110
+jvd_wf,haraimodoshi_win5_111,134,character varying,29,YES,重勝式払戻情報111
+jvd_wf,haraimodoshi_win5_112,135,character varying,29,YES,重勝式払戻情報112
+jvd_wf,haraimodoshi_win5_113,136,character varying,29,YES,重勝式払戻情報113
+jvd_wf,haraimodoshi_win5_114,137,character varying,29,YES,重勝式払戻情報114
+jvd_wf,haraimodoshi_win5_115,138,character varying,29,YES,重勝式払戻情報115
+jvd_wf,haraimodoshi_win5_116,139,character varying,29,YES,重勝式払戻情報116
+jvd_wf,haraimodoshi_win5_117,140,character varying,29,YES,重勝式払戻情報117
+jvd_wf,haraimodoshi_win5_118,141,character varying,29,YES,重勝式払戻情報118
+jvd_wf,haraimodoshi_win5_119,142,character varying,29,YES,重勝式払戻情報119
+jvd_wf,haraimodoshi_win5_120,143,character varying,29,YES,重勝式払戻情報120
+jvd_wf,haraimodoshi_win5_121,144,character varying,29,YES,重勝式払戻情報121
+jvd_wf,haraimodoshi_win5_122,145,character varying,29,YES,重勝式払戻情報122
+jvd_wf,haraimodoshi_win5_123,146,character varying,29,YES,重勝式払戻情報123
+jvd_wf,haraimodoshi_win5_124,147,character varying,29,YES,重勝式払戻情報124
+jvd_wf,haraimodoshi_win5_125,148,character varying,29,YES,重勝式払戻情報125
+jvd_wf,haraimodoshi_win5_126,149,character varying,29,YES,重勝式払戻情報126
+jvd_wf,haraimodoshi_win5_127,150,character varying,29,YES,重勝式払戻情報127
+jvd_wf,haraimodoshi_win5_128,151,character varying,29,YES,重勝式払戻情報128
+jvd_wf,haraimodoshi_win5_129,152,character varying,29,YES,重勝式払戻情報129
+jvd_wf,haraimodoshi_win5_130,153,character varying,29,YES,重勝式払戻情報130
+jvd_wf,haraimodoshi_win5_131,154,character varying,29,YES,重勝式払戻情報131
+jvd_wf,haraimodoshi_win5_132,155,character varying,29,YES,重勝式払戻情報132
+jvd_wf,haraimodoshi_win5_133,156,character varying,29,YES,重勝式払戻情報133
+jvd_wf,haraimodoshi_win5_134,157,character varying,29,YES,重勝式払戻情報134
+jvd_wf,haraimodoshi_win5_135,158,character varying,29,YES,重勝式払戻情報135
+jvd_wf,haraimodoshi_win5_136,159,character varying,29,YES,重勝式払戻情報136
+jvd_wf,haraimodoshi_win5_137,160,character varying,29,YES,重勝式払戻情報137
+jvd_wf,haraimodoshi_win5_138,161,character varying,29,YES,重勝式払戻情報138
+jvd_wf,haraimodoshi_win5_139,162,character varying,29,YES,重勝式払戻情報139
+jvd_wf,haraimodoshi_win5_140,163,character varying,29,YES,重勝式払戻情報140
+jvd_wf,haraimodoshi_win5_141,164,character varying,29,YES,重勝式払戻情報141
+jvd_wf,haraimodoshi_win5_142,165,character varying,29,YES,重勝式払戻情報142
+jvd_wf,haraimodoshi_win5_143,166,character varying,29,YES,重勝式払戻情報143
+jvd_wf,haraimodoshi_win5_144,167,character varying,29,YES,重勝式払戻情報144
+jvd_wf,haraimodoshi_win5_145,168,character varying,29,YES,重勝式払戻情報145
+jvd_wf,haraimodoshi_win5_146,169,character varying,29,YES,重勝式払戻情報146
+jvd_wf,haraimodoshi_win5_147,170,character varying,29,YES,重勝式払戻情報147
+jvd_wf,haraimodoshi_win5_148,171,character varying,29,YES,重勝式払戻情報148
+jvd_wf,haraimodoshi_win5_149,172,character varying,29,YES,重勝式払戻情報149
+jvd_wf,haraimodoshi_win5_150,173,character varying,29,YES,重勝式払戻情報150
+jvd_wf,haraimodoshi_win5_151,174,character varying,29,YES,重勝式払戻情報151
+jvd_wf,haraimodoshi_win5_152,175,character varying,29,YES,重勝式払戻情報152
+jvd_wf,haraimodoshi_win5_153,176,character varying,29,YES,重勝式払戻情報153
+jvd_wf,haraimodoshi_win5_154,177,character varying,29,YES,重勝式払戻情報154
+jvd_wf,haraimodoshi_win5_155,178,character varying,29,YES,重勝式払戻情報155
+jvd_wf,haraimodoshi_win5_156,179,character varying,29,YES,重勝式払戻情報156
+jvd_wf,haraimodoshi_win5_157,180,character varying,29,YES,重勝式払戻情報157
+jvd_wf,haraimodoshi_win5_158,181,character varying,29,YES,重勝式払戻情報158
+jvd_wf,haraimodoshi_win5_159,182,character varying,29,YES,重勝式払戻情報159
+jvd_wf,haraimodoshi_win5_160,183,character varying,29,YES,重勝式払戻情報160
+jvd_wf,haraimodoshi_win5_161,184,character varying,29,YES,重勝式払戻情報161
+jvd_wf,haraimodoshi_win5_162,185,character varying,29,YES,重勝式払戻情報162
+jvd_wf,haraimodoshi_win5_163,186,character varying,29,YES,重勝式払戻情報163
+jvd_wf,haraimodoshi_win5_164,187,character varying,29,YES,重勝式払戻情報164
+jvd_wf,haraimodoshi_win5_165,188,character varying,29,YES,重勝式払戻情報165
+jvd_wf,haraimodoshi_win5_166,189,character varying,29,YES,重勝式払戻情報166
+jvd_wf,haraimodoshi_win5_167,190,character varying,29,YES,重勝式払戻情報167
+jvd_wf,haraimodoshi_win5_168,191,character varying,29,YES,重勝式払戻情報168
+jvd_wf,haraimodoshi_win5_169,192,character varying,29,YES,重勝式払戻情報169
+jvd_wf,haraimodoshi_win5_170,193,character varying,29,YES,重勝式払戻情報170
+jvd_wf,haraimodoshi_win5_171,194,character varying,29,YES,重勝式払戻情報171
+jvd_wf,haraimodoshi_win5_172,195,character varying,29,YES,重勝式払戻情報172
+jvd_wf,haraimodoshi_win5_173,196,character varying,29,YES,重勝式払戻情報173
+jvd_wf,haraimodoshi_win5_174,197,character varying,29,YES,重勝式払戻情報174
+jvd_wf,haraimodoshi_win5_175,198,character varying,29,YES,重勝式払戻情報175
+jvd_wf,haraimodoshi_win5_176,199,character varying,29,YES,重勝式払戻情報176
+jvd_wf,haraimodoshi_win5_177,200,character varying,29,YES,重勝式払戻情報177
+jvd_wf,haraimodoshi_win5_178,201,character varying,29,YES,重勝式払戻情報178
+jvd_wf,haraimodoshi_win5_179,202,character varying,29,YES,重勝式払戻情報179
+jvd_wf,haraimodoshi_win5_180,203,character varying,29,YES,重勝式払戻情報180
+jvd_wf,haraimodoshi_win5_181,204,character varying,29,YES,重勝式払戻情報181
+jvd_wf,haraimodoshi_win5_182,205,character varying,29,YES,重勝式払戻情報182
+jvd_wf,haraimodoshi_win5_183,206,character varying,29,YES,重勝式払戻情報183
+jvd_wf,haraimodoshi_win5_184,207,character varying,29,YES,重勝式払戻情報184
+jvd_wf,haraimodoshi_win5_185,208,character varying,29,YES,重勝式払戻情報185
+jvd_wf,haraimodoshi_win5_186,209,character varying,29,YES,重勝式払戻情報186
+jvd_wf,haraimodoshi_win5_187,210,character varying,29,YES,重勝式払戻情報187
+jvd_wf,haraimodoshi_win5_188,211,character varying,29,YES,重勝式払戻情報188
+jvd_wf,haraimodoshi_win5_189,212,character varying,29,YES,重勝式払戻情報189
+jvd_wf,haraimodoshi_win5_190,213,character varying,29,YES,重勝式払戻情報190
+jvd_wf,haraimodoshi_win5_191,214,character varying,29,YES,重勝式払戻情報191
+jvd_wf,haraimodoshi_win5_192,215,character varying,29,YES,重勝式払戻情報192
+jvd_wf,haraimodoshi_win5_193,216,character varying,29,YES,重勝式払戻情報193
+jvd_wf,haraimodoshi_win5_194,217,character varying,29,YES,重勝式払戻情報194
+jvd_wf,haraimodoshi_win5_195,218,character varying,29,YES,重勝式払戻情報195
+jvd_wf,haraimodoshi_win5_196,219,character varying,29,YES,重勝式払戻情報196
+jvd_wf,haraimodoshi_win5_197,220,character varying,29,YES,重勝式払戻情報197
+jvd_wf,haraimodoshi_win5_198,221,character varying,29,YES,重勝式払戻情報198
+jvd_wf,haraimodoshi_win5_199,222,character varying,29,YES,重勝式払戻情報199
+jvd_wf,haraimodoshi_win5_200,223,character varying,29,YES,重勝式払戻情報200
+jvd_wf,haraimodoshi_win5_201,224,character varying,29,YES,重勝式払戻情報201
+jvd_wf,haraimodoshi_win5_202,225,character varying,29,YES,重勝式払戻情報202
+jvd_wf,haraimodoshi_win5_203,226,character varying,29,YES,重勝式払戻情報203
+jvd_wf,haraimodoshi_win5_204,227,character varying,29,YES,重勝式払戻情報204
+jvd_wf,haraimodoshi_win5_205,228,character varying,29,YES,重勝式払戻情報205
+jvd_wf,haraimodoshi_win5_206,229,character varying,29,YES,重勝式払戻情報206
+jvd_wf,haraimodoshi_win5_207,230,character varying,29,YES,重勝式払戻情報207
+jvd_wf,haraimodoshi_win5_208,231,character varying,29,YES,重勝式払戻情報208
+jvd_wf,haraimodoshi_win5_209,232,character varying,29,YES,重勝式払戻情報209
+jvd_wf,haraimodoshi_win5_210,233,character varying,29,YES,重勝式払戻情報210
+jvd_wf,haraimodoshi_win5_211,234,character varying,29,YES,重勝式払戻情報211
+jvd_wf,haraimodoshi_win5_212,235,character varying,29,YES,重勝式払戻情報212
+jvd_wf,haraimodoshi_win5_213,236,character varying,29,YES,重勝式払戻情報213
+jvd_wf,haraimodoshi_win5_214,237,character varying,29,YES,重勝式払戻情報214
+jvd_wf,haraimodoshi_win5_215,238,character varying,29,YES,重勝式払戻情報215
+jvd_wf,haraimodoshi_win5_216,239,character varying,29,YES,重勝式払戻情報216
+jvd_wf,haraimodoshi_win5_217,240,character varying,29,YES,重勝式払戻情報217
+jvd_wf,haraimodoshi_win5_218,241,character varying,29,YES,重勝式払戻情報218
+jvd_wf,haraimodoshi_win5_219,242,character varying,29,YES,重勝式払戻情報219
+jvd_wf,haraimodoshi_win5_220,243,character varying,29,YES,重勝式払戻情報220
+jvd_wf,haraimodoshi_win5_221,244,character varying,29,YES,重勝式払戻情報221
+jvd_wf,haraimodoshi_win5_222,245,character varying,29,YES,重勝式払戻情報222
+jvd_wf,haraimodoshi_win5_223,246,character varying,29,YES,重勝式払戻情報223
+jvd_wf,haraimodoshi_win5_224,247,character varying,29,YES,重勝式払戻情報224
+jvd_wf,haraimodoshi_win5_225,248,character varying,29,YES,重勝式払戻情報225
+jvd_wf,haraimodoshi_win5_226,249,character varying,29,YES,重勝式払戻情報226
+jvd_wf,haraimodoshi_win5_227,250,character varying,29,YES,重勝式払戻情報227
+jvd_wf,haraimodoshi_win5_228,251,character varying,29,YES,重勝式払戻情報228
+jvd_wf,haraimodoshi_win5_229,252,character varying,29,YES,重勝式払戻情報229
+jvd_wf,haraimodoshi_win5_230,253,character varying,29,YES,重勝式払戻情報230
+jvd_wf,haraimodoshi_win5_231,254,character varying,29,YES,重勝式払戻情報231
+jvd_wf,haraimodoshi_win5_232,255,character varying,29,YES,重勝式払戻情報232
+jvd_wf,haraimodoshi_win5_233,256,character varying,29,YES,重勝式払戻情報233
+jvd_wf,haraimodoshi_win5_234,257,character varying,29,YES,重勝式払戻情報234
+jvd_wf,haraimodoshi_win5_235,258,character varying,29,YES,重勝式払戻情報235
+jvd_wf,haraimodoshi_win5_236,259,character varying,29,YES,重勝式払戻情報236
+jvd_wf,haraimodoshi_win5_237,260,character varying,29,YES,重勝式払戻情報237
+jvd_wf,haraimodoshi_win5_238,261,character varying,29,YES,重勝式払戻情報238
+jvd_wf,haraimodoshi_win5_239,262,character varying,29,YES,重勝式払戻情報239
+jvd_wf,haraimodoshi_win5_240,263,character varying,29,YES,重勝式払戻情報240
+jvd_wf,haraimodoshi_win5_241,264,character varying,29,YES,重勝式払戻情報241
+jvd_wf,haraimodoshi_win5_242,265,character varying,29,YES,重勝式払戻情報242
+jvd_wf,haraimodoshi_win5_243,266,character varying,29,YES,重勝式払戻情報243
+jvd_wh,record_id,1,character varying,2,YES,"レコード種別ID: ""WH"" をセットレコードフォーマットを特定する"
+jvd_wh,data_kubun,2,character varying,1,YES,データ区分: 1:初期値
+jvd_wh,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_wh,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_wh,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_wh,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_wh,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_wh,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_wh,race_bango,9,character varying,2,NO,レース番号: 該当レース番号
+jvd_wh,happyo_tsukihi_jifun,10,character varying,8,YES,発表月日時分: 月日時分各2桁
+jvd_wh,bataiju_joho_01,11,character varying,45,YES,<馬体重情報>: nan
+jvd_wh,bataiju_joho_02,12,character varying,45,YES,馬番: 01〜18を設定
+jvd_wh,bataiju_joho_03,13,character varying,45,YES,馬名: 全角18文字　ただし当面は全角9文字のみ設定(9文字を超える馬名は9文字までとする)
+jvd_wh,bataiju_joho_04,14,character varying,45,YES,馬体重: 単位:kg　002Kg〜998Kgまでが有効値 999:今走計量不能　000:出走取消
+jvd_wh,bataiju_joho_05,15,character varying,45,YES,増減符号: +:増加 -:減少 スペース:その他
+jvd_wh,bataiju_joho_06,16,character varying,45,YES,増減差: 単位:kg　001Kg〜998Kgまでが有効値 999:計量不能　000:前差なし　スペース:初出走、出走取消
+jvd_wh,bataiju_joho_07,17,character varying,45,YES,レコード区切: CR/LF
+jvd_wh,bataiju_joho_08,18,character varying,45,YES,項目名: 説明
+jvd_wh,bataiju_joho_09,19,character varying,45,YES,馬体重情報9
+jvd_wh,bataiju_joho_10,20,character varying,45,YES,馬体重情報10
+jvd_wh,bataiju_joho_11,21,character varying,45,YES,馬体重情報11
+jvd_wh,bataiju_joho_12,22,character varying,45,YES,馬体重情報12
+jvd_wh,bataiju_joho_13,23,character varying,45,YES,馬体重情報13
+jvd_wh,bataiju_joho_14,24,character varying,45,YES,馬体重情報14
+jvd_wh,bataiju_joho_15,25,character varying,45,YES,馬体重情報15
+jvd_wh,bataiju_joho_16,26,character varying,45,YES,馬体重情報16
+jvd_wh,bataiju_joho_17,27,character varying,45,YES,馬体重情報17
+jvd_wh,bataiju_joho_18,28,character varying,45,YES,馬体重情報18
+jvd_ys,record_id,1,character varying,2,YES,"レコード種別ID: ""YS""をセットレコードフォーマットを特定する"
+jvd_ys,data_kubun,2,character varying,1,YES,データ区分: 1:開催予定(年末時点)　2:開催予定(開催直前時点)　3:開催終了(成績確定時点) 9:開催中止　0:該当レコード削除(提供ミスなどの理由による)
+jvd_ys,data_sakusei_nengappi,3,character varying,8,YES,データ作成年月日: 西暦4桁＋月日各2桁 yyyymmdd 形式
+jvd_ys,kaisai_nen,4,character varying,4,NO,開催年: 該当レース施行年 西暦4桁 yyyy形式
+jvd_ys,kaisai_tsukihi,5,character varying,4,NO,開催月日: 該当レース施行月日 各2桁 mmdd形式
+jvd_ys,keibajo_code,6,character varying,2,NO,競馬場コード: 該当レース施行競馬場 <コード表 2001.競馬場コード>参照
+jvd_ys,kaisai_kai,7,character varying,2,YES,開催回[第N回]: 該当レース施行回 その競馬場でその年の何回目の開催かを示す
+jvd_ys,kaisai_nichime,8,character varying,2,YES,開催日目[N日目]: 該当レース施行日目 そのレース施行回で何日目の開催かを示す
+jvd_ys,yobi_code,9,character varying,1,YES,曜日コード: 該当レース施行曜日 <コード表 2002.曜日コード>参照
+jvd_ys,jusho_joho_1,10,character varying,118,YES,<重賞案内>: nan
+jvd_ys,jusho_joho_2,11,character varying,118,YES,特別競走番号: 重賞レースのみ設定 原則的には過去の同一レースと一致する番号(多数例外有り)
+jvd_ys,jusho_joho_3,12,character varying,118,YES,競走名本題: 全角30文字　レース名の本題
