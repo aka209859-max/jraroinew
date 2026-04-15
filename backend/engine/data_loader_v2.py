@@ -5,6 +5,9 @@ PC-KEIBAのパースずれ問題を回避した jrd_kyi_fixed / jrd_cyb_fixed /
 jrd_bac_fixed / jrd_joa_fixed テーブルを使い、8byte JRDBレースキー
 ベースの確定的JOINを実行する。
 
+非fixedテーブル (jrd_sed / jrd_tyb / jrd_kab / jrd_skb / jrd_kka / jrd_ukc) は
+YYMMDD形式の race_shikonen をJOINキーとして使用する。
+
 複勝オッズ: jvd_hr（払戻テーブル）から馬番ベースで逆算取得。
   jvd_se には fukusho_odds カラムが存在しないため、
   jvd_hr.haraimodoshi_fukusho_{1-5}{a,b} を UNPIVOT して
@@ -82,6 +85,17 @@ JVAN_TO_JRDB_RACE_KEY8 = """
     || LPAD(CAST(CAST(NULLIF(TRIM(se.race_bango), '') AS INTEGER) AS TEXT), 2, '0')
 """
 
+# =============================================================================
+# JRA-VAN → JRDB race_shikonen (YYMMDD, 6文字) 合成式
+# 非fixedテーブル (jrd_sed / jrd_tyb / jrd_skb / jrd_kka / jrd_kab) のJOINに使用
+# =============================================================================
+JVAN_TO_JRDB_RACE_SHIKONEN = "SUBSTRING(se.kaisai_nen, 3, 2) || se.kaisai_tsukihi"
+
+# race_bango を 2桁0パディングに変換（jrd_sed等のJOINキー用）
+JVAN_RACE_BANGO_PADDED = (
+    "LPAD(CAST(CAST(NULLIF(TRIM(se.race_bango), '') AS INTEGER) AS TEXT), 2, '0')"
+)
+
 
 def _check_fixed_tables_exist(conn) -> bool:
     """jrd_*_fixed テーブルが存在するか確認する。"""
@@ -104,32 +118,20 @@ def load_base_race_data_v2(
 ) -> pd.DataFrame:
     """
     jrd_*_fixed テーブルを使用してベースデータを取得する（v2）。
-    
-    JOINキー: JRA-VAN側から8byte JRDBレースキーを合成し、
-    jrd_*_fixed.jrdb_race_key8 と直接マッチング。
-    
+
+    JOINキー:
+      - jrd_kyi_fixed / jrd_cyb_fixed / jrd_bac_fixed / jrd_joa_fixed:
+            JRA-VAN側から8byte JRDBレースキーを合成し、jrdb_race_key8 と直接マッチング
+      - jrd_sed / jrd_tyb / jrd_skb / jrd_kka:
+            YYMMDD形式の race_shikonen + keibajo_code + race_bango + umaban でマッチング
+      - jrd_kab:
+            YYMMDD形式の race_shikonen + keibajo_code でマッチング（レースデー単位）
+      - jrd_ukc:
+            ketto_toroku_bango（馬個体番号）でマッチング
+
     複勝オッズ: jvd_hr（払戻テーブル）から UNPIVOT して取得。
-    jvd_se には fukusho_odds カラムが存在しないため、
-    jvd_hr.haraimodoshi_fukusho_{1-5}b / 100.0 でオッズに変換し、
-    馬番ベースで結合する。
-    
-    ■ JOIN方式（v2 — 8byte race_key ベース）:
-      JRA-VAN: keibajo_code(2) + year_last2(2) + kai(1) + hex(nichime)(1) + race(2)
-      JRDB:    jrdb_race_key8 カラム（パーサーが正確に生成）
-    
-      馬番: TRIM比較（KYI/CYB/JOA） or 不要（BAC）
-    
+
     ■ 期待マッチ率: 95-100%
-      旧方式（42%）→ PC-KEIBAの壊れたカラムをバイパスし、
-      正しくパースされたデータで直接JOIN。
-    
-    Args:
-        date_from: 開始日（YYYYMMDD形式）
-        date_to: 終了日（YYYYMMDD形式）
-        config: DB接続設定
-    
-    Returns:
-        結合済みDataFrame（fukusho_odds カラム含む）
     """
     # 複勝オッズ UNPIVOT CTE
     fukusho_cte = _build_fukusho_unpivot_cte()
@@ -140,36 +142,167 @@ def load_base_race_data_v2(
     )
     SELECT
         se.*,
+        -- RA（天候・馬場）
         ra.babajotai_code_shiba,
         ra.babajotai_code_dirt,
         ra.tenko_code,
         ra.kyori AS ra_kyori,
         ra.track_code,
-        -- KYI (正しくパースされたデータ)
+        -- =====================================================================
+        -- KYI_FIXED（前日指数・予測データ）
+        -- =====================================================================
         kyi.idm,
         kyi.sogo_shisu,
+        kyi.kishu_shisu,
         kyi.agari_shisu,
         kyi.pace_shisu,
-        kyi.kyori_tekisei AS kyori_tekisei_code,
-        kyi.shiba_tekisei_code AS course_tekisei,
-        kyi.omo_tekisei_code AS baba_tekisei,
+        kyi.ten_shisu,
+        kyi.ichi_shisu,
+        kyi.kyakushitsu,
+        kyi.kyori_tekisei,
+        kyi.kyori_tekisei_2,
+        kyi.shiba_tekisei_code,
+        kyi.da_tekisei_code,
+        kyi.omo_tekisei_code,
         kyi.chokyo_yajirushi_code,
         kyi.soho,
-        kyi.kishu_shisu,
         kyi.chokyo_shisu,
         kyi.kyusha_shisu,
-        -- CYB (正しくパースされたデータ)
+        kyi.blinker,
+        kyi.kyusha_rank,
+        -- =====================================================================
+        -- CYB_FIXED（調教データ）
+        -- =====================================================================
         cyb.chokyo_hyoka,
-        -- JOA (正しくパースされたデータ)
+        cyb.chokyo_type,
+        cyb.oikiri_shisu,
+        cyb.shiage_shisu,
+        cyb.chokyo_ryo_hyoka,
+        cyb.shiage_shisu_henka,
+        -- =====================================================================
+        -- JOA_FIXED（LS・CID指数）
+        -- =====================================================================
         joa.ls_shisu,
-        -- BAC (正しくパースされたデータ)
+        joa.ls_hyoka,
+        joa.odds_shisu AS joa_odds_shisu,
+        -- =====================================================================
+        -- BAC_FIXED（レース基本情報）
+        -- =====================================================================
         bac.juryo_shubetsu_code,
         bac.kyori AS bac_kyori,
-        -- =================================================================
+        bac.shiba_da_shogai_code,
+        bac.migi_hidari,
+        bac.uchi_soto,
+        bac.shubetsu,
+        bac.jouken,
+        bac.grade,
+        bac.tosu,
+        bac.course,
+        bac.kaisai_kubun AS bac_kaisai_kubun,
+        -- =====================================================================
+        -- JRD_SED（確定成績データ）
+        -- =====================================================================
+        sed.idm         AS sed_idm,
+        sed.soten,
+        sed.babasa,
+        sed.pace,
+        sed.deokure,
+        sed.ichidori,
+        sed.furi,
+        sed.ten_shisu   AS sed_ten_shisu,
+        sed.agari_shisu AS sed_agari_shisu,
+        sed.pace_shisu  AS sed_pace_shisu,
+        sed.race_p_shisu,
+        sed.race_pace,
+        sed.uma_pace,
+        sed.kyakushitsu_code,
+        sed.course_dori_code,
+        sed.joshodo_code,
+        sed.class_code,
+        sed.batai_code  AS sed_batai_code,
+        sed.kehai_code  AS sed_kehai_code,
+        sed.kohan_3f    AS sed_kohan_3f,
+        sed.zenhan_3f_taimu,
+        sed.haraimodoshi_tansho,
+        sed.haraimodoshi_fukusho,
+        sed.bataiju_zogen AS sed_bataiju_zogen,
+        sed.odds_fukusho  AS sed_odds_fukusho,
+        -- =====================================================================
+        -- JRD_TYB（直前情報）
+        -- =====================================================================
+        tyb.idm              AS tyb_idm,
+        tyb.kishu_shisu      AS tyb_kishu_shisu,
+        tyb.joho_shisu,
+        tyb.odds_shisu       AS tyb_odds_shisu,
+        tyb.paddock_shisu,
+        tyb.sogo_shisu       AS tyb_sogo_shisu,
+        tyb.batai_code       AS tyb_batai_code,
+        tyb.kehai_code       AS tyb_kehai_code,
+        tyb.odds_fukusho     AS tyb_odds_fukusho,
+        tyb.odds_shirushi,
+        tyb.paddock_shirushi,
+        tyb.chokuzen_sogo_shirushi,
+        -- =====================================================================
+        -- JRD_KAB（競馬場・馬場状態 レースデー単位）
+        -- =====================================================================
+        kab.babasa_shiba,
+        kab.babasa_dirt,
+        kab.renzoku_nannichime,
+        kab.shiba_shurui,
+        kab.chukan_kosuiryo,
+        -- =====================================================================
+        -- JRD_SKB（馬体・馬具）
+        -- =====================================================================
+        skb.tokki_code,
+        skb.bagu_code,
+        skb.sogo            AS skb_sogo,
+        skb.hidarimae,
+        skb.migimae,
+        skb.hidariushiro,
+        skb.migiushiro,
+        skb.hami,
+        skb.bandage,
+        skb.teitetsu,
+        skb.hizume_jotai,
+        skb.soe,
+        skb.kotsuryu,
+        -- =====================================================================
+        -- JRD_KKA（過去成績参照）
+        -- =====================================================================
+        kka.jra,
+        kka.koryu,
+        kka.shiba_dirt,
+        kka.shiba_dirt_kyori,
+        kka.torakku_kyori,
+        kka.rotation,
+        kka.mawari,
+        kka.kishu,
+        kka.ryo,
+        kka.yayaomo,
+        kka.omo,
+        kka.pace_s,
+        kka.pace_m,
+        kka.pace_h,
+        kka.kisetsu,
+        kka.waku,
+        kka.kishu_kyori,
+        kka.kishu_track,
+        kka.kishu_chokyoshi,
+        kka.kishu_banushi,
+        kka.kishu_blinker,
+        kka.chokyoshi_banushi,
+        -- =====================================================================
+        -- JRD_UKC（馬個体・血統）
+        -- =====================================================================
+        ukc.bamei_chichi,
+        ukc.bamei_haha,
+        ukc.bamei_hahachichi,
+        ukc.keito_code_chichi,
+        ukc.keito_code_hahachichi,
+        ukc.moshoku_code    AS ukc_moshoku_code,
+        -- =====================================================================
         -- 複勝オッズ: jvd_hr（払戻テーブル）からUNPIVOT結合
-        -- haraimodoshi_fukusho_Xb / 100.0 でオッズ値に変換
-        -- 複勝的中馬（3着以内）のみ値あり、それ以外はNULL
-        -- =================================================================
+        -- =====================================================================
         fp.fukusho_odds,
         -- 日付
         (se.kaisai_nen || se.kaisai_tsukihi) AS race_date,
@@ -186,7 +319,6 @@ def load_base_race_data_v2(
         AND se.race_bango = ra.race_bango
     -- =================================================================
     -- 複勝オッズJOIN: jvd_hr UNPIVOT → レース×馬番で結合
-    -- 複勝的中馬のみ行が存在する → LEFT JOINで非的中馬はNULL
     -- =================================================================
     LEFT JOIN fukusho_pay AS fp
         ON se.keibajo_code = fp.keibajo_code
@@ -198,8 +330,6 @@ def load_base_race_data_v2(
         AND TRIM(se.umaban) = fp.umaban
     -- =====================================================================
     -- JRDB JOIN v2: 8byte race_key ベース（PC-KEIBAバイパス）
-    -- JRA-VAN側から合成した8byteキーと、パーサーが生成した正確なキーで結合
-    -- 期待マッチ率: 95-100%
     -- =====================================================================
     LEFT JOIN jrd_kyi_fixed AS kyi
         ON ({JVAN_TO_JRDB_RACE_KEY8}) = kyi.jrdb_race_key8
@@ -212,6 +342,36 @@ def load_base_race_data_v2(
         AND TRIM(se.umaban) = TRIM(joa.umaban)
     LEFT JOIN jrd_bac_fixed AS bac
         ON ({JVAN_TO_JRDB_RACE_KEY8}) = bac.jrdb_race_key8
+    -- =====================================================================
+    -- JRDB JOIN: race_shikonen (YYMMDD) ベース（非fixedテーブル）
+    -- =====================================================================
+    LEFT JOIN jrd_sed AS sed
+        ON ({JVAN_TO_JRDB_RACE_SHIKONEN}) = TRIM(sed.race_shikonen)
+        AND TRIM(se.keibajo_code) = TRIM(sed.keibajo_code)
+        AND ({JVAN_RACE_BANGO_PADDED}) = TRIM(sed.race_bango)
+        AND TRIM(se.umaban) = TRIM(sed.umaban)
+    LEFT JOIN jrd_tyb AS tyb
+        ON ({JVAN_TO_JRDB_RACE_SHIKONEN}) = TRIM(tyb.race_shikonen)
+        AND TRIM(se.keibajo_code) = TRIM(tyb.keibajo_code)
+        AND ({JVAN_RACE_BANGO_PADDED}) = TRIM(tyb.race_bango)
+        AND TRIM(se.umaban) = TRIM(tyb.umaban)
+    LEFT JOIN jrd_skb AS skb
+        ON ({JVAN_TO_JRDB_RACE_SHIKONEN}) = TRIM(skb.race_shikonen)
+        AND TRIM(se.keibajo_code) = TRIM(skb.keibajo_code)
+        AND ({JVAN_RACE_BANGO_PADDED}) = TRIM(skb.race_bango)
+        AND TRIM(se.umaban) = TRIM(skb.umaban)
+    LEFT JOIN jrd_kka AS kka
+        ON ({JVAN_TO_JRDB_RACE_SHIKONEN}) = TRIM(kka.race_shikonen)
+        AND TRIM(se.keibajo_code) = TRIM(kka.keibajo_code)
+        AND ({JVAN_RACE_BANGO_PADDED}) = TRIM(kka.race_bango)
+        AND TRIM(se.umaban) = TRIM(kka.umaban)
+    -- kab はレースデー単位（umaban/race_bango なし）
+    LEFT JOIN jrd_kab AS kab
+        ON ({JVAN_TO_JRDB_RACE_SHIKONEN}) = TRIM(kab.race_shikonen)
+        AND TRIM(se.keibajo_code) = TRIM(kab.keibajo_code)
+    -- ukc は馬個体単位（ketto_toroku_bango でJOIN）
+    LEFT JOIN jrd_ukc AS ukc
+        ON TRIM(se.ketto_toroku_bango) = TRIM(ukc.ketto_toroku_bango)
     WHERE
         (se.kaisai_nen || se.kaisai_tsukihi) >= '{date_from}'
         AND (se.kaisai_nen || se.kaisai_tsukihi) <= '{date_to}'
@@ -228,7 +388,7 @@ def load_base_race_data_v2(
                 "先にJRDBファイルをパース・インポートしてください:\n"
                 "  py -3.12 -m roi_pipeline.ingest.jrdb_importer --import <JRDB_DIR>"
             )
-        
+
         df = pd.read_sql_query(query, conn)
     finally:
         conn.close()
@@ -243,34 +403,35 @@ def diagnose_v2_join(
 ) -> str:
     """
     v2 JOINの品質を診断する。
-    
+
     Returns:
         診断レポート文字列
     """
     conn = get_connection(config)
     lines = []
-    
+
     try:
         # テーブル存在確認
         if not _check_fixed_tables_exist(conn):
             return "ERROR: jrd_*_fixed テーブルが存在しません。"
-        
+
         lines.append("=" * 60)
         lines.append("  v2 JOIN診断レポート")
         lines.append(f"  期間: {date_from} 〜 {date_to}")
         lines.append("=" * 60)
-        
-        # 各テーブルのJOINマッチ率
-        tables = {
+
+        # fixedテーブル（8byte race_key）
+        fixed_tables = {
             "jrd_kyi_fixed": ("idm", True),
             "jrd_cyb_fixed": ("chokyo_hyoka", True),
             "jrd_joa_fixed": ("ls_shisu", True),
             "jrd_bac_fixed": ("juryo_shubetsu_code", False),
         }
-        
-        for table, (check_col, has_umaban) in tables.items():
+
+        lines.append("\n  --- fixed テーブル (8byte race_key JOIN) ---")
+        for table, (check_col, has_umaban) in fixed_tables.items():
             uma_join = f"AND TRIM(se.umaban) = TRIM(t.umaban)" if has_umaban else ""
-            
+
             query = f"""
                 SELECT
                     COUNT(*) AS total,
@@ -284,22 +445,85 @@ def diagnose_v2_join(
                     AND (se.kaisai_nen || se.kaisai_tsukihi) <= '{date_to}'
                     AND TRIM(se.keibajo_code) IN {JRA_KEIBAJO_CODES}
             """
-            
+
             try:
                 df = pd.read_sql_query(query, conn)
                 total = int(df["total"].iloc[0])
                 matched = int(df["matched"].iloc[0])
                 pct = float(df["pct"].iloc[0])
-                
+
                 status = "✅" if pct >= 90 else "⚠️" if pct >= 50 else "❌"
                 lines.append(f"  {status} {table}: {matched:,}/{total:,} ({pct}%)")
-                
+
             except Exception as e:
                 lines.append(f"  ❌ {table}: ERROR - {e}")
 
+        # race_shikonenベーステーブル
+        shikonen_tables = {
+            "jrd_sed": ("idm", True),
+            "jrd_tyb": ("idm", True),
+            "jrd_skb": ("tokki_code", True),
+            "jrd_kka": ("jra", True),
+        }
+
+        lines.append("\n  --- race_shikonen テーブル (YYMMDD JOIN) ---")
+        for table, (check_col, has_uma) in shikonen_tables.items():
+            uma_cond = f"AND ({JVAN_RACE_BANGO_PADDED}) = TRIM(t.race_bango) AND TRIM(se.umaban) = TRIM(t.umaban)" if has_uma else ""
+
+            query = f"""
+                SELECT
+                    COUNT(*) AS total,
+                    COUNT(t.{check_col}) AS matched,
+                    ROUND(COUNT(t.{check_col})::NUMERIC / NULLIF(COUNT(*), 0) * 100, 2) AS pct
+                FROM jvd_se se
+                LEFT JOIN {table} t
+                    ON ({JVAN_TO_JRDB_RACE_SHIKONEN}) = TRIM(t.race_shikonen)
+                    AND TRIM(se.keibajo_code) = TRIM(t.keibajo_code)
+                    {uma_cond}
+                WHERE (se.kaisai_nen || se.kaisai_tsukihi) >= '{date_from}'
+                    AND (se.kaisai_nen || se.kaisai_tsukihi) <= '{date_to}'
+                    AND TRIM(se.keibajo_code) IN {JRA_KEIBAJO_CODES}
+            """
+
+            try:
+                df = pd.read_sql_query(query, conn)
+                total = int(df["total"].iloc[0])
+                matched = int(df["matched"].iloc[0])
+                pct = float(df["pct"].iloc[0])
+
+                status = "✅" if pct >= 90 else "⚠️" if pct >= 50 else "❌"
+                lines.append(f"  {status} {table}: {matched:,}/{total:,} ({pct}%)")
+
+            except Exception as e:
+                lines.append(f"  ❌ {table}: ERROR - {e}")
+
+        # kab (race-day level)
+        lines.append("\n  --- kab (レースデー単位) ---")
+        try:
+            q = f"""
+                SELECT
+                    COUNT(*) AS total,
+                    COUNT(kab.tenko_code) AS matched,
+                    ROUND(COUNT(kab.tenko_code)::NUMERIC / NULLIF(COUNT(*), 0) * 100, 2) AS pct
+                FROM jvd_se se
+                LEFT JOIN jrd_kab kab
+                    ON ({JVAN_TO_JRDB_RACE_SHIKONEN}) = TRIM(kab.race_shikonen)
+                    AND TRIM(se.keibajo_code) = TRIM(kab.keibajo_code)
+                WHERE (se.kaisai_nen || se.kaisai_tsukihi) >= '{date_from}'
+                    AND (se.kaisai_nen || se.kaisai_tsukihi) <= '{date_to}'
+                    AND TRIM(se.keibajo_code) IN {JRA_KEIBAJO_CODES}
+            """
+            df = pd.read_sql_query(q, conn)
+            total = int(df["total"].iloc[0])
+            matched = int(df["matched"].iloc[0])
+            pct = float(df["pct"].iloc[0])
+            status = "✅" if pct >= 90 else "⚠️" if pct >= 50 else "❌"
+            lines.append(f"  {status} jrd_kab: {matched:,}/{total:,} ({pct}%)")
+        except Exception as e:
+            lines.append(f"  ❌ jrd_kab: ERROR - {e}")
+
         # --- 複勝オッズJOIN診断 ---
-        lines.append("")
-        lines.append("  --- 複勝オッズ (jvd_hr UNPIVOT) ---")
+        lines.append("\n  --- 複勝オッズ (jvd_hr UNPIVOT) ---")
         try:
             fukusho_cte = _build_fukusho_unpivot_cte()
             fq = f"""
@@ -332,11 +556,11 @@ def diagnose_v2_join(
             lines.append(f"      → 期待値: 約20-25% (3着以内の馬のみ値あり)")
         except Exception as e:
             lines.append(f"  ❌ fukusho_odds: ERROR - {e}")
-        
+
         # fixedテーブル行数
-        lines.append("")
-        lines.append("  --- fixed テーブル行数 ---")
-        for table in tables:
+        lines.append("\n  --- テーブル行数 ---")
+        all_tables = list(fixed_tables.keys()) + list(shikonen_tables.keys()) + ["jrd_kab", "jrd_ukc", "jvd_hr"]
+        for table in all_tables:
             try:
                 df = pd.read_sql_query(f"SELECT COUNT(*) AS cnt FROM {table}", conn)
                 cnt = int(df["cnt"].iloc[0])
@@ -344,15 +568,7 @@ def diagnose_v2_join(
             except Exception as e:
                 lines.append(f"    {table}: ERROR - {e}")
 
-        # jvd_hr行数
-        try:
-            df = pd.read_sql_query("SELECT COUNT(*) AS cnt FROM jvd_hr", conn)
-            cnt = int(df["cnt"].iloc[0])
-            lines.append(f"    jvd_hr: {cnt:,}")
-        except Exception as e:
-            lines.append(f"    jvd_hr: ERROR - {e}")
-        
     finally:
         conn.close()
-    
+
     return "\n".join(lines)
