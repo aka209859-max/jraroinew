@@ -16,6 +16,17 @@ import type {
 // ─────────────────────────────────────────────
 const YEARS = Array.from({ length: 10 }, (_, i) => 2016 + i);
 
+// 表示対象テーブル（主要17テーブルのみ）
+const ALLOWED_TABLES = new Set([
+  "jvd_se", "jvd_ra",
+  "jrd_sed", "jrd_kyi", "jrd_kyi_fixed",
+  "jrd_bac", "jrd_bac_fixed",
+  "jrd_tyb", "jrd_kab", "jrd_kka",
+  "jrd_ukc", "jrd_skb", "jrd_cha",
+  "jrd_cyb", "jrd_cyb_fixed",
+  "jrd_joa", "jrd_joa_fixed",
+]);
+
 const DEFAULT_YEAR_WEIGHTS: Record<string, number> = {
   "2016": 1, "2017": 2, "2018": 3, "2019": 4, "2020": 5,
   "2021": 6, "2022": 7, "2023": 8, "2024": 9, "2025": 10,
@@ -281,10 +292,10 @@ export default function AnalysisPage() {
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState(0);
 
-  // ファクター取得
+  // ファクター取得（主要テーブルのみフィルタリング）
   useEffect(() => {
     fetchFactors()
-      .then((d) => setFactors(d.factors))
+      .then((data) => setFactors(data.filter((f) => ALLOWED_TABLES.has(f.table_name))))
       .catch(() => setFactors([]))
       .finally(() => setFactorsLoading(false));
   }, []);
