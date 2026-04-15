@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gray-950 text-white">
@@ -9,12 +11,14 @@ export default function Home() {
           プロフェッショナル向け競馬データ分析プラットフォーム
         </p>
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition-colors">
-            <h2 className="text-xl font-semibold">データ分析</h2>
-            <p className="mt-2 text-gray-400">
-              2,293カラムから自由にファクターを選択し、補正回収率を分析
-            </p>
-          </div>
+          <Link href="/analysis">
+            <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition-colors cursor-pointer">
+              <h2 className="text-xl font-semibold">データ分析</h2>
+              <p className="mt-2 text-gray-400">
+                2,293カラムから自由にファクターを選択し、補正回収率を分析
+              </p>
+            </div>
+          </Link>
           <div className="bg-gray-900 border border-gray-800 rounded-xl p-6 hover:border-blue-500 transition-colors">
             <h2 className="text-xl font-semibold">バックテスト</h2>
             <p className="mt-2 text-gray-400">
