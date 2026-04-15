@@ -1,12 +1,16 @@
-import type { AnalysisRequest, AnalysisResponse, Factor } from "@/types/analysis";
+import type { AnalysisRequest, AnalysisResponse, Factor, FactorsResponse } from "@/types/analysis";
 
 const API_BASE = "http://localhost:8000/api";
 
-export async function fetchFactors(): Promise<Factor[]> {
+export async function fetchFactors(): Promise<FactorsResponse> {
   const res = await fetch(`${API_BASE}/analysis/factors`);
   if (!res.ok) throw new Error("ファクター取得失敗");
   const data = await res.json();
-  return data.factors || data;
+  return {
+    categories: data.categories || {},
+    factors: (data.factors || []) as Factor[],
+    total: data.total || 0,
+  };
 }
 
 export async function fetchSegments(): Promise<{

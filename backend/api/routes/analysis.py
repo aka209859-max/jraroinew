@@ -12,6 +12,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
 from backend.config.database import get_connection
+from backend.config.factor_categories import FACTOR_CATEGORIES
 from backend.engine.analysis_engine import AnalysisQuery, run_analysis
 
 router = APIRouter()
@@ -61,15 +62,24 @@ class AnalysisResponse(BaseModel):
 _SCHEMA_CSV = Path(__file__).parents[3] / "docs" / "ACTUAL_DB_SCHEMA_2293_COLUMNS.csv"
 
 
+def _strip_table_prefix(key: Optional[str]) -> Optional[str]:
+    """'table.column' → 'column' に変換。ドットなしの場合はそのまま返す。"""
+    if key and "." in key:
+        return key.split(".", 1)[1]
+    return key
+
+
 def _request_to_query(req: AnalysisRequest) -> AnalysisQuery:
-    """AnalysisRequest → AnalysisQuery に変換する。year_weights のキーを int に変換。"""
+    """AnalysisRequest → AnalysisQuery に変換する。year_weights のキーを int に変換。
+    key1/key2/key3 は 'table.column' 形式で届く場合があるのでカラム名のみ抽出。
+    """
     year_weights_int = {int(k): v for k, v in req.year_weights.items()}
     return AnalysisQuery(
         name=req.name,
         segment=req.segment,
-        key1=req.key1,
-        key2=req.key2,
-        key3=req.key3,
+        key1=_strip_table_prefix(req.key1) or req.key1,
+        key2=_strip_table_prefix(req.key2),
+        key3=_strip_table_prefix(req.key3),
         conditions=req.conditions,
         odds_filter=req.odds_filter,
         prev_race_type=req.prev_race_type,
@@ -169,7 +179,7 @@ def get_available_factors():
                 "comment": row.get("column_comment", ""),
             })
 
-    return {"factors": factors, "total": len(factors)}
+    return {"categories": FACTOR_CATEGORIES, "factors": factors, "total": len(factors)}
 
 
 @router.get("/segments")

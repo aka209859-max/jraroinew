@@ -50,3 +50,20 @@ export interface Factor {
   data_type: string;
   comment: string;
 }
+
+export interface FactorItem {
+  key: string;
+  label: string;
+  desc: string;
+}
+
+export interface FactorCategory {
+  icon: string;
+  factors: FactorItem[];
+}
+
+export interface FactorsResponse {
+  categories: Record<string, FactorCategory>;
+  factors: Factor[];
+  total: number;
+}

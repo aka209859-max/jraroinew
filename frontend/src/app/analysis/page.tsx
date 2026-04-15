@@ -4,7 +4,8 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import Link from "next/link";
 import { fetchFactors, runAnalysis } from "@/lib/api";
 import type {
-  Factor,
+  FactorCategory,
+  FactorItem,
   AnalysisRequest,
   AnalysisResponse,
   BinRow,
@@ -15,17 +16,6 @@ import type {
 // 定数
 // ─────────────────────────────────────────────
 const YEARS = Array.from({ length: 10 }, (_, i) => 2016 + i);
-
-// 表示対象テーブル（主要17テーブルのみ）
-const ALLOWED_TABLES = new Set([
-  "jvd_se", "jvd_ra",
-  "jrd_sed", "jrd_kyi", "jrd_kyi_fixed",
-  "jrd_bac", "jrd_bac_fixed",
-  "jrd_tyb", "jrd_kab", "jrd_kka",
-  "jrd_ukc", "jrd_skb", "jrd_cha",
-  "jrd_cyb", "jrd_cyb_fixed",
-  "jrd_joa", "jrd_joa_fixed",
-]);
 
 const DEFAULT_YEAR_WEIGHTS: Record<string, number> = {
   "2016": 1, "2017": 2, "2018": 3, "2019": 4, "2020": 5,
@@ -45,100 +35,211 @@ const PREV_RACE_TYPES = [
 ];
 
 // ─────────────────────────────────────────────
-// 検索可能ドロップダウン
+// 検索ハイライト
+// ─────────────────────────────────────────────
+function HighlightText({ text, query }: { text: string; query: string }) {
+  if (!query) return <>{text}</>;
+  const idx = text.toLowerCase().indexOf(query.toLowerCase());
+  if (idx === -1) return <>{text}</>;
+  return (
+    <>
+      {text.slice(0, idx)}
+      <span className="text-yellow-300 font-medium">
+        {text.slice(idx, idx + query.length)}
+      </span>
+      {text.slice(idx + query.length)}
+    </>
+  );
+}
+
+// ─────────────────────────────────────────────
+// カテゴリ別アコーディオンドロップダウン
 // ─────────────────────────────────────────────
 function FactorSelect({
   value,
   onChange,
-  factors,
+  categories,
   placeholder = "カラムを選択",
   nullable = false,
 }: {
   value: string;
   onChange: (v: string) => void;
-  factors: Factor[];
+  categories: Record<string, FactorCategory>;
   placeholder?: string;
   nullable?: boolean;
 }) {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
+  const [expandedCats, setExpandedCats] = useState<Set<string>>(new Set());
   const ref = useRef<HTMLDivElement>(null);
 
-  const filtered = query.length === 0
-    ? factors.slice(0, 100)
-    : factors
-        .filter((f) =>
-          `${f.table_name}.${f.column_name}`.toLowerCase().includes(query.toLowerCase())
-        )
-        .slice(0, 100);
-
-  const label = value
-    ? factors.find((f) => f.column_name === value)
-        ? `${factors.find((f) => f.column_name === value)!.table_name}.${value}`
-        : value
-    : placeholder;
+  // 選択中アイテムの「カテゴリ名 > ラベル」表示
+  const selectedLabel = (() => {
+    if (!value) return null;
+    for (const [catName, cat] of Object.entries(categories)) {
+      const item = cat.factors.find((f: FactorItem) => f.key === value);
+      if (item) return `${catName} > ${item.label}`;
+    }
+    return value;
+  })();
 
   // 外側クリックで閉じる
   useEffect(() => {
     const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+      if (ref.current && !ref.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
     };
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
+  const toggleCat = (catName: string) => {
+    setExpandedCats((prev) => {
+      const next = new Set(prev);
+      if (next.has(catName)) next.delete(catName);
+      else next.add(catName);
+      return next;
+    });
+  };
+
+  const handleSelect = (key: string) => {
+    onChange(key);
+    setOpen(false);
+    setQuery("");
+  };
+
+  // 検索モード: 日本語名で横断検索（空ならnull=アコーディオン表示）
+  const searchResults =
+    query.length > 0
+      ? Object.entries(categories).flatMap(([catName, cat]) =>
+          cat.factors
+            .filter((f: FactorItem) =>
+              f.label.toLowerCase().includes(query.toLowerCase())
+            )
+            .map((f: FactorItem) => ({ catName, ...f }))
+        )
+      : null;
+
   return (
     <div ref={ref} className="relative">
+      {/* トリガーボタン */}
       <button
         type="button"
         onClick={() => setOpen((o) => !o)}
-        className="w-full flex items-center justify-between rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-left text-gray-200 hover:border-gray-500 focus:outline-none focus:border-blue-500"
+        className="w-full flex items-center justify-between rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-left hover:border-gray-500 focus:outline-none focus:border-blue-500"
       >
-        <span className={value ? "text-gray-200" : "text-gray-500"}>
-          {label}
+        <span className={`truncate ${value ? "text-gray-200" : "text-gray-500"}`}>
+          {selectedLabel ?? placeholder}
         </span>
-        <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg
+          className="h-4 w-4 text-gray-400 flex-shrink-0 ml-1"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
         </svg>
       </button>
 
       {open && (
-        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-700 bg-gray-900 shadow-xl">
-          <div className="p-2">
+        <div className="absolute z-50 mt-1 w-full rounded-md border border-gray-700 bg-gray-800 shadow-xl">
+          {/* 検索ボックス */}
+          <div className="p-2 border-b border-gray-700">
             <input
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="検索..."
+              placeholder="日本語名で検索..."
               autoFocus
-              className="w-full rounded border border-gray-700 bg-gray-800 px-2 py-1 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-blue-500"
+              className="w-full rounded border border-gray-700 bg-gray-900 px-2 py-1.5 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-blue-500"
             />
           </div>
-          <ul className="max-h-56 overflow-y-auto">
+
+          <div className="max-h-96 overflow-y-auto">
+            {/* なし（nullable時） */}
             {nullable && (
-              <li
-                className="cursor-pointer px-3 py-1.5 text-sm text-gray-400 hover:bg-gray-800"
-                onClick={() => { onChange(""); setOpen(false); setQuery(""); }}
+              <div
+                className="cursor-pointer px-3 py-2 text-sm text-gray-400 hover:bg-gray-700 border-b border-gray-700"
+                onClick={() => handleSelect("")}
               >
                 ─ なし ─
-              </li>
+              </div>
             )}
-            {filtered.length === 0 && (
-              <li className="px-3 py-2 text-sm text-gray-500">見つかりません</li>
+
+            {searchResults !== null ? (
+              /* 検索結果: フラットリスト */
+              searchResults.length === 0 ? (
+                <div className="px-3 py-3 text-sm text-gray-500">見つかりません</div>
+              ) : (
+                searchResults.map((item) => (
+                  <div
+                    key={item.key}
+                    title={item.desc || undefined}
+                    onClick={() => handleSelect(item.key)}
+                    className={`cursor-pointer px-3 py-2 text-sm hover:bg-gray-600 ${
+                      value === item.key ? "bg-blue-900 text-blue-200" : "text-gray-300"
+                    }`}
+                  >
+                    <span className="text-xs text-gray-500 mr-1">{item.catName} &gt;</span>
+                    <HighlightText text={item.label} query={query} />
+                  </div>
+                ))
+              )
+            ) : Object.entries(categories).length === 0 ? (
+              /* ロード中 */
+              <div className="px-3 py-3 text-sm text-gray-500">読み込み中...</div>
+            ) : (
+              /* アコーディオン */
+              Object.entries(categories).map(([catName, cat]) => (
+                <div key={catName}>
+                  <button
+                    type="button"
+                    onClick={() => toggleCat(catName)}
+                    className="w-full flex items-center justify-between px-3 py-2 bg-gray-700 hover:bg-gray-600 text-sm font-semibold text-gray-200 cursor-pointer"
+                  >
+                    <span>
+                      {cat.icon} {catName}
+                    </span>
+                    <svg
+                      className={`h-3.5 w-3.5 text-gray-400 transition-transform flex-shrink-0 ${
+                        expandedCats.has(catName) ? "rotate-180" : ""
+                      }`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  </button>
+
+                  {expandedCats.has(catName) && (
+                    <div>
+                      {cat.factors.map((f: FactorItem) => (
+                        <div
+                          key={f.key}
+                          title={f.desc || undefined}
+                          onClick={() => handleSelect(f.key)}
+                          className={`cursor-pointer pl-6 pr-3 py-1.5 text-sm hover:bg-gray-600 ${
+                            value === f.key
+                              ? "bg-blue-900 text-blue-200"
+                              : "text-gray-300"
+                          }`}
+                        >
+                          {f.label}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))
             )}
-            {filtered.map((f) => (
-              <li
-                key={`${f.table_name}.${f.column_name}`}
-                className={`cursor-pointer px-3 py-1.5 text-sm hover:bg-gray-800 ${
-                  value === f.column_name ? "text-blue-400 bg-gray-800" : "text-gray-300"
-                }`}
-                onClick={() => { onChange(f.column_name); setOpen(false); setQuery(""); }}
-              >
-                <span className="text-gray-500">{f.table_name}.</span>
-                <span>{f.column_name}</span>
-              </li>
-            ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>
@@ -176,7 +277,9 @@ function downloadCsv(data: BinRow[], filename: string) {
   const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
-  a.href = url; a.download = filename; a.click();
+  a.href = url;
+  a.download = filename;
+  a.click();
   URL.revokeObjectURL(url);
 }
 
@@ -202,8 +305,12 @@ function ResultTable({ seg }: { seg: SegmentResult }) {
           className="ml-auto flex items-center gap-1.5 rounded-md border border-gray-700 bg-gray-800 px-3 py-1 text-xs text-gray-300 hover:border-gray-500 hover:text-white transition-colors"
         >
           <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+            />
           </svg>
           CSV
         </button>
@@ -214,9 +321,11 @@ function ResultTable({ seg }: { seg: SegmentResult }) {
         <table className="min-w-full text-sm">
           <thead>
             <tr className="bg-gray-800 text-gray-300 text-xs uppercase tracking-wider">
-              {["ビン", "単勝件数", "単勝的中", "単勝的中率%", "単勝回収率%",
+              {[
+                "ビン", "単勝件数", "単勝的中", "単勝的中率%", "単勝回収率%",
                 "複勝件数", "複勝的中", "複勝的中率%", "複勝回収率%",
-                "単勝補正%", "複勝補正%", "信頼度"].map((h) => (
+                "単勝補正%", "複勝補正%", "信頼度",
+              ].map((h) => (
                 <th key={h} className="whitespace-nowrap px-3 py-2 text-right first:text-left">
                   {h}
                 </th>
@@ -247,10 +356,18 @@ function ResultTable({ seg }: { seg: SegmentResult }) {
                   <td className="px-3 py-1.5 text-right text-gray-300">{row.fukusho_hit}</td>
                   <td className="px-3 py-1.5 text-right text-gray-300">{fmtPct(row.fukusho_hit_rate)}</td>
                   <td className="px-3 py-1.5 text-right text-gray-300">{fmtPct(row.fukusho_roi)}</td>
-                  <td className={`px-3 py-1.5 text-right font-semibold ${tEdge ? "text-green-400" : "text-gray-300"}`}>
+                  <td
+                    className={`px-3 py-1.5 text-right font-semibold ${
+                      tEdge ? "text-green-400" : "text-gray-300"
+                    }`}
+                  >
                     {fmtPct(row.tansho_corrected_roi)}
                   </td>
-                  <td className={`px-3 py-1.5 text-right font-semibold ${fEdge ? "text-emerald-400" : "text-gray-300"}`}>
+                  <td
+                    className={`px-3 py-1.5 text-right font-semibold ${
+                      fEdge ? "text-emerald-400" : "text-gray-300"
+                    }`}
+                  >
                     {fmtPct(row.fukusho_corrected_roi)}
                   </td>
                   <td className="px-3 py-1.5 text-right text-gray-400 font-mono text-xs">
@@ -270,7 +387,7 @@ function ResultTable({ seg }: { seg: SegmentResult }) {
 // メインページ
 // ─────────────────────────────────────────────
 export default function AnalysisPage() {
-  const [factors, setFactors] = useState<Factor[]>([]);
+  const [categories, setCategories] = useState<Record<string, FactorCategory>>({});
   const [factorsLoading, setFactorsLoading] = useState(true);
 
   // 条件
@@ -292,24 +409,37 @@ export default function AnalysisPage() {
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState(0);
 
-  // ファクター取得（主要テーブルのみフィルタリング）
+  // カテゴリ取得
   useEffect(() => {
     fetchFactors()
-      .then((data) => setFactors(data.filter((f) => ALLOWED_TABLES.has(f.table_name))))
-      .catch(() => setFactors([]))
+      .then((data) => setCategories(data.categories))
+      .catch(() => setCategories({}))
       .finally(() => setFactorsLoading(false));
   }, []);
 
   // 分析実行
   const handleAnalyze = useCallback(async () => {
-    if (!key1) { setError("集計キー1を選択してください"); return; }
+    if (!key1) {
+      setError("集計キー1を選択してください");
+      return;
+    }
     setLoading(true);
     setError(null);
     setResult(null);
     setActiveTab(0);
 
+    // key → 日本語ラベルを探すヘルパー
+    const findLabel = (key: string): string => {
+      for (const cat of Object.values(categories)) {
+        const item = cat.factors.find((f: FactorItem) => f.key === key);
+        if (item) return item.label;
+      }
+      return key;
+    };
+
     const request: AnalysisRequest = {
-      name: [key1, key2, key3].filter(Boolean).join(" × ") || "分析",
+      name:
+        [key1, key2, key3].filter(Boolean).map(findLabel).join(" × ") || "分析",
       segment,
       key1,
       key2: key2 || undefined,
@@ -334,13 +464,21 @@ export default function AnalysisPage() {
     } finally {
       setLoading(false);
     }
-  }, [segment, key1, key2, key3, tanshoMin, tanshoMax, fukushoMin, fukushoMax, prevRaceType, yearFrom, yearTo]);
+  }, [
+    categories,
+    segment, key1, key2, key3,
+    tanshoMin, tanshoMax, fukushoMin, fukushoMax,
+    prevRaceType, yearFrom, yearTo,
+  ]);
 
   return (
     <div className="flex h-screen flex-col bg-gray-950 text-white overflow-hidden">
       {/* ヘッダー */}
       <header className="flex items-center gap-4 border-b border-gray-800 px-6 py-3 flex-shrink-0">
-        <Link href="/" className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors">
+        <Link
+          href="/"
+          className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors"
+        >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
@@ -357,19 +495,23 @@ export default function AnalysisPage() {
 
             {/* セグメント */}
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">セグメント</label>
+              <label className="block text-xs font-medium text-gray-400 mb-1.5">
+                セグメント
+              </label>
               <select
                 value={segment}
                 onChange={(e) => setSegment(e.target.value)}
                 className="w-full rounded-md border border-gray-700 bg-gray-900 px-3 py-2 text-sm text-gray-200 focus:outline-none focus:border-blue-500"
               >
                 {SEGMENTS.map((s) => (
-                  <option key={s.id} value={s.id}>{s.label}</option>
+                  <option key={s.id} value={s.id}>
+                    {s.label}
+                  </option>
                 ))}
               </select>
             </div>
 
-            {/* 集計キー */}
+            {/* 集計キー1 */}
             <div>
               <label className="block text-xs font-medium text-gray-400 mb-1.5">
                 集計キー1 <span className="text-blue-400">*</span>
@@ -377,42 +519,72 @@ export default function AnalysisPage() {
               {factorsLoading ? (
                 <div className="text-xs text-gray-500">読み込み中...</div>
               ) : (
-                <FactorSelect value={key1} onChange={setKey1} factors={factors} />
+                <FactorSelect
+                  value={key1}
+                  onChange={setKey1}
+                  categories={categories}
+                />
               )}
             </div>
 
+            {/* 集計キー2 */}
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">集計キー2</label>
+              <label className="block text-xs font-medium text-gray-400 mb-1.5">
+                集計キー2
+              </label>
               {factorsLoading ? (
                 <div className="text-xs text-gray-500">読み込み中...</div>
               ) : (
-                <FactorSelect value={key2} onChange={setKey2} factors={factors} nullable placeholder="─ なし ─" />
+                <FactorSelect
+                  value={key2}
+                  onChange={setKey2}
+                  categories={categories}
+                  nullable
+                  placeholder="─ なし ─"
+                />
               )}
             </div>
 
+            {/* 集計キー3 */}
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">集計キー3</label>
+              <label className="block text-xs font-medium text-gray-400 mb-1.5">
+                集計キー3
+              </label>
               {factorsLoading ? (
                 <div className="text-xs text-gray-500">読み込み中...</div>
               ) : (
-                <FactorSelect value={key3} onChange={setKey3} factors={factors} nullable placeholder="─ なし ─" />
+                <FactorSelect
+                  value={key3}
+                  onChange={setKey3}
+                  categories={categories}
+                  nullable
+                  placeholder="─ なし ─"
+                />
               )}
             </div>
 
             {/* オッズ条件 */}
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">オッズ条件</label>
+              <label className="block text-xs font-medium text-gray-400 mb-1.5">
+                オッズ条件
+              </label>
               <div className="space-y-2">
                 <div className="flex items-center gap-2 text-xs">
                   <span className="text-gray-400 w-10">単勝</span>
                   <input
-                    type="number" step="0.1" min="1" value={tanshoMin}
+                    type="number"
+                    step="0.1"
+                    min="1"
+                    value={tanshoMin}
                     onChange={(e) => setTanshoMin(e.target.value)}
                     className="w-16 rounded border border-gray-700 bg-gray-900 px-2 py-1 text-center text-gray-200 focus:outline-none focus:border-blue-500"
                   />
                   <span className="text-gray-500">〜</span>
                   <input
-                    type="number" step="0.1" min="1" value={tanshoMax}
+                    type="number"
+                    step="0.1"
+                    min="1"
+                    value={tanshoMax}
                     onChange={(e) => setTanshoMax(e.target.value)}
                     className="w-16 rounded border border-gray-700 bg-gray-900 px-2 py-1 text-center text-gray-200 focus:outline-none focus:border-blue-500"
                   />
@@ -421,13 +593,19 @@ export default function AnalysisPage() {
                 <div className="flex items-center gap-2 text-xs">
                   <span className="text-gray-400 w-10">複勝</span>
                   <input
-                    type="number" step="0.1" min="1" value={fukushoMin}
+                    type="number"
+                    step="0.1"
+                    min="1"
+                    value={fukushoMin}
                     onChange={(e) => setFukushoMin(e.target.value)}
                     className="w-16 rounded border border-gray-700 bg-gray-900 px-2 py-1 text-center text-gray-200 focus:outline-none focus:border-blue-500"
                   />
                   <span className="text-gray-500">〜</span>
                   <input
-                    type="number" step="0.1" min="1" value={fukushoMax}
+                    type="number"
+                    step="0.1"
+                    min="1"
+                    value={fukushoMax}
                     onChange={(e) => setFukushoMax(e.target.value)}
                     className="w-16 rounded border border-gray-700 bg-gray-900 px-2 py-1 text-center text-gray-200 focus:outline-none focus:border-blue-500"
                   />
@@ -438,12 +616,16 @@ export default function AnalysisPage() {
 
             {/* 前走タイプ */}
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">前走タイプ</label>
+              <label className="block text-xs font-medium text-gray-400 mb-1.5">
+                前走タイプ
+              </label>
               <div className="space-y-1.5">
                 {PREV_RACE_TYPES.map((t) => (
                   <label key={t.value} className="flex items-center gap-2 cursor-pointer">
                     <input
-                      type="radio" name="prevRaceType" value={t.value}
+                      type="radio"
+                      name="prevRaceType"
+                      value={t.value}
                       checked={prevRaceType === t.value}
                       onChange={(e) => setPrevRaceType(e.target.value)}
                       className="accent-blue-500"
@@ -456,14 +638,20 @@ export default function AnalysisPage() {
 
             {/* 分析期間 */}
             <div>
-              <label className="block text-xs font-medium text-gray-400 mb-1.5">分析期間</label>
+              <label className="block text-xs font-medium text-gray-400 mb-1.5">
+                分析期間
+              </label>
               <div className="flex items-center gap-2">
                 <select
                   value={yearFrom}
                   onChange={(e) => setYearFrom(Number(e.target.value))}
                   className="flex-1 rounded border border-gray-700 bg-gray-900 px-2 py-1.5 text-sm text-gray-200 focus:outline-none focus:border-blue-500"
                 >
-                  {YEARS.map((y) => <option key={y} value={y}>{y}</option>)}
+                  {YEARS.map((y) => (
+                    <option key={y} value={y}>
+                      {y}
+                    </option>
+                  ))}
                 </select>
                 <span className="text-gray-500 text-sm">〜</span>
                 <select
@@ -471,7 +659,11 @@ export default function AnalysisPage() {
                   onChange={(e) => setYearTo(Number(e.target.value))}
                   className="flex-1 rounded border border-gray-700 bg-gray-900 px-2 py-1.5 text-sm text-gray-200 focus:outline-none focus:border-blue-500"
                 >
-                  {YEARS.map((y) => <option key={y} value={y}>{y}</option>)}
+                  {YEARS.map((y) => (
+                    <option key={y} value={y}>
+                      {y}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
@@ -487,22 +679,40 @@ export default function AnalysisPage() {
               {loading ? (
                 <>
                   <svg className="h-4 w-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    />
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                    />
                   </svg>
                   分析中...
                 </>
               ) : (
                 <>
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    />
                   </svg>
                   分析実行
                 </>
               )}
             </button>
             {!key1 && (
-              <p className="mt-1.5 text-center text-xs text-gray-600">集計キー1を選択してください</p>
+              <p className="mt-1.5 text-center text-xs text-gray-600">
+                集計キー1を選択してください
+              </p>
             )}
           </div>
         </aside>
@@ -512,7 +722,8 @@ export default function AnalysisPage() {
           {/* エラー */}
           {error && (
             <div className="m-4 rounded-lg border border-red-800 bg-red-900/20 px-4 py-3 text-sm text-red-300">
-              <span className="font-semibold">エラー: </span>{error}
+              <span className="font-semibold">エラー: </span>
+              {error}
             </div>
           )}
 
@@ -521,9 +732,18 @@ export default function AnalysisPage() {
             <div className="flex h-full items-center justify-center">
               <div className="text-center">
                 <div className="mb-4 text-gray-700">
-                  <svg className="mx-auto h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1}
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  <svg
+                    className="mx-auto h-16 w-16"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1}
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    />
                   </svg>
                 </div>
                 <p className="text-gray-500">条件を設定して分析を実行してください</p>
@@ -536,9 +756,24 @@ export default function AnalysisPage() {
           {loading && (
             <div className="flex h-full items-center justify-center">
               <div className="text-center">
-                <svg className="mx-auto h-12 w-12 animate-spin text-blue-500" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                <svg
+                  className="mx-auto h-12 w-12 animate-spin text-blue-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <circle
+                    className="opacity-25"
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="4"
+                  />
+                  <path
+                    className="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
+                  />
                 </svg>
                 <p className="mt-4 text-gray-400">分析中...</p>
                 <p className="mt-1 text-xs text-gray-600">数十秒かかる場合があります</p>
