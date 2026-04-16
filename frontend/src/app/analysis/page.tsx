@@ -384,6 +384,67 @@ function ResultTable({ seg }: { seg: SegmentResult }) {
 }
 
 // ─────────────────────────────────────────────
+// ビン設定ウィジェット
+// ─────────────────────────────────────────────
+type BinMode = "auto" | "manual";
+interface BinManualConfig { start: number; end: number; interval: number }
+type BinKey = "key1" | "key2" | "key3";
+
+function BinConfigWidget({
+  binKey,
+  mode,
+  manual,
+  onModeChange,
+  onManualChange,
+}: {
+  binKey: BinKey;
+  mode: BinMode;
+  manual: BinManualConfig;
+  onModeChange: (m: BinMode) => void;
+  onManualChange: (f: Partial<BinManualConfig>) => void;
+}) {
+  const inputCls =
+    "w-full rounded border border-gray-700 bg-gray-800 px-1.5 py-1 text-xs text-gray-200 focus:outline-none focus:border-blue-500";
+  return (
+    <div className="mt-1.5 rounded border border-gray-700/60 bg-gray-900/40 px-2 py-1.5 space-y-1.5">
+      <div className="flex gap-4 text-xs">
+        {(["auto", "manual"] as BinMode[]).map((m) => (
+          <label key={m} className="flex items-center gap-1.5 cursor-pointer select-none">
+            <input
+              type="radio"
+              name={`binMode-${binKey}`}
+              checked={mode === m}
+              onChange={() => onModeChange(m)}
+              className="accent-blue-500"
+            />
+            <span className="text-gray-400">{m === "auto" ? "自動" : "手動"}</span>
+          </label>
+        ))}
+      </div>
+      {mode === "manual" && (
+        <div className="grid grid-cols-3 gap-1.5">
+          {(["start", "end", "interval"] as const).map((field) => (
+            <div key={field}>
+              <div className="text-xs text-gray-500 mb-0.5">
+                {field === "start" ? "開始" : field === "end" ? "終了" : "刻み"}
+              </div>
+              <input
+                type="number"
+                step="any"
+                min={field === "interval" ? "0.1" : undefined}
+                value={manual[field]}
+                onChange={(e) => onManualChange({ [field]: Number(e.target.value) })}
+                className={inputCls}
+              />
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─────────────────────────────────────────────
 // メインページ
 // ─────────────────────────────────────────────
 export default function AnalysisPage() {
@@ -395,6 +456,21 @@ export default function AnalysisPage() {
   const [key1, setKey1] = useState("");
   const [key2, setKey2] = useState("");
   const [key3, setKey3] = useState("");
+
+  // ビン設定
+  const [binModes, setBinModes] = useState<Record<BinKey, BinMode>>({
+    key1: "auto", key2: "auto", key3: "auto",
+  });
+  const [binManuals, setBinManuals] = useState<Record<BinKey, BinManualConfig>>({
+    key1: { start: 0, end: 100, interval: 5 },
+    key2: { start: 0, end: 100, interval: 5 },
+    key3: { start: 0, end: 100, interval: 5 },
+  });
+
+  const updateBinMode = (k: BinKey, m: BinMode) =>
+    setBinModes((prev) => ({ ...prev, [k]: m }));
+  const updateBinManual = (k: BinKey, patch: Partial<BinManualConfig>) =>
+    setBinManuals((prev) => ({ ...prev, [k]: { ...prev[k], ...patch } }));
   const [tanshoMin, setTanshoMin] = useState("1.0");
   const [tanshoMax, setTanshoMax] = useState("100.0");
   const [fukushoMin, setFukushoMin] = useState("1.0");
@@ -417,6 +493,9 @@ export default function AnalysisPage() {
       .finally(() => setFactorsLoading(false));
   }, []);
 
+  // テーブル.カラム → カラム名のみ抽出
+  const stripPrefix = (k: string) => (k.includes(".") ? k.split(".").slice(1).join(".") : k);
+
   // 分析実行
   const handleAnalyze = useCallback(async () => {
     if (!key1) {
@@ -437,6 +516,23 @@ export default function AnalysisPage() {
       return key;
     };
 
+    // ビン設定を組み立て（手動モードのキーのみ）
+    const buildBinConfig = () => {
+      const cfg: Record<string, BinManualConfig> = {};
+      (
+        [
+          { keyVal: key1, bk: "key1" as BinKey },
+          { keyVal: key2, bk: "key2" as BinKey },
+          { keyVal: key3, bk: "key3" as BinKey },
+        ] as { keyVal: string; bk: BinKey }[]
+      ).forEach(({ keyVal, bk }) => {
+        if (keyVal && binModes[bk] === "manual") {
+          cfg[stripPrefix(keyVal)] = binManuals[bk];
+        }
+      });
+      return cfg;
+    };
+
     const request: AnalysisRequest = {
       name:
         [key1, key2, key3].filter(Boolean).map(findLabel).join(" × ") || "分析",
@@ -453,7 +549,7 @@ export default function AnalysisPage() {
       data_period: [`${yearFrom}-01-01`, `${yearTo}-12-31`],
       year_weights: DEFAULT_YEAR_WEIGHTS,
       min_samples: 30,
-      bin_config: {},
+      bin_config: buildBinConfig(),
     };
 
     try {
@@ -469,6 +565,7 @@ export default function AnalysisPage() {
     segment, key1, key2, key3,
     tanshoMin, tanshoMax, fukushoMin, fukushoMax,
     prevRaceType, yearFrom, yearTo,
+    binModes, binManuals,
   ]);
 
   return (
@@ -525,6 +622,15 @@ export default function AnalysisPage() {
                   categories={categories}
                 />
               )}
+              {key1 && (
+                <BinConfigWidget
+                  binKey="key1"
+                  mode={binModes.key1}
+                  manual={binManuals.key1}
+                  onModeChange={(m) => updateBinMode("key1", m)}
+                  onManualChange={(p) => updateBinManual("key1", p)}
+                />
+              )}
             </div>
 
             {/* 集計キー2 */}
@@ -543,6 +649,15 @@ export default function AnalysisPage() {
                   placeholder="─ なし ─"
                 />
               )}
+              {key2 && (
+                <BinConfigWidget
+                  binKey="key2"
+                  mode={binModes.key2}
+                  manual={binManuals.key2}
+                  onModeChange={(m) => updateBinMode("key2", m)}
+                  onManualChange={(p) => updateBinManual("key2", p)}
+                />
+              )}
             </div>
 
             {/* 集計キー3 */}
@@ -559,6 +674,15 @@ export default function AnalysisPage() {
                   categories={categories}
                   nullable
                   placeholder="─ なし ─"
+                />
+              )}
+              {key3 && (
+                <BinConfigWidget
+                  binKey="key3"
+                  mode={binModes.key3}
+                  manual={binManuals.key3}
+                  onModeChange={(m) => updateBinMode("key3", m)}
+                  onManualChange={(p) => updateBinManual("key3", p)}
                 />
               )}
             </div>

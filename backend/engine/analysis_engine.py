@@ -238,6 +238,23 @@ def _binify(series: pd.Series, key: str, bin_config: dict) -> pd.Series:
     # bin_config 指定
     if key in bin_config:
         cfg = bin_config[key]
+
+        # start/end/interval 形式（フロントエンドUIから）
+        if "start" in cfg and "end" in cfg and "interval" in cfg:
+            start = float(cfg["start"])
+            end = float(cfg["end"])
+            interval = float(cfg["interval"])
+            bins = np.arange(start, end + interval, interval)
+            num = pd.to_numeric(series, errors="coerce")
+            cut_result = pd.cut(num, bins=bins, right=False)
+            # 元の値は有効だがビン範囲外のもの → "範囲外"
+            out_of_range_mask = num.notna() & ~null_mask & cut_result.isna()
+            result = cut_result.astype(str)
+            result[out_of_range_mask] = "範囲外"
+            result[null_mask] = "不明"
+            return result
+
+        # 既存の method/bins/labels 形式
         method = cfg.get("method", "cut")
         bins = cfg.get("bins", [])
         labels = cfg.get("labels", None)
@@ -335,7 +352,7 @@ def _compute_bin_stats(bin_df: pd.DataFrame, query: AnalysisQuery) -> dict:
     tansho_odds = pd.to_numeric(
         bin_df.get("tansho_odds", pd.Series(np.nan, index=bin_df.index)).astype(str).str.strip(),
         errors="coerce",
-    )
+    ) / 10.0  # jvd_se: 4桁整数×10で格納 (例: 52 → 5.2倍)
     fukusho_odds = pd.to_numeric(
         bin_df.get("fukusho_odds", pd.Series(np.nan, index=bin_df.index)).astype(str).str.strip(),
         errors="coerce",
