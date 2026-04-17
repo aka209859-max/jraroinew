@@ -1,5 +1,5 @@
 """
-集計キーのカテゴリ分類定義（実DB構造対応版）。
+集計キーのカテゴリ分類定義（jrd_kyi_fixed 139カラム + 他テーブル対応版）。
 各キーは "テーブル名.カラム名" 形式で記述し、
 analysis_engine.py が _strip_table_prefix() でカラム名のみ抽出する。
 
@@ -9,275 +9,297 @@ analysis_engine.py が _strip_table_prefix() でカラム名のみ抽出する�
 
 FACTOR_CATEGORIES: dict = {
     # =========================================================================
-    # レース基本条件
+    # 1. JRDB総合指数
     # =========================================================================
-    "レース基本条件": {
-        "icon": "🏇",
-        "factors": [
-            {"key": "jvd_se.keibajo_code",          "label": "競馬場",            "desc": "01札幌〜10小倉"},
-            {"key": "jrd_bac_fixed.bac_kyori",       "label": "距離",              "desc": "メートル (bac_kyor)"},
-            {"key": "jvd_ra.track_code",             "label": "トラック種別",      "desc": "芝/ダート/障害"},
-            {"key": "jrd_bac_fixed.shiba_da_shogai_code", "label": "芝ダ障コード", "desc": "芝/ダート/障害区分"},
-            {"key": "jrd_bac_fixed.shubetsu",        "label": "競走種別",          "desc": "平地/障害等"},
-            {"key": "jrd_bac_fixed.jouken",          "label": "競走条件",          "desc": "新馬/未勝利/1勝等"},
-            {"key": "jrd_bac_fixed.juryo_shubetsu_code", "label": "重量種別",      "desc": "馬齢/定量/別定/ハンデ"},
-            {"key": "jrd_bac_fixed.grade",           "label": "グレード",          "desc": "G1/G2/G3/OP/L"},
-            {"key": "jrd_bac_fixed.course",          "label": "コース",            "desc": "Aコース/Bコース等"},
-            {"key": "jrd_bac_fixed.bac_kaisai_kubun","label": "開催区分",          "desc": ""},
-            {"key": "jrd_bac_fixed.tosu",            "label": "頭数",              "desc": "出走頭数"},
-            {"key": "jrd_bac_fixed.migi_hidari",     "label": "回り",              "desc": "右/左"},
-            {"key": "jrd_bac_fixed.uchi_soto",       "label": "内外",              "desc": "内/外"},
-        ],
-    },
-    # =========================================================================
-    # 天候・馬場
-    # =========================================================================
-    "天候・馬場": {
-        "icon": "🌤",
-        "factors": [
-            {"key": "jvd_ra.tenko_code",             "label": "天候",                  "desc": "晴/曇/雨/小雨/雪"},
-            {"key": "jvd_ra.babajotai_code_shiba",   "label": "馬場状態（芝）",        "desc": "良/稍重/重/不良"},
-            {"key": "jvd_ra.babajotai_code_dirt",    "label": "馬場状態（ダート）",    "desc": "良/稍重/重/不良"},
-            {"key": "jrd_kab.babasa_shiba",          "label": "芝馬場差",              "desc": "JRDBコース補正値"},
-            {"key": "jrd_kab.babasa_dirt",           "label": "ダート馬場差",          "desc": "JRDBコース補正値"},
-            {"key": "jrd_kab.renzoku_nannichime",    "label": "連続何日目",            "desc": "開催連続日数"},
-            {"key": "jrd_kab.shiba_shurui",          "label": "芝種類",                "desc": "野芝/洋芝/混合"},
-            {"key": "jrd_kab.chukan_kosuiryo",       "label": "中間降水量",            "desc": "前走後の降雨量"},
-        ],
-    },
-    # =========================================================================
-    # JRDB前日指数
-    # =========================================================================
-    "JRDB前日指数": {
+    "JRDB総合指数": {
         "icon": "📊",
         "factors": [
-            {"key": "jrd_kyi_fixed.idm",             "label": "IDM（総合指数）",   "desc": "JRDB独自の総合能力値"},
-            {"key": "jrd_kyi_fixed.sogo_shisu",      "label": "総合指数",          "desc": ""},
-            {"key": "jrd_kyi_fixed.kishu_shisu",     "label": "騎手指数",          "desc": ""},
-            {"key": "jrd_kyi_fixed.chokyo_shisu",    "label": "調教指数",          "desc": ""},
-            {"key": "jrd_kyi_fixed.kyusha_shisu",    "label": "厩舎指数",          "desc": ""},
-            {"key": "jrd_kyi_fixed.ten_shisu",       "label": "テン指数",          "desc": "スタートダッシュ力"},
-            {"key": "jrd_kyi_fixed.pace_shisu",      "label": "ペース指数",        "desc": ""},
-            {"key": "jrd_kyi_fixed.agari_shisu",     "label": "上がり指数",        "desc": "終盤の脚力"},
-            {"key": "jrd_kyi_fixed.ichi_shisu",      "label": "位置指数",          "desc": ""},
+            {"key": "jrd_kyi_fixed.idm",          "label": "IDM（総合指数）",   "type": "numeric"},
+            {"key": "jrd_kyi_fixed.sogo_shisu",   "label": "総合指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.ninki_shisu",  "label": "人気指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.joho_shisu",   "label": "情報指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kishu_shisu",  "label": "騎手指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.chokyo_shisu", "label": "調教指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kyusha_shisu", "label": "厩舎指数",          "type": "numeric"},
         ],
     },
     # =========================================================================
-    # 馬基本情報
+    # 2. JRDB詳細指数
     # =========================================================================
-    "馬基本情報": {
-        "icon": "🐴",
+    "JRDB詳細指数": {
+        "icon": "🔢",
         "factors": [
-            {"key": "jvd_se.barei",                  "label": "馬齢",              "desc": "2歳〜"},
-            {"key": "jvd_se.seibetsu_code",          "label": "性別",              "desc": "牡/牝/セン"},
-            {"key": "jvd_se.futan_juryo",            "label": "斤量",              "desc": "負担重量kg"},
-            {"key": "jvd_se.bataiju",                "label": "馬体重",            "desc": "kg"},
-            {"key": "jvd_se.zogen_sa",               "label": "馬体重増減",        "desc": "前走比kg (+ = 増)"},
-            {"key": "jvd_se.wakuban",                "label": "枠番",              "desc": "1〜8"},
-            {"key": "jvd_se.umaban",                 "label": "馬番",              "desc": "1〜18"},
-            {"key": "jvd_se.umakigo_code",           "label": "馬記号",            "desc": ""},
-            {"key": "jvd_se.blinker_shiyo_kubun",    "label": "ブリンカー（JVD）", "desc": "0=なし/1=あり"},
-            {"key": "jrd_kyi_fixed.kyakushitsu",     "label": "脚質（予測）",      "desc": "逃/先/差/追"},
-            {"key": "jrd_kyi_fixed.kyori_tekisei",   "label": "距離適性",          "desc": ""},
-            {"key": "jrd_kyi_fixed.kyori_tekisei_2", "label": "距離適性2",         "desc": ""},
-            {"key": "jrd_kyi_fixed.blinker",         "label": "ブリンカー（JRDB）","desc": "0=なし/1=あり"},
+            {"key": "jrd_kyi_fixed.ten_shisu",        "label": "テン指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.pace_shisu",       "label": "ペース指数",        "type": "numeric"},
+            {"key": "jrd_kyi_fixed.agari_shisu",      "label": "上がり指数",        "type": "numeric"},
+            {"key": "jrd_kyi_fixed.ichi_shisu",       "label": "位置指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.gekiso_shisu",     "label": "激走指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.manken_shisu",     "label": "万券指数",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.uma_start_shisu",  "label": "馬スタート指数",    "type": "numeric"},
         ],
     },
     # =========================================================================
-    # 適性
+    # 3. 指数順位
+    # =========================================================================
+    "指数順位": {
+        "icon": "🏅",
+        "factors": [
+            {"key": "jrd_kyi_fixed.ls_shisu_juni",      "label": "LS指数順位",        "type": "numeric"},
+            {"key": "jrd_kyi_fixed.ten_shisu_juni",     "label": "テン指数順位",      "type": "numeric"},
+            {"key": "jrd_kyi_fixed.pace_shisu_juni",    "label": "ペース指数順位",    "type": "numeric"},
+            {"key": "jrd_kyi_fixed.agari_shisu_juni",   "label": "上がり指数順位",    "type": "numeric"},
+            {"key": "jrd_kyi_fixed.ichi_shisu_juni",    "label": "位置指数順位",      "type": "numeric"},
+            {"key": "jrd_kyi_fixed.gekiso_juni",        "label": "激走順位",          "type": "numeric"},
+        ],
+    },
+    # =========================================================================
+    # 4. 基準オッズ・人気
+    # =========================================================================
+    "基準オッズ・人気": {
+        "icon": "💰",
+        "factors": [
+            {"key": "jrd_kyi_fixed.kijun_odds_tansho",        "label": "基準オッズ単勝",      "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kijun_odds_fukusho",       "label": "基準オッズ複勝",      "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kijun_ninkijun_tansho",    "label": "基準人気順単勝",      "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kijun_ninkijun_fukusho",   "label": "基準人気順複勝",      "type": "numeric"},
+            {"key": "jrd_sed.tansho_odds",                    "label": "単勝オッズ（確定）",  "type": "numeric"},
+            {"key": "jrd_sed.odds_fukusho",                   "label": "複勝オッズ（確定）",  "type": "numeric"},
+            {"key": "jrd_sed.tansho_ninkijun",                "label": "単勝人気（確定）",    "type": "numeric"},
+        ],
+    },
+    # =========================================================================
+    # 5. 展開予想
+    # =========================================================================
+    "展開予想": {
+        "icon": "🗺",
+        "factors": [
+            {"key": "jrd_kyi_fixed.pace_yoso",         "label": "ペース予想",        "type": "code"},
+            {"key": "jrd_kyi_fixed.dochu_juni",        "label": "道中順位",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.dochu_sa",          "label": "道中差",            "type": "numeric"},
+            {"key": "jrd_kyi_fixed.dochu_uchisoto",    "label": "道中内外",          "type": "code"},
+            {"key": "jrd_kyi_fixed.kohan_3f_juni",     "label": "後半3F順位",        "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kohan_3f_sa",       "label": "後半3F差",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kohan_3f_uchisoto", "label": "後半3F内外",        "type": "code"},
+            {"key": "jrd_kyi_fixed.goal_juni",         "label": "ゴール順位",        "type": "numeric"},
+            {"key": "jrd_kyi_fixed.goal_sa",           "label": "ゴール差",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.goal_uchisoto",     "label": "ゴール内外",        "type": "code"},
+            {"key": "jrd_kyi_fixed.tenkai_kigo_code",  "label": "展開記号コード",    "type": "code"},
+            {"key": "jrd_kyi_fixed.kyakushitsu",       "label": "脚質（予測）",      "type": "code"},
+            {"key": "jrd_sed.kyakushitsu_code",        "label": "脚質（確定）",      "type": "code"},
+        ],
+    },
+    # =========================================================================
+    # 6. 馬体・装備
+    # =========================================================================
+    "馬体・装備": {
+        "icon": "🦴",
+        "factors": [
+            {"key": "jrd_kyi_fixed.hizume_code",   "label": "蹄コード",          "type": "code"},
+            {"key": "jrd_kyi_fixed.blinker",       "label": "ブリンカー",        "type": "code"},
+            {"key": "jrd_kyi_fixed.taikei",        "label": "体型",              "type": "code"},
+            {"key": "jrd_kyi_fixed.taikei_sogo_1", "label": "体型総合1",         "type": "numeric"},
+            {"key": "jrd_kyi_fixed.taikei_sogo_2", "label": "体型総合2",         "type": "numeric"},
+            {"key": "jrd_kyi_fixed.taikei_sogo_3", "label": "体型総合3",         "type": "numeric"},
+            {"key": "jrd_kyi_fixed.uma_tokki_1",   "label": "馬特記1",           "type": "code"},
+            {"key": "jrd_kyi_fixed.uma_tokki_2",   "label": "馬特記2",           "type": "code"},
+            {"key": "jrd_kyi_fixed.uma_tokki_3",   "label": "馬特記3",           "type": "code"},
+            {"key": "jrd_kyi_fixed.soho",          "label": "走法",              "type": "code"},
+            {"key": "jrd_sed.bataiju",             "label": "馬体重（確定）",    "type": "numeric"},
+            {"key": "jrd_sed.bataiju_zogen",       "label": "馬体重増減（確定）","type": "numeric"},
+        ],
+    },
+    # =========================================================================
+    # 7. 適性
     # =========================================================================
     "適性": {
         "icon": "🎯",
         "factors": [
-            {"key": "jrd_kyi_fixed.shiba_tekisei_code", "label": "芝適性",       "desc": "◎/○/△/×"},
-            {"key": "jrd_kyi_fixed.da_tekisei_code",    "label": "ダート適性",   "desc": "◎/○/△/×"},
-            {"key": "jrd_kyi_fixed.omo_tekisei_code",   "label": "重馬場適性",   "desc": "◎/○/△/×"},
-            {"key": "jrd_kyi_fixed.soho",               "label": "走法",         "desc": ""},
+            {"key": "jrd_kyi_fixed.kyori_tekisei",       "label": "距離適性",      "type": "code"},
+            {"key": "jrd_kyi_fixed.kyori_tekisei_2",     "label": "距離適性2",     "type": "code"},
+            {"key": "jrd_kyi_fixed.shiba_tekisei_code",  "label": "芝適性",        "type": "code"},
+            {"key": "jrd_kyi_fixed.da_tekisei_code",     "label": "ダート適性",    "type": "code"},
+            {"key": "jrd_kyi_fixed.omo_tekisei_code",    "label": "重馬場適性",    "type": "code"},
         ],
     },
     # =========================================================================
-    # オッズ・人気
+    # 8. クラス・条件
     # =========================================================================
-    "オッズ・人気": {
-        "icon": "💰",
+    "クラス・条件": {
+        "icon": "🏆",
         "factors": [
-            {"key": "jvd_se.tansho_odds",            "label": "単勝オッズ",        "desc": "確定単勝オッズ"},
-            {"key": "jvd_se.tansho_ninkijun",        "label": "単勝人気",          "desc": "1〜18"},
-            {"key": "jrd_joa_fixed.joa_odds_shisu",  "label": "オッズ指数（JOA）", "desc": "JOA基準オッズ指数"},
-            {"key": "jrd_tyb.tyb_odds_shisu",        "label": "オッズ指数（直前）","desc": "直前オッズ指数"},
+            {"key": "jrd_kyi_fixed.class_code",       "label": "クラスコード",        "type": "code"},
+            {"key": "jrd_kyi_fixed.joshodo_code",      "label": "上昇度コード",        "type": "code"},
+            {"key": "jrd_kyi_fixed.joken_class_code",  "label": "条件クラスコード",    "type": "code"},
+            {"key": "jrd_sed.grade_code",              "label": "グレードコード",      "type": "code"},
+            {"key": "jrd_sed.kyoso_shubetsu_code",     "label": "競走種別コード",      "type": "code"},
+            {"key": "jrd_sed.kyoso_joken_code",        "label": "競走条件コード",      "type": "code"},
         ],
     },
     # =========================================================================
-    # 騎手・調教師
+    # 9. 騎手・調教師
     # =========================================================================
     "騎手・調教師": {
         "icon": "👤",
         "factors": [
-            {"key": "jvd_se.kishu_code",             "label": "騎手コード",        "desc": ""},
-            {"key": "jvd_se.chokyoshi_code",         "label": "調教師コード",      "desc": ""},
-            {"key": "jvd_se.kishu_minarai_code",     "label": "騎手見習い",        "desc": "減量区分"},
-            {"key": "jrd_kyi_fixed.kyusha_rank",     "label": "厩舎ランク",        "desc": "JRDB厩舎ランク"},
+            {"key": "jrd_kyi_fixed.kishu_code",                    "label": "騎手コード",          "type": "code"},
+            {"key": "jrd_kyi_fixed.chokyoshi_code",                "label": "調教師コード",        "type": "code"},
+            {"key": "jrd_kyi_fixed.kishu_kitai_rentai_ritsu",      "label": "騎手期待連対率",      "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kishu_kitai_tansho_ritsu",      "label": "騎手期待単勝率",      "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kishu_kitai_sanchakunai_ritsu", "label": "騎手期待3着内率",     "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kishumei",                      "label": "騎手名",              "type": "code"},
+            {"key": "jrd_kyi_fixed.chokyoshimei",                  "label": "調教師名",            "type": "code"},
+            {"key": "jrd_kyi_fixed.chokyoshi_shozoku",             "label": "調教師所属",          "type": "code"},
+            {"key": "jrd_kyi_fixed.kishu_minarai_code",            "label": "騎手見習コード",      "type": "code"},
+            {"key": "jrd_kyi_fixed.kyusha_rank",                   "label": "厩舎ランク",          "type": "code"},
+            {"key": "jrd_kyi_fixed.kyusha_hyoka_code",             "label": "厩舎評価コード",      "type": "code"},
+            {"key": "jrd_kyi_fixed.chokyo_yajirushi_code",         "label": "調教矢印コード",      "type": "code"},
         ],
     },
     # =========================================================================
-    # 調教データ
+    # 10. JRDB印
     # =========================================================================
-    "調教データ": {
-        "icon": "🏋",
+    "JRDB印": {
+        "icon": "🔖",
         "factors": [
-            {"key": "jrd_kyi_fixed.chokyo_yajirushi_code", "label": "調教矢印",       "desc": "↑↗→↘↓"},
-            {"key": "jrd_cyb_fixed.chokyo_hyoka",          "label": "調教評価",       "desc": ""},
-            {"key": "jrd_cyb_fixed.chokyo_type",           "label": "調教タイプ",     "desc": ""},
-            {"key": "jrd_cyb_fixed.oikiri_shisu",          "label": "追切指数",       "desc": ""},
-            {"key": "jrd_cyb_fixed.shiage_shisu",          "label": "仕上指数",       "desc": ""},
-            {"key": "jrd_cyb_fixed.chokyo_ryo_hyoka",      "label": "調教量評価",     "desc": ""},
-            {"key": "jrd_cyb_fixed.shiage_shisu_henka",    "label": "仕上指数変化",   "desc": ""},
+            {"key": "jrd_kyi_fixed.shirushi_code_1", "label": "印コード1（本紙）",    "type": "code"},
+            {"key": "jrd_kyi_fixed.shirushi_code_2", "label": "印コード2（IDM）",     "type": "code"},
+            {"key": "jrd_kyi_fixed.shirushi_code_3", "label": "印コード3（情報）",    "type": "code"},
+            {"key": "jrd_kyi_fixed.shirushi_code_4", "label": "印コード4（騎手）",    "type": "code"},
+            {"key": "jrd_kyi_fixed.shirushi_code_5", "label": "印コード5（厩舎）",    "type": "code"},
+            {"key": "jrd_kyi_fixed.shirushi_code_6", "label": "印コード6（調教）",    "type": "code"},
+            {"key": "jrd_kyi_fixed.shirushi_code_7", "label": "印コード7（激走）",    "type": "code"},
+            {"key": "jrd_kyi_fixed.manken_shirushi",  "label": "万券印",               "type": "code"},
         ],
     },
     # =========================================================================
-    # CID・LS指数
+    # 11. レース条件
     # =========================================================================
-    "CID・LS指数": {
-        "icon": "🔬",
+    "レース条件": {
+        "icon": "🏇",
         "factors": [
-            {"key": "jrd_joa_fixed.ls_shisu",        "label": "LS指数",            "desc": ""},
-            {"key": "jrd_joa_fixed.ls_hyoka",        "label": "LS評価",            "desc": ""},
+            {"key": "jrd_kyi_fixed.keibajo_code",  "label": "競馬場コード",      "type": "code"},
+            {"key": "jrd_sed.track_code",          "label": "トラックコード",    "type": "code"},
+            {"key": "jrd_sed.kyori",               "label": "距離（m）",         "type": "numeric"},
+            {"key": "jrd_sed.babajotai_code",      "label": "馬場状態コード",    "type": "code"},
+            {"key": "jrd_sed.tenko_code",          "label": "天候コード",        "type": "code"},
         ],
     },
     # =========================================================================
-    # 馬体・馬具
+    # 12. ローテーション・厩舎
     # =========================================================================
-    "馬体・馬具": {
-        "icon": "🦶",
+    "ローテーション・厩舎": {
+        "icon": "🔄",
         "factors": [
-            {"key": "jrd_skb.tokki_code",            "label": "特記コード",        "desc": ""},
-            {"key": "jrd_skb.bagu_code",             "label": "馬具コード",        "desc": ""},
-            {"key": "jrd_skb.skb_sogo",              "label": "総合評価（馬体）",  "desc": ""},
-            {"key": "jrd_skb.hidarimae",             "label": "左前蹄",            "desc": ""},
-            {"key": "jrd_skb.migimae",               "label": "右前蹄",            "desc": ""},
-            {"key": "jrd_skb.hidariushiro",          "label": "左後蹄",            "desc": ""},
-            {"key": "jrd_skb.migiushiro",            "label": "右後蹄",            "desc": ""},
-            {"key": "jrd_skb.hami",                  "label": "ハミ",              "desc": "馬具"},
-            {"key": "jrd_skb.bandage",               "label": "バンテージ",        "desc": "馬具"},
-            {"key": "jrd_skb.teitetsu",              "label": "蹄鉄",              "desc": ""},
-            {"key": "jrd_skb.hizume_jotai",          "label": "蹄状態",            "desc": ""},
-            {"key": "jrd_skb.soe",                   "label": "ソエ",              "desc": ""},
-            {"key": "jrd_skb.kotsuryu",              "label": "骨瘤",              "desc": ""},
+            {"key": "jrd_kyi_fixed.rotation",              "label": "ローテーション",      "type": "numeric"},
+            {"key": "jrd_kyi_fixed.sanko_zenso",           "label": "参考前走",            "type": "numeric"},
+            {"key": "jrd_kyi_fixed.kyuyo_riyu_bunrui_code","label": "休養理由分類コード",  "type": "code"},
+            {"key": "jrd_kyi_fixed.nyukyu_nansome",        "label": "入厩何ソメ",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.nyukyu_nannichimae",    "label": "入厩何日前",          "type": "numeric"},
+            {"key": "jrd_kyi_fixed.nyukyu_nengappi",       "label": "入厩年月日",          "type": "code"},
+            {"key": "jrd_kyi_fixed.hobokusaki_rank",       "label": "放牧先ランク",        "type": "code"},
+            {"key": "jrd_kyi_fixed.kokyu_flag",            "label": "コ休フラグ",          "type": "code"},
+            {"key": "jrd_kyi_fixed.yuso_kubun",            "label": "輸送区分",            "type": "code"},
         ],
     },
     # =========================================================================
-    # 直前情報（当日）
-    # =========================================================================
-    "直前情報（当日）": {
-        "icon": "⏰",
-        "factors": [
-            {"key": "jrd_tyb.tyb_idm",               "label": "IDM（直前）",           "desc": "当日更新値"},
-            {"key": "jrd_tyb.tyb_kishu_shisu",       "label": "騎手指数（直前）",      "desc": ""},
-            {"key": "jrd_tyb.joho_shisu",            "label": "情報指数",              "desc": ""},
-            {"key": "jrd_tyb.paddock_shisu",         "label": "パドック指数",          "desc": ""},
-            {"key": "jrd_tyb.tyb_sogo_shisu",        "label": "総合指数（直前）",      "desc": ""},
-            {"key": "jrd_tyb.tyb_batai_code",        "label": "馬体コード（直前）",    "desc": ""},
-            {"key": "jrd_tyb.tyb_kehai_code",        "label": "気配コード（直前）",    "desc": ""},
-            {"key": "jrd_tyb.tyb_odds_fukusho",      "label": "複勝オッズ（直前）",    "desc": ""},
-            {"key": "jrd_tyb.odds_shirushi",         "label": "オッズ印",              "desc": ""},
-            {"key": "jrd_tyb.paddock_shirushi",      "label": "パドック印",            "desc": ""},
-            {"key": "jrd_tyb.chokuzen_sogo_shirushi","label": "直前総合印",            "desc": ""},
-        ],
-    },
-    # =========================================================================
-    # 成績データ（確定）
-    # =========================================================================
-    "成績データ（確定）": {
-        "icon": "🏆",
-        "factors": [
-            {"key": "jrd_sed.sed_idm",               "label": "IDM（確定）",           "desc": "確定後のIDM"},
-            {"key": "jrd_sed.soten",                 "label": "素点",                  "desc": ""},
-            {"key": "jrd_sed.babasa",                "label": "馬場差",                "desc": "確定馬場差"},
-            {"key": "jrd_sed.pace",                  "label": "ペース",                "desc": "S/M/H"},
-            {"key": "jrd_sed.deokure",               "label": "出遅れ",                "desc": ""},
-            {"key": "jrd_sed.ichidori",              "label": "位置取り",              "desc": ""},
-            {"key": "jrd_sed.furi",                  "label": "不利",                  "desc": ""},
-            {"key": "jrd_sed.sed_ten_shisu",         "label": "テン指数（確定）",      "desc": ""},
-            {"key": "jrd_sed.sed_agari_shisu",       "label": "上がり指数（確定）",    "desc": ""},
-            {"key": "jrd_sed.sed_pace_shisu",        "label": "ペース指数（確定）",    "desc": ""},
-            {"key": "jrd_sed.race_p_shisu",          "label": "レースP指数",           "desc": ""},
-            {"key": "jrd_sed.race_pace",             "label": "レースペース",          "desc": "S/M/H"},
-            {"key": "jrd_sed.uma_pace",              "label": "馬ペース",              "desc": ""},
-            {"key": "jrd_sed.kyakushitsu_code",      "label": "脚質（確定）",          "desc": "逃/先/差/追"},
-            {"key": "jrd_sed.course_dori_code",      "label": "コース取り",            "desc": ""},
-            {"key": "jrd_sed.joshodo_code",          "label": "上昇度",                "desc": ""},
-            {"key": "jrd_sed.class_code",            "label": "クラス",                "desc": ""},
-            {"key": "jrd_sed.sed_batai_code",        "label": "馬体コード（確定）",    "desc": ""},
-            {"key": "jrd_sed.sed_kehai_code",        "label": "気配コード（確定）",    "desc": ""},
-            {"key": "jrd_sed.zenhan_3f_taimu",       "label": "前半3F",                "desc": "秒"},
-            {"key": "jrd_sed.sed_kohan_3f",          "label": "後半3F（確定）",        "desc": "秒"},
-            {"key": "jrd_sed.haraimodoshi_tansho",   "label": "払戻金（単勝）",        "desc": "円"},
-            {"key": "jrd_sed.haraimodoshi_fukusho",  "label": "払戻金（複勝）",        "desc": "円"},
-            {"key": "jrd_sed.sed_bataiju_zogen",     "label": "馬体重増減（確定）",    "desc": "kg"},
-            {"key": "jrd_sed.sed_odds_fukusho",      "label": "複勝オッズ（確定）",    "desc": ""},
-        ],
-    },
-    # =========================================================================
-    # 過去成績参照
-    # =========================================================================
-    "過去成績参照": {
-        "icon": "📋",
-        "factors": [
-            {"key": "jrd_kka.jra",                   "label": "JRA総合成績",       "desc": ""},
-            {"key": "jrd_kka.koryu",                 "label": "交流成績",          "desc": ""},
-            {"key": "jrd_kka.shiba_dirt",            "label": "芝ダート成績",      "desc": ""},
-            {"key": "jrd_kka.shiba_dirt_kyori",      "label": "芝ダート距離別",    "desc": ""},
-            {"key": "jrd_kka.torakku_kyori",         "label": "トラック距離別",    "desc": ""},
-            {"key": "jrd_kka.rotation",              "label": "ローテーション",    "desc": "前走からの間隔"},
-            {"key": "jrd_kka.mawari",                "label": "回り別成績",        "desc": "右/左"},
-            {"key": "jrd_kka.kishu",                 "label": "騎手別成績",        "desc": ""},
-            {"key": "jrd_kka.ryo",                   "label": "良馬場成績",        "desc": ""},
-            {"key": "jrd_kka.yayaomo",               "label": "稍重成績",          "desc": ""},
-            {"key": "jrd_kka.omo",                   "label": "重馬場成績",        "desc": ""},
-            {"key": "jrd_kka.pace_s",                "label": "Sペース成績",       "desc": ""},
-            {"key": "jrd_kka.pace_m",                "label": "Mペース成績",       "desc": ""},
-            {"key": "jrd_kka.pace_h",                "label": "Hペース成績",       "desc": ""},
-            {"key": "jrd_kka.kisetsu",               "label": "季節別成績",        "desc": ""},
-            {"key": "jrd_kka.waku",                  "label": "枠番別成績",        "desc": ""},
-            {"key": "jrd_kka.kishu_kyori",           "label": "騎手距離別",        "desc": ""},
-            {"key": "jrd_kka.kishu_track",           "label": "騎手トラック別",    "desc": ""},
-            {"key": "jrd_kka.kishu_chokyoshi",       "label": "騎手調教師別",      "desc": ""},
-            {"key": "jrd_kka.kishu_banushi",         "label": "騎手馬主別",        "desc": ""},
-            {"key": "jrd_kka.kishu_blinker",         "label": "騎手ブリンカー別",  "desc": ""},
-            {"key": "jrd_kka.chokyoshi_banushi",     "label": "調教師馬主別",      "desc": ""},
-        ],
-    },
-    # =========================================================================
-    # 血統
+    # 13. 血統
     # =========================================================================
     "血統": {
         "icon": "🧬",
         "factors": [
-            {"key": "jrd_ukc.bamei_chichi",          "label": "父馬名",            "desc": ""},
-            {"key": "jrd_ukc.bamei_haha",            "label": "母馬名",            "desc": ""},
-            {"key": "jrd_ukc.bamei_hahachichi",      "label": "母父馬名（BMS）",   "desc": ""},
-            {"key": "jrd_ukc.keito_code_chichi",     "label": "父系統コード",      "desc": ""},
-            {"key": "jrd_ukc.keito_code_hahachichi", "label": "母父系統コード",    "desc": ""},
-            {"key": "jrd_ukc.ukc_moshoku_code",      "label": "毛色コード",        "desc": ""},
+            {"key": "jrd_ukc.bamei_chichi",           "label": "父馬名",              "type": "code"},
+            {"key": "jrd_ukc.bamei_haha",             "label": "母馬名",              "type": "code"},
+            {"key": "jrd_ukc.bamei_hahachichi",       "label": "母父馬名（BMS）",     "type": "code"},
+            {"key": "jrd_ukc.keito_code_chichi",      "label": "父系統コード",        "type": "code"},
+            {"key": "jrd_ukc.keito_code_hahachichi",  "label": "母父系統コード",      "type": "code"},
+            {"key": "jrd_kka.seiseki_chichi_1",       "label": "父成績1",             "type": "numeric"},
+            {"key": "jrd_kka.seiseki_chichi_2",       "label": "父成績2",             "type": "numeric"},
+            {"key": "jrd_kka.seiseki_chichi_3",       "label": "父成績3",             "type": "numeric"},
+            {"key": "jrd_kka.seiseki_hahachichi_1",   "label": "母父成績1",           "type": "numeric"},
+            {"key": "jrd_kka.seiseki_hahachichi_2",   "label": "母父成績2",           "type": "numeric"},
+            {"key": "jrd_kka.seiseki_hahachichi_3",   "label": "母父成績3",           "type": "numeric"},
         ],
     },
     # =========================================================================
-    # JRA-VAN成績
+    # 14. 直前情報
     # =========================================================================
-    "JRA-VAN成績": {
-        "icon": "📦",
+    "直前情報": {
+        "icon": "⚡",
         "factors": [
-            {"key": "jvd_se.ijo_kubun_code",         "label": "異常区分",          "desc": "0=正常"},
-            {"key": "jvd_se.kakutei_chakujun",       "label": "確定着順",          "desc": ""},
-            {"key": "jvd_se.soha_time",              "label": "走破タイム",        "desc": "0.1秒"},
-            {"key": "jvd_se.corner_1",               "label": "コーナー1位置",     "desc": ""},
-            {"key": "jvd_se.corner_2",               "label": "コーナー2位置",     "desc": ""},
-            {"key": "jvd_se.corner_3",               "label": "コーナー3位置",     "desc": ""},
-            {"key": "jvd_se.corner_4",               "label": "コーナー4位置",     "desc": ""},
-            {"key": "jvd_se.kohan_4f",               "label": "後半4F",            "desc": ""},
-            {"key": "jvd_se.kohan_3f",               "label": "後半3F（JVD）",     "desc": ""},
-            {"key": "jvd_se.time_sa",                "label": "タイム差",          "desc": ""},
-            {"key": "jvd_se.kyakushitsu_hantei",     "label": "脚質判定（JVD）",   "desc": ""},
+            {"key": "jrd_tyb.paddock_shisu",          "label": "パドック指数",        "type": "numeric"},
+            {"key": "jrd_tyb.odds_shisu",             "label": "オッズ指数（直前）",  "type": "numeric"},
+            {"key": "jrd_tyb.chokuzen_sogo_shirushi", "label": "直前総合印",          "type": "code"},
+            {"key": "jrd_tyb.batai_code",             "label": "馬体コード（直前）",  "type": "code"},
+            {"key": "jrd_tyb.kehai_code",             "label": "気配コード（直前）",  "type": "code"},
+        ],
+    },
+    # =========================================================================
+    # 15. 馬具・脚元
+    # =========================================================================
+    "馬具・脚元": {
+        "icon": "🦶",
+        "factors": [
+            {"key": "jrd_skb.tokki_code",    "label": "特記コード",    "type": "code"},
+            {"key": "jrd_skb.bagu_code",     "label": "馬具コード",    "type": "code"},
+            {"key": "jrd_skb.hami",          "label": "ハミ",          "type": "code"},
+            {"key": "jrd_skb.bandage",       "label": "バンテージ",    "type": "code"},
+            {"key": "jrd_skb.teitetsu",      "label": "蹄鉄",          "type": "code"},
+            {"key": "jrd_skb.hizume_jotai",  "label": "蹄状態",        "type": "code"},
+            {"key": "jrd_skb.soe",           "label": "ソエ",          "type": "code"},
+            {"key": "jrd_skb.kotsuryu",      "label": "骨瘤",          "type": "code"},
+        ],
+    },
+    # =========================================================================
+    # 16. 調教
+    # =========================================================================
+    "調教": {
+        "icon": "🏋",
+        "factors": [
+            {"key": "jrd_cha.chokyo_f",        "label": "調教F",           "type": "numeric"},
+            {"key": "jrd_cha.ten_f",           "label": "テンF",           "type": "numeric"},
+            {"key": "jrd_cha.chukan_f",        "label": "中間F",           "type": "numeric"},
+            {"key": "jrd_cha.shimai_f",        "label": "しまいF",         "type": "numeric"},
+            {"key": "jrd_cha.ten_f_shisu",     "label": "テンF指数",       "type": "numeric"},
+            {"key": "jrd_cha.chukan_f_shisu",  "label": "中間F指数",       "type": "numeric"},
+            {"key": "jrd_cha.shimai_f_shisu",  "label": "しまいF指数",     "type": "numeric"},
+            {"key": "jrd_cha.oikiri_shisu",    "label": "追切指数",        "type": "numeric"},
+        ],
+    },
+    # =========================================================================
+    # 17. レースペース・結果
+    # =========================================================================
+    "レースペース・結果": {
+        "icon": "🏁",
+        "factors": [
+            {"key": "jrd_sed.race_pace",       "label": "レースペース",    "type": "code"},
+            {"key": "jrd_sed.uma_pace",        "label": "馬ペース",        "type": "code"},
+            {"key": "jrd_sed.corner_1",        "label": "コーナー1通過順", "type": "numeric"},
+            {"key": "jrd_sed.corner_2",        "label": "コーナー2通過順", "type": "numeric"},
+            {"key": "jrd_sed.corner_3",        "label": "コーナー3通過順", "type": "numeric"},
+            {"key": "jrd_sed.corner_4",        "label": "コーナー4通過順", "type": "numeric"},
+            {"key": "jrd_sed.zenhan_3f_taimu", "label": "前半3Fタイム",    "type": "numeric"},
+            {"key": "jrd_sed.kohan_3f",        "label": "後半3F",          "type": "numeric"},
+        ],
+    },
+    # =========================================================================
+    # 18. フラグ・特定情報
+    # =========================================================================
+    "フラグ・特定情報": {
+        "icon": "🚩",
+        "factors": [
+            {"key": "jrd_kyi_fixed.flag",            "label": "フラグ",          "type": "code"},
+            {"key": "jrd_kyi_fixed.gekiso_type",     "label": "激走タイプ",      "type": "code"},
+            {"key": "jrd_kyi_fixed.tokutei_joho_1",  "label": "特定情報1",       "type": "code"},
+            {"key": "jrd_kyi_fixed.tokutei_joho_2",  "label": "特定情報2",       "type": "code"},
+            {"key": "jrd_kyi_fixed.tokutei_joho_3",  "label": "特定情報3",       "type": "code"},
+            {"key": "jrd_kyi_fixed.tokutei_joho_4",  "label": "特定情報4",       "type": "code"},
+            {"key": "jrd_kyi_fixed.tokutei_joho_5",  "label": "特定情報5",       "type": "code"},
+            {"key": "jrd_kyi_fixed.sogo_joho_1",     "label": "総合情報1",       "type": "code"},
+            {"key": "jrd_kyi_fixed.sogo_joho_2",     "label": "総合情報2",       "type": "code"},
+            {"key": "jrd_kyi_fixed.sogo_joho_3",     "label": "総合情報3",       "type": "code"},
+            {"key": "jrd_kyi_fixed.sogo_joho_4",     "label": "総合情報4",       "type": "code"},
+            {"key": "jrd_kyi_fixed.sogo_joho_5",     "label": "総合情報5",       "type": "code"},
+            {"key": "jrd_kyi_fixed.torikeshi_flag",  "label": "取消フラグ",      "type": "code"},
         ],
     },
 }
