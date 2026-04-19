@@ -1,0 +1,16 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_ダ_中距離,taikei_dou,111,38,59.3,61.2,0.295
+COURSE_27,01_ダ_中距離,taikei_dou,122,33,189.2,144.6,0.276
+COURSE_27,01_ダ_中距離,taikei_dou,211,80,110.1,76.7,0.408
+COURSE_27,01_ダ_中距離,taikei_dou,22,71,43.9,79.1,0.388
+COURSE_27,01_ダ_中距離,taikei_dou,221,164,66.4,66.1,0.539
+COURSE_27,01_ダ_中距離,taikei_dou,222,2246,65.3,80.5,0.921
+COURSE_27,01_ダ_中距離,taikei_dou,223,131,81.1,53.8,0.497
+COURSE_27,01_ダ_中距離,taikei_dou,232,617,60.0,69.8,0.779
+COURSE_27,01_ダ_中距離,taikei_dou,233,518,106.2,93.8,0.751
+COURSE_27,01_ダ_中距離,taikei_dou,32,32,372.0,175.8,0.272
+COURSE_27,01_ダ_中距離,taikei_dou,322,98,89.8,53.0,0.444
+COURSE_27,01_ダ_中距離,taikei_dou,323,164,93.4,101.9,0.539
+COURSE_27,01_ダ_中距離,taikei_dou,33,39,19.5,12.7,0.298
+COURSE_27,01_ダ_中距離,taikei_dou,332,106,62.3,99.5,0.458
+COURSE_27,01_ダ_中距離,taikei_dou,333,345,43.0,66.7,0.681

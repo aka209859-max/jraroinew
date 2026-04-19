@@ -1,0 +1,4 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+blinker,ブリンカー,1,1219,82.0,66.9,0.868
+blinker,ブリンカー,2,304,135.7,82.1,0.657
+blinker,ブリンカー,3,4331,73.2,76.1,0.957

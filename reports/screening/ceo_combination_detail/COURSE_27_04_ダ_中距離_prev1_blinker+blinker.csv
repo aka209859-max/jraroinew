@@ -1,0 +1,5 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,04_ダ_中距離,prev1_blinker+blinker,0|1,279,36.8,53.3,0.641
+COURSE_27,04_ダ_中距離,prev1_blinker+blinker,0|2,60,129.5,60.4,0.361
+COURSE_27,04_ダ_中距離,prev1_blinker+blinker,0|3,43,0.0,61.2,0.312
+COURSE_27,04_ダ_中距離,prev1_blinker+blinker,1|3,955,54.9,72.9,0.84

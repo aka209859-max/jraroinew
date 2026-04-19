@@ -1,0 +1,6 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+kyakushitsu,脚質,0,3954,68.7,75.7,0.953
+kyakushitsu,脚質,1,5653,83.0,79.0,0.966
+kyakushitsu,脚質,2,13267,82.1,77.9,0.985
+kyakushitsu,脚質,3,16271,72.7,79.0,0.988
+kyakushitsu,脚質,4,10853,71.2,73.7,0.982

@@ -1,0 +1,4 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+da_tekisei_code,ダ適性,1,429,69.4,70.0,0.719
+da_tekisei_code,ダ適性,2,11111,80.8,78.9,0.982
+da_tekisei_code,ダ適性,3,17927,76.2,78.1,0.989

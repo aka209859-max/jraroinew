@@ -1,0 +1,6 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+kishu_minarai_code,騎手見習,1,3285,74.8,71.9,0.944
+kishu_minarai_code,騎手見習,2,2398,81.6,95.8,0.926
+kishu_minarai_code,騎手見習,3,4857,73.0,70.6,0.961
+kishu_minarai_code,騎手見習,4,442,110.2,66.7,0.725
+kishu_minarai_code,騎手見習,9,234,36.4,50.0,0.608

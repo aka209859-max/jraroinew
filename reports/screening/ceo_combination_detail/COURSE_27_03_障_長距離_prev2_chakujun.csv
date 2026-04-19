@@ -1,0 +1,17 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,03_障_長距離,prev2_chakujun,1.0,93,35.7,56.8,0.434
+COURSE_27,03_障_長距離,prev2_chakujun,10.0,133,119.5,100.6,0.5
+COURSE_27,03_障_長距離,prev2_chakujun,11.0,113,48.9,58.3,0.469
+COURSE_27,03_障_長距離,prev2_chakujun,12.0,96,258.4,70.0,0.44
+COURSE_27,03_障_長距離,prev2_chakujun,13.0,84,65.1,38.5,0.417
+COURSE_27,03_障_長距離,prev2_chakujun,14.0,56,14.0,27.4,0.35
+COURSE_27,03_障_長距離,prev2_chakujun,15.0,30,36.5,46.3,0.264
+COURSE_27,03_障_長距離,prev2_chakujun,16.0,36,12.1,38.8,0.287
+COURSE_27,03_障_長距離,prev2_chakujun,2.0,128,94.8,78.1,0.492
+COURSE_27,03_障_長距離,prev2_chakujun,3.0,114,79.0,72.7,0.471
+COURSE_27,03_障_長距離,prev2_chakujun,4.0,121,63.1,73.8,0.482
+COURSE_27,03_障_長距離,prev2_chakujun,5.0,134,67.6,87.0,0.501
+COURSE_27,03_障_長距離,prev2_chakujun,6.0,131,37.7,86.4,0.497
+COURSE_27,03_障_長距離,prev2_chakujun,7.0,121,77.0,59.0,0.482
+COURSE_27,03_障_長距離,prev2_chakujun,8.0,145,243.5,116.9,0.516
+COURSE_27,03_障_長距離,prev2_chakujun,9.0,151,66.3,69.1,0.523

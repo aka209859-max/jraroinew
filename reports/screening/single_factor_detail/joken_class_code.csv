@@ -1,0 +1,6 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+joken_class_code,条件クラス,0,24401,74.3,76.6,0.992
+joken_class_code,条件クラス,1,16461,75.9,77.4,0.988
+joken_class_code,条件クラス,2,5449,76.3,79.5,0.965
+joken_class_code,条件クラス,3,1508,101.9,85.8,0.889
+joken_class_code,条件クラス,9,2181,70.3,73.2,0.919

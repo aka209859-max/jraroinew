@@ -1,0 +1,4 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_芝_中距離,tozai_shozoku_code,1,2078,93.8,79.9,0.916
+COURSE_27,01_芝_中距離,tozai_shozoku_code,2,2036,67.7,70.5,0.914
+COURSE_27,01_芝_中距離,tozai_shozoku_code,3,54,17.0,55.4,0.345

@@ -1,0 +1,6 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,04_芝_マイル,kishu_rank,A,2014,88.1,83.0,0.913
+COURSE_27,04_芝_マイル,kishu_rank,B,1355,58.3,68.1,0.879
+COURSE_27,04_芝_マイル,kishu_rank,C,970,64.2,73.8,0.841
+COURSE_27,04_芝_マイル,kishu_rank,D,531,45.2,35.0,0.755
+COURSE_27,04_芝_マイル,kishu_rank,S,1349,81.3,83.4,0.878

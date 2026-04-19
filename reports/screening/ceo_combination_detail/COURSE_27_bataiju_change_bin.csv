@@ -1,0 +1,8 @@
+﻿segment,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,bataiju_change_bin,-10,28491,82.3,79.2,0.993
+COURSE_27,bataiju_change_bin,-20,2807,80.1,79.3,0.936
+COURSE_27,bataiju_change_bin,-30,157,20.0,62.4,0.531
+COURSE_27,bataiju_change_bin,0,36688,80.4,79.7,0.995
+COURSE_27,bataiju_change_bin,10,5684,74.2,77.2,0.967
+COURSE_27,bataiju_change_bin,20,594,117.2,87.5,0.773
+COURSE_27,bataiju_change_bin,30,44,137.5,67.1,0.315

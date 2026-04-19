@@ -1,0 +1,11 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_芝_マイル,taikei_dou,221,36,42.4,51.7,0.287
+COURSE_27,01_芝_マイル,taikei_dou,222,551,71.6,80.6,0.761
+COURSE_27,01_芝_マイル,taikei_dou,223,32,221.1,163.3,0.272
+COURSE_27,01_芝_マイル,taikei_dou,232,207,44.3,100.5,0.584
+COURSE_27,01_芝_マイル,taikei_dou,233,238,32.4,81.4,0.611
+COURSE_27,01_芝_マイル,taikei_dou,322,44,15.3,30.1,0.315
+COURSE_27,01_芝_マイル,taikei_dou,323,48,13.5,65.4,0.327
+COURSE_27,01_芝_マイル,taikei_dou,33,32,15.9,41.1,0.272
+COURSE_27,01_芝_マイル,taikei_dou,332,78,156.8,87.5,0.404
+COURSE_27,01_芝_マイル,taikei_dou,333,150,124.1,99.9,0.522

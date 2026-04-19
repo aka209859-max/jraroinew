@@ -1,0 +1,9 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,05_芝_マイル,wakuban,1,260,192.3,89.6,0.628
+COURSE_27,05_芝_マイル,wakuban,2,271,64.3,61.0,0.636
+COURSE_27,05_芝_マイル,wakuban,3,283,24.9,55.8,0.644
+COURSE_27,05_芝_マイル,wakuban,4,295,54.6,45.7,0.652
+COURSE_27,05_芝_マイル,wakuban,5,313,89.6,73.9,0.663
+COURSE_27,05_芝_マイル,wakuban,6,321,51.8,71.4,0.667
+COURSE_27,05_芝_マイル,wakuban,7,366,62.4,54.7,0.691
+COURSE_27,05_芝_マイル,wakuban,8,378,54.1,58.1,0.697

@@ -1,0 +1,9 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+kakutoku_shokin_ruikei,獲得賞金累計,0.0~110.0,15065,71.6,74.0,0.987
+kakutoku_shokin_ruikei,獲得賞金累計,110.0~280.0,4955,76.1,80.9,0.962
+kakutoku_shokin_ruikei,獲得賞金累計,280.0~590.0,4999,74.0,75.3,0.962
+kakutoku_shokin_ruikei,獲得賞金累計,590.0~880.0,5027,78.0,80.6,0.962
+kakutoku_shokin_ruikei,獲得賞金累計,880.0~1316.0,4955,85.4,78.9,0.962
+kakutoku_shokin_ruikei,獲得賞金累計,1316.0~2060.0,5002,72.4,78.7,0.962
+kakutoku_shokin_ruikei,獲得賞金累計,2060.0~3685.0,4999,81.3,79.1,0.962
+kakutoku_shokin_ruikei,獲得賞金累計,3685.0~66201.0,4998,75.3,77.7,0.962

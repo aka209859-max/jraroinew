@@ -1,0 +1,6 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_芝_長距離,chokyoshi_rank,A,184,82.4,60.6,0.561
+COURSE_27,01_芝_長距離,chokyoshi_rank,B,158,36.5,83.8,0.532
+COURSE_27,01_芝_長距離,chokyoshi_rank,C,122,36.7,69.5,0.483
+COURSE_27,01_芝_長距離,chokyoshi_rank,D,82,29.3,44.7,0.412
+COURSE_27,01_芝_長距離,chokyoshi_rank,S,312,85.8,90.0,0.662

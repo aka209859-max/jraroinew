@@ -1,0 +1,5 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+omo_tekisei_code,重適性,0,562,92.7,78.5,0.764
+omo_tekisei_code,重適性,1,6668,80.1,80.8,0.971
+omo_tekisei_code,重適性,2,17290,70.4,73.6,0.989
+omo_tekisei_code,重適性,3,21489,79.0,79.5,0.991

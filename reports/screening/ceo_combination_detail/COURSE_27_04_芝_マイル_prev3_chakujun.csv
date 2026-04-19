@@ -1,0 +1,17 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,04_芝_マイル,prev3_chakujun,1.0,319,108.3,93.2,0.666
+COURSE_27,04_芝_マイル,prev3_chakujun,10.0,173,73.4,124.5,0.549
+COURSE_27,04_芝_マイル,prev3_chakujun,11.0,170,125.9,64.2,0.546
+COURSE_27,04_芝_マイル,prev3_chakujun,12.0,153,28.6,56.2,0.526
+COURSE_27,04_芝_マイル,prev3_chakujun,13.0,132,9.8,35.5,0.498
+COURSE_27,04_芝_マイル,prev3_chakujun,14.0,124,108.0,121.8,0.486
+COURSE_27,04_芝_マイル,prev3_chakujun,15.0,95,86.6,43.0,0.438
+COURSE_27,04_芝_マイル,prev3_chakujun,16.0,67,4.6,82.9,0.379
+COURSE_27,04_芝_マイル,prev3_chakujun,2.0,321,48.9,78.6,0.667
+COURSE_27,04_芝_マイル,prev3_chakujun,3.0,284,63.5,72.0,0.644
+COURSE_27,04_芝_マイル,prev3_chakujun,4.0,276,127.2,81.7,0.639
+COURSE_27,04_芝_マイル,prev3_chakujun,5.0,261,51.8,72.9,0.628
+COURSE_27,04_芝_マイル,prev3_chakujun,6.0,268,78.7,75.3,0.633
+COURSE_27,04_芝_マイル,prev3_chakujun,7.0,265,68.9,61.4,0.631
+COURSE_27,04_芝_マイル,prev3_chakujun,8.0,240,49.6,53.3,0.612
+COURSE_27,04_芝_マイル,prev3_chakujun,9.0,208,34.1,72.8,0.585

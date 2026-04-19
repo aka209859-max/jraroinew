@@ -1,0 +1,6 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+GLOBAL,ALL,kishu_rank,A,29290,80.5,78.3,0.993
+GLOBAL,ALL,kishu_rank,B,23222,75.9,72.1,0.991
+GLOBAL,ALL,kishu_rank,C,15971,58.9,73.5,0.988
+GLOBAL,ALL,kishu_rank,D,8524,36.9,54.1,0.977
+GLOBAL,ALL,kishu_rank,S,22717,81.8,80.8,0.991

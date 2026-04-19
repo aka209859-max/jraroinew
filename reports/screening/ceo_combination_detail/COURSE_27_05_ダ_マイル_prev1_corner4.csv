@@ -1,0 +1,17 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,05_ダ_マイル,prev1_corner4,01,233,61.6,42.3,0.607
+COURSE_27,05_ダ_マイル,prev1_corner4,02,309,49.1,73.2,0.66
+COURSE_27,05_ダ_マイル,prev1_corner4,03,270,55.2,59.4,0.635
+COURSE_27,05_ダ_マイル,prev1_corner4,04,266,72.2,86.2,0.632
+COURSE_27,05_ダ_マイル,prev1_corner4,05,228,63.8,105.7,0.603
+COURSE_27,05_ダ_マイル,prev1_corner4,06,240,64.3,73.2,0.612
+COURSE_27,05_ダ_マイル,prev1_corner4,07,243,64.7,69.3,0.615
+COURSE_27,05_ダ_マイル,prev1_corner4,08,247,81.4,75.3,0.618
+COURSE_27,05_ダ_マイル,prev1_corner4,09,218,34.1,46.5,0.594
+COURSE_27,05_ダ_マイル,prev1_corner4,10,238,201.1,90.1,0.611
+COURSE_27,05_ダ_マイル,prev1_corner4,11,213,178.9,73.7,0.589
+COURSE_27,05_ダ_マイル,prev1_corner4,12,229,149.1,76.1,0.603
+COURSE_27,05_ダ_マイル,prev1_corner4,13,195,27.9,33.3,0.572
+COURSE_27,05_ダ_マイル,prev1_corner4,14,161,16.8,125.4,0.536
+COURSE_27,05_ダ_マイル,prev1_corner4,15,141,53.7,150.4,0.511
+COURSE_27,05_ダ_マイル,prev1_corner4,16,110,5.0,77.6,0.464

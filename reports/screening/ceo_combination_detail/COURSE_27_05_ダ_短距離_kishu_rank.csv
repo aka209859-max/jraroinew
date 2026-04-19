@@ -1,0 +1,6 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,05_ダ_短距離,kishu_rank,A,126,37.2,37.1,0.489
+COURSE_27,05_ダ_短距離,kishu_rank,B,159,116.6,80.6,0.533
+COURSE_27,05_ダ_短距離,kishu_rank,C,91,5.0,32.6,0.431
+COURSE_27,05_ダ_短距離,kishu_rank,D,106,97.8,45.2,0.458
+COURSE_27,05_ダ_短距離,kishu_rank,S,103,68.9,90.0,0.453

@@ -1,0 +1,17 @@
+﻿segment,factors,bin_label,n,win_roi,place_roi,confidence
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,1|1,3134,77.9,75.9,0.942
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,1|2,235,45.0,65.9,0.608
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,1|3,131,102.5,82.8,0.497
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,1|4,64,23.1,55.1,0.371
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,2|1,1341,98.4,81.0,0.878
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,2|2,6415,85.0,82.3,0.97
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,2|3,2529,89.6,84.4,0.929
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,2|4,473,77.3,81.1,0.736
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,3|1,80,0.0,41.9,0.408
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,3|2,3361,91.7,84.3,0.945
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,3|3,6044,75.3,81.0,0.968
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,3|4,2129,84.7,85.8,0.918
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,4|1,31,72.8,69.1,0.268
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,4|2,558,66.4,68.6,0.763
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,4|3,2332,82.8,76.9,0.924
+SURFACE_2_ダ,prev1_kyakushitsu+kyakushitsu,4|4,3946,67.2,70.4,0.953

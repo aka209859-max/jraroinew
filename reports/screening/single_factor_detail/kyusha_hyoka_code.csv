@@ -1,0 +1,5 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+kyusha_hyoka_code,厩舎評価,1,395,78.1,78.8,0.705
+kyusha_hyoka_code,厩舎評価,2,1352,84.9,80.3,0.878
+kyusha_hyoka_code,厩舎評価,3,45717,77.2,78.4,0.996
+kyusha_hyoka_code,厩舎評価,4,2536,40.4,53.8,0.929

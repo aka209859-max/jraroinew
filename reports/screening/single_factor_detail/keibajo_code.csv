@@ -1,0 +1,5 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+keibajo_code,競馬場,01,16232,71.4,77.3,0.988
+keibajo_code,競馬場,02,12346,76.3,77.9,0.984
+keibajo_code,競馬場,03,20411,79.4,76.9,0.99
+keibajo_code,競馬場,04,1011,78.1,91.3,0.846

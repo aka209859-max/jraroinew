@@ -1,0 +1,11 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+kishu_kitai_rentai_ritsu,騎手期待連対率,0.7~3.2,5081,55.5,70.4,0.963
+kishu_kitai_rentai_ritsu,騎手期待連対率,3.2~3.8,5242,64.0,73.5,0.964
+kishu_kitai_rentai_ritsu,騎手期待連対率,3.8~6.3,4815,90.6,85.1,0.961
+kishu_kitai_rentai_ritsu,騎手期待連対率,6.3~7.2,4870,84.5,74.3,0.961
+kishu_kitai_rentai_ritsu,騎手期待連対率,7.2~10.0,5047,72.3,71.9,0.963
+kishu_kitai_rentai_ritsu,騎手期待連対率,10.0~14.0,4993,79.5,79.0,0.962
+kishu_kitai_rentai_ritsu,騎手期待連対率,14.0~19.1,4980,75.6,78.3,0.962
+kishu_kitai_rentai_ritsu,騎手期待連対率,19.1~26.2,4972,77.6,79.5,0.962
+kishu_kitai_rentai_ritsu,騎手期待連対率,26.2~35.9,5011,78.2,78.8,0.962
+kishu_kitai_rentai_ritsu,騎手期待連対率,35.9~76.3,4989,79.6,82.6,0.962

@@ -1,0 +1,4 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,02_芝_長距離,bamei_chichi,ディープインパクト,32,36.0,51.5,0.272
+COURSE_27,02_芝_長距離,bamei_chichi,ハーツクライ,33,49.6,63.0,0.276
+COURSE_27,02_芝_長距離,bamei_chichi,ハービンジャー,43,82.2,109.9,0.312

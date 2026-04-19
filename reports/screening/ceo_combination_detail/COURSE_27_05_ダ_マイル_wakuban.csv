@@ -1,0 +1,9 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,05_ダ_マイル,wakuban,1,460,19.4,66.5,0.731
+COURSE_27,05_ダ_マイル,wakuban,2,476,96.4,78.1,0.737
+COURSE_27,05_ダ_マイル,wakuban,3,494,73.4,69.8,0.743
+COURSE_27,05_ダ_マイル,wakuban,4,501,50.2,76.9,0.746
+COURSE_27,05_ダ_マイル,wakuban,5,502,106.3,76.4,0.746
+COURSE_27,05_ダ_マイル,wakuban,6,504,66.0,61.3,0.747
+COURSE_27,05_ダ_マイル,wakuban,7,505,113.7,76.6,0.747
+COURSE_27,05_ダ_マイル,wakuban,8,506,63.2,80.0,0.747

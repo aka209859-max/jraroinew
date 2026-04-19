@@ -1,0 +1,6 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,03_芝_中距離,bataiju_change_bin,-10,2114,64.9,74.7,0.917
+COURSE_27,03_芝_中距離,bataiju_change_bin,-20,271,68.0,45.7,0.636
+COURSE_27,03_芝_中距離,bataiju_change_bin,0,2038,58.7,78.5,0.914
+COURSE_27,03_芝_中距離,bataiju_change_bin,10,297,127.5,81.5,0.653
+COURSE_27,03_芝_中距離,bataiju_change_bin,20,44,67.9,32.1,0.315

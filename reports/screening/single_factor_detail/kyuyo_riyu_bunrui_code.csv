@@ -1,0 +1,7 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+kyuyo_riyu_bunrui_code,休養理由,01,8609,95.9,83.1,0.978
+kyuyo_riyu_bunrui_code,休養理由,02,433,49.5,61.6,0.721
+kyuyo_riyu_bunrui_code,休養理由,03,685,67.9,95.1,0.795
+kyuyo_riyu_bunrui_code,休養理由,04,43,5.0,50.2,0.312
+kyuyo_riyu_bunrui_code,休養理由,06,34,0.0,0.0,0.28
+kyuyo_riyu_bunrui_code,休養理由,07,237,25.1,99.9,0.61

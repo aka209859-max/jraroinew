@@ -1,0 +1,4 @@
+﻿segment,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,tozai_shozoku_code,1,51005,79.7,77.5,0.996
+COURSE_27,tozai_shozoku_code,2,30332,83.1,81.3,0.993
+COURSE_27,tozai_shozoku_code,3,117,74.3,89.7,0.476

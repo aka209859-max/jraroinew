@@ -1,0 +1,5 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+kyori_tekisei_2,距離適性2,1,97,47.6,68.2,0.442
+kyori_tekisei_2,距離適性2,2,2776,90.4,81.8,0.935
+kyori_tekisei_2,距離適性2,3,912,62.6,76.4,0.834
+kyori_tekisei_2,距離適性2,5,1932,64.2,79.4,0.91

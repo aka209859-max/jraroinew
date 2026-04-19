@@ -1,0 +1,4 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+pace_yoso,ペース予想,H,28600,75.4,76.4,0.993
+pace_yoso,ペース予想,M,15487,74.8,78.9,0.987
+pace_yoso,ペース予想,S,4445,74.2,78.2,0.958

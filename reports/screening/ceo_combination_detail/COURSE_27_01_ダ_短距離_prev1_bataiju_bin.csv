@@ -1,0 +1,8 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_ダ_短距離,prev1_bataiju_bin,400,72,32.3,57.6,0.391
+COURSE_27,01_ダ_短距離,prev1_bataiju_bin,420,213,64.7,77.6,0.589
+COURSE_27,01_ダ_短距離,prev1_bataiju_bin,440,432,80.6,99.8,0.721
+COURSE_27,01_ダ_短距離,prev1_bataiju_bin,460,472,92.1,71.7,0.736
+COURSE_27,01_ダ_短距離,prev1_bataiju_bin,480,280,65.9,65.6,0.642
+COURSE_27,01_ダ_短距離,prev1_bataiju_bin,500,131,49.3,68.3,0.497
+COURSE_27,01_ダ_短距離,prev1_bataiju_bin,520,49,79.3,85.5,0.33

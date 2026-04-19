@@ -1,0 +1,17 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,02_芝_中距離,prev1_corner4,01,218,53.3,65.6,0.594
+COURSE_27,02_芝_中距離,prev1_corner4,02,325,118.2,85.1,0.67
+COURSE_27,02_芝_中距離,prev1_corner4,03,240,99.9,62.7,0.612
+COURSE_27,02_芝_中距離,prev1_corner4,04,215,45.9,107.7,0.591
+COURSE_27,02_芝_中距離,prev1_corner4,05,208,84.0,70.6,0.585
+COURSE_27,02_芝_中距離,prev1_corner4,06,214,60.6,62.1,0.59
+COURSE_27,02_芝_中距離,prev1_corner4,07,196,88.6,80.2,0.573
+COURSE_27,02_芝_中距離,prev1_corner4,08,210,84.2,74.8,0.587
+COURSE_27,02_芝_中距離,prev1_corner4,09,179,126.9,87.9,0.556
+COURSE_27,02_芝_中距離,prev1_corner4,10,148,90.0,95.0,0.52
+COURSE_27,02_芝_中距離,prev1_corner4,11,139,77.5,54.7,0.508
+COURSE_27,02_芝_中距離,prev1_corner4,12,96,147.0,59.0,0.44
+COURSE_27,02_芝_中距離,prev1_corner4,13,100,0.0,32.4,0.447
+COURSE_27,02_芝_中距離,prev1_corner4,14,80,36.2,49.7,0.408
+COURSE_27,02_芝_中距離,prev1_corner4,15,68,33.4,75.0,0.381
+COURSE_27,02_芝_中距離,prev1_corner4,16,36,46.8,14.4,0.287

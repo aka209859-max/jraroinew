@@ -1,0 +1,6 @@
+﻿segment,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,kishu_rank,A,22028,86.3,81.7,0.991
+COURSE_27,kishu_rank,B,20137,80.4,76.8,0.99
+COURSE_27,kishu_rank,C,12546,73.5,76.4,0.984
+COURSE_27,kishu_rank,D,4757,63.0,68.9,0.96
+COURSE_27,kishu_rank,S,21827,84.3,82.1,0.991

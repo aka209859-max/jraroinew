@@ -1,0 +1,6 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+tenkai_kigo_code,展開記号,0,25222,73.5,75.8,0.992
+tenkai_kigo_code,展開記号,1,4889,86.9,79.0,0.961
+tenkai_kigo_code,展開記号,2,3641,77.0,84.6,0.949
+tenkai_kigo_code,展開記号,3,7298,75.7,85.4,0.974
+tenkai_kigo_code,展開記号,4,7482,71.1,70.5,0.974

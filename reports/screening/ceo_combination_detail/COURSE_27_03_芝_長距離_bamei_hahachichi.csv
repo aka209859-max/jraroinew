@@ -1,0 +1,4 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,03_芝_長距離,bamei_hahachichi,キングカメハメハ,31,80.3,68.5,0.268
+COURSE_27,03_芝_長距離,bamei_hahachichi,サンデーサイレンス,72,8.9,44.2,0.391
+COURSE_27,03_芝_長距離,bamei_hahachichi,ディープインパクト,50,127.0,61.1,0.333

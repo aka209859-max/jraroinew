@@ -1,0 +1,4 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_芝_マイル,tozai_shozoku_code,1,995,64.2,75.2,0.845
+COURSE_27,01_芝_マイル,tozai_shozoku_code,2,939,80.1,85.1,0.837
+COURSE_27,01_芝_マイル,tozai_shozoku_code,3,47,25.3,75.7,0.324

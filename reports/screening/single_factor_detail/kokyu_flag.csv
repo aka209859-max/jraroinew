@@ -1,0 +1,4 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+kokyu_flag,コ休フラグ,0,48861,75.8,77.3,0.996
+kokyu_flag,コ休フラグ,1,1101,72.1,78.2,0.856
+kokyu_flag,コ休フラグ,2,38,37.9,58.6,0.295

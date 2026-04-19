@@ -1,0 +1,6 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_芝_マイル,chokyoshi_rank,A,465,57.3,82.3,0.733
+COURSE_27,01_芝_マイル,chokyoshi_rank,B,348,54.8,68.2,0.682
+COURSE_27,01_芝_マイル,chokyoshi_rank,C,329,68.5,87.5,0.672
+COURSE_27,01_芝_マイル,chokyoshi_rank,D,255,66.7,62.3,0.624
+COURSE_27,01_芝_マイル,chokyoshi_rank,S,564,96.8,87.1,0.765

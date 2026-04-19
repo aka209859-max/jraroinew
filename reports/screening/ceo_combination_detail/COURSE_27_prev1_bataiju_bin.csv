@@ -1,0 +1,12 @@
+﻿segment,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,prev1_bataiju_bin,360,36,0.0,21.4,0.287
+COURSE_27,prev1_bataiju_bin,380,446,30.5,75.2,0.726
+COURSE_27,prev1_bataiju_bin,400,2657,81.0,76.7,0.932
+COURSE_27,prev1_bataiju_bin,420,8347,78.2,81.8,0.977
+COURSE_27,prev1_bataiju_bin,440,16048,82.3,81.2,0.988
+COURSE_27,prev1_bataiju_bin,460,19580,83.6,78.3,0.99
+COURSE_27,prev1_bataiju_bin,480,15602,83.4,78.8,0.987
+COURSE_27,prev1_bataiju_bin,500,8193,74.2,78.9,0.976
+COURSE_27,prev1_bataiju_bin,520,2797,79.0,79.4,0.935
+COURSE_27,prev1_bataiju_bin,540,636,59.7,73.2,0.784
+COURSE_27,prev1_bataiju_bin,560,111,158.3,84.1,0.466

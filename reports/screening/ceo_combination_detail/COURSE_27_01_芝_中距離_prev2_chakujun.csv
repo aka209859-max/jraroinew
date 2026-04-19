@@ -1,0 +1,16 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_芝_中距離,prev2_chakujun,1.0,296,49.3,60.1,0.652
+COURSE_27,01_芝_中距離,prev2_chakujun,10.0,188,125.1,47.6,0.565
+COURSE_27,01_芝_中距離,prev2_chakujun,11.0,166,117.9,83.0,0.542
+COURSE_27,01_芝_中距離,prev2_chakujun,12.0,126,132.1,67.2,0.489
+COURSE_27,01_芝_中距離,prev2_chakujun,13.0,94,13.8,104.4,0.436
+COURSE_27,01_芝_中距離,prev2_chakujun,14.0,75,51.7,19.9,0.397
+COURSE_27,01_芝_中距離,prev2_chakujun,15.0,42,90.9,55.0,0.308
+COURSE_27,01_芝_中距離,prev2_chakujun,2.0,337,79.0,87.0,0.676
+COURSE_27,01_芝_中距離,prev2_chakujun,3.0,346,76.4,60.7,0.681
+COURSE_27,01_芝_中距離,prev2_chakujun,4.0,342,73.2,81.9,0.679
+COURSE_27,01_芝_中距離,prev2_chakujun,5.0,279,65.4,74.7,0.641
+COURSE_27,01_芝_中距離,prev2_chakujun,6.0,315,101.1,75.7,0.664
+COURSE_27,01_芝_中距離,prev2_chakujun,7.0,286,47.8,78.9,0.646
+COURSE_27,01_芝_中距離,prev2_chakujun,8.0,229,104.8,103.3,0.603
+COURSE_27,01_芝_中距離,prev2_chakujun,9.0,243,156.9,110.5,0.615

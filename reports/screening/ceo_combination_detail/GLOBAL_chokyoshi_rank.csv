@@ -1,0 +1,6 @@
+﻿segment,factors,bin_label,n,win_roi,place_roi,confidence
+GLOBAL,chokyoshi_rank,A,17071,87.4,81.5,0.988
+GLOBAL,chokyoshi_rank,B,17077,79.2,76.4,0.988
+GLOBAL,chokyoshi_rank,C,17915,73.7,77.9,0.989
+GLOBAL,chokyoshi_rank,D,10667,67.9,73.3,0.982
+GLOBAL,chokyoshi_rank,S,18654,90.2,83.1,0.989

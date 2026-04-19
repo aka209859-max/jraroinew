@@ -1,0 +1,5 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_ダ_長距離,wakuban,5,38,12.1,118.5,0.295
+COURSE_27,01_ダ_長距離,wakuban,6,44,68.5,96.3,0.315
+COURSE_27,01_ダ_長距離,wakuban,7,46,88.6,88.0,0.321
+COURSE_27,01_ダ_長距離,wakuban,8,46,38.8,83.4,0.321

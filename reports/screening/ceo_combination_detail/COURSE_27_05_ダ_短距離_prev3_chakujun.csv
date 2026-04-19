@@ -1,0 +1,7 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,05_ダ_短距離,prev3_chakujun,1.0,34,11.0,76.8,0.28
+COURSE_27,05_ダ_短距離,prev3_chakujun,3.0,37,45.1,50.4,0.291
+COURSE_27,05_ダ_短距離,prev3_chakujun,4.0,35,20.6,93.1,0.284
+COURSE_27,05_ダ_短距離,prev3_chakujun,5.0,34,98.4,108.2,0.28
+COURSE_27,05_ダ_短距離,prev3_chakujun,6.0,46,195.0,72.0,0.321
+COURSE_27,05_ダ_短距離,prev3_chakujun,7.0,32,9.3,45.4,0.272

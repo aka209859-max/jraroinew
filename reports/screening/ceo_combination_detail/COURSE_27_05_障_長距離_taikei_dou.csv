@@ -1,0 +1,4 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,05_障_長距離,taikei_dou,222,109,45.1,91.9,0.463
+COURSE_27,05_障_長距離,taikei_dou,232,50,35.8,41.4,0.333
+COURSE_27,05_障_長距離,taikei_dou,233,32,375.9,159.8,0.272

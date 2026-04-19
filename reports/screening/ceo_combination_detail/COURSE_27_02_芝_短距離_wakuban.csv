@@ -1,0 +1,9 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,02_芝_短距離,wakuban,1,429,43.6,63.7,0.719
+COURSE_27,02_芝_短距離,wakuban,2,448,42.7,71.5,0.727
+COURSE_27,02_芝_短距離,wakuban,3,466,79.7,100.7,0.734
+COURSE_27,02_芝_短距離,wakuban,4,491,63.6,78.7,0.742
+COURSE_27,02_芝_短距離,wakuban,5,513,74.2,78.1,0.75
+COURSE_27,02_芝_短距離,wakuban,6,542,100.3,80.6,0.759
+COURSE_27,02_芝_短距離,wakuban,7,551,30.9,75.6,0.761
+COURSE_27,02_芝_短距離,wakuban,8,568,66.8,79.7,0.766

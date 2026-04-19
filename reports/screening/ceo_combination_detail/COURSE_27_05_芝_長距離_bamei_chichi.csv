@@ -1,0 +1,4 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,05_芝_長距離,bamei_chichi,ステイゴールド,63,108.9,63.1,0.369
+COURSE_27,05_芝_長距離,bamei_chichi,ディープインパクト,45,124.9,101.9,0.318
+COURSE_27,05_芝_長距離,bamei_chichi,ハーツクライ,31,33.1,44.2,0.268

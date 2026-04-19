@@ -1,0 +1,17 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,04_ダ_中距離,prev1_corner4,01,544,76.1,69.6,0.759
+COURSE_27,04_ダ_中距離,prev1_corner4,02,775,67.4,66.6,0.812
+COURSE_27,04_ダ_中距離,prev1_corner4,03,645,68.0,80.2,0.786
+COURSE_27,04_ダ_中距離,prev1_corner4,04,600,68.7,89.4,0.775
+COURSE_27,04_ダ_中距離,prev1_corner4,05,550,63.4,91.8,0.761
+COURSE_27,04_ダ_中距離,prev1_corner4,06,595,64.8,72.8,0.773
+COURSE_27,04_ダ_中距離,prev1_corner4,07,576,85.8,74.8,0.768
+COURSE_27,04_ダ_中距離,prev1_corner4,08,548,111.1,72.1,0.76
+COURSE_27,04_ダ_中距離,prev1_corner4,09,500,62.9,74.4,0.745
+COURSE_27,04_ダ_中距離,prev1_corner4,10,487,91.5,103.1,0.741
+COURSE_27,04_ダ_中距離,prev1_corner4,11,476,28.3,82.7,0.737
+COURSE_27,04_ダ_中距離,prev1_corner4,12,411,35.3,57.5,0.712
+COURSE_27,04_ダ_中距離,prev1_corner4,13,342,117.3,90.2,0.679
+COURSE_27,04_ダ_中距離,prev1_corner4,14,282,38.3,36.7,0.643
+COURSE_27,04_ダ_中距離,prev1_corner4,15,213,75.7,94.6,0.589
+COURSE_27,04_ダ_中距離,prev1_corner4,16,132,19.3,55.7,0.498

@@ -1,0 +1,6 @@
+﻿rank,segment,factors,grade,mark,score_std,n_bins,edge_bins,avg_win_roi,avg_place_roi,best_bin_win_roi,best_bin_place_roi,total_samples
+1,COURSE_27,prev1_blinker+blinker,B,★,2.6,4,1,70.8,77.4,102.3,92.3,9389
+2,COURSE_27,prev1_chakujun,B,★,2.443,18,2,85.9,82.6,178.6,141.8,74894
+3,COURSE_27,prev2_chakujun,B,★,2.157,18,2,80.5,81.9,129.1,120.0,69758
+4,COURSE_27,prev1_corner4,C,,1.166,19,0,76.0,77.2,99.3,90.3,74894
+5,COURSE_27,prev3_chakujun,C,,1.088,18,1,79.0,78.2,101.9,88.8,65202

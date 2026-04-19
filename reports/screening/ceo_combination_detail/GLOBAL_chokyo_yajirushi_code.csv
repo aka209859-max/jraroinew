@@ -1,0 +1,5 @@
+﻿segment,factors,bin_label,n,win_roi,place_roi,confidence
+GLOBAL,chokyo_yajirushi_code,1,914,81.0,86.3,0.834
+GLOBAL,chokyo_yajirushi_code,2,20878,81.2,81.4,0.991
+GLOBAL,chokyo_yajirushi_code,3,58268,81.7,78.4,0.997
+GLOBAL,chokyo_yajirushi_code,4,1396,37.6,62.4,0.882

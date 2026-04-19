@@ -1,0 +1,13 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,01_芝_中距離,taikei_dou,211,43,141.7,62.3,0.312
+COURSE_27,01_芝_中距離,taikei_dou,22,51,30.2,79.4,0.336
+COURSE_27,01_芝_中距離,taikei_dou,221,80,33.0,74.0,0.408
+COURSE_27,01_芝_中距離,taikei_dou,222,1549,69.0,75.3,0.891
+COURSE_27,01_芝_中距離,taikei_dou,223,114,54.3,47.7,0.471
+COURSE_27,01_芝_中距離,taikei_dou,232,579,64.2,81.5,0.769
+COURSE_27,01_芝_中距離,taikei_dou,233,483,72.2,63.5,0.74
+COURSE_27,01_芝_中距離,taikei_dou,322,82,73.7,76.9,0.412
+COURSE_27,01_芝_中距離,taikei_dou,323,131,139.0,79.3,0.497
+COURSE_27,01_芝_中距離,taikei_dou,33,32,7.2,160.8,0.272
+COURSE_27,01_芝_中距離,taikei_dou,332,80,265.6,104.9,0.408
+COURSE_27,01_芝_中距離,taikei_dou,333,258,167.8,87.7,0.626

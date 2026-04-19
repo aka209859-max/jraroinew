@@ -1,0 +1,4 @@
+﻿factor,label,bin_label,n,win_roi,place_roi,confidence
+shiba_tekisei_code,芝適性,1,1886,68.4,71.6,0.908
+shiba_tekisei_code,芝適性,2,14505,79.8,79.0,0.986
+shiba_tekisei_code,芝適性,3,20816,73.0,76.6,0.991

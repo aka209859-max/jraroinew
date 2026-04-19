@@ -1,0 +1,4 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,05_ダ_長距離,bamei_chichi,キングカメハメハ,50,56.2,191.4,0.333
+COURSE_27,05_ダ_長距離,bamei_chichi,シンボリクリスエス,31,45.8,121.5,0.268
+COURSE_27,05_ダ_長距離,bamei_chichi,ディープスカイ,30,44.4,186.9,0.264

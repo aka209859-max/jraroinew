@@ -1,0 +1,9 @@
+﻿segment,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,wakuban,1,7721,80.4,76.6,0.975
+COURSE_27,wakuban,2,8766,89.3,79.0,0.978
+COURSE_27,wakuban,3,9613,80.4,77.6,0.98
+COURSE_27,wakuban,4,10104,78.6,74.6,0.981
+COURSE_27,wakuban,5,10695,78.9,79.7,0.982
+COURSE_27,wakuban,6,11039,79.8,82.8,0.982
+COURSE_27,wakuban,7,11599,80.6,80.1,0.983
+COURSE_27,wakuban,8,11921,81.7,80.3,0.984

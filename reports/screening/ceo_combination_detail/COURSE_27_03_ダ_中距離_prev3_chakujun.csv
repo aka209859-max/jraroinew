@@ -1,0 +1,17 @@
+﻿segment,segment_value,factors,bin_label,n,win_roi,place_roi,confidence
+COURSE_27,03_ダ_中距離,prev3_chakujun,1.0,411,60.7,60.5,0.712
+COURSE_27,03_ダ_中距離,prev3_chakujun,10.0,292,109.1,74.0,0.65
+COURSE_27,03_ダ_中距離,prev3_chakujun,11.0,251,103.0,75.8,0.621
+COURSE_27,03_ダ_中距離,prev3_chakujun,12.0,235,77.1,52.6,0.608
+COURSE_27,03_ダ_中距離,prev3_chakujun,13.0,186,34.0,64.7,0.563
+COURSE_27,03_ダ_中距離,prev3_chakujun,14.0,154,15.1,60.7,0.527
+COURSE_27,03_ダ_中距離,prev3_chakujun,15.0,99,7.7,61.2,0.445
+COURSE_27,03_ダ_中距離,prev3_chakujun,16.0,67,2.4,39.4,0.379
+COURSE_27,03_ダ_中距離,prev3_chakujun,2.0,389,37.1,56.1,0.702
+COURSE_27,03_ダ_中距離,prev3_chakujun,3.0,430,141.9,93.8,0.72
+COURSE_27,03_ダ_中距離,prev3_chakujun,4.0,425,96.4,80.4,0.718
+COURSE_27,03_ダ_中距離,prev3_chakujun,5.0,412,114.2,84.6,0.712
+COURSE_27,03_ダ_中距離,prev3_chakujun,6.0,363,117.8,122.9,0.69
+COURSE_27,03_ダ_中距離,prev3_chakujun,7.0,360,87.0,79.6,0.688
+COURSE_27,03_ダ_中距離,prev3_chakujun,8.0,336,96.0,54.0,0.676
+COURSE_27,03_ダ_中距離,prev3_chakujun,9.0,319,64.7,65.1,0.666
