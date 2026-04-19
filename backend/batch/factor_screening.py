@@ -609,6 +609,8 @@ def _bin_stats(grp: pd.DataFrame) -> Dict:
     n = len(grp)
     w = grp["year_weight"]
     w_sum = float(w.sum())
+    win_count = int((grp["haraimodoshi_tansho"] > 0).sum())
+    win_rate = round(win_count / n * 100, 1) if n > 0 else 0.0
     win_roi = (
         float((grp["haraimodoshi_tansho"] * w).sum()) / (w_sum * 100) * 100
         if w_sum > 0 else 0.0
@@ -620,6 +622,8 @@ def _bin_stats(grp: pd.DataFrame) -> Dict:
     confidence = math.sqrt(n / (n + 400))
     return {
         "n": n,
+        "win_count": win_count,
+        "win_rate": win_rate,
         "win_roi": round(win_roi, 1),
         "place_roi": round(place_roi, 1),
         "confidence": round(confidence, 3),
