@@ -1,0 +1,2829 @@
+=================================================================
+採用ファクター一覧（式2適用）
+合計: 565ファクター / 28,650ビン
+=================================================================
+
+[No.001] KEIBAJO_SURFACE_01_ダ | kishu_rank
+  - type: code | grade: C | score_std: 0.853
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 5 | pass_rate: 1.000
+  - avg_place_roi: 85.2% | avg_win_roi: 72.0%
+
+[No.002] KEIBAJO_SURFACE_01_ダ | barei
+  - type: numeric | grade: C | score_std: 1.620
+  - total_bins: 6 | valid_bins: 5 | pass_bins: 5 | pass_rate: 1.000
+  - avg_place_roi: 84.6% | avg_win_roi: 79.1%
+
+[No.003] KEIBAJO_SURFACE_01_ダ | babajotai_heavy
+  - type: code | grade: C | score_std: 1.017
+  - total_bins: 3 | valid_bins: 3 | pass_bins: 3 | pass_rate: 1.000
+  - avg_place_roi: 84.2% | avg_win_roi: 83.5%
+
+[No.004] KEIBAJO_SURFACE_01_ダ | uma_deokure_ritsu
+  - type: numeric | grade: C | score_std: 0.721
+  - total_bins: 34 | valid_bins: 15 | pass_bins: 13 | pass_rate: 0.867
+  - avg_place_roi: 86.8% | avg_win_roi: 73.3%
+
+[No.005] KEIBAJO_SURFACE_01_ダ | kyi_kyusha_rank
+  - type: numeric | grade: C | score_std: 0.357
+  - total_bins: 7 | valid_bins: 7 | pass_bins: 6 | pass_rate: 0.857
+  - avg_place_roi: 84.2% | avg_win_roi: 79.1%
+
+[No.006] KEIBAJO_SURFACE_01_ダ | shirushi_code_1
+  - type: numeric | grade: C | score_std: 0.930
+  - total_bins: 7 | valid_bins: 7 | pass_bins: 6 | pass_rate: 0.857
+  - avg_place_roi: 81.6% | avg_win_roi: 75.7%
+
+[No.007] KEIBAJO_SURFACE_01_ダ | gekiso_type
+  - type: code | grade: C | score_std: 1.208
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 5 | pass_rate: 0.833
+  - avg_place_roi: 98.0% | avg_win_roi: 75.2%
+
+[No.008] KEIBAJO_SURFACE_05_芝 | shirushi_code_5
+  - type: numeric | grade: B | score_std: 2.192
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 5 | pass_rate: 0.833
+  - avg_place_roi: 85.5% | avg_win_roi: 81.9%
+
+[No.009] KEIBAJO_SURFACE_01_ダ | shirushi_code_2
+  - type: numeric | grade: C | score_std: 1.140
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 5 | pass_rate: 0.833
+  - avg_place_roi: 84.1% | avg_win_roi: 77.4%
+
+[No.010] KEIBAJO_SURFACE_02_ダ | shirushi_code_6
+  - type: numeric | grade: C | score_std: 0.448
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 5 | pass_rate: 0.833
+  - avg_place_roi: 83.9% | avg_win_roi: 81.3%
+
+[No.011] KEIBAJO_SURFACE_03_ダ | shirushi_code_2
+  - type: numeric | grade: C | score_std: 1.730
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 5 | pass_rate: 0.833
+  - avg_place_roi: 83.0% | avg_win_roi: 84.6%
+
+[No.012] KEIBAJO_SURFACE_04_芝 | agari_shisu
+  - type: numeric | grade: C | score_std: 0.750
+  - total_bins: 202 | valid_bins: 6 | pass_bins: 5 | pass_rate: 0.833
+  - avg_place_roi: 75.8% | avg_win_roi: 77.0%
+
+[No.013] KEIBAJO_SURFACE_01_ダ | kyakushitsu
+  - type: numeric | grade: C | score_std: 0.582
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 88.5% | avg_win_roi: 79.7%
+
+[No.014] KEIBAJO_SURFACE_01_ダ | prev1_keibajo
+  - type: numeric | grade: C | score_std: 1.254
+  - total_bins: 11 | valid_bins: 10 | pass_bins: 8 | pass_rate: 0.800
+  - avg_place_roi: 86.8% | avg_win_roi: 84.6%
+
+[No.015] KEIBAJO_SURFACE_01_ダ | joken_class_code
+  - type: numeric | grade: C | score_std: 0.591
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 85.9% | avg_win_roi: 81.6%
+
+[No.016] KEIBAJO_SURFACE_01_ダ | yuso_kubun
+  - type: numeric | grade: C | score_std: 0.366
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 84.8% | avg_win_roi: 71.6%
+
+[No.017] KEIBAJO_SURFACE_01_ダ | chokyoshi_rank
+  - type: code | grade: C | score_std: 0.959
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 84.2% | avg_win_roi: 80.5%
+
+[No.018] KEIBAJO_SURFACE_01_ダ | bac_tosu
+  - type: numeric | grade: C | score_std: 1.131
+  - total_bins: 7 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 83.7% | avg_win_roi: 73.7%
+
+[No.019] KEIBAJO_SURFACE_03_芝 | agari_shisu
+  - type: numeric | grade: C | score_std: 1.865
+  - total_bins: 147 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 81.6% | avg_win_roi: 78.9%
+
+[No.020] KEIBAJO_SURFACE_01_ダ | moshoku_code
+  - type: numeric | grade: C | score_std: 1.501
+  - total_bins: 6 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 81.3% | avg_win_roi: 73.9%
+
+[No.021] KEIBAJO_SURFACE_03_芝 | pace_shisu
+  - type: numeric | grade: C | score_std: 1.376
+  - total_bins: 146 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 81.3% | avg_win_roi: 79.0%
+
+[No.022] KEIBAJO_SURFACE_01_芝 | tenkai_kigo_code
+  - type: numeric | grade: C | score_std: 0.674
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 80.9% | avg_win_roi: 80.4%
+
+[No.023] KEIBAJO_SURFACE_01_芝 | ten_shisu
+  - type: numeric | grade: C | score_std: 1.726
+  - total_bins: 95 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 79.1% | avg_win_roi: 72.1%
+
+[No.024] GLOBAL | kishu_minarai_code+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 6.501
+  - total_bins: 12 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 78.8% | avg_win_roi: 76.6%
+
+[No.025] KEIBAJO_SURFACE_05_ダ | kijun_odds_fukusho
+  - type: numeric | grade: A | score_std: 3.258
+  - total_bins: 44 | valid_bins: 5 | pass_bins: 4 | pass_rate: 0.800
+  - avg_place_roi: 72.9% | avg_win_roi: 68.7%
+
+[No.026] KEIBAJO_SURFACE_01_ダ | sanchimei
+  - type: code | grade: A | score_std: 3.960
+  - total_bins: 12 | valid_bins: 9 | pass_bins: 7 | pass_rate: 0.778
+  - avg_place_roi: 82.3% | avg_win_roi: 78.4%
+
+[No.027] SURFACE_2_ダ | kyori_tekisei_2+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.024
+  - total_bins: 21 | valid_bins: 13 | pass_bins: 10 | pass_rate: 0.769
+  - avg_place_roi: 75.7% | avg_win_roi: 66.8%
+
+[No.028] KEIBAJO_SURFACE_01_芝 | kakutoku_shokin_ruikei
+  - type: numeric | grade: C | score_std: 0.945
+  - total_bins: 15 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 92.5% | avg_win_roi: 86.8%
+
+[No.029] KEIBAJO_SURFACE_01_ダ | manken_shirushi
+  - type: numeric | grade: C | score_std: 1.731
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 6 | pass_rate: 0.750
+  - avg_place_roi: 85.7% | avg_win_roi: 78.2%
+
+[No.030] KEIBAJO_SURFACE_01_ダ | prev1_corner4_bin
+  - type: code | grade: C | score_std: 0.978
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 85.6% | avg_win_roi: 84.5%
+
+[No.031] KEIBAJO_SURFACE_01_ダ | babajotai_code_dirt
+  - type: numeric | grade: C | score_std: 0.917
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 83.7% | avg_win_roi: 80.7%
+
+[No.032] KEIBAJO_SURFACE_01_ダ | bataiju_change_bin
+  - type: numeric | grade: C | score_std: 0.878
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 83.0% | avg_win_roi: 83.8%
+
+[No.033] KEIBAJO_SURFACE_01_ダ | futan_juryo
+  - type: numeric | grade: B | score_std: 2.466
+  - total_bins: 10 | valid_bins: 8 | pass_bins: 6 | pass_rate: 0.750
+  - avg_place_roi: 82.5% | avg_win_roi: 78.4%
+
+[No.034] KEIBAJO_SURFACE_02_芝 | bac_juryo_shubetsu_code
+  - type: numeric | grade: C | score_std: 0.930
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 81.4% | avg_win_roi: 77.1%
+
+[No.035] KEIBAJO_SURFACE_01_ダ | kyori_tekisei
+  - type: numeric | grade: C | score_std: 0.475
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 81.0% | avg_win_roi: 77.0%
+
+[No.036] KEIBAJO_SURFACE_01_芝 | manken_shirushi
+  - type: numeric | grade: C | score_std: 1.916
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 6 | pass_rate: 0.750
+  - avg_place_roi: 80.9% | avg_win_roi: 77.9%
+
+[No.037] KEIBAJO_SURFACE_01_ダ | uma_tokki_1
+  - type: numeric | grade: C | score_std: 1.216
+  - total_bins: 37 | valid_bins: 12 | pass_bins: 9 | pass_rate: 0.750
+  - avg_place_roi: 80.3% | avg_win_roi: 91.4%
+
+[No.038] SURFACE_2_ダ | kishu_minarai_code+prev1_bataiju
+  - type: combo | grade: S | score_std: 7.405
+  - total_bins: 112 | valid_bins: 8 | pass_bins: 6 | pass_rate: 0.750
+  - avg_place_roi: 79.1% | avg_win_roi: 79.9%
+
+[No.039] KEIBAJO_SURFACE_01_芝 | yuso_kubun
+  - type: numeric | grade: C | score_std: 0.929
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 79.1% | avg_win_roi: 63.5%
+
+[No.040] KEIBAJO_SURFACE_03_ダ | prev1_kyakushitsu
+  - type: numeric | grade: C | score_std: 1.178
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 78.7% | avg_win_roi: 84.7%
+
+[No.041] KEIBAJO_SURFACE_03_ダ | prev1_corner4_bin
+  - type: code | grade: C | score_std: 1.264
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 78.5% | avg_win_roi: 81.8%
+
+[No.042] KEIBAJO_SURFACE_03_ダ | kyori_tekisei
+  - type: numeric | grade: C | score_std: 0.771
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 72.7% | avg_win_roi: 100.2%
+
+[No.043] KEIBAJO_SURFACE_02_芝 | kishu_rank
+  - type: code | grade: C | score_std: 0.993
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 3 | pass_rate: 0.750
+  - avg_place_roi: 67.1% | avg_win_roi: 70.0%
+
+[No.044] KEIBAJO_SURFACE_01_ダ | ichi_shisu_juni
+  - type: numeric | grade: B | score_std: 2.009
+  - total_bins: 14 | valid_bins: 14 | pass_bins: 10 | pass_rate: 0.714
+  - avg_place_roi: 85.5% | avg_win_roi: 83.0%
+
+[No.045] KEIBAJO_SURFACE_01_ダ | umaban_clean
+  - type: numeric | grade: C | score_std: 1.680
+  - total_bins: 14 | valid_bins: 14 | pass_bins: 10 | pass_rate: 0.714
+  - avg_place_roi: 85.0% | avg_win_roi: 80.3%
+
+[No.046] KEIBAJO_SURFACE_01_ダ | shutoku_shokin_ruikei
+  - type: numeric | grade: C | score_std: 0.892
+  - total_bins: 9 | valid_bins: 7 | pass_bins: 5 | pass_rate: 0.714
+  - avg_place_roi: 84.8% | avg_win_roi: 92.1%
+
+[No.047] KEIBAJO_SURFACE_05_芝 | shirushi_code_1
+  - type: numeric | grade: B | score_std: 2.167
+  - total_bins: 7 | valid_bins: 7 | pass_bins: 5 | pass_rate: 0.714
+  - avg_place_roi: 81.8% | avg_win_roi: 78.4%
+
+[No.048] KEIBAJO_SURFACE_03_ダ | shirushi_code_1
+  - type: numeric | grade: C | score_std: 1.644
+  - total_bins: 7 | valid_bins: 7 | pass_bins: 5 | pass_rate: 0.714
+  - avg_place_roi: 81.7% | avg_win_roi: 80.4%
+
+[No.049] KEIBAJO_SURFACE_01_ダ | kohan_3f_sa
+  - type: numeric | grade: C | score_std: 1.711
+  - total_bins: 20 | valid_bins: 17 | pass_bins: 12 | pass_rate: 0.706
+  - avg_place_roi: 88.4% | avg_win_roi: 83.8%
+
+[No.050] KEIBAJO_SURFACE_01_ダ | rotation
+  - type: numeric | grade: B | score_std: 2.060
+  - total_bins: 19 | valid_bins: 10 | pass_bins: 7 | pass_rate: 0.700
+  - avg_place_roi: 89.2% | avg_win_roi: 86.4%
+
+[No.051] KEIBAJO_SURFACE_01_ダ | yy_int
+  - type: numeric | grade: C | score_std: 0.738
+  - total_bins: 10 | valid_bins: 10 | pass_bins: 7 | pass_rate: 0.700
+  - avg_place_roi: 85.0% | avg_win_roi: 82.5%
+
+[No.052] KEIBAJO_SURFACE_02_ダ | kijun_odds_fukusho
+  - type: numeric | grade: C | score_std: 1.693
+  - total_bins: 44 | valid_bins: 13 | pass_bins: 9 | pass_rate: 0.692
+  - avg_place_roi: 70.5% | avg_win_roi: 72.2%
+
+[No.053] KEIBAJO_SURFACE_03_芝 | prev2_chakujun
+  - type: numeric | grade: C | score_std: 1.219
+  - total_bins: 18 | valid_bins: 16 | pass_bins: 11 | pass_rate: 0.688
+  - avg_place_roi: 85.0% | avg_win_roi: 85.4%
+
+[No.054] SURFACE_2_ダ | kyori_tekisei_2+prev1_corner4
+  - type: combo | grade: S | score_std: 5.498
+  - total_bins: 37 | valid_bins: 16 | pass_bins: 11 | pass_rate: 0.688
+  - avg_place_roi: 75.8% | avg_win_roi: 78.1%
+
+[No.055] SURFACE_2_ダ | kyori_tekisei_2+yy_int
+  - type: combo | grade: A | score_std: 3.189
+  - total_bins: 28 | valid_bins: 19 | pass_bins: 13 | pass_rate: 0.684
+  - avg_place_roi: 78.8% | avg_win_roi: 73.5%
+
+[No.056] KEIBAJO_SURFACE_01_ダ | pace_yoso
+  - type: code | grade: C | score_std: 0.657
+  - total_bins: 3 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 93.4% | avg_win_roi: 76.5%
+
+[No.057] KEIBAJO_SURFACE_05_芝 | pace_shisu
+  - type: numeric | grade: B | score_std: 2.321
+  - total_bins: 6 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 93.0% | avg_win_roi: 114.2%
+
+[No.058] KEIBAJO_SURFACE_01_ダ | ls_shisu_juni
+  - type: numeric | grade: B | score_std: 2.494
+  - total_bins: 9 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 92.8% | avg_win_roi: 81.9%
+
+[No.059] SURFACE_2_ダ | kishu_minarai_code+kyori_tekisei_2
+  - type: combo | grade: B | score_std: 2.614
+  - total_bins: 6 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 91.1% | avg_win_roi: 66.8%
+
+[No.060] KEIBAJO_SURFACE_01_ダ | bac_jouken
+  - type: code | grade: C | score_std: 0.996
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 89.7% | avg_win_roi: 81.1%
+
+[No.061] KEIBAJO_SURFACE_04_ダ | omo_tekisei_code
+  - type: numeric | grade: C | score_std: 0.687
+  - total_bins: 4 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 89.0% | avg_win_roi: 93.9%
+
+[No.062] KEIBAJO_SURFACE_05_芝 | agari_shisu
+  - type: numeric | grade: A | score_std: 3.597
+  - total_bins: 4 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 88.1% | avg_win_roi: 108.3%
+
+[No.063] COURSE_27 | tozai_shozoku_code
+  - type: combo | grade: S | score_std: 6.830
+  - total_bins: 3 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 85.1% | avg_win_roi: 99.4%
+
+[No.064] KEIBAJO_SURFACE_05_ダ | shirushi_code_2
+  - type: numeric | grade: C | score_std: 1.856
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 84.8% | avg_win_roi: 81.5%
+
+[No.065] KEIBAJO_SURFACE_05_ダ | kishu_kitai_rentai_ritsu
+  - type: numeric | grade: C | score_std: 1.406
+  - total_bins: 17 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 83.6% | avg_win_roi: 62.8%
+
+[No.066] KEIBAJO_SURFACE_01_芝 | kyori_tekisei_2
+  - type: numeric | grade: C | score_std: 1.822
+  - total_bins: 3 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 82.6% | avg_win_roi: 84.5%
+
+[No.067] KEIBAJO_SURFACE_02_ダ | shirushi_code_3
+  - type: numeric | grade: C | score_std: 1.337
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 82.5% | avg_win_roi: 76.3%
+
+[No.068] KEIBAJO_SURFACE_03_芝 | babajotai_heavy
+  - type: code | grade: C | score_std: 0.434
+  - total_bins: 3 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 82.5% | avg_win_roi: 87.7%
+
+[No.069] KEIBAJO_SURFACE_05_芝 | shirushi_code_4
+  - type: numeric | grade: C | score_std: 1.311
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 82.3% | avg_win_roi: 76.6%
+
+[No.070] KEIBAJO_SURFACE_01_ダ | omo_tekisei_code
+  - type: numeric | grade: C | score_std: 0.321
+  - total_bins: 4 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 82.1% | avg_win_roi: 91.5%
+
+[No.071] KEIBAJO_SURFACE_02_芝 | shutoku_shokin_ruikei
+  - type: numeric | grade: C | score_std: 1.269
+  - total_bins: 11 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 81.8% | avg_win_roi: 97.1%
+
+[No.072] KEIBAJO_SURFACE_01_ダ | shirushi_code_6
+  - type: numeric | grade: C | score_std: 1.163
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 81.7% | avg_win_roi: 83.3%
+
+[No.073] SURFACE_2_ダ | chokyo_yajirushi_code+shirushi_code_1
+  - type: combo | grade: S | score_std: 5.871
+  - total_bins: 20 | valid_bins: 15 | pass_bins: 10 | pass_rate: 0.667
+  - avg_place_roi: 81.5% | avg_win_roi: 82.7%
+
+[No.074] KEIBAJO_SURFACE_05_芝 | shirushi_code_2
+  - type: numeric | grade: C | score_std: 1.694
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 81.5% | avg_win_roi: 78.9%
+
+[No.075] KEIBAJO_SURFACE_01_ダ | uma_start_shisu
+  - type: numeric | grade: C | score_std: 1.469
+  - total_bins: 21 | valid_bins: 15 | pass_bins: 10 | pass_rate: 0.667
+  - avg_place_roi: 81.3% | avg_win_roi: 73.1%
+
+[No.076] KEIBAJO_SURFACE_05_芝 | shirushi_code_6
+  - type: numeric | grade: C | score_std: 0.828
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 80.9% | avg_win_roi: 66.5%
+
+[No.077] SURFACE_2_ダ | shirushi_code_2
+  - type: numeric | grade: C | score_std: 0.371
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 80.9% | avg_win_roi: 81.2%
+
+[No.078] SURFACE_2_ダ | nyukyu_nannichimae+shirushi_code_1
+  - type: combo | grade: A | score_std: 4.285
+  - total_bins: 110 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 80.8% | avg_win_roi: 82.1%
+
+[No.079] KEIBAJO_SURFACE_01_ダ | shirushi_code_5
+  - type: numeric | grade: C | score_std: 1.325
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 80.7% | avg_win_roi: 81.0%
+
+[No.080] KEIBAJO_SURFACE_04_ダ | pace_yoso
+  - type: code | grade: C | score_std: 1.145
+  - total_bins: 3 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 80.5% | avg_win_roi: 95.9%
+
+[No.081] SURFACE_2_ダ | futan_juryo+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 4.016
+  - total_bins: 20 | valid_bins: 15 | pass_bins: 10 | pass_rate: 0.667
+  - avg_place_roi: 80.0% | avg_win_roi: 76.7%
+
+[No.082] KEIBAJO_SURFACE_03_芝 | moshoku_code
+  - type: numeric | grade: C | score_std: 1.148
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 80.0% | avg_win_roi: 80.6%
+
+[No.083] SURFACE_2_ダ | shirushi_code_5
+  - type: numeric | grade: C | score_std: 0.487
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 79.8% | avg_win_roi: 78.6%
+
+[No.084] KEIBAJO_SURFACE_03_ダ | uma_tokki_3
+  - type: numeric | grade: C | score_std: 1.686
+  - total_bins: 27 | valid_bins: 9 | pass_bins: 6 | pass_rate: 0.667
+  - avg_place_roi: 79.7% | avg_win_roi: 86.4%
+
+[No.085] SURFACE_2_ダ | kijun_ninkijun_fukusho+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 5.463
+  - total_bins: 35 | valid_bins: 18 | pass_bins: 12 | pass_rate: 0.667
+  - avg_place_roi: 78.6% | avg_win_roi: 82.4%
+
+[No.086] SURFACE_2_芝 | kyori_tekisei_2+manken_shisu
+  - type: combo | grade: S | score_std: 5.847
+  - total_bins: 88 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 78.5% | avg_win_roi: 78.6%
+
+[No.087] SURFACE_2_ダ | kijun_ninkijun_tansho+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 5.526
+  - total_bins: 36 | valid_bins: 18 | pass_bins: 12 | pass_rate: 0.667
+  - avg_place_roi: 77.5% | avg_win_roi: 81.2%
+
+[No.088] KEIBAJO_SURFACE_02_芝 | joa_ls_shisu
+  - type: numeric | grade: C | score_std: 0.764
+  - total_bins: 17 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 77.2% | avg_win_roi: 76.6%
+
+[No.089] KEIBAJO_SURFACE_03_芝 | shirushi_code_3
+  - type: numeric | grade: C | score_std: 0.761
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 77.1% | avg_win_roi: 76.8%
+
+[No.090] KEIBAJO_SURFACE_02_芝 | pace_yoso
+  - type: code | grade: C | score_std: 0.725
+  - total_bins: 3 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 76.0% | avg_win_roi: 79.7%
+
+[No.091] KEIBAJO_SURFACE_03_ダ | prev1_keibajo
+  - type: numeric | grade: C | score_std: 1.663
+  - total_bins: 12 | valid_bins: 9 | pass_bins: 6 | pass_rate: 0.667
+  - avg_place_roi: 75.8% | avg_win_roi: 77.2%
+
+[No.092] KEIBAJO_SURFACE_05_ダ | nyukyu_nannichimae
+  - type: numeric | grade: A | score_std: 3.739
+  - total_bins: 22 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 75.1% | avg_win_roi: 55.7%
+
+[No.093] KEIBAJO_SURFACE_04_ダ | kyori_tekisei_2
+  - type: numeric | grade: B | score_std: 2.853
+  - total_bins: 3 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 74.8% | avg_win_roi: 69.5%
+
+[No.094] GLOBAL | chokyo_yajirushi_code+kyori_tekisei_2
+  - type: combo | grade: C | score_std: 1.901
+  - total_bins: 11 | valid_bins: 6 | pass_bins: 4 | pass_rate: 0.667
+  - avg_place_roi: 71.4% | avg_win_roi: 66.4%
+
+[No.095] KEIBAJO_SURFACE_01_ダ | kishu_minarai_code
+  - type: numeric | grade: B | score_std: 2.165
+  - total_bins: 4 | valid_bins: 3 | pass_bins: 2 | pass_rate: 0.667
+  - avg_place_roi: 70.4% | avg_win_roi: 64.6%
+
+[No.096] KEIBAJO_SURFACE_01_ダ | idm
+  - type: numeric | grade: C | score_std: 1.338
+  - total_bins: 43 | valid_bins: 23 | pass_bins: 15 | pass_rate: 0.652
+  - avg_place_roi: 76.8% | avg_win_roi: 69.9%
+
+[No.097] KEIBAJO_SURFACE_01_ダ | agari_shisu_juni
+  - type: numeric | grade: C | score_std: 1.129
+  - total_bins: 14 | valid_bins: 14 | pass_bins: 9 | pass_rate: 0.643
+  - avg_place_roi: 85.7% | avg_win_roi: 81.2%
+
+[No.098] KEIBAJO_SURFACE_01_ダ | prev1_chakujun
+  - type: numeric | grade: B | score_std: 2.299
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 9 | pass_rate: 0.643
+  - avg_place_roi: 85.4% | avg_win_roi: 92.5%
+
+[No.099] KEIBAJO_SURFACE_01_ダ | goal_juni
+  - type: numeric | grade: C | score_std: 1.375
+  - total_bins: 14 | valid_bins: 14 | pass_bins: 9 | pass_rate: 0.643
+  - avg_place_roi: 84.8% | avg_win_roi: 79.8%
+
+[No.100] KEIBAJO_SURFACE_01_ダ | prev2_chakujun
+  - type: numeric | grade: B | score_std: 2.415
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 9 | pass_rate: 0.643
+  - avg_place_roi: 82.8% | avg_win_roi: 79.3%
+
+[No.101] SURFACE_2_ダ | kyori_tekisei_2+ls_shisu_juni
+  - type: combo | grade: A | score_std: 4.238
+  - total_bins: 23 | valid_bins: 14 | pass_bins: 9 | pass_rate: 0.643
+  - avg_place_roi: 81.8% | avg_win_roi: 69.0%
+
+[No.102] KEIBAJO_SURFACE_01_ダ | kishu_kitai_sanchakunai_ritsu
+  - type: numeric | grade: C | score_std: 0.941
+  - total_bins: 40 | valid_bins: 14 | pass_bins: 9 | pass_rate: 0.643
+  - avg_place_roi: 81.6% | avg_win_roi: 88.3%
+
+[No.103] KEIBAJO_SURFACE_01_芝 | prev1_keibajo
+  - type: numeric | grade: B | score_std: 2.064
+  - total_bins: 11 | valid_bins: 11 | pass_bins: 7 | pass_rate: 0.636
+  - avg_place_roi: 84.3% | avg_win_roi: 79.7%
+
+[No.104] SURFACE_2_ダ | chokyo_yajirushi_code+gekiso_type
+  - type: combo | grade: A | score_std: 4.651
+  - total_bins: 18 | valid_bins: 11 | pass_bins: 7 | pass_rate: 0.636
+  - avg_place_roi: 80.2% | avg_win_roi: 67.0%
+
+[No.105] SURFACE_2_ダ | kyori_tekisei_2+sanchimei
+  - type: combo | grade: A | score_std: 3.210
+  - total_bins: 22 | valid_bins: 11 | pass_bins: 7 | pass_rate: 0.636
+  - avg_place_roi: 78.7% | avg_win_roi: 71.1%
+
+[No.106] SURFACE_2_ダ | kohan_3f_juni+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 5.309
+  - total_bins: 37 | valid_bins: 19 | pass_bins: 12 | pass_rate: 0.632
+  - avg_place_roi: 77.9% | avg_win_roi: 83.3%
+
+[No.107] KEIBAJO_SURFACE_03_芝 | shutoku_shokin_ruikei
+  - type: numeric | grade: A | score_std: 4.785
+  - total_bins: 16 | valid_bins: 8 | pass_bins: 5 | pass_rate: 0.625
+  - avg_place_roi: 84.9% | avg_win_roi: 95.2%
+
+[No.108] SURFACE_2_ダ | goal_juni+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 7.054
+  - total_bins: 35 | valid_bins: 16 | pass_bins: 10 | pass_rate: 0.625
+  - avg_place_roi: 83.2% | avg_win_roi: 84.9%
+
+[No.109] SURFACE_2_ダ | prev1_bataiju_bin
+  - type: numeric | grade: C | score_std: 1.022
+  - total_bins: 10 | valid_bins: 8 | pass_bins: 5 | pass_rate: 0.625
+  - avg_place_roi: 80.8% | avg_win_roi: 82.7%
+
+[No.110] SURFACE_2_ダ | chokyo_yajirushi_code+manken_shirushi
+  - type: combo | grade: A | score_std: 3.980
+  - total_bins: 27 | valid_bins: 16 | pass_bins: 10 | pass_rate: 0.625
+  - avg_place_roi: 77.7% | avg_win_roi: 73.9%
+
+[No.111] SURFACE_2_芝 | kyori_tekisei_2+uma_deokure_ritsu
+  - type: combo | grade: S | score_std: 6.184
+  - total_bins: 69 | valid_bins: 8 | pass_bins: 5 | pass_rate: 0.625
+  - avg_place_roi: 77.5% | avg_win_roi: 83.1%
+
+[No.112] KEIBAJO_SURFACE_02_芝 | sanchimei
+  - type: code | grade: B | score_std: 2.852
+  - total_bins: 14 | valid_bins: 8 | pass_bins: 5 | pass_rate: 0.625
+  - avg_place_roi: 77.5% | avg_win_roi: 84.9%
+
+[No.113] KEIBAJO_SURFACE_04_芝 | kijun_odds_tansho
+  - type: numeric | grade: C | score_std: 1.042
+  - total_bins: 183 | valid_bins: 8 | pass_bins: 5 | pass_rate: 0.625
+  - avg_place_roi: 74.9% | avg_win_roi: 78.5%
+
+[No.114] KEIBAJO_SURFACE_04_芝 | joa_odds_shisu
+  - type: numeric | grade: C | score_std: 1.042
+  - total_bins: 183 | valid_bins: 8 | pass_bins: 5 | pass_rate: 0.625
+  - avg_place_roi: 74.9% | avg_win_roi: 78.5%
+
+[No.115] KEIBAJO_SURFACE_03_ダ | uma_deokure_ritsu
+  - type: numeric | grade: C | score_std: 1.511
+  - total_bins: 39 | valid_bins: 21 | pass_bins: 13 | pass_rate: 0.619
+  - avg_place_roi: 77.4% | avg_win_roi: 86.7%
+
+[No.116] SURFACE_2_ダ | goal_sa+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 6.489
+  - total_bins: 37 | valid_bins: 13 | pass_bins: 8 | pass_rate: 0.615
+  - avg_place_roi: 83.8% | avg_win_roi: 96.4%
+
+[No.117] KEIBAJO_SURFACE_01_ダ | joho_shisu
+  - type: numeric | grade: C | score_std: 1.698
+  - total_bins: 43 | valid_bins: 13 | pass_bins: 8 | pass_rate: 0.615
+  - avg_place_roi: 78.4% | avg_win_roi: 77.4%
+
+[No.118] SURFACE_2_ダ | shirushi_code_1+uma_deokure_ritsu
+  - type: combo | grade: A | score_std: 4.661
+  - total_bins: 159 | valid_bins: 44 | pass_bins: 27 | pass_rate: 0.614
+  - avg_place_roi: 82.6% | avg_win_roi: 83.1%
+
+[No.119] COURSE_27 | prev2_chakujun
+  - type: combo | grade: B | score_std: 2.652
+  - total_bins: 18 | valid_bins: 18 | pass_bins: 11 | pass_rate: 0.611
+  - avg_place_roi: 82.7% | avg_win_roi: 79.6%
+
+[No.120] GLOBAL | prev2_chakujun
+  - type: numeric | grade: C | score_std: 0.504
+  - total_bins: 18 | valid_bins: 18 | pass_bins: 11 | pass_rate: 0.611
+  - avg_place_roi: 82.7% | avg_win_roi: 79.6%
+
+[No.121] KEIBAJO_SURFACE_03_ダ | idm
+  - type: numeric | grade: C | score_std: 1.723
+  - total_bins: 59 | valid_bins: 23 | pass_bins: 14 | pass_rate: 0.609
+  - avg_place_roi: 79.6% | avg_win_roi: 84.8%
+
+[No.122] KEIBAJO_SURFACE_01_ダ | manken_shisu
+  - type: numeric | grade: B | score_std: 2.187
+  - total_bins: 47 | valid_bins: 28 | pass_bins: 17 | pass_rate: 0.607
+  - avg_place_roi: 90.3% | avg_win_roi: 82.5%
+
+[No.123] KEIBAJO_SURFACE_03_芝 | idm
+  - type: numeric | grade: C | score_std: 1.387
+  - total_bins: 74 | valid_bins: 28 | pass_bins: 17 | pass_rate: 0.607
+  - avg_place_roi: 74.4% | avg_win_roi: 76.0%
+
+[No.124] GLOBAL | kyori_tekisei_2+prev1_bataiju
+  - type: combo | grade: S | score_std: 5.406
+  - total_bins: 121 | valid_bins: 33 | pass_bins: 20 | pass_rate: 0.606
+  - avg_place_roi: 76.8% | avg_win_roi: 74.8%
+
+[No.125] SURFACE_2_芝 | ls_shisu_juni
+  - type: numeric | grade: C | score_std: 0.812
+  - total_bins: 11 | valid_bins: 10 | pass_bins: 6 | pass_rate: 0.600
+  - avg_place_roi: 89.9% | avg_win_roi: 95.5%
+
+[No.126] KEIBAJO_SURFACE_01_ダ | nyukyu_nannichimae
+  - type: numeric | grade: A | score_std: 4.114
+  - total_bins: 19 | valid_bins: 10 | pass_bins: 6 | pass_rate: 0.600
+  - avg_place_roi: 89.7% | avg_win_roi: 109.4%
+
+[No.127] KEIBAJO_SURFACE_01_ダ | kyusha_shisu
+  - type: numeric | grade: B | score_std: 2.074
+  - total_bins: 32 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 88.6% | avg_win_roi: 74.4%
+
+[No.128] KEIBAJO_SURFACE_01_ダ | tenkai_kigo_code
+  - type: numeric | grade: C | score_std: 0.727
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 85.9% | avg_win_roi: 85.3%
+
+[No.129] KEIBAJO_SURFACE_04_芝 | bataiju_change_bin
+  - type: numeric | grade: C | score_std: 0.195
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 85.1% | avg_win_roi: 81.5%
+
+[No.130] KEIBAJO_SURFACE_03_ダ | kishu_minarai_code
+  - type: numeric | grade: A | score_std: 4.371
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 82.9% | avg_win_roi: 87.8%
+
+[No.131] SURFACE_2_ダ | joho_shisu+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 4.898
+  - total_bins: 38 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 82.7% | avg_win_roi: 78.9%
+
+[No.132] KEIBAJO_SURFACE_02_芝 | kyusha_shisu
+  - type: numeric | grade: C | score_std: 1.842
+  - total_bins: 33 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 81.5% | avg_win_roi: 103.0%
+
+[No.133] SURFACE_2_ダ | hizume_code+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 5.724
+  - total_bins: 25 | valid_bins: 15 | pass_bins: 9 | pass_rate: 0.600
+  - avg_place_roi: 80.9% | avg_win_roi: 80.1%
+
+[No.134] KEIBAJO_SURFACE_05_ダ | uma_tokki_1
+  - type: numeric | grade: A | score_std: 3.635
+  - total_bins: 20 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 80.8% | avg_win_roi: 74.6%
+
+[No.135] KEIBAJO_SURFACE_02_芝 | hobokusaki_rank
+  - type: code | grade: C | score_std: 1.465
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 80.6% | avg_win_roi: 79.0%
+
+[No.136] SURFACE_2_ダ | yuso_kubun
+  - type: numeric | grade: C | score_std: 0.550
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 80.6% | avg_win_roi: 73.2%
+
+[No.137] KEIBAJO_SURFACE_02_芝 | joken_class_code
+  - type: numeric | grade: C | score_std: 1.464
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 80.5% | avg_win_roi: 91.5%
+
+[No.138] KEIBAJO_SURFACE_02_芝 | ichi_shisu_juni
+  - type: numeric | grade: C | score_std: 1.694
+  - total_bins: 16 | valid_bins: 15 | pass_bins: 9 | pass_rate: 0.600
+  - avg_place_roi: 79.9% | avg_win_roi: 81.3%
+
+[No.139] SURFACE_2_ダ | kishu_minarai_code
+  - type: numeric | grade: B | score_std: 2.189
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 79.1% | avg_win_roi: 71.4%
+
+[No.140] SURFACE_2_芝 | hobokusaki_rank
+  - type: code | grade: C | score_std: 0.545
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 79.1% | avg_win_roi: 77.9%
+
+[No.141] KEIBAJO_SURFACE_02_芝 | kishu_kitai_sanchakunai_ritsu
+  - type: numeric | grade: B | score_std: 2.152
+  - total_bins: 40 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 79.0% | avg_win_roi: 81.3%
+
+[No.142] KEIBAJO_SURFACE_03_ダ | kishu_kitai_rentai_ritsu
+  - type: numeric | grade: C | score_std: 1.472
+  - total_bins: 49 | valid_bins: 15 | pass_bins: 9 | pass_rate: 0.600
+  - avg_place_roi: 78.9% | avg_win_roi: 82.0%
+
+[No.143] KEIBAJO_SURFACE_01_芝 | kyori
+  - type: numeric | grade: C | score_std: 0.472
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 78.9% | avg_win_roi: 74.9%
+
+[No.144] KEIBAJO_SURFACE_03_ダ | chokyoshi_rank
+  - type: code | grade: B | score_std: 2.387
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 78.0% | avg_win_roi: 81.8%
+
+[No.145] KEIBAJO_SURFACE_01_ダ | hobokusaki_rank
+  - type: code | grade: C | score_std: 1.881
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 78.0% | avg_win_roi: 70.0%
+
+[No.146] SURFACE_2_ダ | tenkai_kigo_code
+  - type: numeric | grade: C | score_std: 0.394
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 77.5% | avg_win_roi: 77.6%
+
+[No.147] KEIBAJO_SURFACE_02_芝 | dochu_juni
+  - type: numeric | grade: C | score_std: 1.818
+  - total_bins: 16 | valid_bins: 15 | pass_bins: 9 | pass_rate: 0.600
+  - avg_place_roi: 77.1% | avg_win_roi: 80.5%
+
+[No.148] SURFACE_2_芝 | joho_shisu+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 4.424
+  - total_bins: 73 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 76.8% | avg_win_roi: 73.5%
+
+[No.149] KEIBAJO_SURFACE_01_芝 | chokyoshi_rank
+  - type: code | grade: C | score_std: 0.833
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 76.2% | avg_win_roi: 74.1%
+
+[No.150] KEIBAJO_SURFACE_03_ダ | hobokusaki_rank
+  - type: code | grade: B | score_std: 2.074
+  - total_bins: 5 | valid_bins: 5 | pass_bins: 3 | pass_rate: 0.600
+  - avg_place_roi: 75.7% | avg_win_roi: 80.0%
+
+[No.151] GLOBAL | kishu_minarai_code+nyukyu_nannichimae
+  - type: combo | grade: S | score_std: 6.087
+  - total_bins: 78 | valid_bins: 27 | pass_bins: 16 | pass_rate: 0.593
+  - avg_place_roi: 76.3% | avg_win_roi: 83.4%
+
+[No.152] SURFACE_2_ダ | ls_shisu_juni+manken_shirushi
+  - type: combo | grade: B | score_std: 2.734
+  - total_bins: 64 | valid_bins: 56 | pass_bins: 33 | pass_rate: 0.589
+  - avg_place_roi: 80.4% | avg_win_roi: 78.7%
+
+[No.153] KEIBAJO_SURFACE_03_芝 | prev1_corner4
+  - type: numeric | grade: B | score_std: 2.127
+  - total_bins: 18 | valid_bins: 17 | pass_bins: 10 | pass_rate: 0.588
+  - avg_place_roi: 79.7% | avg_win_roi: 71.5%
+
+[No.154] GLOBAL | chokyo_yajirushi_code+tenkai_kigo_code
+  - type: combo | grade: C | score_std: 1.996
+  - total_bins: 20 | valid_bins: 17 | pass_bins: 10 | pass_rate: 0.588
+  - avg_place_roi: 78.7% | avg_win_roi: 76.6%
+
+[No.155] GLOBAL | chokyo_yajirushi_code+prev2_chakujun
+  - type: combo | grade: A | score_std: 3.806
+  - total_bins: 56 | valid_bins: 36 | pass_bins: 21 | pass_rate: 0.583
+  - avg_place_roi: 78.8% | avg_win_roi: 73.1%
+
+[No.156] SURFACE_2_ダ | babajotai_heavy+kishu_minarai_code
+  - type: combo | grade: A | score_std: 3.531
+  - total_bins: 15 | valid_bins: 12 | pass_bins: 7 | pass_rate: 0.583
+  - avg_place_roi: 77.0% | avg_win_roi: 67.9%
+
+[No.157] KEIBAJO_SURFACE_05_芝 | kijun_ninkijun_tansho
+  - type: numeric | grade: C | score_std: 1.951
+  - total_bins: 15 | valid_bins: 12 | pass_bins: 7 | pass_rate: 0.583
+  - avg_place_roi: 70.8% | avg_win_roi: 66.5%
+
+[No.158] SURFACE_2_ダ | chokyo_yajirushi_code+prev3_chakujun
+  - type: combo | grade: A | score_std: 4.248
+  - total_bins: 44 | valid_bins: 31 | pass_bins: 18 | pass_rate: 0.581
+  - avg_place_roi: 79.1% | avg_win_roi: 73.1%
+
+[No.159] KEIBAJO_SURFACE_02_芝 | dochu_sa
+  - type: numeric | grade: C | score_std: 1.982
+  - total_bins: 24 | valid_bins: 19 | pass_bins: 11 | pass_rate: 0.579
+  - avg_place_roi: 74.1% | avg_win_roi: 74.6%
+
+[No.160] SURFACE_2_ダ | joa_ls_shisu
+  - type: numeric | grade: C | score_std: 0.455
+  - total_bins: 73 | valid_bins: 45 | pass_bins: 26 | pass_rate: 0.578
+  - avg_place_roi: 80.9% | avg_win_roi: 79.8%
+
+[No.161] SURFACE_2_ダ | chokyoshi_rank+manken_shirushi
+  - type: combo | grade: B | score_std: 2.389
+  - total_bins: 40 | valid_bins: 40 | pass_bins: 23 | pass_rate: 0.575
+  - avg_place_roi: 79.8% | avg_win_roi: 79.3%
+
+[No.162] KEIBAJO_SURFACE_01_ダ | class_code
+  - type: numeric | grade: C | score_std: 0.373
+  - total_bins: 12 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 87.8% | avg_win_roi: 93.9%
+
+[No.163] KEIBAJO_SURFACE_01_ダ | goal_sa
+  - type: numeric | grade: B | score_std: 2.809
+  - total_bins: 27 | valid_bins: 21 | pass_bins: 12 | pass_rate: 0.571
+  - avg_place_roi: 86.9% | avg_win_roi: 79.2%
+
+[No.164] KEIBAJO_SURFACE_01_ダ | dochu_juni
+  - type: numeric | grade: C | score_std: 1.758
+  - total_bins: 14 | valid_bins: 14 | pass_bins: 8 | pass_rate: 0.571
+  - avg_place_roi: 86.4% | avg_win_roi: 82.3%
+
+[No.165] KEIBAJO_SURFACE_01_ダ | gekiso_juni
+  - type: numeric | grade: C | score_std: 1.934
+  - total_bins: 14 | valid_bins: 14 | pass_bins: 8 | pass_rate: 0.571
+  - avg_place_roi: 86.3% | avg_win_roi: 85.2%
+
+[No.166] KEIBAJO_SURFACE_01_ダ | prev1_bataiju_bin
+  - type: numeric | grade: C | score_std: 1.354
+  - total_bins: 8 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 84.3% | avg_win_roi: 77.0%
+
+[No.167] KEIBAJO_SURFACE_05_ダ | shirushi_code_1
+  - type: numeric | grade: C | score_std: 1.042
+  - total_bins: 7 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 82.7% | avg_win_roi: 78.4%
+
+[No.168] SURFACE_2_ダ | chokyo_yajirushi_code+kijun_ninkijun_fukusho
+  - type: combo | grade: A | score_std: 4.086
+  - total_bins: 44 | valid_bins: 28 | pass_bins: 16 | pass_rate: 0.571
+  - avg_place_roi: 82.2% | avg_win_roi: 76.1%
+
+[No.169] SURFACE_2_ダ | kishu_minarai_code+nyukyu_nannichimae
+  - type: combo | grade: S | score_std: 7.606
+  - total_bins: 45 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 82.1% | avg_win_roi: 91.6%
+
+[No.170] KEIBAJO_SURFACE_01_芝 | kyi_kyusha_rank
+  - type: numeric | grade: C | score_std: 0.776
+  - total_bins: 7 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 79.0% | avg_win_roi: 73.5%
+
+[No.171] KEIBAJO_SURFACE_01_芝 | shirushi_code_1
+  - type: numeric | grade: C | score_std: 0.800
+  - total_bins: 7 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 78.8% | avg_win_roi: 78.7%
+
+[No.172] GLOBAL | kyori_tekisei_2+shirushi_code_1
+  - type: combo | grade: C | score_std: 1.882
+  - total_bins: 21 | valid_bins: 21 | pass_bins: 12 | pass_rate: 0.571
+  - avg_place_roi: 78.5% | avg_win_roi: 74.1%
+
+[No.173] SURFACE_2_ダ | hobokusaki_rank+shirushi_code_1
+  - type: combo | grade: B | score_std: 2.577
+  - total_bins: 35 | valid_bins: 35 | pass_bins: 20 | pass_rate: 0.571
+  - avg_place_roi: 78.4% | avg_win_roi: 75.2%
+
+[No.174] KEIBAJO_SURFACE_03_ダ | ls_shisu_juni
+  - type: numeric | grade: C | score_std: 1.828
+  - total_bins: 8 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 78.4% | avg_win_roi: 75.2%
+
+[No.175] KEIBAJO_SURFACE_02_芝 | kyi_kyusha_rank
+  - type: numeric | grade: B | score_std: 2.179
+  - total_bins: 7 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 77.5% | avg_win_roi: 79.3%
+
+[No.176] GLOBAL | kishu_rank+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 3.180
+  - total_bins: 17 | valid_bins: 14 | pass_bins: 8 | pass_rate: 0.571
+  - avg_place_roi: 77.2% | avg_win_roi: 68.1%
+
+[No.177] GLOBAL | kyori_tekisei_2+nyukyu_nannichimae
+  - type: combo | grade: S | score_std: 5.195
+  - total_bins: 58 | valid_bins: 21 | pass_bins: 12 | pass_rate: 0.571
+  - avg_place_roi: 76.6% | avg_win_roi: 84.9%
+
+[No.178] KEIBAJO_SURFACE_03_ダ | shutoku_shokin_ruikei
+  - type: numeric | grade: C | score_std: 0.916
+  - total_bins: 13 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 76.5% | avg_win_roi: 74.4%
+
+[No.179] KEIBAJO_SURFACE_02_芝 | taikei_dou
+  - type: numeric | grade: C | score_std: 1.598
+  - total_bins: 12 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 76.2% | avg_win_roi: 63.2%
+
+[No.180] KEIBAJO_SURFACE_04_ダ | uma_tokki_3
+  - type: numeric | grade: C | score_std: 1.782
+  - total_bins: 41 | valid_bins: 14 | pass_bins: 8 | pass_rate: 0.571
+  - avg_place_roi: 74.9% | avg_win_roi: 73.6%
+
+[No.181] KEIBAJO_SURFACE_01_芝 | prev1_bataiju_bin
+  - type: numeric | grade: C | score_std: 1.467
+  - total_bins: 9 | valid_bins: 7 | pass_bins: 4 | pass_rate: 0.571
+  - avg_place_roi: 74.1% | avg_win_roi: 65.4%
+
+[No.182] KEIBAJO_SURFACE_05_ダ | yoso_juni
+  - type: numeric | grade: B | score_std: 2.406
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 8 | pass_rate: 0.571
+  - avg_place_roi: 69.0% | avg_win_roi: 59.6%
+
+[No.183] SURFACE_2_芝 | joho_shisu+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.809
+  - total_bins: 216 | valid_bins: 104 | pass_bins: 59 | pass_rate: 0.567
+  - avg_place_roi: 79.0% | avg_win_roi: 77.8%
+
+[No.184] SURFACE_2_芝 | babajotai_heavy+prev1_keibajo
+  - type: combo | grade: S | score_std: 5.366
+  - total_bins: 35 | valid_bins: 30 | pass_bins: 17 | pass_rate: 0.567
+  - avg_place_roi: 84.5% | avg_win_roi: 82.6%
+
+[No.185] SURFACE_2_ダ | chokyo_yajirushi_code+prev1_chakujun
+  - type: combo | grade: S | score_std: 6.190
+  - total_bins: 45 | valid_bins: 30 | pass_bins: 17 | pass_rate: 0.567
+  - avg_place_roi: 81.6% | avg_win_roi: 81.0%
+
+[No.186] SURFACE_2_ダ | chokyo_shisu
+  - type: combo | grade: A | score_std: 4.954
+  - total_bins: 342 | valid_bins: 69 | pass_bins: 39 | pass_rate: 0.565
+  - avg_place_roi: 79.3% | avg_win_roi: 79.7%
+
+[No.187] SURFACE_2_ダ | chokyo_shisu
+  - type: numeric | grade: C | score_std: 0.835
+  - total_bins: 342 | valid_bins: 69 | pass_bins: 39 | pass_rate: 0.565
+  - avg_place_roi: 79.3% | avg_win_roi: 79.7%
+
+[No.188] SURFACE_2_ダ | barei+manken_shirushi
+  - type: combo | grade: A | score_std: 3.250
+  - total_bins: 46 | valid_bins: 39 | pass_bins: 22 | pass_rate: 0.564
+  - avg_place_roi: 80.4% | avg_win_roi: 76.6%
+
+[No.189] SURFACE_2_芝 | kishu_rank+nyukyu_nannichimae
+  - type: combo | grade: S | score_std: 5.792
+  - total_bins: 155 | valid_bins: 78 | pass_bins: 44 | pass_rate: 0.564
+  - avg_place_roi: 75.4% | avg_win_roi: 79.4%
+
+[No.190] KEIBAJO_SURFACE_03_芝 | prev3_chakujun
+  - type: numeric | grade: C | score_std: 1.563
+  - total_bins: 17 | valid_bins: 16 | pass_bins: 9 | pass_rate: 0.562
+  - avg_place_roi: 88.7% | avg_win_roi: 89.6%
+
+[No.191] KEIBAJO_SURFACE_03_ダ | prev2_chakujun
+  - type: numeric | grade: B | score_std: 2.258
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 9 | pass_rate: 0.562
+  - avg_place_roi: 82.7% | avg_win_roi: 86.9%
+
+[No.192] SURFACE_2_ダ | joho_shisu+manken_shirushi
+  - type: combo | grade: S | score_std: 5.806
+  - total_bins: 278 | valid_bins: 16 | pass_bins: 9 | pass_rate: 0.562
+  - avg_place_roi: 79.7% | avg_win_roi: 81.7%
+
+[No.193] SURFACE_2_ダ | manken_shisu+shirushi_code_1
+  - type: combo | grade: A | score_std: 4.700
+  - total_bins: 259 | valid_bins: 32 | pass_bins: 18 | pass_rate: 0.562
+  - avg_place_roi: 78.2% | avg_win_roi: 78.0%
+
+[No.194] KEIBAJO_SURFACE_03_ダ | uma_start_shisu
+  - type: numeric | grade: B | score_std: 2.101
+  - total_bins: 23 | valid_bins: 16 | pass_bins: 9 | pass_rate: 0.562
+  - avg_place_roi: 78.1% | avg_win_roi: 81.7%
+
+[No.195] SURFACE_2_ダ | yoso_juni
+  - type: numeric | grade: C | score_std: 0.823
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 9 | pass_rate: 0.562
+  - avg_place_roi: 77.9% | avg_win_roi: 77.0%
+
+[No.196] KEIBAJO_SURFACE_03_芝 | gekiso_juni
+  - type: numeric | grade: C | score_std: 1.264
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 9 | pass_rate: 0.562
+  - avg_place_roi: 77.6% | avg_win_roi: 76.9%
+
+[No.197] KEIBAJO_SURFACE_01_芝 | gekiso_juni
+  - type: numeric | grade: C | score_std: 1.143
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 9 | pass_rate: 0.562
+  - avg_place_roi: 77.2% | avg_win_roi: 70.4%
+
+[No.198] SURFACE_2_芝 | chokyo_yajirushi_code+manken_shirushi
+  - type: combo | grade: A | score_std: 3.338
+  - total_bins: 32 | valid_bins: 16 | pass_bins: 9 | pass_rate: 0.562
+  - avg_place_roi: 74.8% | avg_win_roi: 77.3%
+
+[No.199] SURFACE_2_ダ | gekiso_type+yoso_juni
+  - type: combo | grade: S | score_std: 5.723
+  - total_bins: 85 | valid_bins: 57 | pass_bins: 32 | pass_rate: 0.561
+  - avg_place_roi: 79.3% | avg_win_roi: 72.4%
+
+[No.200] SURFACE_2_芝 | babajotai_heavy+ls_shisu_juni
+  - type: combo | grade: A | score_std: 4.395
+  - total_bins: 27 | valid_bins: 25 | pass_bins: 14 | pass_rate: 0.560
+  - avg_place_roi: 88.2% | avg_win_roi: 95.0%
+
+[No.201] SURFACE_2_ダ | kakutoku_shokin_ruikei
+  - type: numeric | grade: C | score_std: 0.876
+  - total_bins: 168 | valid_bins: 25 | pass_bins: 14 | pass_rate: 0.560
+  - avg_place_roi: 83.5% | avg_win_roi: 84.2%
+
+[No.202] SURFACE_2_ダ | chokyoshi_rank+tenkai_kigo_code
+  - type: combo | grade: C | score_std: 1.912
+  - total_bins: 25 | valid_bins: 25 | pass_bins: 14 | pass_rate: 0.560
+  - avg_place_roi: 76.5% | avg_win_roi: 75.7%
+
+[No.203] SURFACE_2_ダ | barei+uma_deokure_ritsu
+  - type: combo | grade: S | score_std: 6.408
+  - total_bins: 133 | valid_bins: 59 | pass_bins: 33 | pass_rate: 0.559
+  - avg_place_roi: 77.6% | avg_win_roi: 74.6%
+
+[No.204] SURFACE_2_ダ | goal_sa+yy_int
+  - type: combo | grade: S | score_std: 5.005
+  - total_bins: 252 | valid_bins: 158 | pass_bins: 88 | pass_rate: 0.557
+  - avg_place_roi: 77.9% | avg_win_roi: 76.9%
+
+[No.205] SURFACE_2_ダ | manken_shirushi+prev2_chakujun
+  - type: combo | grade: A | score_std: 3.956
+  - total_bins: 125 | valid_bins: 88 | pass_bins: 49 | pass_rate: 0.557
+  - avg_place_roi: 80.0% | avg_win_roi: 82.5%
+
+[No.206] KEIBAJO_SURFACE_01_ダ | taikei_dou
+  - type: numeric | grade: C | score_std: 0.972
+  - total_bins: 15 | valid_bins: 9 | pass_bins: 5 | pass_rate: 0.556
+  - avg_place_roi: 97.3% | avg_win_roi: 106.1%
+
+[No.207] KEIBAJO_SURFACE_01_ダ | hizume_code
+  - type: numeric | grade: C | score_std: 1.075
+  - total_bins: 15 | valid_bins: 9 | pass_bins: 5 | pass_rate: 0.556
+  - avg_place_roi: 87.0% | avg_win_roi: 85.7%
+
+[No.208] SURFACE_2_ダ | gekiso_type+ls_shisu_juni
+  - type: combo | grade: A | score_std: 3.756
+  - total_bins: 42 | valid_bins: 36 | pass_bins: 20 | pass_rate: 0.556
+  - avg_place_roi: 82.8% | avg_win_roi: 73.3%
+
+[No.209] KEIBAJO_SURFACE_03_ダ | rotation
+  - type: numeric | grade: C | score_std: 1.304
+  - total_bins: 25 | valid_bins: 18 | pass_bins: 10 | pass_rate: 0.556
+  - avg_place_roi: 81.8% | avg_win_roi: 97.0%
+
+[No.210] SURFACE_2_ダ | kyori_tekisei_2+taikei_tomo
+  - type: combo | grade: S | score_std: 5.209
+  - total_bins: 32 | valid_bins: 18 | pass_bins: 10 | pass_rate: 0.556
+  - avg_place_roi: 80.9% | avg_win_roi: 86.9%
+
+[No.211] KEIBAJO_SURFACE_03_ダ | class_code
+  - type: numeric | grade: C | score_std: 1.752
+  - total_bins: 12 | valid_bins: 9 | pass_bins: 5 | pass_rate: 0.556
+  - avg_place_roi: 80.0% | avg_win_roi: 87.3%
+
+[No.212] KEIBAJO_SURFACE_01_芝 | manken_shisu
+  - type: numeric | grade: C | score_std: 1.549
+  - total_bins: 54 | valid_bins: 36 | pass_bins: 20 | pass_rate: 0.556
+  - avg_place_roi: 79.5% | avg_win_roi: 75.3%
+
+[No.213] SURFACE_2_ダ | manken_shirushi+prev1_chakujun
+  - type: combo | grade: A | score_std: 4.231
+  - total_bins: 122 | valid_bins: 90 | pass_bins: 50 | pass_rate: 0.556
+  - avg_place_roi: 78.3% | avg_win_roi: 79.5%
+
+[No.214] KEIBAJO_SURFACE_03_ダ | sanchimei
+  - type: code | grade: A | score_std: 3.283
+  - total_bins: 13 | valid_bins: 9 | pass_bins: 5 | pass_rate: 0.556
+  - avg_place_roi: 77.9% | avg_win_roi: 62.1%
+
+[No.215] KEIBAJO_SURFACE_03_ダ | kohan_3f_sa
+  - type: numeric | grade: B | score_std: 2.170
+  - total_bins: 21 | valid_bins: 18 | pass_bins: 10 | pass_rate: 0.556
+  - avg_place_roi: 73.0% | avg_win_roi: 72.6%
+
+[No.216] SURFACE_2_ダ | kishu_rank+nyukyu_nannichimae
+  - type: combo | grade: S | score_std: 5.844
+  - total_bins: 122 | valid_bins: 56 | pass_bins: 31 | pass_rate: 0.554
+  - avg_place_roi: 75.4% | avg_win_roi: 74.1%
+
+[No.217] SURFACE_2_ダ | goal_sa+manken_shirushi
+  - type: combo | grade: S | score_std: 5.846
+  - total_bins: 169 | valid_bins: 105 | pass_bins: 58 | pass_rate: 0.552
+  - avg_place_roi: 79.9% | avg_win_roi: 78.8%
+
+[No.218] SURFACE_2_ダ | gekiso_type+kishu_rank
+  - type: combo | grade: A | score_std: 4.143
+  - total_bins: 30 | valid_bins: 29 | pass_bins: 16 | pass_rate: 0.552
+  - avg_place_roi: 79.9% | avg_win_roi: 72.6%
+
+[No.219] SURFACE_2_芝 | kyori_tekisei_2+prev1_corner4
+  - type: combo | grade: A | score_std: 4.733
+  - total_bins: 45 | valid_bins: 29 | pass_bins: 16 | pass_rate: 0.552
+  - avg_place_roi: 75.4% | avg_win_roi: 79.0%
+
+[No.220] SURFACE_2_ダ | goal_juni+prev1_corner4
+  - type: combo | grade: S | score_std: 6.288
+  - total_bins: 214 | valid_bins: 129 | pass_bins: 71 | pass_rate: 0.550
+  - avg_place_roi: 79.2% | avg_win_roi: 84.0%
+
+[No.221] KEIBAJO_SURFACE_01_ダ | dochu_sa
+  - type: numeric | grade: C | score_std: 1.588
+  - total_bins: 24 | valid_bins: 20 | pass_bins: 11 | pass_rate: 0.550
+  - avg_place_roi: 81.7% | avg_win_roi: 80.6%
+
+[No.222] GLOBAL | ls_shisu_juni+manken_shirushi
+  - type: combo | grade: S | score_std: 5.079
+  - total_bins: 68 | valid_bins: 60 | pass_bins: 33 | pass_rate: 0.550
+  - avg_place_roi: 81.0% | avg_win_roi: 80.9%
+
+[No.223] KEIBAJO_SURFACE_01_芝 | uma_deokure_ritsu
+  - type: numeric | grade: C | score_std: 1.705
+  - total_bins: 39 | valid_bins: 20 | pass_bins: 11 | pass_rate: 0.550
+  - avg_place_roi: 79.9% | avg_win_roi: 75.9%
+
+[No.224] SURFACE_2_芝 | kyori_tekisei_2+shirushi_code_1
+  - type: combo | grade: C | score_std: 1.850
+  - total_bins: 21 | valid_bins: 20 | pass_bins: 11 | pass_rate: 0.550
+  - avg_place_roi: 79.6% | avg_win_roi: 75.7%
+
+[No.225] KEIBAJO_SURFACE_03_芝 | prev1_bataiju
+  - type: numeric | grade: C | score_std: 1.864
+  - total_bins: 61 | valid_bins: 40 | pass_bins: 22 | pass_rate: 0.550
+  - avg_place_roi: 78.3% | avg_win_roi: 78.7%
+
+[No.226] SURFACE_2_ダ | hizume_code+sanchimei
+  - type: combo | grade: A | score_std: 4.634
+  - total_bins: 122 | valid_bins: 60 | pass_bins: 33 | pass_rate: 0.550
+  - avg_place_roi: 76.0% | avg_win_roi: 72.7%
+
+[No.227] SURFACE_2_ダ | goal_sa+kishu_rank
+  - type: combo | grade: S | score_std: 5.261
+  - total_bins: 149 | valid_bins: 100 | pass_bins: 55 | pass_rate: 0.550
+  - avg_place_roi: 73.0% | avg_win_roi: 71.8%
+
+[No.228] SURFACE_2_ダ | agari_shisu_juni+chokyo_yajirushi_code
+  - type: combo | grade: A | score_std: 4.634
+  - total_bins: 48 | valid_bins: 31 | pass_bins: 17 | pass_rate: 0.548
+  - avg_place_roi: 78.7% | avg_win_roi: 70.6%
+
+[No.229] GLOBAL | kishu_rank+ls_shisu_juni
+  - type: combo | grade: A | score_std: 3.151
+  - total_bins: 48 | valid_bins: 42 | pass_bins: 23 | pass_rate: 0.548
+  - avg_place_roi: 79.1% | avg_win_roi: 80.9%
+
+[No.230] KEIBAJO_SURFACE_01_芝 | uma_tokki_3
+  - type: numeric | grade: B | score_std: 2.725
+  - total_bins: 22 | valid_bins: 11 | pass_bins: 6 | pass_rate: 0.545
+  - avg_place_roi: 82.9% | avg_win_roi: 93.0%
+
+[No.231] KEIBAJO_SURFACE_03_芝 | kishu_shisu
+  - type: numeric | grade: C | score_std: 1.604
+  - total_bins: 33 | valid_bins: 22 | pass_bins: 12 | pass_rate: 0.545
+  - avg_place_roi: 80.8% | avg_win_roi: 78.4%
+
+[No.232] KEIBAJO_SURFACE_02_芝 | uma_tokki_1
+  - type: numeric | grade: B | score_std: 2.973
+  - total_bins: 34 | valid_bins: 11 | pass_bins: 6 | pass_rate: 0.545
+  - avg_place_roi: 80.5% | avg_win_roi: 80.5%
+
+[No.233] SURFACE_2_ダ | kyori_tekisei_2+tenkai_kigo_code
+  - type: combo | grade: A | score_std: 3.389
+  - total_bins: 15 | valid_bins: 11 | pass_bins: 6 | pass_rate: 0.545
+  - avg_place_roi: 77.6% | avg_win_roi: 74.7%
+
+[No.234] SURFACE_2_ダ | barei+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 3.117
+  - total_bins: 14 | valid_bins: 11 | pass_bins: 6 | pass_rate: 0.545
+  - avg_place_roi: 74.4% | avg_win_roi: 68.1%
+
+[No.235] SURFACE_2_ダ | kyori_tekisei_2+moshoku_code
+  - type: combo | grade: A | score_std: 4.809
+  - total_bins: 16 | valid_bins: 11 | pass_bins: 6 | pass_rate: 0.545
+  - avg_place_roi: 73.7% | avg_win_roi: 74.8%
+
+[No.236] KEIBAJO_SURFACE_01_芝 | class_code
+  - type: numeric | grade: C | score_std: 0.760
+  - total_bins: 15 | valid_bins: 11 | pass_bins: 6 | pass_rate: 0.545
+  - avg_place_roi: 70.6% | avg_win_roi: 68.6%
+
+[No.237] SURFACE_2_芝 | goal_sa+kishu_minarai_code
+  - type: combo | grade: S | score_std: 5.049
+  - total_bins: 72 | valid_bins: 22 | pass_bins: 12 | pass_rate: 0.545
+  - avg_place_roi: 69.7% | avg_win_roi: 75.2%
+
+[No.238] SURFACE_2_ダ | shirushi_code_1+yy_int
+  - type: combo | grade: C | score_std: 1.778
+  - total_bins: 70 | valid_bins: 70 | pass_bins: 38 | pass_rate: 0.543
+  - avg_place_roi: 80.1% | avg_win_roi: 79.8%
+
+[No.239] SURFACE_2_ダ | kishu_kitai_rentai_ritsu
+  - type: numeric | grade: C | score_std: 0.456
+  - total_bins: 197 | valid_bins: 59 | pass_bins: 32 | pass_rate: 0.542
+  - avg_place_roi: 76.6% | avg_win_roi: 72.2%
+
+[No.240] GLOBAL | kyori_tekisei_2+manken_shirushi
+  - type: combo | grade: B | score_std: 2.718
+  - total_bins: 24 | valid_bins: 24 | pass_bins: 13 | pass_rate: 0.542
+  - avg_place_roi: 78.9% | avg_win_roi: 83.0%
+
+[No.241] GLOBAL | joho_shisu+kishu_rank
+  - type: combo | grade: B | score_std: 2.811
+  - total_bins: 226 | valid_bins: 159 | pass_bins: 86 | pass_rate: 0.541
+  - avg_place_roi: 77.7% | avg_win_roi: 76.4%
+
+[No.242] SURFACE_2_ダ | goal_sa+kishu_minarai_code
+  - type: combo | grade: S | score_std: 6.130
+  - total_bins: 78 | valid_bins: 37 | pass_bins: 20 | pass_rate: 0.540
+  - avg_place_roi: 80.1% | avg_win_roi: 79.1%
+
+[No.243] GLOBAL | manken_shirushi+yoso_juni
+  - type: combo | grade: A | score_std: 4.028
+  - total_bins: 126 | valid_bins: 111 | pass_bins: 60 | pass_rate: 0.540
+  - avg_place_roi: 78.7% | avg_win_roi: 82.0%
+
+[No.244] SURFACE_2_ダ | kishu_rank+ls_shisu_juni
+  - type: combo | grade: A | score_std: 3.358
+  - total_bins: 42 | valid_bins: 37 | pass_bins: 20 | pass_rate: 0.540
+  - avg_place_roi: 75.8% | avg_win_roi: 67.7%
+
+[No.245] KEIBAJO_SURFACE_01_ダ | kijun_ninkijun_tansho
+  - type: numeric | grade: C | score_std: 1.751
+  - total_bins: 14 | valid_bins: 13 | pass_bins: 7 | pass_rate: 0.538
+  - avg_place_roi: 88.5% | avg_win_roi: 80.9%
+
+[No.246] KEIBAJO_SURFACE_01_ダ | kijun_ninkijun_fukusho
+  - type: numeric | grade: C | score_std: 1.698
+  - total_bins: 14 | valid_bins: 13 | pass_bins: 7 | pass_rate: 0.538
+  - avg_place_roi: 88.5% | avg_win_roi: 80.9%
+
+[No.247] KEIBAJO_SURFACE_01_ダ | yoso_juni
+  - type: numeric | grade: B | score_std: 2.254
+  - total_bins: 14 | valid_bins: 13 | pass_bins: 7 | pass_rate: 0.538
+  - avg_place_roi: 84.6% | avg_win_roi: 77.9%
+
+[No.248] KEIBAJO_SURFACE_01_ダ | prev1_corner4
+  - type: numeric | grade: C | score_std: 1.200
+  - total_bins: 16 | valid_bins: 13 | pass_bins: 7 | pass_rate: 0.538
+  - avg_place_roi: 83.3% | avg_win_roi: 93.0%
+
+[No.249] SURFACE_2_ダ | chokyo_yajirushi_code+goal_sa
+  - type: combo | grade: A | score_std: 3.100
+  - total_bins: 75 | valid_bins: 52 | pass_bins: 28 | pass_rate: 0.538
+  - avg_place_roi: 78.3% | avg_win_roi: 75.2%
+
+[No.250] SURFACE_2_ダ | goal_sa+ls_shisu_juni
+  - type: combo | grade: S | score_std: 5.184
+  - total_bins: 190 | valid_bins: 117 | pass_bins: 63 | pass_rate: 0.538
+  - avg_place_roi: 77.9% | avg_win_roi: 77.5%
+
+[No.251] SURFACE_2_ダ | chokyo_yajirushi_code+tenkai_kigo_code
+  - type: combo | grade: B | score_std: 2.848
+  - total_bins: 18 | valid_bins: 13 | pass_bins: 7 | pass_rate: 0.538
+  - avg_place_roi: 77.7% | avg_win_roi: 75.7%
+
+[No.252] KEIBAJO_SURFACE_04_ダ | kyusha_shisu
+  - type: numeric | grade: C | score_std: 0.841
+  - total_bins: 103 | valid_bins: 13 | pass_bins: 7 | pass_rate: 0.538
+  - avg_place_roi: 76.9% | avg_win_roi: 89.9%
+
+[No.253] KEIBAJO_SURFACE_01_ダ | taikei_tomo
+  - type: numeric | grade: C | score_std: 1.647
+  - total_bins: 23 | valid_bins: 13 | pass_bins: 7 | pass_rate: 0.538
+  - avg_place_roi: 76.4% | avg_win_roi: 76.9%
+
+[No.254] KEIBAJO_SURFACE_03_芝 | joa_ls_shisu
+  - type: numeric | grade: C | score_std: 1.098
+  - total_bins: 40 | valid_bins: 13 | pass_bins: 7 | pass_rate: 0.538
+  - avg_place_roi: 76.2% | avg_win_roi: 71.7%
+
+[No.255] SURFACE_2_ダ | manken_shirushi+yy_int
+  - type: combo | grade: B | score_std: 2.405
+  - total_bins: 80 | valid_bins: 80 | pass_bins: 43 | pass_rate: 0.537
+  - avg_place_roi: 80.2% | avg_win_roi: 79.5%
+
+[No.256] GLOBAL | chokyo_yajirushi_code+prev1_chakujun
+  - type: combo | grade: A | score_std: 4.518
+  - total_bins: 53 | valid_bins: 41 | pass_bins: 22 | pass_rate: 0.537
+  - avg_place_roi: 79.6% | avg_win_roi: 78.2%
+
+[No.257] SURFACE_2_ダ | chokyo_yajirushi_code+kijun_ninkijun_tansho
+  - type: combo | grade: A | score_std: 4.064
+  - total_bins: 44 | valid_bins: 28 | pass_bins: 15 | pass_rate: 0.536
+  - avg_place_roi: 82.2% | avg_win_roi: 75.8%
+
+[No.258] KEIBAJO_SURFACE_03_ダ | kijun_odds_fukusho
+  - type: numeric | grade: B | score_std: 2.400
+  - total_bins: 70 | valid_bins: 28 | pass_bins: 15 | pass_rate: 0.536
+  - avg_place_roi: 78.5% | avg_win_roi: 85.2%
+
+[No.259] SURFACE_2_ダ | bac_tosu+yoso_juni
+  - type: combo | grade: A | score_std: 3.126
+  - total_bins: 108 | valid_bins: 84 | pass_bins: 45 | pass_rate: 0.536
+  - avg_place_roi: 77.5% | avg_win_roi: 73.8%
+
+[No.260] SURFACE_2_ダ | chokyo_yajirushi_code+hizume_code
+  - type: combo | grade: A | score_std: 3.305
+  - total_bins: 44 | valid_bins: 28 | pass_bins: 15 | pass_rate: 0.536
+  - avg_place_roi: 76.0% | avg_win_roi: 74.6%
+
+[No.261] SURFACE_2_ダ | babajotai_heavy+kishumei
+  - type: combo | grade: S | score_std: 5.341
+  - total_bins: 273 | valid_bins: 99 | pass_bins: 53 | pass_rate: 0.535
+  - avg_place_roi: 76.9% | avg_win_roi: 74.5%
+
+[No.262] SURFACE_2_ダ | ls_shisu_juni+prev1_chakujun
+  - type: combo | grade: S | score_std: 5.044
+  - total_bins: 117 | valid_bins: 86 | pass_bins: 46 | pass_rate: 0.535
+  - avg_place_roi: 80.4% | avg_win_roi: 82.6%
+
+[No.263] SURFACE_2_芝 | kishu_rank+prev3_chakujun
+  - type: combo | grade: S | score_std: 6.351
+  - total_bins: 81 | valid_bins: 73 | pass_bins: 39 | pass_rate: 0.534
+  - avg_place_roi: 79.1% | avg_win_roi: 76.9%
+
+[No.264] KEIBAJO_SURFACE_01_ダ | prev1_bataiju
+  - type: numeric | grade: C | score_std: 1.862
+  - total_bins: 52 | valid_bins: 30 | pass_bins: 16 | pass_rate: 0.533
+  - avg_place_roi: 87.9% | avg_win_roi: 80.8%
+
+[No.265] SURFACE_2_ダ | kyori_tekisei_2+prev2_chakujun
+  - type: combo | grade: A | score_std: 3.832
+  - total_bins: 36 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 85.1% | avg_win_roi: 83.8%
+
+[No.266] KEIBAJO_SURFACE_03_芝 | taikei_tomo
+  - type: numeric | grade: C | score_std: 1.887
+  - total_bins: 24 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 83.1% | avg_win_roi: 87.7%
+
+[No.267] KEIBAJO_SURFACE_02_芝 | prev1_corner4
+  - type: numeric | grade: C | score_std: 1.862
+  - total_bins: 17 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 81.8% | avg_win_roi: 85.9%
+
+[No.268] KEIBAJO_SURFACE_01_芝 | prev1_corner4
+  - type: numeric | grade: C | score_std: 1.800
+  - total_bins: 17 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 81.2% | avg_win_roi: 77.8%
+
+[No.269] SURFACE_2_ダ | chokyoshi_rank+gekiso_type
+  - type: combo | grade: A | score_std: 3.781
+  - total_bins: 30 | valid_bins: 30 | pass_bins: 16 | pass_rate: 0.533
+  - avg_place_roi: 80.1% | avg_win_roi: 72.0%
+
+[No.270] KEIBAJO_SURFACE_02_芝 | ten_shisu_juni
+  - type: numeric | grade: C | score_std: 1.017
+  - total_bins: 16 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 79.8% | avg_win_roi: 85.4%
+
+[No.271] SURFACE_2_ダ | babajotai_heavy+hobokusaki_rank
+  - type: combo | grade: C | score_std: 1.999
+  - total_bins: 15 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 77.3% | avg_win_roi: 72.5%
+
+[No.272] KEIBAJO_SURFACE_02_芝 | kohan_3f_sa
+  - type: numeric | grade: B | score_std: 2.522
+  - total_bins: 19 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 77.2% | avg_win_roi: 85.2%
+
+[No.273] SURFACE_2_ダ | gekiso_juni+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 6.468
+  - total_bins: 32 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 76.1% | avg_win_roi: 75.9%
+
+[No.274] KEIBAJO_SURFACE_04_ダ | ten_shisu_juni
+  - type: numeric | grade: C | score_std: 1.093
+  - total_bins: 15 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 76.1% | avg_win_roi: 76.0%
+
+[No.275] GLOBAL | kyori_tekisei_2+moshoku_code
+  - type: combo | grade: B | score_std: 2.060
+  - total_bins: 17 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 75.8% | avg_win_roi: 74.2%
+
+[No.276] KEIBAJO_SURFACE_04_芝 | chokyo_shisu
+  - type: numeric | grade: C | score_std: 1.527
+  - total_bins: 183 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 75.1% | avg_win_roi: 84.8%
+
+[No.277] KEIBAJO_SURFACE_03_ダ | goal_juni
+  - type: numeric | grade: B | score_std: 2.689
+  - total_bins: 16 | valid_bins: 15 | pass_bins: 8 | pass_rate: 0.533
+  - avg_place_roi: 73.9% | avg_win_roi: 79.1%
+
+[No.278] SURFACE_2_ダ | barei+shirushi_code_1
+  - type: combo | grade: B | score_std: 2.774
+  - total_bins: 40 | valid_bins: 32 | pass_bins: 17 | pass_rate: 0.531
+  - avg_place_roi: 80.1% | avg_win_roi: 75.3%
+
+[No.279] SURFACE_2_芝 | hizume_code+hobokusaki_rank
+  - type: combo | grade: A | score_std: 4.062
+  - total_bins: 74 | valid_bins: 49 | pass_bins: 26 | pass_rate: 0.531
+  - avg_place_roi: 79.3% | avg_win_roi: 70.7%
+
+[No.280] SURFACE_2_芝 | babajotai_heavy+gekiso_type
+  - type: combo | grade: A | score_std: 3.407
+  - total_bins: 18 | valid_bins: 17 | pass_bins: 9 | pass_rate: 0.529
+  - avg_place_roi: 86.4% | avg_win_roi: 90.1%
+
+[No.281] SURFACE_2_ダ | kyori_tekisei_2+prev1_keibajo
+  - type: combo | grade: S | score_std: 5.453
+  - total_bins: 24 | valid_bins: 17 | pass_bins: 9 | pass_rate: 0.529
+  - avg_place_roi: 84.2% | avg_win_roi: 91.4%
+
+[No.282] SURFACE_2_ダ | kishu_minarai_code+kishu_rank
+  - type: combo | grade: A | score_std: 3.043
+  - total_bins: 20 | valid_bins: 17 | pass_bins: 9 | pass_rate: 0.529
+  - avg_place_roi: 82.0% | avg_win_roi: 76.3%
+
+[No.283] GLOBAL | kijun_ninkijun_tansho
+  - type: numeric | grade: C | score_std: 0.647
+  - total_bins: 18 | valid_bins: 17 | pass_bins: 9 | pass_rate: 0.529
+  - avg_place_roi: 80.9% | avg_win_roi: 76.9%
+
+[No.284] GLOBAL | chokyo_yajirushi_code+shirushi_code_1
+  - type: combo | grade: A | score_std: 4.909
+  - total_bins: 25 | valid_bins: 17 | pass_bins: 9 | pass_rate: 0.529
+  - avg_place_roi: 80.4% | avg_win_roi: 85.1%
+
+[No.285] GLOBAL | shirushi_code_1+uma_deokure_ritsu
+  - type: combo | grade: A | score_std: 4.091
+  - total_bins: 257 | valid_bins: 119 | pass_bins: 63 | pass_rate: 0.529
+  - avg_place_roi: 78.4% | avg_win_roi: 80.2%
+
+[No.286] SURFACE_2_ダ | bac_tosu+gekiso_juni
+  - type: combo | grade: A | score_std: 4.078
+  - total_bins: 108 | valid_bins: 85 | pass_bins: 45 | pass_rate: 0.529
+  - avg_place_roi: 78.0% | avg_win_roi: 75.1%
+
+[No.287] SURFACE_2_ダ | bac_tosu+sanchimei
+  - type: combo | grade: A | score_std: 3.708
+  - total_bins: 84 | valid_bins: 51 | pass_bins: 27 | pass_rate: 0.529
+  - avg_place_roi: 75.0% | avg_win_roi: 71.2%
+
+[No.288] SURFACE_2_ダ | manken_shirushi+uma_deokure_ritsu
+  - type: combo | grade: S | score_std: 6.090
+  - total_bins: 169 | valid_bins: 38 | pass_bins: 20 | pass_rate: 0.526
+  - avg_place_roi: 83.5% | avg_win_roi: 80.7%
+
+[No.289] SURFACE_2_ダ | kyori_tekisei_2+yoso_juni
+  - type: combo | grade: S | score_std: 8.099
+  - total_bins: 37 | valid_bins: 19 | pass_bins: 10 | pass_rate: 0.526
+  - avg_place_roi: 82.8% | avg_win_roi: 84.4%
+
+[No.290] KEIBAJO_SURFACE_01_ダ | kishu_shisu
+  - type: numeric | grade: C | score_std: 0.756
+  - total_bins: 28 | valid_bins: 19 | pass_bins: 10 | pass_rate: 0.526
+  - avg_place_roi: 80.0% | avg_win_roi: 75.4%
+
+[No.291] SURFACE_2_ダ | futan_juryo+ls_shisu_juni
+  - type: combo | grade: A | score_std: 3.440
+  - total_bins: 66 | valid_bins: 57 | pass_bins: 30 | pass_rate: 0.526
+  - avg_place_roi: 79.5% | avg_win_roi: 74.2%
+
+[No.292] GLOBAL | futan_juryo+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 4.737
+  - total_bins: 23 | valid_bins: 19 | pass_bins: 10 | pass_rate: 0.526
+  - avg_place_roi: 78.5% | avg_win_roi: 73.8%
+
+[No.293] SURFACE_2_ダ | kishu_minarai_code+sanchimei
+  - type: combo | grade: A | score_std: 4.554
+  - total_bins: 37 | valid_bins: 19 | pass_bins: 10 | pass_rate: 0.526
+  - avg_place_roi: 78.3% | avg_win_roi: 63.5%
+
+[No.294] SURFACE_2_ダ | chokyo_yajirushi_code+ls_shisu_juni
+  - type: combo | grade: A | score_std: 4.000
+  - total_bins: 28 | valid_bins: 19 | pass_bins: 10 | pass_rate: 0.526
+  - avg_place_roi: 72.2% | avg_win_roi: 63.9%
+
+[No.295] SURFACE_2_ダ | kyusha_shisu
+  - type: combo | grade: S | score_std: 6.620
+  - total_bins: 352 | valid_bins: 78 | pass_bins: 41 | pass_rate: 0.526
+  - avg_place_roi: 78.8% | avg_win_roi: 83.6%
+
+[No.296] SURFACE_2_ダ | kyusha_shisu
+  - type: numeric | grade: C | score_std: 0.503
+  - total_bins: 352 | valid_bins: 78 | pass_bins: 41 | pass_rate: 0.526
+  - avg_place_roi: 78.8% | avg_win_roi: 83.6%
+
+[No.297] SURFACE_2_芝 | ls_shisu_juni+moshoku_code
+  - type: combo | grade: A | score_std: 4.701
+  - total_bins: 51 | valid_bins: 40 | pass_bins: 21 | pass_rate: 0.525
+  - avg_place_roi: 82.5% | avg_win_roi: 91.0%
+
+[No.298] GLOBAL | agari_shisu_juni+chokyo_yajirushi_code
+  - type: combo | grade: A | score_std: 3.408
+  - total_bins: 60 | valid_bins: 40 | pass_bins: 21 | pass_rate: 0.525
+  - avg_place_roi: 77.4% | avg_win_roi: 72.7%
+
+[No.299] GLOBAL | kyori_tekisei_2+ls_shisu_juni
+  - type: combo | grade: A | score_std: 3.814
+  - total_bins: 25 | valid_bins: 21 | pass_bins: 11 | pass_rate: 0.524
+  - avg_place_roi: 82.3% | avg_win_roi: 82.2%
+
+[No.300] SURFACE_2_ダ | gekiso_type+kohan_3f_juni
+  - type: combo | grade: S | score_std: 6.654
+  - total_bins: 90 | valid_bins: 63 | pass_bins: 33 | pass_rate: 0.524
+  - avg_place_roi: 80.1% | avg_win_roi: 74.2%
+
+[No.301] SURFACE_2_芝 | chokyo_yajirushi_code+futan_juryo
+  - type: combo | grade: A | score_std: 3.835
+  - total_bins: 32 | valid_bins: 21 | pass_bins: 11 | pass_rate: 0.524
+  - avg_place_roi: 79.0% | avg_win_roi: 82.0%
+
+[No.302] GLOBAL | futan_juryo+shirushi_code_1
+  - type: combo | grade: B | score_std: 2.858
+  - total_bins: 77 | valid_bins: 63 | pass_bins: 33 | pass_rate: 0.524
+  - avg_place_roi: 78.6% | avg_win_roi: 81.7%
+
+[No.303] SURFACE_2_ダ | hizume_code+kyakushitsu
+  - type: combo | grade: A | score_std: 3.402
+  - total_bins: 64 | valid_bins: 42 | pass_bins: 22 | pass_rate: 0.524
+  - avg_place_roi: 75.9% | avg_win_roi: 81.2%
+
+[No.304] SURFACE_2_ダ | hobokusaki_rank+kijun_ninkijun_tansho
+  - type: combo | grade: S | score_std: 5.084
+  - total_bins: 75 | valid_bins: 67 | pass_bins: 35 | pass_rate: 0.522
+  - avg_place_roi: 76.3% | avg_win_roi: 73.5%
+
+[No.305] SURFACE_2_ダ | prev1_keibajo+yoso_juni
+  - type: combo | grade: S | score_std: 5.593
+  - total_bins: 147 | valid_bins: 119 | pass_bins: 62 | pass_rate: 0.521
+  - avg_place_roi: 79.0% | avg_win_roi: 79.1%
+
+[No.306] SURFACE_2_芝 | sanchimei+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.202
+  - total_bins: 71 | valid_bins: 48 | pass_bins: 25 | pass_rate: 0.521
+  - avg_place_roi: 79.6% | avg_win_roi: 87.0%
+
+[No.307] SURFACE_2_ダ | joho_shisu+moshoku_code
+  - type: combo | grade: A | score_std: 4.468
+  - total_bins: 186 | valid_bins: 96 | pass_bins: 50 | pass_rate: 0.521
+  - avg_place_roi: 79.2% | avg_win_roi: 83.6%
+
+[No.308] SURFACE_2_芝 | kijun_ninkijun_tansho+sanchimei
+  - type: combo | grade: A | score_std: 4.114
+  - total_bins: 141 | valid_bins: 96 | pass_bins: 50 | pass_rate: 0.521
+  - avg_place_roi: 78.2% | avg_win_roi: 81.4%
+
+[No.309] KEIBAJO_SURFACE_01_ダ | kijun_odds_fukusho
+  - type: numeric | grade: C | score_std: 1.070
+  - total_bins: 54 | valid_bins: 25 | pass_bins: 13 | pass_rate: 0.520
+  - avg_place_roi: 88.5% | avg_win_roi: 82.8%
+
+[No.310] GLOBAL | babajotai_heavy+prev2_chakujun
+  - type: combo | grade: A | score_std: 3.925
+  - total_bins: 52 | valid_bins: 50 | pass_bins: 26 | pass_rate: 0.520
+  - avg_place_roi: 83.3% | avg_win_roi: 79.9%
+
+[No.311] GLOBAL | chokyo_yajirushi_code+ls_shisu_juni
+  - type: combo | grade: S | score_std: 5.171
+  - total_bins: 32 | valid_bins: 25 | pass_bins: 13 | pass_rate: 0.520
+  - avg_place_roi: 82.2% | avg_win_roi: 87.1%
+
+[No.312] GLOBAL | babajotai_heavy+prev3_chakujun
+  - type: combo | grade: B | score_std: 2.346
+  - total_bins: 50 | valid_bins: 50 | pass_bins: 26 | pass_rate: 0.520
+  - avg_place_roi: 82.1% | avg_win_roi: 79.2%
+
+[No.313] GLOBAL | hizume_code+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 3.994
+  - total_bins: 37 | valid_bins: 25 | pass_bins: 13 | pass_rate: 0.520
+  - avg_place_roi: 80.7% | avg_win_roi: 84.3%
+
+[No.314] KEIBAJO_SURFACE_03_ダ | goal_sa
+  - type: numeric | grade: B | score_std: 2.637
+  - total_bins: 34 | valid_bins: 25 | pass_bins: 13 | pass_rate: 0.520
+  - avg_place_roi: 72.2% | avg_win_roi: 79.7%
+
+[No.315] SURFACE_2_ダ | bac_tosu+prev2_chakujun
+  - type: combo | grade: A | score_std: 4.732
+  - total_bins: 112 | valid_bins: 77 | pass_bins: 40 | pass_rate: 0.519
+  - avg_place_roi: 78.9% | avg_win_roi: 78.5%
+
+[No.316] SURFACE_2_ダ | prev1_corner4+yoso_juni
+  - type: combo | grade: S | score_std: 6.557
+  - total_bins: 211 | valid_bins: 131 | pass_bins: 68 | pass_rate: 0.519
+  - avg_place_roi: 77.8% | avg_win_roi: 79.8%
+
+[No.317] SURFACE_2_ダ | kijun_ninkijun_tansho+manken_shirushi
+  - type: combo | grade: S | score_std: 5.827
+  - total_bins: 107 | valid_bins: 81 | pass_bins: 42 | pass_rate: 0.518
+  - avg_place_roi: 82.1% | avg_win_roi: 79.4%
+
+[No.318] KEIBAJO_SURFACE_04_ダ | uma_deokure_ritsu
+  - type: numeric | grade: C | score_std: 1.689
+  - total_bins: 44 | valid_bins: 27 | pass_bins: 14 | pass_rate: 0.518
+  - avg_place_roi: 76.2% | avg_win_roi: 68.0%
+
+[No.319] SURFACE_2_ダ | prev1_chakujun+prev1_corner4
+  - type: combo | grade: S | score_std: 7.027
+  - total_bins: 218 | valid_bins: 110 | pass_bins: 57 | pass_rate: 0.518
+  - avg_place_roi: 75.8% | avg_win_roi: 77.5%
+
+[No.320] GLOBAL | hizume_code+ls_shisu_juni
+  - type: combo | grade: A | score_std: 4.257
+  - total_bins: 132 | valid_bins: 83 | pass_bins: 43 | pass_rate: 0.518
+  - avg_place_roi: 79.1% | avg_win_roi: 81.8%
+
+[No.321] SURFACE_2_ダ | kijun_ninkijun_fukusho+sanchimei
+  - type: combo | grade: S | score_std: 5.284
+  - total_bins: 128 | valid_bins: 83 | pass_bins: 43 | pass_rate: 0.518
+  - avg_place_roi: 76.5% | avg_win_roi: 69.1%
+
+[No.322] SURFACE_2_芝 | ls_shisu_juni+manken_shirushi
+  - type: combo | grade: S | score_std: 6.128
+  - total_bins: 64 | valid_bins: 56 | pass_bins: 29 | pass_rate: 0.518
+  - avg_place_roi: 82.2% | avg_win_roi: 89.1%
+
+[No.323] SURFACE_2_ダ | futan_juryo+shirushi_code_1
+  - type: combo | grade: B | score_std: 2.601
+  - total_bins: 57 | valid_bins: 56 | pass_bins: 29 | pass_rate: 0.518
+  - avg_place_roi: 78.4% | avg_win_roi: 78.5%
+
+[No.324] SURFACE_2_ダ | kijun_ninkijun_tansho+prev3_chakujun
+  - type: combo | grade: S | score_std: 6.436
+  - total_bins: 209 | valid_bins: 114 | pass_bins: 59 | pass_rate: 0.517
+  - avg_place_roi: 80.5% | avg_win_roi: 80.3%
+
+[No.325] GLOBAL | kijun_ninkijun_fukusho+sanchimei
+  - type: combo | grade: A | score_std: 4.120
+  - total_bins: 179 | valid_bins: 116 | pass_bins: 60 | pass_rate: 0.517
+  - avg_place_roi: 78.2% | avg_win_roi: 73.7%
+
+[No.326] SURFACE_2_ダ | hizume_code+prev3_chakujun
+  - type: combo | grade: A | score_std: 4.880
+  - total_bins: 148 | valid_bins: 89 | pass_bins: 46 | pass_rate: 0.517
+  - avg_place_roi: 81.8% | avg_win_roi: 81.2%
+
+[No.327] SURFACE_2_ダ | manken_shirushi+prev1_corner4
+  - type: combo | grade: S | score_std: 5.054
+  - total_bins: 122 | valid_bins: 91 | pass_bins: 47 | pass_rate: 0.516
+  - avg_place_roi: 79.7% | avg_win_roi: 82.8%
+
+[No.328] GLOBAL | babajotai_heavy+futan_juryo
+  - type: combo | grade: B | score_std: 2.736
+  - total_bins: 38 | valid_bins: 31 | pass_bins: 16 | pass_rate: 0.516
+  - avg_place_roi: 81.1% | avg_win_roi: 80.7%
+
+[No.329] SURFACE_2_芝 | kyakushitsu+prev3_chakujun
+  - type: combo | grade: A | score_std: 4.358
+  - total_bins: 68 | valid_bins: 62 | pass_bins: 32 | pass_rate: 0.516
+  - avg_place_roi: 80.8% | avg_win_roi: 82.2%
+
+[No.330] SURFACE_2_芝 | chokyo_yajirushi_code+prev3_chakujun
+  - type: combo | grade: B | score_std: 2.643
+  - total_bins: 38 | valid_bins: 31 | pass_bins: 16 | pass_rate: 0.516
+  - avg_place_roi: 77.3% | avg_win_roi: 75.3%
+
+[No.331] GLOBAL | sanchimei+shirushi_code_1
+  - type: combo | grade: B | score_std: 2.680
+  - total_bins: 93 | valid_bins: 62 | pass_bins: 32 | pass_rate: 0.516
+  - avg_place_roi: 76.7% | avg_win_roi: 81.8%
+
+[No.332] SURFACE_2_ダ | chokyo_yajirushi_code+dochu_juni
+  - type: combo | grade: A | score_std: 3.777
+  - total_bins: 50 | valid_bins: 31 | pass_bins: 16 | pass_rate: 0.516
+  - avg_place_roi: 74.3% | avg_win_roi: 68.9%
+
+[No.333] SURFACE_2_ダ | hizume_code+manken_shirushi
+  - type: combo | grade: A | score_std: 3.435
+  - total_bins: 79 | valid_bins: 64 | pass_bins: 33 | pass_rate: 0.516
+  - avg_place_roi: 80.2% | avg_win_roi: 77.3%
+
+[No.334] GLOBAL | babajotai_heavy+prev1_keibajo
+  - type: combo | grade: A | score_std: 4.364
+  - total_bins: 42 | valid_bins: 33 | pass_bins: 17 | pass_rate: 0.515
+  - avg_place_roi: 86.5% | avg_win_roi: 79.5%
+
+[No.335] SURFACE_2_芝 | kishu_shisu
+  - type: combo | grade: C | score_std: 0.789
+  - total_bins: 36 | valid_bins: 33 | pass_bins: 17 | pass_rate: 0.515
+  - avg_place_roi: 80.0% | avg_win_roi: 79.4%
+
+[No.336] SURFACE_2_芝 | kishu_shisu
+  - type: numeric | grade: C | score_std: 0.450
+  - total_bins: 36 | valid_bins: 33 | pass_bins: 17 | pass_rate: 0.515
+  - avg_place_roi: 80.0% | avg_win_roi: 79.4%
+
+[No.337] SURFACE_2_ダ | moshoku_code+uma_deokure_ritsu
+  - type: combo | grade: S | score_std: 7.261
+  - total_bins: 160 | valid_bins: 66 | pass_bins: 34 | pass_rate: 0.515
+  - avg_place_roi: 77.1% | avg_win_roi: 78.7%
+
+[No.338] SURFACE_2_ダ | barei+goal_juni
+  - type: combo | grade: S | score_std: 5.029
+  - total_bins: 85 | valid_bins: 66 | pass_bins: 34 | pass_rate: 0.515
+  - avg_place_roi: 76.7% | avg_win_roi: 71.1%
+
+[No.339] GLOBAL | moshoku_code+shirushi_code_1
+  - type: combo | grade: C | score_std: 1.658
+  - total_bins: 42 | valid_bins: 35 | pass_bins: 18 | pass_rate: 0.514
+  - avg_place_roi: 79.6% | avg_win_roi: 81.3%
+
+[No.340] GLOBAL | shirushi_code_1+yy_int
+  - type: combo | grade: C | score_std: 1.277
+  - total_bins: 70 | valid_bins: 70 | pass_bins: 36 | pass_rate: 0.514
+  - avg_place_roi: 79.1% | avg_win_roi: 80.1%
+
+[No.341] SURFACE_2_ダ | kyakushitsu+shirushi_code_1
+  - type: combo | grade: C | score_std: 1.825
+  - total_bins: 35 | valid_bins: 35 | pass_bins: 18 | pass_rate: 0.514
+  - avg_place_roi: 78.9% | avg_win_roi: 80.3%
+
+[No.342] GLOBAL | kyakushitsu+shirushi_code_1
+  - type: combo | grade: C | score_std: 1.138
+  - total_bins: 35 | valid_bins: 35 | pass_bins: 18 | pass_rate: 0.514
+  - avg_place_roi: 78.8% | avg_win_roi: 80.4%
+
+[No.343] SURFACE_2_ダ | moshoku_code+shirushi_code_1
+  - type: combo | grade: B | score_std: 2.133
+  - total_bins: 37 | valid_bins: 35 | pass_bins: 18 | pass_rate: 0.514
+  - avg_place_roi: 78.6% | avg_win_roi: 78.8%
+
+[No.344] SURFACE_2_芝 | agari_shisu_juni+chokyo_yajirushi_code
+  - type: combo | grade: A | score_std: 3.414
+  - total_bins: 53 | valid_bins: 35 | pass_bins: 18 | pass_rate: 0.514
+  - avg_place_roi: 75.5% | avg_win_roi: 76.1%
+
+[No.345] SURFACE_2_芝 | hobokusaki_rank+kijun_ninkijun_tansho
+  - type: combo | grade: A | score_std: 3.395
+  - total_bins: 79 | valid_bins: 72 | pass_bins: 37 | pass_rate: 0.514
+  - avg_place_roi: 82.2% | avg_win_roi: 79.4%
+
+[No.346] SURFACE_2_ダ | prev3_chakujun+taikei_tomo
+  - type: combo | grade: S | score_std: 6.025
+  - total_bins: 236 | valid_bins: 109 | pass_bins: 56 | pass_rate: 0.514
+  - avg_place_roi: 78.3% | avg_win_roi: 83.1%
+
+[No.347] GLOBAL | gekiso_type+uma_deokure_ritsu
+  - type: combo | grade: S | score_std: 7.883
+  - total_bins: 201 | valid_bins: 74 | pass_bins: 38 | pass_rate: 0.513
+  - avg_place_roi: 76.1% | avg_win_roi: 71.3%
+
+[No.348] SURFACE_2_ダ | agari_shisu_juni+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.082
+  - total_bins: 96 | valid_bins: 76 | pass_bins: 39 | pass_rate: 0.513
+  - avg_place_roi: 79.7% | avg_win_roi: 81.3%
+
+[No.349] SURFACE_2_ダ | kijun_ninkijun_fukusho+prev3_chakujun
+  - type: combo | grade: S | score_std: 6.458
+  - total_bins: 209 | valid_bins: 115 | pass_bins: 59 | pass_rate: 0.513
+  - avg_place_roi: 80.6% | avg_win_roi: 80.4%
+
+[No.350] SURFACE_2_ダ | gekiso_type+hizume_code
+  - type: combo | grade: S | score_std: 5.369
+  - total_bins: 56 | valid_bins: 39 | pass_bins: 20 | pass_rate: 0.513
+  - avg_place_roi: 82.4% | avg_win_roi: 71.7%
+
+[No.351] SURFACE_2_ダ | chokyoshi_rank+uma_deokure_ritsu
+  - type: combo | grade: S | score_std: 5.353
+  - total_bins: 179 | valid_bins: 78 | pass_bins: 40 | pass_rate: 0.513
+  - avg_place_roi: 79.4% | avg_win_roi: 73.4%
+
+[No.352] SURFACE_2_芝 | futan_juryo+hobokusaki_rank
+  - type: combo | grade: A | score_std: 3.863
+  - total_bins: 45 | valid_bins: 39 | pass_bins: 20 | pass_rate: 0.513
+  - avg_place_roi: 79.2% | avg_win_roi: 84.2%
+
+[No.353] SURFACE_2_芝 | hobokusaki_rank+sanchimei
+  - type: combo | grade: A | score_std: 3.498
+  - total_bins: 63 | valid_bins: 39 | pass_bins: 20 | pass_rate: 0.513
+  - avg_place_roi: 76.5% | avg_win_roi: 73.2%
+
+[No.354] SURFACE_2_芝 | futan_juryo+tenkai_kigo_code
+  - type: combo | grade: A | score_std: 4.913
+  - total_bins: 45 | valid_bins: 41 | pass_bins: 21 | pass_rate: 0.512
+  - avg_place_roi: 79.6% | avg_win_roi: 89.6%
+
+[No.355] GLOBAL | chokyoshi_rank+ls_shisu_juni
+  - type: combo | grade: S | score_std: 5.003
+  - total_bins: 49 | valid_bins: 41 | pass_bins: 21 | pass_rate: 0.512
+  - avg_place_roi: 78.6% | avg_win_roi: 79.1%
+
+[No.356] SURFACE_2_芝 | kijun_ninkijun_fukusho+ls_shisu_juni
+  - type: combo | grade: S | score_std: 6.351
+  - total_bins: 115 | valid_bins: 84 | pass_bins: 43 | pass_rate: 0.512
+  - avg_place_roi: 81.1% | avg_win_roi: 85.2%
+
+[No.357] GLOBAL | kishu_rank+prev1_bataiju
+  - type: combo | grade: A | score_std: 4.332
+  - total_bins: 321 | valid_bins: 221 | pass_bins: 113 | pass_rate: 0.511
+  - avg_place_roi: 76.2% | avg_win_roi: 74.3%
+
+[No.358] SURFACE_2_芝 | kijun_ninkijun_fukusho+sanchimei
+  - type: combo | grade: A | score_std: 4.096
+  - total_bins: 141 | valid_bins: 96 | pass_bins: 49 | pass_rate: 0.510
+  - avg_place_roi: 78.5% | avg_win_roi: 81.3%
+
+[No.359] SURFACE_2_ダ | hizume_code+kohan_3f_juni
+  - type: combo | grade: A | score_std: 4.591
+  - total_bins: 145 | valid_bins: 106 | pass_bins: 54 | pass_rate: 0.509
+  - avg_place_roi: 77.5% | avg_win_roi: 79.8%
+
+[No.360] SURFACE_2_ダ | prev1_corner4+taikei_tomo
+  - type: combo | grade: S | score_std: 5.459
+  - total_bins: 241 | valid_bins: 114 | pass_bins: 58 | pass_rate: 0.509
+  - avg_place_roi: 77.2% | avg_win_roi: 78.8%
+
+[No.361] SURFACE_2_ダ | goal_juni+prev1_keibajo
+  - type: combo | grade: S | score_std: 6.886
+  - total_bins: 148 | valid_bins: 118 | pass_bins: 60 | pass_rate: 0.508
+  - avg_place_roi: 77.6% | avg_win_roi: 79.7%
+
+[No.362] SURFACE_2_ダ | hizume_code+ls_shisu_juni
+  - type: combo | grade: A | score_std: 4.116
+  - total_bins: 99 | valid_bins: 61 | pass_bins: 31 | pass_rate: 0.508
+  - avg_place_roi: 78.9% | avg_win_roi: 78.2%
+
+[No.363] SURFACE_2_ダ | babajotai_heavy+uma_tokki_1
+  - type: combo | grade: S | score_std: 5.861
+  - total_bins: 158 | valid_bins: 63 | pass_bins: 32 | pass_rate: 0.508
+  - avg_place_roi: 78.2% | avg_win_roi: 80.1%
+
+[No.364] SURFACE_2_芝 | prev3_chakujun+tenkai_kigo_code
+  - type: combo | grade: A | score_std: 4.565
+  - total_bins: 81 | valid_bins: 65 | pass_bins: 33 | pass_rate: 0.508
+  - avg_place_roi: 80.7% | avg_win_roi: 84.1%
+
+[No.365] SURFACE_2_芝 | prev1_chakujun+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.597
+  - total_bins: 96 | valid_bins: 65 | pass_bins: 33 | pass_rate: 0.508
+  - avg_place_roi: 76.5% | avg_win_roi: 76.0%
+
+[No.366] SURFACE_2_ダ | ls_shisu_juni+prev1_keibajo
+  - type: combo | grade: A | score_std: 4.078
+  - total_bins: 82 | valid_bins: 67 | pass_bins: 34 | pass_rate: 0.507
+  - avg_place_roi: 80.4% | avg_win_roi: 78.6%
+
+[No.367] SURFACE_2_ダ | moshoku_code+prev2_chakujun
+  - type: combo | grade: A | score_std: 4.060
+  - total_bins: 80 | valid_bins: 67 | pass_bins: 34 | pass_rate: 0.507
+  - avg_place_roi: 77.3% | avg_win_roi: 78.3%
+
+[No.368] SURFACE_2_ダ | hobokusaki_rank+kijun_ninkijun_fukusho
+  - type: combo | grade: S | score_std: 5.095
+  - total_bins: 75 | valid_bins: 67 | pass_bins: 34 | pass_rate: 0.507
+  - avg_place_roi: 76.3% | avg_win_roi: 73.4%
+
+[No.369] SURFACE_2_ダ | kijun_odds_fukusho
+  - type: numeric | grade: C | score_std: 0.551
+  - total_bins: 102 | valid_bins: 69 | pass_bins: 35 | pass_rate: 0.507
+  - avg_place_roi: 80.2% | avg_win_roi: 82.9%
+
+[No.370] SURFACE_2_芝 | hobokusaki_rank+prev2_chakujun
+  - type: combo | grade: A | score_std: 4.481
+  - total_bins: 84 | valid_bins: 71 | pass_bins: 36 | pass_rate: 0.507
+  - avg_place_roi: 84.0% | avg_win_roi: 77.5%
+
+[No.371] SURFACE_2_ダ | gekiso_juni+manken_shirushi
+  - type: combo | grade: S | score_std: 5.513
+  - total_bins: 97 | valid_bins: 73 | pass_bins: 37 | pass_rate: 0.507
+  - avg_place_roi: 82.5% | avg_win_roi: 84.3%
+
+[No.372] SURFACE_2_ダ | chokyoshi_rank+prev3_chakujun
+  - type: combo | grade: A | score_std: 3.771
+  - total_bins: 80 | valid_bins: 73 | pass_bins: 37 | pass_rate: 0.507
+  - avg_place_roi: 78.4% | avg_win_roi: 76.8%
+
+[No.373] SURFACE_2_芝 | prev3_chakujun+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.230
+  - total_bins: 106 | valid_bins: 77 | pass_bins: 39 | pass_rate: 0.506
+  - avg_place_roi: 78.2% | avg_win_roi: 84.0%
+
+[No.374] SURFACE_2_ダ | kijun_ninkijun_fukusho+manken_shirushi
+  - type: combo | grade: S | score_std: 5.779
+  - total_bins: 107 | valid_bins: 81 | pass_bins: 41 | pass_rate: 0.506
+  - avg_place_roi: 82.1% | avg_win_roi: 79.2%
+
+[No.375] SURFACE_2_ダ | kohan_3f_juni+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.116
+  - total_bins: 102 | valid_bins: 85 | pass_bins: 43 | pass_rate: 0.506
+  - avg_place_roi: 79.0% | avg_win_roi: 77.3%
+
+[No.376] SURFACE_2_ダ | goal_sa+shirushi_code_1
+  - type: combo | grade: A | score_std: 4.219
+  - total_bins: 126 | valid_bins: 87 | pass_bins: 44 | pass_rate: 0.506
+  - avg_place_roi: 76.2% | avg_win_roi: 77.7%
+
+[No.377] GLOBAL | ls_shisu_juni+prev2_chakujun
+  - type: combo | grade: A | score_std: 4.623
+  - total_bins: 139 | valid_bins: 107 | pass_bins: 54 | pass_rate: 0.505
+  - avg_place_roi: 83.3% | avg_win_roi: 76.9%
+
+[No.378] SURFACE_2_ダ | goal_juni+taikei_tomo
+  - type: combo | grade: S | score_std: 5.895
+  - total_bins: 244 | valid_bins: 121 | pass_bins: 61 | pass_rate: 0.504
+  - avg_place_roi: 76.9% | avg_win_roi: 79.6%
+
+[No.379] SURFACE_2_ダ | goal_juni+prev2_chakujun
+  - type: combo | grade: S | score_std: 6.815
+  - total_bins: 221 | valid_bins: 125 | pass_bins: 63 | pass_rate: 0.504
+  - avg_place_roi: 78.2% | avg_win_roi: 78.6%
+
+[No.380] GLOBAL | futan_juryo+prev3_chakujun
+  - type: combo | grade: S | score_std: 6.619
+  - total_bins: 163 | valid_bins: 129 | pass_bins: 65 | pass_rate: 0.504
+  - avg_place_roi: 80.1% | avg_win_roi: 82.5%
+
+[No.381] SURFACE_2_ダ | agari_shisu_juni+prev1_chakujun
+  - type: combo | grade: S | score_std: 6.401
+  - total_bins: 225 | valid_bins: 133 | pass_bins: 67 | pass_rate: 0.504
+  - avg_place_roi: 78.9% | avg_win_roi: 82.0%
+
+[No.382] SURFACE_2_ダ | kohan_3f_juni+prev2_chakujun
+  - type: combo | grade: S | score_std: 5.645
+  - total_bins: 225 | valid_bins: 133 | pass_bins: 67 | pass_rate: 0.504
+  - avg_place_roi: 78.1% | avg_win_roi: 78.1%
+
+[No.383] KEIBAJO_SURFACE_03_芝 | ls_shisu_juni
+  - type: numeric | grade: C | score_std: 0.908
+  - total_bins: 9 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 87.3% | avg_win_roi: 80.8%
+
+[No.384] KEIBAJO_SURFACE_01_ダ | prev3_chakujun
+  - type: numeric | grade: B | score_std: 2.167
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 87.2% | avg_win_roi: 81.3%
+
+[No.385] SURFACE_2_ダ | prev1_chakujun
+  - type: numeric | grade: C | score_std: 1.059
+  - total_bins: 18 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 87.2% | avg_win_roi: 91.4%
+
+[No.386] KEIBAJO_SURFACE_03_ダ | bataiju_change_bin
+  - type: numeric | grade: C | score_std: 1.155
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 86.2% | avg_win_roi: 94.9%
+
+[No.387] GLOBAL | prev1_keibajo
+  - type: numeric | grade: C | score_std: 0.556
+  - total_bins: 21 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 85.8% | avg_win_roi: 73.1%
+
+[No.388] SURFACE_2_ダ | agari_shisu_juni+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 10.407
+  - total_bins: 38 | valid_bins: 20 | pass_bins: 10 | pass_rate: 0.500
+  - avg_place_roi: 85.7% | avg_win_roi: 94.2%
+
+[No.389] KEIBAJO_SURFACE_01_芝 | rotation
+  - type: numeric | grade: C | score_std: 1.111
+  - total_bins: 21 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 85.0% | avg_win_roi: 76.6%
+
+[No.390] SURFACE_2_芝 | babajotai_heavy+futan_juryo
+  - type: combo | grade: A | score_std: 4.138
+  - total_bins: 29 | valid_bins: 24 | pass_bins: 12 | pass_rate: 0.500
+  - avg_place_roi: 84.9% | avg_win_roi: 96.7%
+
+[No.391] KEIBAJO_SURFACE_01_ダ | ten_shisu_juni
+  - type: numeric | grade: C | score_std: 1.596
+  - total_bins: 14 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 84.8% | avg_win_roi: 81.1%
+
+[No.392] SURFACE_2_ダ | prev2_chakujun
+  - type: numeric | grade: C | score_std: 0.849
+  - total_bins: 18 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 84.6% | avg_win_roi: 81.3%
+
+[No.393] KEIBAJO_SURFACE_01_芝 | hizume_code
+  - type: numeric | grade: C | score_std: 1.574
+  - total_bins: 15 | valid_bins: 10 | pass_bins: 5 | pass_rate: 0.500
+  - avg_place_roi: 84.5% | avg_win_roi: 114.9%
+
+[No.394] SURFACE_2_芝 | chokyo_yajirushi_code+moshoku_code
+  - type: combo | grade: B | score_std: 2.471
+  - total_bins: 22 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 84.3% | avg_win_roi: 73.4%
+
+[No.395] KEIBAJO_SURFACE_01_ダ | pace_shisu_juni
+  - type: numeric | grade: C | score_std: 1.360
+  - total_bins: 14 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 83.9% | avg_win_roi: 84.2%
+
+[No.396] KEIBAJO_SURFACE_01_ダ | wakuban
+  - type: numeric | grade: C | score_std: 0.984
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 83.7% | avg_win_roi: 79.8%
+
+[No.397] SURFACE_2_芝 | moshoku_code+prev3_chakujun
+  - type: combo | grade: A | score_std: 4.022
+  - total_bins: 86 | valid_bins: 68 | pass_bins: 34 | pass_rate: 0.500
+  - avg_place_roi: 83.4% | avg_win_roi: 78.3%
+
+[No.398] KEIBAJO_SURFACE_02_芝 | kijun_ninkijun_tansho
+  - type: numeric | grade: B | score_std: 2.657
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 83.3% | avg_win_roi: 80.5%
+
+[No.399] KEIBAJO_SURFACE_02_芝 | kijun_ninkijun_fukusho
+  - type: numeric | grade: B | score_std: 2.655
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 83.2% | avg_win_roi: 80.4%
+
+[No.400] KEIBAJO_SURFACE_05_ダ | uma_tokki_2
+  - type: numeric | grade: B | score_std: 2.262
+  - total_bins: 17 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 82.9% | avg_win_roi: 69.6%
+
+[No.401] KEIBAJO_SURFACE_02_芝 | pace_shisu
+  - type: numeric | grade: B | score_std: 2.067
+  - total_bins: 23 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 82.7% | avg_win_roi: 86.1%
+
+[No.402] KEIBAJO_SURFACE_02_芝 | gekiso_type
+  - type: code | grade: A | score_std: 3.565
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 82.5% | avg_win_roi: 82.0%
+
+[No.403] SURFACE_2_ダ | manken_shirushi+nyukyu_nannichimae
+  - type: combo | grade: S | score_std: 5.115
+  - total_bins: 124 | valid_bins: 10 | pass_bins: 5 | pass_rate: 0.500
+  - avg_place_roi: 82.3% | avg_win_roi: 81.5%
+
+[No.404] SURFACE_2_ダ | babajotai_heavy+prev3_chakujun
+  - type: combo | grade: A | score_std: 3.506
+  - total_bins: 49 | valid_bins: 44 | pass_bins: 22 | pass_rate: 0.500
+  - avg_place_roi: 82.3% | avg_win_roi: 80.2%
+
+[No.405] KEIBAJO_SURFACE_05_芝 | shirushi_code_3
+  - type: numeric | grade: C | score_std: 1.449
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 82.2% | avg_win_roi: 77.1%
+
+[No.406] GLOBAL | babajotai_heavy+ls_shisu_juni
+  - type: combo | grade: B | score_std: 2.004
+  - total_bins: 28 | valid_bins: 26 | pass_bins: 13 | pass_rate: 0.500
+  - avg_place_roi: 82.1% | avg_win_roi: 83.9%
+
+[No.407] KEIBAJO_SURFACE_04_ダ | prev1_bataiju_bin
+  - type: numeric | grade: C | score_std: 0.914
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 81.8% | avg_win_roi: 78.1%
+
+[No.408] KEIBAJO_SURFACE_02_ダ | shirushi_code_4
+  - type: numeric | grade: C | score_std: 1.042
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 81.7% | avg_win_roi: 75.6%
+
+[No.409] SURFACE_2_芝 | prev2_chakujun
+  - type: numeric | grade: C | score_std: 0.839
+  - total_bins: 18 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 81.7% | avg_win_roi: 76.7%
+
+[No.410] SURFACE_2_ダ | futan_juryo+prev1_keibajo
+  - type: combo | grade: A | score_std: 4.061
+  - total_bins: 90 | valid_bins: 74 | pass_bins: 37 | pass_rate: 0.500
+  - avg_place_roi: 81.5% | avg_win_roi: 83.9%
+
+[No.411] KEIBAJO_SURFACE_03_ダ | joho_shisu
+  - type: numeric | grade: B | score_std: 2.085
+  - total_bins: 43 | valid_bins: 30 | pass_bins: 15 | pass_rate: 0.500
+  - avg_place_roi: 81.5% | avg_win_roi: 88.5%
+
+[No.412] KEIBAJO_SURFACE_03_ダ | shirushi_code_6
+  - type: numeric | grade: C | score_std: 1.063
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 81.5% | avg_win_roi: 85.1%
+
+[No.413] KEIBAJO_SURFACE_05_ダ | shirushi_code_4
+  - type: numeric | grade: C | score_std: 0.926
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 81.5% | avg_win_roi: 77.4%
+
+[No.414] KEIBAJO_SURFACE_01_芝 | bac_juryo_shubetsu_code
+  - type: numeric | grade: C | score_std: 0.408
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 81.5% | avg_win_roi: 79.2%
+
+[No.415] KEIBAJO_SURFACE_02_ダ | shirushi_code_5
+  - type: numeric | grade: C | score_std: 1.065
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 81.4% | avg_win_roi: 72.0%
+
+[No.416] KEIBAJO_SURFACE_01_ダ | prev1_kyakushitsu
+  - type: numeric | grade: C | score_std: 0.603
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 81.4% | avg_win_roi: 81.1%
+
+[No.417] KEIBAJO_SURFACE_04_芝 | chokyo_yajirushi_code
+  - type: numeric | grade: B | score_std: 2.428
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 81.3% | avg_win_roi: 70.8%
+
+[No.418] KEIBAJO_SURFACE_02_芝 | shirushi_code_2
+  - type: numeric | grade: C | score_std: 0.806
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 81.3% | avg_win_roi: 76.0%
+
+[No.419] SURFACE_2_ダ | chokyoshi_rank+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 3.586
+  - total_bins: 15 | valid_bins: 12 | pass_bins: 6 | pass_rate: 0.500
+  - avg_place_roi: 81.2% | avg_win_roi: 71.1%
+
+[No.420] KEIBAJO_SURFACE_03_芝 | gekiso_type
+  - type: code | grade: C | score_std: 1.293
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 81.2% | avg_win_roi: 69.0%
+
+[No.421] KEIBAJO_SURFACE_01_芝 | shirushi_code_5
+  - type: numeric | grade: C | score_std: 1.193
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 81.2% | avg_win_roi: 77.6%
+
+[No.422] SURFACE_2_芝 | babajotai_heavy+manken_shirushi
+  - type: combo | grade: A | score_std: 4.375
+  - total_bins: 24 | valid_bins: 24 | pass_bins: 12 | pass_rate: 0.500
+  - avg_place_roi: 81.1% | avg_win_roi: 86.5%
+
+[No.423] KEIBAJO_SURFACE_03_ダ | chokyo_shisu
+  - type: numeric | grade: C | score_std: 1.055
+  - total_bins: 50 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 81.1% | avg_win_roi: 83.3%
+
+[No.424] SURFACE_2_ダ | kishu_minarai_code+manken_shisu
+  - type: combo | grade: S | score_std: 7.320
+  - total_bins: 107 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 81.0% | avg_win_roi: 79.8%
+
+[No.425] KEIBAJO_SURFACE_02_芝 | nyukyu_nannichimae
+  - type: numeric | grade: A | score_std: 3.606
+  - total_bins: 27 | valid_bins: 12 | pass_bins: 6 | pass_rate: 0.500
+  - avg_place_roi: 81.0% | avg_win_roi: 84.5%
+
+[No.426] KEIBAJO_SURFACE_03_芝 | shirushi_code_6
+  - type: numeric | grade: C | score_std: 0.902
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 80.9% | avg_win_roi: 80.0%
+
+[No.427] GLOBAL | kishu_shisu
+  - type: numeric | grade: C | score_std: 0.412
+  - total_bins: 37 | valid_bins: 36 | pass_bins: 18 | pass_rate: 0.500
+  - avg_place_roi: 80.8% | avg_win_roi: 79.4%
+
+[No.428] SURFACE_2_ダ | babajotai_heavy+manken_shirushi
+  - type: combo | grade: C | score_std: 1.170
+  - total_bins: 24 | valid_bins: 24 | pass_bins: 12 | pass_rate: 0.500
+  - avg_place_roi: 80.7% | avg_win_roi: 79.7%
+
+[No.429] KEIBAJO_SURFACE_01_ダ | kishu_kitai_rentai_ritsu
+  - type: numeric | grade: C | score_std: 1.049
+  - total_bins: 33 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 80.7% | avg_win_roi: 89.4%
+
+[No.430] COURSE_27 | umaban
+  - type: combo | grade: C | score_std: 0.919
+  - total_bins: 18 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 80.7% | avg_win_roi: 80.2%
+
+[No.431] GLOBAL | umaban_clean
+  - type: numeric | grade: C | score_std: 0.589
+  - total_bins: 18 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 80.7% | avg_win_roi: 80.2%
+
+[No.432] SURFACE_2_ダ | bac_tosu+shirushi_code_1
+  - type: combo | grade: B | score_std: 2.822
+  - total_bins: 62 | valid_bins: 48 | pass_bins: 24 | pass_rate: 0.500
+  - avg_place_roi: 80.6% | avg_win_roi: 76.1%
+
+[No.433] SURFACE_2_ダ | prev3_chakujun
+  - type: numeric | grade: C | score_std: 1.306
+  - total_bins: 18 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 80.6% | avg_win_roi: 86.8%
+
+[No.434] KEIBAJO_SURFACE_03_ダ | shirushi_code_5
+  - type: numeric | grade: C | score_std: 1.219
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 80.6% | avg_win_roi: 76.5%
+
+[No.435] SURFACE_2_ダ | goal_juni+manken_shirushi
+  - type: combo | grade: A | score_std: 4.348
+  - total_bins: 107 | valid_bins: 78 | pass_bins: 39 | pass_rate: 0.500
+  - avg_place_roi: 80.5% | avg_win_roi: 81.4%
+
+[No.436] SURFACE_2_ダ | manken_shirushi
+  - type: numeric | grade: C | score_std: 0.742
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 80.5% | avg_win_roi: 80.1%
+
+[No.437] SURFACE_2_ダ | dochu_juni+gekiso_type
+  - type: combo | grade: S | score_std: 6.261
+  - total_bins: 90 | valid_bins: 62 | pass_bins: 31 | pass_rate: 0.500
+  - avg_place_roi: 80.4% | avg_win_roi: 72.5%
+
+[No.438] SURFACE_2_芝 | chokyo_yajirushi_code+joho_shisu
+  - type: combo | grade: B | score_std: 2.831
+  - total_bins: 102 | valid_bins: 88 | pass_bins: 44 | pass_rate: 0.500
+  - avg_place_roi: 80.4% | avg_win_roi: 81.6%
+
+[No.439] GLOBAL | babajotai_heavy+manken_shirushi
+  - type: combo | grade: C | score_std: 1.378
+  - total_bins: 24 | valid_bins: 24 | pass_bins: 12 | pass_rate: 0.500
+  - avg_place_roi: 80.4% | avg_win_roi: 81.8%
+
+[No.440] KEIBAJO_SURFACE_03_芝 | futan_juryo
+  - type: numeric | grade: C | score_std: 0.944
+  - total_bins: 9 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 80.4% | avg_win_roi: 83.3%
+
+[No.441] SURFACE_2_ダ | gekiso_type
+  - type: code | grade: C | score_std: 0.342
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 80.4% | avg_win_roi: 72.4%
+
+[No.442] SURFACE_2_ダ | barei+prev3_chakujun
+  - type: combo | grade: S | score_std: 5.572
+  - total_bins: 80 | valid_bins: 54 | pass_bins: 27 | pass_rate: 0.500
+  - avg_place_roi: 80.3% | avg_win_roi: 83.0%
+
+[No.443] SURFACE_2_ダ | dochu_juni+manken_shirushi
+  - type: combo | grade: A | score_std: 4.084
+  - total_bins: 120 | valid_bins: 106 | pass_bins: 53 | pass_rate: 0.500
+  - avg_place_roi: 80.3% | avg_win_roi: 81.4%
+
+[No.444] SURFACE_2_芝 | babajotai_heavy+yy_int
+  - type: combo | grade: C | score_std: 1.936
+  - total_bins: 30 | valid_bins: 28 | pass_bins: 14 | pass_rate: 0.500
+  - avg_place_roi: 80.3% | avg_win_roi: 82.2%
+
+[No.445] SURFACE_2_ダ | manken_shirushi+sanchimei
+  - type: combo | grade: A | score_std: 4.862
+  - total_bins: 77 | valid_bins: 48 | pass_bins: 24 | pass_rate: 0.500
+  - avg_place_roi: 80.1% | avg_win_roi: 78.6%
+
+[No.446] SURFACE_2_芝 | prev3_chakujun
+  - type: numeric | grade: C | score_std: 1.146
+  - total_bins: 18 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 80.1% | avg_win_roi: 77.6%
+
+[No.447] GLOBAL | nyukyu_nannichimae+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.589
+  - total_bins: 189 | valid_bins: 94 | pass_bins: 47 | pass_rate: 0.500
+  - avg_place_roi: 80.0% | avg_win_roi: 82.1%
+
+[No.448] SURFACE_2_ダ | prev1_keibajo+keibajo_code
+  - type: combo | grade: A | score_std: 3.429
+  - total_bins: 56 | valid_bins: 44 | pass_bins: 22 | pass_rate: 0.500
+  - avg_place_roi: 79.9% | avg_win_roi: 76.5%
+
+[No.449] SURFACE_2_ダ | futan_juryo+manken_shirushi
+  - type: combo | grade: A | score_std: 3.084
+  - total_bins: 64 | valid_bins: 54 | pass_bins: 27 | pass_rate: 0.500
+  - avg_place_roi: 79.9% | avg_win_roi: 79.8%
+
+[No.450] KEIBAJO_SURFACE_03_芝 | prev1_corner4_bin
+  - type: code | grade: C | score_std: 0.844
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 79.9% | avg_win_roi: 78.0%
+
+[No.451] KEIBAJO_SURFACE_03_ダ | bac_tosu
+  - type: numeric | grade: C | score_std: 0.354
+  - total_bins: 7 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.9% | avg_win_roi: 84.8%
+
+[No.452] SURFACE_2_ダ | shirushi_code_6
+  - type: numeric | grade: C | score_std: 0.304
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.9% | avg_win_roi: 80.6%
+
+[No.453] SURFACE_2_ダ | barei+prev1_keibajo
+  - type: combo | grade: A | score_std: 4.337
+  - total_bins: 67 | valid_bins: 46 | pass_bins: 23 | pass_rate: 0.500
+  - avg_place_roi: 79.8% | avg_win_roi: 75.7%
+
+[No.454] KEIBAJO_SURFACE_03_芝 | shirushi_code_2
+  - type: numeric | grade: C | score_std: 1.727
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.8% | avg_win_roi: 82.3%
+
+[No.455] KEIBAJO_SURFACE_05_ダ | shirushi_code_3
+  - type: numeric | grade: C | score_std: 1.213
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.8% | avg_win_roi: 73.5%
+
+[No.456] GLOBAL | shirushi_code_5
+  - type: numeric | grade: C | score_std: 0.535
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.8% | avg_win_roi: 80.2%
+
+[No.457] SURFACE_2_ダ | kishu_kitai_sanchakunai_ritsu
+  - type: numeric | grade: C | score_std: 0.507
+  - total_bins: 190 | valid_bins: 60 | pass_bins: 30 | pass_rate: 0.500
+  - avg_place_roi: 79.7% | avg_win_roi: 73.0%
+
+[No.458] KEIBAJO_SURFACE_04_芝 | moshoku_code
+  - type: numeric | grade: C | score_std: 0.833
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.6% | avg_win_roi: 76.5%
+
+[No.459] KEIBAJO_SURFACE_05_ダ | manken_shirushi
+  - type: numeric | grade: B | score_std: 2.621
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 79.5% | avg_win_roi: 68.3%
+
+[No.460] GLOBAL | shirushi_code_2
+  - type: numeric | grade: C | score_std: 0.328
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.5% | avg_win_roi: 80.3%
+
+[No.461] GLOBAL | prev1_keibajo+shirushi_code_1
+  - type: combo | grade: C | score_std: 1.639
+  - total_bins: 70 | valid_bins: 70 | pass_bins: 35 | pass_rate: 0.500
+  - avg_place_roi: 79.4% | avg_win_roi: 80.3%
+
+[No.462] KEIBAJO_SURFACE_02_ダ | joa_ls_shisu
+  - type: numeric | grade: C | score_std: 1.134
+  - total_bins: 12 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 79.4% | avg_win_roi: 85.4%
+
+[No.463] SURFACE_2_芝 | shirushi_code_5
+  - type: numeric | grade: C | score_std: 0.943
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.4% | avg_win_roi: 80.6%
+
+[No.464] SURFACE_2_ダ | prev3_chakujun+yy_int
+  - type: combo | grade: A | score_std: 3.678
+  - total_bins: 157 | valid_bins: 118 | pass_bins: 59 | pass_rate: 0.500
+  - avg_place_roi: 79.3% | avg_win_roi: 77.8%
+
+[No.465] KEIBAJO_SURFACE_01_芝 | kijun_odds_fukusho
+  - type: numeric | grade: C | score_std: 1.535
+  - total_bins: 62 | valid_bins: 34 | pass_bins: 17 | pass_rate: 0.500
+  - avg_place_roi: 79.3% | avg_win_roi: 75.1%
+
+[No.466] SURFACE_2_芝 | bac_grade
+  - type: numeric | grade: C | score_std: 0.724
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 79.3% | avg_win_roi: 83.3%
+
+[No.467] SURFACE_2_ダ | manken_shirushi+tenkai_kigo_code
+  - type: combo | grade: B | score_std: 2.086
+  - total_bins: 40 | valid_bins: 40 | pass_bins: 20 | pass_rate: 0.500
+  - avg_place_roi: 79.2% | avg_win_roi: 81.9%
+
+[No.468] KEIBAJO_SURFACE_01_芝 | shirushi_code_3
+  - type: numeric | grade: C | score_std: 1.464
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.2% | avg_win_roi: 74.7%
+
+[No.469] SURFACE_2_ダ | prev1_corner4_bin
+  - type: code | grade: C | score_std: 0.640
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 79.2% | avg_win_roi: 78.8%
+
+[No.470] SURFACE_2_ダ | agari_shisu_juni+prev3_chakujun
+  - type: combo | grade: S | score_std: 5.283
+  - total_bins: 224 | valid_bins: 122 | pass_bins: 61 | pass_rate: 0.500
+  - avg_place_roi: 79.1% | avg_win_roi: 78.8%
+
+[No.471] SURFACE_2_ダ | hobokusaki_rank+manken_shirushi
+  - type: combo | grade: B | score_std: 2.453
+  - total_bins: 40 | valid_bins: 40 | pass_bins: 20 | pass_rate: 0.500
+  - avg_place_roi: 79.1% | avg_win_roi: 74.6%
+
+[No.472] KEIBAJO_SURFACE_01_芝 | pace_shisu_juni
+  - type: numeric | grade: C | score_std: 1.593
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 79.1% | avg_win_roi: 77.7%
+
+[No.473] KEIBAJO_SURFACE_04_芝 | shirushi_code_4
+  - type: numeric | grade: C | score_std: 0.696
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.1% | avg_win_roi: 80.6%
+
+[No.474] KEIBAJO_SURFACE_04_ダ | shirushi_code_2
+  - type: numeric | grade: C | score_std: 0.676
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.1% | avg_win_roi: 82.0%
+
+[No.475] GLOBAL | manken_shirushi
+  - type: numeric | grade: C | score_std: 0.467
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 79.1% | avg_win_roi: 80.7%
+
+[No.476] KEIBAJO_SURFACE_01_芝 | ichi_shisu_juni
+  - type: numeric | grade: C | score_std: 0.973
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 79.0% | avg_win_roi: 75.2%
+
+[No.477] KEIBAJO_SURFACE_01_ダ | shirushi_code_4
+  - type: numeric | grade: C | score_std: 0.949
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 79.0% | avg_win_roi: 70.9%
+
+[No.478] KEIBAJO_SURFACE_02_芝 | bac_jouken
+  - type: code | grade: C | score_std: 1.719
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 78.9% | avg_win_roi: 87.2%
+
+[No.479] KEIBAJO_SURFACE_03_芝 | prev1_kyakushitsu
+  - type: numeric | grade: C | score_std: 1.353
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 78.9% | avg_win_roi: 76.2%
+
+[No.480] KEIBAJO_SURFACE_01_芝 | wakuban
+  - type: numeric | grade: C | score_std: 1.310
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 78.9% | avg_win_roi: 76.5%
+
+[No.481] KEIBAJO_SURFACE_01_芝 | bac_jouken
+  - type: code | grade: C | score_std: 0.559
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 78.9% | avg_win_roi: 79.8%
+
+[No.482] GLOBAL | prev1_corner4_bin
+  - type: code | grade: C | score_std: 0.339
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 78.9% | avg_win_roi: 78.6%
+
+[No.483] GLOBAL | shirushi_code_6
+  - type: numeric | grade: C | score_std: 0.215
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 78.9% | avg_win_roi: 78.1%
+
+[No.484] GLOBAL | kyori_tekisei_2+prev1_keibajo
+  - type: combo | grade: A | score_std: 3.402
+  - total_bins: 31 | valid_bins: 28 | pass_bins: 14 | pass_rate: 0.500
+  - avg_place_roi: 78.8% | avg_win_roi: 78.3%
+
+[No.485] KEIBAJO_SURFACE_03_芝 | ichi_shisu_juni
+  - type: numeric | grade: C | score_std: 0.798
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 78.8% | avg_win_roi: 75.8%
+
+[No.486] SURFACE_2_ダ | ls_shisu_juni+shirushi_code_1
+  - type: combo | grade: A | score_std: 3.277
+  - total_bins: 52 | valid_bins: 46 | pass_bins: 23 | pass_rate: 0.500
+  - avg_place_roi: 78.7% | avg_win_roi: 78.7%
+
+[No.487] KEIBAJO_SURFACE_02_芝 | prev1_corner4_bin
+  - type: code | grade: C | score_std: 1.275
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 78.7% | avg_win_roi: 82.5%
+
+[No.488] KEIBAJO_SURFACE_01_芝 | futan_juryo
+  - type: numeric | grade: C | score_std: 0.842
+  - total_bins: 10 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 78.7% | avg_win_roi: 96.9%
+
+[No.489] GLOBAL | agari_shisu_juni+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 4.442
+  - total_bins: 47 | valid_bins: 40 | pass_bins: 20 | pass_rate: 0.500
+  - avg_place_roi: 78.6% | avg_win_roi: 81.9%
+
+[No.490] SURFACE_2_芝 | barei+goal_juni
+  - type: combo | grade: A | score_std: 4.423
+  - total_bins: 98 | valid_bins: 74 | pass_bins: 37 | pass_rate: 0.500
+  - avg_place_roi: 78.6% | avg_win_roi: 76.8%
+
+[No.491] SURFACE_2_芝 | chokyo_yajirushi_code
+  - type: numeric | grade: C | score_std: 1.656
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 78.6% | avg_win_roi: 73.7%
+
+[No.492] KEIBAJO_SURFACE_04_芝 | goal_juni
+  - type: numeric | grade: C | score_std: 1.183
+  - total_bins: 18 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 78.6% | avg_win_roi: 77.8%
+
+[No.493] SURFACE_2_ダ | prev3_chakujun+sanchimei
+  - type: combo | grade: A | score_std: 4.108
+  - total_bins: 126 | valid_bins: 80 | pass_bins: 40 | pass_rate: 0.500
+  - avg_place_roi: 78.5% | avg_win_roi: 72.0%
+
+[No.494] SURFACE_2_芝 | chokyo_yajirushi_code+chokyoshi_rank
+  - type: combo | grade: B | score_std: 2.932
+  - total_bins: 19 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 78.5% | avg_win_roi: 73.4%
+
+[No.495] SURFACE_2_芝 | hobokusaki_rank+manken_shirushi
+  - type: combo | grade: B | score_std: 2.180
+  - total_bins: 40 | valid_bins: 40 | pass_bins: 20 | pass_rate: 0.500
+  - avg_place_roi: 78.5% | avg_win_roi: 78.6%
+
+[No.496] KEIBAJO_SURFACE_04_ダ | prev3_chakujun
+  - type: numeric | grade: B | score_std: 2.005
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 78.5% | avg_win_roi: 78.8%
+
+[No.497] GLOBAL | kijun_ninkijun_tansho+sanchimei
+  - type: combo | grade: A | score_std: 4.174
+  - total_bins: 182 | valid_bins: 116 | pass_bins: 58 | pass_rate: 0.500
+  - avg_place_roi: 78.4% | avg_win_roi: 74.0%
+
+[No.498] SURFACE_2_ダ | moshoku_code+prev1_keibajo
+  - type: combo | grade: A | score_std: 3.534
+  - total_bins: 62 | valid_bins: 48 | pass_bins: 24 | pass_rate: 0.500
+  - avg_place_roi: 78.4% | avg_win_roi: 80.6%
+
+[No.499] KEIBAJO_SURFACE_03_芝 | ten_shisu_juni
+  - type: numeric | grade: C | score_std: 1.540
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 78.4% | avg_win_roi: 76.7%
+
+[No.500] KEIBAJO_SURFACE_01_芝 | chokyo_shisu
+  - type: numeric | grade: C | score_std: 1.170
+  - total_bins: 80 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 78.4% | avg_win_roi: 80.4%
+
+[No.501] KEIBAJO_SURFACE_04_ダ | shirushi_code_5
+  - type: numeric | grade: C | score_std: 1.139
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 78.4% | avg_win_roi: 81.4%
+
+[No.502] GLOBAL | chokyo_yajirushi_code+moshoku_code
+  - type: combo | grade: B | score_std: 2.065
+  - total_bins: 25 | valid_bins: 20 | pass_bins: 10 | pass_rate: 0.500
+  - avg_place_roi: 78.3% | avg_win_roi: 69.5%
+
+[No.503] KEIBAJO_SURFACE_03_芝 | shirushi_code_4
+  - type: numeric | grade: C | score_std: 0.750
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 78.3% | avg_win_roi: 78.0%
+
+[No.504] SURFACE_2_ダ | prev1_kyakushitsu
+  - type: numeric | grade: C | score_std: 0.642
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 78.3% | avg_win_roi: 77.9%
+
+[No.505] KEIBAJO_SURFACE_03_芝 | pace_shisu_juni
+  - type: numeric | grade: C | score_std: 1.793
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 78.2% | avg_win_roi: 76.7%
+
+[No.506] KEIBAJO_SURFACE_01_芝 | shirushi_code_4
+  - type: numeric | grade: C | score_std: 0.612
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 78.1% | avg_win_roi: 76.5%
+
+[No.507] SURFACE_2_芝 | babajotai_heavy+barei
+  - type: combo | grade: A | score_std: 3.084
+  - total_bins: 20 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 78.0% | avg_win_roi: 80.2%
+
+[No.508] SURFACE_2_芝 | manken_shirushi
+  - type: numeric | grade: C | score_std: 0.673
+  - total_bins: 8 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 78.0% | avg_win_roi: 80.3%
+
+[No.509] KEIBAJO_SURFACE_04_ダ | shirushi_code_4
+  - type: numeric | grade: C | score_std: 0.902
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 77.9% | avg_win_roi: 79.6%
+
+[No.510] SURFACE_2_ダ | hizume_code+prev1_corner4
+  - type: combo | grade: A | score_std: 4.577
+  - total_bins: 149 | valid_bins: 96 | pass_bins: 48 | pass_rate: 0.500
+  - avg_place_roi: 77.8% | avg_win_roi: 75.8%
+
+[No.511] KEIBAJO_SURFACE_03_芝 | chokyo_yajirushi_code
+  - type: numeric | grade: C | score_std: 1.560
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 77.8% | avg_win_roi: 74.8%
+
+[No.512] KEIBAJO_SURFACE_05_芝 | yoso_juni
+  - type: numeric | grade: A | score_std: 3.530
+  - total_bins: 16 | valid_bins: 12 | pass_bins: 6 | pass_rate: 0.500
+  - avg_place_roi: 77.7% | avg_win_roi: 94.7%
+
+[No.513] KEIBAJO_SURFACE_01_芝 | goal_juni
+  - type: numeric | grade: C | score_std: 1.440
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 77.7% | avg_win_roi: 69.9%
+
+[No.514] KEIBAJO_SURFACE_02_芝 | class_code
+  - type: numeric | grade: C | score_std: 1.184
+  - total_bins: 13 | valid_bins: 10 | pass_bins: 5 | pass_rate: 0.500
+  - avg_place_roi: 77.7% | avg_win_roi: 80.3%
+
+[No.515] KEIBAJO_SURFACE_05_ダ | hizume_code
+  - type: numeric | grade: B | score_std: 2.489
+  - total_bins: 13 | valid_bins: 8 | pass_bins: 4 | pass_rate: 0.500
+  - avg_place_roi: 77.6% | avg_win_roi: 73.4%
+
+[No.516] KEIBAJO_SURFACE_03_ダ | agari_shisu_juni
+  - type: numeric | grade: B | score_std: 2.261
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 77.5% | avg_win_roi: 81.9%
+
+[No.517] KEIBAJO_SURFACE_05_ダ | shirushi_code_5
+  - type: numeric | grade: C | score_std: 1.325
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 77.5% | avg_win_roi: 71.3%
+
+[No.518] SURFACE_2_芝 | gekiso_type
+  - type: code | grade: C | score_std: 1.087
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 77.5% | avg_win_roi: 78.5%
+
+[No.519] SURFACE_2_ダ | kishumei+wakuban
+  - type: combo | grade: S | score_std: 7.199
+  - total_bins: 442 | valid_bins: 20 | pass_bins: 10 | pass_rate: 0.500
+  - avg_place_roi: 77.4% | avg_win_roi: 76.5%
+
+[No.520] KEIBAJO_SURFACE_04_芝 | yoso_juni
+  - type: numeric | grade: C | score_std: 0.925
+  - total_bins: 18 | valid_bins: 18 | pass_bins: 9 | pass_rate: 0.500
+  - avg_place_roi: 77.3% | avg_win_roi: 80.0%
+
+[No.521] KEIBAJO_SURFACE_05_ダ | prev1_corner4_bin
+  - type: code | grade: C | score_std: 0.789
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 77.3% | avg_win_roi: 68.8%
+
+[No.522] SURFACE_2_ダ | bac_tosu+taikei_tomo
+  - type: combo | grade: S | score_std: 6.579
+  - total_bins: 132 | valid_bins: 76 | pass_bins: 38 | pass_rate: 0.500
+  - avg_place_roi: 77.2% | avg_win_roi: 77.8%
+
+[No.523] SURFACE_2_ダ | babajotai_heavy+barei
+  - type: combo | grade: B | score_std: 2.603
+  - total_bins: 19 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 77.1% | avg_win_roi: 69.2%
+
+[No.524] GLOBAL | chokyo_yajirushi_code
+  - type: combo | grade: C | score_std: 1.520
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 77.1% | avg_win_roi: 72.3%
+
+[No.525] GLOBAL | chokyo_yajirushi_code
+  - type: numeric | grade: C | score_std: 1.509
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 77.1% | avg_win_roi: 72.3%
+
+[No.526] SURFACE_2_ダ | kijun_ninkijun_tansho+prev1_chakujun
+  - type: combo | grade: S | score_std: 6.047
+  - total_bins: 200 | valid_bins: 116 | pass_bins: 58 | pass_rate: 0.500
+  - avg_place_roi: 77.0% | avg_win_roi: 78.2%
+
+[No.527] SURFACE_2_ダ | gekiso_type+joho_shisu
+  - type: combo | grade: S | score_std: 5.055
+  - total_bins: 95 | valid_bins: 12 | pass_bins: 6 | pass_rate: 0.500
+  - avg_place_roi: 76.9% | avg_win_roi: 79.8%
+
+[No.528] SURFACE_2_芝 | chokyo_yajirushi_code+hizume_code
+  - type: combo | grade: A | score_std: 3.591
+  - total_bins: 47 | valid_bins: 30 | pass_bins: 15 | pass_rate: 0.500
+  - avg_place_roi: 76.9% | avg_win_roi: 79.6%
+
+[No.529] KEIBAJO_SURFACE_04_芝 | pace_shisu
+  - type: numeric | grade: C | score_std: 1.661
+  - total_bins: 204 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 76.9% | avg_win_roi: 81.6%
+
+[No.530] KEIBAJO_SURFACE_02_芝 | shirushi_code_3
+  - type: numeric | grade: C | score_std: 1.552
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 76.9% | avg_win_roi: 77.8%
+
+[No.531] KEIBAJO_SURFACE_02_芝 | umaban_clean
+  - type: numeric | grade: C | score_std: 0.971
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 76.9% | avg_win_roi: 78.6%
+
+[No.532] KEIBAJO_SURFACE_01_芝 | shirushi_code_2
+  - type: numeric | grade: C | score_std: 0.938
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 76.9% | avg_win_roi: 80.5%
+
+[No.533] SURFACE_2_ダ | taikei_tomo+yoso_juni
+  - type: combo | grade: S | score_std: 5.716
+  - total_bins: 244 | valid_bins: 122 | pass_bins: 61 | pass_rate: 0.500
+  - avg_place_roi: 76.8% | avg_win_roi: 78.7%
+
+[No.534] GLOBAL | kyori_tekisei_2+yoso_juni
+  - type: combo | grade: A | score_std: 4.274
+  - total_bins: 45 | valid_bins: 36 | pass_bins: 18 | pass_rate: 0.500
+  - avg_place_roi: 76.8% | avg_win_roi: 78.1%
+
+[No.535] SURFACE_2_ダ | bac_tosu+tenkai_kigo_code
+  - type: combo | grade: B | score_std: 2.387
+  - total_bins: 45 | valid_bins: 36 | pass_bins: 18 | pass_rate: 0.500
+  - avg_place_roi: 76.8% | avg_win_roi: 73.1%
+
+[No.536] KEIBAJO_SURFACE_05_ダ | manken_shisu
+  - type: numeric | grade: C | score_std: 1.769
+  - total_bins: 42 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 76.8% | avg_win_roi: 57.3%
+
+[No.537] GLOBAL | kyori_tekisei_2+taikei_tomo
+  - type: combo | grade: A | score_std: 4.150
+  - total_bins: 55 | valid_bins: 30 | pass_bins: 15 | pass_rate: 0.500
+  - avg_place_roi: 76.7% | avg_win_roi: 81.5%
+
+[No.538] GLOBAL | chokyo_yajirushi_code+prev3_chakujun
+  - type: combo | grade: A | score_std: 3.117
+  - total_bins: 57 | valid_bins: 34 | pass_bins: 17 | pass_rate: 0.500
+  - avg_place_roi: 76.7% | avg_win_roi: 73.4%
+
+[No.539] KEIBAJO_SURFACE_02_ダ | shirushi_code_2
+  - type: numeric | grade: C | score_std: 1.131
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 76.7% | avg_win_roi: 78.3%
+
+[No.540] GLOBAL | shirushi_code_1+taikei_tomo
+  - type: combo | grade: A | score_std: 3.375
+  - total_bins: 164 | valid_bins: 106 | pass_bins: 53 | pass_rate: 0.500
+  - avg_place_roi: 76.5% | avg_win_roi: 79.9%
+
+[No.541] KEIBAJO_SURFACE_02_芝 | shirushi_code_6
+  - type: numeric | grade: C | score_std: 0.864
+  - total_bins: 6 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 76.4% | avg_win_roi: 72.5%
+
+[No.542] SURFACE_2_ダ | babajotai_heavy+yoso_juni
+  - type: combo | grade: B | score_std: 2.617
+  - total_bins: 46 | valid_bins: 44 | pass_bins: 22 | pass_rate: 0.500
+  - avg_place_roi: 76.3% | avg_win_roi: 75.3%
+
+[No.543] KEIBAJO_SURFACE_01_芝 | kohan_3f_sa
+  - type: numeric | grade: C | score_std: 1.560
+  - total_bins: 19 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 76.1% | avg_win_roi: 69.9%
+
+[No.544] GLOBAL | futan_juryo+kishu_rank
+  - type: combo | grade: A | score_std: 3.132
+  - total_bins: 59 | valid_bins: 50 | pass_bins: 25 | pass_rate: 0.500
+  - avg_place_roi: 75.9% | avg_win_roi: 74.6%
+
+[No.545] SURFACE_2_芝 | chokyoshi_rank+kyori_tekisei_2
+  - type: combo | grade: B | score_std: 2.435
+  - total_bins: 15 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 75.8% | avg_win_roi: 75.0%
+
+[No.546] KEIBAJO_SURFACE_03_ダ | uma_tokki_1
+  - type: numeric | grade: B | score_std: 2.209
+  - total_bins: 44 | valid_bins: 12 | pass_bins: 6 | pass_rate: 0.500
+  - avg_place_roi: 75.6% | avg_win_roi: 87.8%
+
+[No.547] KEIBAJO_SURFACE_03_ダ | ichi_shisu_juni
+  - type: numeric | grade: C | score_std: 1.874
+  - total_bins: 16 | valid_bins: 16 | pass_bins: 8 | pass_rate: 0.500
+  - avg_place_roi: 75.6% | avg_win_roi: 78.7%
+
+[No.548] KEIBAJO_SURFACE_02_ダ | prev1_corner4_bin
+  - type: code | grade: C | score_std: 0.888
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 75.6% | avg_win_roi: 76.2%
+
+[No.549] KEIBAJO_SURFACE_02_芝 | kyori_tekisei
+  - type: numeric | grade: C | score_std: 1.495
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 75.4% | avg_win_roi: 76.3%
+
+[No.550] KEIBAJO_SURFACE_05_芝 | goal_sa
+  - type: numeric | grade: A | score_std: 3.027
+  - total_bins: 23 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 75.1% | avg_win_roi: 74.1%
+
+[No.551] SURFACE_2_ダ | kishu_rank+prev1_keibajo
+  - type: combo | grade: B | score_std: 2.914
+  - total_bins: 54 | valid_bins: 46 | pass_bins: 23 | pass_rate: 0.500
+  - avg_place_roi: 75.1% | avg_win_roi: 78.0%
+
+[No.552] SURFACE_2_ダ | chokyo_yajirushi_code+kyori_tekisei_2
+  - type: combo | grade: A | score_std: 4.642
+  - total_bins: 7 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 74.9% | avg_win_roi: 73.7%
+
+[No.553] SURFACE_2_芝 | goal_sa+kyori_tekisei_2
+  - type: combo | grade: S | score_std: 5.097
+  - total_bins: 54 | valid_bins: 26 | pass_bins: 13 | pass_rate: 0.500
+  - avg_place_roi: 74.7% | avg_win_roi: 77.4%
+
+[No.554] KEIBAJO_SURFACE_05_ダ | uma_deokure_ritsu
+  - type: numeric | grade: A | score_std: 4.294
+  - total_bins: 23 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 74.7% | avg_win_roi: 65.8%
+
+[No.555] KEIBAJO_SURFACE_03_芝 | barei
+  - type: numeric | grade: C | score_std: 0.816
+  - total_bins: 7 | valid_bins: 6 | pass_bins: 3 | pass_rate: 0.500
+  - avg_place_roi: 74.0% | avg_win_roi: 90.3%
+
+[No.556] KEIBAJO_SURFACE_01_芝 | kijun_ninkijun_tansho
+  - type: numeric | grade: C | score_std: 1.960
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 73.9% | avg_win_roi: 69.3%
+
+[No.557] KEIBAJO_SURFACE_01_芝 | kijun_ninkijun_fukusho
+  - type: numeric | grade: B | score_std: 2.003
+  - total_bins: 16 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 73.8% | avg_win_roi: 68.7%
+
+[No.558] KEIBAJO_SURFACE_03_芝 | class_code
+  - type: numeric | grade: C | score_std: 1.794
+  - total_bins: 14 | valid_bins: 10 | pass_bins: 5 | pass_rate: 0.500
+  - avg_place_roi: 73.7% | avg_win_roi: 79.7%
+
+[No.559] KEIBAJO_SURFACE_05_芝 | prev2_chakujun
+  - type: numeric | grade: A | score_std: 3.153
+  - total_bins: 15 | valid_bins: 10 | pass_bins: 5 | pass_rate: 0.500
+  - avg_place_roi: 73.3% | avg_win_roi: 57.6%
+
+[No.560] SURFACE_2_ダ | barei+goal_sa
+  - type: combo | grade: S | score_std: 6.164
+  - total_bins: 142 | valid_bins: 86 | pass_bins: 43 | pass_rate: 0.500
+  - avg_place_roi: 73.2% | avg_win_roi: 75.8%
+
+[No.561] KEIBAJO_SURFACE_05_芝 | chokyo_yajirushi_code
+  - type: numeric | grade: S | score_std: 5.966
+  - total_bins: 4 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 72.3% | avg_win_roi: 77.8%
+
+[No.562] KEIBAJO_SURFACE_05_芝 | kohan_3f_juni
+  - type: numeric | grade: A | score_std: 3.310
+  - total_bins: 18 | valid_bins: 14 | pass_bins: 7 | pass_rate: 0.500
+  - avg_place_roi: 71.6% | avg_win_roi: 66.5%
+
+[No.563] KEIBAJO_SURFACE_02_芝 | agari_shisu
+  - type: numeric | grade: C | score_std: 1.888
+  - total_bins: 20 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 71.3% | avg_win_roi: 92.7%
+
+[No.564] KEIBAJO_SURFACE_05_芝 | uma_tokki_1
+  - type: numeric | grade: A | score_std: 3.440
+  - total_bins: 20 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 69.9% | avg_win_roi: 71.2%
+
+[No.565] KEIBAJO_SURFACE_02_芝 | bataiju_change_bin
+  - type: numeric | grade: C | score_std: 1.260
+  - total_bins: 5 | valid_bins: 4 | pass_bins: 2 | pass_rate: 0.500
+  - avg_place_roi: 69.5% | avg_win_roi: 79.3%
