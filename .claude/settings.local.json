@@ -113,7 +113,8 @@
       "Bash(py -3.12 -m backend.batch.bin_scoring)",
       "Bash(py -3.12 reports/scoring/generate_report.py)",
       "Bash(py -3.12 -m pytest backend/tests/test_bin_scoring.py -q --tb=short)",
-      "Bash(py -3.12 -c \"import pandas as pd; df=pd.read_csv\\('reports/screening/factor_adoption_result.csv',encoding='utf-8-sig'\\); adopted=df[df['decision']=='採用'];障=adopted[adopted['segment'].str.contains\\('障',na=False\\)]; print\\(f'障害セグメント: {len\\(障\\)}件'\\); print\\(障['segment'].value_counts\\(\\)\\)\")"
+      "Bash(py -3.12 -c \"import pandas as pd; df=pd.read_csv\\('reports/screening/factor_adoption_result.csv',encoding='utf-8-sig'\\); adopted=df[df['decision']=='採用'];障=adopted[adopted['segment'].str.contains\\('障',na=False\\)]; print\\(f'障害セグメント: {len\\(障\\)}件'\\); print\\(障['segment'].value_counts\\(\\)\\)\")",
+      "Bash(git commit *)"
     ]
   }
 }
