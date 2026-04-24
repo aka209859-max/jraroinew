@@ -1,12 +1,12 @@
 =================================================================
 BIN SCORING REPORT
-生成日時: 2026-04-22 07:26:01
+生成日時: 2026-04-24 22:55:08
 =================================================================
 
 ■ 概要
   式1（相対評価）: 8パターン / 8,620ビン / スコア範囲 -12.0〜+12.0
-  式2（絶対評価）: 561ファクター / 28,650ビン / スコア範囲 -10.0〜+10.0
-  合計: 569パターン / 37,270ビン
+  式2（絶対評価）: 1,197ファクター / 90,769ビン / スコア範囲 -10.0〜+10.0
+  合計: 1,205パターン / 99,389ビン
 
 ■ 式1 パターン別サマリ
   パターン                                            bins avg_score max_score min_score
@@ -23,54 +23,64 @@ BIN SCORING REPORT
 ■ 式2 セグメント別集計
   セグメント                    件数     ビン数 avg_score max_score
   -------------------------------------------------------
-  SURFACE_2_ダ             174   15897     0.056       9.3
-  KEIBAJO_SURFACE_01_ダ     72    1081     0.425       5.4
-  GLOBAL                   63    4220    -0.009       6.2
-  SURFACE_2_芝              55    3082     0.023       4.8
-  KEIBAJO_SURFACE_01_芝     36     667    -0.093       7.1
-  KEIBAJO_SURFACE_02_芝     34     473     0.071       6.5
-  KEIBAJO_SURFACE_03_ダ     33     671     0.210       5.5
-  KEIBAJO_SURFACE_03_芝     29     748    -0.061       6.8
-  KEIBAJO_SURFACE_05_ダ     16     257    -0.029       4.8
-  KEIBAJO_SURFACE_05_芝     15     158     0.199       4.6
-  KEIBAJO_SURFACE_04_ダ     12     255    -0.156       6.1
-  KEIBAJO_SURFACE_04_芝     11    1012     0.014       5.7
-  KEIBAJO_SURFACE_02_ダ      8      90    -0.016       4.1
-  COURSE_27                 3      39    -0.054       2.3
+  SURFACE_2_ダ             216   20677    -0.065       7.0
+  GLOBAL                  186   26877     0.003       7.3
+  SURFACE_2_芝             178   18478     0.047       6.9
+  KEIBAJO_SURFACE_01_ダ     68    1025     0.235       5.4
+  KEIBAJO_SURFACE_10_芝     52    1860     0.230       6.3
+  KEIBAJO_SURFACE_08_芝     48    2128    -0.023       6.0
+  KEIBAJO_SURFACE_03_芝     47    1981     0.153       6.6
+  KEIBAJO_SURFACE_03_ダ     46     988     0.234       7.0
+  KEIBAJO_SURFACE_02_芝     42    1063     0.118       6.4
+  KEIBAJO_SURFACE_07_ダ     41    1527     0.072       7.1
+  KEIBAJO_SURFACE_10_ダ     38     730    -0.034       5.1
+  KEIBAJO_SURFACE_08_ダ     33    1057     0.018       6.0
+  KEIBAJO_SURFACE_06_芝     33    2249     0.025       8.2
+  KEIBAJO_SURFACE_01_芝     29     944    -0.057       6.7
+  KEIBAJO_SURFACE_09_ダ     27    1844    -0.127       5.4
+  KEIBAJO_SURFACE_09_芝     23    1879     0.011       7.9
+  KEIBAJO_SURFACE_06_ダ     19     936    -0.106       5.1
+  KEIBAJO_SURFACE_05_芝     18    1350     0.010       7.4
+  KEIBAJO_SURFACE_07_芝     13    1226    -0.190       7.8
+  KEIBAJO_SURFACE_05_ダ     12     217    -0.304       4.2
+  KEIBAJO_SURFACE_02_ダ     11     199    -0.116       4.1
+  KEIBAJO_SURFACE_04_芝     10     949    -0.042       5.7
+  KEIBAJO_SURFACE_04_ダ      6     567     0.004       5.4
+  COURSE_27                 1      18    -0.056       2.0
 
 ■ 式2 TOP30 高スコアファクター（max_score DESC）
   rank  name                                                              max_score avg_score total_bins
   ------------------------------------------------------------------------------------------------------
-     1  SURFACE_2_ダ | manken_shirushi+prev2_chakujun                            9.3     0.060        125
-     2  SURFACE_2_ダ | kishumei+wakuban                                          7.7     0.081        442
-     3  SURFACE_2_ダ | manken_shirushi+uma_deokure_ritsu                         7.6     0.222        169
-     4  SURFACE_2_ダ | agari_shisu_juni+kyori_tekisei_2                          7.6     0.389         38
-     5  KEIBAJO_SURFACE_01_芝 | hizume_code                                      7.1     0.247         15
-     6  SURFACE_2_ダ | kishu_rank+nyukyu_nannichimae                             7.0     0.068        122
-     7  SURFACE_2_ダ | prev1_corner4+yoso_juni                                   7.0     0.084        211
-     8  KEIBAJO_SURFACE_03_芝 | idm                                              6.8     0.055         74
-     9  SURFACE_2_ダ | kakutoku_shokin_ruikei                                    6.7     0.210        168
-    10  SURFACE_2_ダ | ls_shisu_juni+prev1_chakujun                              6.7     0.087        117
-    11  KEIBAJO_SURFACE_02_芝 | uma_tokki_1                                      6.5     0.338         34
-    12  SURFACE_2_ダ | hizume_code+prev3_chakujun                                6.5     0.113        148
-    13  KEIBAJO_SURFACE_01_芝 | ten_shisu                                        6.4     0.120         95
-    14  SURFACE_2_ダ | goal_juni+prev1_corner4                                   6.3     0.206        214
-    15  GLOBAL | manken_shirushi+yoso_juni                                      6.2     0.045        126
-    16  SURFACE_2_ダ | kyori_tekisei_2+yoso_juni                                 6.2     0.305         37
-    17  KEIBAJO_SURFACE_04_ダ | kyusha_shisu                                     6.1     0.155        103
-    18  GLOBAL | chokyo_yajirushi_code+ls_shisu_juni                            6.0     0.247         32
-    19  SURFACE_2_ダ | moshoku_code+uma_deokure_ritsu                            6.0     0.071        160
-    20  SURFACE_2_ダ | agari_shisu_juni+prev1_chakujun                           6.0     0.097        225
-    21  SURFACE_2_ダ | joa_ls_shisu                                              5.9     0.086         73
-    22  SURFACE_2_ダ | gekiso_type+yoso_juni                                     5.9     0.093         85
-    23  SURFACE_2_ダ | barei+uma_deokure_ritsu                                   5.9     0.055        133
-    24  SURFACE_2_ダ | gekiso_juni+manken_shirushi                               5.9     0.180         97
-    25  SURFACE_2_ダ | goal_juni+taikei_tomo                                     5.9     0.131        244
-    26  SURFACE_2_ダ | kyusha_shisu                                              5.8     0.160        352
-    27  SURFACE_2_ダ | kishu_minarai_code+prev1_bataiju                          5.7     0.162        112
-    28  KEIBAJO_SURFACE_04_芝 | pace_shisu                                       5.7     0.126        204
-    29  KEIBAJO_SURFACE_03_芝 | pace_shisu                                       5.6     0.190        146
-    30  SURFACE_2_ダ | joho_shisu+manken_shirushi                                5.6     0.187        278
+     1  KEIBAJO_SURFACE_06_芝 | ten_shisu                                        8.2     0.118        267
+     2  KEIBAJO_SURFACE_09_芝 | sogo_shisu                                       7.9     0.113        350
+     3  KEIBAJO_SURFACE_07_芝 | pace_shisu                                       7.8     0.014        221
+     4  KEIBAJO_SURFACE_07_芝 | ten_shisu                                        7.4    -0.053        218
+     5  KEIBAJO_SURFACE_05_芝 | kyusha_shisu                                     7.4     0.140        332
+     6  GLOBAL | hizume_code+kijun_ninkijun_tansho                              7.3     0.041        283
+     7  GLOBAL | hizume_code+kijun_ninkijun_fukusho                             7.3     0.043        282
+     8  KEIBAJO_SURFACE_07_芝 | agari_shisu                                      7.3     0.016        221
+     9  KEIBAJO_SURFACE_07_ダ | kyusha_shisu                                     7.1     0.211        230
+    10  SURFACE_2_ダ | hizume_code+kijun_ninkijun_tansho                         7.0     0.056        259
+    11  SURFACE_2_ダ | hizume_code+kijun_ninkijun_fukusho                        7.0     0.061        259
+    12  KEIBAJO_SURFACE_03_ダ | uma_deokure_ritsu                                7.0     0.279         43
+    13  SURFACE_2_芝 | bataiju_change_bin+kishu_shisu                            6.9     0.159        147
+    14  KEIBAJO_SURFACE_01_芝 | hizume_code                                      6.7     0.119         16
+    15  KEIBAJO_SURFACE_09_芝 | pace_shisu                                       6.6     0.097        270
+    16  KEIBAJO_SURFACE_07_ダ | kakutoku_shokin_ruikei                           6.6     0.122         76
+    17  GLOBAL | manken_shisu+shirushi_code_1                                   6.6     0.064        483
+    18  KEIBAJO_SURFACE_03_芝 | agari_shisu                                      6.6     0.324        189
+    19  SURFACE_2_芝 | kyusha_hyoka_code+sanchimei                               6.5     0.102         62
+    20  KEIBAJO_SURFACE_03_芝 | gekiso_shisu                                     6.5     0.129        171
+    21  KEIBAJO_SURFACE_02_芝 | pace_shisu                                       6.4     0.129         83
+    22  GLOBAL | kishu_minarai_code+uma_deokure_ritsu                           6.4     0.178        159
+    23  KEIBAJO_SURFACE_03_芝 | ten_shisu                                        6.4     0.120        191
+    24  KEIBAJO_SURFACE_03_芝 | idm                                              6.3     0.206         89
+    25  KEIBAJO_SURFACE_10_芝 | manken_shisu                                     6.3     0.160         60
+    26  SURFACE_2_ダ | gekiso_type+prev1_keibajo                                 6.2    -0.017         66
+    27  KEIBAJO_SURFACE_09_芝 | uma_tokki_3                                      6.1     0.044         52
+    28  KEIBAJO_SURFACE_07_ダ | gekiso_shisu                                     6.1     0.069        183
+    29  GLOBAL | kyusha_hyoka_code+prev1_keibajo                                6.1     0.032         60
+    30  KEIBAJO_SURFACE_01_芝 | ten_shisu                                        6.0     0.058        132
 
 ■ 式1 適用ルール
   ・①〜⑤の5パターン（8ファクター）はCEO定義の固定ルール
@@ -84,7 +94,7 @@ BIN SCORING REPORT
 
 ■ ファイル一覧
   - reports/scoring/bin_scores_formula1.csv（8,620行）
-  - reports/scoring/bin_scores_formula2.csv（28,650行）
-  - reports/scoring/scoring_summary.csv（569行）
+  - reports/scoring/bin_scores_formula2.csv（90,769行）
+  - reports/scoring/scoring_summary.csv（1,205行）
   - reports/scoring/adopted_factors_list.txt
   - reports/scoring/scoring_report.txt

@@ -1,0 +1,4 @@
+﻿bin,n,win_count,place_count,win_rate,place_rate,win_roi,place_roi,decision_80pct
+2,2346,255,,10.9,,100.9,85.6,O
+3,897,100,,11.1,,66.9,67.1,X
+5,1260,120,,9.5,,79.5,73.0,X

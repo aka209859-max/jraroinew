@@ -1,621 +1,1297 @@
 =================================================================
 採用ファクター一覧（セグメント別）
-合計: 561ファクター
+合計: 1,197ファクター
 =================================================================
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【GLOBAL】全体（芝ダ共通）（63件）
+【GLOBAL】全体（芝ダ共通）（186件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: kishu_minarai_code（騎手見習い） × kyori_tekisei_2（距離適性2） | pass_rate: 0.800 | place_roi: 78.8%
-    2: chokyo_yajirushi_code（調教矢印） × kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 71.4%
-    3: prev2_chakujun（前2走着順） | pass_rate: 0.611 | place_roi: 82.7%
-    4: kyori_tekisei_2（距離適性2） × prev1_bataiju（前走馬体重） | pass_rate: 0.606 | place_roi: 76.8%
-    5: kishu_minarai_code（騎手見習い） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.593 | place_roi: 76.3%
-    6: chokyo_yajirushi_code（調教矢印） × tenkai_kigo_code（展開記号） | pass_rate: 0.588 | place_roi: 78.7%
-    7: chokyo_yajirushi_code（調教矢印） × prev2_chakujun（前2走着順） | pass_rate: 0.583 | place_roi: 78.8%
-    8: kyori_tekisei_2（距離適性2） × shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 78.5%
-    9: kishu_rank（騎手ランク） × kyori_tekisei_2（距離適性2） | pass_rate: 0.571 | place_roi: 77.2%
-   10: kyori_tekisei_2（距離適性2） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.571 | place_roi: 76.6%
-   11: ls_shisu_juni（LS指数順位） × manken_shirushi（万券印） | pass_rate: 0.550 | place_roi: 81.0%
-   12: kishu_rank（騎手ランク） × ls_shisu_juni（LS指数順位） | pass_rate: 0.548 | place_roi: 79.1%
-   13: kyori_tekisei_2（距離適性2） × manken_shirushi（万券印） | pass_rate: 0.542 | place_roi: 78.9%
-   14: joho_shisu（情報指数） × kishu_rank（騎手ランク） | pass_rate: 0.541 | place_roi: 77.7%
-   15: manken_shirushi（万券印） × yoso_juni（予想順位） | pass_rate: 0.540 | place_roi: 78.7%
-   16: chokyo_yajirushi_code（調教矢印） × prev1_chakujun（前走着順） | pass_rate: 0.537 | place_roi: 79.6%
-   17: kyori_tekisei_2（距離適性2） × moshoku_code（毛色コード） | pass_rate: 0.533 | place_roi: 75.8%
-   18: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.529 | place_roi: 80.9%
-   19: chokyo_yajirushi_code（調教矢印） × shirushi_code_1（印コード1） | pass_rate: 0.529 | place_roi: 80.4%
-   20: shirushi_code_1（印コード1） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.529 | place_roi: 78.4%
-   21: futan_juryo（斤量） × kyori_tekisei_2（距離適性2） | pass_rate: 0.526 | place_roi: 78.5%
-   22: agari_shisu_juni（上がり指数順位） × chokyo_yajirushi_code（調教矢印） | pass_rate: 0.525 | place_roi: 77.4%
-   23: kyori_tekisei_2（距離適性2） × ls_shisu_juni（LS指数順位） | pass_rate: 0.524 | place_roi: 82.3%
-   24: futan_juryo（斤量） × shirushi_code_1（印コード1） | pass_rate: 0.524 | place_roi: 78.6%
-   25: babajotai_heavy（馬場状態（重分類）） × prev2_chakujun（前2走着順） | pass_rate: 0.520 | place_roi: 83.3%
-   26: chokyo_yajirushi_code（調教矢印） × ls_shisu_juni（LS指数順位） | pass_rate: 0.520 | place_roi: 82.2%
-   27: babajotai_heavy（馬場状態（重分類）） × prev3_chakujun（前3走着順） | pass_rate: 0.520 | place_roi: 82.1%
-   28: hizume_code（蹄コード） × kyori_tekisei_2（距離適性2） | pass_rate: 0.520 | place_roi: 80.7%
-   29: hizume_code（蹄コード） × ls_shisu_juni（LS指数順位） | pass_rate: 0.518 | place_roi: 79.1%
-   30: kijun_ninkijun_fukusho（基準人気順（複勝）） × sanchimei（産地名） | pass_rate: 0.517 | place_roi: 78.2%
-   31: babajotai_heavy（馬場状態（重分類）） × futan_juryo（斤量） | pass_rate: 0.516 | place_roi: 81.1%
-   32: sanchimei（産地名） × shirushi_code_1（印コード1） | pass_rate: 0.516 | place_roi: 76.7%
-   33: babajotai_heavy（馬場状態（重分類）） × prev1_keibajo（前走競馬場） | pass_rate: 0.515 | place_roi: 86.5%
-   34: moshoku_code（毛色コード） × shirushi_code_1（印コード1） | pass_rate: 0.514 | place_roi: 79.6%
-   35: shirushi_code_1（印コード1） × yy_int（YY値） | pass_rate: 0.514 | place_roi: 79.1%
-   36: kyakushitsu（脚質） × shirushi_code_1（印コード1） | pass_rate: 0.514 | place_roi: 78.8%
-   37: gekiso_type（激走タイプ） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.513 | place_roi: 76.1%
-   38: chokyoshi_rank（調教師ランク） × ls_shisu_juni（LS指数順位） | pass_rate: 0.512 | place_roi: 78.6%
-   39: kishu_rank（騎手ランク） × prev1_bataiju（前走馬体重） | pass_rate: 0.511 | place_roi: 76.2%
-   40: ls_shisu_juni（LS指数順位） × prev2_chakujun（前2走着順） | pass_rate: 0.505 | place_roi: 83.3%
-   41: futan_juryo（斤量） × prev3_chakujun（前3走着順） | pass_rate: 0.504 | place_roi: 80.1%
-   42: prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 85.8%
-   43: babajotai_heavy（馬場状態（重分類）） × ls_shisu_juni（LS指数順位） | pass_rate: 0.500 | place_roi: 82.1%
-   44: kishu_shisu（騎手指数） | pass_rate: 0.500 | place_roi: 80.8%
-   45: umaban_clean（馬番） | pass_rate: 0.500 | place_roi: 80.7%
-   46: babajotai_heavy（馬場状態（重分類）） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.4%
-   47: nyukyu_nannichimae（入厩何日前） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 80.0%
-   48: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.8%
-   49: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.5%
-   50: prev1_keibajo（前走競馬場） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 79.4%
-   51: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 79.1%
-   52: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 78.9%
-   53: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 78.9%
-   54: kyori_tekisei_2（距離適性2） × prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 78.8%
-   55: agari_shisu_juni（上がり指数順位） × kyori_tekisei_2（距離適性2） | pass_rate: 0.500 | place_roi: 78.6%
-   56: kijun_ninkijun_tansho（基準人気順（単勝）） × sanchimei（産地名） | pass_rate: 0.500 | place_roi: 78.4%
-   57: chokyo_yajirushi_code（調教矢印） × moshoku_code（毛色コード） | pass_rate: 0.500 | place_roi: 78.3%
-   58: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 77.1%
-   59: kyori_tekisei_2（距離適性2） × yoso_juni（予想順位） | pass_rate: 0.500 | place_roi: 76.8%
-   60: kyori_tekisei_2（距離適性2） × taikei_tomo（体型（トモ）） | pass_rate: 0.500 | place_roi: 76.7%
-   61: chokyo_yajirushi_code（調教矢印） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 76.7%
-   62: shirushi_code_1（印コード1） × taikei_tomo（体型（トモ）） | pass_rate: 0.500 | place_roi: 76.5%
-   63: futan_juryo（斤量） × kishu_rank（騎手ランク） | pass_rate: 0.500 | place_roi: 75.9%
+    1: kyusha_hyoka_code（厩舎評価） × shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 81.3%
+    2: chokyo_yajirushi_code（調教矢印） × shirushi_code_4（印コード4） | pass_rate: 0.667 | place_roi: 79.9%
+    3: chokyo_yajirushi_code（調教矢印） × shirushi_code_2（印コード2） | pass_rate: 0.652 | place_roi: 82.9%
+    4: ls_shisu_juni（LS指数順位） | pass_rate: 0.636 | place_roi: 85.9%
+    5: chokyo_yajirushi_code（調教矢印） × shirushi_code_5（印コード5） | pass_rate: 0.636 | place_roi: 80.2%
+    6: chokyo_yajirushi_code（調教矢印） × shirushi_code_3（印コード3） | pass_rate: 0.636 | place_roi: 80.1%
+    7: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_2（印コード2） | pass_rate: 0.633 | place_roi: 80.6%
+    8: bac_tosu（出走頭数） × shirushi_code_2（印コード2） | pass_rate: 0.627 | place_roi: 80.5%
+    9: chokyo_yajirushi_code（調教矢印） × shirushi_code_6（印コード6） | pass_rate: 0.619 | place_roi: 82.8%
+   10: chokyo_yajirushi_code（調教矢印） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.615 | place_roi: 76.6%
+   11: chokyo_yajirushi_code（調教矢印） × kishu_shisu（騎手指数） | pass_rate: 0.609 | place_roi: 81.8%
+   12: joho_shisu（情報指数） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.608 | place_roi: 81.5%
+   13: rotation（ローテーション） × shirushi_code_2（印コード2） | pass_rate: 0.605 | place_roi: 79.8%
+   14: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_1（印コード1） | pass_rate: 0.600 | place_roi: 80.8%
+   15: kishu_shisu（騎手指数） × manken_shirushi（万券印） | pass_rate: 0.596 | place_roi: 82.1%
+   16: chokyo_yajirushi_code（調教矢印） × manken_shirushi（万券印） | pass_rate: 0.594 | place_roi: 80.3%
+   17: kyusha_hyoka_code（厩舎評価） × manken_shirushi（万券印） | pass_rate: 0.594 | place_roi: 79.4%
+   18: prev1_keibajo（前走競馬場） × shirushi_code_2（印コード2） | pass_rate: 0.583 | place_roi: 81.2%
+   19: shirushi_code_2（印コード2） × yy_int（YY値） | pass_rate: 0.583 | place_roi: 80.4%
+   20: kishu_shisu（騎手指数） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.583 | place_roi: 80.2%
+   21: prev1_kyakushitsu（前走脚質） × shirushi_code_2（印コード2） | pass_rate: 0.583 | place_roi: 80.1%
+   22: chokyo_yajirushi_code（調教矢印） × joho_shisu（情報指数） | pass_rate: 0.582 | place_roi: 81.7%
+   23: prev2_chakujun（前2走着順） × shirushi_code_5（印コード5） | pass_rate: 0.573 | place_roi: 80.6%
+   24: joho_shisu（情報指数） | pass_rate: 0.571 | place_roi: 81.7%
+   25: kyori（距離） × shirushi_code_2（印コード2） | pass_rate: 0.569 | place_roi: 80.2%
+   26: kishu_shisu（騎手指数） × yy_int（YY値） | pass_rate: 0.568 | place_roi: 81.2%
+   27: joken_class_code（条件クラス） × shirushi_code_2（印コード2） | pass_rate: 0.567 | place_roi: 79.4%
+   28: hizume_code（蹄コード） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.566 | place_roi: 76.8%
+   29: babajotai_heavy（馬場状態（重分類）） × kishu_shisu（騎手指数） | pass_rate: 0.564 | place_roi: 81.1%
+   30: shirushi_code_2（印コード2） × taikei_tomo（体型（トモ）） | pass_rate: 0.562 | place_roi: 80.8%
+   31: shirushi_code_2（印コード2） × wakuban（枠番） | pass_rate: 0.562 | place_roi: 80.2%
+   32: chokyo_yajirushi_code（調教矢印） × wakuban（枠番） | pass_rate: 0.562 | place_roi: 77.3%
+   33: hizume_code（蹄コード） × shirushi_code_5（印コード5） | pass_rate: 0.562 | place_roi: 79.8%
+   34: kishu_shisu（騎手指数） × shirushi_code_2（印コード2） | pass_rate: 0.561 | place_roi: 80.8%
+   35: kishu_kitai_tansho_ritsu（騎手期待単勝率） | pass_rate: 0.560 | place_roi: 82.4%
+   36: bac_tosu（出走頭数） × shirushi_code_5（印コード5） | pass_rate: 0.560 | place_roi: 79.6%
+   37: chokyo_yajirushi_code（調教矢印） × moshoku_code（毛色コード） | pass_rate: 0.560 | place_roi: 78.7%
+   38: kishu_minarai_code（騎手見習い） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.559 | place_roi: 78.9%
+   39: prev2_chakujun（前2走着順） | pass_rate: 0.556 | place_roi: 79.8%
+   40: prev1_chakujun（前走着順） × shirushi_code_2（印コード2） | pass_rate: 0.554 | place_roi: 80.1%
+   41: kishu_shisu（騎手指数） | pass_rate: 0.553 | place_roi: 81.4%
+   42: kishu_shisu（騎手指数） × kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.551 | place_roi: 81.1%
+   43: bataiju_change_bin（馬体重増減（区分）） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.550 | place_roi: 80.8%
+   44: hizume_code（蹄コード） | pass_rate: 0.550 | place_roi: 80.5%
+   45: shirushi_code_5（印コード5） × yy_int（YY値） | pass_rate: 0.550 | place_roi: 79.9%
+   46: kyusha_hyoka_code（厩舎評価） × shirushi_code_6（印コード6） | pass_rate: 0.550 | place_roi: 75.1%
+   47: hizume_code（蹄コード） × shirushi_code_3（印コード3） | pass_rate: 0.547 | place_roi: 79.7%
+   48: nyukyu_nannichimae（入厩何日前） × shirushi_code_5（印コード5） | pass_rate: 0.546 | place_roi: 78.6%
+   49: kishu_shisu（騎手指数） × kyakushitsu（脚質） | pass_rate: 0.545 | place_roi: 80.7%
+   50: kishu_shisu（騎手指数） × wakuban（枠番） | pass_rate: 0.545 | place_roi: 81.1%
+   51: manken_shirushi（万券印） × prev1_corner4（前走4角位置） | pass_rate: 0.544 | place_roi: 78.3%
+   52: kishu_shisu（騎手指数） × umaban_clean（馬番） | pass_rate: 0.543 | place_roi: 80.8%
+   53: bac_tosu（出走頭数） × kishu_shisu（騎手指数） | pass_rate: 0.543 | place_roi: 80.1%
+   54: hizume_code（蹄コード） × shirushi_code_6（印コード6） | pass_rate: 0.542 | place_roi: 80.0%
+   55: prev2_chakujun（前2走着順） × shirushi_code_3（印コード3） | pass_rate: 0.542 | place_roi: 81.0%
+   56: shirushi_code_2（印コード2） × tenko_code（天候） | pass_rate: 0.542 | place_roi: 80.8%
+   57: manken_shirushi（万券印） × shirushi_code_2（印コード2） | pass_rate: 0.542 | place_roi: 80.3%
+   58: manken_shirushi（万券印） × shirushi_code_6（印コード6） | pass_rate: 0.542 | place_roi: 79.9%
+   59: shirushi_code_1（印コード1） × taikei_tomo（体型（トモ）） | pass_rate: 0.542 | place_roi: 79.8%
+   60: prev1_corner4_bin（前走4角位置（区分）） × shirushi_code_3（印コード3） | pass_rate: 0.542 | place_roi: 79.7%
+   61: prev3_chakujun（前3走着順） × shirushi_code_2（印コード2） | pass_rate: 0.542 | place_roi: 79.5%
+   62: bac_jouken（レース条件） × manken_shirushi（万券印） | pass_rate: 0.542 | place_roi: 79.2%
+   63: kyusha_hyoka_code（厩舎評価） × moshoku_code（毛色コード） | pass_rate: 0.542 | place_roi: 75.2%
+   64: joho_shisu（情報指数） × moshoku_code（毛色コード） | pass_rate: 0.541 | place_roi: 80.9%
+   65: chokyo_yajirushi_code（調教矢印） × prev1_keibajo（前走競馬場） | pass_rate: 0.540 | place_roi: 81.2%
+   66: chokyo_yajirushi_code（調教矢印） × prev2_chakujun（前2走着順） | pass_rate: 0.540 | place_roi: 78.5%
+   67: babajotai_heavy（馬場状態（重分類）） × joho_shisu（情報指数） | pass_rate: 0.539 | place_roi: 80.6%
+   68: kishu_shisu（騎手指数） × prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.538 | place_roi: 81.9%
+   69: nyukyu_nannichimae（入厩何日前） × shirushi_code_2（印コード2） | pass_rate: 0.538 | place_roi: 79.0%
+   70: shirushi_code_2（印コード2） × umaban_clean（馬番） | pass_rate: 0.537 | place_roi: 79.6%
+   71: prev1_chakujun（前走着順） × shirushi_code_5（印コード5） | pass_rate: 0.537 | place_roi: 78.6%
+   72: kishu_shisu（騎手指数） × prev2_chakujun（前2走着順） | pass_rate: 0.535 | place_roi: 80.8%
+   73: joken_class_code（条件クラス） × kishu_shisu（騎手指数） | pass_rate: 0.534 | place_roi: 81.1%
+   74: bac_jouken（レース条件） × kishu_shisu（騎手指数） | pass_rate: 0.534 | place_roi: 81.0%
+   75: bac_tosu（出走頭数） × shirushi_code_3（印コード3） | pass_rate: 0.533 | place_roi: 79.5%
+   76: joho_shisu（情報指数） × manken_shirushi（万券印） | pass_rate: 0.533 | place_roi: 81.2%
+   77: joho_shisu（情報指数） × yy_int（YY値） | pass_rate: 0.532 | place_roi: 80.8%
+   78: shirushi_code_2（印コード2） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.532 | place_roi: 78.3%
+   79: kyori_tekisei（距離適性） × shirushi_code_2（印コード2） | pass_rate: 0.531 | place_roi: 80.1%
+   80: hizume_code（蹄コード） × kishu_shisu（騎手指数） | pass_rate: 0.531 | place_roi: 81.0%
+   81: kishu_shisu（騎手指数） × shirushi_code_5（印コード5） | pass_rate: 0.530 | place_roi: 81.3%
+   82: manken_shisu（万券指数） × shirushi_code_3（印コード3） | pass_rate: 0.530 | place_roi: 79.4%
+   83: kishu_shisu（騎手指数） × shirushi_code_3（印コード3） | pass_rate: 0.529 | place_roi: 80.9%
+   84: kyori_tekisei（距離適性） × shirushi_code_5（印コード5） | pass_rate: 0.529 | place_roi: 79.7%
+   85: kishu_shisu（騎手指数） × kyori_tekisei（距離適性） | pass_rate: 0.529 | place_roi: 80.3%
+   86: chokyo_yajirushi_code（調教矢印） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.527 | place_roi: 78.5%
+   87: prev3_chakujun（前3走着順） × shirushi_code_1（印コード1） | pass_rate: 0.527 | place_roi: 79.5%
+   88: kyusha_hyoka_code（厩舎評価） × shirushi_code_3（印コード3） | pass_rate: 0.526 | place_roi: 77.4%
+   89: joho_shisu（情報指数） × prev1_kyakushitsu（前走脚質） | pass_rate: 0.525 | place_roi: 79.9%
+   90: kyakushitsu（脚質） × manken_shirushi（万券印） | pass_rate: 0.525 | place_roi: 79.3%
+   91: kyi_kyusha_rank（厩舎ランク（KYI）） × shirushi_code_5（印コード5） | pass_rate: 0.524 | place_roi: 82.0%
+   92: kyusha_hyoka_code（厩舎評価） × shirushi_code_5（印コード5） | pass_rate: 0.524 | place_roi: 81.9%
+   93: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.524 | place_roi: 81.5%
+   94: babajotai_heavy（馬場状態（重分類）） × shirushi_code_1（印コード1） | pass_rate: 0.524 | place_roi: 79.7%
+   95: nyukyu_nannichimae（入厩何日前） × shirushi_code_3（印コード3） | pass_rate: 0.523 | place_roi: 78.5%
+   96: prev2_chakujun（前2走着順） × shirushi_code_6（印コード6） | pass_rate: 0.521 | place_roi: 80.7%
+   97: manken_shirushi（万券印） × shirushi_code_3（印コード3） | pass_rate: 0.521 | place_roi: 79.9%
+   98: shirushi_code_3（印コード3） × taikei_tomo（体型（トモ）） | pass_rate: 0.521 | place_roi: 79.6%
+   99: bac_tosu（出走頭数） × chokyo_yajirushi_code（調教矢印） | pass_rate: 0.521 | place_roi: 77.8%
+  100: kijun_ninkijun_tansho（基準人気順（単勝）） × manken_shirushi（万券印） | pass_rate: 0.521 | place_roi: 81.4%
+  101: kishu_shisu（騎手指数） × prev3_chakujun（前3走着順） | pass_rate: 0.521 | place_roi: 81.0%
+  102: class_code（クラスコード） × shirushi_code_3（印コード3） | pass_rate: 0.520 | place_roi: 79.1%
+  103: hizume_code（蹄コード） × shirushi_code_1（印コード1） | pass_rate: 0.520 | place_roi: 79.3%
+  104: prev1_corner4（前走4角位置） × shirushi_code_2（印コード2） | pass_rate: 0.520 | place_roi: 78.0%
+  105: manken_shirushi（万券印） × shirushi_code_1（印コード1） | pass_rate: 0.518 | place_roi: 79.7%
+  106: kishu_shisu（騎手指数） × prev1_kyakushitsu（前走脚質） | pass_rate: 0.517 | place_roi: 81.0%
+  107: chokyo_yajirushi_code（調教矢印） × kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.517 | place_roi: 79.2%
+  108: kishu_minarai_code（騎手見習い） × shirushi_code_6（印コード6） | pass_rate: 0.517 | place_roi: 78.0%
+  109: hizume_code（蹄コード） × kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.517 | place_roi: 81.9%
+  110: kyori（距離） × shirushi_code_4（印コード4） | pass_rate: 0.517 | place_roi: 80.5%
+  111: prev1_keibajo（前走競馬場） × shirushi_code_3（印コード3） | pass_rate: 0.517 | place_roi: 81.1%
+  112: shirushi_code_2（印コード2） × yoso_juni（予想順位） | pass_rate: 0.516 | place_roi: 79.6%
+  113: shirushi_code_1（印コード1） × umaban_clean（馬番） | pass_rate: 0.516 | place_roi: 79.3%
+  114: joho_shisu（情報指数） × shirushi_code_3（印コード3） | pass_rate: 0.516 | place_roi: 79.1%
+  115: joho_shisu（情報指数） × wakuban（枠番） | pass_rate: 0.516 | place_roi: 80.8%
+  116: shirushi_code_1（印コード1） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.515 | place_roi: 78.6%
+  117: kyusha_hyoka_code（厩舎評価） × umaban_clean（馬番） | pass_rate: 0.515 | place_roi: 77.9%
+  118: kyori_tekisei（距離適性） × shirushi_code_3（印コード3） | pass_rate: 0.514 | place_roi: 79.9%
+  119: joho_shisu（情報指数） × shirushi_code_5（印コード5） | pass_rate: 0.514 | place_roi: 80.6%
+  120: manken_shisu（万券指数） × shirushi_code_5（印コード5） | pass_rate: 0.513 | place_roi: 79.7%
+  121: rotation（ローテーション） × shirushi_code_1（印コード1） | pass_rate: 0.513 | place_roi: 78.5%
+  122: hizume_code（蹄コード） × kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.513 | place_roi: 82.0%
+  123: manken_shirushi（万券印） × yy_int（YY値） | pass_rate: 0.512 | place_roi: 79.8%
+  124: joho_shisu（情報指数） × kyori_tekisei（距離適性） | pass_rate: 0.512 | place_roi: 80.3%
+  125: hizume_code（蹄コード） × prev1_keibajo（前走競馬場） | pass_rate: 0.512 | place_roi: 79.8%
+  126: bac_tosu（出走頭数） × manken_shirushi（万券印） | pass_rate: 0.511 | place_roi: 78.6%
+  127: kyori（距離） × shirushi_code_1（印コード1） | pass_rate: 0.511 | place_roi: 80.0%
+  128: bataiju_change_bin（馬体重増減（区分）） × kishu_shisu（騎手指数） | pass_rate: 0.511 | place_roi: 80.4%
+  129: prev3_chakujun（前3走着順） × shirushi_code_5（印コード5） | pass_rate: 0.510 | place_roi: 80.1%
+  130: prev2_chakujun（前2走着順） × shirushi_code_4（印コード4） | pass_rate: 0.510 | place_roi: 80.0%
+  131: prev1_bataiju_bin（前走馬体重（区分）） × shirushi_code_5（印コード5） | pass_rate: 0.510 | place_roi: 77.5%
+  132: prev2_chakujun（前2走着順） × shirushi_code_1（印コード1） | pass_rate: 0.509 | place_roi: 79.9%
+  133: manken_shirushi（万券印） × prev3_chakujun（前3走着順） | pass_rate: 0.508 | place_roi: 80.5%
+  134: manken_shisu（万券指数） × shirushi_code_1（印コード1） | pass_rate: 0.508 | place_roi: 79.7%
+  135: kijun_ninkijun_fukusho（基準人気順（複勝）） × prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.507 | place_roi: 80.7%
+  136: bataiju_change_bin（馬体重増減（区分）） × prev1_keibajo（前走競馬場） | pass_rate: 0.507 | place_roi: 79.8%
+  137: shirushi_code_5（印コード5） × taikei_tomo（体型（トモ）） | pass_rate: 0.507 | place_roi: 80.0%
+  138: sanchimei（産地名） × shirushi_code_2（印コード2） | pass_rate: 0.506 | place_roi: 79.5%
+  139: chokyo_yajirushi_code（調教矢印） × class_code（クラスコード） | pass_rate: 0.506 | place_roi: 78.9%
+  140: prev1_chakujun（前走着順） × shirushi_code_3（印コード3） | pass_rate: 0.505 | place_roi: 79.8%
+  141: nyukyu_nannichimae（入厩何日前） × shirushi_code_4（印コード4） | pass_rate: 0.505 | place_roi: 78.0%
+  142: joho_shisu（情報指数） × kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.504 | place_roi: 80.7%
+  143: kijun_ninkijun_fukusho（基準人気順（複勝）） × manken_shirushi（万券印） | pass_rate: 0.504 | place_roi: 81.4%
+  144: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.502 | place_roi: 80.6%
+  145: bac_jouken（レース条件） × joho_shisu（情報指数） | pass_rate: 0.502 | place_roi: 80.9%
+  146: kyi_kyusha_rank（厩舎ランク（KYI）） × shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 82.1%
+  147: kyori（距離） | pass_rate: 0.500 | place_roi: 82.1%
+  148: chokyo_yajirushi_code（調教矢印） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 82.0%
+  149: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 81.7%
+  150: kyori（距離） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.500 | place_roi: 81.0%
+  151: chokyo_yajirushi_code（調教矢印） × kyori_tekisei（距離適性） | pass_rate: 0.500 | place_roi: 80.8%
+  152: shirushi_code_1（印コード1） × tenko_code（天候） | pass_rate: 0.500 | place_roi: 80.6%
+  153: joho_shisu（情報指数） × joken_class_code（条件クラス） | pass_rate: 0.500 | place_roi: 80.6%
+  154: joho_shisu（情報指数） × kyakushitsu（脚質） | pass_rate: 0.500 | place_roi: 80.6%
+  155: bac_tosu（出走頭数） × joho_shisu（情報指数） | pass_rate: 0.500 | place_roi: 80.5%
+  156: kyori（距離） × shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 80.4%
+  157: kishu_shisu（騎手指数） × moshoku_code（毛色コード） | pass_rate: 0.500 | place_roi: 80.2%
+  158: babajotai_heavy（馬場状態（重分類）） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 80.2%
+  159: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 80.1%
+  160: shirushi_code_5（印コード5） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.500 | place_roi: 80.0%
+  161: kishu_shisu（騎手指数） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 80.0%
+  162: prev1_corner4_bin（前走4角位置（区分）） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 80.0%
+  163: prev2_chakujun（前2走着順） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.9%
+  164: kyakushitsu（脚質） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.8%
+  165: bac_jouken（レース条件） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.6%
+  166: chokyo_yajirushi_code（調教矢印） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 79.2%
+  167: shirushi_code_3（印コード3） × umaban_clean（馬番） | pass_rate: 0.500 | place_roi: 79.0%
+  168: shirushi_code_4（印コード4） × umaban_clean（馬番） | pass_rate: 0.500 | place_roi: 79.0%
+  169: kyusha_hyoka_code（厩舎評価） × prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 78.8%
+  170: shirushi_code_6（印コード6） × taikei_dou（体型（胴）） | pass_rate: 0.500 | place_roi: 78.8%
+  171: kishu_minarai_code（騎手見習い） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 78.8%
+  172: class_code（クラスコード） × shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 78.4%
+  173: kishu_minarai_code（騎手見習い） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 78.4%
+  174: babajotai_heavy（馬場状態（重分類）） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.500 | place_roi: 78.0%
+  175: kyusha_hyoka_code（厩舎評価） × yy_int（YY値） | pass_rate: 0.500 | place_roi: 77.9%
+  176: rotation（ローテーション） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 77.8%
+  177: chokyo_yajirushi_code（調教矢印） × kyakushitsu（脚質） | pass_rate: 0.500 | place_roi: 77.7%
+  178: prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 77.6%
+  179: chokyo_yajirushi_code（調教矢印） × yy_int（YY値） | pass_rate: 0.500 | place_roi: 77.4%
+  180: prev1_bataiju_bin（前走馬体重（区分）） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 77.4%
+  181: bac_jouken（レース条件） × chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 77.2%
+  182: moshoku_code（毛色コード） × shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 77.2%
+  183: chokyo_yajirushi_code（調教矢印） × joken_class_code（条件クラス） | pass_rate: 0.500 | place_roi: 77.1%
+  184: kyori_tekisei（距離適性） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.500 | place_roi: 77.1%
+  185: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 75.9%
+  186: kishu_minarai_code（騎手見習い） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.500 | place_roi: 72.8%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【COURSE_27】コース27分類（3件）
+【COURSE_27】コース27分類（1件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: tozai_shozoku_code（東西所属） | pass_rate: 0.667 | place_roi: 85.1%
-    2: prev2_chakujun（前2走着順） | pass_rate: 0.611 | place_roi: 82.7%
-    3: umaban | pass_rate: 0.500 | place_roi: 80.7%
+    1: prev2_chakujun（前2走着順） | pass_rate: 0.556 | place_roi: 79.8%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【SURFACE_2_芝】全場芝（55件）
+【SURFACE_2_芝】全場芝（178件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: kyori_tekisei_2（距離適性2） × manken_shisu（万券指数） | pass_rate: 0.667 | place_roi: 78.5%
-    2: kyori_tekisei_2（距離適性2） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.625 | place_roi: 77.5%
-    3: ls_shisu_juni（LS指数順位） | pass_rate: 0.600 | place_roi: 89.9%
-    4: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 79.1%
-    5: joho_shisu（情報指数） × kyori_tekisei_2（距離適性2） | pass_rate: 0.600 | place_roi: 76.8%
-    6: joho_shisu（情報指数） × shirushi_code_1（印コード1） | pass_rate: 0.567 | place_roi: 79.0%
-    7: babajotai_heavy（馬場状態（重分類）） × prev1_keibajo（前走競馬場） | pass_rate: 0.567 | place_roi: 84.5%
-    8: kishu_rank（騎手ランク） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.564 | place_roi: 75.4%
-    9: chokyo_yajirushi_code（調教矢印） × manken_shirushi（万券印） | pass_rate: 0.562 | place_roi: 74.8%
-   10: babajotai_heavy（馬場状態（重分類）） × ls_shisu_juni（LS指数順位） | pass_rate: 0.560 | place_roi: 88.2%
-   11: kyori_tekisei_2（距離適性2） × prev1_corner4（前走4角位置） | pass_rate: 0.552 | place_roi: 75.4%
-   12: kyori_tekisei_2（距離適性2） × shirushi_code_1（印コード1） | pass_rate: 0.550 | place_roi: 79.6%
-   13: goal_sa（ゴール差） × kishu_minarai_code（騎手見習い） | pass_rate: 0.545 | place_roi: 69.7%
-   14: kishu_rank（騎手ランク） × prev3_chakujun（前3走着順） | pass_rate: 0.534 | place_roi: 79.1%
-   15: hizume_code（蹄コード） × hobokusaki_rank（放牧先ランク） | pass_rate: 0.531 | place_roi: 79.3%
-   16: babajotai_heavy（馬場状態（重分類）） × gekiso_type（激走タイプ） | pass_rate: 0.529 | place_roi: 86.4%
-   17: ls_shisu_juni（LS指数順位） × moshoku_code（毛色コード） | pass_rate: 0.525 | place_roi: 82.5%
-   18: chokyo_yajirushi_code（調教矢印） × futan_juryo（斤量） | pass_rate: 0.524 | place_roi: 79.0%
-   19: sanchimei（産地名） × shirushi_code_1（印コード1） | pass_rate: 0.521 | place_roi: 79.6%
-   20: kijun_ninkijun_tansho（基準人気順（単勝）） × sanchimei（産地名） | pass_rate: 0.521 | place_roi: 78.2%
-   21: ls_shisu_juni（LS指数順位） × manken_shirushi（万券印） | pass_rate: 0.518 | place_roi: 82.2%
-   22: kyakushitsu（脚質） × prev3_chakujun（前3走着順） | pass_rate: 0.516 | place_roi: 80.8%
-   23: chokyo_yajirushi_code（調教矢印） × prev3_chakujun（前3走着順） | pass_rate: 0.516 | place_roi: 77.3%
-   24: kishu_shisu（騎手指数） | pass_rate: 0.515 | place_roi: 80.0%
-   25: agari_shisu_juni（上がり指数順位） × chokyo_yajirushi_code（調教矢印） | pass_rate: 0.514 | place_roi: 75.5%
-   26: hobokusaki_rank（放牧先ランク） × kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.514 | place_roi: 82.2%
-   27: futan_juryo（斤量） × hobokusaki_rank（放牧先ランク） | pass_rate: 0.513 | place_roi: 79.2%
-   28: hobokusaki_rank（放牧先ランク） × sanchimei（産地名） | pass_rate: 0.513 | place_roi: 76.5%
-   29: futan_juryo（斤量） × tenkai_kigo_code（展開記号） | pass_rate: 0.512 | place_roi: 79.6%
-   30: kijun_ninkijun_fukusho（基準人気順（複勝）） × ls_shisu_juni（LS指数順位） | pass_rate: 0.512 | place_roi: 81.1%
-   31: kijun_ninkijun_fukusho（基準人気順（複勝）） × sanchimei（産地名） | pass_rate: 0.510 | place_roi: 78.5%
-   32: prev3_chakujun（前3走着順） × tenkai_kigo_code（展開記号） | pass_rate: 0.508 | place_roi: 80.7%
-   33: prev1_chakujun（前走着順） × shirushi_code_1（印コード1） | pass_rate: 0.508 | place_roi: 76.5%
-   34: hobokusaki_rank（放牧先ランク） × prev2_chakujun（前2走着順） | pass_rate: 0.507 | place_roi: 84.0%
-   35: prev3_chakujun（前3走着順） × shirushi_code_1（印コード1） | pass_rate: 0.506 | place_roi: 78.2%
-   36: babajotai_heavy（馬場状態（重分類）） × futan_juryo（斤量） | pass_rate: 0.500 | place_roi: 84.9%
-   37: chokyo_yajirushi_code（調教矢印） × moshoku_code（毛色コード） | pass_rate: 0.500 | place_roi: 84.3%
-   38: moshoku_code（毛色コード） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 83.4%
-   39: prev2_chakujun（前2走着順） | pass_rate: 0.500 | place_roi: 81.7%
-   40: babajotai_heavy（馬場状態（重分類）） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 81.1%
-   41: chokyo_yajirushi_code（調教矢印） × joho_shisu（情報指数） | pass_rate: 0.500 | place_roi: 80.4%
-   42: babajotai_heavy（馬場状態（重分類）） × yy_int（YY値） | pass_rate: 0.500 | place_roi: 80.3%
-   43: prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 80.1%
-   44: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.4%
-   45: bac_grade（グレード） | pass_rate: 0.500 | place_roi: 79.3%
-   46: barei（馬齢） × goal_juni（ゴール順位） | pass_rate: 0.500 | place_roi: 78.6%
-   47: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 78.6%
-   48: chokyo_yajirushi_code（調教矢印） × chokyoshi_rank（調教師ランク） | pass_rate: 0.500 | place_roi: 78.5%
-   49: hobokusaki_rank（放牧先ランク） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 78.5%
-   50: babajotai_heavy（馬場状態（重分類）） × barei（馬齢） | pass_rate: 0.500 | place_roi: 78.0%
-   51: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 78.0%
-   52: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 77.5%
-   53: chokyo_yajirushi_code（調教矢印） × hizume_code（蹄コード） | pass_rate: 0.500 | place_roi: 76.9%
-   54: chokyoshi_rank（調教師ランク） × kyori_tekisei_2（距離適性2） | pass_rate: 0.500 | place_roi: 75.8%
-   55: goal_sa（ゴール差） × kyori_tekisei_2（距離適性2） | pass_rate: 0.500 | place_roi: 74.7%
+    1: bataiju_change_bin（馬体重増減（区分）） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.737 | place_roi: 84.8%
+    2: chokyo_yajirushi_code（調教矢印） × shirushi_code_5（印コード5） | pass_rate: 0.684 | place_roi: 87.2%
+    3: chokyo_yajirushi_code（調教矢印） × shirushi_code_3（印コード3） | pass_rate: 0.684 | place_roi: 85.1%
+    4: kyusha_hyoka_code（厩舎評価） × shirushi_code_5（印コード5） | pass_rate: 0.667 | place_roi: 81.4%
+    5: bataiju_change_bin（馬体重増減（区分）） × chokyo_yajirushi_code（調教矢印） | pass_rate: 0.647 | place_roi: 81.6%
+    6: chokyo_yajirushi_code（調教矢印） × shirushi_code_6（印コード6） | pass_rate: 0.632 | place_roi: 85.9%
+    7: chokyo_yajirushi_code（調教矢印） × shirushi_code_2（印コード2） | pass_rate: 0.632 | place_roi: 83.2%
+    8: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_2（印コード2） | pass_rate: 0.625 | place_roi: 83.3%
+    9: chokyo_yajirushi_code（調教矢印） × joho_shisu（情報指数） | pass_rate: 0.624 | place_roi: 82.1%
+   10: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_5（印コード5） | pass_rate: 0.621 | place_roi: 80.7%
+   11: chokyo_yajirushi_code（調教矢印） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.615 | place_roi: 76.0%
+   12: kyusha_hyoka_code（厩舎評価） × shirushi_code_2（印コード2） | pass_rate: 0.611 | place_roi: 84.3%
+   13: ls_shisu_juni（LS指数順位） | pass_rate: 0.600 | place_roi: 92.6%
+   14: chokyo_yajirushi_code（調教矢印） × kishu_shisu（騎手指数） | pass_rate: 0.598 | place_roi: 81.6%
+   15: kyusha_hyoka_code（厩舎評価） × shirushi_code_6（印コード6） | pass_rate: 0.588 | place_roi: 77.3%
+   16: kyusha_hyoka_code（厩舎評価） × shirushi_code_3（印コード3） | pass_rate: 0.588 | place_roi: 76.3%
+   17: prev1_corner4_bin（前走4角位置（区分）） × shirushi_code_2（印コード2） | pass_rate: 0.583 | place_roi: 79.2%
+   18: babajotai_heavy（馬場状態（重分類）） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.583 | place_roi: 78.9%
+   19: chokyo_yajirushi_code（調教矢印） × shirushi_code_4（印コード4） | pass_rate: 0.579 | place_roi: 84.6%
+   20: kyori_tekisei（距離適性） × prev3_chakujun（前3走着順） | pass_rate: 0.577 | place_roi: 78.8%
+   21: bac_tosu（出走頭数） × shirushi_code_2（印コード2） | pass_rate: 0.573 | place_roi: 80.1%
+   22: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.571 | place_roi: 83.1%
+   23: gekiso_type（激走タイプ） × manken_shirushi（万券印） | pass_rate: 0.568 | place_roi: 80.6%
+   24: kishu_shisu（騎手指数） | pass_rate: 0.568 | place_roi: 81.2%
+   25: nyukyu_nannichimae（入厩何日前） × shirushi_code_5（印コード5） | pass_rate: 0.567 | place_roi: 79.6%
+   26: kyori_tekisei（距離適性） × shirushi_code_2（印コード2） | pass_rate: 0.567 | place_roi: 80.4%
+   27: babajotai_heavy（馬場状態（重分類）） × kishu_shisu（騎手指数） | pass_rate: 0.564 | place_roi: 81.4%
+   28: nyukyu_nannichimae（入厩何日前） × shirushi_code_2（印コード2） | pass_rate: 0.563 | place_roi: 80.9%
+   29: kyusha_hyoka_code（厩舎評価） × shirushi_code_4（印コード4） | pass_rate: 0.562 | place_roi: 76.6%
+   30: babajotai_heavy（馬場状態（重分類）） × joho_shisu（情報指数） | pass_rate: 0.558 | place_roi: 80.5%
+   31: bataiju_change_bin（馬体重増減（区分）） × moshoku_code（毛色コード） | pass_rate: 0.556 | place_roi: 81.4%
+   32: moshoku_code（毛色コード） × shirushi_code_5（印コード5） | pass_rate: 0.556 | place_roi: 80.2%
+   33: moshoku_code（毛色コード） × shirushi_code_3（印コード3） | pass_rate: 0.556 | place_roi: 79.3%
+   34: joho_shisu（情報指数） × prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.554 | place_roi: 79.9%
+   35: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_3（印コード3） | pass_rate: 0.552 | place_roi: 81.1%
+   36: chokyo_yajirushi_code（調教矢印） × prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.552 | place_roi: 80.7%
+   37: nyukyu_nannichimae（入厩何日前） × shirushi_code_6（印コード6） | pass_rate: 0.551 | place_roi: 80.5%
+   38: chokyo_yajirushi_code（調教矢印） × prev1_chakujun（前走着順） | pass_rate: 0.551 | place_roi: 78.8%
+   39: kyusha_hyoka_code（厩舎評価） × shirushi_code_1（印コード1） | pass_rate: 0.550 | place_roi: 80.6%
+   40: joken_class_code（条件クラス） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.550 | place_roi: 80.2%
+   41: shirushi_code_5（印コード5） × yy_int（YY値） | pass_rate: 0.550 | place_roi: 79.8%
+   42: prev1_keibajo（前走競馬場） × shirushi_code_2（印コード2） | pass_rate: 0.550 | place_roi: 79.7%
+   43: joho_shisu（情報指数） × shirushi_code_3（印コード3） | pass_rate: 0.547 | place_roi: 79.4%
+   44: kishu_shisu（騎手指数） × shirushi_code_5（印コード5） | pass_rate: 0.547 | place_roi: 82.3%
+   45: chokyo_yajirushi_code（調教矢印） × prev3_chakujun（前3走着順） | pass_rate: 0.545 | place_roi: 77.2%
+   46: bataiju_change_bin（馬体重増減（区分）） × kishu_shisu（騎手指数） | pass_rate: 0.545 | place_roi: 81.7%
+   47: joho_shisu（情報指数） × moshoku_code（毛色コード） | pass_rate: 0.545 | place_roi: 81.5%
+   48: kishu_shisu（騎手指数） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.544 | place_roi: 79.9%
+   49: kishu_shisu（騎手指数） × wakuban（枠番） | pass_rate: 0.544 | place_roi: 80.7%
+   50: hizume_code（蹄コード） × kishu_shisu（騎手指数） | pass_rate: 0.542 | place_roi: 80.9%
+   51: shirushi_code_2（印コード2） × wakuban（枠番） | pass_rate: 0.542 | place_roi: 80.0%
+   52: chokyo_yajirushi_code（調教矢印） × prev1_keibajo（前走競馬場） | pass_rate: 0.540 | place_roi: 82.2%
+   53: nyukyu_nannichimae（入厩何日前） × shirushi_code_3（印コード3） | pass_rate: 0.538 | place_roi: 79.8%
+   54: shirushi_code_2（印コード2） × umaban_clean（馬番） | pass_rate: 0.537 | place_roi: 79.2%
+   55: rotation（ローテーション） × shirushi_code_5（印コード5） | pass_rate: 0.536 | place_roi: 78.4%
+   56: shirushi_code_1（印コード1） × tenko_code（天候） | pass_rate: 0.536 | place_roi: 79.1%
+   57: rotation（ローテーション） × shirushi_code_3（印コード3） | pass_rate: 0.536 | place_roi: 78.3%
+   58: hizume_code（蹄コード） × shirushi_code_5（印コード5） | pass_rate: 0.535 | place_roi: 79.5%
+   59: joho_shisu（情報指数） × kyakushitsu（脚質） | pass_rate: 0.535 | place_roi: 80.5%
+   60: hobokusaki_rank（放牧先ランク） × shirushi_code_6（印コード6） | pass_rate: 0.533 | place_roi: 79.8%
+   61: kyori_tekisei（距離適性） × shirushi_code_5（印コード5） | pass_rate: 0.533 | place_roi: 79.6%
+   62: kyakushitsu（脚質） × shirushi_code_2（印コード2） | pass_rate: 0.533 | place_roi: 79.4%
+   63: kyakushitsu（脚質） × shirushi_code_5（印コード5） | pass_rate: 0.533 | place_roi: 79.1%
+   64: kyusha_hyoka_code（厩舎評価） × prev1_chakujun（前走着順） | pass_rate: 0.533 | place_roi: 78.9%
+   65: bataiju_change_bin（馬体重増減（区分）） × prev1_keibajo（前走競馬場） | pass_rate: 0.532 | place_roi: 80.8%
+   66: chokyo_yajirushi_code（調教矢印） × manken_shirushi（万券印） | pass_rate: 0.531 | place_roi: 78.5%
+   67: kishu_shisu（騎手指数） × shirushi_code_2（印コード2） | pass_rate: 0.530 | place_roi: 80.9%
+   68: joho_shisu（情報指数） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.530 | place_roi: 82.0%
+   69: kishu_shisu（騎手指数） × kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.529 | place_roi: 80.9%
+   70: kishu_kitai_tansho_ritsu（騎手期待単勝率） | pass_rate: 0.529 | place_roi: 81.3%
+   71: nyukyu_nannichimae（入厩何日前） × shirushi_code_4（印コード4） | pass_rate: 0.529 | place_roi: 79.3%
+   72: joho_shisu（情報指数） | pass_rate: 0.528 | place_roi: 81.3%
+   73: bac_jouken（レース条件） × shirushi_code_5（印コード5） | pass_rate: 0.528 | place_roi: 79.7%
+   74: shirushi_code_6（印コード6） × umaban_clean（馬番） | pass_rate: 0.528 | place_roi: 78.9%
+   75: chokyo_yajirushi_code（調教矢印） × kyori（距離） | pass_rate: 0.528 | place_roi: 78.5%
+   76: manken_shisu（万券指数） × shirushi_code_4（印コード4） | pass_rate: 0.526 | place_roi: 78.6%
+   77: bac_jouken（レース条件） × kishu_shisu（騎手指数） | pass_rate: 0.524 | place_roi: 80.7%
+   78: moshoku_code（毛色コード） × shirushi_code_1（印コード1） | pass_rate: 0.524 | place_roi: 80.1%
+   79: babajotai_heavy（馬場状態（重分類）） × shirushi_code_1（印コード1） | pass_rate: 0.524 | place_roi: 79.6%
+   80: chokyo_yajirushi_code（調教矢印） × umaban_clean（馬番） | pass_rate: 0.524 | place_roi: 77.0%
+   81: prev1_chakujun（前走着順） × shirushi_code_6（印コード6） | pass_rate: 0.523 | place_roi: 79.4%
+   82: prev3_chakujun（前3走着順） × shirushi_code_6（印コード6） | pass_rate: 0.522 | place_roi: 77.8%
+   83: chokyo_yajirushi_code（調教矢印） × shirushi_code_1（印コード1） | pass_rate: 0.522 | place_roi: 82.2%
+   84: kyusha_hyoka_code（厩舎評価） × sanchimei（産地名） | pass_rate: 0.522 | place_roi: 78.5%
+   85: chokyo_yajirushi_code（調教矢印） × moshoku_code（毛色コード） | pass_rate: 0.522 | place_roi: 78.4%
+   86: kyusha_hyoka_code（厩舎評価） × moshoku_code（毛色コード） | pass_rate: 0.522 | place_roi: 75.7%
+   87: hizume_code（蹄コード） × shirushi_code_2（印コード2） | pass_rate: 0.521 | place_roi: 80.3%
+   88: manken_shirushi（万券印） × shirushi_code_2（印コード2） | pass_rate: 0.521 | place_roi: 80.4%
+   89: manken_shirushi（万券印） × shirushi_code_4（印コード4） | pass_rate: 0.521 | place_roi: 79.8%
+   90: bataiju_change_bin（馬体重増減（区分）） × umaban_clean（馬番） | pass_rate: 0.520 | place_roi: 81.4%
+   91: kishu_rank（騎手ランク） × kishu_shisu（騎手指数） | pass_rate: 0.520 | place_roi: 79.2%
+   92: joho_shisu（情報指数） × manken_shirushi（万券印） | pass_rate: 0.519 | place_roi: 80.7%
+   93: kishu_shisu（騎手指数） × moshoku_code（毛色コード） | pass_rate: 0.519 | place_roi: 81.2%
+   94: kishu_shisu（騎手指数） × shirushi_code_3（印コード3） | pass_rate: 0.519 | place_roi: 80.2%
+   95: kishu_shisu（騎手指数） × kyakushitsu（脚質） | pass_rate: 0.519 | place_roi: 79.9%
+   96: barei（馬齢） × joho_shisu（情報指数） | pass_rate: 0.518 | place_roi: 79.0%
+   97: kishu_shisu（騎手指数） × kyori_tekisei（距離適性） | pass_rate: 0.518 | place_roi: 81.1%
+   98: joho_shisu（情報指数） × shirushi_code_4（印コード4） | pass_rate: 0.518 | place_roi: 79.1%
+   99: kyi_kyusha_rank（厩舎ランク（KYI）） × manken_shirushi（万券印） | pass_rate: 0.518 | place_roi: 79.1%
+  100: kyusha_hyoka_code（厩舎評価） × taikei_tomo（体型（トモ）） | pass_rate: 0.517 | place_roi: 78.9%
+  101: chokyo_yajirushi_code（調教矢印） × manken_shisu（万券指数） | pass_rate: 0.516 | place_roi: 77.2%
+  102: kijun_ninkijun_tansho（基準人気順（単勝）） × shirushi_code_5（印コード5） | pass_rate: 0.516 | place_roi: 81.1%
+  103: kyori_tekisei（距離適性） × shirushi_code_1（印コード1） | pass_rate: 0.514 | place_roi: 79.7%
+  104: prev1_keibajo（前走競馬場） × shirushi_code_1（印コード1） | pass_rate: 0.514 | place_roi: 78.8%
+  105: kijun_ninkijun_tansho（基準人気順（単勝）） × kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.513 | place_roi: 81.4%
+  106: kyusha_hyoka_code（厩舎評価） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.513 | place_roi: 75.4%
+  107: kishu_shisu（騎手指数） × shirushi_code_1（印コード1） | pass_rate: 0.513 | place_roi: 80.7%
+  108: kishu_minarai_code（騎手見習い） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.513 | place_roi: 74.7%
+  109: prev3_chakujun（前3走着順） × yy_int（YY値） | pass_rate: 0.512 | place_roi: 80.5%
+  110: prev1_chakujun（前走着順） × shirushi_code_2（印コード2） | pass_rate: 0.512 | place_roi: 80.2%
+  111: shirushi_code_2（印コード2） × yoso_juni（予想順位） | pass_rate: 0.511 | place_roi: 78.9%
+  112: manken_shisu（万券指数） × shirushi_code_3（印コード3） | pass_rate: 0.511 | place_roi: 78.7%
+  113: manken_shisu（万券指数） × shirushi_code_2（印コード2） | pass_rate: 0.511 | place_roi: 79.3%
+  114: joho_shisu（情報指数） × kyori_tekisei（距離適性） | pass_rate: 0.510 | place_roi: 80.6%
+  115: rotation（ローテーション） × shirushi_code_2（印コード2） | pass_rate: 0.510 | place_roi: 79.6%
+  116: chokyo_yajirushi_code（調教矢印） × class_code（クラスコード） | pass_rate: 0.510 | place_roi: 78.2%
+  117: kijun_ninkijun_tansho（基準人気順（単勝）） × sanchimei（産地名） | pass_rate: 0.510 | place_roi: 82.2%
+  118: shirushi_code_2（印コード2） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.510 | place_roi: 77.2%
+  119: bac_jouken（レース条件） × prev1_keibajo（前走競馬場） | pass_rate: 0.509 | place_roi: 78.3%
+  120: chokyo_yajirushi_code（調教矢印） × yoso_juni（予想順位） | pass_rate: 0.509 | place_roi: 76.0%
+  121: hobokusaki_rank（放牧先ランク） × joho_shisu（情報指数） | pass_rate: 0.508 | place_roi: 80.7%
+  122: chokyo_yajirushi_code（調教矢印） × taikei_tomo（体型（トモ）） | pass_rate: 0.508 | place_roi: 80.4%
+  123: kishu_shisu（騎手指数） × shirushi_code_6（印コード6） | pass_rate: 0.507 | place_roi: 81.0%
+  124: shirushi_code_1（印コード1） × taikei_tomo（体型（トモ）） | pass_rate: 0.507 | place_roi: 78.5%
+  125: sanchimei（産地名） × shirushi_code_4（印コード4） | pass_rate: 0.507 | place_roi: 79.5%
+  126: bac_tosu（出走頭数） × shirushi_code_6（印コード6） | pass_rate: 0.507 | place_roi: 79.7%
+  127: bac_tosu（出走頭数） × shirushi_code_3（印コード3） | pass_rate: 0.507 | place_roi: 79.3%
+  128: shirushi_code_4（印コード4） × taikei_dou（体型（胴）） | pass_rate: 0.507 | place_roi: 79.1%
+  129: class_code（クラスコード） × shirushi_code_5（印コード5） | pass_rate: 0.506 | place_roi: 79.3%
+  130: manken_shisu（万券指数） × shirushi_code_5（印コード5） | pass_rate: 0.506 | place_roi: 79.5%
+  131: prev1_chakujun（前走着順） × shirushi_code_1（印コード1） | pass_rate: 0.505 | place_roi: 78.2%
+  132: kishu_shisu（騎手指数） × manken_shirushi（万券印） | pass_rate: 0.505 | place_roi: 81.9%
+  133: class_code（クラスコード） × manken_shirushi（万券印） | pass_rate: 0.505 | place_roi: 79.2%
+  134: shirushi_code_4（印コード4） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.503 | place_roi: 77.4%
+  135: joken_class_code（条件クラス） × kishu_shisu（騎手指数） | pass_rate: 0.503 | place_roi: 81.5%
+  136: joho_shisu（情報指数） × tenko_code（天候） | pass_rate: 0.503 | place_roi: 80.4%
+  137: bataiju_change_bin（馬体重増減（区分）） × prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 85.8%
+  138: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 82.0%
+  139: moshoku_code（毛色コード） | pass_rate: 0.500 | place_roi: 82.0%
+  140: kyusha_hyoka_code（厩舎評価） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 81.8%
+  141: bataiju_change_bin（馬体重増減（区分）） × kishu_rank（騎手ランク） | pass_rate: 0.500 | place_roi: 81.6%
+  142: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 81.0%
+  143: bataiju_change_bin（馬体重増減（区分）） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 80.5%
+  144: shirushi_code_2（印コード2） × tenko_code（天候） | pass_rate: 0.500 | place_roi: 80.3%
+  145: joho_shisu（情報指数） × joken_class_code（条件クラス） | pass_rate: 0.500 | place_roi: 80.2%
+  146: moshoku_code（毛色コード） × shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 80.1%
+  147: babajotai_heavy（馬場状態（重分類）） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 79.9%
+  148: shirushi_code_2（印コード2） × yy_int（YY値） | pass_rate: 0.500 | place_roi: 79.9%
+  149: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.9%
+  150: kyi_kyusha_rank（厩舎ランク（KYI）） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.8%
+  151: shirushi_code_5（印コード5） × wakuban（枠番） | pass_rate: 0.500 | place_roi: 79.7%
+  152: bac_tosu（出走頭数） × kishu_shisu（騎手指数） | pass_rate: 0.500 | place_roi: 79.6%
+  153: kyi_kyusha_rank（厩舎ランク（KYI）） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.6%
+  154: manken_shirushi（万券印） × shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 79.6%
+  155: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.6%
+  156: chokyo_yajirushi_code（調教矢印） × prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 79.5%
+  157: babajotai_heavy（馬場状態（重分類）） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.4%
+  158: chokyo_shisu（調教指数） | pass_rate: 0.500 | place_roi: 79.3%
+  159: shirushi_code_4（印コード4） × yy_int（YY値） | pass_rate: 0.500 | place_roi: 79.2%
+  160: bac_jouken（レース条件） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.500 | place_roi: 79.1%
+  161: kyi_kyusha_rank（厩舎ランク（KYI）） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.0%
+  162: kishu_minarai_code（騎手見習い） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 78.9%
+  163: sanchimei（産地名） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 78.9%
+  164: bac_jouken（レース条件） × bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.500 | place_roi: 78.7%
+  165: bataiju_change_bin（馬体重増減（区分）） × joken_class_code（条件クラス） | pass_rate: 0.500 | place_roi: 78.6%
+  166: moshoku_code（毛色コード） × taikei_dou（体型（胴）） | pass_rate: 0.500 | place_roi: 78.5%
+  167: prev1_kyakushitsu（前走脚質） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 78.2%
+  168: manken_shirushi（万券印） × prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 78.2%
+  169: class_code（クラスコード） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 78.1%
+  170: chokyo_yajirushi_code（調教矢印） × joken_class_code（条件クラス） | pass_rate: 0.500 | place_roi: 77.2%
+  171: bac_jouken（レース条件） × chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 76.9%
+  172: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 76.9%
+  173: chokyo_yajirushi_code（調教矢印） × wakuban（枠番） | pass_rate: 0.500 | place_roi: 76.8%
+  174: chokyo_yajirushi_code（調教矢印） × yy_int（YY値） | pass_rate: 0.500 | place_roi: 76.7%
+  175: chokyo_yajirushi_code（調教矢印） × sanchimei（産地名） | pass_rate: 0.500 | place_roi: 75.3%
+  176: babajotai_heavy（馬場状態（重分類）） × chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 75.2%
+  177: kyusha_hyoka_code（厩舎評価） × prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.500 | place_roi: 74.8%
+  178: barei（馬齢） × hobokusaki_rank（放牧先ランク） | pass_rate: 0.500 | place_roi: 73.5%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【SURFACE_2_ダ】全場ダート（174件）
+【SURFACE_2_ダ】全場ダート（216件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: kyori_tekisei_2（距離適性2） × shirushi_code_1（印コード1） | pass_rate: 0.769 | place_roi: 75.7%
-    2: kishu_minarai_code（騎手見習い） × prev1_bataiju（前走馬体重） | pass_rate: 0.750 | place_roi: 79.1%
-    3: kyori_tekisei_2（距離適性2） × prev1_corner4（前走4角位置） | pass_rate: 0.688 | place_roi: 75.8%
-    4: kyori_tekisei_2（距離適性2） × yy_int（YY値） | pass_rate: 0.684 | place_roi: 78.8%
-    5: kishu_minarai_code（騎手見習い） × kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 91.1%
-    6: chokyo_yajirushi_code（調教矢印） × shirushi_code_1（印コード1） | pass_rate: 0.667 | place_roi: 81.5%
-    7: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 80.9%
-    8: nyukyu_nannichimae（入厩何日前） × shirushi_code_1（印コード1） | pass_rate: 0.667 | place_roi: 80.8%
-    9: futan_juryo（斤量） × kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 80.0%
-   10: shirushi_code_5（印コード5） | pass_rate: 0.667 | place_roi: 79.8%
-   11: kijun_ninkijun_fukusho（基準人気順（複勝）） × kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 78.6%
-   12: kijun_ninkijun_tansho（基準人気順（単勝）） × kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 77.5%
-   13: kyori_tekisei_2（距離適性2） × ls_shisu_juni（LS指数順位） | pass_rate: 0.643 | place_roi: 81.8%
-   14: chokyo_yajirushi_code（調教矢印） × gekiso_type（激走タイプ） | pass_rate: 0.636 | place_roi: 80.2%
-   15: kyori_tekisei_2（距離適性2） × sanchimei（産地名） | pass_rate: 0.636 | place_roi: 78.7%
-   16: kohan_3f_juni × kyori_tekisei_2（距離適性2） | pass_rate: 0.632 | place_roi: 77.9%
-   17: goal_juni（ゴール順位） × kyori_tekisei_2（距離適性2） | pass_rate: 0.625 | place_roi: 83.2%
-   18: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.625 | place_roi: 80.8%
-   19: chokyo_yajirushi_code（調教矢印） × manken_shirushi（万券印） | pass_rate: 0.625 | place_roi: 77.7%
-   20: goal_sa（ゴール差） × kyori_tekisei_2（距離適性2） | pass_rate: 0.615 | place_roi: 83.8%
-   21: shirushi_code_1（印コード1） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.614 | place_roi: 82.6%
-   22: joho_shisu（情報指数） × kyori_tekisei_2（距離適性2） | pass_rate: 0.600 | place_roi: 82.7%
-   23: hizume_code（蹄コード） × kyori_tekisei_2（距離適性2） | pass_rate: 0.600 | place_roi: 80.9%
-   24: yuso_kubun（輸送区分） | pass_rate: 0.600 | place_roi: 80.6%
-   25: kishu_minarai_code（騎手見習い） | pass_rate: 0.600 | place_roi: 79.1%
-   26: tenkai_kigo_code（展開記号） | pass_rate: 0.600 | place_roi: 77.5%
-   27: ls_shisu_juni（LS指数順位） × manken_shirushi（万券印） | pass_rate: 0.589 | place_roi: 80.4%
-   28: babajotai_heavy（馬場状態（重分類）） × kishu_minarai_code（騎手見習い） | pass_rate: 0.583 | place_roi: 77.0%
-   29: chokyo_yajirushi_code（調教矢印） × prev3_chakujun（前3走着順） | pass_rate: 0.581 | place_roi: 79.1%
-   30: joa_ls_shisu（JOA LS指数） | pass_rate: 0.578 | place_roi: 80.9%
-   31: chokyoshi_rank（調教師ランク） × manken_shirushi（万券印） | pass_rate: 0.575 | place_roi: 79.8%
-   32: chokyo_yajirushi_code（調教矢印） × kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.571 | place_roi: 82.2%
-   33: kishu_minarai_code（騎手見習い） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.571 | place_roi: 82.1%
-   34: hobokusaki_rank（放牧先ランク） × shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 78.4%
-   35: chokyo_yajirushi_code（調教矢印） × prev1_chakujun（前走着順） | pass_rate: 0.567 | place_roi: 81.6%
-   36: chokyo_shisu（調教指数） | pass_rate: 0.565 | place_roi: 79.3%
-   37: barei（馬齢） × manken_shirushi（万券印） | pass_rate: 0.564 | place_roi: 80.4%
-   38: joho_shisu（情報指数） × manken_shirushi（万券印） | pass_rate: 0.562 | place_roi: 79.7%
-   39: manken_shisu（万券指数） × shirushi_code_1（印コード1） | pass_rate: 0.562 | place_roi: 78.2%
-   40: yoso_juni（予想順位） | pass_rate: 0.562 | place_roi: 77.9%
-   41: gekiso_type（激走タイプ） × yoso_juni（予想順位） | pass_rate: 0.561 | place_roi: 79.3%
-   42: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.560 | place_roi: 83.5%
-   43: chokyoshi_rank（調教師ランク） × tenkai_kigo_code（展開記号） | pass_rate: 0.560 | place_roi: 76.5%
-   44: barei（馬齢） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.559 | place_roi: 77.6%
-   45: goal_sa（ゴール差） × yy_int（YY値） | pass_rate: 0.557 | place_roi: 77.9%
-   46: manken_shirushi（万券印） × prev2_chakujun（前2走着順） | pass_rate: 0.557 | place_roi: 80.0%
-   47: gekiso_type（激走タイプ） × ls_shisu_juni（LS指数順位） | pass_rate: 0.556 | place_roi: 82.8%
-   48: kyori_tekisei_2（距離適性2） × taikei_tomo（体型（トモ）） | pass_rate: 0.556 | place_roi: 80.9%
-   49: manken_shirushi（万券印） × prev1_chakujun（前走着順） | pass_rate: 0.556 | place_roi: 78.3%
-   50: kishu_rank（騎手ランク） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.554 | place_roi: 75.4%
-   51: goal_sa（ゴール差） × manken_shirushi（万券印） | pass_rate: 0.552 | place_roi: 79.9%
-   52: gekiso_type（激走タイプ） × kishu_rank（騎手ランク） | pass_rate: 0.552 | place_roi: 79.9%
-   53: goal_juni（ゴール順位） × prev1_corner4（前走4角位置） | pass_rate: 0.550 | place_roi: 79.2%
-   54: hizume_code（蹄コード） × sanchimei（産地名） | pass_rate: 0.550 | place_roi: 76.0%
-   55: goal_sa（ゴール差） × kishu_rank（騎手ランク） | pass_rate: 0.550 | place_roi: 73.0%
-   56: agari_shisu_juni（上がり指数順位） × chokyo_yajirushi_code（調教矢印） | pass_rate: 0.548 | place_roi: 78.7%
-   57: kyori_tekisei_2（距離適性2） × tenkai_kigo_code（展開記号） | pass_rate: 0.545 | place_roi: 77.6%
-   58: barei（馬齢） × kyori_tekisei_2（距離適性2） | pass_rate: 0.545 | place_roi: 74.4%
-   59: kyori_tekisei_2（距離適性2） × moshoku_code（毛色コード） | pass_rate: 0.545 | place_roi: 73.7%
-   60: shirushi_code_1（印コード1） × yy_int（YY値） | pass_rate: 0.543 | place_roi: 80.1%
-   61: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.542 | place_roi: 76.6%
-   62: goal_sa（ゴール差） × kishu_minarai_code（騎手見習い） | pass_rate: 0.540 | place_roi: 80.1%
-   63: kishu_rank（騎手ランク） × ls_shisu_juni（LS指数順位） | pass_rate: 0.540 | place_roi: 75.8%
-   64: chokyo_yajirushi_code（調教矢印） × goal_sa（ゴール差） | pass_rate: 0.538 | place_roi: 78.3%
-   65: goal_sa（ゴール差） × ls_shisu_juni（LS指数順位） | pass_rate: 0.538 | place_roi: 77.9%
-   66: chokyo_yajirushi_code（調教矢印） × tenkai_kigo_code（展開記号） | pass_rate: 0.538 | place_roi: 77.7%
-   67: manken_shirushi（万券印） × yy_int（YY値） | pass_rate: 0.537 | place_roi: 80.2%
-   68: chokyo_yajirushi_code（調教矢印） × kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.536 | place_roi: 82.2%
-   69: bac_tosu（出走頭数） × yoso_juni（予想順位） | pass_rate: 0.536 | place_roi: 77.5%
-   70: chokyo_yajirushi_code（調教矢印） × hizume_code（蹄コード） | pass_rate: 0.536 | place_roi: 76.0%
-   71: babajotai_heavy（馬場状態（重分類）） × kishumei（騎手名） | pass_rate: 0.535 | place_roi: 76.9%
-   72: ls_shisu_juni（LS指数順位） × prev1_chakujun（前走着順） | pass_rate: 0.535 | place_roi: 80.4%
-   73: kyori_tekisei_2（距離適性2） × prev2_chakujun（前2走着順） | pass_rate: 0.533 | place_roi: 85.1%
-   74: chokyoshi_rank（調教師ランク） × gekiso_type（激走タイプ） | pass_rate: 0.533 | place_roi: 80.1%
-   75: babajotai_heavy（馬場状態（重分類）） × hobokusaki_rank（放牧先ランク） | pass_rate: 0.533 | place_roi: 77.3%
-   76: gekiso_juni（激走指数順位） × kyori_tekisei_2（距離適性2） | pass_rate: 0.533 | place_roi: 76.1%
-   77: barei（馬齢） × shirushi_code_1（印コード1） | pass_rate: 0.531 | place_roi: 80.1%
-   78: kyori_tekisei_2（距離適性2） × prev1_keibajo（前走競馬場） | pass_rate: 0.529 | place_roi: 84.2%
-   79: kishu_minarai_code（騎手見習い） × kishu_rank（騎手ランク） | pass_rate: 0.529 | place_roi: 82.0%
-   80: bac_tosu（出走頭数） × gekiso_juni（激走指数順位） | pass_rate: 0.529 | place_roi: 78.0%
-   81: bac_tosu（出走頭数） × sanchimei（産地名） | pass_rate: 0.529 | place_roi: 75.0%
-   82: manken_shirushi（万券印） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.526 | place_roi: 83.5%
-   83: kyori_tekisei_2（距離適性2） × yoso_juni（予想順位） | pass_rate: 0.526 | place_roi: 82.8%
-   84: futan_juryo（斤量） × ls_shisu_juni（LS指数順位） | pass_rate: 0.526 | place_roi: 79.5%
-   85: kishu_minarai_code（騎手見習い） × sanchimei（産地名） | pass_rate: 0.526 | place_roi: 78.3%
-   86: chokyo_yajirushi_code（調教矢印） × ls_shisu_juni（LS指数順位） | pass_rate: 0.526 | place_roi: 72.2%
-   87: kyusha_shisu（厩舎指数） | pass_rate: 0.526 | place_roi: 78.8%
-   88: gekiso_type（激走タイプ） × kohan_3f_juni | pass_rate: 0.524 | place_roi: 80.1%
-   89: hizume_code（蹄コード） × kyakushitsu（脚質） | pass_rate: 0.524 | place_roi: 75.9%
-   90: hobokusaki_rank（放牧先ランク） × kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.522 | place_roi: 76.3%
-   91: prev1_keibajo（前走競馬場） × yoso_juni（予想順位） | pass_rate: 0.521 | place_roi: 79.0%
-   92: joho_shisu（情報指数） × moshoku_code（毛色コード） | pass_rate: 0.521 | place_roi: 79.2%
-   93: bac_tosu（出走頭数） × prev2_chakujun（前2走着順） | pass_rate: 0.519 | place_roi: 78.9%
-   94: prev1_corner4（前走4角位置） × yoso_juni（予想順位） | pass_rate: 0.519 | place_roi: 77.8%
-   95: kijun_ninkijun_tansho（基準人気順（単勝）） × manken_shirushi（万券印） | pass_rate: 0.518 | place_roi: 82.1%
-   96: prev1_chakujun（前走着順） × prev1_corner4（前走4角位置） | pass_rate: 0.518 | place_roi: 75.8%
-   97: kijun_ninkijun_fukusho（基準人気順（複勝）） × sanchimei（産地名） | pass_rate: 0.518 | place_roi: 76.5%
-   98: futan_juryo（斤量） × shirushi_code_1（印コード1） | pass_rate: 0.518 | place_roi: 78.4%
-   99: kijun_ninkijun_tansho（基準人気順（単勝）） × prev3_chakujun（前3走着順） | pass_rate: 0.517 | place_roi: 80.5%
-  100: hizume_code（蹄コード） × prev3_chakujun（前3走着順） | pass_rate: 0.517 | place_roi: 81.8%
-  101: manken_shirushi（万券印） × prev1_corner4（前走4角位置） | pass_rate: 0.516 | place_roi: 79.7%
-  102: chokyo_yajirushi_code（調教矢印） × dochu_juni（道中順位） | pass_rate: 0.516 | place_roi: 74.3%
-  103: hizume_code（蹄コード） × manken_shirushi（万券印） | pass_rate: 0.516 | place_roi: 80.2%
-  104: moshoku_code（毛色コード） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.515 | place_roi: 77.1%
-  105: barei（馬齢） × goal_juni（ゴール順位） | pass_rate: 0.515 | place_roi: 76.7%
-  106: kyakushitsu（脚質） × shirushi_code_1（印コード1） | pass_rate: 0.514 | place_roi: 78.9%
-  107: moshoku_code（毛色コード） × shirushi_code_1（印コード1） | pass_rate: 0.514 | place_roi: 78.6%
-  108: prev3_chakujun（前3走着順） × taikei_tomo（体型（トモ）） | pass_rate: 0.514 | place_roi: 78.3%
-  109: agari_shisu_juni（上がり指数順位） × shirushi_code_1（印コード1） | pass_rate: 0.513 | place_roi: 79.7%
-  110: kijun_ninkijun_fukusho（基準人気順（複勝）） × prev3_chakujun（前3走着順） | pass_rate: 0.513 | place_roi: 80.6%
-  111: gekiso_type（激走タイプ） × hizume_code（蹄コード） | pass_rate: 0.513 | place_roi: 82.4%
-  112: chokyoshi_rank（調教師ランク） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.513 | place_roi: 79.4%
-  113: hizume_code（蹄コード） × kohan_3f_juni | pass_rate: 0.509 | place_roi: 77.5%
-  114: prev1_corner4（前走4角位置） × taikei_tomo（体型（トモ）） | pass_rate: 0.509 | place_roi: 77.2%
-  115: goal_juni（ゴール順位） × prev1_keibajo（前走競馬場） | pass_rate: 0.508 | place_roi: 77.6%
-  116: hizume_code（蹄コード） × ls_shisu_juni（LS指数順位） | pass_rate: 0.508 | place_roi: 78.9%
-  117: babajotai_heavy（馬場状態（重分類）） × uma_tokki_1（馬特記1） | pass_rate: 0.508 | place_roi: 78.2%
-  118: ls_shisu_juni（LS指数順位） × prev1_keibajo（前走競馬場） | pass_rate: 0.507 | place_roi: 80.4%
-  119: moshoku_code（毛色コード） × prev2_chakujun（前2走着順） | pass_rate: 0.507 | place_roi: 77.3%
-  120: hobokusaki_rank（放牧先ランク） × kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.507 | place_roi: 76.3%
-  121: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.507 | place_roi: 80.2%
-  122: gekiso_juni（激走指数順位） × manken_shirushi（万券印） | pass_rate: 0.507 | place_roi: 82.5%
-  123: chokyoshi_rank（調教師ランク） × prev3_chakujun（前3走着順） | pass_rate: 0.507 | place_roi: 78.4%
-  124: kijun_ninkijun_fukusho（基準人気順（複勝）） × manken_shirushi（万券印） | pass_rate: 0.506 | place_roi: 82.1%
-  125: kohan_3f_juni × shirushi_code_1（印コード1） | pass_rate: 0.506 | place_roi: 79.0%
-  126: goal_sa（ゴール差） × shirushi_code_1（印コード1） | pass_rate: 0.506 | place_roi: 76.2%
-  127: goal_juni（ゴール順位） × taikei_tomo（体型（トモ）） | pass_rate: 0.504 | place_roi: 76.9%
-  128: goal_juni（ゴール順位） × prev2_chakujun（前2走着順） | pass_rate: 0.504 | place_roi: 78.2%
-  129: agari_shisu_juni（上がり指数順位） × prev1_chakujun（前走着順） | pass_rate: 0.504 | place_roi: 78.9%
-  130: kohan_3f_juni × prev2_chakujun（前2走着順） | pass_rate: 0.504 | place_roi: 78.1%
-  131: prev1_chakujun（前走着順） | pass_rate: 0.500 | place_roi: 87.2%
-  132: agari_shisu_juni（上がり指数順位） × kyori_tekisei_2（距離適性2） | pass_rate: 0.500 | place_roi: 85.7%
-  133: prev2_chakujun（前2走着順） | pass_rate: 0.500 | place_roi: 84.6%
-  134: manken_shirushi（万券印） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.500 | place_roi: 82.3%
-  135: babajotai_heavy（馬場状態（重分類）） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 82.3%
-  136: futan_juryo（斤量） × prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 81.5%
-  137: chokyoshi_rank（調教師ランク） × kyori_tekisei_2（距離適性2） | pass_rate: 0.500 | place_roi: 81.2%
-  138: kishu_minarai_code（騎手見習い） × manken_shisu（万券指数） | pass_rate: 0.500 | place_roi: 81.0%
-  139: babajotai_heavy（馬場状態（重分類）） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.7%
-  140: bac_tosu（出走頭数） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 80.6%
-  141: prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 80.6%
-  142: goal_juni（ゴール順位） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.5%
-  143: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.5%
-  144: dochu_juni（道中順位） × gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 80.4%
-  145: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 80.4%
-  146: barei（馬齢） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 80.3%
-  147: dochu_juni（道中順位） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.3%
-  148: manken_shirushi（万券印） × sanchimei（産地名） | pass_rate: 0.500 | place_roi: 80.1%
-  149: prev1_keibajo（前走競馬場） × keibajo_code（競馬場） | pass_rate: 0.500 | place_roi: 79.9%
-  150: futan_juryo（斤量） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 79.9%
-  151: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 79.9%
-  152: barei（馬齢） × prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 79.8%
-  153: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.500 | place_roi: 79.7%
-  154: prev3_chakujun（前3走着順） × yy_int（YY値） | pass_rate: 0.500 | place_roi: 79.3%
-  155: manken_shirushi（万券印） × tenkai_kigo_code（展開記号） | pass_rate: 0.500 | place_roi: 79.2%
-  156: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 79.2%
-  157: agari_shisu_juni（上がり指数順位） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 79.1%
-  158: hobokusaki_rank（放牧先ランク） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 79.1%
-  159: ls_shisu_juni（LS指数順位） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 78.7%
-  160: prev3_chakujun（前3走着順） × sanchimei（産地名） | pass_rate: 0.500 | place_roi: 78.5%
-  161: moshoku_code（毛色コード） × prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 78.4%
-  162: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 78.3%
-  163: hizume_code（蹄コード） × prev1_corner4（前走4角位置） | pass_rate: 0.500 | place_roi: 77.8%
-  164: kishumei（騎手名） × wakuban（枠番） | pass_rate: 0.500 | place_roi: 77.4%
-  165: bac_tosu（出走頭数） × taikei_tomo（体型（トモ）） | pass_rate: 0.500 | place_roi: 77.2%
-  166: babajotai_heavy（馬場状態（重分類）） × barei（馬齢） | pass_rate: 0.500 | place_roi: 77.1%
-  167: kijun_ninkijun_tansho（基準人気順（単勝）） × prev1_chakujun（前走着順） | pass_rate: 0.500 | place_roi: 77.0%
-  168: gekiso_type（激走タイプ） × joho_shisu（情報指数） | pass_rate: 0.500 | place_roi: 76.9%
-  169: taikei_tomo（体型（トモ）） × yoso_juni（予想順位） | pass_rate: 0.500 | place_roi: 76.8%
-  170: bac_tosu（出走頭数） × tenkai_kigo_code（展開記号） | pass_rate: 0.500 | place_roi: 76.8%
-  171: babajotai_heavy（馬場状態（重分類）） × yoso_juni（予想順位） | pass_rate: 0.500 | place_roi: 76.3%
-  172: kishu_rank（騎手ランク） × prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 75.1%
-  173: chokyo_yajirushi_code（調教矢印） × kyori_tekisei_2（距離適性2） | pass_rate: 0.500 | place_roi: 74.9%
-  174: barei（馬齢） × goal_sa（ゴール差） | pass_rate: 0.500 | place_roi: 73.2%
+    1: prev1_corner4_bin（前走4角位置（区分）） × shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 80.9%
+    2: gekiso_type（激走タイプ） | pass_rate: 0.667 | place_roi: 80.4%
+    3: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 80.4%
+    4: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 79.5%
+    5: kyusha_hyoka_code（厩舎評価） × manken_shirushi（万券印） | pass_rate: 0.656 | place_roi: 80.3%
+    6: kyori（距離） × shirushi_code_2（印コード2） | pass_rate: 0.639 | place_roi: 81.8%
+    7: chokyo_yajirushi_code（調教矢印） × shirushi_code_2（印コード2） | pass_rate: 0.636 | place_roi: 82.9%
+    8: shirushi_code_2（印コード2） × tenko_code（天候） | pass_rate: 0.625 | place_roi: 80.1%
+    9: manken_shirushi（万券印） | pass_rate: 0.625 | place_roi: 80.0%
+   10: kishu_minarai_code（騎手見習い） × shirushi_code_2（印コード2） | pass_rate: 0.625 | place_roi: 78.6%
+   11: bac_tosu（出走頭数） × shirushi_code_2（印コード2） | pass_rate: 0.611 | place_roi: 81.4%
+   12: bac_tosu（出走頭数） × shirushi_code_6（印コード6） | pass_rate: 0.611 | place_roi: 80.4%
+   13: manken_shirushi（万券印） × shirushi_code_6（印コード6） | pass_rate: 0.604 | place_roi: 80.1%
+   14: rotation（ローテーション） × shirushi_code_2（印コード2） | pass_rate: 0.602 | place_roi: 79.9%
+   15: shirushi_code_2（印コード2） × taikei_dou（体型（胴）） | pass_rate: 0.600 | place_roi: 81.2%
+   16: sanchimei（産地名） × shirushi_code_2（印コード2） | pass_rate: 0.600 | place_roi: 78.3%
+   17: prev1_corner4（前走4角位置） × shirushi_code_2（印コード2） | pass_rate: 0.598 | place_roi: 80.5%
+   18: chokyo_yajirushi_code（調教矢印） × manken_shirushi（万券印） | pass_rate: 0.594 | place_roi: 80.8%
+   19: shirushi_code_2（印コード2） × taikei_tomo（体型（トモ）） | pass_rate: 0.592 | place_roi: 80.6%
+   20: manken_shirushi（万券印） × shirushi_code_1（印コード1） | pass_rate: 0.589 | place_roi: 80.1%
+   21: nyukyu_nannichimae（入厩何日前） × shirushi_code_2（印コード2） | pass_rate: 0.585 | place_roi: 78.7%
+   22: gekiso_type（激走タイプ） × tenko_code（天候） | pass_rate: 0.583 | place_roi: 82.9%
+   23: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_2（印コード2） | pass_rate: 0.583 | place_roi: 81.5%
+   24: shirushi_code_2（印コード2） × yy_int（YY値） | pass_rate: 0.583 | place_roi: 80.9%
+   25: manken_shirushi（万券印） × shirushi_code_2（印コード2） | pass_rate: 0.583 | place_roi: 80.4%
+   26: prev1_kyakushitsu（前走脚質） × shirushi_code_2（印コード2） | pass_rate: 0.583 | place_roi: 80.4%
+   27: shirushi_code_2（印コード2） × wakuban（枠番） | pass_rate: 0.583 | place_roi: 80.3%
+   28: kishu_minarai_code（騎手見習い） × shirushi_code_6（印コード6） | pass_rate: 0.583 | place_roi: 78.3%
+   29: hizume_code（蹄コード） × shirushi_code_6（印コード6） | pass_rate: 0.580 | place_roi: 80.5%
+   30: hizume_code（蹄コード） | pass_rate: 0.579 | place_roi: 80.4%
+   31: chokyo_yajirushi_code（調教矢印） × kishu_shisu（騎手指数） | pass_rate: 0.579 | place_roi: 80.3%
+   32: hobokusaki_rank（放牧先ランク） × manken_shirushi（万券印） | pass_rate: 0.575 | place_roi: 80.2%
+   33: kyakushitsu（脚質） × manken_shirushi（万券印） | pass_rate: 0.575 | place_roi: 79.6%
+   34: shirushi_code_1（印コード1） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.575 | place_roi: 78.6%
+   35: kyori（距離） × shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 80.8%
+   36: kyi_kyusha_rank（厩舎ランク（KYI）） × shirushi_code_2（印コード2） | pass_rate: 0.571 | place_roi: 80.2%
+   37: prev2_chakujun（前2走着順） × shirushi_code_1（印コード1） | pass_rate: 0.570 | place_roi: 80.3%
+   38: prev1_chakujun（前走着順） × shirushi_code_2（印コード2） | pass_rate: 0.570 | place_roi: 81.5%
+   39: kishu_shisu（騎手指数） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.570 | place_roi: 80.7%
+   40: kishu_minarai_code（騎手見習い） × prev3_chakujun（前3走着順） | pass_rate: 0.569 | place_roi: 77.7%
+   41: shirushi_code_2（印コード2） × yoso_juni（予想順位） | pass_rate: 0.566 | place_roi: 80.5%
+   42: kishu_shisu（騎手指数） × prev1_kyakushitsu（前走脚質） | pass_rate: 0.565 | place_roi: 81.0%
+   43: prev3_chakujun（前3走着順） × shirushi_code_2（印コード2） | pass_rate: 0.564 | place_roi: 80.9%
+   44: shirushi_code_2（印コード2） × umaban_clean（馬番） | pass_rate: 0.562 | place_roi: 80.5%
+   45: prev2_chakujun（前2走着順） × shirushi_code_3（印コード3） | pass_rate: 0.560 | place_roi: 79.9%
+   46: kishu_shisu（騎手指数） × prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.560 | place_roi: 81.5%
+   47: kyusha_hyoka_code（厩舎評価） × prev2_chakujun（前2走着順） | pass_rate: 0.560 | place_roi: 79.6%
+   48: prev3_chakujun（前3走着順） × shirushi_code_1（印コード1） | pass_rate: 0.560 | place_roi: 80.4%
+   49: prev2_chakujun（前2走着順） × shirushi_code_2（印コード2） | pass_rate: 0.559 | place_roi: 81.1%
+   50: chokyo_yajirushi_code（調教矢印） × joho_shisu（情報指数） | pass_rate: 0.557 | place_roi: 80.7%
+   51: prev2_chakujun（前2走着順） | pass_rate: 0.556 | place_roi: 80.6%
+   52: babajotai_heavy（馬場状態（重分類）） × gekiso_type（激走タイプ） | pass_rate: 0.556 | place_roi: 80.0%
+   53: moshoku_code（毛色コード） × shirushi_code_2（印コード2） | pass_rate: 0.556 | place_roi: 79.5%
+   54: rotation（ローテーション） × shirushi_code_1（印コード1） | pass_rate: 0.556 | place_roi: 78.8%
+   55: shirushi_code_1（印コード1） × umaban_clean（馬番） | pass_rate: 0.554 | place_roi: 80.1%
+   56: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_6（印コード6） | pass_rate: 0.552 | place_roi: 81.1%
+   57: rotation（ローテーション） × shirushi_code_6（印コード6） | pass_rate: 0.550 | place_roi: 77.6%
+   58: shirushi_code_1（印コード1） × taikei_dou（体型（胴）） | pass_rate: 0.548 | place_roi: 80.3%
+   59: prev1_corner4（前走4角位置） × shirushi_code_5（印コード5） | pass_rate: 0.548 | place_roi: 79.6%
+   60: hizume_code（蹄コード） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.548 | place_roi: 80.7%
+   61: joho_shisu（情報指数） × kishu_minarai_code（騎手見習い） | pass_rate: 0.548 | place_roi: 79.6%
+   62: joho_shisu（情報指数） | pass_rate: 0.547 | place_roi: 81.3%
+   63: kijun_ninkijun_tansho（基準人気順（単勝）） × shirushi_code_3（印コード3） | pass_rate: 0.547 | place_roi: 80.1%
+   64: manken_shirushi（万券印） × sanchimei（産地名） | pass_rate: 0.546 | place_roi: 78.1%
+   65: bac_tosu（出走頭数） × manken_shirushi（万券印） | pass_rate: 0.545 | place_roi: 81.1%
+   66: sanchimei（産地名） × shirushi_code_1（印コード1） | pass_rate: 0.545 | place_roi: 78.0%
+   67: chokyo_yajirushi_code（調教矢印） × shirushi_code_5（印コード5） | pass_rate: 0.545 | place_roi: 76.5%
+   68: kishu_shisu（騎手指数） × manken_shirushi（万券印） | pass_rate: 0.544 | place_roi: 81.3%
+   69: kyori（距離） × shirushi_code_5（印コード5） | pass_rate: 0.542 | place_roi: 80.8%
+   70: prev1_corner4_bin（前走4角位置（区分）） × shirushi_code_3（印コード3） | pass_rate: 0.542 | place_roi: 80.2%
+   71: prev1_corner4_bin（前走4角位置（区分）） × shirushi_code_5（印コード5） | pass_rate: 0.542 | place_roi: 80.0%
+   72: manken_shirushi（万券印） × shirushi_code_3（印コード3） | pass_rate: 0.542 | place_roi: 79.9%
+   73: kyori（距離） × shirushi_code_4（印コード4） | pass_rate: 0.542 | place_roi: 79.5%
+   74: kyori_tekisei（距離適性） × manken_shirushi（万券印） | pass_rate: 0.540 | place_roi: 77.4%
+   75: prev2_chakujun（前2走着順） × shirushi_code_5（印コード5） | pass_rate: 0.538 | place_roi: 80.0%
+   76: prev1_chakujun（前走着順） × shirushi_code_1（印コード1） | pass_rate: 0.538 | place_roi: 79.8%
+   77: joho_shisu（情報指数） × shirushi_code_2（印コード2） | pass_rate: 0.536 | place_roi: 80.2%
+   78: bataiju_change_bin（馬体重増減（区分）） × shirushi_code_3（印コード3） | pass_rate: 0.536 | place_roi: 82.1%
+   79: prev1_kyakushitsu（前走脚質） × shirushi_code_1（印コード1） | pass_rate: 0.536 | place_roi: 79.7%
+   80: kishu_shisu（騎手指数） × prev2_chakujun（前2走着順） | pass_rate: 0.535 | place_roi: 80.7%
+   81: kishu_minarai_code（騎手見習い） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.534 | place_roi: 79.9%
+   82: hizume_code（蹄コード） × shirushi_code_2（印コード2） | pass_rate: 0.534 | place_roi: 79.8%
+   83: prev1_keibajo（前走競馬場） × shirushi_code_2（印コード2） | pass_rate: 0.533 | place_roi: 83.5%
+   84: gekiso_type（激走タイプ） × yy_int（YY値） | pass_rate: 0.533 | place_roi: 80.9%
+   85: shirushi_code_3（印コード3） × yy_int（YY値） | pass_rate: 0.533 | place_roi: 79.7%
+   86: shirushi_code_2（印コード2） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.533 | place_roi: 79.6%
+   87: gekiso_type（激走タイプ） × manken_shirushi（万券印） | pass_rate: 0.533 | place_roi: 79.6%
+   88: hobokusaki_rank（放牧先ランク） × shirushi_code_6（印コード6） | pass_rate: 0.533 | place_roi: 78.1%
+   89: joho_shisu（情報指数） × prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.533 | place_roi: 80.7%
+   90: bac_tosu（出走頭数） × shirushi_code_1（印コード1） | pass_rate: 0.532 | place_roi: 80.9%
+   91: prev1_bataiju_bin（前走馬体重（区分）） × shirushi_code_6（印コード6） | pass_rate: 0.532 | place_roi: 78.9%
+   92: kishu_minarai_code（騎手見習い） × nyukyu_nannichimae（入厩何日前） | pass_rate: 0.531 | place_roi: 75.0%
+   93: kishu_shisu（騎手指数） × prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.530 | place_roi: 79.4%
+   94: kyusha_hyoka_code（厩舎評価） × shirushi_code_5（印コード5） | pass_rate: 0.529 | place_roi: 81.0%
+   95: kyusha_hyoka_code（厩舎評価） × shirushi_code_3（印コード3） | pass_rate: 0.529 | place_roi: 75.7%
+   96: prev1_keibajo（前走競馬場） × shirushi_code_1（印コード1） | pass_rate: 0.529 | place_roi: 80.3%
+   97: shirushi_code_1（印コード1） × yy_int（YY値） | pass_rate: 0.529 | place_roi: 80.0%
+   98: rotation（ローテーション） × shirushi_code_3（印コード3） | pass_rate: 0.528 | place_roi: 77.7%
+   99: prev2_chakujun（前2走着順） × shirushi_code_4（印コード4） | pass_rate: 0.527 | place_roi: 79.9%
+  100: prev1_corner4（前走4角位置） × shirushi_code_3（印コード3） | pass_rate: 0.527 | place_roi: 79.2%
+  101: chokyo_yajirushi_code（調教矢印） × prev3_chakujun（前3走着順） | pass_rate: 0.527 | place_roi: 80.6%
+  102: class_code（クラスコード） × gekiso_type（激走タイプ） | pass_rate: 0.527 | place_roi: 74.1%
+  103: prev3_chakujun（前3走着順） × shirushi_code_5（印コード5） | pass_rate: 0.527 | place_roi: 80.6%
+  104: joho_shisu（情報指数） × manken_shirushi（万券印） | pass_rate: 0.527 | place_roi: 81.0%
+  105: kyusha_hyoka_code（厩舎評価） × shirushi_code_2（印コード2） | pass_rate: 0.526 | place_roi: 78.9%
+  106: kishu_shisu（騎手指数） × kyori_tekisei（距離適性） | pass_rate: 0.525 | place_roi: 80.1%
+  107: joken_class_code（条件クラス） × manken_shirushi（万券印） | pass_rate: 0.525 | place_roi: 78.9%
+  108: kishu_shisu（騎手指数） × shirushi_code_2（印コード2） | pass_rate: 0.525 | place_roi: 80.0%
+  109: manken_shisu（万券指数） × shirushi_code_6（印コード6） | pass_rate: 0.524 | place_roi: 78.0%
+  110: babajotai_heavy（馬場状態（重分類）） × shirushi_code_1（印コード1） | pass_rate: 0.524 | place_roi: 79.8%
+  111: babajotai_heavy（馬場状態（重分類）） × joa_ls_shisu（JOA LS指数） | pass_rate: 0.523 | place_roi: 80.4%
+  112: kyi_kyusha_rank（厩舎ランク（KYI）） × prev2_chakujun（前2走着順） | pass_rate: 0.522 | place_roi: 79.4%
+  113: joho_shisu（情報指数） × shirushi_code_1（印コード1） | pass_rate: 0.522 | place_roi: 79.8%
+  114: manken_shirushi（万券印） × moshoku_code（毛色コード） | pass_rate: 0.521 | place_roi: 79.0%
+  115: bac_jouken（レース条件） × manken_shirushi（万券印） | pass_rate: 0.521 | place_roi: 78.9%
+  116: chokyo_yajirushi_code（調教矢印） × shirushi_code_1（印コード1） | pass_rate: 0.520 | place_roi: 81.7%
+  117: babajotai_heavy（馬場状態（重分類）） × prev2_chakujun（前2走着順） | pass_rate: 0.520 | place_roi: 79.2%
+  118: shirushi_code_6（印コード6） × taikei_tomo（体型（トモ）） | pass_rate: 0.519 | place_roi: 79.1%
+  119: hizume_code（蹄コード） × kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.519 | place_roi: 80.2%
+  120: kishu_shisu（騎手指数） × shirushi_code_3（印コード3） | pass_rate: 0.519 | place_roi: 80.9%
+  121: nyukyu_nannichimae（入厩何日前） × shirushi_code_3（印コード3） | pass_rate: 0.518 | place_roi: 78.0%
+  122: kyori_tekisei（距離適性） × shirushi_code_4（印コード4） | pass_rate: 0.517 | place_roi: 77.5%
+  123: hobokusaki_rank（放牧先ランク） × kishu_shisu（騎手指数） | pass_rate: 0.517 | place_roi: 79.8%
+  124: prev1_keibajo（前走競馬場） × shirushi_code_3（印コード3） | pass_rate: 0.517 | place_roi: 81.4%
+  125: shirushi_code_5（印コード5） × yy_int（YY値） | pass_rate: 0.517 | place_roi: 79.6%
+  126: shirushi_code_4（印コード4） × yy_int（YY値） | pass_rate: 0.517 | place_roi: 79.3%
+  127: prev1_keibajo（前走競馬場） × shirushi_code_4（印コード4） | pass_rate: 0.517 | place_roi: 77.4%
+  128: kijun_ninkijun_fukusho（基準人気順（複勝）） × kishu_minarai_code（騎手見習い） | pass_rate: 0.517 | place_roi: 75.8%
+  129: shirushi_code_1（印コード1） × taikei_tomo（体型（トモ）） | pass_rate: 0.517 | place_roi: 80.0%
+  130: hizume_code（蹄コード） × kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.516 | place_roi: 80.4%
+  131: prev3_chakujun（前3走着順） × shirushi_code_3（印コード3） | pass_rate: 0.516 | place_roi: 80.6%
+  132: manken_shirushi（万券印） × prev2_chakujun（前2走着順） | pass_rate: 0.516 | place_roi: 80.5%
+  133: kyori_tekisei（距離適性） × shirushi_code_1（印コード1） | pass_rate: 0.515 | place_roi: 77.6%
+  134: hobokusaki_rank（放牧先ランク） × shirushi_code_1（印コード1） | pass_rate: 0.514 | place_roi: 79.5%
+  135: kishu_minarai_code（騎手見習い） × taikei_dou（体型（胴）） | pass_rate: 0.513 | place_roi: 75.6%
+  136: kishu_shisu（騎手指数） × wakuban（枠番） | pass_rate: 0.513 | place_roi: 79.9%
+  137: bac_jouken（レース条件） × prev3_chakujun（前3走着順） | pass_rate: 0.512 | place_roi: 80.6%
+  138: manken_shirushi（万券印） × prev3_chakujun（前3走着順） | pass_rate: 0.512 | place_roi: 80.8%
+  139: hizume_code（蹄コード） × shirushi_code_4（印コード4） | pass_rate: 0.512 | place_roi: 79.3%
+  140: hizume_code（蹄コード） × shirushi_code_3（印コード3） | pass_rate: 0.512 | place_roi: 79.3%
+  141: joho_shisu（情報指数） × kyusha_hyoka_code（厩舎評価） | pass_rate: 0.511 | place_roi: 80.8%
+  142: prev1_chakujun（前走着順） × shirushi_code_6（印コード6） | pass_rate: 0.511 | place_roi: 79.5%
+  143: gekiso_type（激走タイプ） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.511 | place_roi: 77.9%
+  144: prev1_bataiju_bin（前走馬体重（区分）） × shirushi_code_3（印コード3） | pass_rate: 0.511 | place_roi: 78.9%
+  145: kijun_ninkijun_fukusho（基準人気順（複勝）） × shirushi_code_3（印コード3） | pass_rate: 0.509 | place_roi: 80.1%
+  146: chokyo_yajirushi_code（調教矢印） × prev2_chakujun（前2走着順） | pass_rate: 0.509 | place_roi: 78.4%
+  147: kishu_minarai_code（騎手見習い） × yoso_juni（予想順位） | pass_rate: 0.509 | place_roi: 75.3%
+  148: manken_shirushi（万券印） × umaban_clean（馬番） | pass_rate: 0.508 | place_roi: 80.2%
+  149: manken_shisu（万券指数） × shirushi_code_5（印コード5） | pass_rate: 0.507 | place_roi: 79.8%
+  150: nyukyu_nannichimae（入厩何日前） × shirushi_code_5（印コード5） | pass_rate: 0.507 | place_roi: 76.8%
+  151: kijun_ninkijun_fukusho（基準人気順（複勝）） × kyori_tekisei（距離適性） | pass_rate: 0.507 | place_roi: 78.5%
+  152: class_code（クラスコード） × shirushi_code_3（印コード3） | pass_rate: 0.507 | place_roi: 76.8%
+  153: kishu_shisu（騎手指数） × kyakushitsu（脚質） | pass_rate: 0.506 | place_roi: 80.0%
+  154: kishu_shisu（騎手指数） × shirushi_code_5（印コード5） | pass_rate: 0.506 | place_roi: 80.2%
+  155: manken_shisu（万券指数） × shirushi_code_2（印コード2） | pass_rate: 0.506 | place_roi: 80.0%
+  156: hizume_code（蹄コード） × shirushi_code_5（印コード5） | pass_rate: 0.506 | place_roi: 79.0%
+  157: joho_shisu（情報指数） × shirushi_code_6（印コード6） | pass_rate: 0.505 | place_roi: 78.3%
+  158: bac_tosu（出走頭数） × kishu_shisu（騎手指数） | pass_rate: 0.505 | place_roi: 80.5%
+  159: babajotai_heavy（馬場状態（重分類）） × joho_shisu（情報指数） | pass_rate: 0.503 | place_roi: 80.4%
+  160: kishu_shisu（騎手指数） × moshoku_code（毛色コード） | pass_rate: 0.503 | place_roi: 80.1%
+  161: shirushi_code_6（印コード6） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.503 | place_roi: 79.4%
+  162: manken_shisu（万券指数） × shirushi_code_1（印コード1） | pass_rate: 0.502 | place_roi: 79.0%
+  163: gekiso_type（激走タイプ） × prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 82.7%
+  164: chokyo_yajirushi_code（調教矢印） × shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 82.5%
+  165: prev1_corner4_bin（前走4角位置（区分）） × tenko_code（天候） | pass_rate: 0.500 | place_roi: 81.1%
+  166: joken_class_code（条件クラス） × prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 80.6%
+  167: prev1_keibajo（前走競馬場） × shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 80.5%
+  168: hizume_code（蹄コード） × tenko_code（天候） | pass_rate: 0.500 | place_roi: 80.4%
+  169: bac_tosu（出走頭数） × shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 80.4%
+  170: bataiju_change_bin（馬体重増減（区分）） × kishu_shisu（騎手指数） | pass_rate: 0.500 | place_roi: 80.3%
+  171: manken_shirushi（万券印） × tenko_code（天候） | pass_rate: 0.500 | place_roi: 80.3%
+  172: babajotai_heavy（馬場状態（重分類）） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.3%
+  173: babajotai_heavy（馬場状態（重分類）） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 80.3%
+  174: prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 80.3%
+  175: manken_shirushi（万券印） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 80.1%
+  176: hobokusaki_rank（放牧先ランク） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 80.1%
+  177: bac_tosu（出走頭数） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.9%
+  178: kyakushitsu（脚質） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.9%
+  179: hizume_code（蹄コード） × kyakushitsu（脚質） | pass_rate: 0.500 | place_roi: 79.8%
+  180: kyakushitsu（脚質） × prev2_chakujun（前2走着順） | pass_rate: 0.500 | place_roi: 79.8%
+  181: bac_tosu（出走頭数） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.8%
+  182: shirushi_code_6（印コード6） × umaban_clean（馬番） | pass_rate: 0.500 | place_roi: 79.8%
+  183: bataiju_change_bin（馬体重増減（区分）） × prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 79.7%
+  184: hizume_code（蹄コード） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 79.7%
+  185: joken_class_code（条件クラス） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.7%
+  186: prev1_corner4_bin（前走4角位置（区分）） × shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 79.7%
+  187: babajotai_heavy（馬場状態（重分類）） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.5%
+  188: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.5%
+  189: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.5%
+  190: kyori（距離） × shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 79.4%
+  191: kyi_kyusha_rank（厩舎ランク（KYI）） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 79.4%
+  192: bac_jouken（レース条件） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.4%
+  193: prev1_kyakushitsu（前走脚質） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.4%
+  194: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 79.4%
+  195: manken_shirushi（万券印） × prev1_corner4（前走4角位置） | pass_rate: 0.500 | place_roi: 79.3%
+  196: shirushi_code_3（印コード3） × tenko_code（天候） | pass_rate: 0.500 | place_roi: 79.3%
+  197: prev2_chakujun（前2走着順） × wakuban（枠番） | pass_rate: 0.500 | place_roi: 79.2%
+  198: shirushi_code_6（印コード6） × tenko_code（天候） | pass_rate: 0.500 | place_roi: 79.2%
+  199: shirushi_code_3（印コード3） × uma_deokure_ritsu（出遅れ率） | pass_rate: 0.500 | place_roi: 79.1%
+  200: kishu_minarai_code（騎手見習い） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.1%
+  201: prev1_corner4（前走4角位置） × shirushi_code_1（印コード1） | pass_rate: 0.500 | place_roi: 79.1%
+  202: kyi_kyusha_rank（厩舎ランク（KYI）） × shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.1%
+  203: prev1_kyakushitsu（前走脚質） × shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 79.1%
+  204: kyori_tekisei_2（距離適性2） | pass_rate: 0.500 | place_roi: 79.0%
+  205: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 79.0%
+  206: chokyo_yajirushi_code（調教矢印） × prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 78.8%
+  207: gekiso_type（激走タイプ） × hobokusaki_rank（放牧先ランク） | pass_rate: 0.500 | place_roi: 78.8%
+  208: bac_shubetsu（レース種別） | pass_rate: 0.500 | place_roi: 78.8%
+  209: kishu_rank（騎手ランク） × shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 78.7%
+  210: kishu_rank（騎手ランク） × shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 77.8%
+  211: kishu_rank（騎手ランク） × manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 77.5%
+  212: gekiso_type（激走タイプ） × kyori_tekisei（距離適性） | pass_rate: 0.500 | place_roi: 77.4%
+  213: kishu_minarai_code（騎手見習い） × prev2_chakujun（前2走着順） | pass_rate: 0.500 | place_roi: 76.6%
+  214: gekiso_type（激走タイプ） × kishu_minarai_code（騎手見習い） | pass_rate: 0.500 | place_roi: 76.6%
+  215: kishu_minarai_code（騎手見習い） × prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 76.2%
+  216: ls_shisu_juni（LS指数順位） | pass_rate: 0.500 | place_roi: 73.0%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_01_芝】札幌芝（36件）
+【KEIBAJO_SURFACE_01_芝】札幌芝（29件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: tenkai_kigo_code（展開記号） | pass_rate: 0.800 | place_roi: 80.9%
-    2: ten_shisu（テン指数） | pass_rate: 0.800 | place_roi: 79.1%
-    3: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.750 | place_roi: 92.5%
-    4: manken_shirushi（万券印） | pass_rate: 0.750 | place_roi: 80.9%
-    5: yuso_kubun（輸送区分） | pass_rate: 0.750 | place_roi: 79.1%
-    6: kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 82.6%
-    7: prev1_keibajo（前走競馬場） | pass_rate: 0.636 | place_roi: 84.3%
-    8: kyori（距離） | pass_rate: 0.600 | place_roi: 78.9%
-    9: chokyoshi_rank（調教師ランク） | pass_rate: 0.600 | place_roi: 76.2%
-   10: kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.571 | place_roi: 79.0%
-   11: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 78.8%
-   12: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.571 | place_roi: 74.1%
-   13: gekiso_juni（激走指数順位） | pass_rate: 0.562 | place_roi: 77.2%
-   14: manken_shisu（万券指数） | pass_rate: 0.556 | place_roi: 79.5%
-   15: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.550 | place_roi: 79.9%
-   16: uma_tokki_3（馬特記3） | pass_rate: 0.545 | place_roi: 82.9%
-   17: class_code（クラスコード） | pass_rate: 0.545 | place_roi: 70.6%
-   18: prev1_corner4（前走4角位置） | pass_rate: 0.533 | place_roi: 81.2%
-   19: rotation（ローテーション） | pass_rate: 0.500 | place_roi: 85.0%
-   20: hizume_code（蹄コード） | pass_rate: 0.500 | place_roi: 84.5%
-   21: bac_juryo_shubetsu_code（負担重量種別） | pass_rate: 0.500 | place_roi: 81.5%
-   22: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 81.2%
-   23: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.500 | place_roi: 79.3%
-   24: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.2%
-   25: pace_shisu_juni（ペース指数順位） | pass_rate: 0.500 | place_roi: 79.1%
-   26: ichi_shisu_juni（位置指数順位） | pass_rate: 0.500 | place_roi: 79.0%
-   27: wakuban（枠番） | pass_rate: 0.500 | place_roi: 78.9%
-   28: bac_jouken（レース条件） | pass_rate: 0.500 | place_roi: 78.9%
-   29: futan_juryo（斤量） | pass_rate: 0.500 | place_roi: 78.7%
-   30: chokyo_shisu（調教指数） | pass_rate: 0.500 | place_roi: 78.4%
-   31: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 78.1%
-   32: goal_juni（ゴール順位） | pass_rate: 0.500 | place_roi: 77.7%
-   33: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 76.9%
-   34: kohan_3f_sa（後半3F差） | pass_rate: 0.500 | place_roi: 76.1%
-   35: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.500 | place_roi: 73.9%
-   36: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.500 | place_roi: 73.8%
+    1: shirushi_code_4（印コード4） | pass_rate: 0.833 | place_roi: 79.1%
+    2: tenkai_kigo_code（展開記号） | pass_rate: 0.800 | place_roi: 81.3%
+    3: shirushi_code_5（印コード5） | pass_rate: 0.667 | place_roi: 81.2%
+    4: ten_shisu（テン指数） | pass_rate: 0.667 | place_roi: 79.2%
+    5: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.600 | place_roi: 89.1%
+    6: hizume_code（蹄コード） | pass_rate: 0.600 | place_roi: 83.0%
+    7: yuso_kubun（輸送区分） | pass_rate: 0.600 | place_roi: 83.0%
+    8: ichi_shisu（位置指数） | pass_rate: 0.600 | place_roi: 77.0%
+    9: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 79.3%
+   10: uma_tokki_1（馬特記1） | pass_rate: 0.556 | place_roi: 77.5%
+   11: prev1_corner4（前走4角位置） | pass_rate: 0.533 | place_roi: 79.6%
+   12: kohan_3f_sa（後半3F差） | pass_rate: 0.529 | place_roi: 74.3%
+   13: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.514 | place_roi: 78.3%
+   14: prev1_bataiju（前走馬体重） | pass_rate: 0.513 | place_roi: 79.1%
+   15: taikei_dou（体型（胴）） | pass_rate: 0.500 | place_roi: 83.5%
+   16: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.500 | place_roi: 82.8%
+   17: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 81.5%
+   18: joho_shisu（情報指数） | pass_rate: 0.500 | place_roi: 81.4%
+   19: bac_juryo_shubetsu_code（負担重量種別） | pass_rate: 0.500 | place_roi: 80.8%
+   20: idm（IDM） | pass_rate: 0.500 | place_roi: 80.4%
+   21: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.8%
+   22: yy_int（YY値） | pass_rate: 0.500 | place_roi: 79.3%
+   23: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 79.0%
+   24: agari_shisu（上がり指数） | pass_rate: 0.500 | place_roi: 77.4%
+   25: class_code（クラスコード） | pass_rate: 0.500 | place_roi: 76.6%
+   26: gekiso_juni（激走指数順位） | pass_rate: 0.500 | place_roi: 76.4%
+   27: uma_tokki_2（馬特記2） | pass_rate: 0.500 | place_roi: 76.1%
+   28: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.500 | place_roi: 73.6%
+   29: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.500 | place_roi: 73.5%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_01_ダ】札幌ダート（72件）
+【KEIBAJO_SURFACE_01_ダ】札幌ダート（68件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: kishu_rank（騎手ランク） | pass_rate: 1.000 | place_roi: 85.2%
-    2: barei（馬齢） | pass_rate: 1.000 | place_roi: 84.6%
-    3: babajotai_heavy（馬場状態（重分類）） | pass_rate: 1.000 | place_roi: 84.2%
-    4: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.867 | place_roi: 86.8%
-    5: kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.857 | place_roi: 84.2%
-    6: shirushi_code_1（印コード1） | pass_rate: 0.857 | place_roi: 81.6%
-    7: gekiso_type（激走タイプ） | pass_rate: 0.833 | place_roi: 98.0%
-    8: shirushi_code_2（印コード2） | pass_rate: 0.833 | place_roi: 84.1%
-    9: kyakushitsu（脚質） | pass_rate: 0.800 | place_roi: 88.5%
-   10: prev1_keibajo（前走競馬場） | pass_rate: 0.800 | place_roi: 86.8%
-   11: joken_class_code（条件クラス） | pass_rate: 0.800 | place_roi: 85.9%
-   12: yuso_kubun（輸送区分） | pass_rate: 0.800 | place_roi: 84.8%
-   13: chokyoshi_rank（調教師ランク） | pass_rate: 0.800 | place_roi: 84.2%
-   14: bac_tosu（出走頭数） | pass_rate: 0.800 | place_roi: 83.7%
-   15: moshoku_code（毛色コード） | pass_rate: 0.800 | place_roi: 81.3%
-   16: sanchimei（産地名） | pass_rate: 0.778 | place_roi: 82.3%
-   17: manken_shirushi（万券印） | pass_rate: 0.750 | place_roi: 85.7%
-   18: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.750 | place_roi: 85.6%
-   19: babajotai_code_dirt（ダート馬場状態） | pass_rate: 0.750 | place_roi: 83.7%
-   20: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.750 | place_roi: 83.0%
-   21: futan_juryo（斤量） | pass_rate: 0.750 | place_roi: 82.5%
-   22: kyori_tekisei（距離適性） | pass_rate: 0.750 | place_roi: 81.0%
-   23: uma_tokki_1（馬特記1） | pass_rate: 0.750 | place_roi: 80.3%
-   24: ichi_shisu_juni（位置指数順位） | pass_rate: 0.714 | place_roi: 85.5%
-   25: umaban_clean（馬番） | pass_rate: 0.714 | place_roi: 85.0%
-   26: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.714 | place_roi: 84.8%
-   27: kohan_3f_sa（後半3F差） | pass_rate: 0.706 | place_roi: 88.4%
-   28: rotation（ローテーション） | pass_rate: 0.700 | place_roi: 89.2%
-   29: yy_int（YY値） | pass_rate: 0.700 | place_roi: 85.0%
-   30: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 93.4%
-   31: ls_shisu_juni（LS指数順位） | pass_rate: 0.667 | place_roi: 92.8%
-   32: bac_jouken（レース条件） | pass_rate: 0.667 | place_roi: 89.7%
-   33: omo_tekisei_code（重適性） | pass_rate: 0.667 | place_roi: 82.1%
-   34: shirushi_code_6（印コード6） | pass_rate: 0.667 | place_roi: 81.7%
-   35: uma_start_shisu（スタート指数） | pass_rate: 0.667 | place_roi: 81.3%
-   36: shirushi_code_5（印コード5） | pass_rate: 0.667 | place_roi: 80.7%
-   37: kishu_minarai_code（騎手見習い） | pass_rate: 0.667 | place_roi: 70.4%
-   38: idm（IDM） | pass_rate: 0.652 | place_roi: 76.8%
-   39: agari_shisu_juni（上がり指数順位） | pass_rate: 0.643 | place_roi: 85.7%
-   40: prev1_chakujun（前走着順） | pass_rate: 0.643 | place_roi: 85.4%
-   41: goal_juni（ゴール順位） | pass_rate: 0.643 | place_roi: 84.8%
-   42: prev2_chakujun（前2走着順） | pass_rate: 0.643 | place_roi: 82.8%
-   43: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.643 | place_roi: 81.6%
-   44: joho_shisu（情報指数） | pass_rate: 0.615 | place_roi: 78.4%
-   45: manken_shisu（万券指数） | pass_rate: 0.607 | place_roi: 90.3%
-   46: nyukyu_nannichimae（入厩何日前） | pass_rate: 0.600 | place_roi: 89.7%
-   47: kyusha_shisu（厩舎指数） | pass_rate: 0.600 | place_roi: 88.6%
-   48: tenkai_kigo_code（展開記号） | pass_rate: 0.600 | place_roi: 85.9%
-   49: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 78.0%
-   50: class_code（クラスコード） | pass_rate: 0.571 | place_roi: 87.8%
-   51: goal_sa（ゴール差） | pass_rate: 0.571 | place_roi: 86.9%
-   52: dochu_juni（道中順位） | pass_rate: 0.571 | place_roi: 86.4%
-   53: gekiso_juni（激走指数順位） | pass_rate: 0.571 | place_roi: 86.3%
-   54: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.571 | place_roi: 84.3%
-   55: taikei_dou（体型（胴）） | pass_rate: 0.556 | place_roi: 97.3%
-   56: hizume_code（蹄コード） | pass_rate: 0.556 | place_roi: 87.0%
-   57: dochu_sa（道中差） | pass_rate: 0.550 | place_roi: 81.7%
-   58: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.538 | place_roi: 88.5%
-   59: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.538 | place_roi: 88.5%
-   60: yoso_juni（予想順位） | pass_rate: 0.538 | place_roi: 84.6%
-   61: prev1_corner4（前走4角位置） | pass_rate: 0.538 | place_roi: 83.3%
-   62: taikei_tomo（体型（トモ）） | pass_rate: 0.538 | place_roi: 76.4%
-   63: prev1_bataiju（前走馬体重） | pass_rate: 0.533 | place_roi: 87.9%
-   64: kishu_shisu（騎手指数） | pass_rate: 0.526 | place_roi: 80.0%
-   65: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.520 | place_roi: 88.5%
-   66: prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 87.2%
-   67: ten_shisu_juni（テン指数順位） | pass_rate: 0.500 | place_roi: 84.8%
-   68: pace_shisu_juni（ペース指数順位） | pass_rate: 0.500 | place_roi: 83.9%
-   69: wakuban（枠番） | pass_rate: 0.500 | place_roi: 83.7%
-   70: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 81.4%
-   71: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.500 | place_roi: 80.7%
-   72: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 79.0%
+    1: barei（馬齢） | pass_rate: 1.000 | place_roi: 83.1%
+    2: prev1_keibajo（前走競馬場） | pass_rate: 0.900 | place_roi: 85.3%
+    3: manken_shirushi（万券印） | pass_rate: 0.875 | place_roi: 83.6%
+    4: shirushi_code_1（印コード1） | pass_rate: 0.857 | place_roi: 81.4%
+    5: shirushi_code_2（印コード2） | pass_rate: 0.833 | place_roi: 83.8%
+    6: shirushi_code_5（印コード5） | pass_rate: 0.833 | place_roi: 80.5%
+    7: kyakushitsu（脚質） | pass_rate: 0.800 | place_roi: 86.0%
+    8: yuso_kubun（輸送区分） | pass_rate: 0.800 | place_roi: 81.2%
+    9: ichi_shisu_juni（位置指数順位） | pass_rate: 0.786 | place_roi: 83.0%
+   10: futan_juryo（斤量） | pass_rate: 0.750 | place_roi: 80.0%
+   11: kyori_tekisei（距離適性） | pass_rate: 0.750 | place_roi: 78.9%
+   12: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.722 | place_roi: 85.0%
+   13: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.714 | place_roi: 84.7%
+   14: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 89.5%
+   15: bac_jouken（レース条件） | pass_rate: 0.667 | place_roi: 87.4%
+   16: babajotai_heavy（馬場状態（重分類）） | pass_rate: 0.667 | place_roi: 81.8%
+   17: shirushi_code_6（印コード6） | pass_rate: 0.667 | place_roi: 81.5%
+   18: omo_tekisei_code（重適性） | pass_rate: 0.667 | place_roi: 80.7%
+   19: uma_start_shisu（スタート指数） | pass_rate: 0.667 | place_roi: 78.0%
+   20: sanchimei（産地名） | pass_rate: 0.667 | place_roi: 77.1%
+   21: uma_tokki_1（馬特記1） | pass_rate: 0.667 | place_roi: 75.8%
+   22: kishu_minarai_code（騎手見習い） | pass_rate: 0.667 | place_roi: 69.7%
+   23: kohan_3f_sa（後半3F差） | pass_rate: 0.647 | place_roi: 85.4%
+   24: umaban_clean（馬番） | pass_rate: 0.643 | place_roi: 82.7%
+   25: nyukyu_nannichimae（入厩何日前） | pass_rate: 0.636 | place_roi: 83.8%
+   26: ls_shisu_juni（LS指数順位） | pass_rate: 0.625 | place_roi: 88.0%
+   27: taikei_dou（体型（胴）） | pass_rate: 0.600 | place_roi: 94.4%
+   28: joken_class_code（条件クラス） | pass_rate: 0.600 | place_roi: 84.0%
+   29: tenkai_kigo_code（展開記号） | pass_rate: 0.600 | place_roi: 83.3%
+   30: kishu_rank（騎手ランク） | pass_rate: 0.600 | place_roi: 83.0%
+   31: chokyoshi_rank（調教師ランク） | pass_rate: 0.600 | place_roi: 82.6%
+   32: moshoku_code（毛色コード） | pass_rate: 0.600 | place_roi: 79.1%
+   33: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 77.1%
+   34: gekiso_juni（激走指数順位） | pass_rate: 0.571 | place_roi: 84.1%
+   35: dochu_juni（道中順位） | pass_rate: 0.571 | place_roi: 83.8%
+   36: kyusha_shisu（厩舎指数） | pass_rate: 0.571 | place_roi: 83.6%
+   37: prev1_chakujun（前走着順） | pass_rate: 0.571 | place_roi: 83.0%
+   38: agari_shisu_juni（上がり指数順位） | pass_rate: 0.571 | place_roi: 82.7%
+   39: kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.571 | place_roi: 82.0%
+   40: prev1_corner4（前走4角位置） | pass_rate: 0.571 | place_roi: 81.8%
+   41: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.571 | place_roi: 81.7%
+   42: goal_juni（ゴール順位） | pass_rate: 0.571 | place_roi: 81.6%
+   43: taikei_tomo（体型（トモ）） | pass_rate: 0.571 | place_roi: 75.9%
+   44: manken_shisu（万券指数） | pass_rate: 0.562 | place_roi: 87.2%
+   45: dochu_sa（道中差） | pass_rate: 0.550 | place_roi: 79.8%
+   46: rotation（ローテーション） | pass_rate: 0.545 | place_roi: 86.5%
+   47: kishu_shisu（騎手指数） | pass_rate: 0.545 | place_roi: 78.0%
+   48: idm（IDM） | pass_rate: 0.542 | place_roi: 78.1%
+   49: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.538 | place_roi: 85.9%
+   50: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.538 | place_roi: 85.8%
+   51: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.533 | place_roi: 87.9%
+   52: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.533 | place_roi: 82.2%
+   53: prev2_chakujun（前2走着順） | pass_rate: 0.533 | place_roi: 80.6%
+   54: joho_shisu（情報指数） | pass_rate: 0.522 | place_roi: 78.9%
+   55: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 91.3%
+   56: class_code（クラスコード） | pass_rate: 0.500 | place_roi: 87.8%
+   57: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.500 | place_roi: 86.8%
+   58: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 83.1%
+   59: yy_int（YY値） | pass_rate: 0.500 | place_roi: 83.0%
+   60: babajotai_code_dirt（ダート馬場状態） | pass_rate: 0.500 | place_roi: 82.1%
+   61: pace_shisu_juni（ペース指数順位） | pass_rate: 0.500 | place_roi: 81.7%
+   62: wakuban（枠番） | pass_rate: 0.500 | place_roi: 81.6%
+   63: goal_sa（ゴール差） | pass_rate: 0.500 | place_roi: 81.5%
+   64: yoso_juni（予想順位） | pass_rate: 0.500 | place_roi: 81.3%
+   65: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.7%
+   66: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 79.7%
+   67: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 79.2%
+   68: bac_tosu（出走頭数） | pass_rate: 0.500 | place_roi: 77.2%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_02_芝】函館芝（34件）
+【KEIBAJO_SURFACE_02_芝】函館芝（42件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: bac_juryo_shubetsu_code（負担重量種別） | pass_rate: 0.750 | place_roi: 81.4%
-    2: kishu_rank（騎手ランク） | pass_rate: 0.750 | place_roi: 67.1%
-    3: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.667 | place_roi: 81.8%
-    4: joa_ls_shisu（JOA LS指数） | pass_rate: 0.667 | place_roi: 77.2%
-    5: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 76.0%
-    6: sanchimei（産地名） | pass_rate: 0.625 | place_roi: 77.5%
-    7: kyusha_shisu（厩舎指数） | pass_rate: 0.600 | place_roi: 81.5%
-    8: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 80.6%
-    9: joken_class_code（条件クラス） | pass_rate: 0.600 | place_roi: 80.5%
-   10: ichi_shisu_juni（位置指数順位） | pass_rate: 0.600 | place_roi: 79.9%
-   11: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.600 | place_roi: 79.0%
-   12: dochu_juni（道中順位） | pass_rate: 0.600 | place_roi: 77.1%
-   13: dochu_sa（道中差） | pass_rate: 0.579 | place_roi: 74.1%
-   14: kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.571 | place_roi: 77.5%
-   15: taikei_dou（体型（胴）） | pass_rate: 0.571 | place_roi: 76.2%
-   16: uma_tokki_1（馬特記1） | pass_rate: 0.545 | place_roi: 80.5%
-   17: prev1_corner4（前走4角位置） | pass_rate: 0.533 | place_roi: 81.8%
-   18: ten_shisu_juni（テン指数順位） | pass_rate: 0.533 | place_roi: 79.8%
-   19: kohan_3f_sa（後半3F差） | pass_rate: 0.533 | place_roi: 77.2%
-   20: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.500 | place_roi: 83.3%
-   21: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.500 | place_roi: 83.2%
-   22: pace_shisu（ペース指数） | pass_rate: 0.500 | place_roi: 82.7%
-   23: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 82.5%
-   24: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 81.3%
-   25: nyukyu_nannichimae（入厩何日前） | pass_rate: 0.500 | place_roi: 81.0%
-   26: bac_jouken（レース条件） | pass_rate: 0.500 | place_roi: 78.9%
-   27: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 78.7%
-   28: class_code（クラスコード） | pass_rate: 0.500 | place_roi: 77.7%
-   29: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 76.9%
-   30: umaban_clean（馬番） | pass_rate: 0.500 | place_roi: 76.9%
-   31: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 76.4%
-   32: kyori_tekisei（距離適性） | pass_rate: 0.500 | place_roi: 75.4%
-   33: agari_shisu（上がり指数） | pass_rate: 0.500 | place_roi: 71.3%
-   34: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.500 | place_roi: 69.5%
+    1: joa_ls_shisu（JOA LS指数） | pass_rate: 0.875 | place_roi: 77.9%
+    2: hobokusaki_rank（放牧先ランク） | pass_rate: 0.800 | place_roi: 80.8%
+    3: pace_shisu（ペース指数） | pass_rate: 0.750 | place_roi: 77.5%
+    4: kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.714 | place_roi: 77.9%
+    5: gekiso_type（激走タイプ） | pass_rate: 0.667 | place_roi: 87.6%
+    6: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 82.9%
+    7: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 77.5%
+    8: prev2_chakujun（前2走着順） | pass_rate: 0.625 | place_roi: 82.2%
+    9: wakuban（枠番） | pass_rate: 0.625 | place_roi: 79.4%
+   10: ten_shisu_juni（テン指数順位） | pass_rate: 0.625 | place_roi: 79.2%
+   11: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.625 | place_roi: 78.4%
+   12: dochu_juni（道中順位） | pass_rate: 0.625 | place_roi: 78.1%
+   13: ichi_shisu（位置指数） | pass_rate: 0.600 | place_roi: 81.5%
+   14: moshoku_code（毛色コード） | pass_rate: 0.600 | place_roi: 78.8%
+   15: uma_tokki_1（馬特記1） | pass_rate: 0.600 | place_roi: 77.1%
+   16: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.583 | place_roi: 76.1%
+   17: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 78.9%
+   18: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.571 | place_roi: 78.1%
+   19: ichi_shisu_juni（位置指数順位） | pass_rate: 0.562 | place_roi: 80.7%
+   20: kohan_3f_juni | pass_rate: 0.562 | place_roi: 79.5%
+   21: kohan_3f_sa（後半3F差） | pass_rate: 0.562 | place_roi: 78.2%
+   22: nyukyu_nannichimae（入厩何日前） | pass_rate: 0.562 | place_roi: 77.7%
+   23: sanchimei（産地名） | pass_rate: 0.556 | place_roi: 77.2%
+   24: rotation（ローテーション） | pass_rate: 0.533 | place_roi: 82.3%
+   25: goal_juni（ゴール順位） | pass_rate: 0.533 | place_roi: 79.0%
+   26: prev1_bataiju（前走馬体重） | pass_rate: 0.529 | place_roi: 78.0%
+   27: goal_sa（ゴール差） | pass_rate: 0.524 | place_roi: 76.2%
+   28: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.516 | place_roi: 77.2%
+   29: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.500 | place_roi: 82.0%
+   30: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.500 | place_roi: 81.9%
+   31: chokyo_shisu（調教指数） | pass_rate: 0.500 | place_roi: 81.1%
+   32: agari_shisu（上がり指数） | pass_rate: 0.500 | place_roi: 80.7%
+   33: bac_juryo_shubetsu_code（負担重量種別） | pass_rate: 0.500 | place_roi: 80.2%
+   34: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 80.1%
+   35: pace_shisu_juni（ペース指数順位） | pass_rate: 0.500 | place_roi: 80.0%
+   36: manken_shisu（万券指数） | pass_rate: 0.500 | place_roi: 79.4%
+   37: umaban_clean（馬番） | pass_rate: 0.500 | place_roi: 79.1%
+   38: agari_shisu_juni（上がり指数順位） | pass_rate: 0.500 | place_roi: 78.0%
+   39: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 77.8%
+   40: kyori_tekisei（距離適性） | pass_rate: 0.500 | place_roi: 75.6%
+   41: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.500 | place_roi: 74.4%
+   42: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.500 | place_roi: 69.0%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_02_ダ】函館ダート（8件）
+【KEIBAJO_SURFACE_02_ダ】函館ダート（11件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: shirushi_code_6（印コード6） | pass_rate: 0.833 | place_roi: 83.9%
-    2: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.692 | place_roi: 70.5%
-    3: shirushi_code_3（印コード3） | pass_rate: 0.667 | place_roi: 82.5%
-    4: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 81.7%
-    5: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 81.4%
-    6: joa_ls_shisu（JOA LS指数） | pass_rate: 0.500 | place_roi: 79.4%
-    7: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 76.7%
-    8: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 75.6%
+    1: shirushi_code_6（印コード6） | pass_rate: 0.833 | place_roi: 83.2%
+    2: joho_shisu（情報指数） | pass_rate: 0.750 | place_roi: 81.6%
+    3: shirushi_code_3（印コード3） | pass_rate: 0.667 | place_roi: 81.6%
+    4: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.609 | place_roi: 71.8%
+    5: nyukyu_nannichimae（入厩何日前） | pass_rate: 0.600 | place_roi: 78.1%
+    6: moshoku_code（毛色コード） | pass_rate: 0.600 | place_roi: 70.8%
+    7: kishu_shisu（騎手指数） | pass_rate: 0.526 | place_roi: 80.7%
+    8: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 81.5%
+    9: rotation（ローテーション） | pass_rate: 0.500 | place_roi: 78.8%
+   10: joa_ls_shisu（JOA LS指数） | pass_rate: 0.500 | place_roi: 75.5%
+   11: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 75.3%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_03_芝】福島芝（29件）
+【KEIBAJO_SURFACE_03_芝】福島芝（47件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: agari_shisu（上がり指数） | pass_rate: 0.800 | place_roi: 81.6%
-    2: pace_shisu（ペース指数） | pass_rate: 0.800 | place_roi: 81.3%
-    3: prev2_chakujun（前2走着順） | pass_rate: 0.688 | place_roi: 85.0%
-    4: babajotai_heavy（馬場状態（重分類）） | pass_rate: 0.667 | place_roi: 82.5%
-    5: moshoku_code（毛色コード） | pass_rate: 0.667 | place_roi: 80.0%
-    6: shirushi_code_3（印コード3） | pass_rate: 0.667 | place_roi: 77.1%
-    7: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.625 | place_roi: 84.9%
-    8: idm（IDM） | pass_rate: 0.607 | place_roi: 74.4%
-    9: prev1_corner4（前走4角位置） | pass_rate: 0.588 | place_roi: 79.7%
-   10: prev3_chakujun（前3走着順） | pass_rate: 0.562 | place_roi: 88.7%
-   11: gekiso_juni（激走指数順位） | pass_rate: 0.562 | place_roi: 77.6%
-   12: prev1_bataiju（前走馬体重） | pass_rate: 0.550 | place_roi: 78.3%
-   13: kishu_shisu（騎手指数） | pass_rate: 0.545 | place_roi: 80.8%
-   14: joa_ls_shisu（JOA LS指数） | pass_rate: 0.538 | place_roi: 76.2%
-   15: taikei_tomo（体型（トモ）） | pass_rate: 0.533 | place_roi: 83.1%
-   16: ls_shisu_juni（LS指数順位） | pass_rate: 0.500 | place_roi: 87.3%
-   17: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 81.2%
-   18: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 80.9%
-   19: futan_juryo（斤量） | pass_rate: 0.500 | place_roi: 80.4%
-   20: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 79.9%
-   21: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.8%
-   22: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 78.9%
-   23: ichi_shisu_juni（位置指数順位） | pass_rate: 0.500 | place_roi: 78.8%
-   24: ten_shisu_juni（テン指数順位） | pass_rate: 0.500 | place_roi: 78.4%
-   25: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 78.3%
-   26: pace_shisu_juni（ペース指数順位） | pass_rate: 0.500 | place_roi: 78.2%
-   27: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 77.8%
-   28: barei（馬齢） | pass_rate: 0.500 | place_roi: 74.0%
-   29: class_code（クラスコード） | pass_rate: 0.500 | place_roi: 73.7%
+    1: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.750 | place_roi: 81.0%
+    2: taikei_tomo（体型（トモ）） | pass_rate: 0.706 | place_roi: 83.5%
+    3: idm（IDM） | pass_rate: 0.694 | place_roi: 76.1%
+    4: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.667 | place_roi: 84.1%
+    5: pace_shisu（ペース指数） | pass_rate: 0.667 | place_roi: 82.6%
+    6: futan_juryo（斤量） | pass_rate: 0.667 | place_roi: 82.1%
+    7: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 81.4%
+    8: shirushi_code_6（印コード6） | pass_rate: 0.667 | place_roi: 80.5%
+    9: moshoku_code（毛色コード） | pass_rate: 0.667 | place_roi: 79.5%
+   10: chokyo_shisu（調教指数） | pass_rate: 0.625 | place_roi: 76.6%
+   11: prev1_keibajo（前走競馬場） | pass_rate: 0.600 | place_roi: 81.0%
+   12: joken_class_code（条件クラス） | pass_rate: 0.600 | place_roi: 79.7%
+   13: kishu_minarai_code（騎手見習い） | pass_rate: 0.600 | place_roi: 75.0%
+   14: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.600 | place_roi: 73.5%
+   15: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.600 | place_roi: 73.5%
+   16: prev1_corner4（前走4角位置） | pass_rate: 0.588 | place_roi: 79.6%
+   17: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 81.0%
+   18: prev2_chakujun（前2走着順） | pass_rate: 0.562 | place_roi: 87.0%
+   19: prev3_chakujun（前3走着順） | pass_rate: 0.562 | place_roi: 86.7%
+   20: pace_shisu_juni（ペース指数順位） | pass_rate: 0.562 | place_roi: 79.9%
+   21: ten_shisu_juni（テン指数順位） | pass_rate: 0.562 | place_roi: 79.5%
+   22: ten_shisu（テン指数） | pass_rate: 0.556 | place_roi: 79.3%
+   23: ninki_shisu（人気指数） | pass_rate: 0.556 | place_roi: 76.0%
+   24: joho_shisu（情報指数） | pass_rate: 0.525 | place_roi: 80.9%
+   25: nyukyu_nannichimae（入厩何日前） | pass_rate: 0.520 | place_roi: 77.6%
+   26: prev1_bataiju（前走馬体重） | pass_rate: 0.511 | place_roi: 79.9%
+   27: ls_shisu_juni（LS指数順位） | pass_rate: 0.500 | place_roi: 86.8%
+   28: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.500 | place_roi: 84.6%
+   29: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.500 | place_roi: 84.6%
+   30: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 83.8%
+   31: agari_shisu（上がり指数） | pass_rate: 0.500 | place_roi: 82.9%
+   32: sanchimei（産地名） | pass_rate: 0.500 | place_roi: 82.2%
+   33: bac_shubetsu（レース種別） | pass_rate: 0.500 | place_roi: 79.9%
+   34: kyori（距離） | pass_rate: 0.500 | place_roi: 79.7%
+   35: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 79.6%
+   36: kohan_3f_juni | pass_rate: 0.500 | place_roi: 79.4%
+   37: bac_jouken（レース条件） | pass_rate: 0.500 | place_roi: 79.3%
+   38: wakuban（枠番） | pass_rate: 0.500 | place_roi: 79.0%
+   39: gekiso_shisu（激走指数） | pass_rate: 0.500 | place_roi: 78.6%
+   40: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 78.5%
+   41: bac_juryo_shubetsu_code（負担重量種別） | pass_rate: 0.500 | place_roi: 78.2%
+   42: agari_shisu_juni（上がり指数順位） | pass_rate: 0.500 | place_roi: 78.0%
+   43: goal_juni（ゴール順位） | pass_rate: 0.500 | place_roi: 77.5%
+   44: barei（馬齢） | pass_rate: 0.500 | place_roi: 77.1%
+   45: taikei_dou（体型（胴）） | pass_rate: 0.500 | place_roi: 77.0%
+   46: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.500 | place_roi: 76.8%
+   47: goal_sa（ゴール差） | pass_rate: 0.500 | place_roi: 68.1%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_03_ダ】福島ダート（33件）
+【KEIBAJO_SURFACE_03_ダ】福島ダート（46件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: shirushi_code_2（印コード2） | pass_rate: 0.833 | place_roi: 83.0%
-    2: prev1_kyakushitsu（前走脚質） | pass_rate: 0.750 | place_roi: 78.7%
-    3: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.750 | place_roi: 78.5%
-    4: kyori_tekisei（距離適性） | pass_rate: 0.750 | place_roi: 72.7%
-    5: shirushi_code_1（印コード1） | pass_rate: 0.714 | place_roi: 81.7%
-    6: uma_tokki_3（馬特記3） | pass_rate: 0.667 | place_roi: 79.7%
-    7: prev1_keibajo（前走競馬場） | pass_rate: 0.667 | place_roi: 75.8%
-    8: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.619 | place_roi: 77.4%
-    9: idm（IDM） | pass_rate: 0.609 | place_roi: 79.6%
-   10: kishu_minarai_code（騎手見習い） | pass_rate: 0.600 | place_roi: 82.9%
-   11: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.600 | place_roi: 78.9%
-   12: chokyoshi_rank（調教師ランク） | pass_rate: 0.600 | place_roi: 78.0%
-   13: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 75.7%
-   14: ls_shisu_juni（LS指数順位） | pass_rate: 0.571 | place_roi: 78.4%
-   15: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.571 | place_roi: 76.5%
-   16: prev2_chakujun（前2走着順） | pass_rate: 0.562 | place_roi: 82.7%
-   17: uma_start_shisu（スタート指数） | pass_rate: 0.562 | place_roi: 78.1%
-   18: rotation（ローテーション） | pass_rate: 0.556 | place_roi: 81.8%
-   19: class_code（クラスコード） | pass_rate: 0.556 | place_roi: 80.0%
-   20: sanchimei（産地名） | pass_rate: 0.556 | place_roi: 77.9%
-   21: kohan_3f_sa（後半3F差） | pass_rate: 0.556 | place_roi: 73.0%
-   22: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.536 | place_roi: 78.5%
-   23: goal_juni（ゴール順位） | pass_rate: 0.533 | place_roi: 73.9%
-   24: goal_sa（ゴール差） | pass_rate: 0.520 | place_roi: 72.2%
-   25: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.500 | place_roi: 86.2%
-   26: joho_shisu（情報指数） | pass_rate: 0.500 | place_roi: 81.5%
-   27: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 81.5%
-   28: chokyo_shisu（調教指数） | pass_rate: 0.500 | place_roi: 81.1%
-   29: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 80.6%
-   30: bac_tosu（出走頭数） | pass_rate: 0.500 | place_roi: 79.9%
-   31: agari_shisu_juni（上がり指数順位） | pass_rate: 0.500 | place_roi: 77.5%
-   32: uma_tokki_1（馬特記1） | pass_rate: 0.500 | place_roi: 75.6%
-   33: ichi_shisu_juni（位置指数順位） | pass_rate: 0.500 | place_roi: 75.6%
+    1: uma_tokki_3（馬特記3） | pass_rate: 0.769 | place_roi: 78.4%
+    2: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.750 | place_roi: 79.7%
+    3: prev1_kyakushitsu（前走脚質） | pass_rate: 0.750 | place_roi: 78.7%
+    4: kyori_tekisei（距離適性） | pass_rate: 0.750 | place_roi: 76.2%
+    5: bac_tosu（出走頭数） | pass_rate: 0.714 | place_roi: 80.0%
+    6: gekiso_type（激走タイプ） | pass_rate: 0.667 | place_roi: 82.3%
+    7: class_code（クラスコード） | pass_rate: 0.667 | place_roi: 81.6%
+    8: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 81.5%
+    9: shirushi_code_6（印コード6） | pass_rate: 0.667 | place_roi: 80.6%
+   10: hizume_code（蹄コード） | pass_rate: 0.667 | place_roi: 77.8%
+   11: prev2_chakujun（前2走着順） | pass_rate: 0.625 | place_roi: 82.7%
+   12: prev3_chakujun（前3走着順） | pass_rate: 0.625 | place_roi: 80.4%
+   13: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.625 | place_roi: 78.4%
+   14: futan_juryo（斤量） | pass_rate: 0.625 | place_roi: 76.2%
+   15: kishu_minarai_code（騎手見習い） | pass_rate: 0.600 | place_roi: 81.9%
+   16: joken_class_code（条件クラス） | pass_rate: 0.600 | place_roi: 80.2%
+   17: chokyoshi_rank（調教師ランク） | pass_rate: 0.600 | place_roi: 78.9%
+   18: idm（IDM） | pass_rate: 0.600 | place_roi: 78.4%
+   19: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 76.1%
+   20: uma_start_shisu（スタート指数） | pass_rate: 0.579 | place_roi: 76.1%
+   21: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 81.0%
+   22: joa_ls_shisu（JOA LS指数） | pass_rate: 0.571 | place_roi: 76.5%
+   23: umaban_clean（馬番） | pass_rate: 0.562 | place_roi: 80.0%
+   24: goal_juni（ゴール順位） | pass_rate: 0.562 | place_roi: 75.7%
+   25: goal_sa（ゴール差） | pass_rate: 0.560 | place_roi: 71.5%
+   26: rotation（ローテーション） | pass_rate: 0.556 | place_roi: 84.6%
+   27: joho_shisu（情報指数） | pass_rate: 0.540 | place_roi: 81.3%
+   28: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.525 | place_roi: 77.1%
+   29: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.524 | place_roi: 76.5%
+   30: ichi_shisu（位置指数） | pass_rate: 0.516 | place_roi: 80.4%
+   31: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.9%
+   32: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.500 | place_roi: 80.5%
+   33: prev1_bataiju（前走馬体重） | pass_rate: 0.500 | place_roi: 80.4%
+   34: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 80.1%
+   35: agari_shisu_juni（上がり指数順位） | pass_rate: 0.500 | place_roi: 79.6%
+   36: prev1_chakujun（前走着順） | pass_rate: 0.500 | place_roi: 79.4%
+   37: bac_shubetsu（レース種別） | pass_rate: 0.500 | place_roi: 79.2%
+   38: ls_shisu_juni（LS指数順位） | pass_rate: 0.500 | place_roi: 79.0%
+   39: yoso_juni（予想順位） | pass_rate: 0.500 | place_roi: 78.8%
+   40: bac_jouken（レース条件） | pass_rate: 0.500 | place_roi: 78.4%
+   41: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.500 | place_roi: 78.1%
+   42: babajotai_code_dirt（ダート馬場状態） | pass_rate: 0.500 | place_roi: 78.1%
+   43: prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 77.3%
+   44: ichi_shisu_juni（位置指数順位） | pass_rate: 0.500 | place_roi: 77.2%
+   45: kohan_3f_juni | pass_rate: 0.500 | place_roi: 76.4%
+   46: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.500 | place_roi: 74.4%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_04_芝】新潟芝（11件）
+【KEIBAJO_SURFACE_04_芝】新潟芝（10件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: agari_shisu（上がり指数） | pass_rate: 0.833 | place_roi: 75.8%
-    2: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.625 | place_roi: 74.9%
-    3: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.625 | place_roi: 74.9%
-    4: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.600 | place_roi: 85.1%
-    5: chokyo_shisu（調教指数） | pass_rate: 0.533 | place_roi: 75.1%
-    6: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 81.3%
-    7: moshoku_code（毛色コード） | pass_rate: 0.500 | place_roi: 79.6%
-    8: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 79.1%
-    9: goal_juni（ゴール順位） | pass_rate: 0.500 | place_roi: 78.6%
-   10: yoso_juni（予想順位） | pass_rate: 0.500 | place_roi: 77.3%
-   11: pace_shisu（ペース指数） | pass_rate: 0.500 | place_roi: 76.9%
+    1: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.750 | place_roi: 83.7%
+    2: agari_shisu（上がり指数） | pass_rate: 0.714 | place_roi: 76.7%
+    3: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.515 | place_roi: 72.4%
+    4: barei（馬齢） | pass_rate: 0.500 | place_roi: 79.7%
+    5: pace_shisu（ペース指数） | pass_rate: 0.500 | place_roi: 78.8%
+    6: bac_shubetsu（レース種別） | pass_rate: 0.500 | place_roi: 78.4%
+    7: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 77.8%
+    8: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.500 | place_roi: 77.7%
+    9: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.500 | place_roi: 77.7%
+   10: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 76.5%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_04_ダ】新潟ダート（12件）
+【KEIBAJO_SURFACE_04_ダ】新潟ダート（6件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: omo_tekisei_code（重適性） | pass_rate: 0.667 | place_roi: 89.0%
-    2: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 80.5%
-    3: kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 74.8%
-    4: uma_tokki_3（馬特記3） | pass_rate: 0.571 | place_roi: 74.9%
-    5: kyusha_shisu（厩舎指数） | pass_rate: 0.538 | place_roi: 76.9%
-    6: ten_shisu_juni（テン指数順位） | pass_rate: 0.533 | place_roi: 76.1%
-    7: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.518 | place_roi: 76.2%
-    8: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.500 | place_roi: 81.8%
-    9: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.1%
-   10: prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 78.5%
-   11: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 78.4%
-   12: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 77.9%
+    1: ninki_shisu（人気指数） | pass_rate: 1.000 | place_roi: 74.9%
+    2: kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 74.6%
+    3: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.600 | place_roi: 75.7%
+    4: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.600 | place_roi: 75.7%
+    5: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 78.7%
+    6: uma_tokki_3（馬特記3） | pass_rate: 0.500 | place_roi: 72.6%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_05_芝】東京芝（15件）
+【KEIBAJO_SURFACE_05_芝】東京芝（18件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: shirushi_code_5（印コード5） | pass_rate: 0.833 | place_roi: 85.5%
-    2: shirushi_code_1（印コード1） | pass_rate: 0.714 | place_roi: 81.8%
-    3: pace_shisu（ペース指数） | pass_rate: 0.667 | place_roi: 93.0%
-    4: agari_shisu（上がり指数） | pass_rate: 0.667 | place_roi: 88.1%
-    5: shirushi_code_4（印コード4） | pass_rate: 0.667 | place_roi: 82.3%
-    6: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 81.5%
-    7: shirushi_code_6（印コード6） | pass_rate: 0.667 | place_roi: 80.9%
-    8: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.583 | place_roi: 70.8%
-    9: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 82.2%
-   10: yoso_juni（予想順位） | pass_rate: 0.500 | place_roi: 77.7%
-   11: goal_sa（ゴール差） | pass_rate: 0.500 | place_roi: 75.1%
-   12: prev2_chakujun（前2走着順） | pass_rate: 0.500 | place_roi: 73.3%
-   13: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 72.3%
-   14: kohan_3f_juni | pass_rate: 0.500 | place_roi: 71.6%
-   15: uma_tokki_1（馬特記1） | pass_rate: 0.500 | place_roi: 69.9%
+    1: shirushi_code_4（印コード4） | pass_rate: 0.667 | place_roi: 80.8%
+    2: shirushi_code_5（印コード5） | pass_rate: 0.667 | place_roi: 80.7%
+    3: joho_shisu（情報指数） | pass_rate: 0.630 | place_roi: 81.5%
+    4: kishu_shisu（騎手指数） | pass_rate: 0.606 | place_roi: 81.5%
+    5: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.592 | place_roi: 73.2%
+    6: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.592 | place_roi: 73.2%
+    7: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 78.3%
+    8: hizume_code（蹄コード） | pass_rate: 0.538 | place_roi: 80.8%
+    9: ten_shisu（テン指数） | pass_rate: 0.533 | place_roi: 78.7%
+   10: joa_ls_shisu（JOA LS指数） | pass_rate: 0.526 | place_roi: 78.1%
+   11: kyusha_shisu（厩舎指数） | pass_rate: 0.517 | place_roi: 76.9%
+   12: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 81.0%
+   13: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 80.5%
+   14: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.6%
+   15: taikei_tomo（体型（トモ）） | pass_rate: 0.500 | place_roi: 78.1%
+   16: prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 77.0%
+   17: pace_shisu_juni（ペース指数順位） | pass_rate: 0.500 | place_roi: 75.4%
+   18: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 73.5%
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-【KEIBAJO_SURFACE_05_ダ】東京ダート（16件）
+【KEIBAJO_SURFACE_05_ダ】東京ダート（12件）
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-    1: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.800 | place_roi: 72.9%
-    2: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 84.8%
-    3: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.667 | place_roi: 83.6%
-    4: nyukyu_nannichimae（入厩何日前） | pass_rate: 0.667 | place_roi: 75.1%
-    5: uma_tokki_1（馬特記1） | pass_rate: 0.600 | place_roi: 80.8%
-    6: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 82.7%
-    7: yoso_juni（予想順位） | pass_rate: 0.571 | place_roi: 69.0%
-    8: uma_tokki_2（馬特記2） | pass_rate: 0.500 | place_roi: 82.9%
-    9: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 81.5%
-   10: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.8%
-   11: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 79.5%
-   12: hizume_code（蹄コード） | pass_rate: 0.500 | place_roi: 77.6%
-   13: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 77.5%
-   14: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 77.3%
-   15: manken_shisu（万券指数） | pass_rate: 0.500 | place_roi: 76.8%
-   16: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.500 | place_roi: 74.7%
+    1: gekiso_type（激走タイプ） | pass_rate: 0.667 | place_roi: 81.7%
+    2: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 80.6%
+    3: kyakushitsu（脚質） | pass_rate: 0.600 | place_roi: 78.2%
+    4: chokyoshi_rank（調教師ランク） | pass_rate: 0.600 | place_roi: 76.0%
+    5: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 79.9%
+    6: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.556 | place_roi: 74.8%
+    7: kishu_shisu（騎手指数） | pass_rate: 0.516 | place_roi: 80.0%
+    8: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 78.9%
+    9: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 78.7%
+   10: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 78.5%
+   11: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 78.5%
+   12: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.500 | place_roi: 74.0%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_06_芝】中山芝（33件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: shirushi_code_4（印コード4） | pass_rate: 0.833 | place_roi: 81.0%
+    2: shirushi_code_5（印コード5） | pass_rate: 0.667 | place_roi: 80.8%
+    3: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 80.7%
+    4: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 79.3%
+    5: ten_shisu（テン指数） | pass_rate: 0.643 | place_roi: 80.4%
+    6: futan_juryo（斤量） | pass_rate: 0.625 | place_roi: 71.5%
+    7: hizume_code（蹄コード） | pass_rate: 0.615 | place_roi: 84.9%
+    8: joho_shisu（情報指数） | pass_rate: 0.578 | place_roi: 81.5%
+    9: kyusha_shisu（厩舎指数） | pass_rate: 0.567 | place_roi: 77.2%
+   10: yoso_juni（予想順位） | pass_rate: 0.562 | place_roi: 78.8%
+   11: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.556 | place_roi: 78.3%
+   12: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.556 | place_roi: 76.2%
+   13: goal_sa（ゴール差） | pass_rate: 0.556 | place_roi: 71.0%
+   14: kishu_shisu（騎手指数） | pass_rate: 0.548 | place_roi: 80.8%
+   15: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.545 | place_roi: 78.4%
+   16: umaban_clean（馬番） | pass_rate: 0.529 | place_roi: 75.0%
+   17: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.524 | place_roi: 78.8%
+   18: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.524 | place_roi: 78.8%
+   19: agari_shisu（上がり指数） | pass_rate: 0.513 | place_roi: 80.4%
+   20: rotation（ローテーション） | pass_rate: 0.500 | place_roi: 81.2%
+   21: kyori_tekisei（距離適性） | pass_rate: 0.500 | place_roi: 80.9%
+   22: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.3%
+   23: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.500 | place_roi: 80.2%
+   24: pace_shisu（ペース指数） | pass_rate: 0.500 | place_roi: 80.1%
+   25: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 80.0%
+   26: wakuban（枠番） | pass_rate: 0.500 | place_roi: 79.0%
+   27: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 78.9%
+   28: moshoku_code（毛色コード） | pass_rate: 0.500 | place_roi: 78.5%
+   29: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.500 | place_roi: 78.3%
+   30: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.500 | place_roi: 78.3%
+   31: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 77.5%
+   32: prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 76.3%
+   33: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 74.5%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_06_ダ】中山ダート（19件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 81.7%
+    2: kishu_shisu（騎手指数） | pass_rate: 0.613 | place_roi: 81.4%
+    3: joa_ls_shisu（JOA LS指数） | pass_rate: 0.571 | place_roi: 81.1%
+    4: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 80.0%
+    5: prev3_chakujun（前3走着順） | pass_rate: 0.562 | place_roi: 81.0%
+    6: goal_sa（ゴール差） | pass_rate: 0.562 | place_roi: 71.3%
+    7: ls_shisu_juni（LS指数順位） | pass_rate: 0.556 | place_roi: 83.9%
+    8: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.545 | place_roi: 78.0%
+    9: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.513 | place_roi: 77.2%
+   10: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.508 | place_roi: 79.8%
+   11: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 80.7%
+   12: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 80.1%
+   13: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.0%
+   14: yy_int（YY値） | pass_rate: 0.500 | place_roi: 79.4%
+   15: wakuban（枠番） | pass_rate: 0.500 | place_roi: 78.8%
+   16: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 78.7%
+   17: agari_shisu（上がり指数） | pass_rate: 0.500 | place_roi: 78.2%
+   18: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 77.4%
+   19: prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 75.4%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_07_芝】中京芝（13件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: ten_shisu（テン指数） | pass_rate: 0.778 | place_roi: 76.4%
+    2: shirushi_code_5（印コード5） | pass_rate: 0.667 | place_roi: 78.5%
+    3: shirushi_code_3（印コード3） | pass_rate: 0.667 | place_roi: 77.9%
+    4: pace_shisu（ペース指数） | pass_rate: 0.667 | place_roi: 76.3%
+    5: joa_ls_shisu（JOA LS指数） | pass_rate: 0.625 | place_roi: 77.2%
+    6: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.615 | place_roi: 75.6%
+    7: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.615 | place_roi: 75.6%
+    8: goal_sa（ゴール差） | pass_rate: 0.520 | place_roi: 71.7%
+    9: kyusha_hyoka_code（厩舎評価） | pass_rate: 0.500 | place_roi: 78.7%
+   10: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 78.0%
+   11: wakuban（枠番） | pass_rate: 0.500 | place_roi: 77.2%
+   12: agari_shisu（上がり指数） | pass_rate: 0.500 | place_roi: 76.7%
+   13: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.500 | place_roi: 73.0%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_07_ダ】中京ダート（41件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: shirushi_code_6（印コード6） | pass_rate: 1.000 | place_roi: 81.3%
+    2: shirushi_code_4（印コード4） | pass_rate: 0.833 | place_roi: 81.6%
+    3: kishu_minarai_code（騎手見習い） | pass_rate: 0.800 | place_roi: 78.6%
+    4: moshoku_code（毛色コード） | pass_rate: 0.667 | place_roi: 86.9%
+    5: ls_shisu_juni（LS指数順位） | pass_rate: 0.667 | place_roi: 83.6%
+    6: shirushi_code_3（印コード3） | pass_rate: 0.667 | place_roi: 82.3%
+    7: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 81.7%
+    8: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 81.0%
+    9: shirushi_code_5（印コード5） | pass_rate: 0.667 | place_roi: 80.3%
+   10: yoso_juni（予想順位） | pass_rate: 0.625 | place_roi: 79.5%
+   11: ten_shisu（テン指数） | pass_rate: 0.600 | place_roi: 79.1%
+   12: joa_ls_shisu（JOA LS指数） | pass_rate: 0.579 | place_roi: 82.2%
+   13: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.576 | place_roi: 79.8%
+   14: kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.571 | place_roi: 83.0%
+   15: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 80.5%
+   16: gekiso_juni（激走指数順位） | pass_rate: 0.562 | place_roi: 79.6%
+   17: goal_juni（ゴール順位） | pass_rate: 0.562 | place_roi: 79.4%
+   18: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.562 | place_roi: 78.6%
+   19: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.562 | place_roi: 78.5%
+   20: dochu_sa（道中差） | pass_rate: 0.560 | place_roi: 78.1%
+   21: prev1_bataiju（前走馬体重） | pass_rate: 0.547 | place_roi: 77.1%
+   22: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.545 | place_roi: 81.9%
+   23: joho_shisu（情報指数） | pass_rate: 0.545 | place_roi: 81.8%
+   24: kijun_odds_fukusho（基準複勝オッズ） | pass_rate: 0.525 | place_roi: 77.2%
+   25: kyusha_shisu（厩舎指数） | pass_rate: 0.517 | place_roi: 81.0%
+   26: gekiso_shisu（激走指数） | pass_rate: 0.509 | place_roi: 78.3%
+   27: prev3_chakujun（前3走着順） | pass_rate: 0.500 | place_roi: 84.4%
+   28: hizume_code（蹄コード） | pass_rate: 0.500 | place_roi: 83.0%
+   29: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 80.1%
+   30: bac_shubetsu（レース種別） | pass_rate: 0.500 | place_roi: 80.0%
+   31: kyori（距離） | pass_rate: 0.500 | place_roi: 79.9%
+   32: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 79.7%
+   33: dochu_juni（道中順位） | pass_rate: 0.500 | place_roi: 79.1%
+   34: yy_int（YY値） | pass_rate: 0.500 | place_roi: 78.7%
+   35: ichi_shisu_juni（位置指数順位） | pass_rate: 0.500 | place_roi: 78.6%
+   36: ten_shisu_juni（テン指数順位） | pass_rate: 0.500 | place_roi: 78.5%
+   37: kohan_3f_juni | pass_rate: 0.500 | place_roi: 78.4%
+   38: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 78.1%
+   39: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.500 | place_roi: 78.0%
+   40: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.500 | place_roi: 75.5%
+   41: kyori_tekisei（距離適性） | pass_rate: 0.500 | place_roi: 68.6%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_08_芝】京都芝（48件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: prev1_kyakushitsu（前走脚質） | pass_rate: 0.750 | place_roi: 79.9%
+    2: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 81.1%
+    3: pace_shisu（ペース指数） | pass_rate: 0.667 | place_roi: 78.6%
+    4: kishu_minarai_code（騎手見習い） | pass_rate: 0.667 | place_roi: 73.1%
+    5: wakuban（枠番） | pass_rate: 0.625 | place_roi: 79.3%
+    6: bac_grade（グレード） | pass_rate: 0.600 | place_roi: 82.4%
+    7: kyori_tekisei（距離適性） | pass_rate: 0.600 | place_roi: 81.0%
+    8: tenkai_kigo_code（展開記号） | pass_rate: 0.600 | place_roi: 79.9%
+    9: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 77.7%
+   10: chokyoshi_rank（調教師ランク） | pass_rate: 0.600 | place_roi: 72.7%
+   11: joho_shisu（情報指数） | pass_rate: 0.581 | place_roi: 80.4%
+   12: goal_sa（ゴール差） | pass_rate: 0.577 | place_roi: 78.6%
+   13: kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.571 | place_roi: 79.2%
+   14: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 79.2%
+   15: uma_tokki_1（馬特記1） | pass_rate: 0.567 | place_roi: 79.4%
+   16: goal_juni（ゴール順位） | pass_rate: 0.562 | place_roi: 77.6%
+   17: prev1_chakujun（前走着順） | pass_rate: 0.562 | place_roi: 76.4%
+   18: pace_shisu_juni（ペース指数順位） | pass_rate: 0.556 | place_roi: 82.4%
+   19: ls_shisu_juni（LS指数順位） | pass_rate: 0.556 | place_roi: 81.4%
+   20: rotation（ローテーション） | pass_rate: 0.550 | place_roi: 78.3%
+   21: ninki_shisu（人気指数） | pass_rate: 0.550 | place_roi: 78.2%
+   22: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.543 | place_roi: 79.2%
+   23: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.543 | place_roi: 79.2%
+   24: dochu_sa（道中差） | pass_rate: 0.542 | place_roi: 82.7%
+   25: bac_tosu（出走頭数） | pass_rate: 0.538 | place_roi: 76.5%
+   26: hizume_code（蹄コード） | pass_rate: 0.538 | place_roi: 72.9%
+   27: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.533 | place_roi: 77.6%
+   28: gekiso_juni（激走指数順位） | pass_rate: 0.529 | place_roi: 78.8%
+   29: yoso_juni（予想順位） | pass_rate: 0.529 | place_roi: 77.7%
+   30: uma_tokki_2（馬特記2） | pass_rate: 0.520 | place_roi: 81.0%
+   31: ichi_shisu（位置指数） | pass_rate: 0.514 | place_roi: 81.0%
+   32: moshoku_code（毛色コード） | pass_rate: 0.500 | place_roi: 85.2%
+   33: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 82.9%
+   34: omo_tekisei_code（重適性） | pass_rate: 0.500 | place_roi: 81.9%
+   35: kishu_shisu（騎手指数） | pass_rate: 0.500 | place_roi: 81.6%
+   36: umaban_clean（馬番） | pass_rate: 0.500 | place_roi: 81.0%
+   37: kyori（距離） | pass_rate: 0.500 | place_roi: 80.1%
+   38: agari_shisu（上がり指数） | pass_rate: 0.500 | place_roi: 79.6%
+   39: bac_shubetsu（レース種別） | pass_rate: 0.500 | place_roi: 79.6%
+   40: kyusha_shisu（厩舎指数） | pass_rate: 0.500 | place_roi: 79.5%
+   41: prev2_chakujun（前2走着順） | pass_rate: 0.500 | place_roi: 79.4%
+   42: bac_jouken（レース条件） | pass_rate: 0.500 | place_roi: 79.4%
+   43: futan_juryo（斤量） | pass_rate: 0.500 | place_roi: 79.4%
+   44: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 79.3%
+   45: ten_shisu_juni（テン指数順位） | pass_rate: 0.500 | place_roi: 79.3%
+   46: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 79.2%
+   47: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.0%
+   48: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 77.6%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_08_ダ】京都ダート（33件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: yy_int（YY値） | pass_rate: 0.750 | place_roi: 80.7%
+    2: moshoku_code（毛色コード） | pass_rate: 0.667 | place_roi: 87.6%
+    3: shirushi_code_2（印コード2） | pass_rate: 0.667 | place_roi: 81.7%
+    4: pace_yoso（ペース予想） | pass_rate: 0.667 | place_roi: 80.3%
+    5: shirushi_code_3（印コード3） | pass_rate: 0.667 | place_roi: 80.2%
+    6: shirushi_code_4（印コード4） | pass_rate: 0.667 | place_roi: 79.9%
+    7: manken_shirushi（万券印） | pass_rate: 0.625 | place_roi: 81.2%
+    8: wakuban（枠番） | pass_rate: 0.625 | place_roi: 79.4%
+    9: sogo_shisu（総合指数） | pass_rate: 0.600 | place_roi: 80.2%
+   10: tenkai_kigo_code（展開記号） | pass_rate: 0.600 | place_roi: 79.6%
+   11: ls_shisu_juni（LS指数順位） | pass_rate: 0.600 | place_roi: 79.2%
+   12: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 80.7%
+   13: kyi_kyusha_rank（厩舎ランク（KYI）） | pass_rate: 0.571 | place_roi: 78.4%
+   14: goal_juni（ゴール順位） | pass_rate: 0.562 | place_roi: 77.0%
+   15: joa_ls_shisu（JOA LS指数） | pass_rate: 0.556 | place_roi: 81.4%
+   16: kishu_kitai_rentai_ritsu（騎手期待連対率） | pass_rate: 0.548 | place_roi: 74.6%
+   17: uma_tokki_3（馬特記3） | pass_rate: 0.529 | place_roi: 81.5%
+   18: manken_shisu（万券指数） | pass_rate: 0.520 | place_roi: 76.2%
+   19: goal_sa（ゴール差） | pass_rate: 0.516 | place_roi: 73.8%
+   20: kishu_shisu（騎手指数） | pass_rate: 0.515 | place_roi: 80.5%
+   21: taikei_tomo（体型（トモ）） | pass_rate: 0.500 | place_roi: 84.7%
+   22: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 81.6%
+   23: omo_tekisei_code（重適性） | pass_rate: 0.500 | place_roi: 80.7%
+   24: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 80.6%
+   25: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.500 | place_roi: 80.2%
+   26: uma_tokki_1（馬特記1） | pass_rate: 0.500 | place_roi: 79.9%
+   27: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 79.8%
+   28: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.500 | place_roi: 79.7%
+   29: kyori_tekisei（距離適性） | pass_rate: 0.500 | place_roi: 79.6%
+   30: sanchimei（産地名） | pass_rate: 0.500 | place_roi: 79.0%
+   31: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.500 | place_roi: 78.7%
+   32: agari_shisu_juni（上がり指数順位） | pass_rate: 0.500 | place_roi: 77.7%
+   33: prev1_keibajo（前走競馬場） | pass_rate: 0.500 | place_roi: 74.6%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_09_芝】阪神芝（23件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.800 | place_roi: 86.0%
+    2: sogo_shisu（総合指数） | pass_rate: 0.667 | place_roi: 78.8%
+    3: pace_shisu（ペース指数） | pass_rate: 0.667 | place_roi: 78.8%
+    4: kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 77.7%
+    5: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.625 | place_roi: 82.2%
+    6: agari_shisu（上がり指数） | pass_rate: 0.625 | place_roi: 78.5%
+    7: uma_tokki_3（馬特記3） | pass_rate: 0.579 | place_roi: 74.6%
+    8: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.567 | place_roi: 78.6%
+    9: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.567 | place_roi: 78.6%
+   10: prev3_chakujun（前3走着順） | pass_rate: 0.562 | place_roi: 79.6%
+   11: ten_shisu（テン指数） | pass_rate: 0.533 | place_roi: 78.4%
+   12: class_code（クラスコード） | pass_rate: 0.529 | place_roi: 81.2%
+   13: manken_shisu（万券指数） | pass_rate: 0.518 | place_roi: 76.8%
+   14: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 80.3%
+   15: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 80.1%
+   16: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 79.6%
+   17: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.5%
+   18: wakuban（枠番） | pass_rate: 0.500 | place_roi: 79.1%
+   19: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.1%
+   20: sanchimei（産地名） | pass_rate: 0.500 | place_roi: 76.0%
+   21: futan_juryo（斤量） | pass_rate: 0.500 | place_roi: 74.7%
+   22: kijun_ninkijun_tansho（基準人気順（単勝）） | pass_rate: 0.500 | place_roi: 74.4%
+   23: kijun_ninkijun_fukusho（基準人気順（複勝）） | pass_rate: 0.500 | place_roi: 74.3%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_09_ダ】阪神ダート（27件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: shirushi_code_2（印コード2） | pass_rate: 0.833 | place_roi: 79.8%
+    2: kyori_tekisei_2（距離適性2） | pass_rate: 0.667 | place_roi: 80.1%
+    3: manken_shirushi（万券印） | pass_rate: 0.625 | place_roi: 80.7%
+    4: wakuban（枠番） | pass_rate: 0.625 | place_roi: 78.5%
+    5: nyukyu_nannichimae（入厩何日前） | pass_rate: 0.621 | place_roi: 77.5%
+    6: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 81.6%
+    7: shirushi_code_1（印コード1） | pass_rate: 0.571 | place_roi: 79.9%
+    8: kishu_kitai_tansho_ritsu（騎手期待単勝率） | pass_rate: 0.569 | place_roi: 79.0%
+    9: prev2_chakujun（前2走着順） | pass_rate: 0.562 | place_roi: 82.8%
+   10: taikei_dou（体型（胴）） | pass_rate: 0.545 | place_roi: 79.7%
+   11: joa_ls_shisu（JOA LS指数） | pass_rate: 0.538 | place_roi: 79.7%
+   12: kakutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.529 | place_roi: 79.3%
+   13: kishu_shisu（騎手指数） | pass_rate: 0.514 | place_roi: 80.3%
+   14: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.513 | place_roi: 76.9%
+   15: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.513 | place_roi: 76.9%
+   16: joho_shisu（情報指数） | pass_rate: 0.511 | place_roi: 80.9%
+   17: omo_tekisei_code（重適性） | pass_rate: 0.500 | place_roi: 84.4%
+   18: babajotai_code_dirt（ダート馬場状態） | pass_rate: 0.500 | place_roi: 81.1%
+   19: kyori（距離） | pass_rate: 0.500 | place_roi: 80.2%
+   20: kishu_kitai_sanchakunai_ritsu（騎手期待3着内率） | pass_rate: 0.500 | place_roi: 80.2%
+   21: shirushi_code_3（印コード3） | pass_rate: 0.500 | place_roi: 80.0%
+   22: shirushi_code_5（印コード5） | pass_rate: 0.500 | place_roi: 79.8%
+   23: umaban_clean（馬番） | pass_rate: 0.500 | place_roi: 79.6%
+   24: yy_int（YY値） | pass_rate: 0.500 | place_roi: 79.6%
+   25: sogo_shisu（総合指数） | pass_rate: 0.500 | place_roi: 79.5%
+   26: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 78.0%
+   27: uma_tokki_3（馬特記3） | pass_rate: 0.500 | place_roi: 74.3%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_10_芝】小倉芝（52件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: kyori_tekisei_2（距離適性2） | pass_rate: 1.000 | place_roi: 85.5%
+    2: bataiju_change_bin（馬体重増減（区分）） | pass_rate: 0.800 | place_roi: 76.9%
+    3: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.750 | place_roi: 82.4%
+    4: prev1_corner4_bin（前走4角位置（区分）） | pass_rate: 0.750 | place_roi: 81.4%
+    5: uma_deokure_ritsu（出遅れ率） | pass_rate: 0.643 | place_roi: 85.5%
+    6: ls_shisu_juni（LS指数順位） | pass_rate: 0.625 | place_roi: 83.0%
+    7: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.625 | place_roi: 78.6%
+    8: goal_sa（ゴール差） | pass_rate: 0.615 | place_roi: 75.8%
+    9: prev1_corner4（前走4角位置） | pass_rate: 0.611 | place_roi: 81.4%
+   10: hobokusaki_rank（放牧先ランク） | pass_rate: 0.600 | place_roi: 82.8%
+   11: joken_class_code（条件クラス） | pass_rate: 0.600 | place_roi: 81.4%
+   12: yy_int（YY値） | pass_rate: 0.600 | place_roi: 80.3%
+   13: tenkai_kigo_code（展開記号） | pass_rate: 0.600 | place_roi: 79.7%
+   14: kyori_tekisei（距離適性） | pass_rate: 0.600 | place_roi: 78.5%
+   15: uma_tokki_1（馬特記1） | pass_rate: 0.593 | place_roi: 82.2%
+   16: idm（IDM） | pass_rate: 0.590 | place_roi: 78.4%
+   17: prev1_chakujun（前走着順） | pass_rate: 0.588 | place_roi: 80.8%
+   18: taikei_tomo（体型（トモ）） | pass_rate: 0.588 | place_roi: 76.2%
+   19: bac_tosu（出走頭数） | pass_rate: 0.583 | place_roi: 79.2%
+   20: kohan_3f_sa（後半3F差） | pass_rate: 0.579 | place_roi: 80.1%
+   21: rotation（ローテーション） | pass_rate: 0.579 | place_roi: 78.1%
+   22: ichi_shisu（位置指数） | pass_rate: 0.578 | place_roi: 80.3%
+   23: kijun_odds_tansho（基準単勝オッズ） | pass_rate: 0.571 | place_roi: 77.9%
+   24: joa_odds_shisu（JOAオッズ指数） | pass_rate: 0.571 | place_roi: 77.9%
+   25: prev2_chakujun（前2走着順） | pass_rate: 0.562 | place_roi: 76.1%
+   26: ichi_shisu_juni（位置指数順位） | pass_rate: 0.556 | place_roi: 79.3%
+   27: yoso_juni（予想順位） | pass_rate: 0.556 | place_roi: 77.2%
+   28: joho_shisu（情報指数） | pass_rate: 0.537 | place_roi: 78.3%
+   29: kishu_shisu（騎手指数） | pass_rate: 0.536 | place_roi: 80.0%
+   30: manken_shisu（万券指数） | pass_rate: 0.532 | place_roi: 82.0%
+   31: prev1_bataiju（前走馬体重） | pass_rate: 0.531 | place_roi: 81.4%
+   32: gekiso_shisu（激走指数） | pass_rate: 0.529 | place_roi: 79.2%
+   33: uma_tokki_2（馬特記2） | pass_rate: 0.526 | place_roi: 83.1%
+   34: babajotai_code_shiba | pass_rate: 0.500 | place_roi: 86.0%
+   35: uma_tokki_3（馬特記3） | pass_rate: 0.500 | place_roi: 85.6%
+   36: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 84.9%
+   37: barei（馬齢） | pass_rate: 0.500 | place_roi: 83.0%
+   38: kyusha_hyoka_code（厩舎評価） | pass_rate: 0.500 | place_roi: 81.3%
+   39: shutoku_shokin_ruikei（獲得賞金累計） | pass_rate: 0.500 | place_roi: 81.2%
+   40: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 81.1%
+   41: sanchimei（産地名） | pass_rate: 0.500 | place_roi: 80.9%
+   42: bac_jouken（レース条件） | pass_rate: 0.500 | place_roi: 80.5%
+   43: agari_shisu_juni（上がり指数順位） | pass_rate: 0.500 | place_roi: 80.2%
+   44: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 80.1%
+   45: bac_shubetsu（レース種別） | pass_rate: 0.500 | place_roi: 80.0%
+   46: tenko_code（天候） | pass_rate: 0.500 | place_roi: 79.7%
+   47: kyori（距離） | pass_rate: 0.500 | place_roi: 79.4%
+   48: kyusha_shisu（厩舎指数） | pass_rate: 0.500 | place_roi: 79.1%
+   49: prev1_kyakushitsu（前走脚質） | pass_rate: 0.500 | place_roi: 78.9%
+   50: goal_juni（ゴール順位） | pass_rate: 0.500 | place_roi: 78.6%
+   51: ten_shisu_juni（テン指数順位） | pass_rate: 0.500 | place_roi: 78.1%
+   52: moshoku_code（毛色コード） | pass_rate: 0.500 | place_roi: 77.9%
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【KEIBAJO_SURFACE_10_ダ】小倉ダート（38件）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    1: kishu_minarai_code（騎手見習い） | pass_rate: 0.800 | place_roi: 79.6%
+    2: kyusha_hyoka_code（厩舎評価） | pass_rate: 0.667 | place_roi: 84.5%
+    3: chokyo_yajirushi_code（調教矢印） | pass_rate: 0.667 | place_roi: 77.2%
+    4: prev1_bataiju_bin（前走馬体重（区分）） | pass_rate: 0.625 | place_roi: 77.7%
+    5: joken_class_code（条件クラス） | pass_rate: 0.600 | place_roi: 82.8%
+    6: kishu_rank（騎手ランク） | pass_rate: 0.600 | place_roi: 81.2%
+    7: prev3_chakujun（前3走着順） | pass_rate: 0.600 | place_roi: 80.0%
+    8: uma_tokki_2（馬特記2） | pass_rate: 0.583 | place_roi: 76.1%
+    9: uma_tokki_1（馬特記1） | pass_rate: 0.579 | place_roi: 76.1%
+   10: yoso_juni（予想順位） | pass_rate: 0.562 | place_roi: 80.2%
+   11: class_code（クラスコード） | pass_rate: 0.556 | place_roi: 78.6%
+   12: taikei_dou（体型（胴）） | pass_rate: 0.556 | place_roi: 75.7%
+   13: joho_shisu（情報指数） | pass_rate: 0.540 | place_roi: 79.3%
+   14: taikei_tomo（体型（トモ）） | pass_rate: 0.533 | place_roi: 80.3%
+   15: kishu_kitai_tansho_ritsu（騎手期待単勝率） | pass_rate: 0.526 | place_roi: 81.1%
+   16: prev1_bataiju（前走馬体重） | pass_rate: 0.524 | place_roi: 79.4%
+   17: hizume_code（蹄コード） | pass_rate: 0.500 | place_roi: 85.6%
+   18: tenko_code（天候） | pass_rate: 0.500 | place_roi: 82.1%
+   19: shirushi_code_6（印コード6） | pass_rate: 0.500 | place_roi: 80.9%
+   20: shirushi_code_4（印コード4） | pass_rate: 0.500 | place_roi: 80.6%
+   21: bac_jouken（レース条件） | pass_rate: 0.500 | place_roi: 80.2%
+   22: bac_tosu（出走頭数） | pass_rate: 0.500 | place_roi: 80.0%
+   23: gekiso_type（激走タイプ） | pass_rate: 0.500 | place_roi: 79.8%
+   24: manken_shirushi（万券印） | pass_rate: 0.500 | place_roi: 79.5%
+   25: shirushi_code_2（印コード2） | pass_rate: 0.500 | place_roi: 79.3%
+   26: prev2_chakujun（前2走着順） | pass_rate: 0.500 | place_roi: 78.9%
+   27: yy_int（YY値） | pass_rate: 0.500 | place_roi: 78.6%
+   28: kyori_tekisei（距離適性） | pass_rate: 0.500 | place_roi: 78.3%
+   29: kohan_3f_juni | pass_rate: 0.500 | place_roi: 77.6%
+   30: idm（IDM） | pass_rate: 0.500 | place_roi: 77.6%
+   31: prev1_chakujun（前走着順） | pass_rate: 0.500 | place_roi: 77.5%
+   32: futan_juryo（斤量） | pass_rate: 0.500 | place_roi: 76.8%
+   33: kohan_3f_sa（後半3F差） | pass_rate: 0.500 | place_roi: 76.3%
+   34: barei（馬齢） | pass_rate: 0.500 | place_roi: 76.3%
+   35: bac_shubetsu（レース種別） | pass_rate: 0.500 | place_roi: 76.1%
+   36: rotation（ローテーション） | pass_rate: 0.500 | place_roi: 75.2%
+   37: kyusha_shisu（厩舎指数） | pass_rate: 0.500 | place_roi: 74.3%
+   38: dochu_sa（道中差） | pass_rate: 0.500 | place_roi: 74.0%

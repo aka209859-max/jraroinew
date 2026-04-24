@@ -1,0 +1,4 @@
+﻿bin,n,win_count,place_count,win_rate,place_rate,win_roi,place_roi,decision_80pct
+稍重,158,17,,10.8,,61.5,74.9,X
+良,607,61,,10.0,,91.6,81.9,O
+重以上,87,9,,10.3,,65.9,88.5,O

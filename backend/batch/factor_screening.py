@@ -37,7 +37,7 @@ YEAR_MAX = "2025"
 NUM_BINS = 10
 MIN_SAMPLES_PER_BIN = 30
 MIN_TOTAL_SAMPLES = NUM_BINS * MIN_SAMPLES_PER_BIN
-DEFAULT_CEO_ROWS = 100_000
+DEFAULT_CEO_ROWS = 0  # 0 = 無制限（全競馬場カバーのため）
 
 # --------------------------------------------------------------------------
 # Single-factor definitions (50 factors)
@@ -1548,6 +1548,8 @@ def main() -> None:
                         help="(full-scan --cross) Max factor pairs to cross-analyze (default 200)")
     parser.add_argument("--no-ks", action="store_true",
                         help="(full-scan) Skip KEIBAJO_SURFACE segment analysis")
+    parser.add_argument("--skip-phase1", action="store_true",
+                        help="(full-scan) Skip Phase 1 — load existing phase1_single_all.csv instead")
     args = parser.parse_args()
 
     output_dir = Path(args.output)
@@ -1696,15 +1698,28 @@ def main() -> None:
             print(f"[INFO] Column limit: {args.col_limit} (trial run)")
 
         # Phase 1
-        print(f"\n[INFO] Phase 1: single-factor scan "
-              f"({'no KEIBAJO_SURFACE' if args.no_ks else 'with KEIBAJO_SURFACE'})...")
-        p1_results = run_phase1_scan(
-            df,
-            scan_cols,
-            include_keibajo_surface=not args.no_ks,
-            col_limit=args.col_limit,
-        )
-        print(f"[INFO] Phase 1 complete: {len(p1_results)} results")
+        if args.skip_phase1:
+            p1_csv = output_dir / "phase1_single_all.csv"
+            if not p1_csv.exists():
+                print(f"[ERROR] --skip-phase1: {p1_csv} not found. Run Phase 1 first.")
+                sys.exit(1)
+            p1_df = pd.read_csv(p1_csv)
+            p1_results = p1_df.to_dict(orient="records")
+            # rename 'factor' field if CSV uses different key
+            for r in p1_results:
+                if "factor" not in r and "factors" in r:
+                    r["factor"] = r["factors"]
+            print(f"[INFO] Phase 1 skipped -- loaded {len(p1_results)} results from {p1_csv}")
+        else:
+            print(f"\n[INFO] Phase 1: single-factor scan "
+                  f"({'no KEIBAJO_SURFACE' if args.no_ks else 'with KEIBAJO_SURFACE'})...")
+            p1_results = run_phase1_scan(
+                df,
+                scan_cols,
+                include_keibajo_surface=not args.no_ks,
+                col_limit=args.col_limit,
+            )
+            print(f"[INFO] Phase 1 complete: {len(p1_results)} results")
 
         # Phase 2 cross (optional)
         p2_results: List[Dict] = []
