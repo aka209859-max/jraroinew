@@ -4,25 +4,37 @@ factor_investment_screening.py
 ================================
 EV特化型精鋭ファクター抽出スクリプト。
 
-既存の採用ファクター（1,390件）に対して4つの過酷なフィルターを適用し、
+既存の採用ファクター（1,390件）に対して4つのフィルターを適用し、
 年間回収率100%超えを実現する投資モデルの基盤となる精鋭ファクターを抽出する。
 
+【ROI計算方式: 補正回収率（CLAUDE.md規約準拠）】
+  - 均等払戻方式（TARGET_PAYOUT=10,000円）:
+      bet_amount = TARGET_PAYOUT / tansho_odds
+  - 108段階複勝配当補正係数（backend/config/odds_correction.py）:
+      corrected_payout = TARGET_PAYOUT * correction_coeff(odds) * is_hit
+  - 期間重み付け（2016=1, ..., 2025=10）:
+      year_weight = yy_int - 15（clip 1-10）
+  - 補正回収率 = Sigma(corrected_payout * year_weight)
+                 / Sigma(bet_amount * year_weight) * 100
+
+【CLB計算: ビン別補正ROIの95%信頼区間下限】
+  個票レベルではなくビン別ROI（K個）の統計量を使用:
+    CLB = mean(bin_rois) - 1.96 * std(bin_rois) / sqrt(K)
+  → ビン間の一貫性（安定性）を保守的に評価
+
 【フィルター一覧】
-  Filter 1: CLB（95%信頼区間下限） >= 90.0%
-            個票レベルの分散を考慮した保守的回収率。小標本・高分散を自動排除。
-  Filter 2: OOT安定性（2023-2025検証）CLB >= 85.0% / 年別ドローダウン < 70% 禁止
-            直近3年でも優位性を維持するルールのみを採用。
-  Filter 3: クロスゲイン >= +5.0%（単独ファクターは自動通過）
-            A×B組合せが MAX(A, B) を5%以上上回らないと却下。多重共線性排除。
-  Filter 4: 印コード逆張りフィルター（グリッドサーチ）
-            shirushi_code を含む場合のみ適用。単勝オッズ閾値×人気閾値の組み合わせを
-            全探索し、市場乖離条件下でも CLB >= 90.0% を要求する。
+  Filter 1: CLB（ビン別補正ROIの95%CI下限）>= F1_CLB_THRESHOLD%
+  Filter 2: OOT安定性（2023-2025）補正ROI CLB >= F2_OOT_CLB% / 年別最低 >= F2_MIN_YEARLY_ROI%
+  Filter 3: クロスゲイン >= F3_CROSS_GAIN%（単独は自動通過）
+  Filter 4: 印コード逆張りグリッドサーチ CLB >= F4_CLB_THRESHOLD%（非印は自動通過）
 
 Usage:
   py -3.12 -m backend.batch.factor_investment_screening [--limit N] [--no-save]
+  py -3.12 -m backend.batch.factor_investment_screening --recompute  # 閾値のみ再適用
 
 Output:
   reports/screening/investment_factors.csv
+  reports/screening/investment_factors_elite.csv
 """
 
 import argparse
@@ -47,21 +59,29 @@ from backend.batch.factor_screening import (
     ALL_FACTORS,
 )
 
+# 補正係数マスタ（108段階）
+from backend.config.odds_correction import FUKUSHO_CORRECTION
+
 # --------------------------------------------------------------------------
 # Config
 # --------------------------------------------------------------------------
 OUTPUT_DIR = Path(__file__).parent.parent.parent / "reports" / "screening"
 OUTPUT_CSV = OUTPUT_DIR / "investment_factors.csv"
 
-# Filter thresholds  （データドリブン校正済み 2026-04-26）
-# 個票レベル複勝ベット分散が大きく、CLBはmeanより平均3-14%低くなる。
-# 市場平均CLB≒75%（JRA控除率25%相当）を基準とし、それを上回る信頼性を要求する。
-F1_CLB_THRESHOLD     = 79.0   # Filter1: 保守的回収率下限 (%)  市場+4%以上 (旧90.0)
-F2_OOT_CLB           = 75.0   # Filter2: OOT CLB下限 (%)      市場基準超え (旧85.0)
-F2_MIN_YEARLY_ROI    = 60.0   # Filter2: 年別最低回収率 (%)   極端な悪化防止 (旧70.0)
+# --------------------------------------------------------------------------
+# 補正回収率パラメータ
+# --------------------------------------------------------------------------
+TARGET_PAYOUT: float = 10_000.0  # 均等払戻基準額（円）
+
+# Filter thresholds（補正回収率ベース・ビン別CLB基準。初回実行後に校正予定）
+# 補正回収率ベースライン ≒ 80%（JRA複勝控除率20%相当）
+# ビン別CLBは個票CLBより安定的（binの一貫性を測定）
+F1_CLB_THRESHOLD     = 80.0   # Filter1: ビン別補正ROI CLB下限 (%) 市場基準超え
+F2_OOT_CLB           = 77.0   # Filter2: OOT 補正ROI CLB下限 (%)
+F2_MIN_YEARLY_ROI    = 65.0   # Filter2: 年別最低補正ROI (%)
 F2_MIN_OOT_BETS      = 100    # Filter2: OOT最小ベット数
-F3_CROSS_GAIN        = 0.0    # Filter3: クロスゲイン最低値 (%) 正値のみ要求 (旧5.0)
-F4_CLB_THRESHOLD     = 78.0   # Filter4: 印コード逆張りCLB下限 (%) 印CLB上位60% (旧90.0)
+F3_CROSS_GAIN        = 0.0    # Filter3: クロスゲイン最低値 (%) 正値のみ要求
+F4_CLB_THRESHOLD     = 80.0   # Filter4: 印逆張り補正ROI CLB下限 (%)
 
 # OOT year split
 TRAIN_YEAR_MAX = 22   # yy_int: 2016-2022
@@ -98,6 +118,68 @@ def _parse_tansho_odds(df: pd.DataFrame) -> pd.DataFrame:
 
 
 # --------------------------------------------------------------------------
+# 補正係数・補正列の一括計算（全DataFrame対象・高速ベクトル演算）
+# --------------------------------------------------------------------------
+def _vectorize_fukusho_correction(odds_series: pd.Series) -> pd.Series:
+    """
+    108段階複勝補正係数をベクトル演算で一括付与。
+    各行のtansho_odds_numericに対応する補正係数を返す。
+    境界条件: from_odds <= odds < to_odds
+    """
+    result = pd.Series(1.0, index=odds_series.index, dtype=float)
+    for from_odds, to_odds, correction in FUKUSHO_CORRECTION:
+        mask = (odds_series >= from_odds) & (odds_series < to_odds)
+        result[mask] = correction
+    return result
+
+
+def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    補正回収率計算に必要な列を事前に一括生成（1回だけ呼び出す）。
+
+    生成列:
+      _fukusho_corr   : 108段階複勝補正係数
+      _is_hit         : 複勝的中フラグ (1=的中, 0=外れ)
+      _year_weight    : 期間重み (2016=1, ..., 2025=10)
+      _bet_amount     : TARGET_PAYOUT / tansho_odds_numeric (均等払戻ベット額)
+      _corrected_pay  : TARGET_PAYOUT * correction * is_hit (補正払戻額)
+    """
+    if "tansho_odds_numeric" not in df.columns:
+        df = _parse_tansho_odds(df)
+
+    # 108段階複勝補正係数（ベクトル演算）
+    df["_fukusho_corr"] = _vectorize_fukusho_correction(df["tansho_odds_numeric"])
+
+    # 複勝的中フラグ (haraimodoshi_fukusho > 0 で着内)
+    df["_is_hit"] = (
+        pd.to_numeric(df["haraimodoshi_fukusho"], errors="coerce")
+        .fillna(0.0)
+        .gt(0)
+        .astype(float)
+    )
+
+    # 期間重み: yy_int(16-25) - 15 → 1-10
+    if "year_weight" in df.columns:
+        df["_year_weight"] = df["year_weight"].clip(lower=1, upper=10).astype(float)
+    else:
+        df["_year_weight"] = (df["yy_int"] - 15).clip(lower=1, upper=10).astype(float)
+
+    # 均等払戻ベット額 (オッズ0/NaN は除外)
+    safe_odds = df["tansho_odds_numeric"].replace(0.0, np.nan)
+    df["_bet_amount"] = TARGET_PAYOUT / safe_odds
+
+    # 補正払戻額（的中時のみ）
+    df["_corrected_pay"] = TARGET_PAYOUT * df["_fukusho_corr"] * df["_is_hit"]
+
+    print(
+        f"[INFO] prepare_corrected_cols: correction range "
+        f"[{df['_fukusho_corr'].min():.2f}, {df['_fukusho_corr'].max():.2f}], "
+        f"hit_rate={df['_is_hit'].mean()*100:.1f}%"
+    )
+    return df
+
+
+# --------------------------------------------------------------------------
 # Segment DataFrame map
 # --------------------------------------------------------------------------
 def build_seg_df_map(df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
@@ -122,21 +204,39 @@ def build_seg_df_map(df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
 
 
 # --------------------------------------------------------------------------
-# Core: Get pooled bets from valid bins
+# Core: Get per-bin corrected ROI from valid bins
 # --------------------------------------------------------------------------
-def get_valid_bin_bets(
+def _bin_corrected_roi(grp: pd.DataFrame) -> Optional[float]:
+    """
+    ビン内の補正回収率を算出。
+      corrected_roi = Sigma(corrected_pay * year_weight)
+                      / Sigma(bet_amount * year_weight) * 100
+    """
+    w    = grp["_year_weight"]
+    wbet = (grp["_bet_amount"] * w).sum()
+    wpay = (grp["_corrected_pay"] * w).sum()
+    if wbet <= 0 or np.isnan(wbet):
+        return None
+    return float(wpay / wbet * 100.0)
+
+
+def get_valid_bin_rois(
     seg_df: pd.DataFrame,
     factors: List[str],
     min_n: int = BIN_MIN_N,
-) -> Optional[np.ndarray]:
+) -> Optional[Tuple[np.ndarray, int]]:
     """
     指定ファクター×セグメントで有効ビン（n >= min_n）を抽出し、
-    全ビットのharaimodoshi_fukushoを結合したnp.ndarrayを返す。
+    各ビンの補正回収率リスト と 総ベット数 を返す。
 
-    Returns None if insufficient data.
+    Returns: (bin_rois: np.ndarray, total_n: int) or None
     """
     missing = [f for f in factors if f not in seg_df.columns]
     if missing:
+        return None
+
+    # 補正列が存在しない場合（古いデータ等）は None
+    if "_bet_amount" not in seg_df.columns:
         return None
 
     combo_col = _build_combo_col(seg_df, factors)
@@ -147,77 +247,92 @@ def get_valid_bin_bets(
     df2 = seg_df[valid_mask].copy()
     df2["_combo"] = combo_col[valid_mask].values
 
-    valid_bets_list = []
+    bin_rois: List[float] = []
+    total_n = 0
     for _, grp in df2.groupby("_combo", sort=True):
         if len(grp) >= min_n:
-            valid_bets_list.append(grp["haraimodoshi_fukusho"].values.astype(float))
+            roi = _bin_corrected_roi(grp)
+            if roi is not None:
+                bin_rois.append(roi)
+                total_n += len(grp)
 
-    if not valid_bets_list:
+    if not bin_rois:
         return None
 
-    pooled = np.concatenate(valid_bets_list)
-    return pooled if len(pooled) >= min_n else None
+    arr = np.array(bin_rois, dtype=float)
+    return (arr, total_n) if total_n >= min_n else None
 
 
 # --------------------------------------------------------------------------
-# Filter 1: Confidence Lower Bound
+# Filter 1: Confidence Lower Bound（ビン別補正ROI版）
 # --------------------------------------------------------------------------
-def calc_confidence_lower_bound(bets: np.ndarray) -> float:
+def calc_confidence_lower_bound(bin_rois: np.ndarray) -> float:
     """
-    個票レベルの95%信頼区間下限（保守的回収率）を計算。
+    ビン別補正ROI（K個）の95%信頼区間下限を計算。
 
-    bets[i] = haraimodoshi_fukusho_i
-      - 複勝的中: 実配当（例: 120 = 120円/100円投資）
-      - 外れ    : 0
+    CLB = mean(bin_rois) - 1.96 * std(bin_rois) / sqrt(K)
 
-    CLB = mean - 1.96 * std / sqrt(n)
+    個票ではなくビン数 K を使うことで：
+      - 個票間の自己相関/異分散の影響を低減
+      - ビン間の一貫性（安定性）をより直接的に評価
 
-    Returns: 保守的回収率 (%)
+    Returns: 保守的補正回収率下限 (%)
     """
-    n = len(bets)
-    if n < 2:
-        return -999.0
-    mean_x = float(bets.mean())
-    std_x  = float(bets.std(ddof=1))
-    return mean_x - 1.96 * std_x / math.sqrt(n)
+    K = len(bin_rois)
+    if K < 2:
+        return float(bin_rois[0]) if K == 1 else -999.0
+    mean_r = float(bin_rois.mean())
+    std_r  = float(bin_rois.std(ddof=1))
+    return mean_r - 1.96 * std_r / math.sqrt(K)
 
 
 # --------------------------------------------------------------------------
-# Filter 2: OOT Stability
+# Filter 2: OOT Stability（補正ROI版）
 # --------------------------------------------------------------------------
+def _calc_pooled_corrected_roi(seg_df: pd.DataFrame, factors: List[str], min_n: int = 10) -> Optional[float]:
+    """有効ビン全体プールの補正回収率（CLBではなく平均値）を返す。年別ROI用。"""
+    result = get_valid_bin_rois(seg_df, factors, min_n=min_n)
+    if result is None:
+        return None
+    bin_rois, _ = result
+    return round(float(bin_rois.mean()), 2)
+
+
 def evaluate_oot_stability(
     seg_df: pd.DataFrame,
     factors: List[str],
 ) -> Optional[Dict]:
     """
-    OOT（Out-of-Time）安定性チェック。
+    OOT（Out-of-Time）安定性チェック（補正回収率ベース）。
     - 訓練期間: yy_int <= 22 (2016-2022)
     - 検証期間: yy_int >= 23 (2023-2025)
 
     Returns:
         dict with keys: oot_n_bets, oot_mean_roi, oot_conservative_roi,
-                        yearly_roi (dict 23/24/25), min_yearly_roi, pass
+                        yearly_roi (dict 23/24/25), min_yearly_roi, filter2_pass
         None if insufficient OOT data.
     """
     oot_df = seg_df[seg_df["yy_int"] >= OOT_YEAR_MIN]
     if len(oot_df) < F2_MIN_OOT_BETS:
         return None
 
-    # OOT全体のCLB
-    oot_bets = get_valid_bin_bets(oot_df, factors, min_n=OOT_BIN_MIN_N)
-    if oot_bets is None or len(oot_bets) < F2_MIN_OOT_BETS:
+    # OOT全体のビン別補正ROI → CLB
+    oot_result = get_valid_bin_rois(oot_df, factors, min_n=OOT_BIN_MIN_N)
+    if oot_result is None:
+        return None
+    oot_bin_rois, oot_total_n = oot_result
+    if oot_total_n < F2_MIN_OOT_BETS:
         return None
 
-    oot_clb = calc_confidence_lower_bound(oot_bets)
-    oot_mean = float(oot_bets.mean())
+    oot_clb  = calc_confidence_lower_bound(oot_bin_rois)
+    oot_mean = float(oot_bin_rois.mean())
 
-    # 年別ROI（ドローダウンチェック）
+    # 年別補正ROI（ドローダウンチェック）
     yearly_roi: Dict[int, float] = {}
     for yr in [23, 24, 25]:
-        yr_df = oot_df[oot_df["yy_int"] == yr]
-        yr_bets = get_valid_bin_bets(yr_df, factors, min_n=10)
-        if yr_bets is not None and len(yr_bets) >= 10:
-            yearly_roi[yr] = round(float(yr_bets.mean()), 1)
+        yr_roi = _calc_pooled_corrected_roi(oot_df[oot_df["yy_int"] == yr], factors, min_n=10)
+        if yr_roi is not None:
+            yearly_roi[yr] = yr_roi
 
     min_yearly = min(yearly_roi.values()) if yearly_roi else None
 
@@ -227,19 +342,19 @@ def evaluate_oot_stability(
     )
 
     return {
-        "oot_n_bets":          len(oot_bets),
-        "oot_mean_roi":        round(oot_mean, 2),
+        "oot_n_bets":           oot_total_n,
+        "oot_mean_roi":         round(oot_mean, 2),
         "oot_conservative_roi": round(oot_clb, 2),
-        "oot_roi_2023":        yearly_roi.get(23),
-        "oot_roi_2024":        yearly_roi.get(24),
-        "oot_roi_2025":        yearly_roi.get(25),
-        "oot_min_yearly_roi":  min_yearly,
-        "filter2_pass":        oot_pass,
+        "oot_roi_2023":         yearly_roi.get(23),
+        "oot_roi_2024":         yearly_roi.get(24),
+        "oot_roi_2025":         yearly_roi.get(25),
+        "oot_min_yearly_roi":   min_yearly,
+        "filter2_pass":         oot_pass,
     }
 
 
 # --------------------------------------------------------------------------
-# Filter 3: Cross Gain
+# Filter 3: Cross Gain（補正ROI版）
 # --------------------------------------------------------------------------
 def calc_simple_roi(
     seg_df: pd.DataFrame,
@@ -247,13 +362,10 @@ def calc_simple_roi(
     min_n: int = 30,
 ) -> Optional[float]:
     """
-    ファクターの単純平均複勝回収率を返す（CLBではなく平均値）。
+    ファクターの補正回収率（ビン平均）を返す（CLBではなく平均値）。
     クロスゲイン比較用。
     """
-    bets = get_valid_bin_bets(seg_df, factors, min_n=min_n)
-    if bets is None or len(bets) < min_n:
-        return None
-    return float(bets.mean())
+    return _calc_pooled_corrected_roi(seg_df, factors, min_n=min_n)
 
 
 def calc_cross_gain(
@@ -345,16 +457,17 @@ def find_optimal_shirushi_params(
             if len(filtered_df) < BIN_MIN_N:
                 continue
 
-            bets = get_valid_bin_bets(filtered_df, factors, min_n=30)
-            if bets is None or len(bets) < 30:
+            f4_result = get_valid_bin_rois(filtered_df, factors, min_n=30)
+            if f4_result is None:
                 continue
+            f4_bin_rois, _ = f4_result
 
-            clb = calc_confidence_lower_bound(bets)
+            clb = calc_confidence_lower_bound(f4_bin_rois)
             if clb > best_clb:
                 best_clb     = clb
                 best_odds_t  = odds_t
                 best_rank_t  = rank_t
-                best_gap_roi = round(float(bets.mean()), 2)
+                best_gap_roi = round(float(f4_bin_rois.mean()), 2)
 
     passed = best_clb >= F4_CLB_THRESHOLD
 
@@ -404,21 +517,22 @@ def evaluate_factor(
         "orig_pass_rate":     source_meta.get("pass_rate"),
     }
 
-    # ── 有効ビン bets 取得 ──────────────────────────────────────────────
-    bets = get_valid_bin_bets(seg_df, factors, min_n=BIN_MIN_N)
-    if bets is None:
+    # ── 有効ビン別補正ROI 取得 ─────────────────────────────────────────
+    bin_result = get_valid_bin_rois(seg_df, factors, min_n=BIN_MIN_N)
+    if bin_result is None:
         return {**base,
                 "skip_reason": "no_valid_bins",
                 "filter1_pass": False, "filter2_pass": False,
                 "filter3_pass": False, "filter4_pass": False,
                 "all_pass": False, "scaling_raw_score": None}
 
-    n_valid_bets = len(bets)
-    mean_roi     = round(float(bets.mean()), 2)
-    std_ind      = round(float(bets.std(ddof=1)), 2)
+    bin_rois, n_valid_bets = bin_result
+    n_valid_bins = len(bin_rois)
+    mean_roi     = round(float(bin_rois.mean()), 2)   # ビン別補正ROI平均
+    std_bin      = round(float(bin_rois.std(ddof=1)) if n_valid_bins > 1 else 0.0, 2)
 
-    # ── Filter 1: CLB ──────────────────────────────────────────────────
-    clb = calc_confidence_lower_bound(bets)
+    # ── Filter 1: ビン別補正ROI CLB ───────────────────────────────────
+    clb = calc_confidence_lower_bound(bin_rois)
     clb_r = round(clb, 2)
     f1_pass = clb >= F1_CLB_THRESHOLD
 
@@ -462,14 +576,16 @@ def evaluate_factor(
     # ── All pass ────────────────────────────────────────────────────────
     all_pass = f1_pass and f2_result["filter2_pass"] and f3_pass and f4_pass
 
-    scaling_raw = round(clb - 95.0, 2) if f1_pass else None
+    # scaling_raw_score: CLB - ベースライン(80%) → TANHスケーリング用
+    scaling_raw = round(clb - 80.0, 2) if f1_pass else None
 
     row = {
         **base,
-        # F1
+        # F1（補正回収率ベース）
+        "n_valid_bins":        n_valid_bins,
         "n_valid_bets":        n_valid_bets,
-        "mean_place_roi":      mean_roi,
-        "std_individual":      std_ind,
+        "mean_corrected_roi":  mean_roi,
+        "std_bin_roi":         std_bin,
         "conservative_roi_lb": clb_r,
         "filter1_pass":        f1_pass,
         # F2
@@ -627,6 +743,10 @@ def load_and_prepare(row_limit: int = 0) -> pd.DataFrame:
     df = _parse_tansho_odds(df)
     print(f"[INFO] tansho_odds_numeric: range [{df['tansho_odds_numeric'].min():.1f}, {df['tansho_odds_numeric'].max():.1f}]")
 
+    # 補正回収率計算用列を一括生成（108段階補正係数 + 期間重み + 均等払戻）
+    print("[INFO] Preparing corrected ROI columns...")
+    df = prepare_corrected_cols(df)
+
     return df
 
 
@@ -683,7 +803,7 @@ def _reapply_thresholds(df: pd.DataFrame) -> pd.DataFrame:
     # all_pass & scaling_raw_score
     df["all_pass"] = df["filter4_pass"]
     df["scaling_raw_score"] = df["conservative_roi_lb"].where(df["all_pass"]).apply(
-        lambda x: round(x - 95.0, 4) if pd.notna(x) else None
+        lambda x: round(x - 80.0, 4) if pd.notna(x) else None
     )
     return df
 
@@ -721,10 +841,11 @@ def print_summary(results_df: pd.DataFrame) -> None:
         elite_sorted = elite.sort_values("conservative_roi_lb", ascending=False).head(3)
         print("\n  ★★ TOP3 ファクター（CLB降順）:")
         for rank, (_, r) in enumerate(elite_sorted.iterrows(), 1):
+            mean_col = "mean_corrected_roi" if "mean_corrected_roi" in r.index else "mean_place_roi"
             print(
                 f"  #{rank}: [{r['segment']}] {r['factors']}"
                 f"  CLB={r['conservative_roi_lb']:.2f}%"
-                f"  mean={r['mean_place_roi']:.1f}%"
+                f"  mean={r[mean_col]:.1f}%"
                 f"  n={int(r['n_valid_bets']):,}"
             )
     print()
