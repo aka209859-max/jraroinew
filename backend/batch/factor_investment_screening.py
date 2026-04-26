@@ -152,7 +152,9 @@ def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
       _fukusho_corr   : 108段階複勝補正係数
       _is_hit         : 複勝的中フラグ (1=的中, 0=外れ)
       _year_weight    : 期間重み (2016=1, ..., 2025=10)
-      _corrected_pay  : haraimodoshi_fukusho × FUKUSHO_CORRECTION（等額ベット補正済み複勝払戻）
+      _bet_amount     : TARGET_PAYOUT / tansho_odds_numeric（均等払戻ベット額）
+      _corrected_pay  : TARGET_PAYOUT × FUKUSHO_CORRECTION × is_hit（補正払戻・複勝）
+      _tansho_corrected_pay : TARGET_PAYOUT × TANSHO_CORRECTION × is_hit（補正払戻・単勝）
       _corrected_pay  : TARGET_PAYOUT * correction * is_hit (補正払戻額)
     """
     if "tansho_odds_numeric" not in df.columns:
@@ -185,22 +187,21 @@ def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
     else:
         df["_year_weight"] = (df["yy_int"] - 15).clip(lower=1, upper=10).astype(float)
 
-    # ---------- 補正ROI = 等額ベット方式（100円/頭） ----------
-    # 補正係数を実払戻金額に乗算する方式。
-    #   corrected_roi = Σ(payout * correction * year_weight)
-    #                   / (Σyear_weight * 100) * 100
-    # ベースライン ≈ 80%（JRA複勝控除率20%相当） = CLAUDE.md閾値基準と整合。
-    #
-    # 注: 均等払戻方式（bet_amount = TARGET_PAYOUT/odds）は使わない。
-    # 理由: 複勝的中率(33%) >> 1/tansho_odds のため ROI が大幅膨張する。
+    # ---------- 補正回収率 = 均等払戻方式（methodology_corrected_roi.txt準拠）----------
+    # bet_amount[i]  = TARGET_PAYOUT / tansho_odds[i]
+    #                  （的中時に同額TARGET_PAYOUTを受け取るよう逆算したベット額）
+    # corr_payout[i] = TARGET_PAYOUT × correction(odds[i]) × is_hit[i]
+    # corrected_roi  = Σ(corr_payout × year_weight) / Σ(bet_amount × year_weight) × 100
 
-    # 複勝: haraimodoshi_fukusho（非着外=0）× 複勝補正係数
-    fukusho_raw = pd.to_numeric(df["haraimodoshi_fukusho"], errors="coerce").fillna(0.0)
-    df["_corrected_pay"]        = fukusho_raw * df["_fukusho_corr"]
+    # 均等払戻ベット額（オッズ0/NaN は除外）
+    safe_odds = df["tansho_odds_numeric"].replace(0.0, np.nan)
+    df["_bet_amount"] = TARGET_PAYOUT / safe_odds
 
-    # 単勝: haraimodoshi_tansho（非1着=0）× 単勝補正係数
-    tansho_raw = pd.to_numeric(df["haraimodoshi_tansho"], errors="coerce").fillna(0.0)
-    df["_tansho_corrected_pay"] = tansho_raw * df["_tansho_corr"]
+    # 複勝補正払戻額（的中時=TARGET_PAYOUT×correction, 着外=0）
+    df["_corrected_pay"] = TARGET_PAYOUT * df["_fukusho_corr"] * df["_is_fukusho_hit"]
+
+    # 単勝補正払戻額（的中時=TARGET_PAYOUT×correction, 着外=0）
+    df["_tansho_corrected_pay"] = TARGET_PAYOUT * df["_tansho_corr"] * df["_is_tansho_hit"]
 
     # 後方互換: _is_hit は複勝的中フラグのエイリアス
     df["_is_hit"] = df["_is_fukusho_hit"]
@@ -244,28 +245,24 @@ def build_seg_df_map(df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
 # --------------------------------------------------------------------------
 def _bin_corrected_roi(grp: pd.DataFrame, is_tansho: bool = False) -> Optional[float]:
     """
-    ビン内の補正回収率を算出（等額ベット・100円/頭）。
+    ビン内の均等払戻補正回収率を算出（methodology_corrected_roi.txt準拠）。
 
-      corrected_roi = Sigma(corrected_payout[i] * year_weight[i])
-                      / (Sigma(year_weight[i]) * 100) * 100
+      corrected_roi = Sigma(corr_payout[i] * year_weight[i])
+                      / Sigma(bet_amount[i] * year_weight[i]) * 100
 
-    corrected_payout = haraimodoshi * correction_coefficient(odds)
-      - 複勝: haraimodoshi_fukusho × FUKUSHO_CORRECTION（108段階）
-      - 単勝: haraimodoshi_tansho  × TANSHO_CORRECTION（123段階）
-      - 非的中: haraimodoshi = 0 → corrected_payout = 0（自動）
-
-    ベースライン ≈ 80%（補正係数が1.0の場合は factor_screening の place_roi と同値）
+      bet_amount[i]  = TARGET_PAYOUT / tansho_odds[i]
+      corr_payout[i] = TARGET_PAYOUT * correction(odds[i]) * is_hit[i]
 
     Args:
-        is_tansho: True=単勝補正ROI, False=複勝補正ROI（デフォルト）
+        is_tansho: True=単勝補正ROI（123段階）, False=複勝補正ROI（108段階・デフォルト）
     """
     pay_col = "_tansho_corrected_pay" if is_tansho else "_corrected_pay"
-    w     = grp["_year_weight"]
-    w_sum = float(w.sum())
-    if w_sum <= 0:
-        return None
+    w    = grp["_year_weight"]
+    wbet = float((grp["_bet_amount"] * w).sum())
     wpay = float((grp[pay_col] * w).sum())
-    return wpay / (w_sum * 100.0) * 100.0
+    if wbet <= 0 or np.isnan(wbet):
+        return None
+    return wpay / wbet * 100.0
 
 
 def get_valid_bin_rois(
@@ -285,7 +282,7 @@ def get_valid_bin_rois(
         return None
 
     # 補正列が存在しない場合（古いデータ等）は None
-    if "_corrected_pay" not in seg_df.columns:
+    if "_bet_amount" not in seg_df.columns:
         return None
 
     combo_col = _build_combo_col(seg_df, factors)
