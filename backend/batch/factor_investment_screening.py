@@ -59,8 +59,8 @@ from backend.batch.factor_screening import (
     ALL_FACTORS,
 )
 
-# 補正係数マスタ（108段階）
-from backend.config.odds_correction import FUKUSHO_CORRECTION
+# 補正係数マスタ（単勝123段階 / 複勝108段階）
+from backend.config.odds_correction import FUKUSHO_CORRECTION, TANSHO_CORRECTION
 
 # --------------------------------------------------------------------------
 # Config
@@ -120,17 +120,28 @@ def _parse_tansho_odds(df: pd.DataFrame) -> pd.DataFrame:
 # --------------------------------------------------------------------------
 # 補正係数・補正列の一括計算（全DataFrame対象・高速ベクトル演算）
 # --------------------------------------------------------------------------
-def _vectorize_fukusho_correction(odds_series: pd.Series) -> pd.Series:
+def _vectorize_correction(odds_series: pd.Series, table) -> pd.Series:
     """
-    108段階複勝補正係数をベクトル演算で一括付与。
-    各行のtansho_odds_numericに対応する補正係数を返す。
+    補正係数テーブルをベクトル演算で一括付与。
     境界条件: from_odds <= odds < to_odds
+    Args:
+        table: TANSHO_CORRECTION (123段階) or FUKUSHO_CORRECTION (108段階)
     """
     result = pd.Series(1.0, index=odds_series.index, dtype=float)
-    for from_odds, to_odds, correction in FUKUSHO_CORRECTION:
+    for from_odds, to_odds, correction in table:
         mask = (odds_series >= from_odds) & (odds_series < to_odds)
         result[mask] = correction
     return result
+
+
+def _vectorize_fukusho_correction(odds_series: pd.Series) -> pd.Series:
+    """108段階複勝補正係数の一括付与。"""
+    return _vectorize_correction(odds_series, FUKUSHO_CORRECTION)
+
+
+def _vectorize_tansho_correction(odds_series: pd.Series) -> pd.Series:
+    """123段階単勝補正係数の一括付与。"""
+    return _vectorize_correction(odds_series, TANSHO_CORRECTION)
 
 
 def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
@@ -141,7 +152,7 @@ def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
       _fukusho_corr   : 108段階複勝補正係数
       _is_hit         : 複勝的中フラグ (1=的中, 0=外れ)
       _year_weight    : 期間重み (2016=1, ..., 2025=10)
-      _bet_amount     : TARGET_PAYOUT / tansho_odds_numeric (均等払戻ベット額)
+      _corrected_pay  : haraimodoshi_fukusho × FUKUSHO_CORRECTION（等額ベット補正済み複勝払戻）
       _corrected_pay  : TARGET_PAYOUT * correction * is_hit (補正払戻額)
     """
     if "tansho_odds_numeric" not in df.columns:
@@ -150,9 +161,19 @@ def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
     # 108段階複勝補正係数（ベクトル演算）
     df["_fukusho_corr"] = _vectorize_fukusho_correction(df["tansho_odds_numeric"])
 
+    # 123段階単勝補正係数（ベクトル演算）
+    df["_tansho_corr"] = _vectorize_tansho_correction(df["tansho_odds_numeric"])
+
     # 複勝的中フラグ (haraimodoshi_fukusho > 0 で着内)
-    df["_is_hit"] = (
+    df["_is_fukusho_hit"] = (
         pd.to_numeric(df["haraimodoshi_fukusho"], errors="coerce")
+        .fillna(0.0)
+        .gt(0)
+        .astype(float)
+    )
+    # 単勝的中フラグ (haraimodoshi_tansho > 0 で1着)
+    df["_is_tansho_hit"] = (
+        pd.to_numeric(df["haraimodoshi_tansho"], errors="coerce")
         .fillna(0.0)
         .gt(0)
         .astype(float)
@@ -164,17 +185,32 @@ def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
     else:
         df["_year_weight"] = (df["yy_int"] - 15).clip(lower=1, upper=10).astype(float)
 
-    # 均等払戻ベット額 (オッズ0/NaN は除外)
-    safe_odds = df["tansho_odds_numeric"].replace(0.0, np.nan)
-    df["_bet_amount"] = TARGET_PAYOUT / safe_odds
+    # ---------- 補正ROI = 等額ベット方式（100円/頭） ----------
+    # 補正係数を実払戻金額に乗算する方式。
+    #   corrected_roi = Σ(payout * correction * year_weight)
+    #                   / (Σyear_weight * 100) * 100
+    # ベースライン ≈ 80%（JRA複勝控除率20%相当） = CLAUDE.md閾値基準と整合。
+    #
+    # 注: 均等払戻方式（bet_amount = TARGET_PAYOUT/odds）は使わない。
+    # 理由: 複勝的中率(33%) >> 1/tansho_odds のため ROI が大幅膨張する。
 
-    # 補正払戻額（的中時のみ）
-    df["_corrected_pay"] = TARGET_PAYOUT * df["_fukusho_corr"] * df["_is_hit"]
+    # 複勝: haraimodoshi_fukusho（非着外=0）× 複勝補正係数
+    fukusho_raw = pd.to_numeric(df["haraimodoshi_fukusho"], errors="coerce").fillna(0.0)
+    df["_corrected_pay"]        = fukusho_raw * df["_fukusho_corr"]
+
+    # 単勝: haraimodoshi_tansho（非1着=0）× 単勝補正係数
+    tansho_raw = pd.to_numeric(df["haraimodoshi_tansho"], errors="coerce").fillna(0.0)
+    df["_tansho_corrected_pay"] = tansho_raw * df["_tansho_corr"]
+
+    # 後方互換: _is_hit は複勝的中フラグのエイリアス
+    df["_is_hit"] = df["_is_fukusho_hit"]
 
     print(
-        f"[INFO] prepare_corrected_cols: correction range "
-        f"[{df['_fukusho_corr'].min():.2f}, {df['_fukusho_corr'].max():.2f}], "
-        f"hit_rate={df['_is_hit'].mean()*100:.1f}%"
+        f"[INFO] prepare_corrected_cols: "
+        f"fukusho_corr=[{df['_fukusho_corr'].min():.2f},{df['_fukusho_corr'].max():.2f}] "
+        f"hit={df['_is_fukusho_hit'].mean()*100:.1f}%, "
+        f"tansho_corr=[{df['_tansho_corr'].min():.2f},{df['_tansho_corr'].max():.2f}] "
+        f"hit={df['_is_tansho_hit'].mean()*100:.1f}%"
     )
     return df
 
@@ -206,24 +242,37 @@ def build_seg_df_map(df: pd.DataFrame) -> Dict[str, pd.DataFrame]:
 # --------------------------------------------------------------------------
 # Core: Get per-bin corrected ROI from valid bins
 # --------------------------------------------------------------------------
-def _bin_corrected_roi(grp: pd.DataFrame) -> Optional[float]:
+def _bin_corrected_roi(grp: pd.DataFrame, is_tansho: bool = False) -> Optional[float]:
     """
-    ビン内の補正回収率を算出。
-      corrected_roi = Sigma(corrected_pay * year_weight)
-                      / Sigma(bet_amount * year_weight) * 100
+    ビン内の補正回収率を算出（等額ベット・100円/頭）。
+
+      corrected_roi = Sigma(corrected_payout[i] * year_weight[i])
+                      / (Sigma(year_weight[i]) * 100) * 100
+
+    corrected_payout = haraimodoshi * correction_coefficient(odds)
+      - 複勝: haraimodoshi_fukusho × FUKUSHO_CORRECTION（108段階）
+      - 単勝: haraimodoshi_tansho  × TANSHO_CORRECTION（123段階）
+      - 非的中: haraimodoshi = 0 → corrected_payout = 0（自動）
+
+    ベースライン ≈ 80%（補正係数が1.0の場合は factor_screening の place_roi と同値）
+
+    Args:
+        is_tansho: True=単勝補正ROI, False=複勝補正ROI（デフォルト）
     """
-    w    = grp["_year_weight"]
-    wbet = (grp["_bet_amount"] * w).sum()
-    wpay = (grp["_corrected_pay"] * w).sum()
-    if wbet <= 0 or np.isnan(wbet):
+    pay_col = "_tansho_corrected_pay" if is_tansho else "_corrected_pay"
+    w     = grp["_year_weight"]
+    w_sum = float(w.sum())
+    if w_sum <= 0:
         return None
-    return float(wpay / wbet * 100.0)
+    wpay = float((grp[pay_col] * w).sum())
+    return wpay / (w_sum * 100.0) * 100.0
 
 
 def get_valid_bin_rois(
     seg_df: pd.DataFrame,
     factors: List[str],
     min_n: int = BIN_MIN_N,
+    is_tansho: bool = False,
 ) -> Optional[Tuple[np.ndarray, int]]:
     """
     指定ファクター×セグメントで有効ビン（n >= min_n）を抽出し、
@@ -236,7 +285,7 @@ def get_valid_bin_rois(
         return None
 
     # 補正列が存在しない場合（古いデータ等）は None
-    if "_bet_amount" not in seg_df.columns:
+    if "_corrected_pay" not in seg_df.columns:
         return None
 
     combo_col = _build_combo_col(seg_df, factors)
@@ -251,7 +300,7 @@ def get_valid_bin_rois(
     total_n = 0
     for _, grp in df2.groupby("_combo", sort=True):
         if len(grp) >= min_n:
-            roi = _bin_corrected_roi(grp)
+            roi = _bin_corrected_roi(grp, is_tansho=is_tansho)
             if roi is not None:
                 bin_rois.append(roi)
                 total_n += len(grp)
@@ -518,7 +567,8 @@ def evaluate_factor(
     }
 
     # ── 有効ビン別補正ROI 取得 ─────────────────────────────────────────
-    bin_result = get_valid_bin_rois(seg_df, factors, min_n=BIN_MIN_N)
+    # 複勝補正ROI（メイン指標）
+    bin_result = get_valid_bin_rois(seg_df, factors, min_n=BIN_MIN_N, is_tansho=False)
     if bin_result is None:
         return {**base,
                 "skip_reason": "no_valid_bins",
@@ -528,10 +578,14 @@ def evaluate_factor(
 
     bin_rois, n_valid_bets = bin_result
     n_valid_bins = len(bin_rois)
-    mean_roi     = round(float(bin_rois.mean()), 2)   # ビン別補正ROI平均
+    mean_roi     = round(float(bin_rois.mean()), 2)   # ビン別複勝補正ROI平均
     std_bin      = round(float(bin_rois.std(ddof=1)) if n_valid_bins > 1 else 0.0, 2)
 
-    # ── Filter 1: ビン別補正ROI CLB ───────────────────────────────────
+    # 単勝補正ROI（参考指標）
+    tansho_result = get_valid_bin_rois(seg_df, factors, min_n=BIN_MIN_N, is_tansho=True)
+    mean_tansho_roi = round(float(tansho_result[0].mean()), 2) if tansho_result else None
+
+    # ── Filter 1: ビン別複勝補正ROI CLB ──────────────────────────────
     clb = calc_confidence_lower_bound(bin_rois)
     clb_r = round(clb, 2)
     f1_pass = clb >= F1_CLB_THRESHOLD
@@ -582,12 +636,13 @@ def evaluate_factor(
     row = {
         **base,
         # F1（補正回収率ベース）
-        "n_valid_bins":        n_valid_bins,
-        "n_valid_bets":        n_valid_bets,
-        "mean_corrected_roi":  mean_roi,
-        "std_bin_roi":         std_bin,
-        "conservative_roi_lb": clb_r,
-        "filter1_pass":        f1_pass,
+        "n_valid_bins":              n_valid_bins,
+        "n_valid_bets":              n_valid_bets,
+        "mean_fukusho_corrected_roi": mean_roi,        # 複勝補正ROI平均（メイン指標）
+        "mean_tansho_corrected_roi":  mean_tansho_roi, # 単勝補正ROI平均（参考指標）
+        "std_bin_roi":               std_bin,
+        "conservative_roi_lb":       clb_r,            # 複勝補正ROI CLB
+        "filter1_pass":              f1_pass,
         # F2
         **{k: f2_result.get(k) for k in [
             "oot_n_bets", "oot_mean_roi", "oot_conservative_roi",
@@ -841,11 +896,20 @@ def print_summary(results_df: pd.DataFrame) -> None:
         elite_sorted = elite.sort_values("conservative_roi_lb", ascending=False).head(3)
         print("\n  ★★ TOP3 ファクター（CLB降順）:")
         for rank, (_, r) in enumerate(elite_sorted.iterrows(), 1):
-            mean_col = "mean_corrected_roi" if "mean_corrected_roi" in r.index else "mean_place_roi"
+            # 列名の新旧互換
+            for mc in ["mean_fukusho_corrected_roi", "mean_corrected_roi", "mean_place_roi"]:
+                if mc in r.index and pd.notna(r.get(mc)):
+                    mean_val = r[mc]
+                    break
+            else:
+                mean_val = float("nan")
+            tansho_val = r.get("mean_tansho_corrected_roi", None)
+            tansho_str = f"  tansho={tansho_val:.1f}%" if pd.notna(tansho_val) else ""
             print(
                 f"  #{rank}: [{r['segment']}] {r['factors']}"
                 f"  CLB={r['conservative_roi_lb']:.2f}%"
-                f"  mean={r[mean_col]:.1f}%"
+                f"  fukusho={mean_val:.1f}%"
+                f"{tansho_str}"
                 f"  n={int(r['n_valid_bets']):,}"
             )
     print()
