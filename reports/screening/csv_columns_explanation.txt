@@ -1,0 +1,215 @@
+================================================================================
+Enable Edge Engine — スクリーニング出力CSV カラム解説
+================================================================================
+最終更新: 2026-04-28
+対象ファイル:
+  - reports/screening/3combo_results.csv       (3-COMBOスクリーニング全探索結果)
+  - reports/screening/3combo_filtered.csv      (3-COMBO精鋭364件フィルタリング結果)
+  - reports/screening/3combo_filter_detail.csv (3-COMBO全1,821件フィルター詳細)
+
+================================================================================
+■ 共通カラム（全CSVファイルで共有）
+================================================================================
+
+segment
+  分析セグメント（競馬場×馬場面の組み合わせ）。
+  例: KEIBAJO_SURFACE_08_芝 = 競馬場コード08（京都）× 芝コース
+  例: SURFACE_2_ダ = ダートコース全体（競馬場問わず）
+  例: GLOBAL = 全データ（セグメント無し）
+  セグメントコード: 01=札幌, 02=函館, 03=福島, 04=新潟, 05=東京,
+                   06=中山, 07=中京, 08=京都, 09=阪神, 10=小倉
+
+factors
+  評価に使用したファクター名。'+' で結合して複数ファクターを表現。
+  例: "goal_juni+kyori+bac_jouken" → 3つのファクターの組み合わせ
+  単独ファクター採用時は '+' なし（例: "goal_juni"）
+
+================================================================================
+■ 3combo_results.csv 固有カラム（3-COMBO全探索スクリーニング結果）
+================================================================================
+
+n_valid_bins
+  有効ビン数 K。ビンとはfactor値の組み合わせごとに集計したグループ。
+  各ビンに n >= BIN_MIN_N(=100) サンプルが存在するものを「有効ビン」とする。
+  CLB計算に最低 MIN_VALID_BINS(=3) 個の有効ビンが必要。
+
+n_valid_bets
+  有効ビンに含まれる総ベット数（馬券購入回数）。
+
+mean_corrected_roi
+  有効ビンの補正回収率の単純平均 (%)。
+  均等払戻補正回収率 = Σ(補正払戻 × 期間重み) / Σ(ベット額 × 期間重み) × 100
+  ベースライン（JRA複勝控除率25%相当）≈ 73.7%。
+
+std_bin_roi
+  有効ビン間の補正回収率の標準偏差 (%)。
+  小さいほどビン間で一貫した優位性を持つ安定したファクター。
+
+clb  [= CLB = Confidence Lower Bound（信頼区間下限）]
+  ビン別補正回収率の95%信頼区間下限 (%)。
+  計算式: CLB = mean(bin_rois) - 1.96 × std(bin_rois) / √K
+  個票ではなくビン数Kを使うことで、ビン間の一貫性（安定性）を保守的評価。
+  採用基準: CLB >= 80.0%（ベースライン73.7%を6.3pt上回る水準）
+
+pass
+  clb >= CLB_THRESHOLD (=80.0) を満たすかどうか (True/False)。
+
+skip
+  処理をスキップしたかどうか。True の場合はデータ不足等でCLB計算不能。
+
+================================================================================
+■ 3combo_filtered.csv / 3combo_filter_detail.csv 固有カラム
+================================================================================
+
+combo_clb
+  3combo_results.csv の clb と同一。全期間（2016-2025）のCLB (%)。
+  3-COMBOスクリーニング通過時の元の評価値。
+
+--- Filter 1: OOT安定性 (Out-of-Time) ---
+
+oot_clb
+  OOT期間（yy_int >= 23 = 2023〜2025）のみでビン別補正回収率CLBを再計算した値 (%)。
+  OOT期間のビン最小サンプル数: OOT_BIN_MIN_N=30（訓練期間より緩め）
+  OOT最小有効ビン数: OOT_MIN_BINS=2
+  通過基準: oot_clb >= 75.0%（過去に過学習していない証拠）
+
+oot_n_bins
+  OOT期間の有効ビン数。（参考値、0のまま格納されている場合あり）
+
+oot_n_bets
+  OOT期間の総ベット数（馬券購入回数）。OOT期間データの規模感を示す。
+
+oot_roi_2023
+  2023年（yy_int=23）のみでプール計算した補正回収率 (%)。
+  サンプル不足でNoneの場合あり。
+
+oot_roi_2024
+  2024年（yy_int=24）のみでプール計算した補正回収率 (%)。
+  サンプル不足でNoneの場合あり。
+
+oot_roi_2025
+  2025年（yy_int=25）のみでプール計算した補正回収率 (%)。
+  サンプル不足でNoneの場合あり。
+
+oot_min_yearly_roi
+  oot_roi_2023, oot_roi_2024, oot_roi_2025 の最小値 (%)。
+  各年で底を打っても一定水準を保つかを確認するドローダウン指標。
+  通過基準: oot_min_yearly_roi >= 60.0%（極端な不調年を排除）
+
+f1_pass
+  Filter 1（OOT安定性）通過フラグ (True/False)。
+  通過条件: oot_clb >= 75.0% AND oot_min_yearly_roi >= 60.0%
+
+f1_reason
+  Filter 1の結果理由コード。
+  "pass"                : 通過
+  "insufficient_oot"    : OOT期間のデータが少なすぎてビン構成不能
+  "insufficient_oot_bins": OOT期間に有効ビンが形成できなかった
+  "oot_clb_low"         : OOT CLBが75.0%未満
+  "yearly_roi_low"      : いずれかの年のROIが60.0%未満
+  "no_segment_data"     : セグメントデータが存在しない
+
+--- Filter 2: 印コード逆張り（Shirushi Contrarian）---
+
+has_shirushi
+  ファクターに shirushi_code_* が含まれるかどうか (True/False)。
+  False の場合: 印コードを使わない純粋な能力系ファクターであり Filter 2 を自動通過。
+
+best_shirushi_clb
+  印逆張りグリッドサーチで得られた最高CLB (%)。
+  has_shirushi=False の場合は None（自動通過）。
+  グリッド: 単勝オッズ >= [5.0, 8.0, 10.0, 15.0]倍 OR 人気 >= [3, 5, 7]番人気 のOR条件。
+  最も高いCLBを得られたグリッドパラメータを採用。
+
+optimal_odds_t
+  best_shirushi_clbを達成した単勝オッズ閾値（例: 8.0 = 8倍以上）。
+
+optimal_rank_t
+  best_shirushi_clbを達成した人気順位閾値（例: 5 = 5番人気以上）。
+
+f2_pass
+  Filter 2（印逆張り）通過フラグ (True/False)。
+  通過条件: has_shirushi=False（自動通過）OR best_shirushi_clb >= 78.0%
+
+f2_reason
+  Filter 2の結果理由コード。
+  "no_shirushi_auto_pass": 印コード非含有のため自動通過
+  "pass"                 : 印逆張りグリッドでCLB>=78.0%達成
+  "shirushi_clb_low"     : 全グリッドでCLBが78.0%未満
+  "no_valid_grid"        : 有効なグリッドが形成できなかった
+  "skipped_f1_fail"      : Filter 1不通過のためスキップ
+
+--- Filter 3: クロスゲイン（Cross-gain）---
+
+max_subset_clb
+  3-COMBOを構成するサブセット（単独3個 + ペア3個 = 最大6パターン）の
+  CLBを新公式で再計算し、そのうちの最大値 (%)。
+  サブセット評価最小ビンサンプル: SUBSET_MIN_N=100
+  サブセット全データ不足の場合は None（→ cross_gain=None → 通過扱い）。
+
+cross_gain
+  3-COMBOの独自優位性指標 (%)。
+  計算式: cross_gain = combo_clb - max_subset_clb
+  正値 = 3因子の掛け合わせが単独・ペアを超える相乗効果を持つ。
+  通過基準: cross_gain >= 0.0%
+  Noneの場合: サブセットデータ不足 → 通過扱い（独自性を否定できない）
+
+f3_pass
+  Filter 3（クロスゲイン）通過フラグ (True/False)。
+  通過条件: cross_gain >= 0.0% OR cross_gain=None（データ不足自動通過）
+
+f3_reason
+  Filter 3の結果理由コード。
+  "pass"                  : cross_gain >= 0.0%で通過
+  "no_subset_data_auto_pass": サブセット全データ不足のため自動通過
+  "no_cross_gain"          : cross_gain < 0.0%（サブセットに劣る）
+  "skipped_f1_fail"        : Filter 1不通過のためスキップ
+  "skipped_f2_fail"        : Filter 2不通過のためスキップ
+
+all_pass
+  Filter 1 AND Filter 2 AND Filter 3 の全通過フラグ (True/False)。
+  3combo_filtered.csv には all_pass=True のみ格納されている。
+
+================================================================================
+■ 計算共通仕様（均等払戻補正回収率）
+================================================================================
+
+【ベット額計算】
+  bet_amount[i] = TARGET_PAYOUT(=10,000円) / kijun_odds_fukusho[i]
+  kijun_odds_fukusho: JRDB基準複勝オッズ（100%カバレッジ, 範囲[1.10, 72.00]倍）
+
+【補正払戻額計算】
+  corrected_pay[i] = TARGET_PAYOUT × fukusho_correction(kijun_odds_fukusho[i]) × is_fukusho_hit[i]
+  fukusho_correction: 108段階複勝配当補正係数（backend/config/odds_correction.py）
+  is_fukusho_hit: 複勝的中フラグ（haraimodoshi_fukusho > 0 で1、着外で0）
+
+【期間重み付け】
+  year_weight = yy_int - 15 （clip[1, 10]）
+  → 2016年=1, 2017=2, ..., 2025=10（最新年ほど高い重み）
+
+【補正回収率】
+  corrected_roi = Σ(corrected_pay × year_weight) / Σ(bet_amount × year_weight) × 100
+  ベースライン ≈ 73.7%（JRA複勝控除率25%相当）
+
+【CLB（Confidence Lower Bound）】
+  CLB = mean(bin_rois) - 1.96 × std(bin_rois) / √K
+  K = 有効ビン数（各ビン n >= BIN_MIN_N のもの）
+  個票でなくビン別ROIの統計を使うことで過学習・過信を防止
+
+【データ期間】
+  2016年〜2025年（yy_int=16〜25）、10年間
+  取消馬除外: kakutei_chakujun != '00'
+  異常区分除外: ijo_kubun_code = '0' のみ対象
+  単勝オッズ条件: 1.0〜100.0倍（tansho_odds_numeric）
+
+================================================================================
+■ カラム追加ルール（新CSVが出力された際の運用）
+================================================================================
+
+新しいCSVに未記載のカラムが登場した場合は、以下の手順でこのファイルに追記する:
+  1. 新しいCSVのカラムをリストアップ
+  2. 既存の説明と重複しないカラムを特定
+  3. 該当セクション（または新しいセクション）に追記
+  4. 最終更新日を更新
+
+================================================================================
