@@ -149,21 +149,32 @@ def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
     補正回収率計算に必要な列を事前に一括生成（1回だけ呼び出す）。
 
     生成列:
-      _fukusho_corr   : 108段階複勝補正係数
-      _is_hit         : 複勝的中フラグ (1=的中, 0=外れ)
-      _year_weight    : 期間重み (2016=1, ..., 2025=10)
-      _bet_amount     : TARGET_PAYOUT / tansho_odds_numeric（均等払戻ベット額）
-      _corrected_pay  : TARGET_PAYOUT × FUKUSHO_CORRECTION × is_hit（補正払戻・複勝）
-      _tansho_corrected_pay : TARGET_PAYOUT × TANSHO_CORRECTION × is_hit（補正払戻・単勝）
-      _corrected_pay  : TARGET_PAYOUT * correction * is_hit (補正払戻額)
+      _fukusho_corr        : 108段階複勝補正係数（kijun_odds_fukusho 基準）
+      _tansho_corr         : 123段階単勝補正係数（tansho_odds_numeric 基準）
+      _is_fukusho_hit      : 複勝的中フラグ (1=的中, 0=外れ)
+      _is_tansho_hit       : 単勝的中フラグ (1=的中, 0=外れ)
+      _is_hit              : _is_fukusho_hit のエイリアス
+      _year_weight         : 期間重み (2016=1, ..., 2025=10)
+      _fukusho_bet_amount  : TARGET_PAYOUT / kijun_odds_fukusho（複勝均等払戻ベット額）
+      _bet_amount          : TARGET_PAYOUT / tansho_odds_numeric（単勝均等払戻ベット額）
+      _corrected_pay       : TARGET_PAYOUT × _fukusho_corr × is_hit（複勝補正払戻額）
+      _tansho_corrected_pay: TARGET_PAYOUT × _tansho_corr × is_hit（単勝補正払戻額）
+
+    【重要】複勝評価では _fukusho_bet_amount を分母に使うこと。
+            _bet_amount は単勝評価専用。
     """
     if "tansho_odds_numeric" not in df.columns:
         df = _parse_tansho_odds(df)
 
-    # 108段階複勝補正係数（ベクトル演算）
-    df["_fukusho_corr"] = _vectorize_fukusho_correction(df["tansho_odds_numeric"])
+    # ---- 複勝オッズ（kijun_odds_fukusho: 100%カバレッジ, [1.10, 72.00]倍）----
+    kijun_fuku = pd.to_numeric(
+        df["kijun_odds_fukusho"], errors="coerce"
+    ).fillna(0.0)
 
-    # 123段階単勝補正係数（ベクトル演算）
+    # 108段階複勝補正係数: kijun_odds_fukusho で引き当て（正しい複勝オッズ基準）
+    df["_fukusho_corr"] = _vectorize_fukusho_correction(kijun_fuku)
+
+    # 123段階単勝補正係数: tansho_odds_numeric で引き当て（変更なし）
     df["_tansho_corr"] = _vectorize_tansho_correction(df["tansho_odds_numeric"])
 
     # 複勝的中フラグ (haraimodoshi_fukusho > 0 で着内)
@@ -187,18 +198,22 @@ def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
     else:
         df["_year_weight"] = (df["yy_int"] - 15).clip(lower=1, upper=10).astype(float)
 
-    # ---------- 補正回収率 = 均等払戻方式（methodology_corrected_roi.txt準拠）----------
-    # bet_amount[i]  = TARGET_PAYOUT / tansho_odds[i]
-    #                  （的中時に同額TARGET_PAYOUTを受け取るよう逆算したベット額）
-    # corr_payout[i] = TARGET_PAYOUT × correction(odds[i]) × is_hit[i]
+    # ---- 複勝 均等払戻方式 ------------------------------------------------
+    # bet_amount[i]  = TARGET_PAYOUT / kijun_odds_fukusho[i]
+    #                  （着内時に同額TARGET_PAYOUTを受け取るよう逆算したベット額）
+    # corr_payout[i] = TARGET_PAYOUT × correction(kijun_odds_fukusho[i]) × is_hit[i]
     # corrected_roi  = Σ(corr_payout × year_weight) / Σ(bet_amount × year_weight) × 100
-
-    # 均等払戻ベット額（オッズ0/NaN は除外）
-    safe_odds = df["tansho_odds_numeric"].replace(0.0, np.nan)
-    df["_bet_amount"] = TARGET_PAYOUT / safe_odds
+    # ベースラインROI ≈ 73.7%（JRA複勝控除率25%相当）
+    safe_fuku = kijun_fuku.replace(0.0, np.nan)
+    df["_fukusho_bet_amount"] = TARGET_PAYOUT / safe_fuku
 
     # 複勝補正払戻額（的中時=TARGET_PAYOUT×correction, 着外=0）
     df["_corrected_pay"] = TARGET_PAYOUT * df["_fukusho_corr"] * df["_is_fukusho_hit"]
+
+    # ---- 単勝 均等払戻方式（変更なし）--------------------------------------
+    # bet_amount[i]  = TARGET_PAYOUT / tansho_odds[i]
+    safe_odds = df["tansho_odds_numeric"].replace(0.0, np.nan)
+    df["_bet_amount"] = TARGET_PAYOUT / safe_odds
 
     # 単勝補正払戻額（的中時=TARGET_PAYOUT×correction, 着外=0）
     df["_tansho_corrected_pay"] = TARGET_PAYOUT * df["_tansho_corr"] * df["_is_tansho_hit"]
@@ -208,10 +223,11 @@ def prepare_corrected_cols(df: pd.DataFrame) -> pd.DataFrame:
 
     print(
         f"[INFO] prepare_corrected_cols: "
-        f"fukusho_corr=[{df['_fukusho_corr'].min():.2f},{df['_fukusho_corr'].max():.2f}] "
+        f"fukusho_corr(kijun)=[{df['_fukusho_corr'].min():.2f},{df['_fukusho_corr'].max():.2f}] "
         f"hit={df['_is_fukusho_hit'].mean()*100:.1f}%, "
         f"tansho_corr=[{df['_tansho_corr'].min():.2f},{df['_tansho_corr'].max():.2f}] "
-        f"hit={df['_is_tansho_hit'].mean()*100:.1f}%"
+        f"hit={df['_is_tansho_hit'].mean()*100:.1f}%, "
+        f"kijun_fuku mean={kijun_fuku[kijun_fuku>0].mean():.2f}x"
     )
     return df
 
@@ -247,18 +263,22 @@ def _bin_corrected_roi(grp: pd.DataFrame, is_tansho: bool = False) -> Optional[f
     """
     ビン内の均等払戻補正回収率を算出（methodology_corrected_roi.txt準拠）。
 
-      corrected_roi = Sigma(corr_payout[i] * year_weight[i])
-                      / Sigma(bet_amount[i] * year_weight[i]) * 100
+    複勝評価 (is_tansho=False):
+      bet_amount[i]  = TARGET_PAYOUT / kijun_odds_fukusho[i]  (_fukusho_bet_amount)
+      corr_payout[i] = TARGET_PAYOUT * correction(kijun_fuku) * is_fukusho_hit[i]
+      ベースラインROI ≈ 73.7%
 
-      bet_amount[i]  = TARGET_PAYOUT / tansho_odds[i]
-      corr_payout[i] = TARGET_PAYOUT * correction(odds[i]) * is_hit[i]
+    単勝評価 (is_tansho=True):
+      bet_amount[i]  = TARGET_PAYOUT / tansho_odds[i]  (_bet_amount)
+      corr_payout[i] = TARGET_PAYOUT * correction(tansho_odds) * is_tansho_hit[i]
 
     Args:
         is_tansho: True=単勝補正ROI（123段階）, False=複勝補正ROI（108段階・デフォルト）
     """
     pay_col = "_tansho_corrected_pay" if is_tansho else "_corrected_pay"
+    bet_col = "_bet_amount" if is_tansho else "_fukusho_bet_amount"
     w    = grp["_year_weight"]
-    wbet = float((grp["_bet_amount"] * w).sum())
+    wbet = float((grp[bet_col] * w).sum())
     wpay = float((grp[pay_col] * w).sum())
     if wbet <= 0 or np.isnan(wbet):
         return None

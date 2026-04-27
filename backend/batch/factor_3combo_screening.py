@@ -72,12 +72,29 @@ ADOPTION_CSV  = DEFAULT_OUTPUT_DIR / "factor_adoption_result.csv"
 # --------------------------------------------------------------------------
 # コア評価: 1つの3-COMBOに対して補正ROI CLBを計算
 # --------------------------------------------------------------------------
+def _get_col_1d(seg_df: pd.DataFrame, col: str) -> np.ndarray:
+    """
+    DataFrame から列を確実に1D numpy配列で取得する。
+    重複列名（JOAマージで発生する可能性）がある場合は先頭列を使用。
+    """
+    series = seg_df[col]
+    if isinstance(series, pd.DataFrame):
+        # 重複列名がある場合: iloc で先頭列を1列だけ取得
+        series = series.iloc[:, 0]
+    return series.to_numpy()
+
+
 def evaluate_3combo(
     seg_df: pd.DataFrame,
     f1: str, f2: str, f3: str,
 ) -> Optional[Dict]:
     """
     (f1, f2, f3) 3要素組み合わせを評価し、ビン別補正ROI CLBを返す。
+
+    【実装方針】pandas を最小限に使い、numpy 直接演算で全問題を回避。
+      - 重複インデックス問題（SURFACE_2_* / GLOBAL）: .to_numpy() でインデックスを無視
+      - 重複列名問題（JOAマージ由来）: _get_col_1d() で先頭列を強制選択
+      - groupby高速化: np.unique + boolean mask（pandas groupby 不使用）
 
     Returns: result dict or None (if insufficient data)
     """
@@ -86,32 +103,42 @@ def evaluate_3combo(
         if col not in seg_df.columns:
             return None
 
-    # 有効行（3列すべて非NULL）
+    # 有効行（3列すべて非NULL）— pandas で notna のみ使用
     valid_mask = seg_df[f1].notna() & seg_df[f2].notna() & seg_df[f3].notna()
-    n_valid = valid_mask.sum()
+    if isinstance(valid_mask, pd.DataFrame):
+        valid_mask = valid_mask.iloc[:, 0]
+    n_valid = int(valid_mask.sum())
     if n_valid < BIN_MIN_N * MIN_VALID_BINS:
         return None
 
-    vdf = seg_df[valid_mask]
+    mask_arr = valid_mask.to_numpy(dtype=bool)
 
-    # グループキー（カテゴリ列を活用して高速groupby）
-    key = (
-        vdf[f1].astype(str)
-        + "\x01" + vdf[f2].astype(str)
-        + "\x01" + vdf[f3].astype(str)
-    )
+    # 全列を numpy 1D 配列に変換（重複列名・重複インデックス両対応）
+    f1_arr  = _get_col_1d(seg_df, f1)[mask_arr].astype(str)
+    f2_arr  = _get_col_1d(seg_df, f2)[mask_arr].astype(str)
+    f3_arr  = _get_col_1d(seg_df, f3)[mask_arr].astype(str)
+    bet_arr = _get_col_1d(seg_df, "_fukusho_bet_amount")[mask_arr].astype(float)
+    pay_arr = _get_col_1d(seg_df, "_corrected_pay")[mask_arr].astype(float)
+    w_arr   = _get_col_1d(seg_df, "_year_weight")[mask_arr].astype(float)
+
+    # グループキー（numpy文字列結合: pandas align 問題を完全回避）
+    key_arr = f1_arr + "\x01" + f2_arr + "\x01" + f3_arr
+
+    # numpy unique でグループ割り当て（pandas groupby 不使用）
+    _, inverse = np.unique(key_arr, return_inverse=True)
 
     # ビン別補正ROI
     bin_rois: List[float] = []
     total_n = 0
 
-    for _, grp in vdf.groupby(key, sort=False):
-        n = len(grp)
+    for gi in range(int(inverse.max()) + 1):
+        grp_mask = (inverse == gi)
+        n = int(grp_mask.sum())
         if n < BIN_MIN_N:
             continue
-        w    = grp["_year_weight"]
-        wbet = float((grp["_bet_amount"] * w).sum())
-        wpay = float((grp["_corrected_pay"] * w).sum())
+        w    = w_arr[grp_mask]
+        wbet = float((bet_arr[grp_mask] * w).sum())
+        wpay = float((pay_arr[grp_mask] * w).sum())
         if wbet <= 0:
             continue
         bin_rois.append(wpay / wbet * 100.0)
@@ -177,10 +204,21 @@ def load_adopted_singles() -> Dict[str, List[str]]:
     ].copy()
 
     seg_map: Dict[str, List[str]] = {}
+    dup_warn = []
     for seg, grp in singles.groupby("segment"):
-        seg_map[str(seg)] = sorted(grp["factors"].tolist())
+        flist_raw = grp["factors"].tolist()
+        # 重複ファクター名を除去（採用CSVに同名ファクターが複数ある場合の防衛的処理）
+        flist_dedup = sorted(set(flist_raw))
+        if len(flist_dedup) < len(flist_raw):
+            dups = [f for f in flist_raw if flist_raw.count(f) > 1]
+            dup_warn.append(f"  {seg}: 重複除去 {set(dups)}")
+        seg_map[str(seg)] = flist_dedup
 
-    print(f"[INFO] 採用単独ファクター: {len(singles)}件 / {len(seg_map)}セグメント")
+    if dup_warn:
+        print(f"[WARN] 重複ファクター名を除去:")
+        for w in dup_warn:
+            print(w)
+    print(f"[INFO] 採用単独ファクター: {len(singles)}件 / {len(seg_map)}セグメント（重複除去後）")
     return seg_map
 
 
