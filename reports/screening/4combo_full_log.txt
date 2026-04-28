@@ -1,0 +1,79 @@
+E:\jraroinew\backend\batch\factor_screening.py:339: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql(query, conn)
+E:\jraroinew\backend\batch\factor_screening.py:348: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql(_PREV_QUERY, conn)
+E:\jraroinew\backend\batch\factor_screening.py:356: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql(_BLOOD_QUERY, conn)
+E:\jraroinew\backend\batch\factor_screening.py:1089: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  joa_df = pd.read_sql(_JOA_QUERY, conn)
+E:\jraroinew\backend\batch\factor_screening.py:1090: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  bac_df = pd.read_sql(_BAC_QUERY, conn)
+[INFO] レースデータ読み込み中...
+[INFO] Loading main data (limit=無制限)...
+[INFO] Main rows: 456,615
+[INFO] Loading prev race data...
+[INFO] Prev: 492,491
+[INFO] Loading bloodline data...
+[INFO] Blood: 55,419
+[INFO] Computing derived factors...
+[INFO] Odds filter: 456,615 -> 360,874
+[INFO] Loading extra tables (jrd_joa, jrd_bac)...
+[INFO] jrd_joa_fixed: 490,167 rows, jrd_bac_fixed: 35,168 rows
+[INFO] After extra merge: 360,874 rows, 160 cols
+[INFO] tansho_odds_numeric: range [1.1, 100.0]
+[INFO] Preparing corrected ROI columns...
+[INFO] prepare_corrected_cols: fukusho_corr(kijun)=[0.93,3.01] hit=26.8%, tansho_corr=[0.80,1.60] hit=9.1%, kijun_fuku mean=3.94x
+[INFO] prepare_corrected_cols: fukusho_corr(kijun)=[0.93,3.01] hit=26.8%, tansho_corr=[0.80,1.60] hit=9.1%, kijun_fuku mean=3.94x
+[INFO] データ準備完了 (359.6s)
+[WARN] 重複ファクター名を除去:
+  GLOBAL: 重複除去 {'chokyo_yajirushi_code'}
+  SURFACE_2_ダ: 重複除去 {'hizume_code'}
+  SURFACE_2_芝: 重複除去 {'chokyo_shisu', 'kishu_shisu'}
+[INFO] 採用単独ファクター: 847件 / 32セグメント（重複除去後）
+[INFO] 精鋭3-COMBO: 364件 / 15セグメント
+[INFO] 総4-COMBOタスク数: 13,710件
+[INFO] セグメントキャッシュ構築中 (15セグメント)...
+[INFO] キャッシュ構築完了 (3.5s)
+[    1/13710] 通過:0 | 2.4件/s | ETA:95.8min
+
+[SPEED CHECK @ 100件]  処理速度: 5.44件/s  推定残時間: 41.7分  推定総時間: 42.0分
+
+[ 2000/13710] 通過:62 | 9.4件/s | ETA:20.7min
+[ 4000/13710] 通過:144 | 9.4件/s | ETA:17.2min
+[ 6000/13710] 通過:231 | 11.7件/s | ETA:11.0min
+[ 8000/13710] 通過:315 | 11.7件/s | ETA:8.2min
+[10000/13710] 通過:375 | 6.2件/s | ETA:10.0min
+[12000/13710] 通過:473 | 10.2件/s | ETA:2.8min
+
+[SAVE] 4combo_results.csv: 512件
+
+============================================================
+4-COMBOターゲットサーチ完了 (21.9分)
+============================================================
+  総タスク数: 13,710件
+  処理済み:   13,710件
+  スキップ:   0件（resume）
+  CLB>=80.0通過: 512件
+============================================================
+
+【Top 10 精鋭4-COMBO (CLB降順)】
+  [KEIBAJO_SURFACE_07_ダ] kijun_ninkijun_fukusho+prev1_bataiju_bin+shirushi_code_6+yoso_juni
+    CLB=93.70%  ROI=94.31%  K=3  N=462
+  [KEIBAJO_SURFACE_08_芝] bac_jouken+goal_juni+goal_sa+kyori
+    CLB=93.49%  ROI=93.69%  K=3  N=343
+  [KEIBAJO_SURFACE_07_ダ] kijun_ninkijun_tansho+prev1_bataiju_bin+shirushi_code_6+yoso_juni
+    CLB=93.14%  ROI=93.97%  K=3  N=460
+  [KEIBAJO_SURFACE_08_芝] bac_jouken+goal_sa+kyori+shutoku_shokin_ruikei
+    CLB=92.93%  ROI=95.51%  K=3  N=383
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_fukusho+prev1_bataiju_bin+shirushi_code_2
+    CLB=92.87%  ROI=93.35%  K=3  N=434
+  [KEIBAJO_SURFACE_08_芝] goal_juni+goal_sa+manken_shirushi+shirushi_code_2
+    CLB=92.66%  ROI=94.49%  K=3  N=372
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_fukusho+prev1_bataiju_bin+shirushi_code_1
+    CLB=92.64%  ROI=94.43%  K=3  N=526
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_tansho+prev1_bataiju_bin+shirushi_code_2
+    CLB=92.61%  ROI=93.45%  K=3  N=438
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_tansho+prev1_bataiju_bin+shirushi_code_1
+    CLB=92.58%  ROI=94.35%  K=3  N=532
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_tansho+prev1_bataiju_bin+shirushi_code_3
+    CLB=92.22%  ROI=92.88%  K=3  N=453
