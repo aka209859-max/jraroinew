@@ -1,0 +1,7 @@
+﻿factor,label,ftype,n_bins,n_bets,mean_roi,std_roi,clb,pass
+hizume_code,蹄コード,code,4,762,80.17,11.59,68.81,False
+kyakushitsu,脚質,code,4,1219,71.92,5.19,66.83,False
+omo_tekisei_code,重適性,code,3,1219,70.12,4.09,65.49,False
+kyori_tekisei,距離適性,code,3,1138,71.17,8.5,61.54,False
+tenkai_kigo_code,展開記号,code,4,1127,73.94,15.75,58.51,False
+ls_shisu_juni,LS指数順位,numeric,3,845,67.39,14.42,51.08,False

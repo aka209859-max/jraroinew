@@ -1,0 +1,10 @@
+﻿factor,label,ftype,n_bins,n_bets,mean_roi,std_roi,clb,pass
+kyori_kubun,距離区分,code,3,1236,72.81,1.05,71.62,False
+tenkai_kigo_code,展開記号,code,5,1236,74.7,3.61,71.53,False
+kyakushitsu,脚質,code,4,1236,72.65,1.83,70.86,False
+kyori_tekisei,距離適性,code,3,1182,71.69,3.77,67.43,False
+hizume_code,蹄コード,code,6,992,71.27,6.39,66.16,False
+shiba_tekisei_code,芝適性,code,3,765,72.5,10.4,60.73,False
+ls_shisu_juni,LS指数順位,numeric,5,930,68.66,9.41,60.42,False
+kijun_ninkijun_tansho,基準人気順単勝,numeric,7,710,71.44,14.96,60.36,False
+rotation,ローテーション,numeric,5,617,72.6,18.56,56.33,False

@@ -1,0 +1,17 @@
+﻿factor,label,ftype,n_bins,n_bets,mean_roi,std_roi,clb,pass
+pace_shisu_juni,ペース指数順位,numeric,3,319,88.47,8.89,78.42,False
+kyori_kubun,距離区分,code,4,1337,72.12,1.89,70.27,False
+uma_start_shisu,馬スタート指数,numeric,4,776,77.26,8.86,68.58,False
+omo_tekisei_code,重適性,code,3,1336,71.24,3.08,67.75,False
+ls_shisu_juni,LS指数順位,numeric,5,1196,72.04,5.7,67.04,False
+hizume_code,蹄コード,code,5,1055,73.62,7.65,66.92,False
+class_code,クラスコード,code,4,1114,71.98,6.77,65.34,False
+kyori_tekisei,距離適性,code,3,1294,72.09,6.42,64.82,False
+rotation,ローテーション,numeric,5,667,72.34,11.56,62.2,False
+kijun_ninkijun_tansho,基準人気順単勝,numeric,6,659,74.37,15.91,61.64,False
+kyakushitsu,脚質,code,4,1337,74.31,13.87,60.72,False
+kyori_tekisei_2,距離適性2,code,3,672,66.22,6.89,58.42,False
+tenkai_kigo_code,展開記号,code,4,1238,71.97,14.83,57.44,False
+agari_shisu_juni,上がり指数順位,numeric,4,419,64.04,9.45,54.78,False
+gekiso_juni,激走順位,numeric,4,419,64.63,10.21,54.62,False
+kishu_shisu,騎手指数,numeric,3,461,61.34,23.62,34.61,False

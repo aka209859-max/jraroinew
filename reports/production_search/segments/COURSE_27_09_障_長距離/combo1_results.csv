@@ -1,0 +1,8 @@
+﻿factor,label,ftype,n_bins,n_bets,mean_roi,std_roi,clb,pass
+omo_tekisei_code,重適性,code,3,1275,75.42,2.16,72.98,False
+kyakushitsu,脚質,code,4,1277,76.64,9.06,67.76,False
+kijun_ninkijun_tansho,基準人気順単勝,numeric,8,1033,75.46,12.17,67.03,False
+manken_shirushi,万券印,code,5,574,72.07,10.02,63.29,False
+hizume_code,蹄コード,code,5,948,71.0,13.04,59.57,False
+rotation,ローテーション,numeric,3,559,74.97,15.29,57.67,False
+kishu_shisu,騎手指数,numeric,3,397,54.22,22.44,28.82,False

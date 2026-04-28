@@ -1,0 +1,8 @@
+﻿factor,label,ftype,n_bins,n_bets,mean_roi,std_roi,clb,pass
+tenkai_kigo_code,展開記号,code,3,936,71.95,0.75,71.11,False
+kyori_kubun,距離区分,code,3,1107,71.71,0.62,71.0,False
+omo_tekisei_code,重適性,code,3,1107,74.11,4.07,69.5,False
+rotation,ローテーション,numeric,3,373,84.67,15.42,67.22,False
+hizume_code,蹄コード,code,4,741,73.77,7.28,66.63,False
+kyakushitsu,脚質,code,4,1107,72.59,7.64,65.1,False
+kyori_tekisei,距離適性,code,3,1084,71.59,6.92,63.75,False

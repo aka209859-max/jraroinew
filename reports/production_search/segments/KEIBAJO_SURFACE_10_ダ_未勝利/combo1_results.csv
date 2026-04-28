@@ -1,0 +1,10 @@
+﻿factor,label,ftype,n_bins,n_bets,mean_roi,std_roi,clb,pass
+kijun_ninkijun_tansho,基準人気順単勝,numeric,7,716,78.64,8.53,72.32,False
+rotation,ローテーション,numeric,3,469,75.24,3.65,71.12,False
+kyori_tekisei,距離適性,code,3,1305,73.5,4.02,68.95,False
+omo_tekisei_code,重適性,code,3,1321,73.76,4.5,68.67,False
+tenkai_kigo_code,展開記号,code,5,1323,71.47,5.12,66.98,False
+kyakushitsu,脚質,code,4,1323,71.05,5.3,65.85,False
+hizume_code,蹄コード,code,4,934,74.7,11.21,63.71,False
+ls_shisu_juni,LS指数順位,numeric,3,1008,69.88,8.02,60.81,False
+kishu_shisu,騎手指数,numeric,3,495,58.35,6.5,50.99,False

@@ -1,0 +1,12 @@
+﻿factor,label,ftype,n_bins,n_bets,mean_roi,std_roi,clb,pass
+kishu_shisu,騎手指数,numeric,3,429,89.02,12.6,74.77,False
+hizume_code,蹄コード,code,4,915,78.13,5.86,72.38,False
+kyori_kubun,距離区分,code,3,1241,74.22,2.05,71.9,False
+kyori_tekisei,距離適性,code,3,1238,73.31,3.41,69.45,False
+kyakushitsu,脚質,code,4,1275,73.05,4.57,68.57,False
+tenkai_kigo_code,展開記号,code,4,1180,77.4,10.95,66.67,False
+rotation,ローテーション,numeric,5,540,72.81,7.21,66.48,False
+omo_tekisei_code,重適性,code,3,1271,70.86,5.42,64.73,False
+uma_start_shisu,馬スタート指数,numeric,4,703,73.6,13.1,60.77,False
+ls_shisu_juni,LS指数順位,numeric,4,947,67.07,10.31,56.97,False
+class_code,クラスコード,code,3,1023,69.56,11.27,56.81,False
