@@ -1,0 +1,76 @@
+E:\jraroinew\backend\batch\factor_screening.py:339: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql(query, conn)
+E:\jraroinew\backend\batch\factor_screening.py:348: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql(_PREV_QUERY, conn)
+E:\jraroinew\backend\batch\factor_screening.py:356: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  return pd.read_sql(_BLOOD_QUERY, conn)
+E:\jraroinew\backend\batch\factor_screening.py:1089: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  joa_df = pd.read_sql(_JOA_QUERY, conn)
+E:\jraroinew\backend\batch\factor_screening.py:1090: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  bac_df = pd.read_sql(_BAC_QUERY, conn)
+[INFO] 3-COMBOスクリーニング結果: 1821件
+[INFO] レースデータ読み込み中...
+[INFO] Loading main data (limit=無制限)...
+[INFO] Main rows: 456,615
+[INFO] Loading prev race data...
+[INFO] Prev: 492,491
+[INFO] Loading bloodline data...
+[INFO] Blood: 55,419
+[INFO] Computing derived factors...
+[INFO] Odds filter: 456,615 -> 360,874
+[INFO] Loading extra tables (jrd_joa, jrd_bac)...
+[INFO] jrd_joa_fixed: 490,167 rows, jrd_bac_fixed: 35,168 rows
+[INFO] After extra merge: 360,874 rows, 160 cols
+[INFO] tansho_odds_numeric: range [1.1, 100.0]
+[INFO] Preparing corrected ROI columns...
+[INFO] prepare_corrected_cols: fukusho_corr(kijun)=[0.93,3.01] hit=26.8%, tansho_corr=[0.80,1.60] hit=9.1%, kijun_fuku mean=3.94x
+[INFO] prepare_corrected_cols: fukusho_corr(kijun)=[0.93,3.01] hit=26.8%, tansho_corr=[0.80,1.60] hit=9.1%, kijun_fuku mean=3.94x
+[INFO] セグメント数: 33
+[INFO] データ準備完了 (364.5s)
+[ 400/1821] F1通過:303 F1+2通過:80 全通過:80 | 0.5件/s ETA:44.9min
+[ 800/1821] F1通過:575 F1+2通過:160 全通過:160 | 0.7件/s ETA:23.3min
+[1300/1821] F1通過:880 F1+2通過:275 全通過:274 | 0.9件/s ETA:9.4min
+[1400/1821] F1通過:935 F1+2通過:288 全通過:287 | 0.9件/s ETA:7.4min
+[1500/1821] F1通過:990 F1+2通過:305 全通過:304 | 1.0件/s ETA:5.5min
+
+[SAVE] 詳細結果: reports\screening\3combo_filter_detail.csv (1821件)
+[SAVE] 精鋭3-COMBO: reports\screening\3combo_filtered.csv (364件)
+
+============================================================
+3-COMBOフィルタリング完了 (31.0分)
+============================================================
+  入力:           1,821件
+  Filter 1通過:   1,168件  (OOT CLB>=75.0%)
+  Filter 1+2通過: 365件  (+ 印逆張り CLB>=78.0%)
+  全Filter通過:   364件  (+ クロスゲイン>=0.0%)
+============================================================
+
+【Top 10 精鋭3-COMBO (cross_gain降順)】
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_fukusho+prev1_bataiju_bin
+    combo_CLB=88.71% OOT_CLB=87.13% cross_gain=+23.39%
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_tansho+prev1_bataiju_bin
+    combo_CLB=88.77% OOT_CLB=87.13% cross_gain=+23.34%
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+prev1_bataiju_bin+yoso_juni
+    combo_CLB=87.00% OOT_CLB=82.74% cross_gain=+19.45%
+  [KEIBAJO_SURFACE_08_芝] bac_jouken+goal_sa+kyori
+    combo_CLB=92.93% OOT_CLB=81.33% cross_gain=+19.30%
+  [KEIBAJO_SURFACE_08_ダ] agari_shisu_juni+goal_juni+kyi_kyusha_rank
+    combo_CLB=90.68% OOT_CLB=77.54% cross_gain=+18.91%
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_fukusho+yoso_juni
+    combo_CLB=86.40% OOT_CLB=88.69% cross_gain=+18.85%
+  [KEIBAJO_SURFACE_08_ダ] agari_shisu_juni+goal_juni+manken_shirushi
+    combo_CLB=91.54% OOT_CLB=91.30% cross_gain=+18.73%
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+kijun_ninkijun_tansho+yoso_juni
+    combo_CLB=86.20% OOT_CLB=88.69% cross_gain=+18.65%
+  [KEIBAJO_SURFACE_07_ダ] goal_juni+hizume_code+yoso_juni
+    combo_CLB=89.97% OOT_CLB=75.47% cross_gain=+18.30%
+  [KEIBAJO_SURFACE_07_ダ] gekiso_juni+goal_juni+kyi_kyusha_rank
+    combo_CLB=88.49% OOT_CLB=78.66% cross_gain=+17.67%
+
+【Filter 1失敗内訳】
+  oot_clb_low: 627件
+  insufficient_oot_bins: 26件
+
+【Filter 2失敗内訳（F1通過後）】
+  shirushi_clb_low: 779件
+  no_valid_grid: 24件

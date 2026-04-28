@@ -92,12 +92,12 @@ def _np_clb(
     factors: List[str],
     bin_min_n: int = COMBO_BIN_MIN_N,
     min_bins: int = 3,
-) -> Optional[float]:
+) -> Optional[Tuple[float, int]]:
     """
-    指定ファクターリストでビン別補正ROI CLBを計算する。
+    指定ファクターリストでビン別補正ROI CLBと有効ビン数を計算する。
     factor_3combo_screening の evaluate_3combo と同じnumpy実装。
 
-    Returns: CLB (float) or None if insufficient data
+    Returns: (CLB: float, K: int) or None if insufficient data
     """
     # 全列の存在確認
     for col in factors:
@@ -149,7 +149,8 @@ def _np_clb(
     arr  = np.array(bin_rois, dtype=float)
     mean = float(arr.mean())
     std  = float(arr.std(ddof=1)) if K > 1 else 0.0
-    return mean - 1.96 * std / math.sqrt(K)
+    clb  = mean - 1.96 * std / math.sqrt(K)
+    return (clb, K)
 
 
 # --------------------------------------------------------------------------
@@ -213,15 +214,17 @@ def evaluate_oot(
         }
 
     # OOT CLB
-    oot_clb = _np_clb(oot_df, factors, bin_min_n=OOT_BIN_MIN_N, min_bins=OOT_MIN_BINS)
+    oot_result = _np_clb(oot_df, factors, bin_min_n=OOT_BIN_MIN_N, min_bins=OOT_MIN_BINS)
 
-    if oot_clb is None:
+    if oot_result is None:
         return {
             "oot_clb": None, "oot_n_bins": 0, "oot_n_bets": 0,
             "oot_roi_2023": None, "oot_roi_2024": None, "oot_roi_2025": None,
             "oot_min_yearly_roi": None,
             "f1_pass": False, "f1_reason": "insufficient_oot_bins",
         }
+
+    oot_clb, oot_n_bins = oot_result  # CLBと有効ビン数をアンパック
 
     # 年別ROI
     yr_rois = {}
@@ -242,7 +245,7 @@ def evaluate_oot(
 
     return {
         "oot_clb":          round(oot_clb, 2),
-        "oot_n_bins":       0,   # filled below if needed
+        "oot_n_bins":       oot_n_bins,   # 修正: 実際の有効ビン数を格納
         "oot_n_bets":       int(len(oot_df)),
         "oot_roi_2023":     yr_rois.get(23),
         "oot_roi_2024":     yr_rois.get(24),
@@ -302,11 +305,13 @@ def evaluate_shirushi(
             if len(filtered) < OOT_BIN_MIN_N * 2:
                 continue
 
-            clb = _np_clb(filtered, factors, bin_min_n=30, min_bins=2)
-            if clb is not None and clb > best_clb:
-                best_clb    = clb
-                best_odds_t = odds_t
-                best_rank_t = rank_t
+            clb_result = _np_clb(filtered, factors, bin_min_n=30, min_bins=2)
+            if clb_result is not None:
+                clb, _ = clb_result
+                if clb > best_clb:
+                    best_clb    = clb
+                    best_odds_t = odds_t
+                    best_rank_t = rank_t
 
     f2_pass = (best_clb >= SHIRUSHI_CLB) if best_clb > -999 else False
     reason  = "pass" if f2_pass else (
@@ -332,7 +337,12 @@ def _clb_or_none(seg_df: pd.DataFrame, factors: List[str], min_n: int = SUBSET_M
     min_n未満のビンは除外し、有効ビンが2以上なければNone。
     """
     # 単独ファクターの場合: min_bins=2 は緩めずに適用（= CLBが安定でないと0とみなさない）
-    return _np_clb(seg_df, factors, bin_min_n=min_n, min_bins=2)
+    # CLBのみ返す（ビン数は不要）
+    result = _np_clb(seg_df, factors, bin_min_n=min_n, min_bins=2)
+    if result is None:
+        return None
+    clb, _ = result
+    return clb
 
 
 def evaluate_cross_gain(
