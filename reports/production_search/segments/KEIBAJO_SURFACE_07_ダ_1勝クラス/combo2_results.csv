@@ -1,0 +1,13 @@
+﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_07_ダ_1勝クラス,kyori_kubun+hizume_code,kyori_kubun,hizume_code,3,345,75.81,4.0,71.28,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,tenkai_kigo_code+omo_tekisei_code,tenkai_kigo_code,omo_tekisei_code,3,701,74.51,4.09,69.88,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,omo_tekisei_code+hizume_code,omo_tekisei_code,hizume_code,3,521,76.85,8.87,66.82,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,kyori_kubun+omo_tekisei_code,kyori_kubun,omo_tekisei_code,4,897,68.73,2.98,65.82,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,tenkai_kigo_code+hizume_code,tenkai_kigo_code,hizume_code,3,367,80.13,13.17,65.22,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,kyori_kubun+kyori_tekisei,kyori_kubun,kyori_tekisei,5,1011,72.48,8.51,65.02,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,kyori_kubun+kyakushitsu,kyori_kubun,kyakushitsu,5,765,72.41,8.95,64.56,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,tenkai_kigo_code+kyori_tekisei,tenkai_kigo_code,kyori_tekisei,3,638,73.01,7.63,64.37,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,omo_tekisei_code+kyakushitsu,omo_tekisei_code,kyakushitsu,3,678,71.95,9.31,61.42,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,tenkai_kigo_code+kyakushitsu,tenkai_kigo_code,kyakushitsu,4,781,70.48,10.05,60.62,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,kyakushitsu+kyori_tekisei,kyakushitsu,kyori_tekisei,4,529,71.99,11.62,60.6,False
+KEIBAJO_SURFACE_07_ダ_1勝クラス,omo_tekisei_code+kyori_tekisei,omo_tekisei_code,kyori_tekisei,3,763,69.38,11.76,56.07,False

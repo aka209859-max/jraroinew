@@ -1,0 +1,16 @@
+﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
+COURSE_27_03_芝_長距離,agari_shisu_juni+tenkai_kigo_code,agari_shisu_juni,tenkai_kigo_code,3,318,81.08,0.28,80.77,True
+COURSE_27_03_芝_長距離,joken_class_code+kyori_tekisei,joken_class_code,kyori_tekisei,5,1026,76.33,6.62,70.52,False
+COURSE_27_03_芝_長距離,kyori_tekisei+tenkai_kigo_code,kyori_tekisei,tenkai_kigo_code,4,855,73.51,4.83,68.78,False
+COURSE_27_03_芝_長距離,joken_class_code+class_code,joken_class_code,class_code,3,965,76.01,7.37,67.67,False
+COURSE_27_03_芝_長距離,joken_class_code+kyakushitsu,joken_class_code,kyakushitsu,7,1072,73.61,10.06,66.16,False
+COURSE_27_03_芝_長距離,joken_class_code+tenkai_kigo_code,joken_class_code,tenkai_kigo_code,4,906,72.69,7.15,65.69,False
+COURSE_27_03_芝_長距離,kyori_tekisei+kyakushitsu,kyori_tekisei,kyakushitsu,4,792,71.75,9.48,62.46,False
+COURSE_27_03_芝_長距離,kyori_tekisei+class_code,kyori_tekisei,class_code,3,638,71.95,10.61,59.95,False
+COURSE_27_03_芝_長距離,joken_class_code+ls_shisu_juni,joken_class_code,ls_shisu_juni,4,532,64.6,6.59,58.14,False
+COURSE_27_03_芝_長距離,kyori_tekisei+hizume_code,kyori_tekisei,hizume_code,4,498,72.22,14.82,57.7,False
+COURSE_27_03_芝_長距離,ls_shisu_juni+kyakushitsu,ls_shisu_juni,kyakushitsu,3,424,67.35,8.86,57.32,False
+COURSE_27_03_芝_長距離,hizume_code+tenkai_kigo_code,hizume_code,tenkai_kigo_code,3,424,70.65,12.36,56.66,False
+COURSE_27_03_芝_長距離,class_code+tenkai_kigo_code,class_code,tenkai_kigo_code,3,652,74.21,15.67,56.47,False
+COURSE_27_03_芝_長距離,class_code+kyakushitsu,class_code,kyakushitsu,4,600,73.89,18.22,56.03,False
+COURSE_27_03_芝_長距離,kyakushitsu+tenkai_kigo_code,kyakushitsu,tenkai_kigo_code,3,797,69.63,16.79,50.63,False

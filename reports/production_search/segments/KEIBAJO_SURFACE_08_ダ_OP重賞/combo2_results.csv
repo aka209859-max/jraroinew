@@ -1,0 +1,11 @@
+﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_kubun+kyori_tekisei,kyori_kubun,kyori_tekisei,5,1059,71.99,3.83,68.63,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_kubun+tenkai_kigo_code,kyori_kubun,tenkai_kigo_code,3,656,70.92,2.16,68.47,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_kubun+kyakushitsu,kyori_kubun,kyakushitsu,5,715,72.58,5.06,68.14,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,kyakushitsu+kyori_tekisei,kyakushitsu,kyori_tekisei,6,779,71.32,7.16,65.59,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,tenkai_kigo_code+kyakushitsu,tenkai_kigo_code,kyakushitsu,4,833,70.26,5.41,64.97,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,tenkai_kigo_code+kyori_tekisei,tenkai_kigo_code,kyori_tekisei,3,621,67.67,7.15,59.59,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_tekisei+shiba_tekisei_code,kyori_tekisei,shiba_tekisei_code,3,459,60.29,1.71,58.35,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_kubun+ls_shisu_juni,kyori_kubun,ls_shisu_juni,3,465,68.8,10.99,56.37,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_tekisei+ls_shisu_juni,kyori_tekisei,ls_shisu_juni,3,438,64.28,8.24,54.96,False
+KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_kubun+shiba_tekisei_code,kyori_kubun,shiba_tekisei_code,3,471,57.83,16.58,39.07,False

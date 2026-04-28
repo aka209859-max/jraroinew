@@ -1,0 +1,63 @@
+======================================================================
+  Enable Edge Engine - Phase 2 (COMBO 2) 完走レポート
+  生成日時: 2026-04-29 02:24:51
+======================================================================
+
+■ 実行サマリー
+  処理時間:             13644.4秒 (227.4分)
+  評価セグメント数:     181
+  pass有りセグメント:   58
+  総評価ペア数:         51,704
+  CLB>=80% pass 総数:   129
+  pass率:               0.25%
+
+■ CLB上位5件 (全セグメント通算)
+  1位: KEIBAJO_SURFACE_01_ダ
+      ファクターペア: agari_shisu_juni+kijun_ninkijun_tansho
+      CLB=97.34%  平均ROI=99.54%  有効ビン=3  サンプル=338
+
+  2位: COURSE_27_04_芝_短距離
+      ファクターペア: kishu_kitai_sanchakunai_ritsu+pace_yoso
+      CLB=92.63%  平均ROI=103.02%  有効ビン=3  サンプル=354
+
+  3位: GLOBAL_条件戦
+      ファクターペア: kyori_tekisei_2+uma_start_shisu
+      CLB=92.42%  平均ROI=93.00%  有効ビン=3  サンプル=773
+
+  4位: KEIBAJO_SURFACE_10_芝_条件戦
+      ファクターペア: manken_shirushi+agari_shisu_juni
+      CLB=91.54%  平均ROI=95.56%  有効ビン=4  サンプル=484
+
+  5位: KEIBAJO_SURFACE_02_ダ_条件戦
+      ファクターペア: kyakushitsu+gekiso_juni
+      CLB=90.67%  平均ROI=92.29%  有効ビン=3  サンプル=342
+
+■ セグメント別 Top 10 (best_clb 降順)
+  KEIBAJO_SURFACE_01_ダ
+    best_clb=97.34%  n_pass=2  best_pair=agari_shisu_juni+kijun_ninkijun_tansho
+  COURSE_27_04_芝_短距離
+    best_clb=92.63%  n_pass=2  best_pair=kishu_kitai_sanchakunai_ritsu+pace_yoso
+  GLOBAL_条件戦
+    best_clb=92.42%  n_pass=19  best_pair=kyori_tekisei_2+uma_start_shisu
+  KEIBAJO_SURFACE_10_芝_条件戦
+    best_clb=91.54%  n_pass=3  best_pair=manken_shirushi+agari_shisu_juni
+  KEIBAJO_SURFACE_02_ダ_条件戦
+    best_clb=90.67%  n_pass=3  best_pair=kyakushitsu+gekiso_juni
+  SURFACE_2_芝_1勝クラス
+    best_clb=88.86%  n_pass=3  best_pair=kyakushitsu+chokyo_shisu
+  SURFACE_2_芝_条件戦
+    best_clb=87.14%  n_pass=8  best_pair=kyori_tekisei_2+class_code
+  KEIBAJO_SURFACE_02_ダ
+    best_clb=86.55%  n_pass=3  best_pair=ichi_shisu_juni+pace_shisu_juni
+  COURSE_27_04_芝_中距離
+    best_clb=86.24%  n_pass=1  best_pair=ichi_shisu_juni+pace_shisu_juni
+  KEIBAJO_SURFACE_03_芝
+    best_clb=85.95%  n_pass=1  best_pair=uma_start_shisu+kyori_tekisei_2
+
+■ 出力ファイル一覧
+  サマリーCSV:   E:\jraroinew\reports\production_search\combo2_summary.csv
+  本レポート:    E:\jraroinew\reports\production_search\phase2_report.txt
+  チェックポイント: E:\jraroinew\reports\production_search\checkpoints\pipeline_master.json
+  セグメント別CSV: E:\jraroinew\reports\production_search\segments\<seg_name>\combo2_results.csv
+
+======================================================================

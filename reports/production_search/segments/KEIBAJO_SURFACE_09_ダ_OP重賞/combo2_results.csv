@@ -1,0 +1,17 @@
+﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_kubun+tenkai_kigo_code,kyori_kubun,tenkai_kigo_code,3,794,72.64,0.69,71.86,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,agari_shisu_juni+tenkai_kigo_code,agari_shisu_juni,tenkai_kigo_code,3,313,73.11,3.15,69.55,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_kubun+kyori_tekisei,kyori_kubun,kyori_tekisei,5,1227,69.97,2.68,67.62,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,tenkai_kigo_code+hizume_code,tenkai_kigo_code,hizume_code,3,456,75.99,7.46,67.55,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_kubun+shiba_tekisei_code,kyori_kubun,shiba_tekisei_code,3,545,75.81,7.7,67.09,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_tekisei+ls_shisu_juni,kyori_tekisei,ls_shisu_juni,3,660,67.4,1.56,65.63,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_kubun+kyakushitsu,kyori_kubun,kyakushitsu,6,1055,72.13,8.7,65.17,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_tekisei+shiba_tekisei_code,kyori_tekisei,shiba_tekisei_code,3,493,76.92,10.52,65.02,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_kubun+ls_shisu_juni,kyori_kubun,ls_shisu_juni,3,691,65.74,1.31,64.25,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_kubun+hizume_code,kyori_kubun,hizume_code,4,518,78.85,15.97,63.19,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_tekisei+kyakushitsu,kyori_tekisei,kyakushitsu,8,1100,71.05,12.0,62.74,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_tekisei+tenkai_kigo_code,kyori_tekisei,tenkai_kigo_code,3,756,72.28,9.16,61.91,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyori_tekisei+uma_start_shisu,kyori_tekisei,uma_start_shisu,3,483,69.41,8.34,59.98,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,tenkai_kigo_code+kyakushitsu,tenkai_kigo_code,kyakushitsu,4,962,70.71,12.01,58.94,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,kyakushitsu+shiba_tekisei_code,kyakushitsu,shiba_tekisei_code,3,448,75.87,18.35,55.11,False
+KEIBAJO_SURFACE_09_ダ_OP重賞,ls_shisu_juni+kyakushitsu,ls_shisu_juni,kyakushitsu,3,611,63.44,17.22,43.96,False

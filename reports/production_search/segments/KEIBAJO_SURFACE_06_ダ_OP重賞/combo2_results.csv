@@ -1,0 +1,16 @@
+﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_06_ダ_OP重賞,agari_shisu_juni+tenkai_kigo_code,agari_shisu_juni,tenkai_kigo_code,3,332,79.32,9.11,69.01,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,kyakushitsu+omo_tekisei_code,kyakushitsu,omo_tekisei_code,7,1282,74.87,11.3,66.49,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,tenkai_kigo_code+omo_tekisei_code,tenkai_kigo_code,omo_tekisei_code,4,960,79.35,13.12,66.49,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,omo_tekisei_code+shiba_tekisei_code,omo_tekisei_code,shiba_tekisei_code,4,753,72.01,6.04,66.09,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,kyori_tekisei+omo_tekisei_code,kyori_tekisei,omo_tekisei_code,6,1241,70.81,6.13,65.9,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,kyori_tekisei+kyakushitsu,kyori_tekisei,kyakushitsu,7,1012,66.8,4.91,63.17,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,hizume_code+omo_tekisei_code,hizume_code,omo_tekisei_code,4,701,71.77,9.68,62.28,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,tenkai_kigo_code+kyakushitsu,tenkai_kigo_code,kyakushitsu,4,937,74.08,12.1,62.22,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,kyori_tekisei+tenkai_kigo_code,kyori_tekisei,tenkai_kigo_code,3,743,65.96,4.79,60.55,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,tenkai_kigo_code+shiba_tekisei_code,tenkai_kigo_code,shiba_tekisei_code,3,529,65.09,6.04,58.25,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,tenkai_kigo_code+ls_shisu_juni,tenkai_kigo_code,ls_shisu_juni,4,598,64.83,8.76,56.25,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,kyori_tekisei+shiba_tekisei_code,kyori_tekisei,shiba_tekisei_code,3,481,70.73,13.11,55.9,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,hizume_code+kyori_tekisei,hizume_code,kyori_tekisei,3,328,78.08,20.66,54.7,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,omo_tekisei_code+ls_shisu_juni,omo_tekisei_code,ls_shisu_juni,5,727,64.89,11.69,54.64,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,hizume_code+tenkai_kigo_code,hizume_code,tenkai_kigo_code,3,418,64.41,8.72,54.54,False

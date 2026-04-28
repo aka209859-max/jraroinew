@@ -1,0 +1,3 @@
+﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
+COURSE_27_09_障_長距離,omo_tekisei_code+hizume_code,omo_tekisei_code,hizume_code,3,347,85.93,7.24,77.73,False
+COURSE_27_09_障_長距離,omo_tekisei_code+kyakushitsu,omo_tekisei_code,kyakushitsu,5,767,67.41,6.18,62.0,False
