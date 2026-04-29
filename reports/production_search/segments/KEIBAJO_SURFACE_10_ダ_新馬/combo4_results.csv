@@ -1,0 +1,14 @@
+﻿segment,factors,factor1,factor2,factor3,factor4,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+uma_start_shisu+kyori_tekisei,ls_shisu_juni,kyori_kubun,uma_start_shisu,kyori_tekisei,3,530,77.45,4.67,72.16,False
+KEIBAJO_SURFACE_10_ダ_新馬,kyori_kubun+omo_tekisei_code+kyori_tekisei+hizume_code,kyori_kubun,omo_tekisei_code,kyori_tekisei,hizume_code,4,644,76.19,5.1,71.2,False
+KEIBAJO_SURFACE_10_ダ_新馬,kyori_kubun+omo_tekisei_code+uma_start_shisu+kyori_tekisei,kyori_kubun,omo_tekisei_code,uma_start_shisu,kyori_tekisei,5,727,82.62,20.22,64.9,False
+KEIBAJO_SURFACE_10_ダ_新馬,kyori_kubun+omo_tekisei_code+uma_deokure_ritsu+kyori_tekisei,kyori_kubun,omo_tekisei_code,uma_deokure_ritsu,kyori_tekisei,3,439,78.82,14.23,62.72,False
+KEIBAJO_SURFACE_10_ダ_新馬,kyori_kubun+uma_start_shisu+uma_deokure_ritsu+kyori_tekisei,kyori_kubun,uma_start_shisu,uma_deokure_ritsu,kyori_tekisei,3,455,73.03,9.98,61.73,False
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+omo_tekisei_code+kyori_tekisei,ls_shisu_juni,kyori_kubun,omo_tekisei_code,kyori_tekisei,9,1675,70.34,13.89,61.27,False
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+omo_tekisei_code+uma_deokure_ritsu,ls_shisu_juni,kyori_kubun,omo_tekisei_code,uma_deokure_ritsu,3,382,68.84,8.27,59.48,False
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+kishu_shisu+kishu_kitai_tansho_ritsu,ls_shisu_juni,kyori_kubun,kishu_shisu,kishu_kitai_tansho_ritsu,4,537,73.18,22.3,51.32,False
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+uma_deokure_ritsu+kyori_tekisei,ls_shisu_juni,kyori_kubun,uma_deokure_ritsu,kyori_tekisei,3,468,68.19,14.99,51.23,False
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+omo_tekisei_code+hizume_code,ls_shisu_juni,kyori_kubun,omo_tekisei_code,hizume_code,3,411,66.52,14.96,49.58,False
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+kyori_tekisei+hizume_code,ls_shisu_juni,kyori_kubun,kyori_tekisei,hizume_code,4,598,56.61,9.56,47.24,False
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+omo_tekisei_code+uma_start_shisu,ls_shisu_juni,kyori_kubun,omo_tekisei_code,uma_start_shisu,3,426,75.18,26.31,45.41,False
+KEIBAJO_SURFACE_10_ダ_新馬,ls_shisu_juni+kyori_kubun+kishu_shisu+kyori_tekisei,ls_shisu_juni,kyori_kubun,kishu_shisu,kyori_tekisei,3,407,67.92,20.1,45.17,False

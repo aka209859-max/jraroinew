@@ -1,0 +1,16 @@
+﻿segment,factors,factor1,factor2,factor3,factor4,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyori_kubun+kyori_tekisei_2+shiba_tekisei_code,kyori_tekisei,kyori_kubun,kyori_tekisei_2,shiba_tekisei_code,4,495,86.23,3.73,82.57,True
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyori_kubun+kyori_tekisei_2+omo_tekisei_code,kyori_tekisei,kyori_kubun,kyori_tekisei_2,omo_tekisei_code,3,359,78.49,10.21,66.93,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyori_kubun+kyakushitsu+tenkai_kigo_code,kyori_tekisei,kyori_kubun,kyakushitsu,tenkai_kigo_code,3,378,77.77,15.39,60.36,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyori_tekisei_2+tenkai_kigo_code+shiba_tekisei_code,kyori_tekisei,kyori_tekisei_2,tenkai_kigo_code,shiba_tekisei_code,3,380,79.23,16.77,60.26,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_kubun+tenkai_kigo_code+shiba_tekisei_code+omo_tekisei_code,kyori_kubun,tenkai_kigo_code,shiba_tekisei_code,omo_tekisei_code,3,393,69.24,8.25,59.9,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyori_kubun+shiba_tekisei_code+omo_tekisei_code,kyori_tekisei,kyori_kubun,shiba_tekisei_code,omo_tekisei_code,4,585,73.5,14.17,59.61,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+tenkai_kigo_code+shiba_tekisei_code+omo_tekisei_code,kyori_tekisei,tenkai_kigo_code,shiba_tekisei_code,omo_tekisei_code,3,442,64.92,5.82,58.33,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyori_kubun+tenkai_kigo_code+shiba_tekisei_code,kyori_tekisei,kyori_kubun,tenkai_kigo_code,shiba_tekisei_code,4,596,71.93,14.78,57.45,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_kubun+kyakushitsu+tenkai_kigo_code+omo_tekisei_code,kyori_kubun,kyakushitsu,tenkai_kigo_code,omo_tekisei_code,3,319,71.33,12.33,57.37,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyori_kubun+tenkai_kigo_code+omo_tekisei_code,kyori_tekisei,kyori_kubun,tenkai_kigo_code,omo_tekisei_code,3,415,63.36,5.77,56.82,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyori_kubun+ls_shisu_juni+shiba_tekisei_code,kyori_tekisei,kyori_kubun,ls_shisu_juni,shiba_tekisei_code,3,397,71.65,14.66,55.06,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyakushitsu+tenkai_kigo_code+shiba_tekisei_code+omo_tekisei_code,kyakushitsu,tenkai_kigo_code,shiba_tekisei_code,omo_tekisei_code,5,667,60.25,6.38,54.65,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyakushitsu+tenkai_kigo_code+shiba_tekisei_code,kyori_tekisei,kyakushitsu,tenkai_kigo_code,shiba_tekisei_code,3,397,72.28,16.01,54.16,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,kyori_tekisei+kyakushitsu+tenkai_kigo_code+omo_tekisei_code,kyori_tekisei,kyakushitsu,tenkai_kigo_code,omo_tekisei_code,3,361,58.54,7.05,50.56,False
+KEIBAJO_SURFACE_09_芝_1勝クラス,ls_shisu_juni+tenkai_kigo_code+shiba_tekisei_code+omo_tekisei_code,ls_shisu_juni,tenkai_kigo_code,shiba_tekisei_code,omo_tekisei_code,3,447,59.08,15.92,41.06,False

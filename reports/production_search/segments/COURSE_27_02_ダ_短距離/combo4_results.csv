@@ -1,0 +1,5 @@
+﻿segment,factors,factor1,factor2,factor3,factor4,n_bins,n_bets,mean_roi,std_roi,clb,pass
+COURSE_27_02_ダ_短距離,pace_yoso+kyori_tekisei+omo_tekisei_code+class_code,pace_yoso,kyori_tekisei,omo_tekisei_code,class_code,3,387,77.24,7.54,68.7,False
+COURSE_27_02_ダ_短距離,pace_yoso+ls_shisu_juni+tenkai_kigo_code+kyakushitsu,pace_yoso,ls_shisu_juni,tenkai_kigo_code,kyakushitsu,3,424,66.83,6.42,59.57,False
+COURSE_27_02_ダ_短距離,pace_yoso+ls_shisu_juni+kyori_tekisei+omo_tekisei_code,pace_yoso,ls_shisu_juni,kyori_tekisei,omo_tekisei_code,3,420,66.2,15.39,48.78,False
+COURSE_27_02_ダ_短距離,pace_yoso+ls_shisu_juni+omo_tekisei_code+class_code,pace_yoso,ls_shisu_juni,omo_tekisei_code,class_code,3,330,56.51,6.94,48.65,False

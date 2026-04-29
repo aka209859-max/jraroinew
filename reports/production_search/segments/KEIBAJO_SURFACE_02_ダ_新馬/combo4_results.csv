@@ -1,0 +1,9 @@
+﻿segment,factors,factor1,factor2,factor3,factor4,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_02_ダ_新馬,kyakushitsu+ls_shisu_juni+kyori_tekisei+class_code,kyakushitsu,ls_shisu_juni,kyori_tekisei,class_code,4,451,70.81,6.23,64.7,False
+KEIBAJO_SURFACE_02_ダ_新馬,kyakushitsu+ls_shisu_juni+tenkai_kigo_code+class_code,kyakushitsu,ls_shisu_juni,tenkai_kigo_code,class_code,4,665,63.68,0.68,63.01,False
+KEIBAJO_SURFACE_02_ダ_新馬,kyakushitsu+kyori_tekisei+tenkai_kigo_code+class_code,kyakushitsu,kyori_tekisei,tenkai_kigo_code,class_code,3,427,62.83,3.16,59.25,False
+KEIBAJO_SURFACE_02_ダ_新馬,omo_tekisei_code+kyori_tekisei+tenkai_kigo_code+class_code,omo_tekisei_code,kyori_tekisei,tenkai_kigo_code,class_code,3,388,62.22,5.23,56.31,False
+KEIBAJO_SURFACE_02_ダ_新馬,omo_tekisei_code+kyakushitsu+tenkai_kigo_code+class_code,omo_tekisei_code,kyakushitsu,tenkai_kigo_code,class_code,6,719,63.68,9.36,56.19,False
+KEIBAJO_SURFACE_02_ダ_新馬,omo_tekisei_code+kyakushitsu+ls_shisu_juni+class_code,omo_tekisei_code,kyakushitsu,ls_shisu_juni,class_code,4,455,66.95,13.11,54.1,False
+KEIBAJO_SURFACE_02_ダ_新馬,omo_tekisei_code+ls_shisu_juni+kyori_tekisei+class_code,omo_tekisei_code,ls_shisu_juni,kyori_tekisei,class_code,4,520,66.12,13.64,52.76,False
+KEIBAJO_SURFACE_02_ダ_新馬,omo_tekisei_code+ls_shisu_juni+tenkai_kigo_code+class_code,omo_tekisei_code,ls_shisu_juni,tenkai_kigo_code,class_code,3,542,66.2,14.14,50.19,False

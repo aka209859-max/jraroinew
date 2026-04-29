@@ -1,0 +1,13 @@
+﻿segment,factors,factor1,factor2,factor3,factor4,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+kyakushitsu+uma_deokure_ritsu+tenkai_kigo_code,pace_yoso,kyakushitsu,uma_deokure_ritsu,tenkai_kigo_code,3,417,80.33,6.52,72.95,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+omo_tekisei_code+ls_shisu_juni+uma_deokure_ritsu,pace_yoso,omo_tekisei_code,ls_shisu_juni,uma_deokure_ritsu,4,517,68.79,0.37,68.43,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+omo_tekisei_code+uma_deokure_ritsu+tenkai_kigo_code,pace_yoso,omo_tekisei_code,uma_deokure_ritsu,tenkai_kigo_code,3,355,68.45,4.86,62.96,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+kyori_tekisei+omo_tekisei_code+ls_shisu_juni,pace_yoso,kyori_tekisei,omo_tekisei_code,ls_shisu_juni,4,581,65.55,6.18,59.49,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+kyakushitsu+omo_tekisei_code+ls_shisu_juni,pace_yoso,kyakushitsu,omo_tekisei_code,ls_shisu_juni,6,758,66.68,9.41,59.15,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+omo_tekisei_code+ls_shisu_juni+tenkai_kigo_code,pace_yoso,omo_tekisei_code,ls_shisu_juni,tenkai_kigo_code,4,709,70.56,12.33,58.48,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+kyakushitsu+omo_tekisei_code+tenkai_kigo_code,pace_yoso,kyakushitsu,omo_tekisei_code,tenkai_kigo_code,5,713,67.86,14.99,54.73,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+kyakushitsu+ls_shisu_juni+tenkai_kigo_code,pace_yoso,kyakushitsu,ls_shisu_juni,tenkai_kigo_code,4,629,67.07,15.73,51.66,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+kyakushitsu+kyori_tekisei+tenkai_kigo_code,pace_yoso,kyakushitsu,kyori_tekisei,tenkai_kigo_code,4,422,61.05,10.58,50.68,False
+KEIBAJO_SURFACE_02_ダ_条件戦,kyakushitsu+omo_tekisei_code+ls_shisu_juni+tenkai_kigo_code,kyakushitsu,omo_tekisei_code,ls_shisu_juni,tenkai_kigo_code,3,535,72.01,20.44,48.87,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+kyori_tekisei+omo_tekisei_code+tenkai_kigo_code,pace_yoso,kyori_tekisei,omo_tekisei_code,tenkai_kigo_code,3,415,53.6,4.27,48.77,False
+KEIBAJO_SURFACE_02_ダ_条件戦,pace_yoso+kyori_tekisei+ls_shisu_juni+tenkai_kigo_code,pace_yoso,kyori_tekisei,ls_shisu_juni,tenkai_kigo_code,3,429,52.24,13.5,36.96,False

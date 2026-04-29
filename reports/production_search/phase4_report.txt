@@ -1,0 +1,63 @@
+======================================================================
+  Enable Edge Engine - Phase 4 (COMBO 4) 完走レポート
+  生成日時: 2026-04-30 01:52:57
+======================================================================
+
+■ 実行サマリー
+  処理時間:               17083.5秒 (284.7分)
+  評価セグメント数:       181
+  pass有りセグメント:     67
+  総評価 4-COMBO 数:      70,964
+  CLB>=80% pass 総数:     218
+  pass率:                 0.31%
+
+■ CLB上位5件 (全セグメント通算)
+  1位: KEIBAJO_SURFACE_09_ダ_条件戦
+      ファクター: pace_yoso+omo_tekisei_code+manken_shirushi+uma_start_shisu
+      CLB=93.89%  平均ROI=98.50%  有効ビン=3  サンプル=322
+
+  2位: KEIBAJO_SURFACE_06_ダ_条件戦
+      ファクター: manken_shirushi+pace_yoso+tenkai_kigo_code+agari_shisu_juni
+      CLB=93.06%  平均ROI=97.61%  有効ビン=4  サンプル=475
+
+  3位: KEIBAJO_SURFACE_10_芝
+      ファクター: pace_yoso+manken_shirushi+kishu_shisu+joshodo_code
+      CLB=92.75%  平均ROI=96.11%  有効ビン=3  サンプル=313
+
+  4位: KEIBAJO_SURFACE_05_芝
+      ファクター: kyori_tekisei_2+kyori_kubun+uma_deokure_ritsu+kyakushitsu
+      CLB=92.50%  平均ROI=96.99%  有効ビン=3  サンプル=429
+
+  5位: GLOBAL_条件戦
+      ファクター: kyori_tekisei_2+pace_yoso+umakigo_code+uma_start_shisu
+      CLB=91.43%  平均ROI=93.21%  有効ビン=4  サンプル=567
+
+■ セグメント別 Top 10 (best_clb 降順)
+  KEIBAJO_SURFACE_09_ダ_条件戦
+    best_clb=93.89%  n_pass=11  best_factors=pace_yoso+omo_tekisei_code+manken_shirushi+uma_start_shisu
+  KEIBAJO_SURFACE_06_ダ_条件戦
+    best_clb=93.06%  n_pass=6  best_factors=manken_shirushi+pace_yoso+tenkai_kigo_code+agari_shisu_juni
+  KEIBAJO_SURFACE_10_芝
+    best_clb=92.75%  n_pass=2  best_factors=pace_yoso+manken_shirushi+kishu_shisu+joshodo_code
+  KEIBAJO_SURFACE_05_芝
+    best_clb=92.50%  n_pass=10  best_factors=kyori_tekisei_2+kyori_kubun+uma_deokure_ritsu+kyakushitsu
+  GLOBAL_条件戦
+    best_clb=91.43%  n_pass=16  best_factors=kyori_tekisei_2+pace_yoso+umakigo_code+uma_start_shisu
+  KEIBAJO_SURFACE_07_ダ_条件戦
+    best_clb=91.30%  n_pass=3  best_factors=pace_yoso+manken_shirushi+kyakushitsu+joshodo_code
+  COURSE_27_09_ダ_短距離
+    best_clb=91.19%  n_pass=6  best_factors=manken_shirushi+hizume_code+joshodo_code+da_tekisei_code
+  COURSE_27_08_ダ_短距離
+    best_clb=91.00%  n_pass=2  best_factors=omo_tekisei_code+da_tekisei_code+hizume_code+class_code
+  KEIBAJO_SURFACE_02_ダ
+    best_clb=90.44%  n_pass=6  best_factors=joken_class_code+joshodo_code+kyakushitsu+gekiso_juni
+  COURSE_27_09_ダ_中距離
+    best_clb=90.38%  n_pass=10  best_factors=manken_shirushi+joken_class_code+joshodo_code+gekiso_juni
+
+■ 出力ファイル一覧
+  サマリーCSV:   E:\jraroinew\reports\production_search\combo4_summary.csv
+  本レポート:    E:\jraroinew\reports\production_search\phase4_report.txt
+  チェックポイント: E:\jraroinew\reports\production_search\checkpoints\pipeline_master.json
+  セグメント別CSV: E:\jraroinew\reports\production_search\segments\<seg_name>\combo4_results.csv
+
+======================================================================
