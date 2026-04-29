@@ -1,0 +1,4 @@
+﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_06_ダ_OP重賞,kyori_tekisei+tenkai_kigo_code+kyakushitsu,kyori_tekisei,tenkai_kigo_code,kyakushitsu,3,352,67.72,5.43,61.57,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,kyori_tekisei+tenkai_kigo_code+omo_tekisei_code,kyori_tekisei,tenkai_kigo_code,omo_tekisei_code,3,465,62.5,2.1,60.12,False
+KEIBAJO_SURFACE_06_ダ_OP重賞,tenkai_kigo_code+kyakushitsu+omo_tekisei_code,tenkai_kigo_code,kyakushitsu,omo_tekisei_code,3,514,71.39,14.71,54.75,False

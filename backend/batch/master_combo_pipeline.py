@@ -129,7 +129,7 @@ def add_class_column(df: pd.DataFrame) -> pd.DataFrame:
         2勝/3勝の分離はデータ上困難なため 5クラスで運用する。
     """
     if "joken_class_code" not in df.columns:
-        print("[WARN] joken_class_code カラムが存在しない — _race_class はすべて None")
+        print("[WARN] joken_class_code カラムが存在しない - _race_class はすべて None")
         df["_race_class"] = None
         return df
     df = df.copy()
@@ -261,7 +261,7 @@ def _run_phase1_segment(
     out_csv = out_dir / "combo1_results.csv"
     if out_csv.exists():
         df = pd.read_csv(out_csv)
-        print(f"  [SKIP] {seg_name} — 既存結果 ({len(df)} ファクター)")
+        print(f"  [SKIP] {seg_name} - 既存結果 ({len(df)} ファクター)")
         return df
 
     factor_names = [c for c, _, _ in factors]
@@ -274,7 +274,7 @@ def _run_phase1_segment(
             rows.append(r)
 
     if not rows:
-        print(f"  [SKIP] {seg_name} — 有効ファクターなし")
+        print(f"  [SKIP] {seg_name} - 有効ファクターなし")
         return None
 
     result_df = pd.DataFrame(rows)
@@ -389,11 +389,11 @@ def _run_phase2_segment(
     if out_csv.exists():
         df = pd.read_csv(out_csv)
         n_pass = int(df["pass"].sum()) if "pass" in df.columns else 0
-        print(f"  [SKIP] {seg_name} — 既存結果 ({len(df)} ペア, {n_pass} pass)")
+        print(f"  [SKIP] {seg_name} - 既存結果 ({len(df)} ペア, {n_pass} pass)")
         return df
 
     if len(p1_factors) < 2:
-        print(f"  [SKIP] {seg_name} — Phase 1 ファクター不足 ({len(p1_factors)})")
+        print(f"  [SKIP] {seg_name} - Phase 1 ファクター不足 ({len(p1_factors)})")
         return None
 
     # SegmentCache 構築
@@ -420,7 +420,7 @@ def _run_phase2_segment(
         })
 
     if not rows:
-        print(f"  [SKIP] {seg_name} — 有効ペアなし")
+        print(f"  [SKIP] {seg_name} - 有効ペアなし")
         return None
 
     result_df = pd.DataFrame(rows)
@@ -600,12 +600,251 @@ def _generate_phase2_report(
 
 
 # --------------------------------------------------------------------------
-# Phase 3〜4 スタブ
+# Phase 3: COMBO 3 — 3ファクター探索
 # --------------------------------------------------------------------------
-def run_phase3(seg_map, cp, factors, seg_filter=None):
-    print("[INFO] Phase 3 (COMBO 3) は未実装です。Phase 2 完了後に実装予定。")
+COMBO3_SUMMARY    = OUTPUT_BASE / "combo3_summary.csv"
+PHASE3_REPORT_TXT = OUTPUT_BASE / "phase3_report.txt"
 
 
+def _run_phase3_segment(
+    seg_name: str,
+    seg_df: pd.DataFrame,
+    p1_factors: List[str],
+    out_dir: Path,
+) -> Optional[pd.DataFrame]:
+    """
+    1セグメントの Phase 3 を実行してCSVに保存。
+    既存ファイルがある場合はスキップ（Layer 2 チェックポイント）。
+    """
+    out_csv = out_dir / "combo3_results.csv"
+    if out_csv.exists():
+        df = pd.read_csv(out_csv)
+        n_pass = int(df["pass"].sum()) if "pass" in df.columns else 0
+        print(f"  [SKIP] {seg_name} - 既存結果 ({len(df)} 3-combo, {n_pass} pass)")
+        return df
+
+    if len(p1_factors) < 3:
+        print(f"  [SKIP] {seg_name} - Phase 1 ファクター不足 ({len(p1_factors)})")
+        return None
+
+    # SegmentCache 構築
+    cache = SegmentCache(seg_df, p1_factors)
+
+    # 全 3-COMBO を評価
+    triplets = list(combinations(p1_factors, 3))
+    rows = []
+    for f1, f2, f3 in triplets:
+        result = cache.evaluate_combo([f1, f2, f3], bin_min_n=BIN_MIN_N, min_bins=MIN_VALID_BINS)
+        if result is None:
+            continue
+        rows.append({
+            "segment":   seg_name,
+            "factors":   f"{f1}+{f2}+{f3}",
+            "factor1":   f1,
+            "factor2":   f2,
+            "factor3":   f3,
+            "n_bins":    result["n_valid_bins"],
+            "n_bets":    result["n_valid_bets"],
+            "mean_roi":  result["mean_corrected_roi"],
+            "std_roi":   result["std_bin_roi"],
+            "clb":       result["clb"],
+            "pass":      result["pass"],
+        })
+
+    if not rows:
+        print(f"  [SKIP] {seg_name} - 有効 3-COMBO なし")
+        out_dir.mkdir(parents=True, exist_ok=True)
+        pd.DataFrame(columns=["segment","factors","factor1","factor2","factor3",
+                               "n_bins","n_bets","mean_roi","std_roi","clb","pass"]
+                     ).to_csv(out_csv, index=False, encoding="utf-8-sig")
+        return None
+
+    result_df = pd.DataFrame(rows)
+    result_df = result_df.sort_values("clb", ascending=False).reset_index(drop=True)
+
+    out_dir.mkdir(parents=True, exist_ok=True)
+    result_df.to_csv(out_csv, index=False, encoding="utf-8-sig")
+
+    n_pass = int(result_df["pass"].sum())
+    best_clb = result_df["clb"].max()
+    print(f"  [OK] {seg_name}: {len(triplets)} 3-combo / {len(rows)} 有効 / "
+          f"{n_pass} pass / best CLB={best_clb:.2f}%")
+    return result_df
+
+
+def run_phase3(
+    seg_map: Dict[str, pd.DataFrame],
+    cp: Dict,
+    factors: List[Tuple[str, str, str]],
+    seg_filter: Optional[str] = None,
+) -> pd.DataFrame:
+    """全セグメントで Phase 3 (3-COMBO 評価) を実行。"""
+    completed: Set[str] = set(cp.get("phase3_completed", []))
+    seg_names = sorted(seg_map.keys())
+    if seg_filter:
+        seg_names = [s for s in seg_names if seg_filter in s]
+        print(f"[INFO] --seg-filter '{seg_filter}' -> {len(seg_names)} セグメント")
+
+    summary_rows = []
+    t0 = time.time()
+    total_evaluated = 0
+    total_passed = 0
+
+    for i, seg_name in enumerate(seg_names, 1):
+        seg_df = seg_map[seg_name]
+        out_dir = SEGMENTS_DIR / seg_name
+
+        # Phase 1 結果から上位ファクター取得 (N_MAX_P3=25)
+        p1_factors = _load_phase1_top_factors(seg_name, n_max=N_MAX_P3)
+        n_combos = math.comb(len(p1_factors), 3) if len(p1_factors) >= 3 else 0
+
+        # Layer 2 スキップチェック
+        out_csv = out_dir / "combo3_results.csv"
+        already_done = seg_name in completed or out_csv.exists()
+
+        print(f"[{i}/{len(seg_names)}] {seg_name}  rows={len(seg_df):,}  "
+              f"p1_factors={len(p1_factors)}  3-combos={n_combos}"
+              f"  {'(done)' if already_done else ''}")
+
+        result_df = _run_phase3_segment(seg_name, seg_df, p1_factors, out_dir)
+
+        if result_df is not None and len(result_df) > 0:
+            n_pass = int(result_df["pass"].sum())
+            total_evaluated += len(result_df)
+            total_passed += n_pass
+            best_row = result_df.iloc[0]
+            summary_rows.append({
+                "segment":       seg_name,
+                "n_rows":        len(seg_df),
+                "p1_factors":    len(p1_factors),
+                "n_combos_eval": len(result_df),
+                "n_pass":        n_pass,
+                "best_clb":      round(result_df["clb"].max(), 2),
+                "best_factors":  best_row["factors"],
+                "best_mean_roi": round(best_row["mean_roi"], 2),
+            })
+        else:
+            summary_rows.append({
+                "segment":       seg_name,
+                "n_rows":        len(seg_df),
+                "p1_factors":    len(p1_factors),
+                "n_combos_eval": 0,
+                "n_pass":        0,
+                "best_clb":      None,
+                "best_factors":  None,
+                "best_mean_roi": None,
+            })
+
+        # Layer 1 チェックポイント更新
+        if seg_name not in completed:
+            completed.add(seg_name)
+            cp["phase3_completed"] = sorted(completed)
+            save_master_checkpoint(cp)
+
+    elapsed = time.time() - t0
+    print(f"\n[Phase 3 完了] {len(seg_names)} セグメント / {elapsed:.1f}s")
+    print(f"  総評価 3-COMBO: {total_evaluated:,}  CLB>=80% pass: {total_passed:,}")
+
+    summary_df = pd.DataFrame(summary_rows)
+    OUTPUT_BASE.mkdir(parents=True, exist_ok=True)
+    summary_df.to_csv(COMBO3_SUMMARY, index=False, encoding="utf-8-sig")
+    print(f"[OK] サマリー保存: {COMBO3_SUMMARY}")
+
+    # TXTレポート生成
+    _generate_phase3_report(summary_df, elapsed, total_evaluated, total_passed)
+
+    return summary_df
+
+
+def _generate_phase3_report(
+    summary_df: pd.DataFrame,
+    elapsed: float,
+    total_evaluated: int,
+    total_passed: int,
+) -> None:
+    """Phase 3 完了レポートを TXT ファイルに保存。"""
+    import datetime
+
+    segs_with_pass = int((summary_df["n_pass"] > 0).sum())
+
+    # 全 pass 3-combo を収集して CLB 上位5件を取得
+    all_pass_rows = []
+    for seg_name in summary_df["segment"]:
+        csv_path = SEGMENTS_DIR / seg_name / "combo3_results.csv"
+        if not csv_path.exists():
+            continue
+        seg_df = pd.read_csv(csv_path)
+        if seg_df.empty or "pass" not in seg_df.columns:
+            continue
+        pass_df = seg_df[seg_df["pass"] == True]
+        if not pass_df.empty:
+            all_pass_rows.append(pass_df)
+
+    if all_pass_rows:
+        all_pass = pd.concat(all_pass_rows, ignore_index=True)
+        top5 = all_pass.nlargest(5, "clb") if len(all_pass) > 0 else pd.DataFrame()
+    else:
+        all_pass = pd.DataFrame()
+        top5 = pd.DataFrame()
+
+    lines = []
+    lines.append("=" * 70)
+    lines.append("  Enable Edge Engine - Phase 3 (COMBO 3) 完走レポート")
+    lines.append(f"  生成日時: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    lines.append("=" * 70)
+    lines.append("")
+    lines.append("■ 実行サマリー")
+    lines.append(f"  処理時間:               {elapsed:.1f}秒 ({elapsed/60:.1f}分)")
+    lines.append(f"  評価セグメント数:       {len(summary_df)}")
+    lines.append(f"  pass有りセグメント:     {segs_with_pass}")
+    lines.append(f"  総評価 3-COMBO 数:      {total_evaluated:,}")
+    lines.append(f"  CLB>=80% pass 総数:     {total_passed:,}")
+    pass_rate = total_passed / total_evaluated * 100 if total_evaluated > 0 else 0
+    lines.append(f"  pass率:                 {pass_rate:.2f}%")
+    lines.append("")
+
+    lines.append("■ CLB上位5件 (全セグメント通算)")
+    if not top5.empty:
+        for rank, (_, row) in enumerate(top5.iterrows(), 1):
+            lines.append(f"  {rank}位: {row.get('segment','?')}")
+            lines.append(f"      ファクター: {row.get('factors','?')}")
+            lines.append(f"      CLB={row.get('clb',0):.2f}%  "
+                         f"平均ROI={row.get('mean_roi',0):.2f}%  "
+                         f"有効ビン={row.get('n_bins',0)}  "
+                         f"サンプル={row.get('n_bets',0):,}")
+            lines.append("")
+    else:
+        lines.append("  (CLB>=80% の pass 件数が 0 件のため上位なし)")
+        lines.append("")
+
+    lines.append("■ セグメント別 Top 10 (best_clb 降順)")
+    top_segs = summary_df[summary_df["best_clb"].notna()].nlargest(10, "best_clb")
+    for _, row in top_segs.iterrows():
+        lines.append(f"  {row['segment']}")
+        lines.append(f"    best_clb={row['best_clb']:.2f}%  n_pass={row['n_pass']}  "
+                     f"best_factors={row.get('best_factors','?')}")
+    lines.append("")
+
+    lines.append("■ 出力ファイル一覧")
+    lines.append(f"  サマリーCSV:   {COMBO3_SUMMARY.resolve()}")
+    lines.append(f"  本レポート:    {PHASE3_REPORT_TXT.resolve()}")
+    lines.append(f"  チェックポイント: {MASTER_CP_FILE.resolve()}")
+    lines.append(f"  セグメント別CSV: {(SEGMENTS_DIR / '<seg_name>' / 'combo3_results.csv').resolve()}")
+    lines.append("")
+    lines.append("=" * 70)
+
+    report_text = "\n".join(lines)
+    print("\n" + report_text)
+
+    OUTPUT_BASE.mkdir(parents=True, exist_ok=True)
+    with open(PHASE3_REPORT_TXT, "w", encoding="utf-8") as f:
+        f.write(report_text + "\n")
+    print(f"\n[OK] TXTレポート保存: {PHASE3_REPORT_TXT.resolve()}")
+
+
+# --------------------------------------------------------------------------
+# Phase 4 スタブ
+# --------------------------------------------------------------------------
 def run_phase4(seg_map, cp, factors, seg_filter=None):
     print("[INFO] Phase 4 (COMBO 4) は未実装です。Phase 3 完了後に実装予定。")
 

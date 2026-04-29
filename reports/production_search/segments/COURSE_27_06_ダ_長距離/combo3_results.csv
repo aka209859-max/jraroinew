@@ -1,0 +1,4 @@
+﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
+COURSE_27_06_ダ_長距離,omo_tekisei_code+tenkai_kigo_code+kyori_tekisei,omo_tekisei_code,tenkai_kigo_code,kyori_tekisei,3,466,76.01,4.48,70.94,False
+COURSE_27_06_ダ_長距離,kyakushitsu+omo_tekisei_code+tenkai_kigo_code,kyakushitsu,omo_tekisei_code,tenkai_kigo_code,3,364,74.33,4.34,69.41,False
+COURSE_27_06_ダ_長距離,kyakushitsu+tenkai_kigo_code+kyori_tekisei,kyakushitsu,tenkai_kigo_code,kyori_tekisei,3,466,76.22,16.09,58.02,False

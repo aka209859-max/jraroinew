@@ -158,22 +158,23 @@ class SegmentCache:
 
         # numpy unique でグループ割り当て
         _, inverse = np.unique(key_arr, return_inverse=True)
-        n_groups = int(inverse.max()) + 1
+
+        # np.bincount で各グループのサンプル数を一括集計し、
+        # bin_min_n 以上のグループだけを対象にループ（大規模セグメント高速化）
+        counts = np.bincount(inverse)
+        valid_gis = np.where(counts >= bin_min_n)[0]
 
         bin_rois: List[float] = []
         total_n = 0
-        for gi in range(n_groups):
+        for gi in valid_gis:
             grp = (inverse == gi)
-            n = int(grp.sum())
-            if n < bin_min_n:
-                continue
             w    = w_arr[grp]
             wbet = float((bet_arr[grp] * w).sum())
             wpay = float((pay_arr[grp] * w).sum())
             if wbet <= 0:
                 continue
             bin_rois.append(wpay / wbet * 100.0)
-            total_n += n
+            total_n += int(counts[gi])
 
         K = len(bin_rois)
         if K < min_bins:

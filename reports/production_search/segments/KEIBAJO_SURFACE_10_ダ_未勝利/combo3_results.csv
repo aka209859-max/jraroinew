@@ -1,0 +1,5 @@
+﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_10_ダ_未勝利,omo_tekisei_code+tenkai_kigo_code+kyakushitsu,omo_tekisei_code,tenkai_kigo_code,kyakushitsu,3,499,67.92,3.63,63.82,False
+KEIBAJO_SURFACE_10_ダ_未勝利,tenkai_kigo_code+kyakushitsu+ls_shisu_juni,tenkai_kigo_code,kyakushitsu,ls_shisu_juni,3,465,68.1,5.21,62.21,False
+KEIBAJO_SURFACE_10_ダ_未勝利,kyori_tekisei+omo_tekisei_code+tenkai_kigo_code,kyori_tekisei,omo_tekisei_code,tenkai_kigo_code,3,429,68.75,9.93,57.51,False
+KEIBAJO_SURFACE_10_ダ_未勝利,kyori_tekisei+omo_tekisei_code+ls_shisu_juni,kyori_tekisei,omo_tekisei_code,ls_shisu_juni,4,546,68.35,18.92,49.81,False
