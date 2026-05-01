@@ -1,0 +1,10 @@
+﻿phase,segment,combo,bin_key,n_horses,tansho_n,tansho_hit_rate,tansho_roi_raw,tansho_roi_corr,fukusho_n,fukusho_hit_rate,fukusho_roi_raw,fukusho_roi_corr,combo_clb,combo_mean_roi,split_factor,sub_bins_count,sub_bins_sizes,noise_bins_count,noise_ratio
+3,KEIBAJO_SURFACE_03_芝_新馬,pace_yoso+class_code+kishu_kitai_rentai_ritsu,H|15|3.8,156,156,3.21,172.56,134.4,156,13.46,123.97,105.86,91.05,100.94,tenkai_kigo_code,5,"94,23,22,10,7",4,80.0
+4,KEIBAJO_SURFACE_09_ダ_条件戦,omo_tekisei_code+kyori_tekisei+ichi_shisu_juni+hizume_code,2|2|3.0|10,131,131,22.9,104.43,124.09,131,54.96,115.19,105.84,81.3,96.39,tenkai_kigo_code,5,"73,22,15,13,8",4,80.0
+3,KEIBAJO_SURFACE_06_ダ_条件戦,pace_yoso+rotation+gekiso_juni,M|2.0|1.0,137,137,40.88,113.07,108.92,137,71.53,93.94,104.88,80.63,86.41,tenkai_kigo_code,5,"43,39,34,17,4",5,100.0
+4,KEIBAJO_SURFACE_10_ダ,kyori_kubun+joken_class_code+kishu_shisu+uma_deokure_ritsu,中距離|0|0.2|0.0,145,145,4.14,208.55,175.79,145,13.79,133.38,104.79,82.73,93.25,tenkai_kigo_code,5,"97,20,12,9,7",4,80.0
+3,COURSE_27_10_ダ_中距離,joken_class_code+kishu_shisu+uma_deokure_ritsu,0|0.2|0.0,145,145,4.14,208.55,175.79,145,13.79,133.38,104.79,82.73,93.25,tenkai_kigo_code,5,"97,20,12,9,7",4,80.0
+2,KEIBAJO_SURFACE_05_芝_条件戦,agari_shisu_juni+gekiso_juni,3.0|1.0,133,133,31.58,111.13,108.57,133,66.92,111.88,103.66,81.23,86.0,kyori_kubun,3,"73,55,5",1,33.3
+4,KEIBAJO_SURFACE_05_芝,kyori_tekisei_2+uma_deokure_ritsu+kyakushitsu+shiba_tekisei_code,2|0.0|2|2,205,205,18.05,67.56,107.52,205,44.88,98.59,103.2,87.75,94.18,class_code,16,"73,33,30,21,13,9,7,5,3,2,2,2,2,1,1,1",15,93.8
+3,COURSE_27_06_ダ_短距離,omo_tekisei_code+pace_shisu_juni+ten_shisu_juni,1|1.0|1.0,138,138,23.19,106.96,118.58,138,46.38,94.2,102.3,84.05,94.07,class_code,13,"35,35,20,13,10,8,6,3,2,2,2,1,1",13,100.0
+3,COURSE_27_02_芝_短距離,kyori_tekisei+uma_start_shisu+uma_deokure_ritsu,5|0.0|0.0,135,135,17.04,114.96,113.95,135,38.52,109.26,102.24,85.96,95.52,class_code,11,"55,40,13,6,6,4,3,3,3,1,1",10,90.9
