@@ -1,0 +1,2 @@
+﻿phase,segment,combo,bin_key,n_horses,tansho_n,tansho_hit_rate,tansho_roi_raw,tansho_roi_corr,fukusho_n,fukusho_hit_rate,fukusho_roi_raw,fukusho_roi_corr,combo_clb,combo_mean_roi,split_factor,sub_bins_count,sub_bins_sizes,noise_bins_count,noise_ratio,Y,rank
+2,KEIBAJO_SURFACE_05_芝_条件戦,agari_shisu_juni+gekiso_juni,3.0|1.0,133,133,31.58,111.13,108.57,133,66.92,111.88,103.66,81.23,86.0,kyori_kubun,3,"73,55,5",1,33.3,105.133,S
