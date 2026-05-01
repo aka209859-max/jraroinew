@@ -1,0 +1,2 @@
+﻿phase,segment,combo,bin_key,n_horses,tansho_n,tansho_hit_rate,tansho_roi_raw,tansho_roi_corr,fukusho_n,fukusho_hit_rate,fukusho_roi_raw,fukusho_roi_corr,combo_clb,combo_mean_roi
+4,GLOBAL_条件戦,kyori_tekisei_2+kyori_kubun+umakigo_code+kyori_tekisei,2|中距離|00|5,636,636,19.97,68.03,74.42,636,51.1,84.06,88.87,83.16,88.05
