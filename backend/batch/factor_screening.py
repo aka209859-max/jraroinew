@@ -619,11 +619,16 @@ def compute_derived_factors(
     # surface / kyori_kubun / course_27
     df["surface"] = df["track_code"].apply(_surface)
     df["kyori_kubun"] = df["kyori"].apply(_kyori_kubun)
-    # COURSE_27: コース形状・傾斜・回り方に基づく正式27分類
-    df["course_27"] = df.apply(
-        lambda r: _course_27(r["keibajo_code"], r["surface"], r["kyori"]),
-        axis=1,
-    )
+    # COURSE_27: コース形状・傾斜・回り方に基づく正式27分類 (vectorized)
+    _kyori_num = pd.to_numeric(df["kyori"], errors="coerce")
+    _kb_zfill = df["keibajo_code"].astype(str).str.strip().str.zfill(2)
+    _surf = df["surface"]
+    df["course_27"] = [
+        _COURSE_27_MAP.get((kb, surf, int(k)))
+        if surf in ("芝", "ダ") and k == k  # k==k catches NaN
+        else None
+        for kb, surf, k in zip(_kb_zfill, _surf, _kyori_num)
+    ]
 
     # babajotai_heavy (use shiba field, fallback dirt)
     df["babajotai_heavy"] = df["babajotai_code_shiba"].apply(_babajotai_heavy)

@@ -9,6 +9,14 @@
 3,GLOBAL_条件戦,kyori_tekisei_2+umakigo_code+kyori_tekisei,5|00|1,697,697,20.95,78.46,79.0,697,49.64,82.98,86.59,80.28,86.29
 3,GLOBAL_条件戦,kyori_tekisei_2+umakigo_code+da_tekisei_code,5|00|2,486,486,22.84,66.87,77.31,486,51.65,77.76,84.71,82.05,88.19
 3,GLOBAL_条件戦,kyori_tekisei_2+umakigo_code+omo_tekisei_code,5|00|2,558,558,19.35,65.0,78.12,558,46.42,81.09,84.19,85.06,89.11
+3,COURSE_27_右回り急坂U字_ダ,manken_shirushi+umakigo_code+uma_start_shisu,4|00|0.0,599,599,10.68,63.29,82.27,599,32.72,84.46,82.11,80.65,84.14
 3,GLOBAL_条件戦,kyori_tekisei_2+pace_yoso+umakigo_code,5|H|00,498,498,16.87,74.16,68.85,498,44.98,78.05,81.78,85.08,88.56
-3,COURSE_27_02_芝_短距離,umakigo_code+ls_shisu_juni+uma_deokure_ritsu,00|4.0|0.0,690,690,6.67,79.68,88.07,690,24.06,97.45,80.62,80.08,84.26
+3,COURSE_27_右回り急坂U字_ダ,manken_shirushi+umakigo_code+uma_start_shisu,2|00|0.0,597,597,12.9,91.26,91.41,597,32.16,81.36,81.11,80.65,84.14
+3,COURSE_27_北海道U字_芝,uma_deokure_ritsu+uma_start_shisu+ls_shisu_juni,0.0|0.0|4.0,645,645,6.98,83.26,97.71,645,24.19,101.61,80.61,82.62,89.8
 3,KEIBAJO_SURFACE_06_ダ_新馬,kishu_minarai_code+umakigo_code+kyusha_hyoka_code,3|00|3,572,572,6.47,80.19,76.18,572,22.73,86.43,79.37,80.63,83.2
+3,COURSE_27_右回り急坂U字_ダ,manken_shirushi+umakigo_code+uma_start_shisu,3|00|0.0,594,594,9.6,72.88,71.3,594,31.65,87.47,78.94,80.65,84.14
+3,COURSE_27_右回り急坂U字_ダ,manken_shirushi+umakigo_code+uma_start_shisu,7|00|0.0,555,555,8.65,86.04,78.11,555,29.01,86.83,76.35,80.65,84.14
+3,COURSE_27_右回り急坂U字_ダ,manken_shirushi+umakigo_code+uma_start_shisu,5|00|0.0,585,585,10.43,60.1,81.96,585,30.6,84.0,76.27,80.65,84.14
+3,COURSE_27_右回り急坂U字_ダ,manken_shirushi+umakigo_code+uma_start_shisu,1|00|0.0,607,607,11.37,64.18,87.4,607,28.5,65.42,74.8,80.65,84.14
+3,COURSE_27_右回り急坂U字_ダ,manken_shirushi+umakigo_code+uma_start_shisu,6|00|0.0,574,574,8.36,71.71,72.63,574,24.91,74.11,65.25,80.65,84.14
+3,COURSE_27_右回り急坂U字_ダ,manken_shirushi+umakigo_code+uma_start_shisu,8|00|0.0,529,529,6.62,36.64,63.62,529,23.82,69.87,64.39,80.65,84.14

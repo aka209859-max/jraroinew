@@ -1,15 +1,15 @@
 ======================================================================
   Enable Edge Engine - Phase 4 (COMBO 4) 完走レポート
-  生成日時: 2026-04-30 01:52:57
+  生成日時: 2026-05-02 05:48:57
 ======================================================================
 
 ■ 実行サマリー
-  処理時間:               17083.5秒 (284.7分)
-  評価セグメント数:       181
-  pass有りセグメント:     67
-  総評価 4-COMBO 数:      70,964
-  CLB>=80% pass 総数:     218
-  pass率:                 0.31%
+  処理時間:               8856.6秒 (147.6分)
+  評価セグメント数:       144
+  pass有りセグメント:     54
+  総評価 4-COMBO 数:      67,950
+  CLB>=80% pass 総数:     168
+  pass率:                 0.25%
 
 ■ CLB上位5件 (全セグメント通算)
   1位: KEIBAJO_SURFACE_09_ダ_条件戦
@@ -45,14 +45,14 @@
     best_clb=91.43%  n_pass=16  best_factors=kyori_tekisei_2+pace_yoso+umakigo_code+uma_start_shisu
   KEIBAJO_SURFACE_07_ダ_条件戦
     best_clb=91.30%  n_pass=3  best_factors=pace_yoso+manken_shirushi+kyakushitsu+joshodo_code
-  COURSE_27_09_ダ_短距離
-    best_clb=91.19%  n_pass=6  best_factors=manken_shirushi+hizume_code+joshodo_code+da_tekisei_code
-  COURSE_27_08_ダ_短距離
-    best_clb=91.00%  n_pass=2  best_factors=omo_tekisei_code+da_tekisei_code+hizume_code+class_code
   KEIBAJO_SURFACE_02_ダ
     best_clb=90.44%  n_pass=6  best_factors=joken_class_code+joshodo_code+kyakushitsu+gekiso_juni
-  COURSE_27_09_ダ_中距離
-    best_clb=90.38%  n_pass=10  best_factors=manken_shirushi+joken_class_code+joshodo_code+gekiso_juni
+  KEIBAJO_SURFACE_09_ダ_未勝利
+    best_clb=89.61%  n_pass=3  best_factors=omo_tekisei_code+kyori_tekisei+kyakushitsu+uma_start_shisu
+  COURSE_27_東京U字_芝
+    best_clb=89.24%  n_pass=6  best_factors=kyori_tekisei_2+uma_deokure_ritsu+shiba_tekisei_code+kyakushitsu
+  KEIBAJO_SURFACE_02_芝_条件戦
+    best_clb=87.97%  n_pass=7  best_factors=omo_tekisei_code+uma_start_shisu+kyakushitsu+uma_deokure_ritsu
 
 ■ 出力ファイル一覧
   サマリーCSV:   E:\jraroinew\reports\production_search\combo4_summary.csv

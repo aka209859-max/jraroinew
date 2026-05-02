@@ -1,8 +1,0 @@
-﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
-COURSE_27_03_障_長距離,kyakushitsu+hizume_code,kyakushitsu,hizume_code,5,633,81.98,6.76,76.05,False
-COURSE_27_03_障_長距離,omo_tekisei_code+hizume_code,omo_tekisei_code,hizume_code,7,962,80.11,5.84,75.78,False
-COURSE_27_03_障_長距離,class_code+omo_tekisei_code,class_code,omo_tekisei_code,5,1321,78.51,3.76,75.22,False
-COURSE_27_03_障_長距離,kyakushitsu+omo_tekisei_code,kyakushitsu,omo_tekisei_code,9,1718,77.25,8.71,71.56,False
-COURSE_27_03_障_長距離,class_code+kyakushitsu,class_code,kyakushitsu,7,1340,74.9,8.51,68.59,False
-COURSE_27_03_障_長距離,class_code+hizume_code,class_code,hizume_code,4,615,74.82,11.58,63.47,False
-COURSE_27_03_障_長距離,class_code+kijun_ninkijun_tansho,class_code,kijun_ninkijun_tansho,4,416,75.03,16.05,59.3,False

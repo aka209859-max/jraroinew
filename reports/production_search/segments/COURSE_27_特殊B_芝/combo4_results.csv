@@ -1,0 +1,7 @@
+﻿segment,factors,factor1,factor2,factor3,factor4,n_bins,n_bets,mean_roi,std_roi,clb,pass
+COURSE_27_特殊B_芝,pace_yoso+kyakushitsu+tenkai_kigo_code+kyori_tekisei,pace_yoso,kyakushitsu,tenkai_kigo_code,kyori_tekisei,3,386,68.82,3.78,64.54,False
+COURSE_27_特殊B_芝,pace_yoso+joken_class_code+ls_shisu_juni+kyori_tekisei,pace_yoso,joken_class_code,ls_shisu_juni,kyori_tekisei,3,456,69.18,9.37,58.57,False
+COURSE_27_特殊B_芝,pace_yoso+kyakushitsu+tenkai_kigo_code+ls_shisu_juni,pace_yoso,kyakushitsu,tenkai_kigo_code,ls_shisu_juni,3,394,65.72,6.63,58.22,False
+COURSE_27_特殊B_芝,joken_class_code+kyakushitsu+tenkai_kigo_code+ls_shisu_juni,joken_class_code,kyakushitsu,tenkai_kigo_code,ls_shisu_juni,3,396,69.28,10.6,57.29,False
+COURSE_27_特殊B_芝,pace_yoso+joken_class_code+tenkai_kigo_code+class_code,pace_yoso,joken_class_code,tenkai_kigo_code,class_code,3,442,66.34,8.49,56.73,False
+COURSE_27_特殊B_芝,pace_yoso+joken_class_code+class_code+ls_shisu_juni,pace_yoso,joken_class_code,class_code,ls_shisu_juni,3,468,65.78,8.8,55.83,False

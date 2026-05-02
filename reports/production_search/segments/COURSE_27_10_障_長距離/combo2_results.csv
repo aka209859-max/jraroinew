@@ -1,7 +1,0 @@
-﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
-COURSE_27_10_障_長距離,omo_tekisei_code+hizume_code,omo_tekisei_code,hizume_code,6,730,78.76,7.27,72.94,False
-COURSE_27_10_障_長距離,kyakushitsu+shiba_tekisei_code,kyakushitsu,shiba_tekisei_code,6,1057,75.71,4.75,71.91,False
-COURSE_27_10_障_長距離,shiba_tekisei_code+hizume_code,shiba_tekisei_code,hizume_code,5,697,78.5,10.68,69.13,False
-COURSE_27_10_障_長距離,shiba_tekisei_code+omo_tekisei_code,shiba_tekisei_code,omo_tekisei_code,5,1155,74.01,9.14,65.99,False
-COURSE_27_10_障_長距離,kyakushitsu+omo_tekisei_code,kyakushitsu,omo_tekisei_code,7,1148,74.36,11.72,65.68,False
-COURSE_27_10_障_長距離,kyakushitsu+hizume_code,kyakushitsu,hizume_code,3,372,77.72,13.27,62.71,False

@@ -1,6 +1,0 @@
-﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
-COURSE_27_03_芝_長距離,joken_class_code+class_code+kyakushitsu,joken_class_code,class_code,kyakushitsu,3,465,81.6,13.41,66.42,False
-COURSE_27_03_芝_長距離,joken_class_code+kyori_tekisei+class_code,joken_class_code,kyori_tekisei,class_code,3,609,72.29,12.19,58.49,False
-COURSE_27_03_芝_長距離,joken_class_code+class_code+tenkai_kigo_code,joken_class_code,class_code,tenkai_kigo_code,3,617,73.93,16.54,55.21,False
-COURSE_27_03_芝_長距離,joken_class_code+kyori_tekisei+tenkai_kigo_code,joken_class_code,kyori_tekisei,tenkai_kigo_code,3,489,71.28,14.96,54.35,False
-COURSE_27_03_芝_長距離,kyori_tekisei+kyakushitsu+tenkai_kigo_code,kyori_tekisei,kyakushitsu,tenkai_kigo_code,3,455,74.34,17.99,53.97,False

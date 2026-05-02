@@ -1,15 +1,15 @@
 ======================================================================
   Enable Edge Engine - Phase 3 (COMBO 3) 完走レポート
-  生成日時: 2026-04-29 20:06:41
+  生成日時: 2026-05-02 03:15:52
 ======================================================================
 
 ■ 実行サマリー
-  処理時間:               5896.9秒 (98.3分)
-  評価セグメント数:       181
-  pass有りセグメント:     98
-  総評価 3-COMBO 数:      93,036
-  CLB>=80% pass 総数:     388
-  pass率:                 0.42%
+  処理時間:               3883.1秒 (64.7分)
+  評価セグメント数:       144
+  pass有りセグメント:     82
+  総評価 3-COMBO 数:      83,543
+  CLB>=80% pass 総数:     313
+  pass率:                 0.37%
 
 ■ CLB上位5件 (全セグメント通算)
   1位: KEIBAJO_SURFACE_06_ダ_条件戦
@@ -20,39 +20,39 @@
       ファクター: kyakushitsu+kijun_ninkijun_tansho+gekiso_juni
       CLB=95.01%  平均ROI=98.12%  有効ビン=3  サンプル=446
 
-  3位: COURSE_27_04_芝_短距離
-      ファクター: kishu_kitai_sanchakunai_ritsu+pace_yoso+kishu_shisu
-      CLB=94.65%  平均ROI=103.70%  有効ビン=3  サンプル=349
-
-  4位: KEIBAJO_SURFACE_03_芝_新馬
+  3位: KEIBAJO_SURFACE_03_芝_新馬
       ファクター: pace_yoso+umakigo_code+kishu_kitai_rentai_ritsu
       CLB=92.90%  平均ROI=100.65%  有効ビン=3  サンプル=373
 
-  5位: COURSE_27_07_ダ_中距離
+  4位: COURSE_27_左回り急坂O字_ダ
       ファクター: ten_shisu_juni+pace_shisu_juni+tenkai_kigo_code
       CLB=92.85%  平均ROI=94.29%  有効ビン=3  サンプル=408
+
+  5位: GLOBAL_条件戦
+      ファクター: kyori_tekisei_2+umakigo_code+uma_start_shisu
+      CLB=92.71%  平均ROI=92.81%  有効ビン=3  サンプル=750
 
 ■ セグメント別 Top 10 (best_clb 降順)
   KEIBAJO_SURFACE_06_ダ_条件戦
     best_clb=95.25%  n_pass=19  best_factors=tenkai_kigo_code+kijun_ninkijun_tansho+gekiso_juni
-  COURSE_27_04_芝_短距離
-    best_clb=94.65%  n_pass=6  best_factors=kishu_kitai_sanchakunai_ritsu+pace_yoso+kishu_shisu
   KEIBAJO_SURFACE_03_芝_新馬
     best_clb=92.90%  n_pass=2  best_factors=pace_yoso+umakigo_code+kishu_kitai_rentai_ritsu
-  COURSE_27_07_ダ_中距離
+  COURSE_27_左回り急坂O字_ダ
     best_clb=92.85%  n_pass=5  best_factors=ten_shisu_juni+pace_shisu_juni+tenkai_kigo_code
   GLOBAL_条件戦
     best_clb=92.71%  n_pass=39  best_factors=kyori_tekisei_2+umakigo_code+uma_start_shisu
-  COURSE_27_04_ダ_中距離
-    best_clb=92.54%  n_pass=5  best_factors=da_tekisei_code+uma_start_shisu+pace_shisu_juni
-  COURSE_27_06_ダ_短距離
-    best_clb=92.33%  n_pass=20  best_factors=omo_tekisei_code+gekiso_juni+kijun_ninkijun_tansho
   KEIBAJO_SURFACE_07_ダ_条件戦
     best_clb=91.63%  n_pass=1  best_factors=pace_yoso+manken_shirushi+kyakushitsu
   KEIBAJO_SURFACE_02_ダ
     best_clb=90.67%  n_pass=9  best_factors=joken_class_code+kyakushitsu+gekiso_juni
-  COURSE_27_09_ダ_短距離
-    best_clb=90.59%  n_pass=7  best_factors=manken_shirushi+hizume_code+da_tekisei_code
+  COURSE_27_東京U字_芝
+    best_clb=90.29%  n_pass=5  best_factors=kyori_tekisei_2+omo_tekisei_code+uma_deokure_ritsu
+  KEIBAJO_SURFACE_10_芝
+    best_clb=89.90%  n_pass=1  best_factors=pace_yoso+manken_shirushi+kishu_shisu
+  KEIBAJO_SURFACE_05_芝_条件戦
+    best_clb=89.34%  n_pass=13  best_factors=ten_shisu_juni+pace_shisu_juni+gekiso_juni
+  KEIBAJO_SURFACE_09_ダ_条件戦
+    best_clb=89.27%  n_pass=17  best_factors=manken_shirushi+joshodo_code+ten_shisu_juni
 
 ■ 出力ファイル一覧
   サマリーCSV:   E:\jraroinew\reports\production_search\combo3_summary.csv
