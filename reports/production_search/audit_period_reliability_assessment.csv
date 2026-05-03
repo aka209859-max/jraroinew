@@ -1,0 +1,5 @@
+﻿phase,period_start,period_end,total_years,note_structural_gap,data_source,total_bins,total_n_horses,bins_1_9,bins_10_99,bins_100_149,bins_150_299,bins_300_499,bins_500_plus,judgement,comment
+1,2016,2025,10,中山(keibajo=08): 2021/2022欠損,phase1_bin_detail_for_adoption_review.csv,4045,1723803,2139,1065,147,192,101,401,THIN_DATA,1〜99サンプルビン 79% — フル10年でも薄い。セグメント×コンボの過剰細分化が原因。期間延長による改善は限定的。 ★shortlistセグメント(KEIBAJO_SURFACE_08_芝)は2021/2022欠損(8年分)
+2,2016,2025,10,なし,phase2_bin_detail_for_adoption_review.csv,46624,953554,23711,22116,588,165,29,15,THIN_DATA,1〜99サンプルビン 98% — フル10年でも薄い。セグメント×コンボの過剰細分化が原因。期間延長による改善は限定的。
+3,2016,2025,10,なし,phase3_bin_detail_for_adoption_review.csv,301877,2874139,229312,70862,1319,321,44,19,THIN_DATA,1〜99サンプルビン 99% — フル10年でも薄い。セグメント×コンボの過剰細分化が原因。期間延長による改善は限定的。
+4,2016,2025,10,なし,phase4_bin_detail_for_adoption_review.csv,330937,1727657,290517,39655,623,128,13,1,THIN_DATA,1〜99サンプルビン 100% — フル10年でも薄い。セグメント×コンボの過剰細分化が原因。期間延長による改善は限定的。

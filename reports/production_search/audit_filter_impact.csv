@@ -1,0 +1,11 @@
+﻿phase,filter_name,rows_before,rows_after,removed_rows,removal_ratio,description
+ALL,1_year_range (2016-2025),,741736.0,,,jvd_se WHERE kaisai_nen >= '2016' AND kaisai_nen <= '2025' 全10年フル期間。欠損年なし（ただし中山keibajo=08は2021/2022に開催なし）
+ALL,2_ijo_kubun_code=0 + kakutei_chakujun,741736.0,732552.0,9184.0,0.0124,"異常区分除外(ijo_kubun_code='0') + 取消馬除外(kakutei_chakujun NOT IN ('00',''))"
+ALL,3_jrd_kyi_fixed INNER JOIN,732552.0,456615.0,275937.0,0.3767,jvd_seのみに存在しjrd_kyi_fixedにJOINできない行を除外
+ALL,4_tansho_odds_filter_1.0-100.0x,456615.0,360874.0,95741.0,0.2097,単勝オッズ tansho_odds 10-1000 (1.0-100.0倍) _apply_odds_filter()
+ALL,5_fukusho_odds_NOT_applied_at_row_level,,,,,複勝オッズフィルタ(1.0-17.0倍)は行レベル非適用。kijun_odds_fukusho=0/NULLの行はfukusho_nから除外されるがn_horsesには含まれる
+ALL,6_nakayama_structural_gap_2021_2022,,,,,"中山競馬場(keibajo=08)は2021/2022年に開催なし（施設改修）。DB上も当該年のkeibajo=08レコードが存在しない。shortlist factor(manken_shirushi@KEIBAJO_SURFACE_08_芝)は実質8年分(2016-2020, 2023-2025)のデータ。"
+Phase1,Phase1_bin_detail_all_bins_no_filter,,4045.0,,,"audit_factor_bins.py出力の全ビン行数（n_horses>=1, フィルタなし） = 4045 bins, combos=15, segs=24"
+Phase2,Phase2_bin_detail_all_bins_no_filter,,46624.0,,,"audit_factor_bins.py出力の全ビン行数（n_horses>=1, フィルタなし） = 46624 bins, combos=71, segs=49"
+Phase3,Phase3_bin_detail_all_bins_no_filter,,301877.0,,,"audit_factor_bins.py出力の全ビン行数（n_horses>=1, フィルタなし） = 301877 bins, combos=282, segs=82"
+Phase4,Phase4_bin_detail_all_bins_no_filter,,330937.0,,,"audit_factor_bins.py出力の全ビン行数（n_horses>=1, フィルタなし） = 330937 bins, combos=167, segs=54"
