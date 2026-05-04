@@ -1,0 +1,61 @@
+﻿logical_field_name,jvd_table,jvd_column,jrdb_table,jrdb_column,overlap_type,canonical_source,reason,evidence_file
+keibajo_code,jvd_se,keibajo_code,jrd_kyi_fixed,keibajo_code,exact_overlap,JVD,JOIN条件で一致が保証。JVDを正本とする,factor_screening.py L242
+race_bango,jvd_se,race_bango,jrd_kyi_fixed,race_bango,exact_overlap,JVD,JOIN条件,factor_screening.py L246
+umaban,jvd_se,umaban,jrd_kyi_fixed,umaban,exact_overlap,JVD,JOIN条件,factor_screening.py L247
+wakuban,jvd_se,wakuban,jrd_kyi_fixed,wakuban,exact_overlap,JVD,コード上compute_derived_factorsでjvd_se.wakuban_vを採用済み。正本JVD確定,factor_screening.py L650
+kishu_code,jvd_se,kishu_code,jrd_kyi_fixed,kishu_code,exact_overlap,JVD,騎手コード。jvd_seが公式ソース。JRDBは2次処理,factor_screening.py
+chokyoshi_code,jvd_se,chokyoshi_code,jrd_kyi_fixed,chokyoshi_code,exact_overlap,JVD,調教師コード。JVD正本,factor_screening.py
+kishu_minarai_code,jvd_se,kishu_minarai_code,jrd_kyi_fixed,kishu_minarai_code,exact_overlap,JVD,騎手見習いコード。現在JRDB(k.)から参照。JVDに切替可能,factor_screening.py L183
+umakigo_code,jvd_se,umakigo_code,jrd_kyi_fixed,umakigo_code,exact_overlap,JVD,馬記号(牡牝騸)。現在JRDB(k.)から参照。JVDに切替可能,factor_screening.py L183
+seibetsu_code,jvd_se,seibetsu_code,jrd_kyi_fixed,seibetsu_code,exact_overlap,JVD,性別コード。現在JRDBから参照。JVDに切替可能(ただしPhase1-4 ALL_FACTORSには含まれない),factor_screening.py
+bamei,jvd_se,bamei,jrd_kyi_fixed,bamei,exact_overlap,JVD,馬名。ラベル用途のみ。JVD正本,factor_screening.py
+banushimei,jvd_se,banushimei,jrd_kyi_fixed,banushimei,exact_overlap,JVD,オーナー名。ラベル用途のみ,factor_screening.py
+futan_juryo,jvd_se,futan_juryo,jrd_kyi_fixed,futan_juryo,caution,MANUAL_REVIEW,jvd_se=公式負担重量(確定値)。jrd_kyi_fixed=JRDB版(計算過程が異なる可能性)。現在kから参照。要定義確認,factor_screening.py L205(futan_juryo_rawとして取得)
+bataiju,jvd_se,bataiju,jrd_kyi_fixed,bataiju,caution,MANUAL_REVIEW,jvd_se=公式計量体重(確定値)。jrd_kyi_fixed=JRDB版(予測/補正の可能性)。現在kから参照,factor_screening.py L183
+bataiju_zogen,jvd_se,zogen_sa,jrd_kyi_fixed,bataiju_zogen,caution,MANUAL_REVIEW,"jvd_seはzogen_sa(文字列),jrd_kyi_fixedはbataiju_zogen(数値)。列名も異なる。要定義確認",factor_screening.py
+blinker,jvd_se,blinker_shiyo_kubun,jrd_kyi_fixed,blinker,semantic_overlap,JRDB,"jvd_seはblinker_shiyo_kubun(JVD形式),jrd_kyi_fixedはblinker(JRDB形式)。コーディング異なる可能性。現状JRDBを採用",factor_screening.py L183(blinker from k.)
+kishumei,jvd_se,kishumei_ryakusho,jrd_kyi_fixed,kishumei,semantic_overlap,JRDB,"jvd_seは略称(kishumei_ryakusho),jrd_kyi_fixedはフルネーム(kishumei)。現在JRDB採用",factor_screening.py
+kyakushitsu,jvd_se,kyakushitsu_hantei,jrd_kyi_fixed,kyakushitsu,caution,JRDB,"jvd_seはkyakushitsu_hantei(JVD判定),jrd_kyi_fixedはkyakushitsu(JRDB)。定義差あり。Phase1-4ではJRDB採用",factor_screening.py L183(kyakushitsu from k.)
+tansho_odds,jvd_se,tansho_odds,jrd_kyi_fixed,kijun_odds_tansho,caution,JVD,jvd_se.tansho_odds=公式オッズ(整数x10)。jrd_kyi_fixed.kijun_odds_tansho=JRDB基準オッズ。別物。単勝フィルタはJVD使用,factor_screening.py L195
+kyori,jvd_ra,kyori,jrd_bac_fixed,kyori,exact_overlap,JVD,距離。jvd_raが正本。jrd_bac_fixedはセカンダリ。現在jvd_raから参照,factor_screening.py L212
+grade,jvd_ra,grade_code,jrd_bac_fixed,grade,semantic_overlap,JVD,"グレードコード。jvd_raがA/B/C/L等,jrd_bac_fixedはgrade。現在jvd_raから参照",factor_screening.py
+kyoso_joken,jvd_ra,kyoso_joken_code,jrd_bac_fixed,jouken,semantic_overlap,JVD,競走条件。jvd_raが正本,factor_screening.py
+barei,jvd_se,barei,none,none,jvd_only,JVD,馬齢。jrd_kyi_fixedには存在しない,factor_screening.py L190
+ijo_kubun_code,jvd_se,ijo_kubun_code,none,none,jvd_only,JVD,異常区分(CLAUDE.md規約フィルタ),factor_screening.py WHERE
+kakutei_chakujun,jvd_se,kakutei_chakujun,none,none,jvd_only,JVD,確定着順(結果)。ラベルとして使用,factor_screening.py
+tenko_code,jvd_ra,tenko_code,none,none,jvd_only,JVD,天候コード。競走環境条件,factor_screening.py L213
+babajotai_code_shiba,jvd_ra,babajotai_code_shiba,none,none,jvd_only,JVD,芝馬場状態。競走環境,factor_screening.py
+track_code,jvd_ra,track_code,none,none,jvd_only,JVD,トラックコード(芝/ダ判定の正本),factor_screening.py L212
+haraimodoshi_tansho,jvd_hr,haraimodoshi_tansho_1b,none,none,jvd_only,JVD,単勝払戻金額。ROI計算正本,factor_screening.py
+haraimodoshi_fukusho,jvd_hr,haraimodoshi_fukusho_*,none,none,jvd_only,JVD,複勝払戻金額。ROI計算正本,factor_screening.py
+idm,none,none,jrd_kyi_fixed,idm,jrdb_only,JRDB,IDM指数。JRDB独自,ALL_FACTORS
+sogo_shisu,none,none,jrd_kyi_fixed,sogo_shisu,jrdb_only,JRDB,総合指数。JRDB独自,ALL_FACTORS
+ten_shisu,none,none,jrd_kyi_fixed,ten_shisu,jrdb_only,JRDB,テン指数。JRDB独自,ALL_FACTORS
+pace_shisu,none,none,jrd_kyi_fixed,pace_shisu,jrdb_only,JRDB,ペース指数。JRDB独自,ALL_FACTORS
+agari_shisu,none,none,jrd_kyi_fixed,agari_shisu,jrdb_only,JRDB,上がり指数。JRDB独自,ALL_FACTORS
+ichi_shisu,none,none,jrd_kyi_fixed,ichi_shisu,jrdb_only,JRDB,位置指数。JRDB独自,ALL_FACTORS
+gekiso_shisu,none,none,jrd_kyi_fixed,gekiso_shisu,jrdb_only,JRDB,激走指数。JRDB独自,ALL_FACTORS
+manken_shisu,none,none,jrd_kyi_fixed,manken_shisu,jrdb_only,JRDB,万券指数。JRDB独自,ALL_FACTORS
+kishu_shisu,none,none,jrd_kyi_fixed,kishu_shisu,jrdb_only,JRDB,騎手指数。JRDB独自,ALL_FACTORS
+chokyo_shisu,none,none,jrd_kyi_fixed,chokyo_shisu,jrdb_only,JRDB,調教指数。JRDB独自,ALL_FACTORS
+kyusha_shisu,none,none,jrd_kyi_fixed,kyusha_shisu,jrdb_only,JRDB,厩舎指数。JRDB独自,ALL_FACTORS
+ls_shisu_juni,none,none,jrd_kyi_fixed,ls_shisu_juni,jrdb_only,JRDB,LS指数順位。JRDB独自(SHS),ALL_FACTORS
+manken_shirushi,none,none,jrd_kyi_fixed,manken_shirushi,jrdb_only,JRDB,万券印。JRDB独自(shortlist候補),ALL_FACTORS
+rotation,none,none,jrd_kyi_fixed,rotation,jrdb_only,JRDB,ローテ週数。JRDB独自,ALL_FACTORS
+kakutoku_shokin_ruikei,none,none,jrd_kyi_fixed,kakutoku_shokin_ruikei,jrdb_only,JRDB,獲得賞金累計。JRDB独自(高基数問題あり),ALL_FACTORS
+nyukyu_nannichimae,none,none,jrd_kyi_fixed,nyukyu_nannichimae,jrdb_only,JRDB,入厩何日前。JRDB独自,ALL_FACTORS
+kijun_ninkijun_tansho,none,none,jrd_kyi_fixed,kijun_ninkijun_tansho,jrdb_only,JRDB,基準人気順。JRDB独自,ALL_FACTORS
+pace_yoso,none,none,jrd_kyi_fixed,pace_yoso,jrdb_only,JRDB,ペース予想。JRDB独自,ALL_FACTORS
+tenkai_kigo_code,none,none,jrd_kyi_fixed,tenkai_kigo_code,jrdb_only,JRDB,展開記号。JRDB独自,ALL_FACTORS
+joshodo_code,none,none,jrd_kyi_fixed,joshodo_code,jrdb_only,JRDB,上昇度。JRDB独自,ALL_FACTORS
+hizume_code,none,none,jrd_kyi_fixed,hizume_code,jrdb_only,JRDB,蹄コード。JRDB独自,ALL_FACTORS
+class_code,none,none,jrd_kyi_fixed,class_code,jrdb_only,JRDB,クラスコード(JRDB)。joken_class_codeとは別,ALL_FACTORS
+joken_class_code,none,none,jrd_kyi_fixed,joken_class_code,jrdb_only,JRDB,"条件クラス(0=新馬,1=1勝,2=2勝,3=3勝,9=OP)",ALL_FACTORS
+uma_start_shisu,none,none,jrd_kyi_fixed,uma_start_shisu,jrdb_only,JRDB,スタート指数。JRDB独自,ALL_FACTORS
+uma_deokure_ritsu,none,none,jrd_kyi_fixed,uma_deokure_ritsu,jrdb_only,JRDB,出遅れ率。JRDB独自,ALL_FACTORS
+kishu_kitai_rentai_ritsu,none,none,jrd_kyi_fixed,kishu_kitai_rentai_ritsu,jrdb_only,JRDB,騎手期待連対率。JRDB独自,ALL_FACTORS
+kokyu_flag,none,none,jrd_kyi_fixed,kokyu_flag,jrdb_only,JRDB,呼吸フラグ。JRDB独自,ALL_FACTORS
+kyuyo_riyu_bunrui_code,none,none,jrd_kyi_fixed,kyuyo_riyu_bunrui_code,jrdb_only,JRDB,休養理由分類。JRDB独自,ALL_FACTORS
+kyusha_hyoka_code,none,none,jrd_kyi_fixed,kyusha_hyoka_code,jrdb_only,JRDB,厩舎評価。JRDB独自,ALL_FACTORS
+yuso_kubun,none,none,jrd_kyi_fixed,yuso_kubun,jrdb_only,JRDB,輸送区分。JRDB独自,ALL_FACTORS
+kijun_odds_fukusho,none,none,jrd_kyi_fixed,kijun_odds_fukusho,jrdb_only,JRDB,複勝オッズ(JRDB基準)。複勝フィルタに使用,factor_investment_screening.py

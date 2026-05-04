@@ -171,16 +171,21 @@ SELECT
     k.kishu_kitai_rentai_ritsu, k.kishu_kitai_tansho_ritsu,
     k.kishu_kitai_sanchakunai_ritsu,
     k.uma_start_shisu, k.uma_deokure_ritsu, k.rotation,
-    k.bataiju, k.bataiju_zogen, k.kakutoku_shokin_ruikei,
+    CAST(NULLIF(TRIM(v.bataiju), '') AS NUMERIC) AS bataiju,
+    CASE WHEN v.zogen_fugo = '-'
+         THEN -CAST(NULLIF(TRIM(v.zogen_sa), '') AS NUMERIC)
+         ELSE  CAST(NULLIF(TRIM(v.zogen_sa), '') AS NUMERIC)
+    END AS bataiju_zogen,
+    k.kakutoku_shokin_ruikei,
     k.nyukyu_nannichimae, k.kijun_ninkijun_tansho,
     -- code factors
     k.kyakushitsu, k.class_code, k.joshodo_code, k.hizume_code,
-    k.blinker, k.pace_yoso, k.kishu_minarai_code,
+    k.blinker, k.pace_yoso, v.kishu_minarai_code,
     k.kyori_tekisei, k.kyori_tekisei_2,
     k.shiba_tekisei_code, k.da_tekisei_code, k.omo_tekisei_code,
     k.tenkai_kigo_code, k.manken_shirushi, k.kokyu_flag,
     k.kyuyo_riyu_bunrui_code, k.kyusha_hyoka_code,
-    k.umakigo_code, k.joken_class_code, k.yuso_kubun,
+    v.umakigo_code, k.joken_class_code, k.yuso_kubun,
     -- CEO extra from jrd_kyi_fixed
     k.taikei, k.kishumei, k.chokyoshimei, k.chokyo_yajirushi_code,
     k.kishu_code, k.chokyoshi_code,

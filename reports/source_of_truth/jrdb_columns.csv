@@ -1,0 +1,154 @@
+﻿table_name,column_name,description,used_in_code,files
+jrd_kyi_fixed,jrdb_race_key8,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,race_shikonen,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,keibajo_code,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kaisai_kai,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kaisai_nichime,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kaisai_nen_2,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,race_bango,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,umaban,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,basho_code,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,year,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kai,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,nichi,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,race_num,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kettou_toroku_bango,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,bamei,"馬名(JRDB,jvd_seと重複)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,idm,IDM指数(JRDB独自),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kishu_shisu,騎手指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,sogo_shisu,総合指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kyakushitsu,"脚質コード(JRDB,JVDと定義差あり)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kyori_tekisei,距離適性(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,chokyo_shisu,調教指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kyusha_shisu,厩舎指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,chokyo_yajirushi_code,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,omo_tekisei_code,重馬場適性(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shiba_tekisei_code,芝適性(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,da_tekisei_code,ダ適性(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,soho,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,blinker,"ブリンカー(JRDB形式,jvd_seと定義差あり)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,futan_juryo,"負担重量(JRDB版,jvd_seと要注意)",no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,ten_shisu,テン指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,pace_shisu,ペース指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,agari_shisu,上がり指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,ichi_shisu,位置指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kyori_tekisei_2,距離適性2(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,seibetsu_code,"性別コード(JRDB,jvd_seと重複)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kishu_code,"騎手コード(JRDB,jvd_seと重複)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,chokyoshi_code,"調教師コード(JRDB,jvd_seと重複)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kyusha_rank,厩舎ランク(JRDB独自),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,joho_shisu,情報指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,yobi_1,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,joshodo_code,上昇度コード(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,rotation,ローテーション週数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kijun_odds_tansho,"基準単勝オッズ(JRDB,tansho_oddsと異なるソース)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kijun_ninkijun_tansho,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kijun_odds_fukusho,"基準複勝オッズ(JRDB,複勝フィルタに使用)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kijun_ninkijun_fukusho,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,tokutei_joho_1,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,tokutei_joho_2,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,tokutei_joho_3,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,tokutei_joho_4,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,tokutei_joho_5,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,sogo_joho_1,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,sogo_joho_2,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,sogo_joho_3,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,sogo_joho_4,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,sogo_joho_5,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,ninki_shisu,人気指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kyusha_hyoka_code,厩舎評価(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kishu_kitai_rentai_ritsu,騎手期待連対率(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,gekiso_shisu,激走指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,hizume_code,蹄コード(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,class_code,"クラスコード(JRDB,jvd_raのkyoso_joken_codeとは別)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,yobi_2,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kishumei,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kishu_minarai_code,"騎手見習いコード(JRDB,jvd_seと重複)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,chokyoshimei,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,chokyoshi_shozoku,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako1_kyoso_seiseki_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako2_kyoso_seiseki_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako3_kyoso_seiseki_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako4_kyoso_seiseki_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako5_kyoso_seiseki_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako1_race_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako2_race_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako3_race_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako4_race_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kako5_race_key,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,wakuban,"枠番(JRDB,jvd_seと重複)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,yobi_3,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shirushi_code_1,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shirushi_code_2,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shirushi_code_3,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shirushi_code_4,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shirushi_code_5,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shirushi_code_6,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shirushi_code_7,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,yobi_4,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kakutoku_shokin_ruikei,獲得賞金累計(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,shutoku_shokin_ruikei,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,joken_class_code,"条件クラス(0=新馬,1=1勝,2=2勝,3=3勝,9=OP)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,pace_yoso,ペース予想(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,dochu_juni,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,dochu_sa,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,dochu_uchisoto,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kohan_3f_juni,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kohan_3f_sa,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kohan_3f_uchisoto,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,goal_juni,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,goal_sa,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,goal_uchisoto,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,tenkai_kigo_code,展開記号(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,bataiju,"馬体重(JRDB版,jvd_seのbataijuと要注意)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,bataiju_zogen,"体重増減(JRDB版,jvd_seと要注意)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,torikeshi_flag,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,banushimei,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,banushikai_code,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,umakigo_code,"馬記号(JRDB,jvd_seと重複)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,gekiso_juni,"激走順位(JRDB,SHS)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,ls_shisu_juni,"LS指数順位(JRDB,SHS)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,ten_shisu_juni,"テン指数順位(JRDB,SHS)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,pace_shisu_juni,"ペース指数順位(JRDB,SHS)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,agari_shisu_juni,"上がり指数順位(JRDB,SHS)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,ichi_shisu_juni,"位置指数順位(JRDB,SHS)",yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kishu_kitai_tansho_ritsu,騎手期待単勝率(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kishu_kitai_sanchakunai_ritsu,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,yuso_kubun,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,taikei,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,taikei_sogo_1,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,taikei_sogo_2,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,taikei_sogo_3,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,uma_tokki_1,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,uma_tokki_2,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,uma_tokki_3,,yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,uma_start_shisu,馬スタート指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,uma_deokure_ritsu,馬出遅れ率(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,sanko_zenso,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,sanko_zenso_kishu_code,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,manken_shisu,万券指数(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,manken_shirushi,万券印(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kokyu_flag,呼吸フラグ(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,gekiso_type,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,kyuyo_riyu_bunrui_code,休養理由分類(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,flag,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,nyukyu_nansome,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,nyukyu_nengappi,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,nyukyu_nannichimae,入厩何日前(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,hobokusaki,,no,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,hobokusaki_rank,放牧先ランク(JRDB),yes,factor_screening.py / factor_investment_screening.py
+jrd_kyi_fixed,yobi_5,,no,factor_screening.py / factor_investment_screening.py
+jrd_joa_fixed,ls_shisu,LS指数(jrd_joa),yes,factor_screening.py
+jrd_joa_fixed,ls_hyoka,LS評価(jrd_joa),yes,factor_screening.py
+jrd_joa_fixed,odds_shisu,オッズ指数(jrd_joa),yes,factor_screening.py
+jrd_bac_fixed,shiba_da_shogai_code,芝ダ障コード,yes,factor_screening.py
+jrd_bac_fixed,migi_hidari,右左回り,yes,factor_screening.py
+jrd_bac_fixed,uchi_soto,内外,yes,factor_screening.py
+jrd_bac_fixed,shubetsu,競走種別,yes,factor_screening.py
+jrd_bac_fixed,jouken,条件コード,yes,factor_screening.py
+jrd_bac_fixed,juryo_shubetsu_code,重量種別,yes,factor_screening.py
+jrd_bac_fixed,grade,グレード(JRDB),yes,factor_screening.py
+jrd_bac_fixed,tosu,頭数,yes,factor_screening.py
+jrd_bac_fixed,kyori,距離,yes,factor_screening.py
+jrd_bac_fixed,course,コース,yes,factor_screening.py
+jrd_bac_fixed,kaisai_kubun,開催区分,yes,factor_screening.py
