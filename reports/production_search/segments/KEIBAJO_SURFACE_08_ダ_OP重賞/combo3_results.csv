@@ -1,9 +1,0 @@
-﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
-KEIBAJO_SURFACE_08_ダ_OP重賞,kishu_kitai_rentai_decile+kishu_kitai_tansho_decile+kishu_shisu_decile,kishu_kitai_rentai_decile,kishu_kitai_tansho_decile,kishu_shisu_decile,5,622,73.49,9.61,65.07,False
-KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_kubun+kyakushitsu+kyori_tekisei,kyori_kubun,kyakushitsu,kyori_tekisei,3,346,72.13,7.07,64.13,False
-KEIBAJO_SURFACE_08_ダ_OP重賞,tenkai_kigo_code+kyakushitsu+sogo_shisu_decile,tenkai_kigo_code,kyakushitsu,sogo_shisu_decile,3,459,73.48,8.44,63.93,False
-KEIBAJO_SURFACE_08_ダ_OP重賞,kyori_kubun+kyakushitsu+sogo_shisu_decile,kyori_kubun,kyakushitsu,sogo_shisu_decile,3,344,72.26,8.43,62.72,False
-KEIBAJO_SURFACE_08_ダ_OP重賞,kishu_kitai_rentai_decile+kishu_shisu_decile+sogo_shisu_decile,kishu_kitai_rentai_decile,kishu_shisu_decile,sogo_shisu_decile,4,431,70.69,12.77,58.18,False
-KEIBAJO_SURFACE_08_ダ_OP重賞,tenkai_kigo_code+kyori_tekisei+sogo_shisu_decile,tenkai_kigo_code,kyori_tekisei,sogo_shisu_decile,3,387,68.28,10.22,56.72,False
-KEIBAJO_SURFACE_08_ダ_OP重賞,kishu_kitai_tansho_decile+kishu_shisu_decile+sogo_shisu_decile,kishu_kitai_tansho_decile,kishu_shisu_decile,sogo_shisu_decile,3,330,72.37,16.5,53.7,False
-KEIBAJO_SURFACE_08_ダ_OP重賞,kishu_kitai_rentai_decile+kishu_kitai_tansho_decile+sogo_shisu_decile,kishu_kitai_rentai_decile,kishu_kitai_tansho_decile,sogo_shisu_decile,4,464,67.51,16.48,51.36,False

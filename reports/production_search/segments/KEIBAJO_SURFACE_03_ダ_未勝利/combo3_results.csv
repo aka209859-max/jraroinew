@@ -1,3 +1,0 @@
-﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
-KEIBAJO_SURFACE_03_ダ_未勝利,kyakushitsu+omo_tekisei_code+tenkai_kigo_code,kyakushitsu,omo_tekisei_code,tenkai_kigo_code,3,439,84.06,9.75,73.03,False
-KEIBAJO_SURFACE_03_ダ_未勝利,kishu_kitai_tansho_decile+kishu_kitai_rentai_decile+kishu_shisu_decile,kishu_kitai_tansho_decile,kishu_kitai_rentai_decile,kishu_shisu_decile,4,575,82.43,17.46,65.32,False

@@ -1,4 +1,0 @@
-﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
-KEIBAJO_SURFACE_05_ダ_OP重賞,kishu_kitai_rentai_decile+kishu_shisu_decile+kishu_kitai_tansho_decile,kishu_kitai_rentai_decile,kishu_shisu_decile,kishu_kitai_tansho_decile,7,980,72.24,12.69,62.84,False
-KEIBAJO_SURFACE_05_ダ_OP重賞,kishu_kitai_rentai_decile+kishu_kitai_tansho_decile+joho_shisu_decile,kishu_kitai_rentai_decile,kishu_kitai_tansho_decile,joho_shisu_decile,4,499,65.9,9.63,56.46,False
-KEIBAJO_SURFACE_05_ダ_OP重賞,class_code+kyakushitsu+joho_shisu_decile,class_code,kyakushitsu,joho_shisu_decile,3,338,59.99,32.47,23.26,False

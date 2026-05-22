@@ -210,6 +210,10 @@ __marimo__/
 # Large generated files (exceed GitHub 100MB limit)
 reports/source_of_truth/current_factor_bin_definitions.csv
 reports/source_of_truth/current_factor_bin_definitions_compact.csv
-reports/production_search/phase3_bin_detail_for_adoption_review.csv
-reports/production_search/phase3_bin_detail_audit.csv
+
+# 大容量生成CSV - ローカル生成のためGit管理不要
+reports/production_search/segments/
+reports/production_search/phase*_bin_detail*.csv
+reports/production_search/phase*_factor_bin_audit*.csv
+reports/production_search/phase*_segment_factor_summary*.csv
 

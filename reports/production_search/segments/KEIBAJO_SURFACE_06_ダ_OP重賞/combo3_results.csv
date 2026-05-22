@@ -1,6 +1,0 @@
-﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
-KEIBAJO_SURFACE_06_ダ_OP重賞,kishu_kitai_rentai_decile+kishu_kitai_tansho_decile+kishu_shisu_decile,kishu_kitai_rentai_decile,kishu_kitai_tansho_decile,kishu_shisu_decile,5,656,71.98,8.68,64.37,False
-KEIBAJO_SURFACE_06_ダ_OP重賞,kyori_tekisei+tenkai_kigo_code+kyakushitsu,kyori_tekisei,tenkai_kigo_code,kyakushitsu,3,352,67.72,5.43,61.57,False
-KEIBAJO_SURFACE_06_ダ_OP重賞,kyori_tekisei+tenkai_kigo_code+omo_tekisei_code,kyori_tekisei,tenkai_kigo_code,omo_tekisei_code,3,465,62.5,2.1,60.12,False
-KEIBAJO_SURFACE_06_ダ_OP重賞,tenkai_kigo_code+kyakushitsu+omo_tekisei_code,tenkai_kigo_code,kyakushitsu,omo_tekisei_code,3,514,71.39,14.71,54.75,False
-KEIBAJO_SURFACE_06_ダ_OP重賞,tenkai_kigo_code+omo_tekisei_code+uma_deokure_bin,tenkai_kigo_code,omo_tekisei_code,uma_deokure_bin,3,344,67.8,12.51,53.64,False

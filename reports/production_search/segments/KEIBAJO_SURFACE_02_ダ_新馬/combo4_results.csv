@@ -1,4 +1,0 @@
-﻿segment,factors,factor1,factor2,factor3,factor4,n_bins,n_bets,mean_roi,std_roi,clb,pass
-KEIBAJO_SURFACE_02_ダ_新馬,kishu_minarai_code+kyakushitsu+ls_shisu_juni+tenkai_kigo_code,kishu_minarai_code,kyakushitsu,ls_shisu_juni,tenkai_kigo_code,3,435,63.81,1.42,62.2,False
-KEIBAJO_SURFACE_02_ダ_新馬,kishu_minarai_code+kyakushitsu+kyori_tekisei+tenkai_kigo_code,kishu_minarai_code,kyakushitsu,kyori_tekisei,tenkai_kigo_code,3,366,62.93,3.02,59.51,False
-KEIBAJO_SURFACE_02_ダ_新馬,kishu_minarai_code+omo_tekisei_code+ls_shisu_juni+tenkai_kigo_code,kishu_minarai_code,omo_tekisei_code,ls_shisu_juni,tenkai_kigo_code,3,420,65.06,15.9,47.07,False
