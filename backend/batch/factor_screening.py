@@ -42,40 +42,29 @@ DEFAULT_CEO_ROWS = 0  # 0 = 無制限（全競馬場カバーのため）
 # --------------------------------------------------------------------------
 # Single-factor definitions (50 factors)
 # --------------------------------------------------------------------------
+# ビン設計方針 (2026-05-04):
+#  ① 生指数(raw shisu)は除外 → Juni順位 or 10分位(decile)を使用
+#  ② kakutoku_shokin_ruikei / nyukyu_nannichimae は除外
+#  ③ rotation → rotation_bin (0/1/2/3/4/5-9/10-25/26+)
+#  ④ uma_deokure_ritsu → uma_deokure_bin (5%刻み)
+#  ⑤ kishu_kitai_*_ritsu → _decile (10分位)
 NUMERIC_FACTORS: List[Tuple[str, str]] = [
-    ("idm",                           "IDM指数"),
-    ("sogo_shisu",                    "総合指数"),
-    ("ten_shisu",                     "テン指数"),
-    ("pace_shisu",                    "ペース指数"),
-    ("agari_shisu",                   "上がり指数"),
-    ("ichi_shisu",                    "位置指数"),
-    ("gekiso_shisu",                  "激走指数"),
-    ("ninki_shisu",                   "人気指数"),
-    ("joho_shisu",                    "情報指数"),
-    ("manken_shisu",                  "万券指数"),
-    ("kishu_shisu",                   "騎手指数"),
-    ("chokyo_shisu",                  "調教指数"),
-    ("kyusha_shisu",                  "厩舎指数"),
+    # Juni rank factors (順位系: そのままビン化)
     ("ls_shisu_juni",                 "LS指数順位"),
     ("ten_shisu_juni",                "テン指数順位"),
     ("pace_shisu_juni",               "ペース指数順位"),
     ("agari_shisu_juni",              "上がり指数順位"),
     ("ichi_shisu_juni",               "位置指数順位"),
     ("gekiso_juni",                   "激走順位"),
-    ("kishu_kitai_rentai_ritsu",      "騎手期待連対率"),
-    ("kishu_kitai_tansho_ritsu",      "騎手期待単勝率"),
+    # Remaining numeric factors
     ("kishu_kitai_sanchakunai_ritsu", "騎手期待3着内率"),
-    ("uma_start_shisu",               "馬スタート指数"),
-    ("uma_deokure_ritsu",             "馬出遅率"),
-    ("rotation",                      "ローテーション"),
     ("bataiju",                       "馬体重"),
     ("bataiju_zogen",                 "馬体重増減"),
-    ("kakutoku_shokin_ruikei",        "獲得賞金累計"),
-    ("nyukyu_nannichimae",            "入厩何日前"),
     ("kijun_ninkijun_tansho",         "基準人気順単勝"),
 ]
 
 CODE_FACTORS: List[Tuple[str, str]] = [
+    # 既存コードファクター
     ("keibajo_code",              "競馬場"),
     ("kyakushitsu",               "脚質"),
     ("class_code",                "クラスコード"),
@@ -96,6 +85,22 @@ CODE_FACTORS: List[Tuple[str, str]] = [
     ("kyusha_hyoka_code",         "厩舎評価"),
     ("umakigo_code",              "馬記号"),
     ("joken_class_code",          "条件クラス"),
+    # 生指数→10分位(decile)変換版  ① に基づく
+    ("idm_decile",                "IDM指数10分位"),
+    ("sogo_shisu_decile",         "総合指数10分位"),
+    ("ninki_shisu_decile",        "人気指数10分位"),
+    ("joho_shisu_decile",         "情報指数10分位"),
+    ("manken_shisu_decile",       "万券指数10分位"),
+    ("kishu_shisu_decile",        "騎手指数10分位"),
+    ("chokyo_shisu_decile",       "調教指数10分位"),
+    ("kyusha_shisu_decile",       "厩舎指数10分位"),
+    ("uma_start_shisu_decile",    "馬スタート指数10分位"),
+    # kishu_kitai_ritsu → 10分位  ⑤ に基づく
+    ("kishu_kitai_tansho_decile", "騎手期待単勝率10分位"),
+    ("kishu_kitai_rentai_decile", "騎手期待連対率10分位"),
+    # rotation / uma_deokure → 手動バケット  ③④ に基づく
+    ("rotation_bin",              "ローテーションビン"),
+    ("uma_deokure_bin",           "馬出遅率ビン"),
 ]
 
 ALL_FACTORS: List[Tuple[str, str, str]] = (
@@ -759,6 +764,72 @@ def compute_derived_factors(
             suffixes=("", "_blood"),
         )
 
+    # ------------------------------------------------------------------
+    # ビン再設計 (2026-05-04)
+    # ------------------------------------------------------------------
+
+    # ① 生指数 → 10分位(decile) ラベル "1"〜"10"
+    _DECILE_COLS = [
+        ("idm",                      "idm_decile"),
+        ("sogo_shisu",               "sogo_shisu_decile"),
+        ("ninki_shisu",              "ninki_shisu_decile"),
+        ("joho_shisu",               "joho_shisu_decile"),
+        ("manken_shisu",             "manken_shisu_decile"),
+        ("kishu_shisu",              "kishu_shisu_decile"),
+        ("chokyo_shisu",             "chokyo_shisu_decile"),
+        ("kyusha_shisu",             "kyusha_shisu_decile"),
+        ("uma_start_shisu",          "uma_start_shisu_decile"),
+        ("kishu_kitai_tansho_ritsu", "kishu_kitai_tansho_decile"),
+        ("kishu_kitai_rentai_ritsu", "kishu_kitai_rentai_decile"),
+    ]
+    for raw_col, dec_col in _DECILE_COLS:
+        if raw_col not in df.columns:
+            df[dec_col] = None
+            continue
+        v = pd.to_numeric(df[raw_col], errors="coerce")
+        if v.notna().sum() < 100:
+            df[dec_col] = None
+            continue
+        try:
+            bins_idx = pd.qcut(v, q=10, labels=False, duplicates="drop")
+            df[dec_col] = (bins_idx.astype("Int64") + 1).astype(str)
+            df[dec_col] = df[dec_col].replace({"<NA>": None})
+        except Exception:
+            df[dec_col] = None
+
+    # ③ rotation_bin: 0 / 1 / 2 / 3 / 4 / 5-9 / 10-25 / 26+
+    def _rotation_bin(v):
+        if pd.isna(v):
+            return None
+        v = int(v)
+        if v == 0:   return "0"
+        if v == 1:   return "1"
+        if v == 2:   return "2"
+        if v == 3:   return "3"
+        if v == 4:   return "4"
+        if v <= 9:   return "5-9"
+        if v <= 25:  return "10-25"
+        return "26+"
+
+    df["rotation_bin"] = pd.to_numeric(
+        df["rotation"], errors="coerce"
+    ).apply(_rotation_bin)
+
+    # ④ uma_deokure_bin: 5%刻み  0-4% / 5-9% / 10-14% / 15-19% / 20%+
+    def _uma_deokure_bin(v):
+        if pd.isna(v):
+            return None
+        v = float(v)
+        if v < 5:   return "0-4%"
+        if v < 10:  return "5-9%"
+        if v < 15:  return "10-14%"
+        if v < 20:  return "15-19%"
+        return "20%+"
+
+    df["uma_deokure_bin"] = pd.to_numeric(
+        df["uma_deokure_ritsu"], errors="coerce"
+    ).apply(_uma_deokure_bin)
+
     return df
 
 
@@ -1213,6 +1284,17 @@ _FS_SKIP_COLS: frozenset = frozenset({
     "wakuban_v", "futan_juryo_raw", "bataiju_actual", "zogen_sa",
     "tansho_odds",      # used for odds-filter, not a predictor itself
     "jvd_ketto_toroku_bango",
+    # 生指数 (raw shisu) → decile版を使用するため除外
+    "idm", "sogo_shisu", "ten_shisu", "pace_shisu", "agari_shisu",
+    "ichi_shisu", "gekiso_shisu", "ninki_shisu", "joho_shisu",
+    "manken_shisu", "kishu_shisu", "chokyo_shisu", "kyusha_shisu",
+    "uma_start_shisu",
+    # 除外ファクター
+    "kakutoku_shokin_ruikei", "nyukyu_nannichimae",
+    # raw ritsu → decile版を使用
+    "kishu_kitai_rentai_ritsu", "kishu_kitai_tansho_ritsu",
+    # raw bucket → bin版を使用
+    "rotation", "uma_deokure_ritsu",
     # Filler / system
     "yobi_1", "yobi_2", "yobi_3", "yobi_4", "yobi_5",
     "torikeshi_flag", "flag", "record_id", "data_kubun",

@@ -149,6 +149,12 @@ def make_bin_detail(raw_df: pd.DataFrame) -> pd.DataFrame:
                      if tail else ""),
         })
 
+    if not rows:
+        return pd.DataFrame(columns=[
+            "phase","segment","combo","bin_key","n_horses","sample_bucket",
+            "is_existing_bin","is_possible_bin_if_determinable",
+            "should_count_for_adoption_judgement","note",
+        ])
     return pd.DataFrame(rows)
 
 
@@ -228,6 +234,16 @@ def make_factor_audit(raw_df: pd.DataFrame) -> pd.DataFrame:
             "review_note":                "; ".join(notes) if notes else "ok",
         })
 
+    if not rows:
+        return pd.DataFrame(columns=[
+            "phase","segment","combo","total_bins","existing_bins","possible_bins_if_determinable",
+            "bins_1_9","bins_10_99","bins_100_149","bins_150_299","bins_300_499","bins_500_plus",
+            "min_bin_n","max_bin_n","mean_bin_n","median_bin_n","ratio_1_9","ratio_10_99",
+            "ratio_500_plus","has_any_1digit_bin","has_any_2digit_bin",
+            "all_existing_bins_ge_150","all_existing_bins_ge_300","all_existing_bins_ge_500",
+            "eff_min_bin_n","eff_all_ge_150","eff_all_ge_300","eff_all_ge_500",
+            "n_shs_tail_bins","small_headcount_sensitive","review_note",
+        ])
     return pd.DataFrame(rows)
 
 
@@ -284,6 +300,14 @@ def make_segment_summary(raw_df: pd.DataFrame, phase: int) -> pd.DataFrame:
             "factors_with_all_bins_ge_500": f_all500,
         })
 
+    if not rows:
+        return pd.DataFrame(columns=[
+            "phase","segment","factor_count","total_bins","bins_1_9","bins_10_99",
+            "bins_100_149","bins_150_299","bins_300_499","bins_500_plus",
+            "ratio_1_9","ratio_10_99","ratio_100_149","ratio_150_299","ratio_300_499","ratio_500_plus",
+            "factors_with_any_1digit_bin","factors_with_any_2digit_bin",
+            "factors_with_all_bins_ge_150","factors_with_all_bins_ge_300","factors_with_all_bins_ge_500",
+        ])
     return pd.DataFrame(rows).sort_values("segment").reset_index(drop=True)
 
 

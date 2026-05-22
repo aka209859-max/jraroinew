@@ -1,7 +1,17 @@
 ﻿segment,factors,factor1,factor2,n_bins,n_bets,mean_roi,std_roi,clb,pass
 KEIBAJO_SURFACE_04_芝_1勝クラス,kyori_kubun+tenkai_kigo_code,kyori_kubun,tenkai_kigo_code,3,530,74.93,3.38,71.11,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,kyakushitsu+sogo_shisu_decile,kyakushitsu,sogo_shisu_decile,3,439,80.48,10.18,68.95,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,uma_deokure_bin+kyakushitsu,uma_deokure_bin,kyakushitsu,3,340,78.94,9.67,67.99,False
 KEIBAJO_SURFACE_04_芝_1勝クラス,tenkai_kigo_code+kyakushitsu,tenkai_kigo_code,kyakushitsu,4,719,72.82,5.1,67.82,False
 KEIBAJO_SURFACE_04_芝_1勝クラス,tenkai_kigo_code+kyori_tekisei,tenkai_kigo_code,kyori_tekisei,3,567,73.96,5.83,67.37,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,tenkai_kigo_code+uma_deokure_bin,tenkai_kigo_code,uma_deokure_bin,4,544,76.41,9.68,66.93,False
 KEIBAJO_SURFACE_04_芝_1勝クラス,kyori_kubun+kyori_tekisei,kyori_kubun,kyori_tekisei,4,694,70.87,4.33,66.63,False
 KEIBAJO_SURFACE_04_芝_1勝クラス,kyori_tekisei+kyakushitsu,kyori_tekisei,kyakushitsu,4,464,76.93,13.44,63.76,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,kyori_tekisei+sogo_shisu_decile,kyori_tekisei,sogo_shisu_decile,4,587,75.6,17.53,58.42,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,kyori_kubun+sogo_shisu_decile,kyori_kubun,sogo_shisu_decile,4,560,74.92,21.7,53.65,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,kishu_kitai_tansho_decile+kishu_kitai_rentai_decile,kishu_kitai_tansho_decile,kishu_kitai_rentai_decile,3,356,72.23,16.98,53.02,False
 KEIBAJO_SURFACE_04_芝_1勝クラス,tenkai_kigo_code+hizume_code,tenkai_kigo_code,hizume_code,3,361,77.03,22.64,51.41,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,kyori_kubun+joho_shisu_decile,kyori_kubun,joho_shisu_decile,3,427,54.62,7.44,46.2,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,kyori_tekisei+joho_shisu_decile,kyori_tekisei,joho_shisu_decile,3,438,52.23,7.82,43.38,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,kyakushitsu+joho_shisu_decile,kyakushitsu,joho_shisu_decile,3,412,53.06,10.41,41.27,False
+KEIBAJO_SURFACE_04_芝_1勝クラス,uma_deokure_bin+joho_shisu_decile,uma_deokure_bin,joho_shisu_decile,3,350,59.68,16.29,41.25,False

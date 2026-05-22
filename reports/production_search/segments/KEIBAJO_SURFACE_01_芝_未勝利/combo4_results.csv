@@ -1,7 +1,1 @@
 ﻿segment,factors,factor1,factor2,factor3,factor4,n_bins,n_bets,mean_roi,std_roi,clb,pass
-KEIBAJO_SURFACE_01_芝_未勝利,kyori_kubun+kyakushitsu+kyori_tekisei+shiba_tekisei_code,kyori_kubun,kyakushitsu,kyori_tekisei,shiba_tekisei_code,3,322,81.71,2.52,78.86,False
-KEIBAJO_SURFACE_01_芝_未勝利,kyori_kubun+omo_tekisei_code+kyori_tekisei+shiba_tekisei_code,kyori_kubun,omo_tekisei_code,kyori_tekisei,shiba_tekisei_code,4,540,80.15,9.08,71.26,False
-KEIBAJO_SURFACE_01_芝_未勝利,kyori_kubun+tenkai_kigo_code+kyakushitsu+shiba_tekisei_code,kyori_kubun,tenkai_kigo_code,kyakushitsu,shiba_tekisei_code,3,328,76.39,6.45,69.09,False
-KEIBAJO_SURFACE_01_芝_未勝利,tenkai_kigo_code+omo_tekisei_code+kyakushitsu+shiba_tekisei_code,tenkai_kigo_code,omo_tekisei_code,kyakushitsu,shiba_tekisei_code,3,391,71.68,5.86,65.05,False
-KEIBAJO_SURFACE_01_芝_未勝利,ls_shisu_juni+omo_tekisei_code+kyakushitsu+shiba_tekisei_code,ls_shisu_juni,omo_tekisei_code,kyakushitsu,shiba_tekisei_code,3,326,67.17,4.16,62.46,False
-KEIBAJO_SURFACE_01_芝_未勝利,tenkai_kigo_code+ls_shisu_juni+kyori_tekisei+shiba_tekisei_code,tenkai_kigo_code,ls_shisu_juni,kyori_tekisei,shiba_tekisei_code,3,411,70.89,13.73,55.35,False

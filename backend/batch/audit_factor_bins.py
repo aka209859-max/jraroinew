@@ -197,6 +197,13 @@ def _make_segment_summary(phase_df: pd.DataFrame, phase: int) -> pd.DataFrame:
             "hundred_plus_bin_total":   int(hun_bins),
         })
 
+    if not rows:
+        return pd.DataFrame(columns=[
+            "phase", "segment", "factor_count", "total_bins",
+            "factors_with_1digit_bins", "factors_with_2digit_bins",
+            "factors_all_bins_100plus", "one_digit_bin_total",
+            "two_digit_bin_total", "hundred_plus_bin_total",
+        ])
     df = pd.DataFrame(rows).sort_values(
         ["factors_with_1digit_bins", "total_bins"],
         ascending=[False, False]
@@ -233,6 +240,13 @@ def _make_factor_audit(phase_df: pd.DataFrame, phase: int) -> pd.DataFrame:
             "has_any_2digit_bin":bool(b2 > 0),
         })
 
+    if not rows:
+        return pd.DataFrame(columns=[
+            "phase", "segment", "combo", "total_bins", "bins_1_9", "bins_10_99",
+            "bins_100plus", "min_bin_n", "max_bin_n", "mean_bin_n", "median_bin_n",
+            "ratio_bins_1_9", "ratio_bins_10_99", "ratio_bins_100plus",
+            "has_any_1digit_bin", "has_any_2digit_bin",
+        ])
     df = pd.DataFrame(rows).sort_values(
         ["segment", "ratio_bins_1_9", "ratio_bins_10_99"],
         ascending=[True, False, False]
@@ -262,11 +276,107 @@ def _make_bin_detail(phase_df: pd.DataFrame, phase: int) -> pd.DataFrame:
     ).reset_index(drop=True)
 
 
+def _run_phase_audit(
+    df: pd.DataFrame,
+    phase: int,
+    combos: List[Dict],
+) -> None:
+    """1フェーズ分のビン集計と3ファイル出力をメモリ効率よく実行する。"""
+    phase_combos = [c for c in combos if c["phase"] == phase]
+    if not phase_combos:
+        print(f"\n  Phase{phase}: 0 combos → スキップ")
+        # 空ファイル生成
+        OUT_DIR.mkdir(parents=True, exist_ok=True)
+        empty_seg  = pd.DataFrame(columns=["phase","segment","factor_count","total_bins",
+                                            "factors_with_1digit_bins","factors_with_2digit_bins",
+                                            "factors_all_bins_100plus","one_digit_bin_total",
+                                            "two_digit_bin_total","hundred_plus_bin_total"])
+        empty_fba  = pd.DataFrame(columns=["phase","segment","combo","total_bins","bins_1_9",
+                                            "bins_10_99","bins_100plus","min_bin_n","max_bin_n",
+                                            "mean_bin_n","median_bin_n","ratio_bins_1_9",
+                                            "ratio_bins_10_99","ratio_bins_100plus",
+                                            "has_any_1digit_bin","has_any_2digit_bin"])
+        empty_bdt  = pd.DataFrame(columns=["phase","segment","combo","bin_key","n_horses",
+                                            "sample_size_bucket","tansho_roi_corr",
+                                            "fukusho_roi_corr","Y","rank"])
+        empty_seg.to_csv(OUT_DIR / f"phase{phase}_segment_factor_summary.csv", index=False, encoding="utf-8-sig")
+        empty_fba.to_csv(OUT_DIR / f"phase{phase}_factor_bin_audit.csv",        index=False, encoding="utf-8-sig")
+        empty_bdt.to_csv(OUT_DIR / f"phase{phase}_bin_detail_for_adoption_review.csv", index=False, encoding="utf-8-sig")
+        return
+
+    # セグメント別グループ化
+    combos_by_seg: Dict[str, List[Dict]] = defaultdict(list)
+    for c in phase_combos:
+        combos_by_seg[c["segment"]].append(c)
+    seg_total = len(combos_by_seg)
+    print(f"\n  Phase{phase}: {len(phase_combos)} combos / {seg_total} segments")
+
+    # ビン集計
+    all_rows: List[Dict] = []
+    n_skip = 0
+
+    for seg_i, (seg_name, seg_combos) in enumerate(sorted(combos_by_seg.items()), 1):
+        seg_df = _build_one_segment(df, seg_name)
+        if seg_df is None:
+            n_skip += len(seg_combos)
+            continue
+
+        for c in seg_combos:
+            bins = _bin_metrics(
+                seg_df, c["factors"],
+                c["phase"], c["segment"], c["combo"],
+                c["combo_clb"], 0.0,
+            )
+            all_rows.extend(bins)
+
+        del seg_df
+        gc.collect()
+
+        if seg_i % 20 == 0 or seg_i == seg_total:
+            print(f"    [{seg_i:3d}/{seg_total}] ビン行数: {len(all_rows):,}  skip={n_skip}")
+
+    print(f"    集計完了: {len(all_rows):,} ビン行")
+
+    if not all_rows:
+        p_df = pd.DataFrame()
+    else:
+        p_df = pd.DataFrame(all_rows)
+    del all_rows
+    gc.collect()
+
+    n_combos   = p_df.groupby(["segment", "combo"]).ngroups if len(p_df) else 0
+    n_segments = p_df["segment"].nunique() if len(p_df) else 0
+    n_bins     = len(p_df)
+    n_1d  = int((p_df["n_horses"] <= 9).sum()) if len(p_df) else 0
+    n_2d  = int(((p_df["n_horses"] >= 10) & (p_df["n_horses"] <= 99)).sum()) if len(p_df) else 0
+    n_100 = int((p_df["n_horses"] >= 100).sum()) if len(p_df) else 0
+    print(f"    {n_combos} combos / {n_segments} segs / {n_bins:,} bins  "
+          f"(1d={n_1d:,} 2d={n_2d:,} 100+={n_100:,})")
+
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    seg_sum = _make_segment_summary(p_df, phase)
+    seg_sum.to_csv(OUT_DIR / f"phase{phase}_segment_factor_summary.csv", index=False, encoding="utf-8-sig")
+    print(f"    [OK] phase{phase}_segment_factor_summary.csv  ({len(seg_sum)} rows)")
+
+    fba = _make_factor_audit(p_df, phase)
+    fba.to_csv(OUT_DIR / f"phase{phase}_factor_bin_audit.csv", index=False, encoding="utf-8-sig")
+    print(f"    [OK] phase{phase}_factor_bin_audit.csv  ({len(fba)} rows)")
+
+    bdt = _make_bin_detail(p_df, phase)
+    bdt.to_csv(OUT_DIR / f"phase{phase}_bin_detail_for_adoption_review.csv", index=False, encoding="utf-8-sig")
+    print(f"    [OK] phase{phase}_bin_detail_for_adoption_review.csv  ({len(bdt)} rows)")
+
+    del p_df, seg_sum, fba, bdt
+    gc.collect()
+
+
 def main() -> None:
     t0 = time.time()
     print("=" * 70)
     print("  audit_factor_bins  Phase1〜4 ビンサンプルサイズ監査")
     print("  n_horses = オッズフィルタ後のビン内全馬数 (tansho/fukusho補正ビン前)")
+    print("  ※フェーズ別処理でメモリ効率化")
     print("=" * 70)
 
     # ---- データロード ----
@@ -283,78 +393,12 @@ def main() -> None:
     for p in [1, 2, 3, 4]:
         print(f"  Phase{p}: {by_phase[p]}")
 
-    # ---- セグメント別グループ化 ----
-    combos_by_seg: Dict[str, List[Dict]] = defaultdict(list)
-    for c in combos:
-        combos_by_seg[c["segment"]].append(c)
-    print(f"[INFO] ユニークセグメント数: {len(combos_by_seg)}")
-
-    # ---- ビン集計 (全ビン・フィルタなし) ----
-    print("\n[STEP 3] 全ビン集計 (1セグメントずつ / フィルタなし)...")
-    all_rows: List[Dict] = []
-    n_skip = 0
-    seg_total = len(combos_by_seg)
-
-    for seg_i, (seg_name, seg_combos) in enumerate(sorted(combos_by_seg.items()), 1):
-        seg_df = _build_one_segment(df, seg_name)
-        if seg_df is None:
-            n_skip += len(seg_combos)
-            continue
-
-        for c in seg_combos:
-            bins = _bin_metrics(
-                seg_df, c["factors"],
-                c["phase"], c["segment"], c["combo"],
-                c["combo_clb"], 0.0,   # combo_mean_roi は監査不要なので0
-            )
-            all_rows.extend(bins)
-
-        del seg_df
-        gc.collect()
-
-        if seg_i % 10 == 0 or seg_i == seg_total:
-            print(f"  [{seg_i:3d}/{seg_total}] 総ビン行数: {len(all_rows):,}  skip={n_skip}")
-
-    print(f"[INFO] 集計完了: {len(all_rows):,} 全ビン行 (フィルタなし)")
-
-    raw_df = pd.DataFrame(all_rows)
-    del all_rows
-    gc.collect()
-
-    # ---- Phase別に3ファイル出力 ----
-    print("\n[STEP 4] Phase別CSVを生成...")
+    # ---- Phase別にビン集計 + 出力 (一フェーズずつ処理してメモリを解放) ----
+    print("\n[STEP 3] Phase別ビン集計 + CSV生成...")
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     for phase in [1, 2, 3, 4]:
-        p_df = raw_df[raw_df["phase"] == phase].copy()
-        n_combos   = p_df.groupby(["segment", "combo"]).ngroups
-        n_segments = p_df["segment"].nunique()
-        n_bins     = len(p_df)
-        n_1d  = int((p_df["n_horses"] <= 9).sum())
-        n_2d  = int(((p_df["n_horses"] >= 10) & (p_df["n_horses"] <= 99)).sum())
-        n_100 = int((p_df["n_horses"] >= 100).sum())
-        print(f"\n  Phase{phase}: {n_combos} combos / {n_segments} segments / {n_bins:,} 全ビン")
-        print(f"    1桁ビン: {n_1d:,}  2桁ビン: {n_2d:,}  100+ビン: {n_100:,}")
-
-        # --- File 1: segment_factor_summary ---
-        seg_sum = _make_segment_summary(p_df, phase)
-        f1 = OUT_DIR / f"phase{phase}_segment_factor_summary.csv"
-        seg_sum.to_csv(f1, index=False, encoding="utf-8-sig")
-        print(f"    [OK] {f1.name}  ({len(seg_sum)} rows)")
-
-        # --- File 2: factor_bin_audit ---
-        fba = _make_factor_audit(p_df, phase)
-        f2 = OUT_DIR / f"phase{phase}_factor_bin_audit.csv"
-        fba.to_csv(f2, index=False, encoding="utf-8-sig")
-        print(f"    [OK] {f2.name}  ({len(fba)} rows)")
-
-        # --- File 3: bin_detail ---
-        bdt = _make_bin_detail(p_df, phase)
-        f3 = OUT_DIR / f"phase{phase}_bin_detail_for_adoption_review.csv"
-        bdt.to_csv(f3, index=False, encoding="utf-8-sig")
-        print(f"    [OK] {f3.name}  ({len(bdt)} rows)")
-
-        del p_df, seg_sum, fba, bdt
+        _run_phase_audit(df, phase, combos)
         gc.collect()
 
     elapsed = time.time() - t0

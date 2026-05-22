@@ -1,1 +1,3 @@
 ﻿segment,factors,factor1,factor2,factor3,n_bins,n_bets,mean_roi,std_roi,clb,pass
+KEIBAJO_SURFACE_07_芝_1勝クラス,joho_shisu_decile+kishu_shisu_decile+kishu_kitai_tansho_decile,joho_shisu_decile,kishu_shisu_decile,kishu_kitai_tansho_decile,3,333,84.9,7.25,76.7,False
+KEIBAJO_SURFACE_07_芝_1勝クラス,sogo_shisu_decile+tenkai_kigo_code+kyakushitsu,sogo_shisu_decile,tenkai_kigo_code,kyakushitsu,3,321,61.42,6.89,53.63,False

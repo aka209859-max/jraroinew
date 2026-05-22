@@ -1,2 +1,3 @@
 ﻿phase,segment,combo,adoption_level,reason,total_bins,min_bin_n,median_bin_n,eff_min_bin_n,ratio_1_9,ratio_10_99,ratio_500_plus,small_headcount_sensitive,all_existing_bins_ge_150,all_existing_bins_ge_300,all_existing_bins_ge_500,reviewer_comment
 1,KEIBAJO_SURFACE_08_芝,manken_shirushi,500,all bins >= 500 (min=965),8,965,1528.0,965,0.0,0.0,1.0,False,True,True,True,only 8/9 possible bins observed
+1,SURFACE_2_ダ_条件戦,uma_deokure_bin,300,all bins >= 300 (min=436),5,436,2437.0,436,0.0,0.0,0.8,False,True,True,False,ok

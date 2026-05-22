@@ -1,58 +1,58 @@
 ======================================================================
   Enable Edge Engine - Phase 2 (COMBO 2) 完走レポート
-  生成日時: 2026-05-02 02:04:48
+  生成日時: 2026-05-22 00:05:06
 ======================================================================
 
 ■ 実行サマリー
-  処理時間:             1463.6秒 (24.4分)
+  処理時間:             984.0秒 (16.4分)
   評価セグメント数:     144
-  pass有りセグメント:   49
-  総評価ペア数:         47,190
-  CLB>=80% pass 総数:   116
-  pass率:               0.25%
+  pass有りセグメント:   68
+  総評価ペア数:         68,539
+  CLB>=80% pass 総数:   260
+  pass率:               0.38%
 
 ■ CLB上位5件 (全セグメント通算)
   1位: KEIBAJO_SURFACE_01_ダ
       ファクターペア: agari_shisu_juni+kijun_ninkijun_tansho
       CLB=97.34%  平均ROI=99.54%  有効ビン=3  サンプル=338
 
-  2位: GLOBAL_条件戦
-      ファクターペア: kyori_tekisei_2+uma_start_shisu
-      CLB=92.42%  平均ROI=93.00%  有効ビン=3  サンプル=773
+  2位: KEIBAJO_SURFACE_02_ダ
+      ファクターペア: agari_shisu_juni+chokyo_shisu_decile
+      CLB=96.59%  平均ROI=103.53%  有効ビン=3  サンプル=371
 
-  3位: KEIBAJO_SURFACE_10_芝_条件戦
+  3位: KEIBAJO_SURFACE_02_ダ
+      ファクターペア: ichi_shisu_juni+chokyo_shisu_decile
+      CLB=94.74%  平均ROI=97.42%  有効ビン=3  サンプル=449
+
+  4位: COURSE_27_北海道U字_ダ
+      ファクターペア: kyusha_shisu_decile+kijun_ninkijun_tansho
+      CLB=93.04%  平均ROI=95.38%  有効ビン=4  サンプル=485
+
+  5位: KEIBAJO_SURFACE_10_芝_条件戦
       ファクターペア: manken_shirushi+agari_shisu_juni
       CLB=91.54%  平均ROI=95.56%  有効ビン=4  サンプル=484
 
-  4位: KEIBAJO_SURFACE_02_ダ_条件戦
-      ファクターペア: kyakushitsu+gekiso_juni
-      CLB=90.67%  平均ROI=92.29%  有効ビン=3  サンプル=342
-
-  5位: COURSE_27_左回り急坂U字_芝
-      ファクターペア: gekiso_juni+ten_shisu_juni
-      CLB=90.40%  平均ROI=92.65%  有効ビン=3  サンプル=357
-
 ■ セグメント別 Top 10 (best_clb 降順)
   KEIBAJO_SURFACE_01_ダ
-    best_clb=97.34%  n_pass=2  best_pair=agari_shisu_juni+kijun_ninkijun_tansho
-  GLOBAL_条件戦
-    best_clb=92.42%  n_pass=19  best_pair=kyori_tekisei_2+uma_start_shisu
+    best_clb=97.34%  n_pass=7  best_pair=agari_shisu_juni+kijun_ninkijun_tansho
+  KEIBAJO_SURFACE_02_ダ
+    best_clb=96.59%  n_pass=17  best_pair=agari_shisu_juni+chokyo_shisu_decile
+  COURSE_27_北海道U字_ダ
+    best_clb=93.04%  n_pass=1  best_pair=kyusha_shisu_decile+kijun_ninkijun_tansho
   KEIBAJO_SURFACE_10_芝_条件戦
-    best_clb=91.54%  n_pass=3  best_pair=manken_shirushi+agari_shisu_juni
+    best_clb=91.54%  n_pass=4  best_pair=manken_shirushi+agari_shisu_juni
+  SURFACE_2_芝_条件戦
+    best_clb=91.45%  n_pass=17  best_pair=kyori_tekisei_2+chokyo_shisu_decile
+  KEIBAJO_SURFACE_01_芝_新馬
+    best_clb=91.30%  n_pass=1  best_pair=kijun_ninkijun_tansho+sogo_shisu_decile
   KEIBAJO_SURFACE_02_ダ_条件戦
-    best_clb=90.67%  n_pass=3  best_pair=kyakushitsu+gekiso_juni
+    best_clb=90.67%  n_pass=8  best_pair=kyakushitsu+gekiso_juni
   COURSE_27_左回り急坂U字_芝
     best_clb=90.40%  n_pass=1  best_pair=gekiso_juni+ten_shisu_juni
-  SURFACE_2_芝_1勝クラス
-    best_clb=88.86%  n_pass=3  best_pair=kyakushitsu+chokyo_shisu
-  SURFACE_2_芝_条件戦
-    best_clb=87.14%  n_pass=8  best_pair=kyori_tekisei_2+class_code
-  KEIBAJO_SURFACE_02_ダ
-    best_clb=86.55%  n_pass=3  best_pair=ichi_shisu_juni+pace_shisu_juni
-  KEIBAJO_SURFACE_03_芝
-    best_clb=85.95%  n_pass=1  best_pair=uma_start_shisu+kyori_tekisei_2
-  KEIBAJO_SURFACE_01_芝
-    best_clb=85.85%  n_pass=2  best_pair=agari_shisu_juni+gekiso_juni
+  KEIBAJO_SURFACE_08_芝_条件戦
+    best_clb=88.34%  n_pass=2  best_pair=bataiju+kyori_kubun
+  KEIBAJO_SURFACE_03_芝_条件戦
+    best_clb=87.74%  n_pass=6  best_pair=agari_shisu_juni+kishu_shisu_decile
 
 ■ 出力ファイル一覧
   サマリーCSV:   E:\jraroinew\reports\production_search\combo2_summary.csv

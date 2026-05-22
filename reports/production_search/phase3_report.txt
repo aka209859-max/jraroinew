@@ -1,58 +1,58 @@
 ======================================================================
   Enable Edge Engine - Phase 3 (COMBO 3) 完走レポート
-  生成日時: 2026-05-02 03:15:52
+  生成日時: 2026-05-22 01:20:20
 ======================================================================
 
 ■ 実行サマリー
-  処理時間:               3883.1秒 (64.7分)
+  処理時間:               4500.8秒 (75.0分)
   評価セグメント数:       144
-  pass有りセグメント:     82
-  総評価 3-COMBO 数:      83,543
-  CLB>=80% pass 総数:     313
-  pass率:                 0.37%
+  pass有りセグメント:     103
+  総評価 3-COMBO 数:      140,474
+  CLB>=80% pass 総数:     1,192
+  pass率:                 0.85%
 
 ■ CLB上位5件 (全セグメント通算)
-  1位: KEIBAJO_SURFACE_06_ダ_条件戦
+  1位: KEIBAJO_SURFACE_10_芝_条件戦
+      ファクター: joshodo_code+manken_shisu_decile+agari_shisu_juni
+      CLB=95.71%  平均ROI=99.53%  有効ビン=3  サンプル=330
+
+  2位: KEIBAJO_SURFACE_06_ダ_条件戦
       ファクター: tenkai_kigo_code+kijun_ninkijun_tansho+gekiso_juni
       CLB=95.25%  平均ROI=100.11%  有効ビン=3  サンプル=453
 
-  2位: KEIBAJO_SURFACE_06_ダ_条件戦
+  3位: GLOBAL_条件戦
+      ファクター: kyori_tekisei_2+kyori_tekisei+ten_shisu_juni
+      CLB=95.11%  平均ROI=97.64%  有効ビン=4  サンプル=509
+
+  4位: KEIBAJO_SURFACE_10_芝_条件戦
+      ファクター: manken_shisu_decile+agari_shisu_juni+tenkai_kigo_code
+      CLB=95.06%  平均ROI=97.01%  有効ビン=4  サンプル=441
+
+  5位: KEIBAJO_SURFACE_06_ダ_条件戦
       ファクター: kyakushitsu+kijun_ninkijun_tansho+gekiso_juni
       CLB=95.01%  平均ROI=98.12%  有効ビン=3  サンプル=446
 
-  3位: KEIBAJO_SURFACE_03_芝_新馬
-      ファクター: pace_yoso+umakigo_code+kishu_kitai_rentai_ritsu
-      CLB=92.90%  平均ROI=100.65%  有効ビン=3  サンプル=373
-
-  4位: COURSE_27_左回り急坂O字_ダ
-      ファクター: ten_shisu_juni+pace_shisu_juni+tenkai_kigo_code
-      CLB=92.85%  平均ROI=94.29%  有効ビン=3  サンプル=408
-
-  5位: GLOBAL_条件戦
-      ファクター: kyori_tekisei_2+umakigo_code+uma_start_shisu
-      CLB=92.71%  平均ROI=92.81%  有効ビン=3  サンプル=750
-
 ■ セグメント別 Top 10 (best_clb 降順)
+  KEIBAJO_SURFACE_10_芝_条件戦
+    best_clb=95.71%  n_pass=7  best_factors=joshodo_code+manken_shisu_decile+agari_shisu_juni
   KEIBAJO_SURFACE_06_ダ_条件戦
-    best_clb=95.25%  n_pass=19  best_factors=tenkai_kigo_code+kijun_ninkijun_tansho+gekiso_juni
-  KEIBAJO_SURFACE_03_芝_新馬
-    best_clb=92.90%  n_pass=2  best_factors=pace_yoso+umakigo_code+kishu_kitai_rentai_ritsu
-  COURSE_27_左回り急坂O字_ダ
-    best_clb=92.85%  n_pass=5  best_factors=ten_shisu_juni+pace_shisu_juni+tenkai_kigo_code
+    best_clb=95.25%  n_pass=71  best_factors=tenkai_kigo_code+kijun_ninkijun_tansho+gekiso_juni
   GLOBAL_条件戦
-    best_clb=92.71%  n_pass=39  best_factors=kyori_tekisei_2+umakigo_code+uma_start_shisu
-  KEIBAJO_SURFACE_07_ダ_条件戦
-    best_clb=91.63%  n_pass=1  best_factors=pace_yoso+manken_shirushi+kyakushitsu
-  KEIBAJO_SURFACE_02_ダ
-    best_clb=90.67%  n_pass=9  best_factors=joken_class_code+kyakushitsu+gekiso_juni
-  COURSE_27_東京U字_芝
-    best_clb=90.29%  n_pass=5  best_factors=kyori_tekisei_2+omo_tekisei_code+uma_deokure_ritsu
-  KEIBAJO_SURFACE_10_芝
-    best_clb=89.90%  n_pass=1  best_factors=pace_yoso+manken_shirushi+kishu_shisu
+    best_clb=95.11%  n_pass=109  best_factors=kyori_tekisei_2+kyori_tekisei+ten_shisu_juni
+  KEIBAJO_SURFACE_01_芝_新馬
+    best_clb=94.75%  n_pass=3  best_factors=kishu_minarai_code+sogo_shisu_decile+chokyo_shisu_decile
+  KEIBAJO_SURFACE_06_芝
+    best_clb=93.90%  n_pass=16  best_factors=ten_shisu_juni+gekiso_juni+pace_shisu_juni
+  COURSE_27_東京U字_ダ
+    best_clb=93.73%  n_pass=25  best_factors=joken_class_code+agari_shisu_juni+gekiso_juni
+  COURSE_27_左回り急坂O字_ダ
+    best_clb=92.85%  n_pass=14  best_factors=ten_shisu_juni+pace_shisu_juni+tenkai_kigo_code
   KEIBAJO_SURFACE_05_芝_条件戦
-    best_clb=89.34%  n_pass=13  best_factors=ten_shisu_juni+pace_shisu_juni+gekiso_juni
-  KEIBAJO_SURFACE_09_ダ_条件戦
-    best_clb=89.27%  n_pass=17  best_factors=manken_shirushi+joshodo_code+ten_shisu_juni
+    best_clb=92.66%  n_pass=73  best_factors=ls_shisu_juni+gekiso_juni+kishu_kitai_rentai_decile
+  KEIBAJO_SURFACE_06_芝_条件戦
+    best_clb=92.51%  n_pass=7  best_factors=agari_shisu_juni+joho_shisu_decile+kijun_ninkijun_tansho
+  KEIBAJO_SURFACE_06_ダ
+    best_clb=92.45%  n_pass=59  best_factors=ls_shisu_juni+pace_shisu_juni+gekiso_juni
 
 ■ 出力ファイル一覧
   サマリーCSV:   E:\jraroinew\reports\production_search\combo3_summary.csv
