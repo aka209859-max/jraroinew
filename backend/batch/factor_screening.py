@@ -101,6 +101,15 @@ CODE_FACTORS: List[Tuple[str, str]] = [
     # rotation / uma_deokure → 手動バケット  ③④ に基づく
     ("rotation_bin",              "ローテーションビン"),
     ("uma_deokure_bin",           "馬出遅率ビン"),
+    # 前走後半3F順位（jrd_kyi_fixed.kako1_race_key 自己JOINで取得）
+    ("prev1_kohan_3f_juni",       "前走後半3F順位"),
+    # 体型部位（JRDB仕様書 taikei 1バイト1部位構造に基づく）
+    ("taikei_dou",                "体型・胴長"),
+    ("taikei_tomo",               "体型・尻（後躯）"),
+    ("taikei_maehaba",            "体型・前幅"),
+    ("taikei_ushirohaba",         "体型・後幅（後脚幅）"),
+    ("taikei_kubi",               "体型・首"),
+    ("taikei_kata",               "体型・肩"),
 ]
 
 ALL_FACTORS: List[Tuple[str, str, str]] = (
@@ -211,6 +220,8 @@ SELECT
     k.dochu_juni, k.dochu_sa, k.kohan_3f_juni, k.kohan_3f_sa,
     k.goal_juni, k.goal_sa, k.hobokusaki_rank,
     k.taikei_sogo_1, k.taikei_sogo_2, k.taikei_sogo_3,
+    -- prev1_kohan_3f_juni via kako1_race_key self-join
+    NULLIF(TRIM(k_prev.kohan_3f_juni), '') AS prev1_kohan_3f_juni,
     k.uma_tokki_1, k.uma_tokki_2, k.uma_tokki_3,
     k.gekiso_type, k.kyusha_rank AS kyi_kyusha_rank,
     k.chokyoshi_shozoku, k.shutoku_shokin_ruikei,
@@ -269,6 +280,9 @@ LEFT JOIN jvd_ra r ON
     AND v.kaisai_kai = r.kaisai_kai
     AND v.kaisai_nichime = r.kaisai_nichime
     AND v.race_bango = r.race_bango
+LEFT JOIN jrd_kyi_fixed k_prev
+    ON k_prev.jrdb_race_key8 = k.kako1_race_key
+    AND k_prev.kettou_toroku_bango = k.kettou_toroku_bango
 WHERE v.kaisai_nen >= '{year_min}'
   AND v.kaisai_nen <= '{year_max}'
   AND v.ijo_kubun_code = '0'
@@ -570,14 +584,35 @@ def _course_27(keibajo: str, surface: Optional[str], kyori) -> Optional[str]:
 
 
 def _taikei_part(taikei, pos: int) -> Optional[str]:
-    """Extract 3-char part from 24-char taikei field (0-indexed part)"""
+    """Extract 1-byte field from 24-byte taikei field (0-indexed byte position).
+
+    JRDB仕様書（データ仕様書JRDB.pdf）体型データ定義に基づく1バイト1部位構造:
+      [0] 体型（全体形態）: 1=細身型, 2=普通, 3=太身型
+      [1] 首 太さ         : 1=太い,   2=普通, 3=細い
+      [2] 肩 角度         : 1=大きい, 2=普通, 3=小さい
+      [3] き甲 大きさ     : 1=大きい, 2=普通, 3=小さい
+      [4] 胴長 角度       : 1=大きい, 2=普通, 3=小さい
+      [5] 前幅 大きさ     : 1=大きい, 2=普通, 3=小さい
+      [6] 尻 大きさ       : 1=大きい, 2=普通, 3=小さい
+      [7] 尻 角度         : 1=太い,   2=普通, 3=細い
+      [8] 前肢 大きさ     : 1=大きい, 2=普通, 3=小さい
+      [9] 後肢 角度       : 1=大きい, 2=普通, 3=小さい
+      [10] 前繋 太さ      : 1=太い,   2=普通, 3=細い
+      [11] 上長 太さ      : 1=太い,   2=普通, 3=細い
+      [12] 前脚の幅       : 1=広い,   2=普通, 3=狭い
+      [13] 後脚の幅（後幅）: 1=広い,  2=普通, 3=狭い
+      [14] 前蹄 太さ      : 1=太い,   2=普通, 3=細い
+      [15] 後蹄 太さ      : 1=太い,   2=普通, 3=細い
+      [16] 両脚の挙げ方   : 1=挙げる, 2=それほど
+      [17] 尾の振り方     : 1=振らない, 2=普通, 3=大きく振らない
+      [18]〜[23] 予備（スペース）
+    """
     if not taikei or pd.isna(taikei):
         return None
     s = str(taikei)
-    start = pos * 3
-    if len(s) < start + 3:
+    if len(s) <= pos:
         return None
-    val = s[start:start + 3].strip()
+    val = s[pos].strip()
     return val if val else None
 
 
@@ -652,9 +687,14 @@ def compute_derived_factors(
     df["bataiju_actual"] = pd.to_numeric(df["bataiju_actual"], errors="coerce")
     df["zogen_sa"] = pd.to_numeric(df["zogen_sa"], errors="coerce")
 
-    # taikei decomposition (胴=pos0, トモ=pos3)
-    df["taikei_dou"] = df["taikei"].apply(lambda x: _taikei_part(x, 0))
-    df["taikei_tomo"] = df["taikei"].apply(lambda x: _taikei_part(x, 3))
+    # taikei decomposition: 1バイト1部位構造（JRDB仕様書 体型データ定義準拠）
+    # byte[4]=胴長, [6]=尻大きさ(トモ), [5]=前幅, [13]=後脚幅(後幅), [1]=首, [2]=肩
+    df["taikei_dou"]        = df["taikei"].apply(lambda x: _taikei_part(x, 4))
+    df["taikei_tomo"]       = df["taikei"].apply(lambda x: _taikei_part(x, 6))
+    df["taikei_maehaba"]    = df["taikei"].apply(lambda x: _taikei_part(x, 5))
+    df["taikei_ushirohaba"] = df["taikei"].apply(lambda x: _taikei_part(x, 13))
+    df["taikei_kubi"]       = df["taikei"].apply(lambda x: _taikei_part(x, 1))
+    df["taikei_kata"]       = df["taikei"].apply(lambda x: _taikei_part(x, 2))
 
     # wakuban (use jvd_se's wakuban_v)
     if "wakuban_v" in df.columns:
