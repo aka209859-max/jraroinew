@@ -640,28 +640,68 @@ def _babajotai_heavy(code) -> Optional[str]:
     return None
 
 
-def _rank_by_winrate(series: pd.Series, wins: pd.Series, total: pd.Series) -> pd.Series:
-    """Map series values to S/A/B/C/D rank based on win rate quintiles"""
-    stats = pd.DataFrame({"wins": wins, "total": total})
-    stats = stats[stats["total"] >= 10].copy()
-    stats["win_rate"] = stats["wins"] / stats["total"]
-    q = stats["win_rate"].quantile([0.2, 0.4, 0.6, 0.8])
+def _build_winrate_rank_2025(kind: str) -> Dict[str, str]:
+    """
+    jvd_se の 2025年データから騎手/調教師の勝率ランク辞書を生成。
 
-    def to_rank(code):
-        if code not in stats.index:
-            return None
-        wr = stats.loc[code, "win_rate"]
-        if wr >= q[0.8]:
-            return "S"
-        if wr >= q[0.6]:
-            return "A"
-        if wr >= q[0.4]:
-            return "B"
-        if wr >= q[0.2]:
-            return "C"
-        return "D"
+    Args:
+        kind: "kishu" or "chokyoshi"
 
-    return series.map(to_rank)
+    Returns:
+        {code: rank_label} — SS/S/A/B/C/D/E/F
+        出走数10未満のコードは辞書に含めない（呼び出し側で fillna("F") する）
+
+    ランク定義（固定人数区切り、勝率降順）:
+        SS: 1位〜5位
+        S : 6位〜15位
+        A : 16位〜25位
+        B : 26位〜35位
+        C : 36位〜45位
+        D : 46位〜55位
+        E : 56位〜65位
+        F : 66位以下 + 出走数10未満
+    """
+    col = "kishu_code" if kind == "kishu" else "chokyoshi_code"
+    conn = psycopg2.connect(**DB_CONFIG)
+    try:
+        df_stats = pd.read_sql_query(f"""
+            SELECT TRIM({col}) AS code,
+                   COUNT(*) AS starts,
+                   SUM(CASE WHEN kakutei_chakujun='01' THEN 1 ELSE 0 END) AS wins
+            FROM jvd_se
+            WHERE kaisai_nen='2025'
+              AND ijo_kubun_code='0'
+              AND kakutei_chakujun NOT IN ('00','')
+              AND TRIM({col}) NOT IN ('','00000')
+            GROUP BY TRIM({col})
+        """, conn)
+    finally:
+        conn.close()
+
+    # 出走数 >= 10 のみランク対象
+    ranked = df_stats[df_stats["starts"] >= 10].copy()
+    ranked["win_rate"] = ranked["wins"] / ranked["starts"]
+    ranked = ranked.sort_values("win_rate", ascending=False).reset_index(drop=True)
+    ranked["rank_pos"] = ranked.index + 1  # 1-based
+
+    RANK_CUTS = [
+        (5,  "SS"),
+        (15, "S"),
+        (25, "A"),
+        (35, "B"),
+        (45, "C"),
+        (55, "D"),
+        (65, "E"),
+    ]
+
+    def _assign_rank(pos: int) -> str:
+        for limit, label in RANK_CUTS:
+            if pos <= limit:
+                return label
+        return "F"
+
+    ranked["rank_label"] = ranked["rank_pos"].apply(_assign_rank)
+    return dict(zip(ranked["code"], ranked["rank_label"]))
 
 
 def compute_derived_factors(
@@ -729,24 +769,21 @@ def compute_derived_factors(
     # umaban clean
     df["umaban_clean"] = df["umaban"].astype(str).str.strip()
 
-    # kishu_rank / chokyoshi_rank from win rate on current data
+    # kishu_rank / chokyoshi_rank: jvd_se 2025年データから勝率ランク（SS〜F）
     if "kishu_code" in df.columns:
-        is_win = df["haraimodoshi_tansho"] > 0
-        k_stats = df.groupby("kishu_code").agg(
-            wins=("haraimodoshi_tansho", lambda x: (x > 0).sum()),
-            total=("haraimodoshi_tansho", "count"),
-        )
-        df["kishu_rank"] = _rank_by_winrate(
-            df["kishu_code"], k_stats["wins"], k_stats["total"]
+        _kishu_rank_dict = _build_winrate_rank_2025("kishu")
+        df["kishu_rank"] = (
+            df["kishu_code"].astype(str).str.strip()
+            .map(_kishu_rank_dict)
+            .fillna("F")
         )
 
     if "chokyoshi_code" in df.columns:
-        c_stats = df.groupby("chokyoshi_code").agg(
-            wins=("haraimodoshi_tansho", lambda x: (x > 0).sum()),
-            total=("haraimodoshi_tansho", "count"),
-        )
-        df["chokyoshi_rank"] = _rank_by_winrate(
-            df["chokyoshi_code"], c_stats["wins"], c_stats["total"]
+        _chokyo_rank_dict = _build_winrate_rank_2025("chokyoshi")
+        df["chokyoshi_rank"] = (
+            df["chokyoshi_code"].astype(str).str.strip()
+            .map(_chokyo_rank_dict)
+            .fillna("F")
         )
 
     # Merge previous race data
