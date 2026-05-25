@@ -110,6 +110,11 @@ CODE_FACTORS: List[Tuple[str, str]] = [
     ("taikei_ushirohaba",         "体型・後幅（後脚幅）"),
     ("taikei_kubi",               "体型・首"),
     ("taikei_kata",               "体型・肩"),
+    # 同一レース内順位（compute_derived_factors() で groupby.rank() 計算）
+    ("idm_juni",                  "IDM指数順位"),
+    ("joho_shisu_juni",           "情報指数順位"),
+    ("sogo_shisu_juni",           "総合指数順位"),
+    ("oikiri_shisu_juni",         "追切指数順位"),
 ]
 
 ALL_FACTORS: List[Tuple[str, str, str]] = (
@@ -222,6 +227,8 @@ SELECT
     k.taikei_sogo_1, k.taikei_sogo_2, k.taikei_sogo_3,
     -- prev1_kohan_3f_juni via kako1_race_key self-join
     NULLIF(TRIM(k_prev.kohan_3f_juni), '') AS prev1_kohan_3f_juni,
+    -- oikiri_shisu from jrd_cyb_fixed (追切指数)
+    NULLIF(TRIM(cyb.oikiri_shisu), '') AS oikiri_shisu,
     k.uma_tokki_1, k.uma_tokki_2, k.uma_tokki_3,
     k.gekiso_type, k.kyusha_rank AS kyi_kyusha_rank,
     k.chokyoshi_shozoku, k.shutoku_shokin_ruikei,
@@ -283,6 +290,9 @@ LEFT JOIN jvd_ra r ON
 LEFT JOIN jrd_kyi_fixed k_prev
     ON k_prev.jrdb_race_key8 = k.kako1_race_key
     AND k_prev.kettou_toroku_bango = k.kettou_toroku_bango
+LEFT JOIN jrd_cyb_fixed cyb
+    ON cyb.jrdb_race_key8 = k.jrdb_race_key8
+    AND cyb.umaban = k.umaban
 WHERE v.kaisai_nen >= '{year_min}'
   AND v.kaisai_nen <= '{year_max}'
   AND v.ijo_kubun_code = '0'
@@ -695,6 +705,22 @@ def compute_derived_factors(
     df["taikei_ushirohaba"] = df["taikei"].apply(lambda x: _taikei_part(x, 13))
     df["taikei_kubi"]       = df["taikei"].apply(lambda x: _taikei_part(x, 1))
     df["taikei_kata"]       = df["taikei"].apply(lambda x: _taikei_part(x, 2))
+
+    # 同一レース内順位: groupby(jrdb_race_key8).rank(method="min", ascending=False)
+    # 高い指数ほど順位が上（1位）。NULL は NaN のまま（rank は NaN を無視する）。
+    for _src_col, _juni_col in [
+        ("idm",          "idm_juni"),
+        ("joho_shisu",   "joho_shisu_juni"),
+        ("sogo_shisu",   "sogo_shisu_juni"),
+        ("oikiri_shisu", "oikiri_shisu_juni"),
+    ]:
+        if _src_col in df.columns:
+            _numeric = pd.to_numeric(df[_src_col], errors="coerce")
+            df[_juni_col] = (
+                _numeric.groupby(df["jrdb_race_key8"])
+                        .rank(method="min", ascending=False)
+                        .astype("Int64")
+            )
 
     # wakuban (use jvd_se's wakuban_v)
     if "wakuban_v" in df.columns:
