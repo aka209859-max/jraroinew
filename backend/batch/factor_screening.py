@@ -115,6 +115,10 @@ CODE_FACTORS: List[Tuple[str, str]] = [
     ("joho_shisu_juni",           "情報指数順位"),
     ("sogo_shisu_juni",           "総合指数順位"),
     ("oikiri_shisu_juni",         "追切指数順位"),
+    # 距離増減ビン（compute_derived_factors() で kyori - prev1_kyori から計算）
+    ("kyori_zogen_bin",           "距離増減ビン"),
+    # 馬齢ビン（Pattern C: 3歳以上混合専用、2歳は None）
+    ("barei_bin",                 "馬齢ビン"),
 ]
 
 ALL_FACTORS: List[Tuple[str, str, str]] = (
@@ -229,6 +233,8 @@ SELECT
     NULLIF(TRIM(k_prev.kohan_3f_juni), '') AS prev1_kohan_3f_juni,
     -- oikiri_shisu from jrd_cyb_fixed (追切指数)
     NULLIF(TRIM(cyb.oikiri_shisu), '') AS oikiri_shisu,
+    -- prev1_kyori via jvd_ra r_prev (前走距離: k_prev → jvd_ra bridge)
+    CAST(NULLIF(TRIM(r_prev.kyori), '') AS INTEGER) AS prev1_kyori,
     k.uma_tokki_1, k.uma_tokki_2, k.uma_tokki_3,
     k.gekiso_type, k.kyusha_rank AS kyi_kyusha_rank,
     k.chokyoshi_shozoku, k.shutoku_shokin_ruikei,
@@ -293,6 +299,12 @@ LEFT JOIN jrd_kyi_fixed k_prev
 LEFT JOIN jrd_cyb_fixed cyb
     ON cyb.jrdb_race_key8 = k.jrdb_race_key8
     AND cyb.umaban = k.umaban
+LEFT JOIN jvd_ra r_prev
+    ON r_prev.kaisai_nen                    = '20' || k_prev.race_shikonen
+    AND r_prev.keibajo_code                 = k_prev.keibajo_code
+    AND LTRIM(r_prev.kaisai_kai,     '0')   = k_prev.kaisai_kai
+    AND LTRIM(r_prev.kaisai_nichime, '0')   = k_prev.kaisai_nichime
+    AND r_prev.race_bango                   = k_prev.race_bango
 WHERE v.kaisai_nen >= '{year_min}'
   AND v.kaisai_nen <= '{year_max}'
   AND v.ijo_kubun_code = '0'
@@ -762,6 +774,22 @@ def compute_derived_factors(
                         .astype("Int64")
             )
 
+    # barei_bin: Pattern C（3歳以上混合セグメント用）
+    # 2歳は None（新馬・3歳専用セグメントは単一値のため audit で reject）
+    def _barei_bin(age) -> Optional[str]:
+        if pd.isna(age): return None
+        a = int(age)
+        if a == 3:  return "3歳"
+        if a == 4:  return "4歳"
+        if a == 5:  return "5歳"
+        if a == 6:  return "6歳"
+        if a == 7:  return "7歳"
+        if a >= 8:  return "8歳以上"
+        return None  # 2歳（混合レースには出走しない）
+
+    if "barei" in df.columns:
+        df["barei_bin"] = df["barei"].apply(_barei_bin)
+
     # wakuban (use jvd_se's wakuban_v)
     if "wakuban_v" in df.columns:
         df["wakuban"] = df["wakuban_v"].astype(str).str.strip()
@@ -852,10 +880,20 @@ def compute_derived_factors(
 
         df["prev1_corner4_bin"] = p_c4.apply(_c4_bin)
 
-        # kyori_change (increase/decrease/same vs previous race)
-        # Need prev1 kyori - not available directly in prev_df (no race info)
-        # Approximation: leave as None if prev kyori not available
-        df["kyori_change"] = None  # placeholder
+        # kyori_zogen_bin: 現走距離 - 前走距離 の3ビン分類
+        # prev1_kyori は _LOAD_QUERY の jvd_ra r_prev LEFT JOIN で取得済み
+        if "prev1_kyori" in df.columns:
+            _kyori_cur  = pd.to_numeric(df["kyori"],       errors="coerce")
+            _kyori_prev = pd.to_numeric(df["prev1_kyori"], errors="coerce")
+            _diff = _kyori_cur - _kyori_prev
+
+            def _kyori_zogen_bin(d):
+                if pd.isna(d):  return None
+                if d >= 1:      return "増加"
+                if d <= -1:     return "減少"
+                return "同距離"
+
+            df["kyori_zogen_bin"] = _diff.apply(_kyori_zogen_bin)
 
     # Merge bloodline data
     if blood_df is not None and not blood_df.empty:
